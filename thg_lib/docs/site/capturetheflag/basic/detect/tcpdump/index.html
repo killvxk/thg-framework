@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="darkcode0x00">
+        <link rel="canonical" href="https://github.com/darkcode357/thg_lib/capturetheflag/basic/detect/tcpdump/">
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>tcpdump - thg</title>
+        <link href="../../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../../..">thg</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../../cli/install/">Installation</a>
+</li>
+                                    
+<li >
+    <a href="../../../..">Introduction</a>
+</li>
+                                    
+<li >
+    <a href="../../../../community/">Community</a>
+</li>
+                                    
+<li >
+    <a href="../../../../conceptual/">Conceptual</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">capture the flag <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">basic</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">analysis</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../analysis/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../analysis/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../analysis/malware/">malware</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">recovery</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../recover/backuo/">backup</a>
+</li>
+            
+<li >
+    <a href="../../recover/patching/">patching</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">tips_end_tricks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../tips_end_tricks/tools/">tools</a>
+</li>
+            
+<li >
+    <a href="../../tips_end_tricks/decoding/">decoding</a>
+</li>
+            
+<li >
+    <a href="../../tips_end_tricks/dos/">dos</a>
+</li>
+            
+<li >
+    <a href="../../tips_end_tricks/os_cheats/">os_cheats</a>
+</li>
+            
+<li >
+    <a href="../../tips_end_tricks/snort/">snort</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../identify/basic/">basic</a>
+</li>
+            
+<li >
+    <a href="../../identify/nmap/">nmap</a>
+</li>
+            
+<li >
+    <a href="../../identify/nessus/">nessus</a>
+</li>
+            
+<li >
+    <a href="../../identify/openvas/">openvas</a>
+</li>
+            
+<li >
+    <a href="../../identify/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../identify/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">defend</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../prootect_defend/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../prootect_defend/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li class="active">
+    <a href="./">tcpdump</a>
+</li>
+            
+<li >
+    <a href="../editcap/">edicap</a>
+</li>
+            
+<li >
+    <a href="../mergecap/">mergecap</a>
+</li>
+            
+<li >
+    <a href="../snort/">snort</a>
+</li>
+            
+<li >
+    <a href="../tshark/">tshark</a>
+</li>
+            
+<li >
+    <a href="../analysis/">analysis</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">os</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../windows/">windows</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../../../../deployment/">Deployment</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">CLI <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-1</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../tutorials/thg/">THG</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/server/">thg_server</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/shells/">thg_shells</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/thg_docs/">thg_docs</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/auxiliares/">thg_auxiliares</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/anti_forensic/">thg_anti_forensic</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/crypto/">thg_crypto</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/drone/">thg_drone</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/keylogger/">thg_keylogger</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/recon/">thg_recon</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/voip/">thg_voip</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/automation/">thg_automation</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/cryptography/">thg_cryptography</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/exploitation/">thg_exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/malware/">thg_malware</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/reversing/">thg_reversing</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/thg_windows/">thg_windows</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/automobile/">thg_automobile</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/database/">thg_database</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/fingerprint/">thg_fingerprint</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/misc/">thg_misc</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/sniffer/">thg_sniffer</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/wireless/">thg_wireless</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/debugger/">thg_debugger</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/firmware/">thg_firmware</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/mobile/">thg_mobile</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/social/">thg_social</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/backdoor/">thg_backdoor</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/decompiler/">thg_decompiler</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/forensic/">thg_forensic</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-2</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../tutorials/networking/">thg_networking</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/spoff/">thg_spoff</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/binary/">thg_binary</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/defensensive/">thg_defensensive</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/gpu/">thg_gpu</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/os/">thg_os</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/nfc/">thg_nfc</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/spoof/">thg_spoof</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/bluetooth/">thg_bluetooth</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/defensive/">thg_defensive</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/hardware/">thg_hardware</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/packer/">thg_packer</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/stego/">thg_stego</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/code_audit/">thg_code_audit</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/disassembler/">thg_disassembler</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/honeypot/">thg_honeypot</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/proxy/">thg_proxy</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/tunnel/">thg_tunnel</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/cracker/">thg_cracker</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/dos/">thg_dos</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/ids/">thg_ids</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/radio/">thg_radio</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/unpacker/">thg_unpacker</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contributing <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../../contributing/get-started/">Get Started</a>
+</li>
+                                    
+<li >
+    <a href="../../../../cli/templates/">templates</a>
+</li>
+                                    
+<li >
+    <a href="../../../../cli/build/">build</a>
+</li>
+                                    
+<li >
+    <a href="../../../../cli/tags/">tags</a>
+</li>
+                                    
+<li >
+    <a href="../../../../LICENSE/">LICENSE</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../prootect_defend/linux/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../editcap/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/darkcode357/thg_lib/edit/master/docs/capturetheflag/basic/detect/tcpdump.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#view-ascii-a-or-hex-x-traffic">View ASCII (-A) or HEX (-X) traffic:</a></li>
+            <li><a href="#view-traffic-with-timestamps-and-dont-convert-addresses-and-be-verbose">View traffic with timestamps and don't convert addresses and be verbose:</a></li>
+            <li><a href="#find-top-talkers-after-1000-packets-potentialddos">Find top talkers after 1000 packets (PotentialDDoS):</a></li>
+            <li><a href="#capture-traffic-on-any-interface-from-a-target-host-and-specific-port-and-output-to-a-file">Capture traffic on any interface from a target host and specific port and output to a file:</a></li>
+            <li><a href="#view-traffic-only-between-two-hosts">View traffic only between two hosts:</a></li>
+            <li><a href="#view-all-traffic-except-from-a-net-or-a-host">View all traffic except from a net or a host:</a></li>
+            <li><a href="#view-host-and-either-of-two-other-hosts">View host and either of two other hosts:</a></li>
+            <li><a href="#save-pcap-file-on-rotating-size">Save pcap file on rotating size:</a></li>
+            <li><a href="#save-pcap-file-to-a-remote-host">Save pcap file to a remote host:</a></li>
+            <li><a href="#grab-traffic-that-contains-the-word-pass">Grab traffic that contains the word pass:</a></li>
+            <li><a href="#grab-many-clear-text-protocol-passwords">Grab many clear text protocol passwords:</a></li>
+            <li><a href="#get-throughput">Get throughput</a></li>
+            <li><a href="#filter-out-ipv6-traffic">Filter out ipv6 traffic:</a></li>
+            <li><a href="#filer-out-ipv4-traffic">Filer out ipv4 traffic:</a></li>
+            <li><a href="#script-to-capture-multiple-interface-tcpdumps-to-files-rotating-every-hour">Script to capture multiple interface tcpdumps to files rotating every hour:</a></li>
+            <li><a href="#script-to-move-multiple-tcpdump-files-to-alternate-location">Script to move multiple tcpdump files to alternate location:</a></li>
+            <li><a href="#look-for-suspicious-and-self-signed-ssl-certificates">Look for suspicious and self-signed SSL certificates:</a></li>
+            <li><a href="#get-ssl-certificate">Get SSL Certificate:</a></li>
+            <li><a href="#examine-and-verify-the-certificate-and-check-for-self-signed">Examine and verify the certificate and check for Self-Signed:</a></li>
+            <li><a href="#extract-certificate-server-name">Extract Certificate Server Name:</a></li>
+            <li><a href="#extract-certificate-info-for-analysis">Extract Certificate info for analysis:</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="view-ascii-a-or-hex-x-traffic">View ASCII (-A) or HEX (-X) traffic:<a class="headerlink" href="#view-ascii-a-or-hex-x-traffic" title="Permanent link">#</a></h1>
+<pre><code>tcpdump -A
+tcpdump -X
+</code></pre>
+
+<h2 id="view-traffic-with-timestamps-and-dont-convert-addresses-and-be-verbose">View traffic with timestamps and don't convert addresses and be verbose:<a class="headerlink" href="#view-traffic-with-timestamps-and-dont-convert-addresses-and-be-verbose" title="Permanent link">#</a></h2>
+<pre><code>tcpdump -tttt -n -vv
+</code></pre>
+
+<h2 id="find-top-talkers-after-1000-packets-potentialddos">Find top talkers after 1000 packets (PotentialDDoS):<a class="headerlink" href="#find-top-talkers-after-1000-packets-potentialddos" title="Permanent link">#</a></h2>
+<pre><code>tcpdump -nn -c 1000 jawk '{print $3}' I cut -d. -fl-4 I sort -n I uniq -c I sort -nr
+</code></pre>
+
+<h2 id="capture-traffic-on-any-interface-from-a-target-host-and-specific-port-and-output-to-a-file">Capture traffic on any interface from a target host and specific port and output to a file:<a class="headerlink" href="#capture-traffic-on-any-interface-from-a-target-host-and-specific-port-and-output-to-a-file" title="Permanent link">#</a></h2>
+<pre><code>tcpdump -w &lt;FILENAME&gt;,pcap -i any dst &lt;TARGET IPADDRESS&gt; and port 80
+</code></pre>
+
+<h2 id="view-traffic-only-between-two-hosts">View traffic only between two hosts:<a class="headerlink" href="#view-traffic-only-between-two-hosts" title="Permanent link">#</a></h2>
+<pre><code>tcpdump host 10.0.0.1 &amp;&amp; host 10.0.0.2
+</code></pre>
+
+<h2 id="view-all-traffic-except-from-a-net-or-a-host">View all traffic except from a net or a host:<a class="headerlink" href="#view-all-traffic-except-from-a-net-or-a-host" title="Permanent link">#</a></h2>
+<pre><code>tcpdump not net 10.10 &amp;&amp; not host 192.168.1,2
+</code></pre>
+
+<h2 id="view-host-and-either-of-two-other-hosts">View host and either of two other hosts:<a class="headerlink" href="#view-host-and-either-of-two-other-hosts" title="Permanent link">#</a></h2>
+<pre><code>tcpdump host 10,10,10.10 &amp;&amp; \(10,10.10.20 or 10,10,10,30\)
+</code></pre>
+
+<h2 id="save-pcap-file-on-rotating-size">Save pcap file on rotating size:<a class="headerlink" href="#save-pcap-file-on-rotating-size" title="Permanent link">#</a></h2>
+<pre><code>tcpdump -n -s65535 -c 1000 -w '%host_%Y-%m­%d_%H:%M:%S.pcap'
+</code></pre>
+
+<h2 id="save-pcap-file-to-a-remote-host">Save pcap file to a remote host:<a class="headerlink" href="#save-pcap-file-to-a-remote-host" title="Permanent link">#</a></h2>
+<pre><code>tcpdump -w - I ssh &lt;REMOTE HOST ADDRESS&gt; -p 50005 &quot;cat - &gt; /tmp/remotecapture.pcap&quot;
+</code></pre>
+
+<h2 id="grab-traffic-that-contains-the-word-pass">Grab traffic that contains the word pass:<a class="headerlink" href="#grab-traffic-that-contains-the-word-pass" title="Permanent link">#</a></h2>
+<pre><code>tcpdump -n -A -s0 I grep pass
+</code></pre>
+
+<h2 id="grab-many-clear-text-protocol-passwords">Grab many clear text protocol passwords:<a class="headerlink" href="#grab-many-clear-text-protocol-passwords" title="Permanent link">#</a></h2>
+<pre><code>tcpdump -n -A -s0 port http or port ftp or port smtp or port imap or port pop3 I egrep -i 'pass=lpwd=llog=llogin=luser=lusername=lpw=lpassw=IP asswd=lpassword=lpass: I user: lusername: I password: I login: I pass I user ' --color=auto --line-buffered -B20
+</code></pre>
+
+<h2 id="get-throughput">Get throughput<a class="headerlink" href="#get-throughput" title="Permanent link">#</a></h2>
+<pre><code>tcpdump -w - lpv -bert &gt;/dev/null
+</code></pre>
+
+<h2 id="filter-out-ipv6-traffic">Filter out ipv6 traffic:<a class="headerlink" href="#filter-out-ipv6-traffic" title="Permanent link">#</a></h2>
+<pre><code>tcpdump not ip6
+</code></pre>
+
+<h2 id="filer-out-ipv4-traffic">Filer out ipv4 traffic:<a class="headerlink" href="#filer-out-ipv4-traffic" title="Permanent link">#</a></h2>
+<pre><code>tcpdump ip6
+</code></pre>
+
+<h2 id="script-to-capture-multiple-interface-tcpdumps-to-files-rotating-every-hour">Script to capture multiple interface tcpdumps to files rotating every hour:<a class="headerlink" href="#script-to-capture-multiple-interface-tcpdumps-to-files-rotating-every-hour" title="Permanent link">#</a></h2>
+<pre><code>#!/bin/bash
+tcpdump -pni any -s65535 -G 3600 -w any%Y-%m­%d_%H:%M:%S.pcap
+</code></pre>
+
+<h2 id="script-to-move-multiple-tcpdump-files-to-alternate-location">Script to move multiple tcpdump files to alternate location:<a class="headerlink" href="#script-to-move-multiple-tcpdump-files-to-alternate-location" title="Permanent link">#</a></h2>
+<pre><code>#!/bin/bash
+while true; do
+sleep 1;
+rsync -azvr -progress &lt;USER NAME&gt;@&lt;IP
+ADDRESS&gt;:&lt;TRAFFIC DIRECTORY&gt;/, &lt;DESTINATION
+DIRECTORY/.
+done
+</code></pre>
+
+<h2 id="look-for-suspicious-and-self-signed-ssl-certificates">Look for suspicious and self-signed SSL certificates:<a class="headerlink" href="#look-for-suspicious-and-self-signed-ssl-certificates" title="Permanent link">#</a></h2>
+<pre><code>tcpdump -s 1500 -A '(tcp[((tcp[12:1] &amp; 0xf0) &gt;&gt; 2)+5:1] = 0x01) and (tcp[((tcp[12:1] &amp; 0xf0) &gt;&gt; 2) : 1] : 0x16) I
+</code></pre>
+
+<h2 id="get-ssl-certificate">Get SSL Certificate:<a class="headerlink" href="#get-ssl-certificate" title="Permanent link">#</a></h2>
+<pre><code>openssl s_client -connect &lt;URL&gt;:443
+openssl s_client -connect &lt;SITE&gt;:443 &lt;/dev/null 2&gt;/dev/null I sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-Ip' &gt; &lt;CERT&gt;.pem
+</code></pre>
+
+<h2 id="examine-and-verify-the-certificate-and-check-for-self-signed">Examine and verify the certificate and check for Self-Signed:<a class="headerlink" href="#examine-and-verify-the-certificate-and-check-for-self-signed" title="Permanent link">#</a></h2>
+<pre><code>openssl x509 -text -in &lt;CERT&gt;.pem
+openssl x509 -in &lt;CERT&gt;,pem -noout -issuer -subject -startdate -enddate -fingerprint
+openssl verify &lt;CERT&gt;.pem
+</code></pre>
+
+<h2 id="extract-certificate-server-name">Extract Certificate Server Name:<a class="headerlink" href="#extract-certificate-server-name" title="Permanent link">#</a></h2>
+<pre><code>tshark -nr &lt;PCAP FILE NAME&gt; -Y &quot;ssl. handshake. ciphersuites&quot; -Vx I grep &quot;ServerName:&quot; I sort I uniq -c I sort -r
+</code></pre>
+
+<h2 id="extract-certificate-info-for-analysis">Extract Certificate info for analysis:<a class="headerlink" href="#extract-certificate-info-for-analysis" title="Permanent link">#</a></h2>
+<pre><code>ssldump -Nr &lt;FILE NAME&gt;.pcap I awk 'BEGIN {c=0;}{ if ($0 � /A[ ]+Certificate$/) {c=l; print&quot;========================================&quot;;} if($0 !�/A +/) {c=0;} if (c==l) print $0; }'
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2019 THG_lib Project by darkcode</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

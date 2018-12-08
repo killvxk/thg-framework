@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="darkcode0x00">
+        <link rel="canonical" href="https://github.com/darkcode357/thg_lib/capturetheflag/basic/detect/analysis/">
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>analysis - thg</title>
+        <link href="../../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../../..">thg</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../../cli/install/">Installation</a>
+</li>
+                                    
+<li >
+    <a href="../../../..">Introduction</a>
+</li>
+                                    
+<li >
+    <a href="../../../../community/">Community</a>
+</li>
+                                    
+<li >
+    <a href="../../../../conceptual/">Conceptual</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">capture the flag <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">basic</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">analysis</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../analysis/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../analysis/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../analysis/malware/">malware</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">recovery</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../recover/backuo/">backup</a>
+</li>
+            
+<li >
+    <a href="../../recover/patching/">patching</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">tips_end_tricks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../tips_end_tricks/tools/">tools</a>
+</li>
+            
+<li >
+    <a href="../../tips_end_tricks/decoding/">decoding</a>
+</li>
+            
+<li >
+    <a href="../../tips_end_tricks/dos/">dos</a>
+</li>
+            
+<li >
+    <a href="../../tips_end_tricks/os_cheats/">os_cheats</a>
+</li>
+            
+<li >
+    <a href="../../tips_end_tricks/snort/">snort</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../identify/basic/">basic</a>
+</li>
+            
+<li >
+    <a href="../../identify/nmap/">nmap</a>
+</li>
+            
+<li >
+    <a href="../../identify/nessus/">nessus</a>
+</li>
+            
+<li >
+    <a href="../../identify/openvas/">openvas</a>
+</li>
+            
+<li >
+    <a href="../../identify/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../identify/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">defend</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../prootect_defend/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../prootect_defend/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../tcpdump/">tcpdump</a>
+</li>
+            
+<li >
+    <a href="../editcap/">edicap</a>
+</li>
+            
+<li >
+    <a href="../mergecap/">mergecap</a>
+</li>
+            
+<li >
+    <a href="../snort/">snort</a>
+</li>
+            
+<li >
+    <a href="../tshark/">tshark</a>
+</li>
+            
+<li class="active">
+    <a href="./">analysis</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">os</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../windows/">windows</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../../../../deployment/">Deployment</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">CLI <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-1</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../tutorials/thg/">THG</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/server/">thg_server</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/shells/">thg_shells</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/thg_docs/">thg_docs</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/auxiliares/">thg_auxiliares</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/anti_forensic/">thg_anti_forensic</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/crypto/">thg_crypto</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/drone/">thg_drone</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/keylogger/">thg_keylogger</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/recon/">thg_recon</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/voip/">thg_voip</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/automation/">thg_automation</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/cryptography/">thg_cryptography</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/exploitation/">thg_exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/malware/">thg_malware</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/reversing/">thg_reversing</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/thg_windows/">thg_windows</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/automobile/">thg_automobile</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/database/">thg_database</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/fingerprint/">thg_fingerprint</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/misc/">thg_misc</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/sniffer/">thg_sniffer</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/wireless/">thg_wireless</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/debugger/">thg_debugger</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/firmware/">thg_firmware</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/mobile/">thg_mobile</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/social/">thg_social</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/backdoor/">thg_backdoor</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/decompiler/">thg_decompiler</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/forensic/">thg_forensic</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-2</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../tutorials/networking/">thg_networking</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/spoff/">thg_spoff</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/binary/">thg_binary</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/defensensive/">thg_defensensive</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/gpu/">thg_gpu</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/os/">thg_os</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/nfc/">thg_nfc</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/spoof/">thg_spoof</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/bluetooth/">thg_bluetooth</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/defensive/">thg_defensive</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/hardware/">thg_hardware</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/packer/">thg_packer</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/stego/">thg_stego</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/code_audit/">thg_code_audit</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/disassembler/">thg_disassembler</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/honeypot/">thg_honeypot</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/proxy/">thg_proxy</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/tunnel/">thg_tunnel</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/cracker/">thg_cracker</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/dos/">thg_dos</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/ids/">thg_ids</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/radio/">thg_radio</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/unpacker/">thg_unpacker</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contributing <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../../contributing/get-started/">Get Started</a>
+</li>
+                                    
+<li >
+    <a href="../../../../cli/templates/">templates</a>
+</li>
+                                    
+<li >
+    <a href="../../../../cli/build/">build</a>
+</li>
+                                    
+<li >
+    <a href="../../../../cli/tags/">tags</a>
+</li>
+                                    
+<li >
+    <a href="../../../../LICENSE/">LICENSE</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../tshark/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../linux/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/darkcode357/thg_lib/edit/master/docs/capturetheflag/basic/detect/analysis.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#system-information">SYSTEM INFORMATION</a></li>
+            <li><a href="#live-triage-windows">LIVE TRIAGE - WINDOWS</a></li>
+            <li><a href="#network-information">NETWORK INFORMATION</a></li>
+            <li><a href="#list-of-all-processes-and-then-all-loaded-modules">List of all processes and then all loaded modules:</a></li>
+            <li><a href="#policy-patch-and-settings-information">POLICY, PATCH AND SETTINGS INFORMATION</a></li>
+            <li><a href="#list-gpo-software-installed">List GPO software installed:</a></li>
+            <li><a href="#autorun-and-autoload-information-startup-information">AUTORUN AND AUTOLOAD INFORMATION Startup information:</a></li>
+            <li><a href="#view-directory-contents-of-startup-folder">View directory contents of startup folder:</a></li>
+            <li><a href="#view-autoruns-hide-microsoft-files">View autoruns, hide Microsoft files:</a></li>
+            <li><a href="#show-all-autorun-files-export-to-csv-and-check-with-virustotal">Show all autorun files, export to csv and check with VirusTotal:</a></li>
+            <li><a href="#hkey_classes_root">HKEY_CLASSES_ROOT:</a></li>
+            <li><a href="#hkey_current_users">HKEY_CURRENT_USERS:</a></li>
+            <li><a href="#hkey_local_machine">HKEY_LOCAL_MACHINE:</a></li>
+        <li class="main "><a href="#logs">LOGS</a></li>
+            <li><a href="#copy-event-logs">Copy event logs:</a></li>
+            <li><a href="#get-list-of-logs-remotely">Get list of logs remotely:</a></li>
+            <li><a href="#clear-all-logs-and-start-a-baseline-log-to-monitor">Clear all logs and start a baseline log to monitor:</a></li>
+            <li><a href="#list-log-filenames-and-path-location">List log filenames and path location:</a></li>
+            <li><a href="#take-pre-breach-log-export">Take pre breach log export:</a></li>
+            <li><a href="#take-post-breach-log-export">Take post breach log export:</a></li>
+            <li><a href="#compare-two-files-baseline-and-post-breach-logs">Compare two files baseline and post breach logs:</a></li>
+            <li><a href="#this-deletes-all-logs">This deletes all logs:</a></li>
+            <li><a href="#files-drives-and-shares-information">FILES, DRIVES AND SHARES INFORMATION</a></li>
+            <li><a href="#find-multiple-file-types-or-a-file">Find multiple file types or a file:</a></li>
+            <li><a href="#find-executable-exe-files-newer-than-jan-1-2017">Find executable (.exe) files newer than Jan 1, 2017:</a></li>
+            <li><a href="#find-multiple-files-types-using-loop">Find multiple files types using loop:</a></li>
+            <li><a href="#search-for-files-newer-than-date">Search for files newer than date:</a></li>
+            <li><a href="#find-files-with-alternate-data-streams">Find files with Alternate Data Streams:</a></li>
+            <li><a href="#find-files-with-bad-signature-into-csv">Find files with bad signature into csv:</a></li>
+            <li><a href="#find-and-show-only-unsigned-files-with-bad-signaturein-c">Find and show only unsigned files with bad signaturein C:</a></li>
+            <li><a href="#list-loaded-unsigned-dlls">List loaded unsigned Dlls:</a></li>
+            <li><a href="#run-malware-scan-windows-defender-offline">Run Malware scan (Windows Defender) offline:</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="system-information">SYSTEM INFORMATION<a class="headerlink" href="#system-information" title="Permanent link">#</a></h1>
+<h2 id="live-triage-windows">LIVE TRIAGE - WINDOWS<a class="headerlink" href="#live-triage-windows" title="Permanent link">#</a></h2>
+<pre><code>C:\&gt; echo %DATE% %TIME%
+C:\&gt; hostname
+C:\&gt; systeminfo
+C:\&gt; systeminfo I findstr /B /C:&quot;OS Name&quot; /C:&quot;OS Version&quot;
+C:\&gt; wmic csproduct get name
+C:\&gt; wmic bios get serialnumber
+C:\&gt; wmic computersystem list brief
+</code></pre>
+
+<p><img alt="Ref" src="https://technet.microsoft.com/enus/sysinternals/psinfo.aspx" /></p>
+<pre><code>C:\&gt; psinfo -accepteula -s -h -d USER INFORMATION
+C:\&gt; whoami
+C:\&gt; net users
+C:\&gt; net localgroup administrators
+C:\&gt; net group administrators
+C:\&gt; wmic rdtoggle list
+C:\&gt; wmic useraccount list
+C:\&gt; wmic group list
+C:\&gt; wmic netlogin getname, lastlogon,badpasswordcount
+C:\&gt; wmic netclient list brief
+C:\&gt; doskey /history&gt; history.txt
+</code></pre>
+
+<h2 id="network-information">NETWORK INFORMATION<a class="headerlink" href="#network-information" title="Permanent link">#</a></h2>
+<pre><code>C:\&gt; netstat -e
+C:\&gt; netstat -naob
+C:\&gt; netstat -nr
+C:\&gt; netstat -vb
+C:\&gt; nbtstat -s
+C:\&gt; route print
+C:\&gt; arp -a
+C:\&gt; ipconfig /displaydns
+C:\&gt; netsh winhttp show proxy
+C:\&gt; ipconfig /allcompartments /all
+C:\&gt; netsh wlan show interfaces
+C:\&gt; netsh wlan show all
+C:\&gt; reg query &quot;HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\WinHttpSettings&quot;
+C:\&gt; type %SYSTEMROOT%\system32\drivers\etc\hosts
+C:\&gt; wmic nicconfig get descriptions,IPaddress,MACaddress
+C:\&gt; wmic netuse getname,username,connectiontype, localname SERVICE INFORMATION
+C:\&gt; at
+C:\&gt; tasklist
+C:\&gt; task list /SVC
+C:\&gt; tasklist /SVC /fi &quot;imagename eq svchost.exe&quot;
+C:\&gt; schtasks
+C:\&gt; net start
+C:\&gt; sc query
+C:\&gt; wmic service list brief
+C:\&gt; wmic service list conf ig
+C:\&gt; wmic process list brief
+C:\&gt; wmic process list status
+C:\&gt; wmic process list memory
+C:\&gt; wmic job list brief I findstr &quot;Running&quot;
+PS C:\&gt; Get-Service I Where-Object { $_.Status -eq &quot;running&quot; }
+</code></pre>
+
+<h2 id="list-of-all-processes-and-then-all-loaded-modules">List of all processes and then all loaded modules:<a class="headerlink" href="#list-of-all-processes-and-then-all-loaded-modules" title="Permanent link">#</a></h2>
+<pre><code>PS C:\&gt; Get-Process !select modules!ForeachObject{$_.modules}
+</code></pre>
+
+<h2 id="policy-patch-and-settings-information">POLICY, PATCH AND SETTINGS INFORMATION<a class="headerlink" href="#policy-patch-and-settings-information" title="Permanent link">#</a></h2>
+<pre><code>C:\&gt; set
+C:\&gt; gpresult /r
+C:\&gt; gpresult /z &gt; &lt;OUTPUT FILE NAME&gt;.txt
+C:\&gt; gpresult /H report.html /F
+C:\&gt; wmic qfe
+</code></pre>
+
+<h2 id="list-gpo-software-installed">List GPO software installed:<a class="headerlink" href="#list-gpo-software-installed" title="Permanent link">#</a></h2>
+<pre><code>C:\&gt; reg query uHKLM\Software\Microsoft\Windows\CurrentVersion\Group Policy\AppMgmt&quot;
+</code></pre>
+
+<h2 id="autorun-and-autoload-information-startup-information">AUTORUN AND AUTOLOAD INFORMATION Startup information:<a class="headerlink" href="#autorun-and-autoload-information-startup-information" title="Permanent link">#</a></h2>
+<pre><code>C:\&gt; wmic startup list full
+C:\&gt; wmic ntdomain list brief
+</code></pre>
+
+<h2 id="view-directory-contents-of-startup-folder">View directory contents of startup folder:<a class="headerlink" href="#view-directory-contents-of-startup-folder" title="Permanent link">#</a></h2>
+<pre><code>C:\&gt; dir &quot;%SystemDrive%\ProgramData\Microsoft\Windows\StartMenu\P rog rams\Sta rtup&quot;
+C:\&gt; dir &quot;%SystemDrive%\Documents and Settings\AllUse rs\Sta rt Menu\Prog rams\Sta rtup&quot;
+C:\&gt; dir %userprofile%\Start Menu\Programs\Startup
+C:\&gt; %ProgramFiles%\Startup\
+C:\&gt; dir C:\Windows\Start Menu\Programs\startup
+C:\&gt; dir &quot;C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup&quot;
+C:\&gt; dir &quot;C:\ProgramData\Microsoft\Windows\StartMenu\P rog rams\Sta rtup&quot;
+C:\&gt; dir &quot;%APPDATA%\Microsoft\Windows\StartMenu\Prog rams\Sta rtup&quot;
+C:\&gt; dir &quot;%ALLUSERSPROFILE%\Microsoft\Windows\StartMenu\Prog rams\Sta rtup&quot;
+C:\&gt; dir &quot;%ALLUSERSPROFILE%\StartMenu\P rog rams\Sta rtup&quot;
+C:\&gt; type C:\Windows\winstart.bat
+C:\&gt; type %windir%\wininit.ini
+C:\&gt; type %windir%\win.ini
+</code></pre>
+
+<h2 id="view-autoruns-hide-microsoft-files">View autoruns, hide Microsoft files:<a class="headerlink" href="#view-autoruns-hide-microsoft-files" title="Permanent link">#</a></h2>
+<p><img alt="Ref" src="https://technet.microsoft.com/enus/sysinternals/bb963902.aspx" /></p>
+<pre><code>C:\&gt; autorunsc -accepteula -m
+C:\&gt; type C:\Autoexec.bat&quot;
+</code></pre>
+
+<h2 id="show-all-autorun-files-export-to-csv-and-check-with-virustotal">Show all autorun files, export to csv and check with VirusTotal:<a class="headerlink" href="#show-all-autorun-files-export-to-csv-and-check-with-virustotal" title="Permanent link">#</a></h2>
+<pre><code>C:\&gt; autorunsc.exe -accepteula -a -c -i -e -f -l -m -v
+</code></pre>
+
+<h2 id="hkey_classes_root">HKEY_CLASSES_ROOT:<a class="headerlink" href="#hkey_classes_root" title="Permanent link">#</a></h2>
+<pre><code>C:\&gt; reg query HKCR\Comfile\Shell\Open\Command
+C:\&gt; reg query HKCR\Batfile\Shell\Open\Command
+C:\&gt; reg query HKCR\htafile\Shell\Open\Command
+C:\&gt; reg query HKCR\Exefile\Shell\Open\Command
+C:\&gt; reg query HKCR\Exefiles\Shell\Open\Command
+C:\&gt; reg query HKCR\piffile\shell\open\command
+</code></pre>
+
+<h2 id="hkey_current_users">HKEY_CURRENT_USERS:<a class="headerlink" href="#hkey_current_users" title="Permanent link">#</a></h2>
+<pre><code>C:\&gt; reg query uHKCU\Control Panel\Desktop&quot;
+C:\&gt; reg query HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run
+C:\&gt; reg query HKCU\Software\Microsoft\Windows\CurrentVersion\Run
+C:\&gt; reg query HKCU\Software\Microsoft\Windows\CurrentVersion\Runonce
+C:\&gt; reg query HKCU\Software\Microsoft\Windows\CurrentVersion\RunOnceEx
+C:\&gt; reg query HKCU\Software\Microsoft\Windows\CurrentVersion\RunServices
+C:\&gt; reg query HKCU\Software\Microsoft\Windows\CurrentVersion\RunServ ices Once
+C:\&gt; reg query HKCU\Software\Microsoft\Windows\CurrentVersion\Windows\Run
+C:\&gt; reg query HKCU\Software\Microsoft\Windows\CurrentVersion\Windows\Load
+C:\&gt; reg query HKCU\Software\Microsoft\Windows\CurrentVersion\Windows\Scripts
+C:\&gt; reg query HKCU\Software\Microsoft\WindowsNT\CurrentVersion\Windows /f run
+C:\&gt; reg query HKCU\Software\Microsoft\WindowsNT\CurrentVersion\Windows /f load
+C:\&gt; reg query HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run
+C:\&gt; reg query HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs
+C:\&gt; reg query HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\LastVisitedMRU
+C:\&gt; reg query HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\ComD1g32\0pen5aveMRU
+C:\&gt; reg query HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\LastVisitedPidlMRU
+C:\&gt; reg query HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\ComD1g32\0pen5avePidlMRU /s
+C:\&gt; reg query HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+C:\&gt; reg query HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders
+C:\&gt; reg query uHKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders&quot;
+C:\&gt; reg query HKCU\Software\Microsoft\Windows\CurrentVersion\Applets\RegEdit /v LastKey
+C:\&gt; reg query &quot;HKCU\Software\Microsoft\InternetExp lo re r\ TypedURLs&quot;
+C:\&gt; reg query uHKCU\Software\Policies\Microsoft\Windows\ControlPanel \Desktop&quot;
+</code></pre>
+
+<h2 id="hkey_local_machine">HKEY_LOCAL_MACHINE:<a class="headerlink" href="#hkey_local_machine" title="Permanent link">#</a></h2>
+<pre><code>C:\&gt; reg query uHKLM\SOFTWARE\Mic rosoft\Act iveSetup\Installed Components&quot; /s
+C:\&gt; reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\explorer\User Shell Folders
+C:\&gt; reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\explorer\Shell Folders
+C:\&gt; reg query HKLM\Software\Microsoft\Windows\CurrentVersion\explorer\ShellExecuteHooks
+C:\&gt; reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Browser Helper Objects /s
+C:\&gt; reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run
+C:\&gt; reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+C:\&gt; reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Runonce
+C:\&gt; reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnceEx
+C:\&gt; reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunServices
+C:\&gt; reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunServicesOnce
+C:\&gt; reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Winlogon\Userinit
+C:\&gt; reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\shellServiceObjectDelayLoad
+C:\&gt; reg query HKLM\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Schedule\TaskCache\Tasks&quot; /s
+C:\&gt; reg query HKLM\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Windows&quot;
+C:\&gt; reg query HKLM\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Windows&quot; /f Appinit_DLLs
+C:\&gt; reg query HKLM\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Winlogon&quot; /f Shell
+C:\&gt; reg query HKLM\SOFTWARE\Mic rosoft\WindowsNT\CurrentVersion\Winlogon&quot; /f Userinit
+C:\&gt; reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Systern\Scripts
+C:\&gt; reg query HKLM\SOFTWARE\Classes\batfile\shell\open\cornrnand
+C:\&gt; reg query HKLM\SOFTWARE\Classes\cornfile\shell\open\cornrnand
+C:\&gt; reg query HKLM\SOFTWARE\Classes\exefile\shell\open\command
+C:\&gt; reg query HKLM\SOFTWARE\Classes\htafile\Shell\Open\Command
+C:\&gt; reg query HKLM\SOFTWARE\Classes\piffile\shell\open\command
+C:\&gt; reg query 11HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\Browser Helper Objects&quot; /s
+C:\&gt; reg query &quot;HKLM\SYSTEM\CurrentControlSet\Control\SessionManager&quot;
+C:\&gt; reg query &quot;HKLM\SYSTEM\CurrentControlSet\Control\SessionManager\KnownDLLs&quot;
+C:\&gt; reg query &quot;HKLM\SYSTEM\ControlSet001\Control\SessionManager\KnownDLLs&quot;
+</code></pre>
+
+<h1 id="logs">LOGS<a class="headerlink" href="#logs" title="Permanent link">#</a></h1>
+<h2 id="copy-event-logs">Copy event logs:<a class="headerlink" href="#copy-event-logs" title="Permanent link">#</a></h2>
+<pre><code>C:\&gt; wevtutil epl Security C:\&lt;BACK UPPATH&gt;\mylogs.evtx
+C:\&gt; wevtutil epl System C:\&lt;BACK UPPATH&gt;\mylogs.evtx
+C:\&gt; wevtutil epl Application C:\&lt;BACK UPPATH&gt;\mylogs.evtx
+</code></pre>
+
+<h2 id="get-list-of-logs-remotely">Get list of logs remotely:<a class="headerlink" href="#get-list-of-logs-remotely" title="Permanent link">#</a></h2>
+<p><img alt="Ref" src="https://technet.microsoft.com/enus/sysinternals/psloglist.aspx" /></p>
+<pre><code>C:\&gt; psloglist \\&lt;REMOTE COMPUTER&gt; -accepteula -h 12 -x
+</code></pre>
+
+<h2 id="clear-all-logs-and-start-a-baseline-log-to-monitor">Clear all logs and start a baseline log to monitor:<a class="headerlink" href="#clear-all-logs-and-start-a-baseline-log-to-monitor" title="Permanent link">#</a></h2>
+<pre><code>PS C:\&gt; wevtutil el I Foreach-Object {wevtutil cl&quot;$_&quot;}
+</code></pre>
+
+<h2 id="list-log-filenames-and-path-location">List log filenames and path location:<a class="headerlink" href="#list-log-filenames-and-path-location" title="Permanent link">#</a></h2>
+<pre><code>C:\&gt; wmic nteventlog get path,filename,writeable
+</code></pre>
+
+<h2 id="take-pre-breach-log-export">Take pre breach log export:<a class="headerlink" href="#take-pre-breach-log-export" title="Permanent link">#</a></h2>
+<pre><code>PS C:\&gt; wevtutil el I ForEach-Object{Get-Eventlog -Log &quot;$_&quot; I Export-Csv -Path (:\&lt;BASELINE LOG&gt;,csv -Append}
+</code></pre>
+
+<h2 id="take-post-breach-log-export">Take post breach log export:<a class="headerlink" href="#take-post-breach-log-export" title="Permanent link">#</a></h2>
+<pre><code>PS C:\&gt; wevtutil el I ForEach-Object{Get-EventLog -Log&quot;$_&quot; I Export-Csv -Path C:\&lt;POST BASELINELOG&gt;,CSV -Append}
+</code></pre>
+
+<h2 id="compare-two-files-baseline-and-post-breach-logs">Compare two files baseline and post breach logs:<a class="headerlink" href="#compare-two-files-baseline-and-post-breach-logs" title="Permanent link">#</a></h2>
+<pre><code>PS C:\&gt; Compare-Object -ReferenceObject $(GetContent&quot;C:\&lt;PATH TO FILE&gt;\&lt;ORIGINAL BASELINELOGS&gt;.txt&quot;) -DifferenceObject $(Get-Content&quot;C:\&lt;PATH TO FILE&gt;\&lt;POST BASELINE LOGS&gt;.txt&quot;) &gt;&gt;&lt;DIFFERENCES LOG&gt;.txt
+</code></pre>
+
+<h2 id="this-deletes-all-logs">This deletes all logs:<a class="headerlink" href="#this-deletes-all-logs" title="Permanent link">#</a></h2>
+<pre><code>PS C:\&gt; wevtutil el I Foreach-Object {wevtutil cl&quot;$_&quot;}
+</code></pre>
+
+<h2 id="files-drives-and-shares-information">FILES, DRIVES AND SHARES INFORMATION<a class="headerlink" href="#files-drives-and-shares-information" title="Permanent link">#</a></h2>
+<pre><code>C:\&gt; net use \\&lt;TARGET IP ADDRESS&gt;
+C:\&gt; net share
+C:\&gt; net session
+C:\&gt; wmic volume list brief
+C:\&gt; wmic logicaldisk getdescription,filesystem,name,size
+C:\&gt; wmic share get name,path
+</code></pre>
+
+<h2 id="find-multiple-file-types-or-a-file">Find multiple file types or a file:<a class="headerlink" href="#find-multiple-file-types-or-a-file" title="Permanent link">#</a></h2>
+<pre><code>C:\&gt; dir /A /5 /T:A *,exe *,dll *,bat *·PS1 *,zip
+C:\&gt; dir /A /5 /T:A &lt;BAD FILE NAME&gt;,exe
+</code></pre>
+
+<h2 id="find-executable-exe-files-newer-than-jan-1-2017">Find executable (.exe) files newer than Jan 1, 2017:<a class="headerlink" href="#find-executable-exe-files-newer-than-jan-1-2017" title="Permanent link">#</a></h2>
+<pre><code>C:\&gt; forfiles /p C:\ /M *,exe /5 /0 +1/1/2017 /C&quot;cmd /c echo @fdate @ftime @path&quot;
+</code></pre>
+
+<h2 id="find-multiple-files-types-using-loop">Find multiple files types using loop:<a class="headerlink" href="#find-multiple-files-types-using-loop" title="Permanent link">#</a></h2>
+<pre><code>C:\&gt; for %G in (.exe, .dll, .bat, .ps) do forfiles -p &quot;C:&quot; -m *%G -s -d +1/1/2017 -c &quot;cmd /c echo @fdate@ftime @path&quot;
+</code></pre>
+
+<h2 id="search-for-files-newer-than-date">Search for files newer than date:<a class="headerlink" href="#search-for-files-newer-than-date" title="Permanent link">#</a></h2>
+<pre><code>C:\&gt; forfiles /PC:\ /5 /0 +1/01/2017 /C &quot;cmd /cecho @path @fdate&quot;Find large files: (example &lt;20 MB)
+C:\&gt; forfiles /5 /M * /C &quot;cmd /c if @fsize GEO2097152 echo @path @fsize&quot;
+</code></pre>
+
+<h2 id="find-files-with-alternate-data-streams">Find files with Alternate Data Streams:<a class="headerlink" href="#find-files-with-alternate-data-streams" title="Permanent link">#</a></h2>
+<p><img alt="Ref" src="https://technet.microsoft.com/enus/sysinternals/streams.aspx" /></p>
+<pre><code>C:\&gt; streams -s &lt;FILE OR DIRECTORY&gt;
+</code></pre>
+
+<h2 id="find-files-with-bad-signature-into-csv">Find files with bad signature into csv:<a class="headerlink" href="#find-files-with-bad-signature-into-csv" title="Permanent link">#</a></h2>
+<p><img alt="Ref" src="https://technet.microsoft.com/enus/sysinternals/bb897441.aspx" /></p>
+<pre><code>C:\&gt; sigcheck -c -h -s -u -nobanner &lt;FILE ORDIRECTORY&gt; &gt; &lt;OUTPUT FILENAME&gt;,csv
+</code></pre>
+
+<h2 id="find-and-show-only-unsigned-files-with-bad-signaturein-c">Find and show only unsigned files with bad signaturein C:<a class="headerlink" href="#find-and-show-only-unsigned-files-with-bad-signaturein-c" title="Permanent link">#</a></h2>
+<pre><code>C:\&gt; sigcheck -e -u -vr -s C:\
+</code></pre>
+
+<h2 id="list-loaded-unsigned-dlls">List loaded unsigned Dlls:<a class="headerlink" href="#list-loaded-unsigned-dlls" title="Permanent link">#</a></h2>
+<p><img alt="Ref" src="https://technet.microsoft.com/enus/sysinternals/bb896656.aspx" /></p>
+<pre><code>C:\&gt; listdlls.exe -u
+C:\&gt; listdlls.exe -u &lt;PROCESS NAME OR PID&gt;
+</code></pre>
+
+<h2 id="run-malware-scan-windows-defender-offline">Run Malware scan (Windows Defender) offline:<a class="headerlink" href="#run-malware-scan-windows-defender-offline" title="Permanent link">#</a></h2>
+<p><img alt="Ref" src="http://windows.microsoft.com/enus/windows/what-is-windows-defender-offline" /></p>
+<pre><code>C:\&gt; MpCmdRun.exe -SignatureUpdate
+C:\&gt; MpCmdRun.exe -Scan
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2019 THG_lib Project by darkcode</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

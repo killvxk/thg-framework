@@ -1,0 +1,130 @@
+site_name: thg
+site_url: https://github.com/darkcode357/thg_lib
+site_description: documentacao do thg_lib
+site_author: darkcode0x00
+repo_url: https://github.com/darkcode357/thg_lib
+heme:
+    name: mkdocs
+    shortcuts:
+        help: 1    # ?
+        next: 7     # n
+        previous: 8 # p
+        search: 8   # s
+
+markdown_extensions:
+- toc:
+      permalink: '#'
+extra:
+    theme_inverse: true
+# Copyright
+copyright: "Copyright &copy; 2019 THG_lib Project by darkcode"
+nav:
+- Overview:
+  - Installation: ./cli/install.md
+  - Introduction: index.md
+  - Community: community.md
+  - Conceptual: conceptual.md
+
+- capture the flag:
+  - basic:
+    - analysis:
+      - linux: ./capturetheflag/basic/analysis/linux.md
+      - windows: ./capturetheflag/basic/analysis/windows.md
+      - malware: ./capturetheflag/basic/analysis/malware.md
+    - recovery:
+      - backup: ./capturetheflag/basic/recover/backuo.md
+      - patching: ./capturetheflag/basic/recover/patching.md
+    - tips_end_tricks:
+      - tools: ./capturetheflag/basic/tips_end_tricks/tools.md
+      - decoding: ./capturetheflag/basic/tips_end_tricks/decoding.md
+      - dos: ./capturetheflag/basic/tips_end_tricks/dos.md
+      - os_cheats: ./capturetheflag/basic/tips_end_tricks/os_cheats.md
+      - snort: ./capturetheflag/basic/tips_end_tricks/snort.md
+    - identify:
+      - basic: ./capturetheflag/basic/identify/basic.md
+      - nmap: ./capturetheflag/basic/identify/nmap.md
+      - nessus: ./capturetheflag/basic/identify/nessus.md
+      - openvas: ./capturetheflag/basic/identify/openvas.md
+      - windows: ./capturetheflag/basic/identify/windows.md
+      - linux: ./capturetheflag/basic/identify/linux.md
+    - defend:
+      - windows: ./capturetheflag/basic/prootect_defend/windows.md
+      - linux: ./capturetheflag/basic/prootect_defend/linux.md
+    - identify:
+      - tcpdump: ./capturetheflag/basic/detect/tcpdump.md
+      - edicap: ./capturetheflag/basic/detect/editcap.md
+      - mergecap: ./capturetheflag/basic/detect/mergecap.md
+      - snort: ./capturetheflag/basic/detect/snort.md
+      - tshark: ./capturetheflag/basic/detect/tshark.md
+      - analysis: ./capturetheflag/basic/detect/analysis.md
+      - os:
+        - linux: ./capturetheflag/basic/detect/linux.md
+        - windows: ./capturetheflag/basic/detect/windows.md
+    - Deployment: deployment.md
+
+- CLI:
+  - THG-PART-1:
+    - THG: ./tutorials/thg.md
+    - thg_server: ./tutorials/server.md
+    - thg_version: ./tutorials/version.md
+    - thg_shells: ./tutorials/shells.md
+    - thg_docs:  ./tutorials/thg_docs.md
+    - thg_auxiliares: ./tutorials/auxiliares.md
+    - thg_anti_forensic: ./tutorials/anti_forensic.md
+    - thg_crypto: ./tutorials/crypto.md
+    - thg_drone: ./tutorials/drone.md
+    - thg_keylogger: ./tutorials/keylogger.md
+    - thg_recon: ./tutorials/recon.md
+    - thg_voip: ./tutorials/voip.md
+    - thg_automation: ./tutorials/automation.md
+    - thg_cryptography: ./tutorials/cryptography.md
+    - thg_exploitation: ./tutorials/exploitation.md
+    - thg_malware: ./tutorials/malware.md
+    - thg_reversing: ./tutorials/reversing.md
+    - thg_windows: ./tutorials/thg_windows.md
+    - thg_automobile: ./tutorials/automobile.md
+    - thg_database: ./tutorials/database.md
+    - thg_fingerprint: ./tutorials/fingerprint.md
+    - thg_misc: ./tutorials/misc.md
+    - thg_sniffer: ./tutorials/sniffer.md
+    - thg_wireless: ./tutorials/wireless.md
+    - thg_debugger: ./tutorials/debugger.md
+    - thg_firmware: ./tutorials/firmware.md
+    - thg_mobile: ./tutorials/mobile.md
+    - thg_social: ./tutorials/social.md
+    - thg_backdoor: ./tutorials/backdoor.md
+    - thg_decompiler: ./tutorials/decompiler.md
+    - thg_forensic: ./tutorials/forensic.md
+  - THG-PART-2:
+    - thg_networking: ./tutorials/networking.md
+    - thg_spoff: ./tutorials/spoff.md
+    - thg_binary: ./tutorials/binary.md
+    - thg_defensensive: ./tutorials/defensensive.md
+    - thg_gpu: ./tutorials/gpu.md
+    - thg_os: ./tutorials/os.md
+    - thg_nfc: ./tutorials/nfc.md
+    - thg_spoof: ./tutorials/spoof.md
+    - thg_version: ./tutorials/version.md
+    - thg_bluetooth: ./tutorials/bluetooth.md
+    - thg_defensive: ./tutorials/defensive.md
+    - thg_hardware: ./tutorials/hardware.md
+    - thg_packer: ./tutorials/packer.md
+    - thg_stego: ./tutorials/stego.md
+    - thg_code_audit: ./tutorials/code_audit.md
+    - thg_disassembler: ./tutorials/disassembler.md
+    - thg_honeypot: ./tutorials/honeypot.md
+    - thg_proxy: ./tutorials/proxy.md
+    - thg_tunnel: ./tutorials/tunnel.md
+    - thg_cracker: ./tutorials/cracker.md
+    - thg_dos: ./tutorials/dos.md
+    - thg_ids: ./tutorials/ids.md
+    - thg_radio: ./tutorials/radio.md
+    - thg_unpacker: ./tutorials/unpacker.md
+- Contributing:
+  - Get Started: ./contributing/get-started.md
+  - templates: cli/templates.md
+  - build: cli/build.md
+  - tags: cli/tags.md
+  - LICENSE: ./LICENSE.md
+
+

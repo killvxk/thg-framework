@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="darkcode0x00">
+        <link rel="canonical" href="https://github.com/darkcode357/thg_lib/capturetheflag/basic/prootect_defend/linux/">
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>linux - thg</title>
+        <link href="../../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../../..">thg</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../../cli/install/">Installation</a>
+</li>
+                                    
+<li >
+    <a href="../../../..">Introduction</a>
+</li>
+                                    
+<li >
+    <a href="../../../../community/">Community</a>
+</li>
+                                    
+<li >
+    <a href="../../../../conceptual/">Conceptual</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">capture the flag <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">basic</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">analysis</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../analysis/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../analysis/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../analysis/malware/">malware</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">recovery</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../recover/backuo/">backup</a>
+</li>
+            
+<li >
+    <a href="../../recover/patching/">patching</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">tips_end_tricks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../tips_end_tricks/tools/">tools</a>
+</li>
+            
+<li >
+    <a href="../../tips_end_tricks/decoding/">decoding</a>
+</li>
+            
+<li >
+    <a href="../../tips_end_tricks/dos/">dos</a>
+</li>
+            
+<li >
+    <a href="../../tips_end_tricks/os_cheats/">os_cheats</a>
+</li>
+            
+<li >
+    <a href="../../tips_end_tricks/snort/">snort</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../identify/basic/">basic</a>
+</li>
+            
+<li >
+    <a href="../../identify/nmap/">nmap</a>
+</li>
+            
+<li >
+    <a href="../../identify/nessus/">nessus</a>
+</li>
+            
+<li >
+    <a href="../../identify/openvas/">openvas</a>
+</li>
+            
+<li >
+    <a href="../../identify/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../identify/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">defend</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../windows/">windows</a>
+</li>
+            
+<li class="active">
+    <a href="./">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../detect/tcpdump/">tcpdump</a>
+</li>
+            
+<li >
+    <a href="../../detect/editcap/">edicap</a>
+</li>
+            
+<li >
+    <a href="../../detect/mergecap/">mergecap</a>
+</li>
+            
+<li >
+    <a href="../../detect/snort/">snort</a>
+</li>
+            
+<li >
+    <a href="../../detect/tshark/">tshark</a>
+</li>
+            
+<li >
+    <a href="../../detect/analysis/">analysis</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">os</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../detect/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../detect/windows/">windows</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../../../../deployment/">Deployment</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">CLI <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-1</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../tutorials/thg/">THG</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/server/">thg_server</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/shells/">thg_shells</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/thg_docs/">thg_docs</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/auxiliares/">thg_auxiliares</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/anti_forensic/">thg_anti_forensic</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/crypto/">thg_crypto</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/drone/">thg_drone</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/keylogger/">thg_keylogger</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/recon/">thg_recon</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/voip/">thg_voip</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/automation/">thg_automation</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/cryptography/">thg_cryptography</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/exploitation/">thg_exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/malware/">thg_malware</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/reversing/">thg_reversing</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/thg_windows/">thg_windows</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/automobile/">thg_automobile</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/database/">thg_database</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/fingerprint/">thg_fingerprint</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/misc/">thg_misc</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/sniffer/">thg_sniffer</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/wireless/">thg_wireless</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/debugger/">thg_debugger</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/firmware/">thg_firmware</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/mobile/">thg_mobile</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/social/">thg_social</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/backdoor/">thg_backdoor</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/decompiler/">thg_decompiler</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/forensic/">thg_forensic</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-2</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../tutorials/networking/">thg_networking</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/spoff/">thg_spoff</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/binary/">thg_binary</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/defensensive/">thg_defensensive</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/gpu/">thg_gpu</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/os/">thg_os</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/nfc/">thg_nfc</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/spoof/">thg_spoof</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/bluetooth/">thg_bluetooth</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/defensive/">thg_defensive</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/hardware/">thg_hardware</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/packer/">thg_packer</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/stego/">thg_stego</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/code_audit/">thg_code_audit</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/disassembler/">thg_disassembler</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/honeypot/">thg_honeypot</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/proxy/">thg_proxy</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/tunnel/">thg_tunnel</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/cracker/">thg_cracker</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/dos/">thg_dos</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/ids/">thg_ids</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/radio/">thg_radio</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/unpacker/">thg_unpacker</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contributing <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../../contributing/get-started/">Get Started</a>
+</li>
+                                    
+<li >
+    <a href="../../../../cli/templates/">templates</a>
+</li>
+                                    
+<li >
+    <a href="../../../../cli/build/">build</a>
+</li>
+                                    
+<li >
+    <a href="../../../../cli/tags/">tags</a>
+</li>
+                                    
+<li >
+    <a href="../../../../LICENSE/">LICENSE</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../windows/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../detect/tcpdump/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/darkcode357/thg_lib/edit/master/docs/capturetheflag/basic/prootect_defend/linux.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#disablestop-services">DISABLE/STOP SERVICES</a></li>
+            <li><a href="#services-information">Services information:</a></li>
+            <li><a href="#get-a-list-of-upstart-jobs">Get a list of upstart jobs:</a></li>
+            <li><a href="#example-of-start-stop-restarting-a-service-in">Example of start, stop, restarting a service in</a></li>
+            <li><a href="#list-all-upstart-services">List all Upstart services:</a></li>
+            <li><a href="#show-if-a-program-is-managed-by-upstart-and-the-process-id">Show if a program is managed by upstart and the process ID:</a></li>
+            <li><a href="#if-not-managed-by-upstart">If not managed by upstart:</a></li>
+        <li class="main "><a href="#host-system-firewalls">HOST SYSTEM FIREWALLS</a></li>
+            <li><a href="#export-existing-iptables-firewall-rules">Export existing iptables firewall rules:</a></li>
+            <li><a href="#edit-firewall-rules-and-chains-in-firewallout-and-save-the-file">Edit firewall rules and chains in firewall.out and save the file:</a></li>
+            <li><a href="#apply-iptables">Apply iptables:</a></li>
+            <li><a href="#example-iptables-commands-ip-ip-range-port-blocks">Example iptables commands (IP, IP Range, Port Blocks):</a></li>
+            <li><a href="#block-all-connections">Block all connections:</a></li>
+            <li><a href="#log-all-denied-iptables-rules">Log all denied iptables rules:</a></li>
+            <li><a href="#save-all-current-iptables-rules">Save all current iptables rules:</a></li>
+            <li><a href="#flush-dnsmasq-dns-cache">Flush dnsmasq DNS cache:</a></li>
+        <li class="main "><a href="#whitelist">WHITELIST</a></li>
+            <li><a href="#use-a-proxy-auto-configpac-file-to-create-bad-urlor-ip-list">Use a Proxy Auto Config(PAC) file to create bad URLor IP List:</a></li>
+        <li class="main "><a href="#ipsec">IPSEC</a></li>
+            <li><a href="#allow-firewall-to-pass-ipsec-traffic">Allow firewall to pass IPSEC traffic:</a></li>
+        <li class="main "><a href="#pass-ipsec-traffic">Pass IPSEC traffic:</a></li>
+            <li><a href="#step-1">Step 1:</a></li>
+            <li><a href="#step-2">Step 2:</a></li>
+            <li><a href="#step-3">Step 3:</a></li>
+            <li><a href="#step-4">Step 4:</a></li>
+            <li><a href="#step-5">Step 5:</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="disablestop-services">DISABLE/STOP SERVICES<a class="headerlink" href="#disablestop-services" title="Permanent link">#</a></h1>
+<h2 id="services-information">Services information:<a class="headerlink" href="#services-information" title="Permanent link">#</a></h2>
+<pre><code>service --status-all
+ps -ef
+ps -aux
+</code></pre>
+
+<h2 id="get-a-list-of-upstart-jobs">Get a list of upstart jobs:<a class="headerlink" href="#get-a-list-of-upstart-jobs" title="Permanent link">#</a></h2>
+<pre><code>initctl list
+</code></pre>
+
+<h2 id="example-of-start-stop-restarting-a-service-in">Example of start, stop, restarting a service in<a class="headerlink" href="#example-of-start-stop-restarting-a-service-in" title="Permanent link">#</a></h2>
+<pre><code>Ubuntu:
+/etc/init,d/apache2 start
+/etc/init.d/apache2 restart
+/etc/init.d/apache2 stop (stops only until reboot)
+service mysql start
+service mysql restart
+service mysql stop (stops only until reboot)
+</code></pre>
+
+<h2 id="list-all-upstart-services">List all Upstart services:<a class="headerlink" href="#list-all-upstart-services" title="Permanent link">#</a></h2>
+<pre><code>ls /etc/init/*,conf
+</code></pre>
+
+<h2 id="show-if-a-program-is-managed-by-upstart-and-the-process-id">Show if a program is managed by upstart and the process ID:<a class="headerlink" href="#show-if-a-program-is-managed-by-upstart-and-the-process-id" title="Permanent link">#</a></h2>
+<pre><code>status ssh
+</code></pre>
+
+<h2 id="if-not-managed-by-upstart">If not managed by upstart:<a class="headerlink" href="#if-not-managed-by-upstart" title="Permanent link">#</a></h2>
+<pre><code>update-rc.d apache2 disable
+service apache2 stop
+</code></pre>
+
+<h1 id="host-system-firewalls">HOST SYSTEM FIREWALLS<a class="headerlink" href="#host-system-firewalls" title="Permanent link">#</a></h1>
+<h2 id="export-existing-iptables-firewall-rules">Export existing iptables firewall rules:<a class="headerlink" href="#export-existing-iptables-firewall-rules" title="Permanent link">#</a></h2>
+<pre><code>iptables-save &gt; firewall.out
+</code></pre>
+
+<h2 id="edit-firewall-rules-and-chains-in-firewallout-and-save-the-file">Edit firewall rules and chains in firewall.out and save the file:<a class="headerlink" href="#edit-firewall-rules-and-chains-in-firewallout-and-save-the-file" title="Permanent link">#</a></h2>
+<pre><code>nano firewall.out
+</code></pre>
+
+<h2 id="apply-iptables">Apply iptables:<a class="headerlink" href="#apply-iptables" title="Permanent link">#</a></h2>
+<pre><code>iptables-restore &lt; firewall.out
+</code></pre>
+
+<h2 id="example-iptables-commands-ip-ip-range-port-blocks">Example iptables commands (IP, IP Range, Port Blocks):<a class="headerlink" href="#example-iptables-commands-ip-ip-range-port-blocks" title="Permanent link">#</a></h2>
+<pre><code>iptables -A INPUT -s 10.10.10.10 -j DROP
+iptables -A INPUT -s 10,10.10.0/24 -j DROP
+iptables -A INPUT -p tcp --dport ssh 10.10.10.10 -j DROP
+iptables -A INPUT -p tcp --dport ssh -j DROP
+</code></pre>
+
+<h2 id="block-all-connections">Block all connections:<a class="headerlink" href="#block-all-connections" title="Permanent link">#</a></h2>
+<pre><code>iptables-policy INPUT DROP
+iptables-policy OUTPUT DROP
+iptables-policy FORWARD DROP
+</code></pre>
+
+<h2 id="log-all-denied-iptables-rules">Log all denied iptables rules:<a class="headerlink" href="#log-all-denied-iptables-rules" title="Permanent link">#</a></h2>
+<pre><code>iptables -I INPUT 5 -m limit --limit 5/min -j LOG --log-prefix &quot;iptables denied: &quot; --log-level 7
+</code></pre>
+
+<h2 id="save-all-current-iptables-rules">Save all current iptables rules:<a class="headerlink" href="#save-all-current-iptables-rules" title="Permanent link">#</a></h2>
+<pre><code>Ubuntu:
+ /etc/init.d/iptables save
+ /sbin/service iptables save
+
+RedHat / CentOS:
+ /etc/init.d/iptables save
+ /sbin/iptables-save
+````
+
+## List all current iptables rules:
+</code></pre>
+
+<p>iptables -L</p>
+<pre><code>## Flush all current iptables rules:
+</code></pre>
+
+<p>iptables -F</p>
+<pre><code>## Start/Stop iptables service:
+</code></pre>
+
+<p>service iptables start
+service iptables stop</p>
+<pre><code>## Start/Stop ufw service:
+</code></pre>
+
+<p>ufw enable
+ufw disable</p>
+<pre><code>## Start/Stop ufw logging:
+</code></pre>
+
+<p>ufw logging on
+ufw logging off</p>
+<pre><code>## Backup all current ufw rules:
+</code></pre>
+
+<p>cp /lib/ufw/{user.rules,user6.rules} /<BACKUPLOCATION>
+cp /lib/ufw/{user.rules,user6.rules} ./</p>
+<pre><code>## Example uncomplicated firewall (ufw) Commands (IP,IP range, Port blocks):
+</code></pre>
+
+<p>ufw status verbose
+ufw delete <RULE#>
+ufw allow for <IP ADDRESS>
+ufw allow all 80/tcp
+ufw allow all ssh
+ufw deny from <BAD IP ADDRESS> proto udp to any port 443</p>
+<pre><code>
+# PASSWORDS
+## Change password:
+</code></pre>
+
+<p>passwd (For current user)
+passwd bob (For user Bob)
+sudo su passwd (For root)</p>
+<pre><code># HOST FILE
+## Add new malicious domain to hosts file, and route to localhost:
+</code></pre>
+
+<p>echo 127.0.0,1 <MALICIOUS DOMAIN> &gt;&gt; /etc/hosts</p>
+<pre><code>## Check if hosts file is working, by sending ping to 127.0.0.1:
+</code></pre>
+
+<p>ping -c 1 <MALICIOUS DOMAIN></p>
+<pre><code>## Ubuntu/Debian DNS cache flush:
+</code></pre>
+
+<p>/etc/init.d/dns-clean start</p>
+<pre><code>## Flush nscd DNS cache four ways:
+</code></pre>
+
+<p>/etc/init.d/nscd restart
+service nscd restart
+service nscd reload
+nscd -i hosts
+````</p>
+<h2 id="flush-dnsmasq-dns-cache">Flush dnsmasq DNS cache:<a class="headerlink" href="#flush-dnsmasq-dns-cache" title="Permanent link">#</a></h2>
+<pre><code>/etc/init.d/dnsmasq restart
+</code></pre>
+
+<h1 id="whitelist">WHITELIST<a class="headerlink" href="#whitelist" title="Permanent link">#</a></h1>
+<h2 id="use-a-proxy-auto-configpac-file-to-create-bad-urlor-ip-list">Use a Proxy Auto Config(PAC) file to create bad URLor IP List:<a class="headerlink" href="#use-a-proxy-auto-configpac-file-to-create-bad-urlor-ip-list" title="Permanent link">#</a></h2>
+<pre><code>function FindProxyForURL(url, host) {
+// Send bad DNS name to the proxy
+if (dnsDomainis(host, &quot;,badsite.com&quot;))
+return &quot;PROXY http:11127.0.0.1:8080&quot;;
+// Send bad IPs to the proxy
+if (isinNet(myipAddress(), &quot;222.222.222.222&quot;,
+&quot;255.255.255.0&quot;))
+return &quot;PROXY http:11127.0.0.1:8080&quot;;
+// All other traffic bypass proxy
+return &quot;DIRECT&quot;;
+}
+</code></pre>
+
+<h1 id="ipsec">IPSEC<a class="headerlink" href="#ipsec" title="Permanent link">#</a></h1>
+<h2 id="allow-firewall-to-pass-ipsec-traffic">Allow firewall to pass IPSEC traffic:<a class="headerlink" href="#allow-firewall-to-pass-ipsec-traffic" title="Permanent link">#</a></h2>
+<pre><code>iptables -A INPUT -p esp -j ACCEPT
+iptables -A INPUT -p ah -j ACCEPT
+iptables -A INPUT -p udp --dport 500 -j ACCEPT
+iptables -A INPUT -p udp --dport 4500 -j ACCEPT
+</code></pre>
+
+<h1 id="pass-ipsec-traffic">Pass IPSEC traffic:<a class="headerlink" href="#pass-ipsec-traffic" title="Permanent link">#</a></h1>
+<h2 id="step-1">Step 1:<a class="headerlink" href="#step-1" title="Permanent link">#</a></h2>
+<pre><code>Install Racoon utility on &lt;HOSTl IP ADDRESS&gt;and &lt;HOST2 IP ADDRESS&gt; to enable IPSEC tunnel inUbuntu.
+
+apt-get install racoon
+</code></pre>
+
+<h2 id="step-2">Step 2:<a class="headerlink" href="#step-2" title="Permanent link">#</a></h2>
+<pre><code>Choose direct then edit letclipsectools.conf
+on &lt;HOSTl IP ADDRESS&gt; and &lt;HOST2 IPADDRESS&gt;.
+
+flush;
+spdflush;
+spdadd &lt;HOSTl IP ADDRESS&gt; &lt;HOST2 IP ADDRESS&gt; any -P out ipsec
+    esp/transport//require;
+s pdadd &lt;HOST2 IP ADDRESS&gt; &lt;HOSTl IP ADDRESS&gt; any -P
+in ipsec
+
+esp/transport//require;
+</code></pre>
+
+<h2 id="step-3">Step 3:<a class="headerlink" href="#step-3" title="Permanent link">#</a></h2>
+<pre><code>Edit /etc/racoon/racoon.conf on &lt;HOSTl IP
+ADDRESS&gt; and &lt;HOST2 IP ADDRESS&gt;,
+log notify;
+path pre_shared_key &quot;/etc/racoon/psk.txt&quot;;
+path certificate &quot;/etc/racoon/certs&quot;;
+remote anonymous {
+exchange_mode main,aggressive;
+proposal {
+encryption_algorithm aes_256;
+hash_algorithm sha256;
+authentication_method
+pre_shared_key;
+dh_group modp1024;
+}
+generate_policy off;
+}
+sainfo anonymous{
+}
+</code></pre>
+
+<h2 id="step-4">Step 4:<a class="headerlink" href="#step-4" title="Permanent link">#</a></h2>
+<pre><code>Add preshared key to both hosts.On HOSTl:
+ echo &lt;HOST2 IP ADDRESS&gt; &lt;PRESHARED PASSWORD&gt; &gt;&gt;/etc/racoon/psk.txt
+On HOST2:
+ echo &lt;HOSTl IP ADDRESS&gt; &lt;PRESHARED PASSWORD&gt; &gt;&gt;/etc/racoon/psk.txt
+</code></pre>
+
+<h2 id="step-5">Step 5:<a class="headerlink" href="#step-5" title="Permanent link">#</a></h2>
+<pre><code>Restart service on both systems.
+ service setkey restart
+Check security associations, configuration and
+polices:
+ setkey -D
+ setkey -DP
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2019 THG_lib Project by darkcode</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

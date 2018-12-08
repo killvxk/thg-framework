@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="darkcode0x00">
+        <link rel="canonical" href="https://github.com/darkcode357/thg_lib/capturetheflag/basic/detect/windows/">
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>windows - thg</title>
+        <link href="../../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../../..">thg</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../../cli/install/">Installation</a>
+</li>
+                                    
+<li >
+    <a href="../../../..">Introduction</a>
+</li>
+                                    
+<li >
+    <a href="../../../../community/">Community</a>
+</li>
+                                    
+<li >
+    <a href="../../../../conceptual/">Conceptual</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">capture the flag <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">basic</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">analysis</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../analysis/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../analysis/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../analysis/malware/">malware</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">recovery</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../recover/backuo/">backup</a>
+</li>
+            
+<li >
+    <a href="../../recover/patching/">patching</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">tips_end_tricks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../tips_end_tricks/tools/">tools</a>
+</li>
+            
+<li >
+    <a href="../../tips_end_tricks/decoding/">decoding</a>
+</li>
+            
+<li >
+    <a href="../../tips_end_tricks/dos/">dos</a>
+</li>
+            
+<li >
+    <a href="../../tips_end_tricks/os_cheats/">os_cheats</a>
+</li>
+            
+<li >
+    <a href="../../tips_end_tricks/snort/">snort</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../identify/basic/">basic</a>
+</li>
+            
+<li >
+    <a href="../../identify/nmap/">nmap</a>
+</li>
+            
+<li >
+    <a href="../../identify/nessus/">nessus</a>
+</li>
+            
+<li >
+    <a href="../../identify/openvas/">openvas</a>
+</li>
+            
+<li >
+    <a href="../../identify/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../identify/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">defend</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../prootect_defend/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../prootect_defend/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../tcpdump/">tcpdump</a>
+</li>
+            
+<li >
+    <a href="../editcap/">edicap</a>
+</li>
+            
+<li >
+    <a href="../mergecap/">mergecap</a>
+</li>
+            
+<li >
+    <a href="../snort/">snort</a>
+</li>
+            
+<li >
+    <a href="../tshark/">tshark</a>
+</li>
+            
+<li >
+    <a href="../analysis/">analysis</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">os</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../linux/">linux</a>
+</li>
+            
+<li class="active">
+    <a href="./">windows</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../../../../deployment/">Deployment</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">CLI <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-1</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../tutorials/thg/">THG</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/server/">thg_server</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/shells/">thg_shells</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/thg_docs/">thg_docs</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/auxiliares/">thg_auxiliares</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/anti_forensic/">thg_anti_forensic</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/crypto/">thg_crypto</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/drone/">thg_drone</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/keylogger/">thg_keylogger</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/recon/">thg_recon</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/voip/">thg_voip</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/automation/">thg_automation</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/cryptography/">thg_cryptography</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/exploitation/">thg_exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/malware/">thg_malware</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/reversing/">thg_reversing</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/thg_windows/">thg_windows</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/automobile/">thg_automobile</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/database/">thg_database</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/fingerprint/">thg_fingerprint</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/misc/">thg_misc</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/sniffer/">thg_sniffer</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/wireless/">thg_wireless</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/debugger/">thg_debugger</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/firmware/">thg_firmware</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/mobile/">thg_mobile</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/social/">thg_social</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/backdoor/">thg_backdoor</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/decompiler/">thg_decompiler</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/forensic/">thg_forensic</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-2</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../tutorials/networking/">thg_networking</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/spoff/">thg_spoff</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/binary/">thg_binary</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/defensensive/">thg_defensensive</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/gpu/">thg_gpu</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/os/">thg_os</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/nfc/">thg_nfc</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/spoof/">thg_spoof</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/bluetooth/">thg_bluetooth</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/defensive/">thg_defensive</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/hardware/">thg_hardware</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/packer/">thg_packer</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/stego/">thg_stego</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/code_audit/">thg_code_audit</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/disassembler/">thg_disassembler</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/honeypot/">thg_honeypot</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/proxy/">thg_proxy</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/tunnel/">thg_tunnel</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/cracker/">thg_cracker</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/dos/">thg_dos</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/ids/">thg_ids</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/radio/">thg_radio</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/unpacker/">thg_unpacker</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contributing <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../../contributing/get-started/">Get Started</a>
+</li>
+                                    
+<li >
+    <a href="../../../../cli/templates/">templates</a>
+</li>
+                                    
+<li >
+    <a href="../../../../cli/build/">build</a>
+</li>
+                                    
+<li >
+    <a href="../../../../cli/tags/">tags</a>
+</li>
+                                    
+<li >
+    <a href="../../../../LICENSE/">LICENSE</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../linux/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../../../deployment/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/darkcode357/thg_lib/edit/master/docs/capturetheflag/basic/detect/windows.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#increase-log-size-to-support-increased-auditing">Increase Log size to support increased auditing:</a></li>
+        <li class="main "><a href="#check-settings-of-security-log">Check settings of Security log:</a></li>
+        <li class="main "><a href="#check-settings-of-audit-policies">Check settings of audit policies:</a></li>
+        <li class="main "><a href="#set-log-auditing-on-for-success-andor-failure-on-all-categories">Set Log Auditing on for Success and/or Failure on All Categories:</a></li>
+        <li class="main "><a href="#set-log-auditing-on-for-success-andor-failure-on-subcategories">Set Log Auditing on for Success and/or Failure on Subcategories:</a></li>
+        <li class="main "><a href="#check-for-list-of-available-logs-size-retention-limit">Check for list of available logs, size, retention limit:</a></li>
+        <li class="main "><a href="#partial-list-of-key-security-log-auditing-events-to-monitor">Partial list of Key Security Log Auditing events to monitor:</a></li>
+        <li class="main "><a href="#show-log-from-remote-system">Show log from remote system:</a></li>
+        <li class="main "><a href="#account-logon-audit-credential-validation-last-14-days">Account Logon - Audit Credential Validation Last 14 Days:</a></li>
+        <li class="main "><a href="#account-logonlogoff">Account - Logon/Logoff:</a></li>
+        <li class="main "><a href="#account-management-audit-application-group-management">Account Management - Audit Application Group Management:</a></li>
+        <li class="main "><a href="#detailed-tracking-audit-dpapi-activity-process-termination-rpc-events">Detailed Tracking - Audit DPAPI Activity, Process Termination, RPC Events:</a></li>
+        <li class="main "><a href="#domain-service-access-audit-directory-service-access">Domain Service Access - Audit Directory Service Access:</a></li>
+        <li class="main "><a href="#object-access-audit-file-share-file-system-samregistry-certifications">Object Access - Audit File Share, File System, SAM,Registry, Certifications:</a></li>
+        <li class="main "><a href="#policy-change-audit-policy-change-microsoft-protection-service-windows-filtering-platform">Policy Change - Audit Policy Change, Microsoft Protection Service, Windows Filtering Platform:</a></li>
+        <li class="main "><a href="#privilege-use-audit-non-sensitivesensitive-privilege-use">Privilege Use - Audit Non-Sensitive/Sensitive Privilege Use:</a></li>
+        <li class="main "><a href="#system-audit-security-state-change-security-system-extension-system-integrity-system-events">System - Audit Security State Change, Security System Extension, System Integrity, System Events:</a></li>
+        <li class="main "><a href="#add-microsoft-iis-cmdlet">Add Microsoft IIS cmdlet:</a></li>
+        <li class="main "><a href="#set-variable-for-iis-log-path-default-path">Set variable for IIS Log Path (default path):</a></li>
+        <li class="main "><a href="#get-iis-http-log-file-list-from-last-7-days">Get IIS HTTP log file list from Last 7 days:</a></li>
+        <li class="main "><a href="#view-iis-logs-using-logdirpath-variable-set-above">View IIS Logs (Using $LogDirPath variable set above):</a></li>
+        <li class="main "><a href="#view-iis-logs">View IIS Logs:</a></li>
+        <li class="main "><a href="#find-in-iis-logs-common-sql-injection-patterns">Find in IIS logs common SQL injection patterns:</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h2 id="increase-log-size-to-support-increased-auditing">Increase Log size to support increased auditing:<a class="headerlink" href="#increase-log-size-to-support-increased-auditing" title="Permanent link">#</a></h2>
+<pre><code>C:\&gt; reg add HKLM\Software\Policies\Microsoft\Windows\Eventlog\Application /v MaxSize /t REG_DWORD /d 0x19000
+C:\&gt; reg add HKLM\Software\Policies\Microsoft\Windows\Eventlog\Security /v MaxSize /t REG_DWORD /d 0x64000
+C:\&gt; reg add HKLM\Software\Policies\Microsoft\Windows\EventLog\System /v MaxSize /t REG_DWORD /d 0x19000
+</code></pre>
+
+<h2 id="check-settings-of-security-log">Check settings of Security log:<a class="headerlink" href="#check-settings-of-security-log" title="Permanent link">#</a></h2>
+<pre><code>C:\&gt; wevtutil gl Security
+</code></pre>
+
+<h2 id="check-settings-of-audit-policies">Check settings of audit policies:<a class="headerlink" href="#check-settings-of-audit-policies" title="Permanent link">#</a></h2>
+<pre><code>C:\&gt; auditpol /get /category:*
+</code></pre>
+
+<h2 id="set-log-auditing-on-for-success-andor-failure-on-all-categories">Set Log Auditing on for Success and/or Failure on All Categories:<a class="headerlink" href="#set-log-auditing-on-for-success-andor-failure-on-all-categories" title="Permanent link">#</a></h2>
+<pre><code>C:\&gt; auditpol /set /category:* /success:enable /failure:enable
+</code></pre>
+
+<h2 id="set-log-auditing-on-for-success-andor-failure-on-subcategories">Set Log Auditing on for Success and/or Failure on Subcategories:<a class="headerlink" href="#set-log-auditing-on-for-success-andor-failure-on-subcategories" title="Permanent link">#</a></h2>
+<pre><code>C:\&gt; auditpol /set /subcategory: &quot;Detailed FileShare&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;File System&quot;/success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;Security System Extension&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;System Integrity&quot;/success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;Security StateChange&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;Other SystemEvents&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;System Integrity&quot;/success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;Logon&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;Logoff&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;Account Lockout&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;Other Logon/Logoff Events&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;Network Policy Server&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;Registry&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;SAM&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;Certification Services&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;Application Generated&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory: &quot;Handle Manipulation&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;file Share&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;filtering Platform Packet Drop&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;Filtering Platform Connection&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;Other Object Access Events&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory: &quot;Detailed File Share&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory: &quot;Sensitive Privilege Use&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory: &quot;Non Sensitive Privilege Use&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory: &quot;Other Privilege Use Events&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;Process Termination&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory: &quot;DPAPI Activity&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory: &quot;RPC Events&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;Process Creation&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;Audit Policy Change&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory: &quot;Authentication Policy Change&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory: &quot;Authorization Policy Change&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory: &quot;MPSSVC Rule-Level Policy Change&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;Filtering Platform Policy Change&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;Other Policy Change Events&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;User Account Management&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;Computer Account Management&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;Security Group Management&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;Distribution Group Management&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;Application Group Management&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;Other Account Management Events&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;Directory Service Changes&quot; /success:enable /failure:enable
+C:\&gt; auditpol / set /subcategory: &quot;Directory Service Replication&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;Detailed Directory Service Replication&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;Directory Service Access&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;Kerberos Service Ticket Operations&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;Other Account Logan Events&quot; /success:enable /failure:enable
+C:\&gt; audit pol /set /subcategory: &quot;Kerberos Authentication Service&quot; /success:enable /failure:enable
+C:\&gt; auditpol /set /subcategory:&quot;Credential Validation&quot; /success:enable /failure:enable
+</code></pre>
+
+<h2 id="check-for-list-of-available-logs-size-retention-limit">Check for list of available logs, size, retention limit:<a class="headerlink" href="#check-for-list-of-available-logs-size-retention-limit" title="Permanent link">#</a></h2>
+<pre><code>PS C:\&gt; Get-Eventlog -list
+</code></pre>
+
+<h2 id="partial-list-of-key-security-log-auditing-events-to-monitor">Partial list of Key Security Log Auditing events to monitor:<a class="headerlink" href="#partial-list-of-key-security-log-auditing-events-to-monitor" title="Permanent link">#</a></h2>
+<pre><code>PS C:\&gt; Get-Eventlog -newest 5 -logname applicationI Format-List
+</code></pre>
+
+<h2 id="show-log-from-remote-system">Show log from remote system:<a class="headerlink" href="#show-log-from-remote-system" title="Permanent link">#</a></h2>
+<pre><code>PS C:\&gt; Show-Eventlog -computername &lt;SERVER NAME&gt;Get a specific list of events based on Event ID:
+PS C:\&gt; Get-Eventlog Security I ? { $_.Eventid -eq4800}
+PS C:\&gt; Get-WinEvent -FilterHashtable@{LogName=&quot;Secu rity&quot;; ID=4774}
+</code></pre>
+
+<h2 id="account-logon-audit-credential-validation-last-14-days">Account Logon - Audit Credential Validation Last 14 Days:<a class="headerlink" href="#account-logon-audit-credential-validation-last-14-days" title="Permanent link">#</a></h2>
+<pre><code>PS C:\&gt; Get-Eventlog Security 4768,4771,4772,4769,4770,4649,4778,4779,4800,4801,48 02,4803,5378,5632,5633 -after ((get-date).addDays(-14))
+</code></pre>
+
+<h2 id="account-logonlogoff">Account - Logon/Logoff:<a class="headerlink" href="#account-logonlogoff" title="Permanent link">#</a></h2>
+<pre><code>PS C:\&gt; Get-Eventlog Security 4625,4634,4647,4624,4625,4648,4675,6272,6273,6274,62 75,6276,6277,6278,6279,6280,4649,4778,4779,4800,4801,4802,4803,5378,5632,5633,4964 -after ((getdate).addDays(-1))
+</code></pre>
+
+<h2 id="account-management-audit-application-group-management">Account Management - Audit Application Group Management:<a class="headerlink" href="#account-management-audit-application-group-management" title="Permanent link">#</a></h2>
+<pre><code>PS C:\&gt; Get-Eventlog Security 4783,4784,4785,4786,4787,4788,4789,4790,4741,4742,47 43,4744,4745,4746,4747,4748,4749,4750,4751,4752,4753,4759,4760,4761,4762,4782,4793,4727,4728,4729,4730,4731,4732,4733,4734,4735,4737,4754,4755,4756,4757,4758,4764,4720,4722,4723,4724,4725,4726,4738,4740,4765,4766,4767,4780,4781,4794,5376,5377 -after ((getdate).addDays(-1))
+</code></pre>
+
+<h2 id="detailed-tracking-audit-dpapi-activity-process-termination-rpc-events">Detailed Tracking - Audit DPAPI Activity, Process Termination, RPC Events:<a class="headerlink" href="#detailed-tracking-audit-dpapi-activity-process-termination-rpc-events" title="Permanent link">#</a></h2>
+<pre><code>PS C:\&gt; Get-EventLog Security 4692,4693,4694,4695,4689,5712 -after ((getdate).addDays(-1))
+</code></pre>
+
+<h2 id="domain-service-access-audit-directory-service-access">Domain Service Access - Audit Directory Service Access:<a class="headerlink" href="#domain-service-access-audit-directory-service-access" title="Permanent link">#</a></h2>
+<pre><code>PS C:\&gt; Get-EventLog Security 4662,5136,5137,5138,5139,5141 -after ((getdate).addDays(-1))
+</code></pre>
+
+<h2 id="object-access-audit-file-share-file-system-samregistry-certifications">Object Access - Audit File Share, File System, SAM,Registry, Certifications:<a class="headerlink" href="#object-access-audit-file-share-file-system-samregistry-certifications" title="Permanent link">#</a></h2>
+<pre><code>PS C:\&gt; Get-EventLog Security 4671,4691,4698,4699,4700,4701,4702,5148,5149,5888,5889,5890,4657,5039,4659,4660,4661,4663,4656,4658,4690,4874,4875,4880,4881,4882,4884,4885,4888,4890,4891,4892,4895,4896,4898,5145,5140,5142,5143,5144,5168,5140,5142,5143,5144,5168,5140,5142,5143,5144,5168,4664,4985,5152,5153,5031,5140,5150,5151,5154,5155,5156,5157,5158,5159 -after ((get-date).addDays(-1))
+</code></pre>
+
+<h2 id="policy-change-audit-policy-change-microsoft-protection-service-windows-filtering-platform">Policy Change - Audit Policy Change, Microsoft Protection Service, Windows Filtering Platform:<a class="headerlink" href="#policy-change-audit-policy-change-microsoft-protection-service-windows-filtering-platform" title="Permanent link">#</a></h2>
+<pre><code>PS C:\&gt; Get-EventLog Security 4715,4719,4817,4902,4904,4905,4906,4907,4908,4912,4713,4716,4717,4718,4739,4864,4865,4866,4867,4704,4705,4706,4707,4714,4944,4945,4946,4947,4948,4949,4950,4951,4952,4953,4954,4956,4957,4958,5046,5047,5048,5449,5450,4670 -after ((get-date).addDays(-1))
+</code></pre>
+
+<h2 id="privilege-use-audit-non-sensitivesensitive-privilege-use">Privilege Use - Audit Non-Sensitive/Sensitive Privilege Use:<a class="headerlink" href="#privilege-use-audit-non-sensitivesensitive-privilege-use" title="Permanent link">#</a></h2>
+<pre><code>PS C:\&gt; Get-EventLog Security 4672,4673,4674 -after((get-date),addDays(-1))
+</code></pre>
+
+<h2 id="system-audit-security-state-change-security-system-extension-system-integrity-system-events">System - Audit Security State Change, Security System Extension, System Integrity, System Events:<a class="headerlink" href="#system-audit-security-state-change-security-system-extension-system-integrity-system-events" title="Permanent link">#</a></h2>
+<pre><code>PS C:\&gt; Get-Eventlog Security 5024,5025,5027,5028,5029,5030,5032,5033,5034,5035,5037,5058,5059,6400,6401,6402,6403,6404,6405,6406,6407,4608,4609 ,4616, 4621, 4610, 4611, 4614,4622,4697,4612,4615,4618,4816,5038,5056,5057,5060,5061,5062,6281 -after ((get-date).addDays(-1))
+</code></pre>
+
+<h2 id="add-microsoft-iis-cmdlet">Add Microsoft IIS cmdlet:<a class="headerlink" href="#add-microsoft-iis-cmdlet" title="Permanent link">#</a></h2>
+<pre><code>PS C:\&gt; add-pssnapin WebAdministration
+PS C:\&gt; Import-Module WebAdministration Get IIS Website info:
+PS C:\&gt; Get-IISSite Get IIS Log Path Location:
+PS C:\&gt; (Get-WebConfigurationProperty '/system.applicationHost/sites/siteDefaults' -Name 'logfile.directory').Value
+</code></pre>
+
+<h2 id="set-variable-for-iis-log-path-default-path">Set variable for IIS Log Path (default path):<a class="headerlink" href="#set-variable-for-iis-log-path-default-path" title="Permanent link">#</a></h2>
+<pre><code>PS C:\&gt; $LogDirPath = &quot;C:\inetpub\logs\LogFiles\W3SVCl&quot;
+</code></pre>
+
+<h2 id="get-iis-http-log-file-list-from-last-7-days">Get IIS HTTP log file list from Last 7 days:<a class="headerlink" href="#get-iis-http-log-file-list-from-last-7-days" title="Permanent link">#</a></h2>
+<pre><code>PS C:\&gt; Get-Child!tem -Path C:\inetpub\logs\LogFiles\w3svcl -recurse I WhereObject {$_. lastwritetime -lt (get-date).addDays(-7)}
+</code></pre>
+
+<h2 id="view-iis-logs-using-logdirpath-variable-set-above">View IIS Logs (Using $LogDirPath variable set above):<a class="headerlink" href="#view-iis-logs-using-logdirpath-variable-set-above" title="Permanent link">#</a></h2>
+<pre><code>PS C:\&gt; Get-Content $LogDirPath\*, log I%{$_ -replace '#Fields: ', &quot;} I?{$_ -notmatch &quot;&quot;#'} I ConvertFrom-Csv -Delimiter '
+</code></pre>
+
+<h2 id="view-iis-logs">View IIS Logs:<a class="headerlink" href="#view-iis-logs" title="Permanent link">#</a></h2>
+<pre><code>PS C:\&gt; Get-Content &lt;!IS LOG FILE NAME&gt;, log I%{$_ -replace '#Fields: ', ''} 17{$_ -notmatch 'A#'} I ConvertFrom-Csv -Delimiter ' 'Find in IIS logs IP address 192.168.*·* pattern:
+PS C:\&gt; Select-String -Path $LogDirPath\*, log -Pattern '192,168,*,*'
+</code></pre>
+
+<h2 id="find-in-iis-logs-common-sql-injection-patterns">Find in IIS logs common SQL injection patterns:<a class="headerlink" href="#find-in-iis-logs-common-sql-injection-patterns" title="Permanent link">#</a></h2>
+<pre><code>PS C:\&gt; Select-String -Path $LogDirPath\*, log'(@@version) I (sqlmap) I (Connect\(\)) I (cast\() I (char\() I ( bcha r\ () I ( sysdatabases) I ( \ (select) I (convert\ () I ( Connect\ () I ( count\() I (sys objects)'
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2019 THG_lib Project by darkcode</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

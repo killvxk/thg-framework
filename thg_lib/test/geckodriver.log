@@ -1,0 +1,1 @@
+Running Firefox as root in a regular user's session is not supported.  ($XAUTHORITY is /home/thg/.Xauthority which is owned by thg.)

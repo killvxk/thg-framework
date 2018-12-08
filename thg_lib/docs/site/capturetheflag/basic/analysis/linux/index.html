@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="darkcode0x00">
+        <link rel="canonical" href="https://github.com/darkcode357/thg_lib/capturetheflag/basic/analysis/linux/">
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>linux - thg</title>
+        <link href="../../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../../..">thg</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../../cli/install/">Installation</a>
+</li>
+                                    
+<li >
+    <a href="../../../..">Introduction</a>
+</li>
+                                    
+<li >
+    <a href="../../../../community/">Community</a>
+</li>
+                                    
+<li >
+    <a href="../../../../conceptual/">Conceptual</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">capture the flag <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">basic</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">analysis</a>
+    <ul class="dropdown-menu">
+            
+<li class="active">
+    <a href="./">linux</a>
+</li>
+            
+<li >
+    <a href="../windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../malware/">malware</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">recovery</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../recover/backuo/">backup</a>
+</li>
+            
+<li >
+    <a href="../../recover/patching/">patching</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">tips_end_tricks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../tips_end_tricks/tools/">tools</a>
+</li>
+            
+<li >
+    <a href="../../tips_end_tricks/decoding/">decoding</a>
+</li>
+            
+<li >
+    <a href="../../tips_end_tricks/dos/">dos</a>
+</li>
+            
+<li >
+    <a href="../../tips_end_tricks/os_cheats/">os_cheats</a>
+</li>
+            
+<li >
+    <a href="../../tips_end_tricks/snort/">snort</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../identify/basic/">basic</a>
+</li>
+            
+<li >
+    <a href="../../identify/nmap/">nmap</a>
+</li>
+            
+<li >
+    <a href="../../identify/nessus/">nessus</a>
+</li>
+            
+<li >
+    <a href="../../identify/openvas/">openvas</a>
+</li>
+            
+<li >
+    <a href="../../identify/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../identify/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">defend</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../prootect_defend/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../prootect_defend/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../detect/tcpdump/">tcpdump</a>
+</li>
+            
+<li >
+    <a href="../../detect/editcap/">edicap</a>
+</li>
+            
+<li >
+    <a href="../../detect/mergecap/">mergecap</a>
+</li>
+            
+<li >
+    <a href="../../detect/snort/">snort</a>
+</li>
+            
+<li >
+    <a href="../../detect/tshark/">tshark</a>
+</li>
+            
+<li >
+    <a href="../../detect/analysis/">analysis</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">os</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../detect/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../detect/windows/">windows</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../../../../deployment/">Deployment</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">CLI <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-1</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../tutorials/thg/">THG</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/server/">thg_server</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/shells/">thg_shells</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/thg_docs/">thg_docs</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/auxiliares/">thg_auxiliares</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/anti_forensic/">thg_anti_forensic</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/crypto/">thg_crypto</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/drone/">thg_drone</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/keylogger/">thg_keylogger</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/recon/">thg_recon</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/voip/">thg_voip</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/automation/">thg_automation</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/cryptography/">thg_cryptography</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/exploitation/">thg_exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/malware/">thg_malware</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/reversing/">thg_reversing</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/thg_windows/">thg_windows</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/automobile/">thg_automobile</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/database/">thg_database</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/fingerprint/">thg_fingerprint</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/misc/">thg_misc</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/sniffer/">thg_sniffer</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/wireless/">thg_wireless</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/debugger/">thg_debugger</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/firmware/">thg_firmware</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/mobile/">thg_mobile</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/social/">thg_social</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/backdoor/">thg_backdoor</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/decompiler/">thg_decompiler</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/forensic/">thg_forensic</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-2</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../tutorials/networking/">thg_networking</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/spoff/">thg_spoff</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/binary/">thg_binary</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/defensensive/">thg_defensensive</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/gpu/">thg_gpu</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/os/">thg_os</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/nfc/">thg_nfc</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/spoof/">thg_spoof</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/bluetooth/">thg_bluetooth</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/defensive/">thg_defensive</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/hardware/">thg_hardware</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/packer/">thg_packer</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/stego/">thg_stego</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/code_audit/">thg_code_audit</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/disassembler/">thg_disassembler</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/honeypot/">thg_honeypot</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/proxy/">thg_proxy</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/tunnel/">thg_tunnel</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/cracker/">thg_cracker</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/dos/">thg_dos</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/ids/">thg_ids</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/radio/">thg_radio</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/unpacker/">thg_unpacker</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contributing <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../../contributing/get-started/">Get Started</a>
+</li>
+                                    
+<li >
+    <a href="../../../../cli/templates/">templates</a>
+</li>
+                                    
+<li >
+    <a href="../../../../cli/build/">build</a>
+</li>
+                                    
+<li >
+    <a href="../../../../cli/tags/">tags</a>
+</li>
+                                    
+<li >
+    <a href="../../../../LICENSE/">LICENSE</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../../../conceptual/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../windows/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/darkcode357/thg_lib/edit/master/docs/capturetheflag/basic/analysis/linux.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#system-information">SYSTEM INFORMATION</a></li>
+        <li class="main "><a href="#user-information">USER INFORMATION</a></li>
+            <li><a href="#view-logged-in-users">View logged in users:</a></li>
+            <li><a href="#show-if-a-user-has-ever-logged-in-remotely">Show if a user has ever logged in remotely:</a></li>
+            <li><a href="#view-failed-logins">View failed logins:</a></li>
+            <li><a href="#view-local-user-accounts">View local user accounts:</a></li>
+            <li><a href="#view-local-groups">View local groups:</a></li>
+            <li><a href="#view-sudo-access">View sudo access:</a></li>
+            <li><a href="#view-accounts-with-uid-0">View accounts with UID 0:</a></li>
+            <li><a href="#view-root-authorized-ssh-key-authentications">View root authorized SSH key authentications:</a></li>
+            <li><a href="#list-of-files-opened-by-user">List of files opened by user:</a></li>
+            <li><a href="#view-the-root-user-bash-history">View the root user bash history:</a></li>
+        <li class="main "><a href="#network-information">NETWORK INFORMATION</a></li>
+            <li><a href="#view-network-interfaces">View network interfaces:</a></li>
+            <li><a href="#view-network-connections">View network connections:</a></li>
+            <li><a href="#view-listening-ports">View listening ports:</a></li>
+            <li><a href="#view-routes">View routes:</a></li>
+            <li><a href="#view-arp-table">View arp table:</a></li>
+            <li><a href="#list-of-processes-listening-on-ports">List of processes listening on ports:</a></li>
+        <li class="main "><a href="#service-information">SERVICE INFORMATION</a></li>
+            <li><a href="#view-processes">View processes:</a></li>
+            <li><a href="#list-of-load-modules">List of load modules:</a></li>
+            <li><a href="#list-of-open-files">List of open files:</a></li>
+            <li><a href="#list-of-open-files-using-the-network">List of open files, using the network:</a></li>
+            <li><a href="#list-of-open-files-on-specific-process">List of open files on specific process:</a></li>
+            <li><a href="#get-all-open-files-of-a-specific-process-id">Get all open files of a specific process ID:</a></li>
+            <li><a href="#list-of-unlinked-processes-running">List of unlinked processes running:</a></li>
+            <li><a href="#get-path-of-suspicious-process-pid">Get path of suspicious process PID:</a></li>
+            <li><a href="#save-file-for-further-malware-binary-analysis">Save file for further malware binary analysis:</a></li>
+            <li><a href="#list-services">List services:</a></li>
+        <li class="main "><a href="#policy-patch-and-settings-information">POLICY, PATCH AND SETTINGS INFORMATION</a></li>
+            <li><a href="#view-pamd-files">View pam.d files:</a></li>
+        <li class="main "><a href="#autorun-and-autoload-information">AUTORUN AND AUTOLOAD INFORMATION:</a></li>
+            <li><a href="#list-cron-jobs">List cron jobs:</a></li>
+            <li><a href="#list-cron-jobs-by-root-and-other-uid-0-accounts">List cron jobs by root and other UID 0 accounts:</a></li>
+            <li><a href="#review-for-unusual-cron-jobs">Review for unusual cron jobs:</a></li>
+        <li class="main "><a href="#logs">LOGS</a></li>
+            <li><a href="#view-root-user-command-history">View root user command history:</a></li>
+            <li><a href="#view-last-logins">View last logins:</a></li>
+        <li class="main "><a href="#files-drives-and-shares-information">FILES, DRIVES AND SHARES INFORMATION</a></li>
+            <li><a href="#view-disk-space">View disk space:</a></li>
+            <li><a href="#view-directory-listing-for-etcinitd">View directory listing for /etc/init.d:</a></li>
+            <li><a href="#get-more-info-for-a-file">Get more info for a file:</a></li>
+            <li><a href="#identify-file-type">Identify file type:</a></li>
+            <li><a href="#look-for-immutable-files">Look for immutable files:</a></li>
+            <li><a href="#view-directory-listing-for-root">View directory listing for /root:</a></li>
+            <li><a href="#look-for-files-recently-modified-in-current-directory">Look for files recently modified in current directory:</a></li>
+            <li><a href="#look-for-world-writable-files">Look for world writable files:</a></li>
+            <li><a href="#look-for-recent-created-files-in-this-case-newer-than-jan-02-2017">Look for recent created files, in this case newer than Jan 02, 2017:</a></li>
+            <li><a href="#list-all-files-and-attributes">List all files and attributes:</a></li>
+            <li><a href="#look-at-files-in-directory-by-most-recent-timestampcould-be-tampered">Look at files in directory by most recent timestamp:(Could be tampered)</a></li>
+            <li><a href="#get-full-file-information">Get full file information:</a></li>
+            <li><a href="#review-file-type">Review file type:</a></li>
+            <li><a href="#check-for-rootkits-or-signs-of-compromise">Check for rootkits or signs of compromise:</a></li>
+            <li><a href="#run-unix-privsec-check-tool">Run unix-privsec-check tool:</a></li>
+            <li><a href="#run-chkrootkit">Run chkrootkit:</a></li>
+            <li><a href="#run-rkhunter">Run rkhunter:</a></li>
+            <li><a href="#run-tiger">Run tiger:</a></li>
+            <li><a href="#run-lynis">Run lynis:</a></li>
+            <li><a href="#run-linux-malware-detect-lmd">Run Linux Malware Detect (LMD):</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="system-information">SYSTEM INFORMATION<a class="headerlink" href="#system-information" title="Permanent link">#</a></h1>
+<pre><code>uname -a
+uptime
+timedatectl
+mount
+</code></pre>
+
+<h1 id="user-information">USER INFORMATION<a class="headerlink" href="#user-information" title="Permanent link">#</a></h1>
+<h2 id="view-logged-in-users">View logged in users:<a class="headerlink" href="#view-logged-in-users" title="Permanent link">#</a></h2>
+<pre><code>w
+</code></pre>
+
+<h2 id="show-if-a-user-has-ever-logged-in-remotely">Show if a user has ever logged in remotely:<a class="headerlink" href="#show-if-a-user-has-ever-logged-in-remotely" title="Permanent link">#</a></h2>
+<pre><code>lastlog
+last
+</code></pre>
+
+<h2 id="view-failed-logins">View failed logins:<a class="headerlink" href="#view-failed-logins" title="Permanent link">#</a></h2>
+<pre><code>faillog -a
+</code></pre>
+
+<h2 id="view-local-user-accounts">View local user accounts:<a class="headerlink" href="#view-local-user-accounts" title="Permanent link">#</a></h2>
+<pre><code>cat /etc/passwd
+cat/etc/shadow
+</code></pre>
+
+<h2 id="view-local-groups">View local groups:<a class="headerlink" href="#view-local-groups" title="Permanent link">#</a></h2>
+<pre><code>cat/etc/group
+</code></pre>
+
+<h2 id="view-sudo-access">View sudo access:<a class="headerlink" href="#view-sudo-access" title="Permanent link">#</a></h2>
+<pre><code>cat /etc/sudoers
+</code></pre>
+
+<h2 id="view-accounts-with-uid-0">View accounts with UID 0:<a class="headerlink" href="#view-accounts-with-uid-0" title="Permanent link">#</a></h2>
+<pre><code>awk -F: '($3 == &quot;0&quot;) {p rint}' /etc/passwd
+egrep ':0+' /etc/passwd
+</code></pre>
+
+<h2 id="view-root-authorized-ssh-key-authentications">View root authorized SSH key authentications:<a class="headerlink" href="#view-root-authorized-ssh-key-authentications" title="Permanent link">#</a></h2>
+<pre><code>cat /root/.ssh/authorized_keys
+</code></pre>
+
+<h2 id="list-of-files-opened-by-user">List of files opened by user:<a class="headerlink" href="#list-of-files-opened-by-user" title="Permanent link">#</a></h2>
+<pre><code>lsof -u &lt;USER NAME&gt;
+</code></pre>
+
+<h2 id="view-the-root-user-bash-history">View the root user bash history:<a class="headerlink" href="#view-the-root-user-bash-history" title="Permanent link">#</a></h2>
+<pre><code>cat /root/,bash_history
+</code></pre>
+
+<h1 id="network-information">NETWORK INFORMATION<a class="headerlink" href="#network-information" title="Permanent link">#</a></h1>
+<h2 id="view-network-interfaces">View network interfaces:<a class="headerlink" href="#view-network-interfaces" title="Permanent link">#</a></h2>
+<pre><code>ifconfig
+</code></pre>
+
+<h2 id="view-network-connections">View network connections:<a class="headerlink" href="#view-network-connections" title="Permanent link">#</a></h2>
+<pre><code>netstat -antup
+netstat -plantux
+</code></pre>
+
+<h2 id="view-listening-ports">View listening ports:<a class="headerlink" href="#view-listening-ports" title="Permanent link">#</a></h2>
+<pre><code>netstat -nap
+</code></pre>
+
+<h2 id="view-routes">View routes:<a class="headerlink" href="#view-routes" title="Permanent link">#</a></h2>
+<pre><code>route
+</code></pre>
+
+<h2 id="view-arp-table">View arp table:<a class="headerlink" href="#view-arp-table" title="Permanent link">#</a></h2>
+<pre><code>arp -a
+</code></pre>
+
+<h2 id="list-of-processes-listening-on-ports">List of processes listening on ports:<a class="headerlink" href="#list-of-processes-listening-on-ports" title="Permanent link">#</a></h2>
+<pre><code>lsof -i
+</code></pre>
+
+<h1 id="service-information">SERVICE INFORMATION<a class="headerlink" href="#service-information" title="Permanent link">#</a></h1>
+<h2 id="view-processes">View processes:<a class="headerlink" href="#view-processes" title="Permanent link">#</a></h2>
+<pre><code>ps -aux
+</code></pre>
+
+<h2 id="list-of-load-modules">List of load modules:<a class="headerlink" href="#list-of-load-modules" title="Permanent link">#</a></h2>
+<pre><code>lsmod
+</code></pre>
+
+<h2 id="list-of-open-files">List of open files:<a class="headerlink" href="#list-of-open-files" title="Permanent link">#</a></h2>
+<pre><code>lsof
+</code></pre>
+
+<h2 id="list-of-open-files-using-the-network">List of open files, using the network:<a class="headerlink" href="#list-of-open-files-using-the-network" title="Permanent link">#</a></h2>
+<pre><code>lsof -nPi I cut -f 1 -d &quot; &quot;I uniq I tail -n +2
+</code></pre>
+
+<h2 id="list-of-open-files-on-specific-process">List of open files on specific process:<a class="headerlink" href="#list-of-open-files-on-specific-process" title="Permanent link">#</a></h2>
+<pre><code>lsof -c &lt;SERVICE NAME&gt;
+
+</code></pre>
+
+<h2 id="get-all-open-files-of-a-specific-process-id">Get all open files of a specific process ID:<a class="headerlink" href="#get-all-open-files-of-a-specific-process-id" title="Permanent link">#</a></h2>
+<pre><code>lsof -p &lt;PID&gt;
+</code></pre>
+
+<h2 id="list-of-unlinked-processes-running">List of unlinked processes running:<a class="headerlink" href="#list-of-unlinked-processes-running" title="Permanent link">#</a></h2>
+<pre><code>lsof +Ll
+</code></pre>
+
+<h2 id="get-path-of-suspicious-process-pid">Get path of suspicious process PID:<a class="headerlink" href="#get-path-of-suspicious-process-pid" title="Permanent link">#</a></h2>
+<pre><code>ls -al /proc/&lt;PID&gt;/exe
+</code></pre>
+
+<h2 id="save-file-for-further-malware-binary-analysis">Save file for further malware binary analysis:<a class="headerlink" href="#save-file-for-further-malware-binary-analysis" title="Permanent link">#</a></h2>
+<pre><code>cp /proc/&lt;PID&gt;/exe &gt;/&lt;SUSPICIOUS FILE NAME TO SAVE&gt;,elf Monitor logs in real-time:
+less +F /var/log/messages
+</code></pre>
+
+<h2 id="list-services">List services:<a class="headerlink" href="#list-services" title="Permanent link">#</a></h2>
+<pre><code>chkconfig --list
+</code></pre>
+
+<h1 id="policy-patch-and-settings-information">POLICY, PATCH AND SETTINGS INFORMATION<a class="headerlink" href="#policy-patch-and-settings-information" title="Permanent link">#</a></h1>
+<h2 id="view-pamd-files">View pam.d files:<a class="headerlink" href="#view-pamd-files" title="Permanent link">#</a></h2>
+<pre><code>cat /etc/pam.d/common*
+</code></pre>
+
+<h1 id="autorun-and-autoload-information">AUTORUN AND AUTOLOAD INFORMATION:<a class="headerlink" href="#autorun-and-autoload-information" title="Permanent link">#</a></h1>
+<h2 id="list-cron-jobs">List cron jobs:<a class="headerlink" href="#list-cron-jobs" title="Permanent link">#</a></h2>
+<pre><code>crontab -l
+</code></pre>
+
+<h2 id="list-cron-jobs-by-root-and-other-uid-0-accounts">List cron jobs by root and other UID 0 accounts:<a class="headerlink" href="#list-cron-jobs-by-root-and-other-uid-0-accounts" title="Permanent link">#</a></h2>
+<pre><code>crontab -u root -l
+</code></pre>
+
+<h2 id="review-for-unusual-cron-jobs">Review for unusual cron jobs:<a class="headerlink" href="#review-for-unusual-cron-jobs" title="Permanent link">#</a></h2>
+<pre><code>cat /etc/crontab
+ls /etc/cron,*
+</code></pre>
+
+<h1 id="logs">LOGS<a class="headerlink" href="#logs" title="Permanent link">#</a></h1>
+<h2 id="view-root-user-command-history">View root user command history:<a class="headerlink" href="#view-root-user-command-history" title="Permanent link">#</a></h2>
+<pre><code>cat /root/,*history
+</code></pre>
+
+<h2 id="view-last-logins">View last logins:<a class="headerlink" href="#view-last-logins" title="Permanent link">#</a></h2>
+<pre><code>last
+</code></pre>
+
+<h1 id="files-drives-and-shares-information">FILES, DRIVES AND SHARES INFORMATION<a class="headerlink" href="#files-drives-and-shares-information" title="Permanent link">#</a></h1>
+<h2 id="view-disk-space">View disk space:<a class="headerlink" href="#view-disk-space" title="Permanent link">#</a></h2>
+<pre><code>df -ah
+</code></pre>
+
+<h2 id="view-directory-listing-for-etcinitd">View directory listing for /etc/init.d:<a class="headerlink" href="#view-directory-listing-for-etcinitd" title="Permanent link">#</a></h2>
+<pre><code>ls -la /etc/init.d
+</code></pre>
+
+<h2 id="get-more-info-for-a-file">Get more info for a file:<a class="headerlink" href="#get-more-info-for-a-file" title="Permanent link">#</a></h2>
+<pre><code>stat -x &lt;FILE NAME&gt;
+</code></pre>
+
+<h2 id="identify-file-type">Identify file type:<a class="headerlink" href="#identify-file-type" title="Permanent link">#</a></h2>
+<pre><code>file &lt;FILE NAME&gt;
+</code></pre>
+
+<h2 id="look-for-immutable-files">Look for immutable files:<a class="headerlink" href="#look-for-immutable-files" title="Permanent link">#</a></h2>
+<pre><code>lsatt r -R / I g rep 11 \ -i11
+</code></pre>
+
+<h2 id="view-directory-listing-for-root">View directory listing for /root:<a class="headerlink" href="#view-directory-listing-for-root" title="Permanent link">#</a></h2>
+<pre><code>ls -la /root
+</code></pre>
+
+<h2 id="look-for-files-recently-modified-in-current-directory">Look for files recently modified in current directory:<a class="headerlink" href="#look-for-files-recently-modified-in-current-directory" title="Permanent link">#</a></h2>
+<pre><code>ls -alt I head
+</code></pre>
+
+<h2 id="look-for-world-writable-files">Look for world writable files:<a class="headerlink" href="#look-for-world-writable-files" title="Permanent link">#</a></h2>
+<pre><code>#find/ -xdev -type d\( -perm -0002 -a ! -perm -1000 \) -print
+</code></pre>
+
+<h2 id="look-for-recent-created-files-in-this-case-newer-than-jan-02-2017">Look for recent created files, in this case newer than Jan 02, 2017:<a class="headerlink" href="#look-for-recent-created-files-in-this-case-newer-than-jan-02-2017" title="Permanent link">#</a></h2>
+<pre><code>find/ -n ewermt 2017-01-02q
+</code></pre>
+
+<h2 id="list-all-files-and-attributes">List all files and attributes:<a class="headerlink" href="#list-all-files-and-attributes" title="Permanent link">#</a></h2>
+<pre><code>#find/ -printf 11%m;%Ax;%AT;%Tx;%TT;%Cx;%CT;%U;%G;%s;%p\n&quot;
+</code></pre>
+
+<h2 id="look-at-files-in-directory-by-most-recent-timestampcould-be-tampered">Look at files in directory by most recent timestamp:(Could be tampered)<a class="headerlink" href="#look-at-files-in-directory-by-most-recent-timestampcould-be-tampered" title="Permanent link">#</a></h2>
+<pre><code>ls -alt /&lt;DIRECTORY&gt;! head
+</code></pre>
+
+<h2 id="get-full-file-information">Get full file information:<a class="headerlink" href="#get-full-file-information" title="Permanent link">#</a></h2>
+<pre><code># stat /&lt;FILE PATH&gt;/&lt;SUSPICIOUS FILE NAME&gt;
+</code></pre>
+
+<h2 id="review-file-type">Review file type:<a class="headerlink" href="#review-file-type" title="Permanent link">#</a></h2>
+<pre><code># file /&lt;FILE PATH&gt;/&lt;SUSPICIOUS FILE NAME&gt;
+</code></pre>
+
+<h2 id="check-for-rootkits-or-signs-of-compromise">Check for rootkits or signs of compromise:<a class="headerlink" href="#check-for-rootkits-or-signs-of-compromise" title="Permanent link">#</a></h2>
+<h2 id="run-unix-privsec-check-tool">Run unix-privsec-check tool:<a class="headerlink" href="#run-unix-privsec-check-tool" title="Permanent link">#</a></h2>
+<pre><code># wget
+https://raw.githubusercontent.com/pentestmonkey/unix-privesc-check/l_x/unix-privesc-check
+# ./unix-privesc-check &gt; output.txt
+</code></pre>
+
+<h2 id="run-chkrootkit">Run chkrootkit:<a class="headerlink" href="#run-chkrootkit" title="Permanent link">#</a></h2>
+<pre><code>apt-get install chkrootkit
+chkrootkit
+</code></pre>
+
+<h2 id="run-rkhunter">Run rkhunter:<a class="headerlink" href="#run-rkhunter" title="Permanent link">#</a></h2>
+<pre><code>apt-get install rkhunter
+rkhunter --update
+rkhunter -check
+</code></pre>
+
+<h2 id="run-tiger">Run tiger:<a class="headerlink" href="#run-tiger" title="Permanent link">#</a></h2>
+<pre><code>apt-get install tiger
+tiger
+less /var/log/tiger/security.report,*
+</code></pre>
+
+<h2 id="run-lynis">Run lynis:<a class="headerlink" href="#run-lynis" title="Permanent link">#</a></h2>
+<pre><code>apt-get install lynis
+lynis audit system
+more /var/logs/lynis. log
+</code></pre>
+
+<h2 id="run-linux-malware-detect-lmd">Run Linux Malware Detect (LMD):<a class="headerlink" href="#run-linux-malware-detect-lmd" title="Permanent link">#</a></h2>
+<pre><code>wget http://www.rfxn.com/downloads/maldetectcurrent.tar.gz
+
+tar xfz maldetect-current.tar.gz
+cd maldetect-*
+./install.sh
+=&gt; Get LMD updates:
+maldet -u
+Run LMD scan on directory:
+maldet -a /&lt;DIRECTORY&gt;
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2019 THG_lib Project by darkcode</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
