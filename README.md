@@ -1,8 +1,8 @@
 # thgconsole
 python exploit developer
 
-Project name: Your project’s name is the first thing people will see upon scrolling down to your README, and is included upon creation of your README file.
-
+Project name THG-FRAMEWORK
+ 
 Description: A description of your project follows. A good description is clear, short, and to the point. Describe the importance of your project, and what it does.
 
 Table of Contents: Optionally, include a table of contents in order to allow other people to quickly navigate especially long or detailed READMEs.
@@ -15,4 +15,11 @@ Contributing: Larger projects often have sections on contributing to their proje
 
 Credits: Include a section for credits in order to highlight and link to the authors of your project.
 
-License: Finally, include a section for the license of your project. For more information on choosing a license, check out GitHub’s licensing guide!
+License: Finally, include a section for the license of your project. For more information on choosing a license, check out GitHub’s li
+
+Pylint	 
+PyFlakes
+pycodestyle	
+pydocstyle
+Bandit	
+MyPy

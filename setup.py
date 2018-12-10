@@ -1,52 +1,37 @@
-from setuptools import setup, find_packages
+from os import system
+import os
+import socket
+import base64
+import pip
+import shutil
+import distro
+from thgconsole.core.CoreUtils.printer import print_success,print_info
+class THG_INSTALL():
+    def __init__(self):
+        print("start...")
+    def install():
+        exitfile = "~/"
+        infile = system("cp -rv extra_thg_package {}".format(exitfile))
+        print(infile)
+        with open("requirements.txt") as fl:
+            check_os = distro.linux_distribution()[0]
+            if check_os == "Ubuntu":
+                os.system("apt install python3-pip")
+                for libs in fl.readlines():
+                    print_info(libs)
+                    os.system("pip3 install {}".format(libs))
+            elif check_os == "Debian":
+                os.system("apt install python3-pip")
+                for libs in fl.readlines():
+                    print_info(libs)
+                    os.system("pip3 install {}".format(libs))
+                print("fish instalation...[{}]".format(check_os))
+            else:
+                for libs in fl.readlines():
+                    print(libs)
+                    os.system("pip3 install {}".format(libs))
+
+THG_INSTALL.install()
 
 
-with open("README.md", "r") as f:
-    long_description = f.read()
 
-setup(
-    name="thgconsole",
-    version="1.0",
-    description="Exploitation Framework for thg_project",
-    long_description=long_description,
-    author="darkcode0x00",
-    author_email="darkcodepro@gmail.com",
-    url="www.github.com/darkcode357/",
-    download_url="https://github.com/darkcode357/thgconsole",
-    packages=find_packages(),
-    include_package_data=True,
-    scripts=('thgconsole.py',),
-    entry_points={},
-    install_requires=[
-        "future",
-        "requests",
-        "paramiko",
-        "pysnmp",
-        "pycryptodome",
-    ],
-    extras_require={
-        "tests": [
-            "pytest",
-            "pytest-forked",
-            "pytest-xdist",
-            "flake8",
-        ],
-    },
-    classifiers=[
-        "Operating System :: POSIX",
-        "Environment :: Console",
-        "Environment :: Console :: Curses",
-        "License :: OSI Approved :: BSD License",
-        "Programming Language :: Python",
-        "Programming Language :: Python :: 3.7",
-        "Intended Audience :: Developers",
-        "Intended Audience :: Education",
-        "Intended Audience :: Information Technology",
-        "Intended Audience :: Science/Research",
-        "Intended Audience :: System Administrators",
-        "Intended Audience :: Telecommunications Industry",
-        "Topic :: Security",
-        "Topic :: System :: Networking",
-        "Topic :: Utilities",
-    ],
-)
