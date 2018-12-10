@@ -12,7 +12,7 @@ class THG_INSTALL():
     def install():
         exitfile = "~/"
         infile = system("cp -rv extra_thg_package {}".format(exitfile))
-        print(infile)
+        print_success(infile)
         with open("requirements.txt") as fl:
             check_os = distro.linux_distribution()[0]
             if check_os == "Ubuntu":
@@ -31,7 +31,12 @@ class THG_INSTALL():
                     print(libs)
                     os.system("pip3 install {}".format(libs))
 
+
 THG_INSTALL.install()
 
 
 
+import distro
+a = distro.linux_distribution()
+
+print(a)

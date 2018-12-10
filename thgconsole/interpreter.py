@@ -228,10 +228,9 @@ Core Commands
     #sessions      Dump session listings and display information about sessions
     sleep         Do nothing for the specified number of seconds
     #spool         Write console output into a file as well the screen
-    #threads       View and manipulate background threads
     #unload        Unload a framework plugin
     #unset         Unsets one or more context-specific variables
-    
+
 
 
 #Module Commands
@@ -239,30 +238,31 @@ Core Commands
     
     #Command        Description
     -------        -----------
-    show all       show all modules
-    show creds     show creds in db    
-    show devices   show devices modules  
-    show encoders  show encoders for module   
-    show exploits  show exploit modules   
-    show auxiliary show auxiliary modules 
-    show nops      show nops modules
-    show payloads  show payload modules 
-    show post      show post modules 
-    show info      show info modules  
-    show options   show options in the modules
-    show wordlists show wordlist in thgconsole date 
-    #advanced      Displays advanced options for one or more modules
-    back           Move back from the current context
+    show all       show all modules {red}->{magent} (@sys_module){Blue}{grn}{grn}
+    show creds     show creds in db {red}->{Blue} (@module_required){Blue}{grn}{grn}
+    show devices   show devices modules {red}->{Blue} (@module_required){Blue}{grn}{grn}
+    show encoders  show encoders for module {red}->{Blue} (@module_required){Blue}{grn}{grn}
+    show exploits  show exploit modules {red}->{magent} (@sys_module){Blue}{grn}{grn}   
+    show auxiliary show auxiliary modules {red}->{magent} (@sys_module){Blue}{grn}{grn}
+    show nops      show nops modules {red}->{magent} (@sys_module){Blue}{grn}{grn}
+    show payloads  show payload modules {red}->{magent} (@sys_module){Blue}{grn}{grn}
+    show post      show post modules {red}->{magent} (@sys_module){Blue}{grn}{grn}
+    show info      show info modules {red}->{Blue} (@module_required){Blue}{grn}{grn}
+    show options   show options in the modules {red}->{Blue} (@module_required){Blue}{grn}{grn}
+    show wordlists show wordlist in thgconsole date {red}->{Blue} (@module_required){Blue}{grn}{grn}
+    show threads   View and manipulate background threads {red}->{Blue} (@module_required){Blue}{grn}{grn}
+    #advanced      Displays advanced options for one or more modules {red}->{magent} (@sys_module){Blue}{grn}{grn}
+    back           Move back from the current context {red}->{magent} (@sys_module){Blue}{grn}{grn}
     show info      Displays information about one or more modules
-    #loadpath      Searches for and loads modules from a path
+    #loadpath      Searches for and loads modules from a path {red}->{magent} (@sys_module){Blue}{grn}{grn}
     options        Displays global options or for one or more modules
-    #popm          Pops the latest module off the stack and makes it active
-    #previous      Sets the previously loaded module as the current module
-    #pushm         Pushes the active or list of modules onto the module stack
-    #reload_all    Reloads all modules from all defined module paths
-    search         Searches module names and descriptions
-    show           Displays modules of a given type, or all modules
-    use            Selects a module by name
+    #popm          Pops the latest module off the stack and makes it active {red}->{magent} (@sys_module){Blue}{grn}{grn}
+    #previous      Sets the previously loaded module as the current module {red}->{magent} (@sys_module){Blue}{grn}{grn}
+    #pushm         Pushes the active or list of modules onto the module stack {red}->{magent} (@sys_module){Blue}{grn}{grn}
+    #reload_all    Reloads all modules from all defined module paths {red}->{magent} (@sys_module){Blue}{grn}{grn}
+    search         Searches module names and descriptions {red}->{magent} (@sys_module){Blue}{grn}{grn}
+    show           Displays modules of a given type, or all modules {red}->{magent} (@sys_module){Blue}{grn}{grn}
+    use            Selects a module by name {red}->{magent} (@sys_module){Blue}{grn}{grn}
     
 
 #Job Commands
@@ -320,7 +320,7 @@ Credentials Backend Commands
 Command       Description
 -------       -----------
 #creds         List all credentials in the database
-    """
+    """.format(Blue=Fore.CYAN,grn=Fore.GREEN,red=Fore.RED,yl=Fore.YELLOW,magent=Fore.MAGENTA)
 
     module_help = """
     \033[1;34mModule commands:

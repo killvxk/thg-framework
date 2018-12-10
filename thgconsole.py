@@ -35,7 +35,7 @@ parser.add_argument('-e',
 
 def thg(extra_package_path=package_path):
     if not os.path.isdir(extra_package_path):
-        extra_package_path = None
+        extra_package_path = "~/extra_thg_package/"
     thgc = THGtInterpreter(extra_package_path)
     thgc.start()
 
