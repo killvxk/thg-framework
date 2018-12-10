@@ -24,6 +24,7 @@ from thgconsole.core.CoreUtils.utils import (
     MODULES_DIR,
     WORDLISTS_DIR,
 )
+from thgconsole.config.info_init import thg_add_init
 from thgconsole.core.CoreUtils.printer import (
     print_info,
     print_success,
@@ -409,7 +410,10 @@ Command       Description
 
 {YELLOW}+ -- --=[{RED}system  =>{MAGENTA} {os}   {RED}{YELLOW}]=-- -- + 
 {YELLOW}+ -- --=[{RED}machine =>{MAGENTA} {machine}  {RED}{YELLOW}]=-- -- +      
-
+{YELLOW}+ -- --=[{RED}gcc =>{MAGENTA} {gccv}  {RED}{YELLOW}]=-- -- +
+{YELLOW}+ -- --=[{RED}python =>{MAGENTA} {python}  {RED}{YELLOW}]=-- -- +
+{YELLOW}+ -- --=[{RED}net =>{MAGENTA} {net}  {RED}{YELLOW}]=-- -- +
+{YELLOW}+ -- --=[{RED}ip =>{MAGENTA} {ip}  {RED}{YELLOW}]=-- -- +
 {CYAN}==================={GREEN}[ thgconsole-info ]{GREEN}{CYAN}========================
  
 {YELLOW}+ -- --=[{RED}Exploits {MAGENTA} {exploits_count}  {RED}{YELLOW}]=-- -- +  
@@ -438,7 +442,11 @@ Command       Description
                    GREEN=Fore.GREEN,
                    RED=Fore.RED,
                    YELLOW=Fore.YELLOW,
-                   MAGENTA=Fore.MAGENTA)
+                   MAGENTA=Fore.MAGENTA,
+                   gccv = thg_add_init.check_gcc_version(),
+                   python=thg_add_init.check_python_version(),
+                   net = thg_add_init.is_connected(),
+                   ip=thg_add_init.ipi())
 
     def ipi(self, darkcde):
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
