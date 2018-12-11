@@ -1,5 +1,6 @@
 import os,socket,sys,platform
 from thgconsole.core.CoreUtils.printer import print_info
+from extra_libs.getmac.getmac.getmac import get_mac_address
 class thg_add_init:
     def __init__(self):
         pass
@@ -38,4 +39,5 @@ class thg_add_init:
         gcc4 = platform.python_compiler()[7]
         gcc5 = platform.python_compiler()[8]
         return str(gcc1 + gcc2 + gcc3 + gcc4 + gcc5)
-
+    def get_mac():
+        return get_mac_address()

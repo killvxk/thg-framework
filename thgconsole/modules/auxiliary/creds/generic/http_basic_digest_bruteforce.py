@@ -5,16 +5,14 @@ from thgconsole.file_suport import wordlists
 from thgconsole.core.CoreUtils.option import *
 from thgconsole.core.CoreUtils.printer import *
 from requests.auth import HTTPDigestAuth
-
-
+from thgconsole import file_suport
 class Exploit(HTTPClient):
     __info__ = {
         "name": "HTTP Basic/Digest Bruteforce",
         "description": "Module performs bruteforce attack against HTTP Basic/Digest Auth service. "
                        "If valid credentials are found, they are displayed to the user.",
         "authors": (
-            "Marcin Bury <marcin[at]threat9.com>",  # thg module
-            "Alexander Yakovlev <https://github.com/toxydose>",  # upgrading to perform bruteforce attack against HTTP Digest Auth service
+            "darkcode357@gmail.com",  # thg module
         ),
         "devices": (
             "Multiple devices",
@@ -27,7 +25,7 @@ class Exploit(HTTPClient):
     threads = THGOptInteger(8, "Number of threads")
 
     usernames = THGOptWordlist("admin", "Username or file with usernames (file://)")
-    passwords = THGOptWordlist(wordlists.passwords, "Password or file with passwords (file://)")
+    passwords = THGOptWordlist(file_suport.wordlists.password_lst, "Password or file with passwords (file://)")
 
     path = THGOptString("/", "URL Path")
 

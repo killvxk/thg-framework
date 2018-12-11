@@ -23,3 +23,7 @@ pycodestyle
 pydocstyle
 Bandit	
 MyPy
+
+
+
+file wordlist add import 

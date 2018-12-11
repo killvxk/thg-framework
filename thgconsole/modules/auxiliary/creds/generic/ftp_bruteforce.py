@@ -1,10 +1,10 @@
 import itertools
+from thgconsole.core.NetworkProtocols.ftp.ftp_client import FTPClient
+from thgconsole.file_suport import wordlists
 from thgconsole.core.CoreUtils.option import *
 from thgconsole.core.ModulesBuild.Exploits.exploit import *
 from thgconsole.core.CoreUtils.printer import *
-from thgconsole.core.NetworkProtocols.ftp.ftp_client import FTPClient
-from thgconsole.file_suport import wordlists
-
+from thgconsole import file_suport
 
 class Exploit(FTPClient):
     __info__ = {
@@ -24,7 +24,7 @@ class Exploit(FTPClient):
 
     threads = THGOptInteger(8, "Number of threads")
     usernames = THGOptWordlist("admin", "Username or file with usernames (file://)")
-    passwords = THGOptWordlist("dark", "Password or file with passwords (file://)")
+    passwords = THGOptWordlist(file_suport.wordlists.worst_passwords500, "Password or file with passwords (file://)")
 
     verbosity = THGOptBool(True, "Display authentication attempts")
     stop_on_success = THGOptBool(True, "Stop on first valid authentication attempt")

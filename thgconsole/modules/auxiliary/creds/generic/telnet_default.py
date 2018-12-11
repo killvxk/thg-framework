@@ -1,7 +1,12 @@
 from thgconsole.core.ModulesBuild.Exploits.exploit import *
+from thgconsole.core.ModulesBuild.Exploits.option import *
+from thgconsole.core.CoreUtils.exceptions import *
+from thgconsole.core.ModulesBuild.Exploits.shell import *
+from thgconsole.core.CoreUtils.utils import *
+from thgconsole.core.CoreUtils.option import *
+from thgconsole.core.CoreUtils.printer import *
 from thgconsole.core.NetworkProtocols.telnet.telnet_client import TelnetClient
 from thgconsole.file_suport import wordlists
-
 
 class Exploit(TelnetClient):
     __info__ = {
@@ -9,7 +14,7 @@ class Exploit(TelnetClient):
         "description": "Module performs dictionary attack with default credentials against Telnet service. "
                        "If valid credentials are found, they are displayed to the user.",
         "authors": (
-            "Marcin Bury <marcin[at]threat9.com>",  # thg module
+            "darkcode357@gmail.com",  # thg module
         ),
         "devices": (
             "Multiple devices",

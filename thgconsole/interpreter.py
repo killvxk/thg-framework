@@ -10,6 +10,9 @@ from collections import Counter
 from colorama import Fore
 from future.builtins import input
 from time import sleep
+
+
+
 from thgconsole.config.Version import __codenome__,__version__
 from thgconsole.core.CoreUtils.exceptions import THGtException
 from glob import glob
@@ -221,8 +224,6 @@ Core Commands
     show version   Show the framework and console library version numbers
     quit           Exit the console
     #connect       Communicate with a host
-    #get           Gets the value of a context-specific variable
-    #getg          Gets the value of a global variable
     #grep          Grep the output of another command
     #load          Load a framework plugin
     #save          Saves the active datastores
@@ -230,7 +231,6 @@ Core Commands
     sleep         Do nothing for the specified number of seconds
     #spool         Write console output into a file as well the screen
     #unload        Unload a framework plugin
-    #unset         Unsets one or more context-specific variables
 
 
 
@@ -408,12 +408,14 @@ Command       Description
 
 {CYAN}==================={GREEN}[ thgconsole-pc ]{GREEN}{CYAN}========================
 
-{YELLOW}+ -- --=[{RED}system  =>{MAGENTA} {os}   {RED}{YELLOW}]=-- -- + 
-{YELLOW}+ -- --=[{RED}machine =>{MAGENTA} {machine}  {RED}{YELLOW}]=-- -- +      
-{YELLOW}+ -- --=[{RED}gcc =>{MAGENTA} {gccv}  {RED}{YELLOW}]=-- -- +
-{YELLOW}+ -- --=[{RED}python =>{MAGENTA} {python}  {RED}{YELLOW}]=-- -- +
-{YELLOW}+ -- --=[{RED}net =>{MAGENTA} {net}  {RED}{YELLOW}]=-- -- +
-{YELLOW}+ -- --=[{RED}ip =>{MAGENTA} {ip}  {RED}{YELLOW}]=-- -- +
+{YELLOW}+ -- --=[{RED}system  =>{MAGENTA} {os}             {RED}{YELLOW}]=-- -- + 
+{YELLOW}+ -- --=[{RED}machine =>{MAGENTA} {machine}            {RED}{YELLOW}]=-- -- +      
+{YELLOW}+ -- --=[{RED}gcc     =>{MAGENTA} {gccv}             {RED}{YELLOW}]=-- -- +
+{YELLOW}+ -- --=[{RED}python  =>{MAGENTA} {python}               {RED}{YELLOW}]=-- -- +
+{YELLOW}+ -- --=[{RED}net     =>{MAGENTA} {net}        {RED}{YELLOW}]=-- -- +
+{YELLOW}+ -- --=[{RED}ip      =>{MAGENTA} {ip}       {RED}{YELLOW}]=-- -- +
+{YELLOW}+ -- --=[{RED}mac     =>{MAGENTA} {mac} {RED}{YELLOW}]=-- -- +
+
 {CYAN}==================={GREEN}[ thgconsole-info ]{GREEN}{CYAN}========================
  
 {YELLOW}+ -- --=[{RED}Exploits {MAGENTA} {exploits_count}  {RED}{YELLOW}]=-- -- +  
@@ -446,7 +448,8 @@ Command       Description
                    gccv = thg_add_init.check_gcc_version(),
                    python=thg_add_init.check_python_version(),
                    net = thg_add_init.is_connected(),
-                   ip=thg_add_init.ipi())
+                   ip=thg_add_init.ipi(),
+                   mac=thg_add_init.get_mac())
 
     def ipi(self, darkcde):
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)

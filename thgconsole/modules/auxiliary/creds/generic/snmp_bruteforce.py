@@ -1,6 +1,13 @@
 from thgconsole.core.ModulesBuild.Exploits.exploit import *
+from thgconsole.core.ModulesBuild.Exploits.option import *
+from thgconsole.core.CoreUtils.exceptions import *
+from thgconsole.core.ModulesBuild.Exploits.shell import *
+from thgconsole.core.CoreUtils.utils import *
+from thgconsole.core.CoreUtils.option import *
+from thgconsole.core.CoreUtils.printer import *
+from thgconsole import file_suport
+
 from thgconsole.core.NetworkProtocols.snmp.snmp_client import SNMPClient
-from thgconsole.file_suport import wordlists
 
 
 class Exploit(SNMPClient):
@@ -9,23 +16,23 @@ class Exploit(SNMPClient):
         "description": "Module performs bruteforce attack against SNMP service. "
                        "If valid community string is found, it is displayed to the user",
         "authors": (
-            "Marcin Bury <marcin[at]threat9.com>",  # thg module
+            "darkcode357@gmail.com",  # thg module
         ),
         "devices": (
             "Multiple devices",
         )
     }
 
-    target = OptIP("", "Target IPv4, IPv6 address or file with ip:port (file://)")
-    port = OptPort(161, "Target SNMP port")
+    target = THGOptIP("", "Target IPv4, IPv6 address or file with ip:port (file://)")
+    port = THGOptPort(161, "Target SNMP port")
 
-    version = OptInteger(1, "SNMP version 0:v1, 1:v2c")
-    threads = OptInteger(8, "Number of threads")
+    version = THGOptInteger(1, "SNMP version 0:v1, 1:v2c")
+    threads = THGOptInteger(8, "Number of threads")
 
-    defaults = OptWordlist(wordlists.snmp, "SNMP community string or file with default communit stryings (file://)")
+    defaults = THGOptWordlist("change", "SNMP community string or file with default communit stryings (file://)")
 
-    verbosity = OptBool(True, "Display authentication attempts")
-    stop_on_success = OptBool(True, "Stop on first valid authentication attempt")
+    verbosity = THGOptBool(True, "Display authentication attempts")
+    stop_on_success = THGOptBool(True, "Stop on first valid authentication attempt")
 
     def run(self):
         self.strings = []

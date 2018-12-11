@@ -1,6 +1,12 @@
 from thgconsole.core.ModulesBuild.Exploits.exploit import *
+from thgconsole.core.ModulesBuild.Exploits.option import *
+from thgconsole.core.CoreUtils.exceptions import *
+from thgconsole.core.ModulesBuild.Exploits.shell import *
+from thgconsole.core.CoreUtils.utils import *
+from thgconsole.core.CoreUtils.option import *
+from thgconsole.core.CoreUtils.printer import *
 from thgconsole.core.NetworkProtocols.http.http_client import HTTPClient
-from thgconsole.file_suport import wordlists
+from thgconsole import file_suport
 from requests.auth import HTTPDigestAuth
 
 
@@ -10,25 +16,24 @@ class Exploit(HTTPClient):
         "description": "Module performs dictionary attack with default credentials against HTTP Basic/Digest Auth service. "
                        "If valid credentials are found, they are displayed to the user.",
         "authors": (
-            "Marcin Bury <marcin[at]threat9.com>",  # thg module
-            "Alexander Yakovlev <https://github.com/toxydose>",  # upgrading to perform bruteforce attack against HTTP Digest Auth service
+            "darkcode357@gmail.com",  # thg module
         ),
         "devices": (
             "Multiple devices",
         )
     }
 
-    target = OptIP("", "Target IPv4, IPv6 address or file with ip:port (file://)")
-    port = OptPort(80, "Target HTTP port")
+    target = THGOptIP("", "Target IPv4, IPv6 address or file with ip:port (file://)")
+    port = THGOptPort(80, "Target HTTP port")
 
-    threads = OptInteger(8, "Number of threads")
+    threads = THGOptInteger(8, "Number of threads")
 
-    defaults = OptWordlist(wordlists.defaults, "User:Pass or file with default credentials (file://)")
+    defaults = THGOptWordlist(file_suport.wordlists.worst_passwords500, "User:Pass or file with default credentials (file://)")
 
-    path = OptString("/", "URL Path")
+    path = THGOptString("/", "URL Path")
 
-    verbosity = OptBool(True, "Display authentication attempts")
-    stop_on_success = OptBool(True, "Stop on first valid authentication attempt")
+    verbosity = THGOptBool(True, "Display authentication attempts")
+    stop_on_success = THGOptBool(True, "Stop on first valid authentication attempt")
 
     def run(self):
         self.credentials = []
