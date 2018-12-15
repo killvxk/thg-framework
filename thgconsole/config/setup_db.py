@@ -383,12 +383,22 @@ c.execute('''CREATE TABLE "mod_refs" (
 )''')
 
 c.execute('''CREATE TABLE "module_actions" (
-    "detail_id" interger,
+    "detail_id" integer,
     "name" text
 )''')
 
+#add_index"module_actions", ["detail_id"], name: "index_module_actions_on_detail_id", using::btree
+c.execute('''CREATE TABLE "module_archs" (
+    "detail_id" integer,
+    "name" text
+)''')
 
-
+#add_index"module_archs", ["detail_id"], name: "index_module_archs_on_detail_id", using::btree
+c.execute('''CREATE TABLE "module_authors" (
+    "detail_id" integer,
+    "name" text
+    "email" text
+)''')
 
 
 # kick off the config component of the database
