@@ -12,7 +12,7 @@ class Payload(BindTCPPayloadMixin, ArchitectureSpecificPayload):
         "description": "Creates interactive tcp bind shell for ARMLE architecture.",
         "authors": (
             "Marcin Bury <marcin[at]threat9.com>",  # thg module
-        ),
+        ),   
     }
 
     architecture = Architectures.ARMLE

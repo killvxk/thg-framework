@@ -111,7 +111,7 @@ class BaseInterpreter(object):
         return command_handler
 
     def start(self):
-        """ Routersploit main entry point. Starting interpreter loop. """
+        """ THGconsole main entry point. Starting interpreter loop. """
 
         print_info(self.banner)
         printer_queue.join()
@@ -696,38 +696,28 @@ Command       Description
                 return
 
         print_error("No encoders available")
-
     def __show_modules(self, root=''):
         for module in [module for module in self.modules if module.startswith(root)]:
             print_info(module.replace('.', os.sep))
-
     def _show_all(self, *args, **kwargs):
-        self.__show_modules()
-
+        self.__show_modules() 
     def _show_scanners(self, *args, **kwargs):
         self.__show_modules('scanners')
-
     def _show_test(self, *args, **kwargs):
         self.__show_modules('test')
-
     def _show_exploits(self, *args, **kwargs):
         self.__show_modules('exploits')
-
     def _show_payloads(self, *args, **kwargs):
         self.__show_modules('payloads')
-
     def _show_creds(self, *args, **kwargs):
         self.__show_modules('creds')
-
     def _show_banner(self, *args, **kwargs):
         os.system("clear")
         print(self.banner)
-
     def _show_version(self, *args, **kwargs):
         print_status(__codenome__+"-"+__version__)
     def _show_Ip(self, *args, **kwargs):
         print(self.ipi(darkcde=None))
-
     # def _show_Eip(self,*args,**kwargs):
     # print(ipgetter.myip())
     def _show_history(self, *args, **kwargs):
@@ -804,7 +794,6 @@ Command       Description
                         print(Fore.RED+i)
         except:
             pass
-
     def command_quit(self, *args,**kwargs):
         print_status("thgconsole stopped")
         exit(1)
@@ -821,6 +810,5 @@ Command       Description
                 print_info(
                     "{}\033[31m{}\033[0m{}".format(*module.partition(keyword))
                 )
-
     def command_exit(self, *args, **kwargs):
         raise EOFError

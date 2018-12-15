@@ -9,7 +9,9 @@ from thgconsole.core.CoreUtils.utils import (
 
 
 class THGOption(object):
-    """ Exploit attribute that is set by the end user """
+    """ Exploit attribute that is set by the end user
+        Atributo de exploração definido pelo usuário final
+    """
 
     def __init__(self, default, description=""):
         self.label = None
@@ -26,7 +28,9 @@ class THGOption(object):
 
 
 class THGOptIP(THGOption):
-    """ Option IP attribute """
+    """ Option IP attribute
+        Atributo IP
+    """
 
     def __set__(self, instance, value):
         if not value or is_ipv4(value) or is_ipv6(value):
@@ -36,7 +40,9 @@ class THGOptIP(THGOption):
 
 
 class THGOptPort(THGOption):
-    """ Option Port attribute """
+    """ Option Port attribute
+        Atributos port
+    """
 
     def __set__(self, instance, value):
         try:
@@ -52,7 +58,9 @@ class THGOptPort(THGOption):
 
 
 class THGOptBool(THGOption):
-    """ Option Bool attribute """
+    """ Option Bool attribute
+        opcoes de verdadeiro ou falso
+    """
 
     def __init__(self, default, description=""):
         self.description = description
@@ -76,7 +84,9 @@ class THGOptBool(THGOption):
 
 
 class THGOptInteger(THGOption):
-    """ Option Integer attribute """
+    """ Option Integer attribute
+        opcoes de inteiros
+    """
 
     def __set__(self, instance, value):
         try:
@@ -87,7 +97,9 @@ class THGOptInteger(THGOption):
 
 
 class THGOptFloat(THGOption):
-    """ Option Float attribute """
+    """ Option Float attribute
+        opcoes de float
+    """
 
     def __set__(self, instance, value):
         try:
@@ -98,7 +110,9 @@ class THGOptFloat(THGOption):
 
 
 class THGOptString(THGOption):
-    """ Option String attribute """
+    """ Option String attribute
+        opcoes de string
+    """
 
     def __set__(self, instance, value):
         try:
@@ -108,7 +122,9 @@ class THGOptString(THGOption):
 
 
 class THGOptMAC(THGOption):
-    """ Option MAC attribute """
+    """ Option MAC attribute
+        atributos para verificacao de mac
+    """
 
     def __set__(self, instance, value):
         regexp = r"^[a-f\d]{1,2}:[a-f\d]{1,2}:[a-f\d]{1,2}:[a-f\d]{1,2}:[a-f\d]{1,2}:[a-f\d]{1,2}$"
@@ -119,7 +135,9 @@ class THGOptMAC(THGOption):
 
 
 class THGOptWordlist(THGOption):
-    """ Option Wordlist attribute """
+    """ Option Wordlist attribute
+        Atributos de wordlist
+    """
 
     def __get__(self, instance, owner):
         if self.display_value.startswith("file://"):
