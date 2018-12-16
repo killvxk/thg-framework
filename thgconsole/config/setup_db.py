@@ -305,18 +305,18 @@ c.execute('''CREATE TABLE "thg_credential_cores" (
     "updated_at" text
 )''')
 
-#add_index"metasploit_credential_cores", ["origin_type","origin_id"], name: "index_metasploit_credential_cores_on_origin_type_and_origin_id", using::btree
-#add_index"metasploit_credential_cores", ["private_id"], name: "index_metasploit_credential_cores_on_private_id", using::btree
-#add_index"metasploit_credential_cores", ["public_id"], name: "index_metasploit_credential_cores_on_public_id", using::btree
-#add_index"metasploit_credential_cores", ["realm_id"], name: "index_metasploit_credential_cores_on_realm_id", using::btree
-#add_index"metasploit_credential_cores", ["workspace_id","private_id"], name: "unique_private_metasploit_credential_cores", unique: true, where: "((realm_id IS NULL) AND (public_id IS NULL) AND (private_id IS NOT NULL))", using::btree
-#add_index"metasploit_credential_cores", ["workspace_id", "public_id","private_id"], name: "unique_realmless_metasploit_credential_cores", unique: true, where: "((realm_id IS NULL) AND (public_id IS NOT NULL) AND (private_id IS NOT NULL))", using::btree
-#add_index"metasploit_credential_cores", ["workspace_id","public_id"], name: "unique_public_metasploit_credential_cores", unique: true, where: "((realm_id IS NULL) AND (public_id IS NOT NULL) AND (private_id IS NULL))", using::btree
-#add_index"metasploit_credential_cores", ["workspace_id", "realm_id","private_id"], name: "unique_publicless_metasploit_credential_cores", unique: true, where: "((realm_id IS NOT NULL) AND (public_id IS NULL) AND (private_id IS NOT NULL))", using::btree
-#add_index"metasploit_credential_cores", ["workspace_id", "realm_id", "public_id","private_id"], name: "unique_complete_metasploit_credential_cores", unique: true, where: "((realm_id IS NOT NULL) AND (public_id IS NOT NULL) AND (private_id IS NOT NULL))", using::btree
-#add_index"metasploit_credential_cores", ["workspace_id", "realm_id","public_id"], name: "unique_privateless_metasploit_credential_cores", unique: true, where: "((realm_id IS NOT NULL) AND (public_id IS NOT NULL) AND (private_id IS NULL))", using::btree
-#add_index"metasploit_credential_cores", ["workspace_id"], name: "index_metasploit_credential_cores_on_workspace_id", using::btree
-c.execute('''CREATE TABLE "metasploit_credential_logins" (
+#add_index"thg_credential_cores", ["origin_type","origin_id"], name: "index_thg_credential_cores_on_origin_type_and_origin_id", using::btree
+#add_index"thg_credential_cores", ["private_id"], name: "index_thg_credential_cores_on_private_id", using::btree
+#add_index"thg_credential_cores", ["public_id"], name: "index_thg_credential_cores_on_public_id", using::btree
+#add_index"thg_credential_cores", ["realm_id"], name: "index_thg_credential_cores_on_realm_id", using::btree
+#add_index"thg_credential_cores", ["workspace_id","private_id"], name: "unique_private_thg_credential_cores", unique: true, where: "((realm_id IS NULL) AND (public_id IS NULL) AND (private_id IS NOT NULL))", using::btree
+#add_index"thg_credential_cores", ["workspace_id", "public_id","private_id"], name: "unique_realmless_thg_credential_cores", unique: true, where: "((realm_id IS NULL) AND (public_id IS NOT NULL) AND (private_id IS NOT NULL))", using::btree
+#add_index"thg_credential_cores", ["workspace_id","public_id"], name: "unique_public_thg_credential_cores", unique: true, where: "((realm_id IS NULL) AND (public_id IS NOT NULL) AND (private_id IS NULL))", using::btree
+#add_index"thg_credential_cores", ["workspace_id", "realm_id","private_id"], name: "unique_publicless_thg_credential_cores", unique: true, where: "((realm_id IS NOT NULL) AND (public_id IS NULL) AND (private_id IS NOT NULL))", using::btree
+#add_index"thg_credential_cores", ["workspace_id", "realm_id", "public_id","private_id"], name: "unique_complete_thg_credential_cores", unique: true, where: "((realm_id IS NOT NULL) AND (public_id IS NOT NULL) AND (private_id IS NOT NULL))", using::btree
+#add_index"thg_credential_cores", ["workspace_id", "realm_id","public_id"], name: "unique_privateless_thg_credential_cores", unique: true, where: "((realm_id IS NOT NULL) AND (public_id IS NOT NULL) AND (private_id IS NULL))", using::btree
+#add_index"thg_credential_cores", ["workspace_id"], name: "index_thg_credential_cores_on_workspace_id", using::btree
+c.execute('''CREATE TABLE "thg_credential_logins" (
     "core_id" integer,
     "service_id" interger,
     "access_level" text,
@@ -326,56 +326,56 @@ c.execute('''CREATE TABLE "metasploit_credential_logins" (
     "updated_at" text
 )''')
 
-#add_index"metasploit_credential_logins", ["core_id","service_id"], name: "index_metasploit_credential_logins_on_core_id_and_service_id", unique: true, using::btree
-#add_index"metasploit_credential_logins", ["service_id","core_id"], name: "index_metasploit_credential_logins_on_service_id_and_core_id", unique: true, using::btree
+#add_index"thg_credential_logins", ["core_id","service_id"], name: "index_thg_credential_logins_on_core_id_and_service_id", unique: true, using::btree
+#add_index"thg_credential_logins", ["service_id","core_id"], name: "index_thg_credential_logins_on_service_id_and_core_id", unique: true, using::btree
 
 
-c.execute('''CREATE TABLE "metasploit_credential_origin_cracked_passwords" (
-    "metasploit_credential_core_id" integer,
+c.execute('''CREATE TABLE "thg_credential_origin_cracked_passwords" (
+    "thg_credential_core_id" integer,
     "created_at" text,
     "updated_at" text
     
     )''')
 
-#add_index"metasploit_credential_origin_cracked_passwords", ["metasploit_credential_core_id"], name: "originating_credential_cores", using::btree
-c.execute('''CREATE TABLE "metasploit_credential_origin_imports" (
+#add_index"thg_credential_origin_cracked_passwords", ["thg_credential_core_id"], name: "originating_credential_cores", using::btree
+c.execute('''CREATE TABLE "thg_credential_origin_imports" (
     "filename" text,
     "task_id" integer
     "created_at" text,
     "updated_at" text
 )''')
 
-#add_index"metasploit_credential_origin_imports", ["task_id"], name: "index_metasploit_credential_origin_imports_on_task_id", using::btree
-c.execute('''CREATE TABLE "metasploit_credential_origin_manuals" (
+#add_index"thg_credential_origin_imports", ["task_id"], name: "index_thg_credential_origin_imports_on_task_id", using::btree
+c.execute('''CREATE TABLE "thg_credential_origin_manuals" (
     "user_id" integer,
     "created_at" text,
     "updated_at" text
 )''')
 
-#add_index"metasploit_credential_origin_services", ["service_id","module_full_name"], name: "unique_metasploit_credential_origin_services", unique: true, using::btree
-c.execute('''CREATE TABLE "metasploit_credential_origin_sessions" (
+#add_index"thg_credential_origin_services", ["service_id","module_full_name"], name: "unique_thg_credential_origin_services", unique: true, using::btree
+c.execute('''CREATE TABLE "thg_credential_origin_sessions" (
     "post_reference_name" text,
     "session_id" integer
     "created_at" text,
     "updated_at" text
 )''')
 
-#add_index"metasploit_credential_privates", ["type","data"], name: "index_metasploit_credential_privates_on_type_and_data", unique: true, where: "(NOT ((type)::text = 'Metasploit::Credential::SSHKey'::text))", using::btree
-#add_index"metasploit_credential_privates", ["type"], name: "index_metasploit_credential_privates_on_type_and_data_sshkey", unique: true, where: "((type)::text = 'Metasploit::Credential::SSHKey'::text)", using::btree
-c.execute('''CREATE TABLE "metasploit_credential_publics" (
+#add_index"thg_credential_privates", ["type","data"], name: "index_thg_credential_privates_on_type_and_data", unique: true, where: "(NOT ((type)::text = 'Metasploit::Credential::SSHKey'::text))", using::btree
+#add_index"thg_credential_privates", ["type"], name: "index_thg_credential_privates_on_type_and_data_sshkey", unique: true, where: "((type)::text = 'Metasploit::Credential::SSHKey'::text)", using::btree
+c.execute('''CREATE TABLE "thg_credential_publics" (
     "username" text,
     "type" text
     "created_at" text,
     "updated_at" text
 )''')
-#add_index"metasploit_credential_publics", ["username"], name: "index_metasploit_credential_publics_on_username", unique: true, using::btree
-c.execute('''CREATE TABLE "metasploit_credential_realms" (
+#add_index"thg_credential_publics", ["username"], name: "index_thg_credential_publics_on_username", unique: true, using::btree
+c.execute('''CREATE TABLE "thg_credential_realms" (
     "key" text,
     "value" text
     "created_at" text,
     "updated_at" text
 )''')
-#add_index"metasploit_credential_realms", ["key","value"], name: "index_metasploit_credential_realms_on_key_and_value", unique: true, using::btree
+#add_index"thg_credential_realms", ["key","value"], name: "index_thg_credential_realms_on_key_and_value", unique: true, using::btree
 c.execute('''CREATE TABLE "mod_refs" (
     "module" text,
     "mtype" text,
@@ -400,6 +400,424 @@ c.execute('''CREATE TABLE "module_authors" (
     "email" text
 )''')
 
+#add_index"module_details", ["description"], name: "index_module_details_on_description", using::btree
+#add_index"module_details", ["mtype"], name: "index_module_details_on_mtype", using::btree
+#add_index"module_details", ["name"], name: "index_module_details_on_name", using::btree
+#add_index"module_details", ["refname"], name: "index_module_details_on_refname", using::btree
+c.execute('''CREATE TABLE "module_mixins" (
+    "detail_id" integer,
+    "name" text
+)''')
+#add_index"module_mixins", ["detail_id"], name: "index_module_mixins_on_detail_id", using::btree
+c.execute('''CREATE TABLE "module_platforms" (
+    "detail_id" integer,
+    "name" text
+)''')
+
+#add_index"module_platforms", ["detail_id"], name: "index_module_platforms_on_detail_id", using::btree
+c.execute('''CREATE TABLE "module_refs" (
+    "detail_id" integer,
+    "name" text
+) ''')
+
+#add_index"module_refs", ["detail_id"], name: "index_module_refs_on_detail_id", using::btree
+#add_index"module_refs", ["name"], name: "index_module_refs_on_name", using::btree
+c.execute('''CREATE TABLE "module_runs" (
+    "attempted_at" text,
+    "fail_detail" text,
+    "fail_reason" text,
+    "module_fullname" text,
+    "port" integer,
+    "proto" text,
+    "session_id" integer,
+    "status" text
+    "trackable_id" integer
+    "trackable_type" text,
+    "user_id" integer,
+    "username" text,
+    "created_at" text,
+    "updated_at" text
+)''')
+
+
+#add_index"module_runs", ["session_id"], name: "index_module_runs_on_session_id", using::btree
+#add_index"module_runs", ["user_id"], name: "index_module_runs_on_user_id", using::btree
+c.execute('''CREATE TABLE "module_targets" (
+    "detail_id" integer,
+    "index" integer,
+    "name" text
+)''')
+#trocar o tipo do dado do cached_sited para binario
+#add_index"module_targets", ["detail_id"], name: "index_module_targets_on_detail_id", using::btree
+
+c.execute('''CREATE TABLE "nexpose_consoles" (
+    "enabled" boolean,
+    "owner" text,
+    "address" text,
+    "port" integer,
+    "username" text,
+    "password" text,
+    "status" text,
+    "version" text,
+    "cert" text,
+    "cached_sites" text,
+    "name" text
+    "created_at" text,
+    "updated_at" text    
+)''')
+
+c.execute('''CREATE TABLE "notes" (
+    "ntype" text,
+    "workspace_id" integer,
+    "service_id" integer
+    "host_id" integer,
+    "critical" boolean,
+    "seen" boolean,
+    "data" text,
+    "vuln_id" integer
+    "created_at" text,
+    "updated_at" text
+)''')
+
+#add_index"notes", ["ntype"], name: "index_notes_on_ntype", using::btree
+#add_index"notes", ["vuln_id"], name: "index_notes_on_vuln_id", using::btree
+#settings para binario
+c.execute('''CREATE TABLE "profiles" (
+    "active" bolean,
+    "name" text,
+    "owner" text,
+    "settings" text
+    "created_at" text,
+    "updated_at" text
+)''')
+
+c.execute('''CREATE TABLE "refs" (
+    "ref_id" integer,
+    "name" text,
+    "created_at" text,
+    "updated_at" text
+)''')
+
+#add_index"refs", ["name"], name: "index_refs_on_name", using::btree
+c.execute('''CREATE TABLE "report_templates"(
+    "workspace_id" integer,
+    "created_by" text   
+    "path" text,
+    "name" text,
+    "created_at" text,
+    "updated_at" text
+    
+)''')
+
+
+c.execute('''CREATE TABLE "reports" (
+    "workspace_id" integer,
+    "created_by" text,
+    "rtype" text
+    "path" text,
+    "options" text,
+    "downloaded_at" text
+    "task_id" integer
+    "name" text
+)''')
+
+c.execute('''CREATE TABLE "routes" (
+    "session_id" integer,
+    "subnet" text,
+    "text" text
+)''')
+
+c.execute('''CREATE TABLE "services" (
+    "host_id" integer,
+    "port" integer,
+    "proto" text,
+    "state" text,   
+    "name" text,
+    "info" text,
+    "created_at" text,
+    "updated_at" text
+)''')
+
+
+#add_index"services", ["host_id", "port","proto"], name: "index_services_on_host_id_and_port_and_proto", unique: true, using::btree
+#add_index"services", ["name"], name: "index_services_on_name", using::btree
+#add_index"services", ["port"], name: "index_services_on_port", using::btree
+#add_index"services", ["proto"], name: "index_services_on_proto", using::btree
+#add_index"services", ["state"], name: "index_services_on_state", using::btree
+#command para binario
+c.execute('''CREATE TABLE "session_events" (
+    "session_id" integer,
+    "etype" text,
+    "command" text,
+    "output" text,
+    "remote_path" text,
+    "local_path" text,
+    "created_at" text,
+    "updated_at" text
+)''')
+
+
+c.execute('''CREATE TABLE "sessions" (
+    "host_id" integer,
+    "stype" text,
+    "via_exploit" text,
+    "via_payload" text,
+    "desc" text,   
+    "port" text,
+    "platform" text,
+    "datastore" text,
+    "opened_at" text,
+    "closed_at" text,
+    "close_reason" text,
+    "local_id" integer,
+    "last_seen" text,
+    "module_run_id" text
+)''')
+#add_index"sessions", ["module_run_id"], name: "index_sessions_on_module_run_id", using::btree
+
+c.execute('''CREATE TABLE "tags" (
+    "user_id" integer,
+    "name" text,  
+    "desc" text,
+    "report_summary" boolean,
+    "report_detail" boolean,
+    "critical" boolean,
+    "created_at" text,
+    "updated_at" text
+)''')
+c.execute('''CREATE  TABLE "task_creds" (
+    "task_id" integer,
+    "cred_id" integer,
+    "created_at" text,
+    "updated_at" text
+)''')
+
+c.execute('''CREATE  TABLE "task_hosts" (
+    "task_id" integer,
+    "host_id" integer,
+    "created_at" text,
+    "updated_at" text
+)''')
+
+c.execute('''CREATE TABLE "task_services" (
+    "task_id" integer,
+    "service_id" integer,
+    "created_at" text,
+    "updated_at" text
+)''')
+
+c.execute('''CREATE TABLE "task_sessions" (
+    "task_id" integer,
+    "session_id" integer,
+    "created_at" text,
+    "updated_at" text
+)''')
+#settings para binario
+c.execute('''CREATE TABLE "tasks" (
+    "workspace_id" integer,
+    "created_by" text
+    "module" text,
+    "completed_at" text,
+    "path" text,      
+    "info" text,
+    "description" text,
+    "progress" integer
+    "options" text
+    "error" text,
+    "result" text,   
+    "module_uuid" text,
+    "settings" text
+    "created_at" text,
+    "updated_at" text
+    
+)''')
+
+c.execute('''CREATE TABLE "users" (
+    "username" text,
+    "crypted_password" text,   
+    "password_salt" text
+    "persistence_token" text,
+    "fullname" text,
+    "email" text,
+    "phone" text,
+    "company" text,
+    "prefs" text,
+    "admin" boolena,
+    "created_at" text,
+    "updated_at" text
+)''')
+
+c.execute('''CREATE TABLE "vuln_attempts" (
+    "vuln_id" integer,
+    "attempted_at" text,
+    "exploited" boolean,
+    "fail_reason" text,
+    "username" text,
+    "module" text,
+    "session_id" integer,   
+    "loot_id" integer,
+    "fail_detail" text
+)''')
+
+#proof text para binario
+c.execute('''CREATE TABLE "vuln_details" (
+    "vuln_id" integer,
+    "cvss_score" flout,
+    "cvss_vector" text,
+    "title" text,
+    "description" text,
+    "solution" text,
+    "proof" text,
+    "nx_console_id" integer,
+    "nx_device_id" integer,
+    "nx_vuln_id" integer,   
+    "nx_severity" flout,
+    "nx_pci_severity" flout
+    "nx_published" text,
+    "nx_added" text,
+    "nx_modified" text,
+    "nx_tags" text,
+    "nx_vuln_status" text,
+    "nx_proof_key" text,
+    "src" text,
+    "nx_scan_id" integer,
+    "nx_vulnerable_since" text,
+    "nx_pci_compliance_status" text
+)''')
+
+c.execute('''CREATE TABLE "vulns" (
+    "host_id" integer,
+    "service_id" integer
+    "created_at" text,
+    "name" text,
+    "updated_at" text,
+    "info" text, 
+    "exploited_at", text
+    "vuln_detail_count" integer,
+    "vuln_attempt_count" integer,
+    "origin_id" integer,
+    "origin_type" text
+)''')
+
+#add_index"vulns", ["name"], name: "index_vulns_on_name", using::btree
+#add_index"vulns", ["origin_id"], name: "index_vulns_on_origin_id", using::btree
+c.execute('''CREATE TABLE "vulns_refs" (
+    "ref_id" integer,
+    "vuln_id" integer
+)''')
+
+c.execute('''CREATE TABLE "web_forms" (
+    "web_site_id" integer, 
+    "path" text,
+    "method" text,
+    "params" text,
+    "query" text,
+    "created_at" text,
+    "updated_at" text
+    )''')
+
+#add_index"web_forms", ["path"], name: "index_web_forms_on_path", using::btree
+c.execute('''CREATE TABLE "web_pages" (
+    "web_site_id" integer,
+    "path" text,
+    "query" text,
+    "code" integer
+    "cookie" text,
+    "auth" text,
+    "ctype" text,
+    "mtime" text,
+    "location" text,
+    "headers" text,
+    "body" text,
+    "request" text,
+    "created_at" text,
+    "updated_at" text
+)''')
+
+#add_index"web_pages", ["path"], name: "index_web_pages_on_path", using::btree
+#add_index"web_pages", ["query"], name: "index_web_pages_on_query", using::btree
+c.execute('''CREATE TABLE "web_sites" (
+    "service_id" integer,
+    "vhost" integer,    
+    "comments" integer,
+    "options" text,
+    "created_at" text,
+    "updated_at" text    
+)''')
+
+
+#add_index"web_sites", ["comments"], name: "index_web_sites_on_comments", using::btree
+#add_index"web_sites", ["options"], name: "index_web_sites_on_options", using::btree
+#add_index"web_sites", ["vhost"], name: "index_web_sites_on_vhost", using::btree
+#request,proof text -> binario
+c.execute('''CREATE TABLE "web_vulns" (
+    "web_site_id" integer,  
+    "path" text,
+    "method" text,
+    "params" text,
+    "pname" text,
+    "risk" integer,
+    "name" text,
+    "query" text,
+    "category" text,
+    "confidence" integer,
+    "description" text,
+    "blame" text,
+    "request" text,
+    "proof" text,    
+    "owner" text,
+    "payload" text
+    "created_at" text,
+    "updated_at" text
+    )''')
+
+#add_index"web_vulns", ["method"], name: "index_web_vulns_on_method", using::btree
+#add_index"web_vulns", ["name"], name: "index_web_vulns_on_name", using::btree
+#add_index"web_vulns", ["path"], name: "index_web_vulns_on_path", using::btree
+c.execute('''CREATE TABLE "wmap_requests" (
+    "host" text,
+    "address" text,
+    "port" integer,
+    "ssl" integer
+    "meth" text,
+    "path" text,   
+    "headers" text,
+    "query" text,
+    "body" text,
+    "respcode" text,
+    "resphead" text,
+    "response" text,
+    "created_at" text,
+    "updated_at" text
+)''')
+
+
+c.execute('''CREATE TABLE "wmap_targets" (
+    "host" text,
+    "address" text,
+    "port" integer,
+    "ssl" integer,
+    "selected" integer,
+    "created_at" text,
+    "updated_at" text
+)''')
+
+c.execute('''CREATE TABLE "workspace_members" (
+    "workspace_id" integer,
+    "user_id"  integer
+)''')
+
+
+c.execute('''CREATE TABLE "workspaces" (
+    "name" text,
+    "boundary" text
+    "description" text,
+    "owner_id" integer    
+    "limit_to_network" boolean,
+    "import_fingerprint" boolean,
+    "created_at" text,
+    "updated_at" text
+)''')
 
 # kick off the config component of the database
 c.execute("INSERT INTO config VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)", (STAGING_KEY, INSTALL_PATH, IP_WHITELIST, IP_BLACKLIST, '', '', False, API_USERNAME, API_PASSWORD, '', API_PERMANENT_TOKEN, OBFUSCATE, OBFUSCATE_COMMAND))
