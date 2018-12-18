@@ -61,6 +61,18 @@ nav:
         - linux: ./capturetheflag/basic/detect/linux.md
         - windows: ./capturetheflag/basic/detect/windows.md
     - Deployment: deployment.md
+- pentest_standard:
+    - Pre engagement Interactions: ./pentest_standard/preengagemente.md
+    - Intelligence Gathering: ./pentest_standard/ig.md
+    - Threat Modeling: ./pentest_standard/threatmodeling.md
+    - Vulnerability Analysis: ./pentest_standard/vulnterability.md
+    - Exploitation: ./pentest_standard/exploration.md
+    - Post Exploitation: ./pentest_standard/postexploration.md
+    - Reporting: ./pentest_standard/report.md
+    - Technical Guidelines: ./pentest_standard/tecguidelines.md
+
+
+
 
 - CLI:
   - THG-PART-1:

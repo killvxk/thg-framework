@@ -1,6 +1,6 @@
-# Welcome to THG_LIB
+# Welcome to THG-FRAMEWORK
 
-## introduction to thg_lib
+## introduction to thg_FRAMEWORK
 
  * [introduction](#tubes)
     * [Basic IO](#basic-io)
@@ -12,9 +12,5 @@
     * [Networking](#networking)
     * [Secure Shell](#secure-shell)
     * [Serial Ports](#serial-ports)
-## Project layout
 
-    THG    # Arquivos de configuracao, voltado para importacao da biblioteca.
-    THG_lib #todos os modulos da bibliotecas estao nessa pasta e podem ser acessados atraves do from THG import $nome_modulo
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+![thg]()

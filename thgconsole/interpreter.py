@@ -342,7 +342,6 @@ Command       Description
         self.module_prompt_template = None
         self.prompt_hostname = "\033[0;32mPWN"
         self.show_sub_commands =sorted(("info",
-                                  "Eip",
                                   "Ip",
                                   "history",
                                   "options",

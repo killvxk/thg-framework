@@ -1,6 +1,6 @@
 import sqlite3, os, string, hashlib, random
 from datetime import date,datetime
-
+import string
 ###################################################
 #
 # Default values for the config
@@ -14,18 +14,18 @@ from datetime import date,datetime
 # set for a password.
 
 STAGING_KEY = os.getenv('STAGING_KEY', "BLANK")
-punctuation = '!#%&()*+,-./:;<=>?@[]^_{|}~'
+punctuation = string.ascii_letters+string.ascii_lowercase+string.ascii_uppercase+"!@#$%^&*()_+=-0987654321[]\/.,z<><>?|{}/"
 
 # otherwise prompt the user for a set value to hash for the negotiation password
 if STAGING_KEY == "BLANK":
     choice = input("\n [>] Enter server negotiation password, enter for random generation: ")
     if choice == "":
         # if no password is entered, generation something random
-        STAGING_KEY = ''.join(random.sample(string.ascii_letters + string.digits + punctuation, 32))
+        STAGING_KEY = ''.join(random.sample(string.ascii_letters + string.digits + punctuation, 201))
     else:
         STAGING_KEY = hashlib.md5(choice).hexdigest()
 elif STAGING_KEY == "RANDOM":
-    STAGING_KEY = ''.join(random.sample(string.ascii_letters + string.digits + punctuation, 32))
+    STAGING_KEY = ''.join(random.sample(string.ascii_letters + string.digits + punctuation, 201))
 
 # Calculate the install path. We know the project directory will always be the parent of the current directory. Any modifications of the folder structure will
 # need to be applied here.
@@ -41,7 +41,7 @@ IP_BLACKLIST = ""
 
 # default credentials used to log into the RESTful API
 API_USERNAME = "empireadmin"
-API_PASSWORD = ''.join(random.sample(string.ascii_letters + string.digits + punctuation, 32))
+API_PASSWORD = ''.join(random.sample(string.ascii_letters + string.digits + punctuation, 201))
 
 # the 'permanent' API token (doesn't change)
 API_PERMANENT_TOKEN = ''.join(random.choice(string.ascii_lowercase + string.digits) for x in range(40))
