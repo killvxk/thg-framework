@@ -66,6 +66,36 @@ c.execute('PRAGMA journal_mode = OFF')
 
 c.execute('DROP TABLE IF EXISTS config')
 
+c.execute('''CREATE TABLE session_target(
+    "host" text,
+    "user_id" text,
+    "protocol" text,
+    "port" integer,
+    "password" text,
+    "service_id" integer,
+    "session_uuid" text,
+    "data" text,
+    "mac" text,
+    "workspace_id" integer,
+    "session_name" text,
+    "state" text,
+    "os_name" text,
+    "os_flavor" text,
+    "arch" text,
+    "purpose" text
+    "info" text,
+    "comments" text,
+    "scope" text
+    "virtual_host" text
+    "note_count" integer
+    "vuln_count" integer
+    "service_count" integer
+    "os_family" text  
+    "created_at" text,
+    "updated_at" text
+    
+    )''')
+
 c.execute('''CREATE TABLE config (
     "staging_key" text,
     "install_path" text,

@@ -1,6 +1,6 @@
 import os,socket,sys,platform
 from thgconsole.core.CoreUtils.printer import print_info
-from extra_libs.getmac.getmac.getmac import get_mac_address
+from getmac.getmac import get_mac_address
 
 class thg_add_init:
     #show mor info in banner thg
