@@ -38,9 +38,9 @@ segue a lista de comandos abaixo
 # Alias Commands
 
 Command       Description
-- [ ] alias         create or view an alias.
-- [ ] del           rm
-- [ ] handler       use exploit/multi/handler
+- [ ] *alias*         create or view an alias.
+- [ ] *del*           rm
+- [ ] *handler*       use exploit/multi/handler
 
 # Core Commands
 
@@ -106,10 +106,10 @@ Command        Description
 
 #Command       Description
 
-- [ ] handler       Start a payload handler as job
-- [ ] jobs          Displays and manages jobs
-- [ ] kill          Kill a job
-- [ ] rename_job    Rename a job
+- [ ] *handler*       Start a payload handler as job
+- [ ] *jobs*          Displays and manages jobs
+- [ ] *kill*          Kill a job
+- [ ] *rename_job*    Rename a job
 
 
 # Resource Script Commands
@@ -117,17 +117,17 @@ Command        Description
 
 Command       Description
 
-- [ ] makerc        Save commands entered since start to a file
-- [ ] resource      Run the commands stored in a file
+- [ ] *makerc*        Save commands entered since start to a file
+- [ ] *resource*      Run the commands stored in a file
 
 # Developer Commands
 
 Command       Description
 
-- [ ] edit               Edit the current module or a file with the preferred editor
+- [ ] *edit*               Edit the current module or a file with the preferred editor
 - [x] python_interpreter  Drop into python  scripting mode
 - [x] log                 Displays framework.log starting at the bottom if possible
-- [ ] reload_lib         Reload one or more library files from specified paths
+- [ ] *reload_lib*         Reload one or more library files from specified paths
 
 # Database Backend Commands
 
