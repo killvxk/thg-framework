@@ -37,10 +37,11 @@ segue a lista de comandos abaixo
 
 # Alias Commands
 
-Command       Description
-- [ ] *alias*         create or view an alias.
-- [ ] *del*           rm
-- [ ] *handler*       use exploit/multi/handler
+| Command        | Description|
+| -------------  |:-------------: |
+| - [ ] alias    | create or view an alias. |
+| - [ ] del      |  rm |
+| - [ ] handler  |  use exploit/multi/handler |
 
 # Core Commands
 
