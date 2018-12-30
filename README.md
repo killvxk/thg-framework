@@ -74,33 +74,33 @@ Command              | Description
 
 # Module Commands
 
-Command        Description
-
-- [x] show all       show all modules -> (@sys_module)
-- [x] show creds     show creds in db -> (@module_required)
-- [x] show devices   show devices modules -> (@module_required)
-- [x] show encoders  show encoders for module -> (@module_required)
-- [x] show exploits  show exploit modules -> (@sys_module)
-- [x] show auxiliary show auxiliary modules -> (@sys_module)
-- [x] show nops      show nops modules -> (@sys_module)
-- [x] show payloads  show payload modules -> (@sys_module)
-- [x] show post      show post modules -> (@sys_module)
-- [x] show info      show info modules -> (@module_required)
-- [x] show options   show options in the modules -> (@module_required)
-- [x] show wordlists show wordlist in thgconsole date -> (@module_required)
-- [x] show threads   View and manipulate background threads -> (@module_required)
-- [ ] *advanced*      Displays advanced options for one or more modules -> (@sys_module)
-- [x] back           Move back from the current context -> (@sys_module)
-- [x] show info      Displays information about one or more modules
-- [ ] *loadpath*      Searches for and loads modules from a path -> (@sys_module)
-- [x] show options   Displays global options or for one or more modules
-- [ ] *popm*          Pops the latest module off the stack and makes it active -> (@sys_module)
-- [ ] *previous*      Sets the previously loaded module as the current module -> (@sys_module)
-- [ ] *pushm*         Pushes the active or list of modules onto the module stack -> (@sys_module)
-- [ ] *reload_all*    Reloads all modules from all defined module paths -> (@sys_module)
-- [x] search         Searches module names and descriptions -> (@sys_module)
-- [x] show           Displays modules of a given type, or all modules -> (@sys_module)
-- [x] use            Selects a module by name -> (@sys_module)
+Command               |Description
+| -------------       |:-------------: |
+| - [x] show all      |   show all modules -> (@sys_module)
+| - [x] show creds    |   show creds in db -> (@module_required)
+| - [x] show devices  |  show devices modules -> (@module_required)
+| - [x] show encoders |  show encoders for module -> (@module_required)
+| - [x] show exploits |  show exploit modules -> (@sys_module)
+| - [x] show auxiliary|  show auxiliary modules -> (@sys_module)
+| - [x] show nops     |  show nops modules -> (@sys_module)
+| - [x] show payloads |  show payload modules -> (@sys_module)
+| - [x] show post     |  show post modules -> (@sys_module)
+| - [x] show info     | show info modules -> (@module_required)
+| - [x] show options  | show options in the modules -> (@module_required)
+| - [x] show wordlists| show wordlist in thgconsole date -> (@module_required)
+| - [x] show threads  | View and manipulate background threads -> (@module_required)
+| - [ ] *advanced*    | Displays advanced options for one or more modules -> (@sys_module)
+| - [x] back          | Move back from the current context -> (@sys_module)
+| - [x] show info     | Displays information about one or more modules
+| - [ ] *loadpath*    | Searches for and loads modules from a path -> (@sys_module)
+| - [x] show options  | Displays global options or for one or more modules
+| - [ ] *popm*        | Pops the latest module off the stack and makes it active -> (@sys_module)
+| - [ ] *previous*    | Sets the previously loaded module as the current module -> (@sys_module)
+| - [ ] *pushm*       | Pushes the active or list of modules onto the module stack -> (@sys_module)
+| - [ ] *reload_all*  | Reloads all modules from all defined module paths -> (@sys_module)
+| - [x] search        | Searches module names and descriptions -> (@sys_module)
+| - [x] show          | Displays modules of a given type, or all modules -> (@sys_module)
+| - [x] use           | Selects a module by name -> (@sys_module)
 
 
 # Job Commands
