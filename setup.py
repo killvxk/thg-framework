@@ -18,14 +18,21 @@ class THG_INSTALL():
             if check_os == "Ubuntu":
                 os.system("apt install python3-pip")
                 for libs in fl.readlines():
-                    print_info(libs)
+                    print_success(libs)
                     os.system("pip3 install {}".format(libs))
             elif check_os == "Debian":
                 os.system("apt install python3-pip")
                 for libs in fl.readlines():
-                    print_info(libs)
+                    print_success(libs)
                     os.system("pip3 install {}".format(libs))
                 print("fish instalation...[{}]".format(check_os))
+            elif check_os == "Manjaro Linux":
+                os.system("pacman -Syy python3-pip")
+                for libs in fl.readlines():
+                    print_success(libs)
+                    os.system("pip3 install {}".format(libs))
+                print("fish instalation...[{}]".format(check_os))
+
             else:
                 for libs in fl.readlines():
                     print(libs)
@@ -33,10 +40,3 @@ class THG_INSTALL():
 
 
 THG_INSTALL.install()
-
-
-
-import distro
-a = distro.linux_distribution()
-
-print(a)
