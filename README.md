@@ -20,17 +20,22 @@ python3 thgconsole.py
 # como contribuir:
 entre no  site do thg veja como contribuir para o codigo
 
-![thgsite]https://darkcode357.github.io/thg-framework/
+=> https://darkcode357.github.io/thg-framework/contributing/get-started/
 
-Credits: Include a section for credits in order to highlight and link to the authors of your project.
+Credits:
 
-License: Finally, include a section for the license of your project. For more information on choosing a license, check out GitHub’s li
+| devs          | name nick     |
+| ------------- |:-------------:|
+| master dev    | darkcode0x00  |
 
-Pylint	 
+License:
+
+Pylint
 PyFlakes
-pycodestyle	
+pycodestyle
 pydocstyle
-Bandit	
+
+Bandit
 MyPy
 
 
