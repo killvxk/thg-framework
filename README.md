@@ -1,12 +1,13 @@
-# thgconsole
-python exploit developer
+## THG-FRAMEWORK
+# projeto
+projeto  contruido para ser uma aplicacao de desenvolvimento e explorar de sistema  operacionais, contruido na linguagem python3.x poderar ser atualizado para as novas 
+versoes python x.x no decorrer da evolucao da aplicacao e do python 
 
-Project name THG-FRAMEWORK
- 
-Description: A description of your project follows. A good description is clear, short, and to the point. Describe the importance of your project, and what it does.
-
-Table of Contents: Optionally, include a table of contents in order to allow other people to quickly navigate especially long or detailed READMEs.
-
+# instalacao
+```python
+s = "Python syntax highlighting"
+print s
+```
 Installation: Installation is the next section in an effective README. Tell other users how to install your project locally. Optionally, include a gif to make the process even more clear for other people.
 
 Usage: The next section is usage, in which you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.

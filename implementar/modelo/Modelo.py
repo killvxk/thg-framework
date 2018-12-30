@@ -1,6 +1,6 @@
-print('''
+'''
 [=============================]
-[workspace 1      session_t 1 ]     
+[workspace 1      session_t 1 ]
 [=============================]
 [host          => 192.168.1.1 ]
 [user_id       => 1           ]
@@ -8,7 +8,7 @@ print('''
 [port          => 12,122,11   ]
 [password      => null/123    ]
 [services      => ftp/ssh/http]
-[session_uuid  => xxxxxxxxxxxx] 
+[session_uuid  => xxxxxxxxxxxx]
 [data          => 05/12/1929  ]
 [mac           => xx:xX:xx:xx:]
 [workspace_id  => 1           ]
@@ -18,17 +18,15 @@ print('''
 [os_flavor     => windows 10  ]
 [arch          => 64-bits     ]
 [purpose       => kerberus    ]
-[info          => waf server  ] 
+[info          => waf server  ]
 [comments      => sec server  ]
 [scope         => 1 alvo      ]
 [virtual_host  => null        ]
 [note_count    => 1           ]
-[vuln_count    => 0           ] 
+[vuln_count    => 0           ]
 [service_count => 3           ]
 [os_family     => windows     ]
 [created_at    => 12/12/21    ]
 [updated_at    => 12/12/21    ]
 [=============================]
-
-''')
-
+'''

@@ -11,9 +11,18 @@ from colorama import Fore
 from future.builtins import input
 from time import sleep
 
+##
+##DB > THG
+##
+##
+##mods
+from thgconsole.core.modules import test
+##
 
 
 from thgconsole.config.Version import __codenome__,__version__
+from thgconsole.core.CoreUtils.voz import thgvoz
+#from thgconsole.core.DB import DB_CONTROLER
 from thgconsole.core.CoreUtils.exceptions import THGtException
 from glob import glob
 from thgconsole.core.CoreUtils.utils import (
@@ -52,7 +61,6 @@ class BaseInterpreter(object):
     history_file = os.path.expanduser("~/.history")
     history_length = 100
     global_help = ""
-
     def __init__(self):
         self.setup()
         self.banner = ""
@@ -112,7 +120,8 @@ class BaseInterpreter(object):
 
     def start(self):
         """ THGconsole main entry point. Starting interpreter loop. """
-
+        #thgvoz.load()
+        #DB_CONTROLER.DB.Create_DB()
         print_info(self.banner)
         printer_queue.join()
         while True:
@@ -424,6 +433,8 @@ Command       Description
 {YELLOW}+ -- --=[{RED}Encoders {MAGENTA} {encoders_count}  {RED}{YELLOW}]=-- -- + 
 {YELLOW}+ -- --=[{RED}Nops     {MAGENTA} {nops_count}      {RED}{YELLOW}]=-- -- + 
 
+{CYAN}==================={GREEN}[ thgconsole-config ]{GREEN}{CYAN}========================
+{YELLOW}+ -- --=[{RED}DB_STATUS =>{MAGENTA}  {RED}{YELLOW}]=-- -- +
 
         """.format(os=platform.uname()[0],
                    release=platform.uname()[2],
@@ -679,11 +690,9 @@ Command       Description
     @module_required
     def _show_wordlists(self, *args, **kwargs):
         headers = ("Wordlist", "Path")
-        wordlists = [(f, "file://{}/{}".format(WORDLISTS_DIR, f)) for f in os.listdir(WORDLISTS_DIR) if
-                     f.endswith(".txt")]
-
-        print_table(headers, *wordlists, max_column_length=100)
-
+        wordlists = [(f, "file://{}/{}".format(WORDLISTS_DIR, f)) for f in os.listdir(WORDLISTS_DIR) if f.endswith(".txt")]
+        listw = str(len(wordlists))
+        print_table(headers, *wordlists, max_column_length=9000)
 
     @module_required
     def _show_encoders(self, *args, **kwargs):
@@ -691,7 +700,7 @@ Command       Description
             encoders = self.current_module.get_encoders()
             if encoders:
                 headers = ("Encoder", "Name", "Description")
-                print_table(headers, *encoders, max_column_length=100)
+                print_table(headers, *encoders, max_column_length=9000)
                 return
 
         print_error("No encoders available")
@@ -757,6 +766,13 @@ Command       Description
             print_info("\n", self.module_help)
     def command_log(self,*args,**kwargs):
         os.system("cat thgconsole.log")
+
+
+
+
+    def command_tcp(self,*args,**kwargs):
+        from thgconsole.core.modules.test import FakeGit
+        return FakeGit()
     def command_exec(self, *args, **kwargs):
         os.system(args[0])
     def command_shell(self,*args, **kwargs):
