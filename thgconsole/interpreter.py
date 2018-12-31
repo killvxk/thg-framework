@@ -120,7 +120,7 @@ class BaseInterpreter(object):
 
     def start(self):
         """ THGconsole main entry point. Starting interpreter loop. """
-        #thgvoz.load()
+        thgvoz.load()
         #DB_CONTROLER.DB.Create_DB()
         print_info(self.banner)
         printer_queue.join()
