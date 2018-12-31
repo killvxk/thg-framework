@@ -1,27 +1,30 @@
 ## THG-FRAMEWORK
-# projeto
-projeto  contruido para ser uma aplicacao de desenvolvimento e explorar de sistema  operacionais, contruido na linguagem python3.x poderar ser atualizado para as novas 
-versoes python x.x no decorrer da evolucao da aplicacao e do python 
+# About the project
 
-# instalacao
-apenas rode esse comando e o python irar fazer todo o trabalho para voce, instalacao simples e rapida
-```python
+Project build to be a development and pentesting tool of SO, build using python in the lastest version, currently python 3.7.
+
+# Instalation
+Just run this on Terminal:
+```
+git clone https://github.com/darkcode357/thg-framework.git
+cd thg-framework
+python
 python3 setup.py
 ```
-# uso
-apos voce instalar o thg rode o comando
+# Use
+To open THGConsole run:
 ```python
 python3 thgconsole.py
 ```
 
-# fotos do terminal
+# Terminal Screenshot
 ![logo](https://github.com/darkcode357/thg-framework/blob/master/fotos/thg.png)
 
-# documentacao completa
+# Documentation
 => https://darkcode357.github.io/thg-framework/
 
-# como contribuir:
-entre no  site do thg veja como contribuir para o codigo
+# How to contribute:
+Follow the link bellow with all instructions.
 => https://darkcode357.github.io/thg-framework/contributing/get-started/
 
 # Credits:
@@ -30,10 +33,10 @@ entre no  site do thg veja como contribuir para o codigo
 | ------------- |:-------------:|
 | master dev    | darkcode0x00  |
 
-# futuras atualizacoes
-cada check com x significa que o comando foi  adicionado a aplicacao, se o comando estiver com os
-colchetes estiverem vazios, signficia que precisa ser implementado
-segue a lista de comandos abaixo
+# Future updates
+The "[x]" are the commands that is working and the "[]" are the future funcionalities to be applied.
+
+#Commands list:
 
 # Alias Commands
 
