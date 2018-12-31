@@ -351,7 +351,7 @@ Command       Description
         self.module_prompt_template = None
         self.prompt_hostname = "\033[0;32mPWN"
         self.show_sub_commands =sorted(("info",
-                                  "Ip",
+                                  "ip",
                                   "history",
                                   "options",
                                   "devices",
@@ -724,7 +724,7 @@ Command       Description
         print(self.banner)
     def _show_version(self, *args, **kwargs):
         print_status(__codenome__+"-"+__version__)
-    def _show_Ip(self, *args, **kwargs):
+    def _show_ip(self, *args, **kwargs):
         print(self.ipi(darkcde=None))
     # def _show_Eip(self,*args,**kwargs):
     # print(ipgetter.myip())
