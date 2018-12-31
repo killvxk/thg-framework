@@ -1,13 +1,14 @@
 ## THG-FRAMEWORK
 # About the project
 
-Project build to be a development and pentesting tool of SO, build using python in the lastest version, currently python 3.7.
+Project build to be a development and pentesting tool of SO, build using python in the lastest version, currently V3.7
 
 # Instalation
 Just run this on Terminal:
 ```
 git clone https://github.com/darkcode357/thg-framework.git
 cd thg-framework
+python
 python3 setup.py
 ```
 # Use
@@ -28,12 +29,14 @@ Follow the link bellow with all instructions.
 
 # Credits:
 
-| devs          | name nick     |
-| ------------- |:-------------:|
-| master dev    | darkcode0x00  |
+| devs          | name nick       |
+| ------------- |:---------------:|
+| master dev    | darkcode0x00    |
+| ------------- |:---------------:|
+|     dev       | Henrique Miranda|
 
 # Future updates
-The "[x]" are the commands that is working and the "[]" are the future funcionalities to be applied.
+The "[x]" are the commands that is working and the "[ ]" are the future funcionalities to be applied.
 
 #Commands list:
 
