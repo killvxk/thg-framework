@@ -8,7 +8,6 @@ Just run this on Terminal:
 ```
 git clone https://github.com/darkcode357/thg-framework.git
 cd thg-framework
-python
 python3 setup.py
 ```
 # Use
