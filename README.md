@@ -31,7 +31,6 @@ Follow the link bellow with all instructions.
 | devs          | name nick       |
 | ------------- |:---------------:|
 | master dev    | darkcode0x00    |
-| ------------- |:---------------:|
 |     dev       | Henrique Miranda|
 
 # Future updates
