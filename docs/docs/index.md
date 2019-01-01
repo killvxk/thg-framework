@@ -2,15 +2,6 @@
 
 ## introduction to thg_FRAMEWORK
 
- * [introduction](#tubes)
-    * [Basic IO](#basic-io)
-      * [Receiving data](#receiving-data)
-      * [Sending data](#sending-data)
-      * [Manipulating integers](#manipulating-integers)
-    * [Processes and Basic Features](#processes-and-basic-features)
-    * [Interactive Sessions](#interactive-sessions)
-    * [Networking](#networking)
-    * [Secure Shell](#secure-shell)
-    * [Serial Ports](#serial-ports)
-
-![thg]()
+seja bem vindo ao projeto thg-framework, esse projeto vem com  o intuido de ser a primeira aplicacao
+brasileira voltada com os padroes pentest standard,  owasp e osint para realisar estudos na area da
+seguranca da informacao
