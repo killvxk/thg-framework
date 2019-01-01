@@ -17,7 +17,7 @@ python3 thgconsole.py
 ```
 
 # Terminal Screenshot
-![logo](https://github.com/darkcode357/thg-framework/blob/master/fotos/thg.png)
+![logo](https://github.com/darkcode357/thg-framework/blob/master/docs/docs/fotos/thg.png)
 
 # Documentation
 => https://darkcode357.github.io/thg-framework/
