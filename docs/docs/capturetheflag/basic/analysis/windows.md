@@ -7,8 +7,9 @@ C:\> systeminfo I findstr /B /C:"OS Name" /C:"OSVersion"
 C:\> wmic csproduct get name
 C:\> wmic bios get serialnumber
 C:\> wmic computersystem list brief
-
+```
 ![Ref](https://technet.microsoft.com/enus/sysinternals/psinfo.aspx)
+```
 C:\> psinfo -accepteula -s -h -d
 ```
 ## USER INFORMATION
