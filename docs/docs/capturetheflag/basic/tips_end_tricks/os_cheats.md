@@ -66,7 +66,7 @@ mkdir /<WHERE TO MOUNT LOCALLY>
 # useradd -m <NEW USER>
 # passwd <NEW USER>
 # smbpasswd -a <NEW USER>
-# echo "[Share]" >> /etc/samba/smb.conf
+# echo [Share] >> /etc/samba/smb.conf
 # echo /<PATH OF FOLDER TO SHARE> >>/etc/samba/smb.conf
 # echo available = yes >> /etc/samba/smb.conf
 # echo valid users = <NEW USER> >>/etc/samba/smb.conf
