@@ -60,7 +60,7 @@ PS C:\> Get-Help <PS COMMAND> -full
 # adduser <USER NAME> fuse
 ## Log out and log back in.
 mkdir �/<WHERE TO MOUNT LOCALLY>
-# sshfs <REMOTE USER NAME>@<REMOTE HOST>:/<REMOTEPATH> �/<WHERE TO MOUNT LOCALLY>
+sshfs <REMOTE USER NAME>@<REMOTE HOST>:/<REMOTEPATH> �/<WHERE TO MOUNT LOCALLY>
 
 ## Creating SMB share in Linux:
 # useradd -m <NEW USER>
