@@ -120,7 +120,7 @@ class BaseInterpreter(object):
 
     def start(self):
         """ THGconsole main entry point. Starting interpreter loop. """
-        thgvoz.load()
+        #thgvoz.load()
         #DB_CONTROLER.DB.Create_DB()
         print_info(self.banner)
         printer_queue.join()
@@ -719,7 +719,7 @@ Command       Description
         self.__show_modules('payloads')
     def _show_creds(self, *args, **kwargs):
         self.__show_modules('creds')
-    def _show_banner(self, *args, **kwargs):
+    def _show_banner(self, * args, **kwargs):
         os.system("clear")
         print(self.banner)
     def _show_version(self, *args, **kwargs):

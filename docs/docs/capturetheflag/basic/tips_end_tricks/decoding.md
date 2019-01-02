@@ -1,15 +1,20 @@
 # HEX CONVERSION
 ## Convert from hex to decimal in Windows:
+```
 C:\> set /a 0xff
 PS C:\> 0xff
+```
 ## Other Basic Math in Windows:
+```
 C:\> set /a 1+2
 C:\> set /a 3*(9/4)
 C:\> set /a (2*5)/2
 C:\> set /a "32>>3"
+```
 ## Decode Base64 text in a file:
+```
 C:\> certutil -decode <BASE64<DECODED FILE NAME>
-
+```
 # ENCODED
 
 ## Decode XOR and search for http:

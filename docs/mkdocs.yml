@@ -25,43 +25,47 @@ nav:
   - Community: community.md
   - Conceptual: conceptual.md
 
-- capture the flag:
-  - basic:
-    - analysis:
-      - linux: ./capturetheflag/basic/analysis/linux.md
-      - windows: ./capturetheflag/basic/analysis/windows.md
-      - malware: ./capturetheflag/basic/analysis/malware.md
-    - recovery:
-      - backup: ./capturetheflag/basic/recover/backuo.md
-      - patching: ./capturetheflag/basic/recover/patching.md
-    - tips_end_tricks:
-      - tools: ./capturetheflag/basic/tips_end_tricks/tools.md
-      - decoding: ./capturetheflag/basic/tips_end_tricks/decoding.md
-      - dos: ./capturetheflag/basic/tips_end_tricks/dos.md
-      - os_cheats: ./capturetheflag/basic/tips_end_tricks/os_cheats.md
-      - snort: ./capturetheflag/basic/tips_end_tricks/snort.md
-    - identify:
-      - basic: ./capturetheflag/basic/identify/basic.md
-      - nmap: ./capturetheflag/basic/identify/nmap.md
-      - nessus: ./capturetheflag/basic/identify/nessus.md
-      - openvas: ./capturetheflag/basic/identify/openvas.md
-      - windows: ./capturetheflag/basic/identify/windows.md
-      - linux: ./capturetheflag/basic/identify/linux.md
-    - defend:
-      - windows: ./capturetheflag/basic/prootect_defend/windows.md
-      - linux: ./capturetheflag/basic/prootect_defend/linux.md
-    - identify:
-      - tcpdump: ./capturetheflag/basic/detect/tcpdump.md
-      - edicap: ./capturetheflag/basic/detect/editcap.md
-      - mergecap: ./capturetheflag/basic/detect/mergecap.md
-      - snort: ./capturetheflag/basic/detect/snort.md
-      - tshark: ./capturetheflag/basic/detect/tshark.md
-      - analysis: ./capturetheflag/basic/detect/analysis.md
-      - os:
-        - linux: ./capturetheflag/basic/detect/linux.md
-        - windows: ./capturetheflag/basic/detect/windows.md
-    - Deployment: deployment.md
-- pentest_standard:
+- english:
+  - capture the flag:
+    - basic:
+      - analysis:
+        - linux: ./capturetheflag/basic/analysis/linux.md
+        - windows: ./capturetheflag/basic/analysis/windows.md
+        - malware: ./capturetheflag/basic/analysis/malware.md
+      - recovery:
+        - backup: ./capturetheflag/basic/recover/backuo.md
+        - patching: ./capturetheflag/basic/recover/patching.md
+      - tips_end_tricks:
+        - tools: ./capturetheflag/basic/tips_end_tricks/tools.md
+        - decoding: ./capturetheflag/basic/tips_end_tricks/decoding.md
+        - dos: ./capturetheflag/basic/tips_end_tricks/dos.md
+        - os_cheats: ./capturetheflag/basic/tips_end_tricks/os_cheats.md
+        - snort: ./capturetheflag/basic/tips_end_tricks/snort.md
+      - identify:
+        - basic: ./capturetheflag/basic/identify/basic.md
+        - nmap: ./capturetheflag/basic/identify/nmap.md
+        - nessus: ./capturetheflag/basic/identify/nessus.md
+        - openvas: ./capturetheflag/basic/identify/openvas.md
+        - windows: ./capturetheflag/basic/identify/windows.md
+        - linux: ./capturetheflag/basic/identify/linux.md
+      - defend:
+        - windows: ./capturetheflag/basic/prootect_defend/windows.md
+        - linux: ./capturetheflag/basic/prootect_defend/linux.md
+      - identify:
+        - tcpdump: ./capturetheflag/basic/detect/tcpdump.md
+        - edicap: ./capturetheflag/basic/detect/editcap.md
+        - mergecap: ./capturetheflag/basic/detect/mergecap.md
+        - snort: ./capturetheflag/basic/detect/snort.md
+        - tshark: ./capturetheflag/basic/detect/tshark.md
+        - analysis: ./capturetheflag/basic/detect/analysis.md
+        - os:
+          - linux: ./capturetheflag/basic/detect/linux.md
+          - windows: ./capturetheflag/basic/detect/windows.md
+      - Deployment: deployment.md
+    - hash_crack:
+        - index: ./capturetheflag/hash_crack/index.md
+        - CORE_HASH_CRACKING_KNOWLEDGE: ./capturetheflag/hash_crack/CORE_HASH_CRACKING_KNOWLEDGE.md
+  - pentest_standard:
     - Pre engagement Interactions: ./pentest_standard/preengagemente.md
     - Intelligence Gathering: ./pentest_standard/ig.md
     - Threat Modeling: ./pentest_standard/threatmodeling.md
@@ -70,9 +74,6 @@ nav:
     - Post Exploitation: ./pentest_standard/postexploration.md
     - Reporting: ./pentest_standard/report.md
     - Technical Guidelines: ./pentest_standard/tecguidelines.md
-
-
-
 
 - CLI:
   - THG-PART-1:
