@@ -2,7 +2,7 @@
 ## KALI - Open Source Pentesting Distribution
 ![kali](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Kali_Linux_2.0_wordmark.svg/1200px-Kali_Linux_2.0_wordmark.svg.png)
 
-![Kali](https://www.kali.org)
+[Kali](https://www.kali.org)
 
 ## SIFT - SANS Investigative Forensics Toolkit
 ![SIFT](http://sift.readthedocs.org/) 
