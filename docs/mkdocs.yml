@@ -1,8 +1,8 @@
-site_name: thg
-site_url: https://github.com/darkcode357/thg_lib
-site_description: documentacao do thg_lib
+site_name: thg-framework
+site_url: https://github.com/darkcode357/thg-framework
+site_description: documentacao do thg-framework
 site_author: darkcode0x00
-repo_url: https://github.com/darkcode357/thg_lib
+repo_url: https://github.com/darkcode357/thg-framework
 heme:
     name: mkdocs
     shortcuts:
