@@ -190,7 +190,7 @@ C:\> wevtutil epl Application C:\<BACK UPPATH>\mylogs.evtx
 ```
 ## Get list of logs remotely:
 
-[https://technet.microsoft.com/enus/sysinternals/psloglist.aspx] (https://technet.microsoft.com/enus/sysinternals/psloglist.aspx) 
+[https://technet.microsoft.com](https://technet.microsoft.com/enus/sysinternals/psloglist.aspx) 
 ```
 C:\> psloglist \\<REMOTE COMPUTER> -accepteula -h 12 -x
 ```
