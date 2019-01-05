@@ -8,7 +8,7 @@ C:\> wmic csproduct get name
 C:\> wmic bios get serialnumber
 C:\> wmic computersystem list brief
 ```
-![Ref](https://technet.microsoft.com/enus/sysinternals/psinfo.aspx)
+[https://technet.microsoft.com/enus/sysinternals/psinfo.aspx](https://technet.microsoft.com/enus/sysinternals/psinfo.aspx)
 ```
 C:\> psinfo -accepteula -s -h -d
 ```
@@ -103,7 +103,7 @@ C:\> type %windir%\wininit.ini
 C:\> type %windir%\win.ini
 ```
 ## View autoruns, hide Microsoft files:
-![Ref](https://technet.microsoft.com/enus/sysinternals/bb963902.aspx)
+[https://technet.microsoft.com/enus/sysinternals/bb963902.aspx](https://technet.microsoft.com/enus/sysinternals/bb963902.aspx)
 ```
 C:\> autorunsc -accepteula -m
 C:\> type C:\Autoexec.bat"
@@ -190,7 +190,7 @@ C:\> wevtutil epl Application C:\<BACK UPPATH>\mylogs.evtx
 ```
 ## Get list of logs remotely:
 ```
-Ref. https://technet.microsoft.com/enus/sysinternals/psloglist.aspx
+[https://technet.microsoft.com/enus/sysinternals/psloglist.aspx] (https://technet.microsoft.com/enus/sysinternals/psloglist.aspx) 
 
 C:\> psloglist \\<REMOTE COMPUTER> -accepteula -h 12 -x
 ```
@@ -261,11 +261,11 @@ C:\> forfiles /5 /M * /C "cmd /c if @fsize GEO 2097152 echo @path @fsize"
 
 ## Find files with Alternate Data Streams:
 
-![Ref](https://technet.microsoft.com/enus/sysinternals/streams.aspx)
+[https://technet.microsoft.com/enus/sysinternals/streams.aspx](https://technet.microsoft.com/enus/sysinternals/streams.aspx)
 ```
 C:\> streams -s <FILE OR DIRECTORY>Find files with bad signature into csv:
 ```
-![Ref](https://technet.microsoft.com/enus/sysinternals/bb897441.aspx)
+[https://technet.microsoft.com/enus/sysinternals/bb897441.aspx](https://technet.microsoft.com/enus/sysinternals/bb897441.aspx)
 ```
 C:\> sigcheck -c -h -s -u -nobanner <FILE OR DIRECTORY> > <OUTPUT FILENAME>,csv
 ```
@@ -283,7 +283,7 @@ C:\> listdlls.exe -u <PROCESS NAME OR PID>
 ```
 
 ## Run Malware scan (Windows Defender) offline:
-![Ref](http://windows.microsoft.com/enus/windows/what-is-windows-defender-offline)
+[http://windows.microsoft.com/enus/windows/what-is-windows-defender-offline](http://windows.microsoft.com/enus/windows/what-is-windows-defender-offline)
 ```
 C:\> MpCmdRun.exe -SignatureUpdate
 C:\> MpCmdRun.exe -Scan
