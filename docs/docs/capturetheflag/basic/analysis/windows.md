@@ -189,9 +189,9 @@ C:\> wevtutil epl System C:\<BACK UPPATH>\mylogs.evtx
 C:\> wevtutil epl Application C:\<BACK UPPATH>\mylogs.evtx
 ```
 ## Get list of logs remotely:
-```
-[https://technet.microsoft.com/enus/sysinternals/psloglist.aspx] (https://technet.microsoft.com/enus/sysinternals/psloglist.aspx) 
 
+[https://technet.microsoft.com/enus/sysinternals/psloglist.aspx] (https://technet.microsoft.com/enus/sysinternals/psloglist.aspx) 
+```
 C:\> psloglist \\<REMOTE COMPUTER> -accepteula -h 12 -x
 ```
 
@@ -276,7 +276,7 @@ C:\> sigcheck -e -u -vr -s C:\
 ```
 
 ## List loaded unsigned Dlls:
-![Ref](https://technet.microsoft.com/enus/sysinternals/bb896656.aspx)
+[https://technet.microsoft.com/enus/sysinternals/bb896656.aspx](https://technet.microsoft.com/enus/sysinternals/bb896656.aspx)
 ```
 C:\> listdlls.exe -u
 C:\> listdlls.exe -u <PROCESS NAME OR PID>
