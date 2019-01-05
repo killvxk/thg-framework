@@ -36,7 +36,7 @@ C:\> %SystemRoot%\System32\Winevt\Logs\DNSServer. evtx
 C:\> %SystemRoot%\System32\Winevt\Logs\MicrosoftWindows-DNSServer%4Analytical.etl
 ```
 
-## ![ref](https://technet.microsoft.com/enus/library/cc940779.aspx)
+## [ref](https://technet.microsoft.com/enus/library/cc940779.aspx)
 
 ## Enable DNS Logging:
 ```
@@ -57,7 +57,7 @@ C:\> DNSCmd <DNS SERVER NAME> /config/logfilemaxsize 0xffffffff
 
 ## File Checksum Integrity Verifier (FCIV):
 
-## ![Ref](http://support2.microsoft.com/kb/841290)
+## [Ref](http://support2.microsoft.com/kb/841290)
 
 ## Hash a file:
 ```
@@ -83,7 +83,7 @@ compare to all systems from a cmd line. Fast
 baseline and difference.
 ```
 
-![Ref](https://technet.microsoft.com/enus/library/dn520872.aspx)
+[Ref](https://technet.microsoft.com/enus/library/dn520872.aspx)
 ```
 PS C:\> Get-FileHash <FILE TO HASH> I Format-List
 PS C:\> Get-FileHash -algorithm md5 <FILE TO HASH>
@@ -108,7 +108,7 @@ C:\> for /L %I in (1,1,254) do nbstat -An 192.168.l.%I
 ```
 
 ## USER ACTIVITY
-![Ref](https://technet.microsoft.com/enus/sysinternals/psloggedon.aspx)
+[Ref](https://technet.microsoft.com/enus/sysinternals/psloggedon.aspx)
 
 ## Get users logged on:
 ```
