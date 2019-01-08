@@ -5,14 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <meta name="author" content="darkcode0x00">
-        <link rel="canonical" href="https://github.com/darkcode357/thg_lib/capturetheflag/basic/detect/linux/">
+        <meta name="author" content="darkcode0x00 luizcorrea">
+        <link rel="canonical" href="https://darkcode357.github.io/thg-framework/capturetheflag/basic/detect/linux/">
         <link rel="shortcut icon" href="../../../../img/favicon.ico">
-        <title>linux - thg</title>
+        <title>linux - thg-framework</title>
         <link href="../../../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/purebasic.min.css">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -39,7 +39,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="../../../..">thg</a>
+                    <a class="navbar-brand" href="../../../..">thg-framework</a>
                 </div>
 
                 <!-- Expanded navigation -->
@@ -567,7 +567,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/darkcode357/thg_lib/edit/master/docs/capturetheflag/basic/detect/linux.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/darkcode357/thg-framework/edit/master/docs/capturetheflag/basic/detect/linux.md">Edit on darkcode357/thg-framework</a>
                             </li>
                     </ul>
                 </div>
@@ -593,61 +593,61 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h2 id="authentication-logs-in-ubuntu">Authentication logs in Ubuntu:<a class="headerlink" href="#authentication-logs-in-ubuntu" title="Permanent link">#</a></h2>
+<h2 id="authentication-logs-in-ubuntu">Authentication logs in Ubuntu:<a class="headerlink" href="#authentication-logs-in-ubuntu" title="Permanent link">&para;</a></h2>
 <pre><code>tail /var/log/auth. log
 grep -i &quot;fail&quot; /var/log/auth. log
 </code></pre>
 
-<h2 id="user-login-logs-in-ubuntu">User login logs in Ubuntu:<a class="headerlink" href="#user-login-logs-in-ubuntu" title="Permanent link">#</a></h2>
+<h2 id="user-login-logs-in-ubuntu">User login logs in Ubuntu:<a class="headerlink" href="#user-login-logs-in-ubuntu" title="Permanent link">&para;</a></h2>
 <pre><code>tail /var/
 </code></pre>
 
-<h2 id="look-at-samba-activity">Look at samba activity:<a class="headerlink" href="#look-at-samba-activity" title="Permanent link">#</a></h2>
+<h2 id="look-at-samba-activity">Look at samba activity:<a class="headerlink" href="#look-at-samba-activity" title="Permanent link">&para;</a></h2>
 <pre><code>grep -i samba /var/log/syslog
 </code></pre>
 
-<h2 id="look-at-cron-activity">Look at cron activity:<a class="headerlink" href="#look-at-cron-activity" title="Permanent link">#</a></h2>
+<h2 id="look-at-cron-activity">Look at cron activity:<a class="headerlink" href="#look-at-cron-activity" title="Permanent link">&para;</a></h2>
 <pre><code>grep -i cron /var/log/syslog
 </code></pre>
 
-<h2 id="look-at-sudo-activity">Look at sudo activity:<a class="headerlink" href="#look-at-sudo-activity" title="Permanent link">#</a></h2>
+<h2 id="look-at-sudo-activity">Look at sudo activity:<a class="headerlink" href="#look-at-sudo-activity" title="Permanent link">&para;</a></h2>
 <pre><code>grep -i sudo /var/log/auth. log
 </code></pre>
 
-<h2 id="look-in-apache-logs-for-404-errors">Look in Apache Logs for 404 errors:<a class="headerlink" href="#look-in-apache-logs-for-404-errors" title="Permanent link">#</a></h2>
+<h2 id="look-in-apache-logs-for-404-errors">Look in Apache Logs for 404 errors:<a class="headerlink" href="#look-in-apache-logs-for-404-errors" title="Permanent link">&para;</a></h2>
 <pre><code>grep 404 &lt;LOG FILE NAME&gt; I grep -v -E &quot;favicon. ico I robots. txt&quot;
 </code></pre>
 
-<h2 id="look-at-apache-logs-for-files-requested">Look at Apache Logs for files requested:<a class="headerlink" href="#look-at-apache-logs-for-files-requested" title="Permanent link">#</a></h2>
+<h2 id="look-at-apache-logs-for-files-requested">Look at Apache Logs for files requested:<a class="headerlink" href="#look-at-apache-logs-for-files-requested" title="Permanent link">&para;</a></h2>
 <pre><code>head access_log I awk '{print $7}'
 </code></pre>
 
-<h2 id="monitor-for-new-created-files-every-smin">Monitor for new created files every Smin:<a class="headerlink" href="#monitor-for-new-created-files-every-smin" title="Permanent link">#</a></h2>
+<h2 id="monitor-for-new-created-files-every-smin">Monitor for new created files every Smin:<a class="headerlink" href="#monitor-for-new-created-files-every-smin" title="Permanent link">&para;</a></h2>
 <pre><code>watch -n 300 -d ls -lR /&lt;WEB DIRECTORY&gt;
 </code></pre>
 
-<h2 id="look-where-traffic-is-coming-from">Look where traffic is coming from:<a class="headerlink" href="#look-where-traffic-is-coming-from" title="Permanent link">#</a></h2>
+<h2 id="look-where-traffic-is-coming-from">Look where traffic is coming from:<a class="headerlink" href="#look-where-traffic-is-coming-from" title="Permanent link">&para;</a></h2>
 <pre><code>cat &lt;LOG FILE NAME&gt; I fgrep -v &lt;YOUR DOMAIN&gt; I cut -d\&quot; -f4 I grep -v &quot;&quot;-
 </code></pre>
 
-<h2 id="monitor-for-tcp-connections-every-5-seconds">Monitor for TCP connections every 5 seconds:<a class="headerlink" href="#monitor-for-tcp-connections-every-5-seconds" title="Permanent link">#</a></h2>
+<h2 id="monitor-for-tcp-connections-every-5-seconds">Monitor for TCP connections every 5 seconds:<a class="headerlink" href="#monitor-for-tcp-connections-every-5-seconds" title="Permanent link">&para;</a></h2>
 <pre><code>netstat -ac 5 I grep tcp
 </code></pre>
 
-<h2 id="install-audit-framework-and-review-syscallsevents">Install audit framework and review syscalls/events:<a class="headerlink" href="#install-audit-framework-and-review-syscallsevents" title="Permanent link">#</a></h2>
+<h2 id="install-audit-framework-and-review-syscallsevents">Install audit framework and review syscalls/events:<a class="headerlink" href="#install-audit-framework-and-review-syscallsevents" title="Permanent link">&para;</a></h2>
 <pre><code>apt-get install auditd
 auditctl -a exit,always -5 execve
 ausearch -m execve
 </code></pre>
 
-<h2 id="get-audit-report-summary">Get audit report summary:<a class="headerlink" href="#get-audit-report-summary" title="Permanent link">#</a></h2>
+<h2 id="get-audit-report-summary">Get audit report summary:<a class="headerlink" href="#get-audit-report-summary" title="Permanent link">&para;</a></h2>
 <pre><code>aureport
 </code></pre></div>
         </div>
 
         <footer class="col-md-12">
             <hr>
-                <p>Copyright &copy; 2019 THG_lib Project by darkcode</p>
+                <p>Copyright &copy; 2019 - 2020 darkcode0x00</p>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>

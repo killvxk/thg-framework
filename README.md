@@ -27,11 +27,12 @@ Follow the link bellow with all instructions.
 => https://darkcode357.github.io/thg-framework/contributing/get-started/
 
 # Credits:
+| Name|	Nickname| E-Mail | GPG Key ID |Role|
+|-----| --------| ------ | -------|----|
+|luiz gustavo| darkcode0x00|darkcode357@gmail.com|3819CFCAD958D824|	Leader, darkcode0x00|
+|Henrique Miranda|Henrique Miranda| xxxxx| xxxxx| dev|
+|Guilherme Luna  |Unknown558| xxxxx| xxxxx| dev|
 
-| devs          | name nick       |
-| ------------- |:---------------:|
-| master dev    | darkcode0x00    |
-|     dev       | Henrique Miranda|
 
 # Future updates
 The "[x]" are the commands that is working and the "[ ]" are the future funcionalities to be applied.

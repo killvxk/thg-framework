@@ -40,3 +40,8 @@ class THG_INSTALL():
 
 
 THG_INSTALL.install()
+
+
+
+
+from abc import ABCMeta,abstractmethod

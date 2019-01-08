@@ -1,22 +1,54 @@
-import sqlite3
-import os.path
-def createdb():
-    con = sqlite3.connect("thg_test.db")
-    cursor = con.cursor()
-    cursor.execute('''CREATE TABLE agenda(
-        "nome" text, 
-        "numero" text
-    )''')
-    cursor.execute('''insert into agenda (nome,numero)
-        values(?,?)''',("dsa","1111111"))
-    con.commit()
-    cursor.close()
-    con.close()
-def listdb():
-    con = sqlite3.connect("thg_test.db")
-    cursor = con.cursor()
-    cursor.execute("select * from agenda")
-    resul = cursor.fetchone()
-    print("nome:%s\ntelefone:%s "% (resul))
-createdb()
-listdb()
+from abc import ABCMeta,abstractmethod
+
+class Section(metaclass=ABCMeta):
+    @abstractmethod
+    def describe(self):
+        pass
+
+class PersonSection(Section):
+    def describe(self):
+        print("Personal section")
+
+
+class AlbumSection(Section):
+    def describe(self):
+        print("album Section")
+
+class PatentSection(Section):
+    def describe(self):
+        print("Patent Section")
+
+class PublicationSection(Section):
+    def describe(self):
+        print("Publication Section")
+
+class Profile(metaclass=ABCMeta):
+    def __init__(self):
+        self.sections = []
+        self.createProfile()
+    @abstractmethod
+    def createProfile(self):
+        pass
+
+    def getSections(self):
+        return self.sections
+
+    def addSections(self,section):
+        self.sections.append(section)
+
+class linkedin(Profile):
+    def createProfile(self):
+        self.addSections(PersonSection())
+        self.addSections(PatentSection())
+        self.addSections(PublicationSection())
+
+class facebook(Profile):
+    def createProfile(self):
+        self.addSections(PersonSection())
+        self.addSections(AlbumSection())
+
+if __name__ == "__main__":
+    profile_type = input("which profile you d like to create [linkedIn or facebook]")
+    profile = eval(profile_type.lower())()
+    print("Creating Profile...",type(profile).__name__)
+    print("profile has sections --",profile.getSections())

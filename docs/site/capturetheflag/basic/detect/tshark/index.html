@@ -5,14 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <meta name="author" content="darkcode0x00">
-        <link rel="canonical" href="https://github.com/darkcode357/thg_lib/capturetheflag/basic/detect/tshark/">
+        <meta name="author" content="darkcode0x00 luizcorrea">
+        <link rel="canonical" href="https://darkcode357.github.io/thg-framework/capturetheflag/basic/detect/tshark/">
         <link rel="shortcut icon" href="../../../../img/favicon.ico">
-        <title>tshark - thg</title>
+        <title>tshark - thg-framework</title>
         <link href="../../../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/purebasic.min.css">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -39,7 +39,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="../../../..">thg</a>
+                    <a class="navbar-brand" href="../../../..">thg-framework</a>
                 </div>
 
                 <!-- Expanded navigation -->
@@ -567,7 +567,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/darkcode357/thg_lib/edit/master/docs/capturetheflag/basic/detect/tshark.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/darkcode357/thg-framework/edit/master/docs/capturetheflag/basic/detect/tshark.md">Edit on darkcode357/thg-framework</a>
                             </li>
                     </ul>
                 </div>
@@ -598,73 +598,73 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h2 id="get-list-of-network-interfaces">Get list of network interfaces:<a class="headerlink" href="#get-list-of-network-interfaces" title="Permanent link">#</a></h2>
+<h2 id="get-list-of-network-interfaces">Get list of network interfaces:<a class="headerlink" href="#get-list-of-network-interfaces" title="Permanent link">&para;</a></h2>
 <pre><code>tshark -D
 </code></pre>
 
-<h2 id="listen-on-multiple-network-interfaces">Listen on multiple network interfaces:<a class="headerlink" href="#listen-on-multiple-network-interfaces" title="Permanent link">#</a></h2>
+<h2 id="listen-on-multiple-network-interfaces">Listen on multiple network interfaces:<a class="headerlink" href="#listen-on-multiple-network-interfaces" title="Permanent link">&para;</a></h2>
 <pre><code>tshark -i ethl -i eth2 -i eth3
 </code></pre>
 
-<h2 id="save-to-pcap-and-disable-name-resolution">Save to pcap and disable name resolution:<a class="headerlink" href="#save-to-pcap-and-disable-name-resolution" title="Permanent link">#</a></h2>
+<h2 id="save-to-pcap-and-disable-name-resolution">Save to pcap and disable name resolution:<a class="headerlink" href="#save-to-pcap-and-disable-name-resolution" title="Permanent link">&para;</a></h2>
 <pre><code>tshark -nn -w &lt;FILE NAME&gt;,pcap
 </code></pre>
 
-<h2 id="get-absolute-date-and-time-stamp">Get absolute date and time stamp:<a class="headerlink" href="#get-absolute-date-and-time-stamp" title="Permanent link">#</a></h2>
+<h2 id="get-absolute-date-and-time-stamp">Get absolute date and time stamp:<a class="headerlink" href="#get-absolute-date-and-time-stamp" title="Permanent link">&para;</a></h2>
 <pre><code>tshark -t a
 </code></pre>
 
-<h2 id="get-arp-or-icmp-traffic">Get arp or icmp traffic:<a class="headerlink" href="#get-arp-or-icmp-traffic" title="Permanent link">#</a></h2>
+<h2 id="get-arp-or-icmp-traffic">Get arp or icmp traffic:<a class="headerlink" href="#get-arp-or-icmp-traffic" title="Permanent link">&para;</a></h2>
 <pre><code>tshark arp or icmp
 </code></pre>
 
-<h2 id="capture-traffic-between-to-hosts-andor-nets">Capture traffic between to [hosts] and/or [nets]:<a class="headerlink" href="#capture-traffic-between-to-hosts-andor-nets" title="Permanent link">#</a></h2>
+<h2 id="capture-traffic-between-to-hosts-andor-nets">Capture traffic between to [hosts] and/or [nets]:<a class="headerlink" href="#capture-traffic-between-to-hosts-andor-nets" title="Permanent link">&para;</a></h2>
 <pre><code>tshark &quot;host &lt;HOST l&gt; &amp;&amp; host &lt;HOST 2&gt;&quot;
 tshark -n &quot;net &lt;NET 1&gt; &amp;&amp; net &lt;NET 2&gt;&quot;
 </code></pre>
 
-<h2 id="filter-just-host-and-ips-or-not-your-ip">Filter just host and IPs (or not your IP):<a class="headerlink" href="#filter-just-host-and-ips-or-not-your-ip" title="Permanent link">#</a></h2>
+<h2 id="filter-just-host-and-ips-or-not-your-ip">Filter just host and IPs (or not your IP):<a class="headerlink" href="#filter-just-host-and-ips-or-not-your-ip" title="Permanent link">&para;</a></h2>
 <pre><code>tshark -r &lt;FILE NAME&gt;,pcap -q -z hosts,ipv4
 tshark not host &lt;YOUR IP ADDRESS&gt;
 </code></pre>
 
-<h2 id="not-arp-and-not-udp">Not ARP and not UDP:<a class="headerlink" href="#not-arp-and-not-udp" title="Permanent link">#</a></h2>
+<h2 id="not-arp-and-not-udp">Not ARP and not UDP:<a class="headerlink" href="#not-arp-and-not-udp" title="Permanent link">&para;</a></h2>
 <pre><code>tshark not arp and not (udp.port -- 53)
 </code></pre>
 
-<h2 id="replay-a-pcap-file">Replay a pcap file:<a class="headerlink" href="#replay-a-pcap-file" title="Permanent link">#</a></h2>
+<h2 id="replay-a-pcap-file">Replay a pcap file:<a class="headerlink" href="#replay-a-pcap-file" title="Permanent link">&para;</a></h2>
 <pre><code>tshark -r &lt;FILE NAME&gt;.pcap
 </code></pre>
 
-<h2 id="replay-a-pcap-and-just-grab-hosts-and-ips">Replay a pcap and just grab hosts and IPs:<a class="headerlink" href="#replay-a-pcap-and-just-grab-hosts-and-ips" title="Permanent link">#</a></h2>
+<h2 id="replay-a-pcap-and-just-grab-hosts-and-ips">Replay a pcap and just grab hosts and IPs:<a class="headerlink" href="#replay-a-pcap-and-just-grab-hosts-and-ips" title="Permanent link">&para;</a></h2>
 <pre><code>tshark -r &lt;FILE NAME&gt;.pcap -q -z hosts
 </code></pre>
 
-<h2 id="setup-a-capture-sessionduration60sec">Setup a capture session(duration=60sec):<a class="headerlink" href="#setup-a-capture-sessionduration60sec" title="Permanent link">#</a></h2>
+<h2 id="setup-a-capture-sessionduration60sec">Setup a capture session(duration=60sec):<a class="headerlink" href="#setup-a-capture-sessionduration60sec" title="Permanent link">&para;</a></h2>
 <pre><code>tshark -n -a files:10 -a filesize:100 -a duration:60 -w &lt;FILE NAME&gt;,pcap
 </code></pre>
 
-<h2 id="grab-srcdst-ips-only">Grab src/dst IPs only:<a class="headerlink" href="#grab-srcdst-ips-only" title="Permanent link">#</a></h2>
+<h2 id="grab-srcdst-ips-only">Grab src/dst IPs only:<a class="headerlink" href="#grab-srcdst-ips-only" title="Permanent link">&para;</a></h2>
 <pre><code>tshark -n -e ip.src -e ip.dst -T fields -E separator=, -Rip
 </code></pre>
 
-<h2 id="grab-ip-of-src-dns-and-dns-query">Grab IP of src DNS and DNS query:<a class="headerlink" href="#grab-ip-of-src-dns-and-dns-query" title="Permanent link">#</a></h2>
+<h2 id="grab-ip-of-src-dns-and-dns-query">Grab IP of src DNS and DNS query:<a class="headerlink" href="#grab-ip-of-src-dns-and-dns-query" title="Permanent link">&para;</a></h2>
 <pre><code>tshark -n -e ip.src -e dns,qry.name -E separator=';' -T fields port 53
 </code></pre>
 
-<h2 id="grab-http-url-host-and-request">Grab HTTP URL host and request:<a class="headerlink" href="#grab-http-url-host-and-request" title="Permanent link">#</a></h2>
+<h2 id="grab-http-url-host-and-request">Grab HTTP URL host and request:<a class="headerlink" href="#grab-http-url-host-and-request" title="Permanent link">&para;</a></h2>
 <pre><code>tshark -R http.request -T fields -E separator=';' -e http.host -e http.request.uri
 </code></pre>
 
-<h2 id="grab-just-http-host-requests">Grab just HTTP host requests:<a class="headerlink" href="#grab-just-http-host-requests" title="Permanent link">#</a></h2>
+<h2 id="grab-just-http-host-requests">Grab just HTTP host requests:<a class="headerlink" href="#grab-just-http-host-requests" title="Permanent link">&para;</a></h2>
 <pre><code>tshark -n -R http.request -T fields -e http.host
 </code></pre>
 
-<h2 id="grab-top-talkers-by-ip-dst">Grab top talkers by IP dst:<a class="headerlink" href="#grab-top-talkers-by-ip-dst" title="Permanent link">#</a></h2>
+<h2 id="grab-top-talkers-by-ip-dst">Grab top talkers by IP dst:<a class="headerlink" href="#grab-top-talkers-by-ip-dst" title="Permanent link">&para;</a></h2>
 <pre><code>tshark -n -c 150 I awk '{print $4}' I sort -n Iuniq -c I sort -nr
 </code></pre>
 
-<h2 id="grab-top-stats-of-protocols">Grab top stats of protocols:<a class="headerlink" href="#grab-top-stats-of-protocols" title="Permanent link">#</a></h2>
+<h2 id="grab-top-stats-of-protocols">Grab top stats of protocols:<a class="headerlink" href="#grab-top-stats-of-protocols" title="Permanent link">&para;</a></h2>
 <pre><code>tshark -q -z io,phs -r &lt;FILE NAME&gt;.pcap
 tshark -r &lt;PCAP FILE&gt;,cap -R http.request -T fields -e http.host -e http.request.uri lsed -e 'sf?,*$//' I sed -e 's#&quot;(,*)t(,*)$#http://l2#' I sort I uniq -c I sort -rn I head
 tshark -n -c 100 -e ip.src -R &quot;dns.flags.responseeq 1&quot; -T fields po rt 53
@@ -675,7 +675,7 @@ tshark -n -c 1000 -e http.host -R http.request -T fields port 80 I sort I uniq -
 
         <footer class="col-md-12">
             <hr>
-                <p>Copyright &copy; 2019 THG_lib Project by darkcode</p>
+                <p>Copyright &copy; 2019 - 2020 darkcode0x00</p>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>

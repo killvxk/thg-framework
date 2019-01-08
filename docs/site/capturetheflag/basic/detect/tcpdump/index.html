@@ -5,14 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <meta name="author" content="darkcode0x00">
-        <link rel="canonical" href="https://github.com/darkcode357/thg_lib/capturetheflag/basic/detect/tcpdump/">
+        <meta name="author" content="darkcode0x00 luizcorrea">
+        <link rel="canonical" href="https://darkcode357.github.io/thg-framework/capturetheflag/basic/detect/tcpdump/">
         <link rel="shortcut icon" href="../../../../img/favicon.ico">
-        <title>tcpdump - thg</title>
+        <title>tcpdump - thg-framework</title>
         <link href="../../../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/purebasic.min.css">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -39,7 +39,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="../../../..">thg</a>
+                    <a class="navbar-brand" href="../../../..">thg-framework</a>
                 </div>
 
                 <!-- Expanded navigation -->
@@ -567,7 +567,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/darkcode357/thg_lib/edit/master/docs/capturetheflag/basic/detect/tcpdump.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/darkcode357/thg-framework/edit/master/docs/capturetheflag/basic/detect/tcpdump.md">Edit on darkcode357/thg-framework</a>
                             </li>
                     </ul>
                 </div>
@@ -602,69 +602,69 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="view-ascii-a-or-hex-x-traffic">View ASCII (-A) or HEX (-X) traffic:<a class="headerlink" href="#view-ascii-a-or-hex-x-traffic" title="Permanent link">#</a></h1>
+<h1 id="view-ascii-a-or-hex-x-traffic">View ASCII (-A) or HEX (-X) traffic:<a class="headerlink" href="#view-ascii-a-or-hex-x-traffic" title="Permanent link">&para;</a></h1>
 <pre><code>tcpdump -A
 tcpdump -X
 </code></pre>
 
-<h2 id="view-traffic-with-timestamps-and-dont-convert-addresses-and-be-verbose">View traffic with timestamps and don't convert addresses and be verbose:<a class="headerlink" href="#view-traffic-with-timestamps-and-dont-convert-addresses-and-be-verbose" title="Permanent link">#</a></h2>
+<h2 id="view-traffic-with-timestamps-and-dont-convert-addresses-and-be-verbose">View traffic with timestamps and don&rsquo;t convert addresses and be verbose:<a class="headerlink" href="#view-traffic-with-timestamps-and-dont-convert-addresses-and-be-verbose" title="Permanent link">&para;</a></h2>
 <pre><code>tcpdump -tttt -n -vv
 </code></pre>
 
-<h2 id="find-top-talkers-after-1000-packets-potentialddos">Find top talkers after 1000 packets (PotentialDDoS):<a class="headerlink" href="#find-top-talkers-after-1000-packets-potentialddos" title="Permanent link">#</a></h2>
+<h2 id="find-top-talkers-after-1000-packets-potentialddos">Find top talkers after 1000 packets (PotentialDDoS):<a class="headerlink" href="#find-top-talkers-after-1000-packets-potentialddos" title="Permanent link">&para;</a></h2>
 <pre><code>tcpdump -nn -c 1000 jawk '{print $3}' I cut -d. -fl-4 I sort -n I uniq -c I sort -nr
 </code></pre>
 
-<h2 id="capture-traffic-on-any-interface-from-a-target-host-and-specific-port-and-output-to-a-file">Capture traffic on any interface from a target host and specific port and output to a file:<a class="headerlink" href="#capture-traffic-on-any-interface-from-a-target-host-and-specific-port-and-output-to-a-file" title="Permanent link">#</a></h2>
+<h2 id="capture-traffic-on-any-interface-from-a-target-host-and-specific-port-and-output-to-a-file">Capture traffic on any interface from a target host and specific port and output to a file:<a class="headerlink" href="#capture-traffic-on-any-interface-from-a-target-host-and-specific-port-and-output-to-a-file" title="Permanent link">&para;</a></h2>
 <pre><code>tcpdump -w &lt;FILENAME&gt;,pcap -i any dst &lt;TARGET IPADDRESS&gt; and port 80
 </code></pre>
 
-<h2 id="view-traffic-only-between-two-hosts">View traffic only between two hosts:<a class="headerlink" href="#view-traffic-only-between-two-hosts" title="Permanent link">#</a></h2>
+<h2 id="view-traffic-only-between-two-hosts">View traffic only between two hosts:<a class="headerlink" href="#view-traffic-only-between-two-hosts" title="Permanent link">&para;</a></h2>
 <pre><code>tcpdump host 10.0.0.1 &amp;&amp; host 10.0.0.2
 </code></pre>
 
-<h2 id="view-all-traffic-except-from-a-net-or-a-host">View all traffic except from a net or a host:<a class="headerlink" href="#view-all-traffic-except-from-a-net-or-a-host" title="Permanent link">#</a></h2>
+<h2 id="view-all-traffic-except-from-a-net-or-a-host">View all traffic except from a net or a host:<a class="headerlink" href="#view-all-traffic-except-from-a-net-or-a-host" title="Permanent link">&para;</a></h2>
 <pre><code>tcpdump not net 10.10 &amp;&amp; not host 192.168.1,2
 </code></pre>
 
-<h2 id="view-host-and-either-of-two-other-hosts">View host and either of two other hosts:<a class="headerlink" href="#view-host-and-either-of-two-other-hosts" title="Permanent link">#</a></h2>
+<h2 id="view-host-and-either-of-two-other-hosts">View host and either of two other hosts:<a class="headerlink" href="#view-host-and-either-of-two-other-hosts" title="Permanent link">&para;</a></h2>
 <pre><code>tcpdump host 10,10,10.10 &amp;&amp; \(10,10.10.20 or 10,10,10,30\)
 </code></pre>
 
-<h2 id="save-pcap-file-on-rotating-size">Save pcap file on rotating size:<a class="headerlink" href="#save-pcap-file-on-rotating-size" title="Permanent link">#</a></h2>
+<h2 id="save-pcap-file-on-rotating-size">Save pcap file on rotating size:<a class="headerlink" href="#save-pcap-file-on-rotating-size" title="Permanent link">&para;</a></h2>
 <pre><code>tcpdump -n -s65535 -c 1000 -w '%host_%Y-%m­%d_%H:%M:%S.pcap'
 </code></pre>
 
-<h2 id="save-pcap-file-to-a-remote-host">Save pcap file to a remote host:<a class="headerlink" href="#save-pcap-file-to-a-remote-host" title="Permanent link">#</a></h2>
+<h2 id="save-pcap-file-to-a-remote-host">Save pcap file to a remote host:<a class="headerlink" href="#save-pcap-file-to-a-remote-host" title="Permanent link">&para;</a></h2>
 <pre><code>tcpdump -w - I ssh &lt;REMOTE HOST ADDRESS&gt; -p 50005 &quot;cat - &gt; /tmp/remotecapture.pcap&quot;
 </code></pre>
 
-<h2 id="grab-traffic-that-contains-the-word-pass">Grab traffic that contains the word pass:<a class="headerlink" href="#grab-traffic-that-contains-the-word-pass" title="Permanent link">#</a></h2>
+<h2 id="grab-traffic-that-contains-the-word-pass">Grab traffic that contains the word pass:<a class="headerlink" href="#grab-traffic-that-contains-the-word-pass" title="Permanent link">&para;</a></h2>
 <pre><code>tcpdump -n -A -s0 I grep pass
 </code></pre>
 
-<h2 id="grab-many-clear-text-protocol-passwords">Grab many clear text protocol passwords:<a class="headerlink" href="#grab-many-clear-text-protocol-passwords" title="Permanent link">#</a></h2>
+<h2 id="grab-many-clear-text-protocol-passwords">Grab many clear text protocol passwords:<a class="headerlink" href="#grab-many-clear-text-protocol-passwords" title="Permanent link">&para;</a></h2>
 <pre><code>tcpdump -n -A -s0 port http or port ftp or port smtp or port imap or port pop3 I egrep -i 'pass=lpwd=llog=llogin=luser=lusername=lpw=lpassw=IP asswd=lpassword=lpass: I user: lusername: I password: I login: I pass I user ' --color=auto --line-buffered -B20
 </code></pre>
 
-<h2 id="get-throughput">Get throughput<a class="headerlink" href="#get-throughput" title="Permanent link">#</a></h2>
+<h2 id="get-throughput">Get throughput<a class="headerlink" href="#get-throughput" title="Permanent link">&para;</a></h2>
 <pre><code>tcpdump -w - lpv -bert &gt;/dev/null
 </code></pre>
 
-<h2 id="filter-out-ipv6-traffic">Filter out ipv6 traffic:<a class="headerlink" href="#filter-out-ipv6-traffic" title="Permanent link">#</a></h2>
+<h2 id="filter-out-ipv6-traffic">Filter out ipv6 traffic:<a class="headerlink" href="#filter-out-ipv6-traffic" title="Permanent link">&para;</a></h2>
 <pre><code>tcpdump not ip6
 </code></pre>
 
-<h2 id="filer-out-ipv4-traffic">Filer out ipv4 traffic:<a class="headerlink" href="#filer-out-ipv4-traffic" title="Permanent link">#</a></h2>
+<h2 id="filer-out-ipv4-traffic">Filer out ipv4 traffic:<a class="headerlink" href="#filer-out-ipv4-traffic" title="Permanent link">&para;</a></h2>
 <pre><code>tcpdump ip6
 </code></pre>
 
-<h2 id="script-to-capture-multiple-interface-tcpdumps-to-files-rotating-every-hour">Script to capture multiple interface tcpdumps to files rotating every hour:<a class="headerlink" href="#script-to-capture-multiple-interface-tcpdumps-to-files-rotating-every-hour" title="Permanent link">#</a></h2>
+<h2 id="script-to-capture-multiple-interface-tcpdumps-to-files-rotating-every-hour">Script to capture multiple interface tcpdumps to files rotating every hour:<a class="headerlink" href="#script-to-capture-multiple-interface-tcpdumps-to-files-rotating-every-hour" title="Permanent link">&para;</a></h2>
 <pre><code>#!/bin/bash
 tcpdump -pni any -s65535 -G 3600 -w any%Y-%m­%d_%H:%M:%S.pcap
 </code></pre>
 
-<h2 id="script-to-move-multiple-tcpdump-files-to-alternate-location">Script to move multiple tcpdump files to alternate location:<a class="headerlink" href="#script-to-move-multiple-tcpdump-files-to-alternate-location" title="Permanent link">#</a></h2>
+<h2 id="script-to-move-multiple-tcpdump-files-to-alternate-location">Script to move multiple tcpdump files to alternate location:<a class="headerlink" href="#script-to-move-multiple-tcpdump-files-to-alternate-location" title="Permanent link">&para;</a></h2>
 <pre><code>#!/bin/bash
 while true; do
 sleep 1;
@@ -674,33 +674,33 @@ DIRECTORY/.
 done
 </code></pre>
 
-<h2 id="look-for-suspicious-and-self-signed-ssl-certificates">Look for suspicious and self-signed SSL certificates:<a class="headerlink" href="#look-for-suspicious-and-self-signed-ssl-certificates" title="Permanent link">#</a></h2>
+<h2 id="look-for-suspicious-and-self-signed-ssl-certificates">Look for suspicious and self-signed SSL certificates:<a class="headerlink" href="#look-for-suspicious-and-self-signed-ssl-certificates" title="Permanent link">&para;</a></h2>
 <pre><code>tcpdump -s 1500 -A '(tcp[((tcp[12:1] &amp; 0xf0) &gt;&gt; 2)+5:1] = 0x01) and (tcp[((tcp[12:1] &amp; 0xf0) &gt;&gt; 2) : 1] : 0x16) I
 </code></pre>
 
-<h2 id="get-ssl-certificate">Get SSL Certificate:<a class="headerlink" href="#get-ssl-certificate" title="Permanent link">#</a></h2>
+<h2 id="get-ssl-certificate">Get SSL Certificate:<a class="headerlink" href="#get-ssl-certificate" title="Permanent link">&para;</a></h2>
 <pre><code>openssl s_client -connect &lt;URL&gt;:443
 openssl s_client -connect &lt;SITE&gt;:443 &lt;/dev/null 2&gt;/dev/null I sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-Ip' &gt; &lt;CERT&gt;.pem
 </code></pre>
 
-<h2 id="examine-and-verify-the-certificate-and-check-for-self-signed">Examine and verify the certificate and check for Self-Signed:<a class="headerlink" href="#examine-and-verify-the-certificate-and-check-for-self-signed" title="Permanent link">#</a></h2>
+<h2 id="examine-and-verify-the-certificate-and-check-for-self-signed">Examine and verify the certificate and check for Self-Signed:<a class="headerlink" href="#examine-and-verify-the-certificate-and-check-for-self-signed" title="Permanent link">&para;</a></h2>
 <pre><code>openssl x509 -text -in &lt;CERT&gt;.pem
 openssl x509 -in &lt;CERT&gt;,pem -noout -issuer -subject -startdate -enddate -fingerprint
 openssl verify &lt;CERT&gt;.pem
 </code></pre>
 
-<h2 id="extract-certificate-server-name">Extract Certificate Server Name:<a class="headerlink" href="#extract-certificate-server-name" title="Permanent link">#</a></h2>
+<h2 id="extract-certificate-server-name">Extract Certificate Server Name:<a class="headerlink" href="#extract-certificate-server-name" title="Permanent link">&para;</a></h2>
 <pre><code>tshark -nr &lt;PCAP FILE NAME&gt; -Y &quot;ssl. handshake. ciphersuites&quot; -Vx I grep &quot;ServerName:&quot; I sort I uniq -c I sort -r
 </code></pre>
 
-<h2 id="extract-certificate-info-for-analysis">Extract Certificate info for analysis:<a class="headerlink" href="#extract-certificate-info-for-analysis" title="Permanent link">#</a></h2>
+<h2 id="extract-certificate-info-for-analysis">Extract Certificate info for analysis:<a class="headerlink" href="#extract-certificate-info-for-analysis" title="Permanent link">&para;</a></h2>
 <pre><code>ssldump -Nr &lt;FILE NAME&gt;.pcap I awk 'BEGIN {c=0;}{ if ($0 � /A[ ]+Certificate$/) {c=l; print&quot;========================================&quot;;} if($0 !�/A +/) {c=0;} if (c==l) print $0; }'
 </code></pre></div>
         </div>
 
         <footer class="col-md-12">
             <hr>
-                <p>Copyright &copy; 2019 THG_lib Project by darkcode</p>
+                <p>Copyright &copy; 2019 - 2020 darkcode0x00</p>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
