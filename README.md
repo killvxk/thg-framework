@@ -29,7 +29,7 @@ Follow the link bellow with all instructions.
 # Credits:
 | Name|	Nickname| E-Mail | GPG Key ID |Role|
 |-----| --------| ------ | -------|----|
-|luiz gustavo| darkcode0x00|darkcode357@gmail.com|3819CFCAD958D824|	Leader, darkcode0x00|
+|luiz gustavo| darkcode0x00|darkcode357@gmail.com|3819CFCAD958D824|	Founder, Developer|
 |Henrique Miranda|Henrique Miranda| xxxxx| xxxxx| dev|
 |Guilherme Luna  |Unknown558| GuilhermeLunaM@hotmail.com| B9CBF398FAF247D9| dev|
 
