@@ -31,7 +31,7 @@ Follow the link bellow with all instructions.
 |-----| --------| ------ | -------|----|
 |luiz gustavo| darkcode0x00|darkcode357@gmail.com|3819CFCAD958D824|	Leader, darkcode0x00|
 |Henrique Miranda|Henrique Miranda| xxxxx| xxxxx| dev|
-|Guilherme Luna  |Unknown558| xxxxx| xxxxx| dev|
+|Guilherme Luna  |Unknown558| GuilhermeLunaM@hotmail.com| B9CBF398FAF247D9| dev|
 
 
 # Future updates
