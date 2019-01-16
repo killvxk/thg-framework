@@ -10,7 +10,7 @@ Github has a great guide for contributing to open source projects:
 - [Huzzah!](https://guides.github.com/activities/forking/#huzzah)
 
 ## thg Specifics
-In general, we like to keep things documented. You should add documentation to any new functionality, and update it for any changed functionality. Our docstrings use the [Google Style Python Docstrings] (https://sphinxcontrib-napoleon.readthedocs.org/en/latest/example_google.html#example-google).
+In general, we like to keep things documented. You should add documentation to any new functionality, and update it for any changed functionality. Our docstrings use the  [Google Style Python Docstrings](https://sphinxcontrib-napoleon.readthedocs.org/en/latest/example_google.html#example-google).
 
 
 Finally, it is probably a good idea to run the test suite locally before doing
