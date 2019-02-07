@@ -1,12 +1,7 @@
-from thgconsole.core.ModulesBuild.Exploits.exploit import *
-from thgconsole.core.ModulesBuild.Exploits.option import *
-from thgconsole.core.CoreUtils.exceptions import *
-from thgconsole.core.ModulesBuild.Exploits.shell import *
-from thgconsole.core.CoreUtils.utils import *
-from thgconsole.core.CoreUtils.option import *
-from thgconsole.core.CoreUtils.printer import *
-from thgconsole.core.NetworkProtocols.telnet.telnet_client import TelnetClient
+from thgconsole.core.exploit import *
+from thgconsole.core.telnet.telnet_client import TelnetClient
 from thgconsole.file_suport import wordlists
+
 
 class Exploit(TelnetClient):
     __info__ = {
@@ -14,7 +9,7 @@ class Exploit(TelnetClient):
         "description": "Module performs dictionary attack with default credentials against Telnet service. "
                        "If valid credentials are found, they are displayed to the user.",
         "authors": (
-            "darkcode357@gmail.com",  # thg module
+            "Marcin Bury <marcin[at]threat9.com>",  # thgconsole module
         ),
         "devices": (
             "Multiple devices",
@@ -28,8 +23,8 @@ class Exploit(TelnetClient):
 
     defaults = OptWordlist(wordlists.defaults, "User:Pass or file with default credentials (file://)")
 
-    verbosity = OptBool(True, "Display authentication attempts")
     stop_on_success = OptBool(True, "Stop on first valid authentication attempt")
+    verbosity = OptBool(True, "Display authentication attempts")
 
     def run(self):
         self.credentials = []

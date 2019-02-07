@@ -1,6 +1,6 @@
 from binascii import hexlify
-from thgconsole.core.ModulesBuild.Encoders.encoders import BaseEncoder
-from thgconsole.core.ModulesBuild.Payloads.payloads import Architectures
+from thgconsole.core.exploit.encoders import BaseEncoder
+from thgconsole.core.exploit.payloads import Architectures
 
 
 class Encoder(BaseEncoder):
@@ -8,7 +8,7 @@ class Encoder(BaseEncoder):
         "name": "PHP Hex Encoder",
         "description": "Module encodes PHP payload to Hex format.",
         "authors": (
-            "Marcin Bury <marcin[at]threat9.com>",  # thg module
+            "Marcin Bury <marcin[at]threat9.com>",  # thgconsole module
         ),
     }
 

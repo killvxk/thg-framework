@@ -1,5 +1,5 @@
 import os,socket,sys,platform
-from thgconsole.core.CoreUtils.printer import print_info
+from thgconsole.core.exploit.printer import print_info
 from getmac.getmac import get_mac_address
 
 class thg_add_init:

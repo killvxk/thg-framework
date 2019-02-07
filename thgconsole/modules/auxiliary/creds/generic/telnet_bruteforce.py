@@ -1,11 +1,6 @@
-from thgconsole.core.ModulesBuild.Exploits.exploit import *
-from thgconsole.core.ModulesBuild.Exploits.option import *
-from thgconsole.core.CoreUtils.exceptions import *
-from thgconsole.core.ModulesBuild.Exploits.shell import *
-from thgconsole.core.CoreUtils.utils import *
-from thgconsole.core.CoreUtils.option import *
-from thgconsole.core.CoreUtils.printer import *
-from thgconsole.core.NetworkProtocols.telnet.telnet_client import TelnetClient
+import itertools
+from thgconsole.core.exploit import *
+from thgconsole.core.telnet.telnet_client import TelnetClient
 from thgconsole.file_suport import wordlists
 
 
@@ -15,23 +10,23 @@ class Exploit(TelnetClient):
         "description": "Module performs bruteforce attack against Telnet service. "
                        "If valid credentials are found, they are displayed to the user.",
         "authors": (
-            "darkcode357@gmail.com",  # thg module
+            "Marcin Bury <marcin[at]threat9.com>",  # thgconsole module
         ),
         "devices": (
             "Multiple devices",
         )
     }
 
-    target = THGOptIP("", "Target IPv4, IPv6 address or file with ip:port (file://)")
-    port = THGOptPort(23, "Target Telnet port")
+    target = OptIP("", "Target IPv4, IPv6 address or file with ip:port (file://)")
+    port = OptPort(23, "Target Telnet port")
 
-    threads = THGOptInteger(8, "Number of threads")
+    threads = OptInteger(8, "Number of threads")
 
-    usernames = THGOptWordlist("admin", "Username or file with usernames (file://)")
-    passwords = THGOptWordlist(wordlists.admint, "Password or file with passwords (file://)")
+    usernames = OptWordlist("admin", "Username or file with usernames (file://)")
+    passwords = OptWordlist(wordlists.passwords, "Password or file with passwords (file://)")
 
-    verbosity = THGOptBool(True, "Display authentication attempts")
-    stop_on_success = THGOptBool(True, "Stop on first valid authentication attempt")
+    stop_on_success = OptBool(True, "Stop on first valid authentication attempt")
+    verbosity = OptBool(True, "Display authentication attempts")
 
     def run(self):
         self.credentials = []

@@ -23,7 +23,7 @@ Blandyuk & Rurapenthe (HashKiller Contest) Peter ‘iphelix’ Kacherginsky
 
 And many, many, many more contributors. If a name was excluded from the
 above list please reach out and the next version will give them their due credit.
-Lastly, the tools, research, and resources covered in the book are the result of
+Lastly, the tools, research, and file_suport covered in the book are the result of
 people’s hard work. As such, I HIGHLY encourage all readers to DONATE to
 help assist in their efforts. A portion of the proceeds from this book will be
 distributed to the various researchers/projects.

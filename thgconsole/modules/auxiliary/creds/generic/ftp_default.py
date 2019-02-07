@@ -1,8 +1,7 @@
-from thgconsole.core.NetworkProtocols.ftp.ftp_client import FTPClient
+from thgconsole.core.exploit import *
+from thgconsole.core.ftp.ftp_client import FTPClient
 from thgconsole.file_suport import wordlists
-from thgconsole.core.CoreUtils.option import *
-from thgconsole.core.ModulesBuild.Exploits.exploit import *
-from thgconsole.core.CoreUtils.printer import *
+
 
 class Exploit(FTPClient):
     __info__ = {
@@ -10,21 +9,21 @@ class Exploit(FTPClient):
         "description": "Module performs dictionary attack with default credentials against FTP service."
                        "If valid credentials are found, the are displayed to the user.",
         "authors": (
-            "darkcode357@gmail.com",  # thg module
+            "Marcin Bury <marcin[at]threat9.com>",  # thgconsole module
         ),
         "devices": (
             "Multiple devices",
         )
     }
 
-    target = THGOptIP("", "Target IPv4, IPv6 or file with ip:port (file://)")
-    port = THGOptPort(21, "Target FTP port")
+    target = OptIP("", "Target IPv4, IPv6 or file with ip:port (file://)")
+    port = OptPort(21, "Target FTP port")
 
-    threads = THGOptInteger(8, "Number of threads")
-    defaults = THGOptWordlist(wordlists.defaults, "User:Pass pair or file with default credentials (file://)")
+    threads = OptInteger(8, "Number of threads")
+    defaults = OptWordlist(wordlists.defaults, "User:Pass pair or file with default credentials (file://)")
 
-    verbosity = THGOptBool(True, "Display authentication attempts")
-    stop_on_success = THGOptBool(True, "Stop on first valid authentication attempt")
+    stop_on_success = OptBool(True, "Stop on first valid authentication attempt")
+    verbosity = OptBool(True, "Display authentication attempts")
 
     def run(self):
         self.credentials = []
