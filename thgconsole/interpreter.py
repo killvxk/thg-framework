@@ -819,6 +819,19 @@ Command       Description
 
     def command_tcp(self, *args, **kwargs):
         pass
+
+    def command_del(self,*args,**kwargs):
+        if args == os.path.isdir == "True":
+            print("ok",args)
+        else:
+            print_error("dsa")
+        '''    
+        os.remove()
+        os.rmdir()
+        shutil.rmtree()
+        pathlib.Path.unlink()
+        pathlib.Path.rmdir()
+        '''
     def command_exec(self, *args, **kwargs):
         os.system(args[0])
 
