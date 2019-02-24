@@ -1,8 +1,9 @@
 from os import path
-from thg.core.exploit import *
-from thg.core.exploit.exploit import Protocol
-
-
+from thgconsole.core.exploit.exploit  import *
+from thgconsole.core.exploit.exploit import Protocol
+from thgconsole.core.exploit.option import *
+from thgconsole.core.exploit.utils import *
+from thgconsole.core.exploit.printer import *
 class Exploit(Exploit):
     __info__ = {
         "name": "AutoPwn",
@@ -34,9 +35,8 @@ class Exploit(Exploit):
         self.vulnerabilities = []
         self.creds = []
         self.not_verified = []
-        self._exploits_directories = [path.join("thg/modules/exploits/", module) for module in self.modules]
-        self._creds_directories = [path.join("thg/modules/creds/", module) for module in self.modules]
-        self._auxiliary_directories = [path.join("thg/modules/auxiliary/",module) for module in self.modules]
+        self._exploits_directories = [path.join("thgconsole/modules/exploits/", module) for module in self.modules]
+        self._auxiliary_directories = [path.join("thgconsole/modules/auxiliary/",module) for module in self.modules]
     def run(self):
         self.vulnerabilities = []
         self.creds = []
@@ -48,22 +48,12 @@ class Exploit(Exploit):
 
         modules = []
         for directory in self._exploits_directories:
-            for module in utils.iter_modules(directory):
+            for module in iter_modules(directory):
                 modules.append(module)
 
         data = LockedIterator(modules)
         self.run_threads(self.threads, self.exploits_target_function, data)
 
-        # default creds
-        print_info()
-        print_info("\033[94m[*]\033[0m", "{} Starting default credentials check...".format(self.target))
-        modules = []
-        for directory in self._creds_directories:
-            for module in utils.iter_modules(directory):
-                modules.append(module)
-
-        data = LockedIterator(modules)
-        self.run_threads(self.threads, self.creds_target_function, data)
 
         # results:
         print_info()

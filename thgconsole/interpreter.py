@@ -11,8 +11,8 @@ from collections import Counter
 from colorama import Fore
 from future.builtins import input
 from time import sleep
-
-##
+import shutil
+##shutil
 ##DB > THG
 ##
 ##
@@ -820,18 +820,37 @@ Command       Description
     def command_tcp(self, *args, **kwargs):
         pass
 
-    def command_del(self,*args,**kwargs):
-        if args == os.path.isdir == "True":
-            print("ok",args)
-        else:
-            print_error("dsa")
-        '''    
-        os.remove()
-        os.rmdir()
-        shutil.rmtree()
-        pathlib.Path.unlink()
-        pathlib.Path.rmdir()
-        '''
+    def command_del(self,args,**kwargs):
+        if os.path.isdir(args) == True:
+            print_success("del dir...[%s]".format(args))
+            shutil.rmtree(args)
+            print_success("dir deleted successfully => "+args)
+        elif args == "list":
+            dir = os.getcwd()
+            directories = [d for d in os.listdir(os.getcwd()) if os.path.isdir(d)]
+            file = [d for d in os.listdir(os.getcwd()) if os.path.isfile(d)]
+            print_status("dir:: " + dir)
+            print_status(" FILE:" + str(len(file)) + " FOLDER:" + str(len(directories)))
+            arquivos = []
+            pastas = []
+            for i in glob("*"):
+                if os.path.isdir(i) == True:
+                    print(Fore.CYAN + i + Fore.LIGHTYELLOW_EX + "/")
+
+                else:
+                    print(Fore.RED + i)
+
+        elif os.path.isfile(args) == True:
+            print_success("del file...[{}]".format(args))
+            os.remove(args)
+            print_success("file deleted successfully => "+args)
+        elif os.path.islink(args)==True:
+            print_success("del link..[{}]".format(args))
+            import pathlib
+            pathlib.Path.unlink(args)
+            print_success("link deleted successfully => "+args)
+            del pathlib
+
     def command_exec(self, *args, **kwargs):
         os.system(args[0])
 
@@ -862,8 +881,7 @@ Command       Description
                 directories = [d for d in os.listdir(os.getcwd()) if os.path.isdir(d)]
                 file = [d for d in os.listdir(os.getcwd()) if os.path.isfile(d)]
                 print_status("change: " + dir)
-                print_status(
-                    "total:" + str(len(total)) + " FILE:" + str(len(file)) + " FOLDER:" + str(len(directories)))
+                print_status("total:" + str(len(total)) + " FILE:" + str(len(file)) + " FOLDER:" + str(len(directories)))
                 arquivos = []
                 pastas = []
                 for i in glob("*"):

