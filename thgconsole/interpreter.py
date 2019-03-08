@@ -821,10 +821,22 @@ Command       Description
         pass
 
     def command_del(self,args,**kwargs):
+        commandos = '''usage: dell [-h/--help] [--list] [file]
+optional arguments:
+  -h, --help   show help
+  --list       list files 
+''' # aqui fica os comentarios do seus argumentos
+        short_cm = '''[--list] list files \n[--help] show all info'''
+        if args == "":
+            print(short_cm)
+        elif args == "-h":
+            print(commandos)
+        elif args == "--help":
+            print(commandos)
         if os.path.isdir(args) == True:
             print_success("del dir...[%s]".format(args))
             shutil.rmtree(args)
-            print_success("dir deleted successfully => "+args)
+            print_success("dir deleted successfully => "+(args))
         elif args == "list":
             dir = os.getcwd()
             directories = [d for d in os.listdir(os.getcwd()) if os.path.isdir(d)]
