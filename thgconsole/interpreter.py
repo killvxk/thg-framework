@@ -56,7 +56,7 @@ def is_libedit():
 
 
 class BaseInterpreter(object):
-    history_file = os.path.expanduser("~/.history")
+    history_file = os.path.expanduser("~/.historythg")
     history_length = 100
     global_help = ""
 
