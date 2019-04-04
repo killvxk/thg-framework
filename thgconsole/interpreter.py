@@ -355,10 +355,12 @@ Command       Description
                                          "options",
                                          "devices",
                                          "all",
+                                         "auxiliary",
                                          "encoders",
-                                         "creds",
                                          "exploits",
-                                         "scanners",  # mudar explit e tall
+                                         "nops",
+                                         "payloads",
+                                         "post",
                                          "wordlists",
                                          "banner",
                                          "version"
@@ -744,21 +746,19 @@ Command       Description
 
     def _show_all(self, *args, **kwargs):
         self.__show_modules()
+    def _show_auxiliary(self,*args,**kwargs):
+        self.__show_modules("auxiliary")
 
-    def _show_scanners(self, *args, **kwargs):
-        self.__show_modules('scanners')
-
-    def _show_test(self, *args, **kwargs):
-        self.__show_modules('test')
-
+    def _show_encoders(self, *args, **kwargs):
+        self.__show_modules("encoders")
     def _show_exploits(self, *args, **kwargs):
         self.__show_modules('exploits')
-
+    def _show_nops(self, *args, **kwargs):
+        self.__show_modules('nops')
     def _show_payloads(self, *args, **kwargs):
         self.__show_modules('payloads')
-
-    def _show_creds(self, *args, **kwargs):
-        self.__show_modules('creds')
+    def _show_post(self, *args, **kwargs):
+        self.__show_modules('post')
 
     def _show_banner(self, *args, **kwargs):
         os.system("clear")
