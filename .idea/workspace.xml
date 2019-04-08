@@ -1,12 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/thgconsole/interpreter.py" description="dir = os.getcwd()" line="828" />
+    <bookmark url="file://$PROJECT_DIR$/thgconsole/interpreter.py" description="dir = os.getcwd()" line="849" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9aefde2-5f91-4780-9d15-b6718a6b6e45" name="Default Changelist" comment="Default Changelist">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="f9aefde2-5f91-4780-9d15-b6718a6b6e45" name="Default Changelist" comment="fix command show {all,exploits,payload,nops,post}">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/bluetooth/btle/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/bluetooth/btle_client.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/exploit/encoders.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/udp/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/exploit/payloads.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/config/dbr.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/ssh/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/libs/apiros/apiros_client.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/exploit/exploit.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/libs/apiros/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/ftp/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/tcp/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/bluetooth/btle/btle_scanner.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/bluetooth/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/bluetooth/btle/btle_device.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/snmp/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.travis/run.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/exploit/voz.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/tcp/tcp_client.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/snmp/snmp_client.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/ftp/ftp_client.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/udp/udp_client.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/exploit/option.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/exploit/printer.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/config/setup_db.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/ssh/ssh_client.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_framework/lib_test/thg_test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/telnet/telnet_client.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/thg-framework.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_framework/thgconsole_test/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/exploit/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/http/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/exploit/shell.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/libs/lzs/lzs.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_framework/python_code_quality/use.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/telnet/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/libs/lzs/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.travis/install.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/exploit/exceptions.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/exploit/utils.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/http/http_client.py" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test_framework/lib_test/thg.db" afterPath="$PROJECT_DIR$/thgconsole/core/db/insert_db.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test_framework/__init__.py" afterPath="$PROJECT_DIR$/thgconsole/core/db/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thgconsole/interpreter.py" afterPath="$PROJECT_DIR$/thgconsole/interpreter.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thgconsole.py" afterPath="$PROJECT_DIR$/thgconsole.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test_framework/lib_test/__init__.py" afterPath="$PROJECT_DIR$/thgconsole/core/db/db.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test_framework/python_code_quality/__init__.py" afterPath="$PROJECT_DIR$/thgconsole/modules/evasion/__init__.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,21 +75,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LICENSE" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LICENSE">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="thgconsole.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thgconsole.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+            <state relative-caret-position="618">
+              <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
               <folding>
                 <element signature="e#24#61#0" expanded="true" />
               </folding>
@@ -50,30 +91,8 @@
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+              <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CONTRIBUTING.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CONTRIBUTING.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setup2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -81,9 +100,43 @@
       <file leaf-file-name="ISSUE_TEMPLATE.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.github/ISSUE_TEMPLATE.md">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PULL_REQUEST_TEMPLATE.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.github/PULL_REQUEST_TEMPLATE.md">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="insert_db.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/thgconsole/core/db/insert_db.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="info_init.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/thgconsole/config/info_init.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,50 +144,95 @@
       <file leaf-file-name="interpreter.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/thgconsole/interpreter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="359" column="50" selection-start-line="359" selection-start-column="50" selection-end-line="359" selection-end-column="50" />
+            <state relative-caret-position="526">
+              <caret line="804" column="76" selection-start-line="804" selection-start-column="76" selection-end-line="804" selection-end-column="76" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
+                <element signature="e#1241#6098#0" expanded="false" />
+                <element signature="e#1368#1405#0" expanded="false" />
+                <element signature="e#1436#2278#0" expanded="false" />
+                <element signature="e#2320#2552#0" expanded="false" />
+                <element signature="e#2601#2654#0" expanded="false" />
+                <element signature="e#2716#3111#0" expanded="false" />
+                <element signature="e#3145#3960#0" expanded="false" />
+                <element signature="e#3217#3232#0" expanded="false" />
+                <element signature="e#3364#3960#0" expanded="false" />
+                <element signature="e#4007#5231#0" expanded="false" />
+                <element signature="e#5279#5539#0" expanded="false" />
+                <element signature="e#5626#5781#0" expanded="false" />
+                <element signature="e#5834#5843#0" expanded="false" />
+                <element signature="e#5891#6098#0" expanded="false" />
+                <element signature="e#6218#12077#0" expanded="false" />
+                <element signature="e#12186#12821#0" expanded="false" />
+                <element signature="e#12880#20921#0" expanded="false" />
+                <element signature="e#13172#13949#0" expanded="false" />
+                <element signature="e#14972#15653#0" expanded="false" />
+                <element signature="e#16406#17276#0" expanded="false" />
+                <element signature="e#17299#19417#0" expanded="false" />
+                <element signature="e#20959#21094#0" expanded="false" />
+                <element signature="e#21137#21917#0" expanded="false" />
+                <element signature="e#21975#22881#0" expanded="false" />
+                <element signature="e#22177#22273#0" expanded="false" />
+                <element signature="e#22317#22671#0" expanded="false" />
+                <element signature="e#22712#22881#0" expanded="false" />
+                <element signature="e#22936#23033#0" expanded="false" />
+                <element signature="e#23082#23799#0" expanded="false" />
+                <element signature="e#23845#24561#0" expanded="false" />
+                <element signature="e#24621#25293#0" expanded="false" />
+                <element signature="e#25040#25192#0" expanded="false" />
+                <element signature="e#25341#25819#0" expanded="false" />
+                <element signature="e#25878#25904#0" expanded="false" />
+                <element signature="e#25975#26425#0" expanded="false" />
+                <element signature="e#26505#26762#0" expanded="false" />
+                <element signature="e#26841#27127#0" expanded="false" />
+                <element signature="e#27189#27211#0" expanded="false" />
+                <element signature="e#27290#27795#0" expanded="false" />
+                <element signature="e#27875#28051#0" expanded="false" />
+                <element signature="e#28131#28198#0" expanded="false" />
+                <element signature="e#28279#28326#0" expanded="false" />
+                <element signature="e#28408#28729#0" expanded="false" />
+                <element signature="e#28812#28976#0" expanded="false" />
+                <element signature="e#29038#29200#1" expanded="false" />
+                <element signature="e#29263#29418#0" expanded="false" />
+                <element signature="e#30076#30255#0" expanded="false" />
+                <element signature="e#30313#30683#0" expanded="false" />
+                <element signature="e#30486#30630#0" expanded="false" />
+                <element signature="e#30756#30915#0" expanded="false" />
+                <element signature="e#30991#31566#0" expanded="false" />
+                <element signature="e#31668#32173#0" expanded="false" />
+                <element signature="e#32251#32527#0" expanded="false" />
+                <element signature="e#32604#32947#0" expanded="false" />
+                <element signature="e#32995#33124#0" expanded="false" />
+                <element signature="e#33175#33196#0" expanded="false" />
+                <element signature="e#33251#33283#0" expanded="false" />
+                <element signature="e#33336#33366#0" expanded="false" />
+                <element signature="e#33422#33453#0" expanded="false" />
+                <element signature="e#33509#33540#0" expanded="false" />
+                <element signature="e#33592#33619#0" expanded="false" />
+                <element signature="e#33675#33706#0" expanded="false" />
+                <element signature="e#33758#33785#0" expanded="false" />
+                <element signature="e#33839#33884#0" expanded="false" />
+                <element signature="e#33939#33985#0" expanded="false" />
+                <element signature="e#34035#34064#0" expanded="false" />
+                <element signature="e#34119#34150#0" expanded="false" />
+                <element signature="e#34655#35042#0" expanded="false" />
+                <element signature="e#34801#35042#0" expanded="false" />
+                <element signature="e#35101#35163#0" expanded="false" />
+                <element signature="e#35222#35329#0" expanded="false" />
+                <element signature="e#35387#35418#0" expanded="false" />
+                <element signature="e#35794#35912#0" expanded="false" />
+                <element signature="e#36256#36397#0" expanded="false" />
+                <element signature="e#36439#37005#0" expanded="false" />
+                <element signature="e#37062#37199#0" expanded="false" />
+                <element signature="e#37253#37450#0" expanded="false" />
+                <element signature="e#37930#38897#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="autopwn.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thgconsole/modules/auxiliary/scanner/autopwn.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thgconsole/core/exploit/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1554106048049" expanded="true" signature="420:430" ph="..." />
-                <marker date="1554106048049" expanded="true" signature="795:799" ph="..." />
-                <marker date="1554106048049" expanded="true" signature="1213:1217" ph="..." />
-                <marker date="1554106048049" expanded="true" signature="3034:3038" ph="..." />
-                <marker date="1554106048049" expanded="true" signature="3323:3327" ph="..." />
-                <marker date="1554106048049" expanded="true" signature="3586:3604" ph="..." />
-                <marker date="1554106048049" expanded="true" signature="4689:4693" ph="..." />
-                <marker date="1554106048049" expanded="true" signature="5620:5638" ph="..." />
-                <marker date="1554106048049" expanded="true" signature="6002:6006" ph="..." />
-                <marker date="1554106048049" expanded="true" signature="6252:6256" ph="..." />
-                <marker date="1554106048049" expanded="true" signature="8076:8080" ph="..." />
-                <marker date="1554106048049" expanded="true" signature="10442:10449" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="option.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thgconsole/core/exploit/option.py">
+      <file leaf-file-name="CONTRIBUTING.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CONTRIBUTING.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -210,9 +308,20 @@
         <option value="$PROJECT_DIR$/LICENSE" />
         <option value="$PROJECT_DIR$/Dockerfile" />
         <option value="$PROJECT_DIR$/CONTRIBUTING.md" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/setup2.py" />
         <option value="$PROJECT_DIR$/thgconsole/modules/auxiliary/scanner/autopwn.py" />
+        <option value="$PROJECT_DIR$/thgconsole/modules/evasion.py" />
+        <option value="$PROJECT_DIR$/thgconsole/core/db/__init__.py" />
+        <option value="$PROJECT_DIR$/thgconsole/core/db/db.py" />
+        <option value="$PROJECT_DIR$/thgconsole/core/db/insert_db.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/thgconsole/THGPlugin.py" />
+        <option value="$PROJECT_DIR$/thgconsole/core/plugins/DSA.py" />
+        <option value="$PROJECT_DIR$/thgconsole/Plugins/THGPlugins.py" />
+        <option value="$PROJECT_DIR$/thgconsole/Plugins/__init__.py" />
+        <option value="$PROJECT_DIR$/thgconsole/Plugins/dsa.py" />
+        <option value="$PROJECT_DIR$/thgconsole.py" />
+        <option value="$PROJECT_DIR$/thgconsole/core/THGPlugin/PluginManager.py" />
         <option value="$PROJECT_DIR$/thgconsole/interpreter.py" />
       </list>
     </option>
@@ -235,7 +344,7 @@
   <component name="ProjectView">
     <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
       <flattenPackages />
-      <showMembers Scope="true" ProjectPane="true" />
+      <showMembers Scratches="true" Scope="true" ProjectPane="true" />
       <showModules />
       <showLibraryContents />
       <hideEmptyPackages />
@@ -247,58 +356,22 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
       <pane id="Scope">
         <subPane subId="Problems" />
         <subPane subId="Changed Files" />
         <subPane subId="Scope 'Changed Files'; set:Changed Files; ALL; class com.intellij.packageDependencies.ChangeListScope" />
-        <subPane subId="Project Files">
+        <subPane subId="Project Files" />
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" />
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="thg-framework">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="thg-framework">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="thgconsole">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="thg-framework">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="thgconsole">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="modules">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thg-framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" />
       </pane>
       <pane id="Scratches">
         <subPane />
@@ -307,7 +380,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
@@ -315,9 +388,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/thgconsole" />
+      <recent name="$PROJECT_DIR$/thgconsole/core" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/thgconsole/libs" />
       <recent name="$PROJECT_DIR$/thgconsole/lib/base/interpreter" />
-      <recent name="$PROJECT_DIR$/thgconsole/lib" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -332,7 +407,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.setup">
+  <component name="RunManager" selected="Python.PluginManager">
     <configuration default="false" name="setup" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -346,6 +421,74 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="thg-framework" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/setup.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="db" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thgconsole/core/db" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="thg-framework" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/thgconsole/core/db/db.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="insert_db" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thgconsole/core/db" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="thg-framework" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/thgconsole/core/db/insert_db.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="interpreter" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thgconsole" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="thg-framework" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/thgconsole/interpreter.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="PluginManager" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thgconsole/core/THGPlugin" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="thg-framework" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/thgconsole/core/THGPlugin/PluginManager.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -484,9 +627,21 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="1">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.setup" />
+      <item index="1" class="java.lang.String" itemvalue="Python.db" />
+      <item index="2" class="java.lang.String" itemvalue="Python.insert_db" />
+      <item index="3" class="java.lang.String" itemvalue="Python.interpreter" />
+      <item index="4" class="java.lang.String" itemvalue="Python.PluginManager" />
     </list>
+    <recent_temporary>
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.PluginManager" />
+        <item index="1" class="java.lang.String" itemvalue="Python.interpreter" />
+        <item index="2" class="java.lang.String" itemvalue="Python.insert_db" />
+        <item index="3" class="java.lang.String" itemvalue="Python.db" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -523,7 +678,14 @@
       <option name="project" value="LOCAL" />
       <updated>1551013506813</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix command show {all,exploits,payload,nops,post}">
+      <created>1554376046431</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1554376046431</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -537,26 +699,45 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1391671" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="760" y="132" width="399" height="911" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22140221" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="760" y="132" width="399" height="911" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995495" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995495" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995495" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995495" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995495" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2530311" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23471616" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32874617" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995495" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995495" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995495" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23471616" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09541381" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="760" y="132" width="399" height="911" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32874617" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -574,116 +755,16 @@
     <MESSAGE value="vagrat add" />
     <MESSAGE value="add gtts to requi" />
     <MESSAGE value="add gmac" />
-    <option name="LAST_COMMIT_MESSAGE" value="add gmac" />
+    <MESSAGE value="fix command show {all,exploits,payload,nops,post}" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix command show {all,exploits,payload,nops,post}" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CONTRIBUTING.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.github/ISSUE_TEMPLATE.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.github/PULL_REQUEST_TEMPLATE.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole/interpreter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole/modules/auxiliary/scanner/autopwn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole/core/exploit/shell.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole/core/exploit/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1554106048049" expanded="true" signature="420:430" ph="..." />
-            <marker date="1554106048049" expanded="true" signature="795:799" ph="..." />
-            <marker date="1554106048049" expanded="true" signature="1213:1217" ph="..." />
-            <marker date="1554106048049" expanded="true" signature="3034:3038" ph="..." />
-            <marker date="1554106048049" expanded="true" signature="3323:3327" ph="..." />
-            <marker date="1554106048049" expanded="true" signature="3586:3604" ph="..." />
-            <marker date="1554106048049" expanded="true" signature="4689:4693" ph="..." />
-            <marker date="1554106048049" expanded="true" signature="5620:5638" ph="..." />
-            <marker date="1554106048049" expanded="true" signature="6002:6006" ph="..." />
-            <marker date="1554106048049" expanded="true" signature="6252:6256" ph="..." />
-            <marker date="1554106048049" expanded="true" signature="8076:8080" ph="..." />
-            <marker date="1554106048049" expanded="true" signature="10442:10449" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole/core/exploit/option.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.vagrant/machines/default/virtualbox/index_uuid" />
-    <entry file="file://$PROJECT_DIR$/.vagrant/machines/default/virtualbox/private_key" />
-    <entry file="file://$PROJECT_DIR$/.vagrant/machines/default/virtualbox/synced_folders" />
-    <entry file="file://$PROJECT_DIR$/.vagrant/machines/default/virtualbox/vagrant_cwd" />
-    <entry file="file://$PROJECT_DIR$/.vagrant/rgloader/loader.rb" />
-    <entry file="file://$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/acti/ssh_default_creds.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/acti/ftp_default_creds.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/thgconsole/core/bluetooth/btle/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -789,13 +870,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.github/PULL_REQUEST_TEMPLATE.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/thgconsole/core/exploit/shell.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -807,20 +881,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1554106048049" expanded="true" signature="420:430" ph="..." />
-            <marker date="1554106048049" expanded="true" signature="795:799" ph="..." />
-            <marker date="1554106048049" expanded="true" signature="1213:1217" ph="..." />
-            <marker date="1554106048049" expanded="true" signature="3034:3038" ph="..." />
-            <marker date="1554106048049" expanded="true" signature="3323:3327" ph="..." />
-            <marker date="1554106048049" expanded="true" signature="3586:3604" ph="..." />
-            <marker date="1554106048049" expanded="true" signature="4689:4693" ph="..." />
-            <marker date="1554106048049" expanded="true" signature="5620:5638" ph="..." />
-            <marker date="1554106048049" expanded="true" signature="6002:6006" ph="..." />
-            <marker date="1554106048049" expanded="true" signature="6252:6256" ph="..." />
-            <marker date="1554106048049" expanded="true" signature="8076:8080" ph="..." />
-            <marker date="1554106048049" expanded="true" signature="10442:10449" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -828,7 +888,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -836,25 +895,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.github/ISSUE_TEMPLATE.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml" />
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-90">
@@ -866,13 +910,71 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thgconsole/modules/evasion.py" />
+    <entry file="file://$PROJECT_DIR$/thgconsole/config/setup_db.py" />
+    <entry file="file://$PROJECT_DIR$/thgconsole/config/dbr.sh" />
+    <entry file="file://$PROJECT_DIR$/thgconsole/core/db/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thgconsole/config/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thgconsole/core/db/dsa" />
+    <entry file="file://$PROJECT_DIR$/thgconsole/core/db/dsa.db" />
+    <entry file="file://$PROJECT_DIR$/thgconsole/core/db/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="708" column="105" selection-start-line="708" selection-start-column="105" selection-end-line="708" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thgconsole/config/info_init.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CONTRIBUTING.md">
+    <entry file="file://$PROJECT_DIR$/thgconsole/core/db/insert_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.github/ISSUE_TEMPLATE.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.github/PULL_REQUEST_TEMPLATE.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -883,23 +985,29 @@
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LICENSE">
+    <entry file="file://$PROJECT_DIR$/thgconsole/core/THGPlugin.py" />
+    <entry file="file://$PROJECT_DIR$/thgconsole/core/plugins/DSA.py" />
+    <entry file="file://$PROJECT_DIR$/thgconsole/Plugins/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/thgconsole/Plugins/THGPlugins.py" />
+    <entry file="file://$PROJECT_DIR$/thgconsole/Plugins/dsa.py" />
+    <entry file="file://$PROJECT_DIR$/thgconsole/core/THGPlugin/PluginManager.py" />
+    <entry file="file://$PROJECT_DIR$/CONTRIBUTING.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/thgconsole.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+        <state relative-caret-position="618">
+          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
           <folding>
             <element signature="e#24#61#0" expanded="true" />
           </folding>
@@ -908,10 +1016,88 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/thgconsole/interpreter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="359" column="50" selection-start-line="359" selection-start-column="50" selection-end-line="359" selection-end-column="50" />
+        <state relative-caret-position="526">
+          <caret line="804" column="76" selection-start-line="804" selection-start-column="76" selection-end-line="804" selection-end-column="76" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#1241#6098#0" expanded="false" />
+            <element signature="e#1368#1405#0" expanded="false" />
+            <element signature="e#1436#2278#0" expanded="false" />
+            <element signature="e#2320#2552#0" expanded="false" />
+            <element signature="e#2601#2654#0" expanded="false" />
+            <element signature="e#2716#3111#0" expanded="false" />
+            <element signature="e#3145#3960#0" expanded="false" />
+            <element signature="e#3217#3232#0" expanded="false" />
+            <element signature="e#3364#3960#0" expanded="false" />
+            <element signature="e#4007#5231#0" expanded="false" />
+            <element signature="e#5279#5539#0" expanded="false" />
+            <element signature="e#5626#5781#0" expanded="false" />
+            <element signature="e#5834#5843#0" expanded="false" />
+            <element signature="e#5891#6098#0" expanded="false" />
+            <element signature="e#6218#12077#0" expanded="false" />
+            <element signature="e#12186#12821#0" expanded="false" />
+            <element signature="e#12880#20921#0" expanded="false" />
+            <element signature="e#13172#13949#0" expanded="false" />
+            <element signature="e#14972#15653#0" expanded="false" />
+            <element signature="e#16406#17276#0" expanded="false" />
+            <element signature="e#17299#19417#0" expanded="false" />
+            <element signature="e#20959#21094#0" expanded="false" />
+            <element signature="e#21137#21917#0" expanded="false" />
+            <element signature="e#21975#22881#0" expanded="false" />
+            <element signature="e#22177#22273#0" expanded="false" />
+            <element signature="e#22317#22671#0" expanded="false" />
+            <element signature="e#22712#22881#0" expanded="false" />
+            <element signature="e#22936#23033#0" expanded="false" />
+            <element signature="e#23082#23799#0" expanded="false" />
+            <element signature="e#23845#24561#0" expanded="false" />
+            <element signature="e#24621#25293#0" expanded="false" />
+            <element signature="e#25040#25192#0" expanded="false" />
+            <element signature="e#25341#25819#0" expanded="false" />
+            <element signature="e#25878#25904#0" expanded="false" />
+            <element signature="e#25975#26425#0" expanded="false" />
+            <element signature="e#26505#26762#0" expanded="false" />
+            <element signature="e#26841#27127#0" expanded="false" />
+            <element signature="e#27189#27211#0" expanded="false" />
+            <element signature="e#27290#27795#0" expanded="false" />
+            <element signature="e#27875#28051#0" expanded="false" />
+            <element signature="e#28131#28198#0" expanded="false" />
+            <element signature="e#28279#28326#0" expanded="false" />
+            <element signature="e#28408#28729#0" expanded="false" />
+            <element signature="e#28812#28976#0" expanded="false" />
+            <element signature="e#29038#29200#1" expanded="false" />
+            <element signature="e#29263#29418#0" expanded="false" />
+            <element signature="e#30076#30255#0" expanded="false" />
+            <element signature="e#30313#30683#0" expanded="false" />
+            <element signature="e#30486#30630#0" expanded="false" />
+            <element signature="e#30756#30915#0" expanded="false" />
+            <element signature="e#30991#31566#0" expanded="false" />
+            <element signature="e#31668#32173#0" expanded="false" />
+            <element signature="e#32251#32527#0" expanded="false" />
+            <element signature="e#32604#32947#0" expanded="false" />
+            <element signature="e#32995#33124#0" expanded="false" />
+            <element signature="e#33175#33196#0" expanded="false" />
+            <element signature="e#33251#33283#0" expanded="false" />
+            <element signature="e#33336#33366#0" expanded="false" />
+            <element signature="e#33422#33453#0" expanded="false" />
+            <element signature="e#33509#33540#0" expanded="false" />
+            <element signature="e#33592#33619#0" expanded="false" />
+            <element signature="e#33675#33706#0" expanded="false" />
+            <element signature="e#33758#33785#0" expanded="false" />
+            <element signature="e#33839#33884#0" expanded="false" />
+            <element signature="e#33939#33985#0" expanded="false" />
+            <element signature="e#34035#34064#0" expanded="false" />
+            <element signature="e#34119#34150#0" expanded="false" />
+            <element signature="e#34655#35042#0" expanded="false" />
+            <element signature="e#34801#35042#0" expanded="false" />
+            <element signature="e#35101#35163#0" expanded="false" />
+            <element signature="e#35222#35329#0" expanded="false" />
+            <element signature="e#35387#35418#0" expanded="false" />
+            <element signature="e#35794#35912#0" expanded="false" />
+            <element signature="e#36256#36397#0" expanded="false" />
+            <element signature="e#36439#37005#0" expanded="false" />
+            <element signature="e#37062#37199#0" expanded="false" />
+            <element signature="e#37253#37450#0" expanded="false" />
+            <element signature="e#37930#38897#0" expanded="false" />
           </folding>
         </state>
       </provider>

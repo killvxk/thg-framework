@@ -40,7 +40,7 @@ def thg(extra_package_path=package_path):
     if not os.path.isdir(extra_package_path):
         extra_package_path = "~/extra_thg_package/"
     thgc = THGtInterpreter(extra_package_path)
-    thgc.start()
+    thgc.THGstart()
 
 
 if __name__ == "__main__":

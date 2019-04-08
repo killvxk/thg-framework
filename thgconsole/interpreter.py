@@ -15,6 +15,8 @@ import shutil
 ##shutil
 ##DB > THG
 ##
+from thgconsole.core.db.insert_db import DBSession,check
+
 ##
 ##mods
 
@@ -55,8 +57,8 @@ def is_libedit():
     return "libedit" in readline.__doc__
 
 
-class BaseInterpreter(object):
-    history_file = os.path.expanduser("~/.historythg")
+class THGBaseInterpreter(object):
+    history_file = os.path.expanduser("~/.history")
     history_length = 100
     global_help = ""
 
@@ -91,33 +93,33 @@ class BaseInterpreter(object):
             readline.parse_and_bind("tab: complete")
 
     def parse_line(self, line):
-        """ Split line into command and argument.
+        """ Split line into thg_command and argument.
 
         :param line: line to parse
-        :return: (command, argument)
+        :return: (thg_command, argument)
         """
-        command, _, arg = line.strip().partition(" ")
-        return command, arg.strip()
+        thg_command, _, arg = line.strip().partition(" ")
+        return thg_command, arg.strip()
 
     @property
-    def prompt(self):
-        """ Returns prompt string """
+    def THGprompt(self):
+        """ Returns THGprompt string """
         return ">>>"
 
-    def get_command_handler(self, command):
-        """ Parsing command and returning appropriate handler.
+    def get_thg_command_handler(self, thg_command):
+        """ Parsing thg_command and returning appropriate handler.
 
-        :param command: command
-        :return: command_handler
+        :param thg_command: thg_command
+        :return: thg_command_handler
         """
         try:
-            command_handler = getattr(self, "command_{}".format(command))
+            thg_command_handler = getattr(self, "thg_command_{}".format(thg_command))
         except AttributeError:
-            raise THGtException("Unknown command: '{}'".format(command))
+            raise THGtException("Unknown thg_command: '{}'".format(thg_command))
 
-        return command_handler
+        return thg_command_handler
 
-    def start(self):
+    def THGstart(self):
         """ THGconsole main entry point. Starting interpreter loop. """
         # thgvoz.load()
         # DB_CONTROLER.DB.Create_DB()
@@ -125,11 +127,11 @@ class BaseInterpreter(object):
         printer_queue.join()
         while True:
             try:
-                command, args = self.parse_line(input(self.prompt))
-                if not command:
+                thg_command, args = self.parse_line(input(self.THGprompt))
+                if not thg_command:
                     continue
-                command_handler = self.get_command_handler(command)
-                command_handler(args)
+                thg_command_handler = self.get_thg_command_handler(thg_command)
+                thg_command_handler(args)
             except THGtException as err:
                 print_error(err)
             except EOFError:
@@ -144,8 +146,8 @@ class BaseInterpreter(object):
     def complete(self, text, state):
         """Return the next possible completion for 'text'.
 
-        If a command has not been entered, then complete against command list.
-        Otherwise try to call complete_<command> to get list of completions.
+        If a thg_command has not been entered, then complete against thg_command list.
+        Otherwise try to call complete_<thg_command> to get list of completions.
         """
         if state == 0:
             original_line = readline.get_line_buffer()
@@ -164,7 +166,7 @@ class BaseInterpreter(object):
                     except AttributeError:
                         complete_function = self.default_completer
             else:
-                complete_function = self.raw_command_completer
+                complete_function = self.raw_thg_command_completer
 
             self.completion_matches = complete_function(text, line, start_index, end_index)
 
@@ -173,35 +175,35 @@ class BaseInterpreter(object):
         except IndexError:
             return None
 
-    def commands(self, *ignored):
-        """ Returns full list of interpreter commands.
+    def thg_commands(self, *ignored):
+        """ Returns full list of interpreter thg_commands.
 
         :param ignored:
-        :return: full list of interpreter commands
+        :return: full list of interpreter thg_commands
         """
-        return [command.rsplit("_").pop() for command in dir(self) if command.startswith("command_")]
+        return [thg_command.rsplit("_").pop() for thg_command in dir(self) if thg_command.startswith("thg_command_")]
 
-    def raw_command_completer(self, text, line, start_index, end_index):
-        """ Complete command w/o any argument """
-        return [command for command in self.suggested_commands() if command.startswith(text)]
+    def raw_thg_command_completer(self, text, line, start_index, end_index):
+        """ Complete thg_command w/o any argument """
+        return [thg_command for thg_command in self.suggested_thg_commands() if thg_command.startswith(text)]
 
     def default_completer(self, *ignored):
         return []
 
-    def suggested_commands(self):
+    def suggested_thg_commands(self):
         """ Entry point for intelligent tab completion.
 
-        Overwrite this method to suggest suitable commands.
+        Overwrite this method to suggest suitable thg_commands.
 
-        :return: list of suitable commands
+        :return: list of suitable thg_commands
         """
-        return self.commands()
+        return self.thg_commands()
 
 
-class THGtInterpreter(BaseInterpreter):
+class THGtInterpreter(THGBaseInterpreter):
     history_file = os.path.expanduser("~/.THG_history")
     global_help = """
-\033[0;32mGlobal commands:
+\033[0;32mGlobal thg_commands:
 
 #Alias Commands
 ==============
@@ -222,17 +224,17 @@ Core Commands
     exit           Exit the console
     unsetg         Unsets one or more global variables
     help           Help menu
-    show history   Show command history
+    show history   Show thg_command history
     setg           Sets a global variable to a value
     set            Sets a context-specific variable to a value
-    exec           <shell command> <args> Execute a command in a shell
+    exec           <shell thg_command> <args> Execute a thg_command in a shell
     cd             Change the current working directory
     color          Toggle color
     route          Route traffic through a session V-1base
     show version   Show the framework and console library version numbers
     quit           Exit the console
     #connect       Communicate with a host
-    #grep          Grep the output of another command
+    #grep          Grep the output of another thg_command
     #load          Load a framework plugin
     #save          Saves the active datastores
     #sessions      Dump session listings and display information about sessions
@@ -290,8 +292,8 @@ Core Commands
 
 #Command       Description
 -------       -----------
-#makerc        Save commands entered since start to a file
-#resource      Run the commands stored in a file
+#makerc        Save thg_commands entered since start to a file
+#resource      Run the thg_commands stored in a file
 
 #Developer Commands
 ==================
@@ -330,9 +332,8 @@ Command       Description
 -------       -----------
 #creds         List all credentials in the database
     """.format(Blue=Fore.CYAN, grn=Fore.GREEN, red=Fore.RED, yl=Fore.YELLOW, magent=Fore.MAGENTA)
-
     module_help = """
-    \033[1;34mModule commands:
+    \033[1;34mModule thg_commands:
     run                                 Run the selected module with the given options
     back                                De-select the current module
     set <option name> <option value>    Set an option for the selected module
@@ -340,16 +341,15 @@ Command       Description
     unsetg <option name>                Unset option that was set globally
     show [info|options|devices]         Print information, options, or target devices for a module
     check                               Check if a given target is vulnerable to a selected module's exploit"""
-
-    def __init__(self, extra_package_path=None):
+    def __init__(self, extra_package_path=False):
         super(THGtInterpreter, self).__init__()
         PrinterThread().start()
 
         self.current_module = None
-        self.raw_prompt_template = None
-        self.module_prompt_template = None
-        self.prompt_hostname = "\033[0;32mPWN"
-        self.show_sub_commands = sorted(("info",
+        self.raw_THGprompt_template = None
+        self.module_THGprompt_template = None
+        self.THGprompt_hostname = "\033[0;32mPWN"
+        self.show_sub_thg_commands = sorted(("info",
                                          "ip",
                                          "history",
                                          "options",
@@ -358,6 +358,7 @@ Command       Description
                                          "auxiliary",
                                          "encoders",
                                          "exploits",
+                                         "evasion",
                                          "nops",
                                          "payloads",
                                          "post",
@@ -366,7 +367,24 @@ Command       Description
                                          "version"
                                          ))
 
-        self.global_commands = sorted(["use",
+        self.iptables_sub_thg_commands = sorted(("info",
+                                             "ip",
+                                             "history",
+                                             "options",
+                                             "devices",
+                                             "all",
+                                             "auxiliary",
+                                             "encoders",
+                                             "exploits",
+                                             "evasion",
+                                             "nops",
+                                             "payloads",
+                                             "post",
+                                             "wordlists",
+                                             "banner",
+                                             "version"
+                                             ))
+        self.global_thg_commands = sorted(["use",
                                        "exec",
                                        "help",
                                        "exit",
@@ -378,12 +396,13 @@ Command       Description
                                        "color",
                                        "route",
                                        "quit",
-                                       "sleep"
+                                       "sleep",
+                                       "iptables"
 
                                        ])
-        self.module_commands = ["run", "back", "set ", "setg ", "check"]
-        self.module_commands.extend(self.global_commands)
-        self.module_commands.sort()
+        self.module_thg_commands = ["run", "back", "set ", "setg ", "check"]
+        self.module_thg_commands.extend(self.global_thg_commands)
+        self.module_thg_commands.sort()
         self.extra_modules_dir = None
         self.extra_modules_dirs = None
         self.extra_modules = []
@@ -395,7 +414,7 @@ Command       Description
         self.modules_count.update([module.split('.')[0] for module in self.modules])
         self.main_modules_dirs = [module for module in os.listdir(MODULES_DIR) if not module.startswith("__")]
 
-        self.__parse_prompt()
+        self.__parse_THGprompt()
         self.ran = """
           \033[1;31m████████╗██╗  ██╗███████╗    ██╗  ██╗ █████╗  ██████╗██╗  ██╗███████╗██████╗      ██████╗ ██████╗  ██████╗ ██╗   ██╗██████╗ 
         ╚══██╔══╝██║  ██║██╔════╝    ██║  ██║██╔══██╗██╔════╝██║ ██╔╝██╔════╝██╔══██╗    ██╔════╝ ██╔══██╗██╔═══██╗██║   ██║██╔══██╗
@@ -426,20 +445,21 @@ Command       Description
 {YELLOW}+ -- --=[{RED}mac     =>{MAGENTA} {mac} {RED}{YELLOW}]=-- -- +
 
 {CYAN}==================={GREEN}[ thgconsole-info ]{GREEN}{CYAN}========================
-
-{YELLOW}+ -- --=[{RED}Exploits {MAGENTA} {exploits_count}  {RED}{YELLOW}]=-- -- +  
-{YELLOW}+ -- --=[{RED}Auxiliary{MAGENTA} {auxiliary_count} {RED}{YELLOW}]=-- -- + 
-{YELLOW}+ -- --=[{RED}Post     {MAGENTA} {post_count}      {RED}{YELLOW}]=-- -- + 
-{YELLOW}+ -- --=[{RED}Payloads {MAGENTA} {payloads_count}  {RED}{YELLOW}]=-- -- + 
-{YELLOW}+ -- --=[{RED}Encoders {MAGENTA} {encoders_count}  {RED}{YELLOW}]=-- -- + 
-{YELLOW}+ -- --=[{RED}Nops     {MAGENTA} {nops_count}      {RED}{YELLOW}]=-- -- + 
-
+{YELLOW}+ -- --=[{RED}Auxiliary{MAGENTA} {auxiliary_count} {RED}{YELLOW}]=-- -- +
+{YELLOW}+ -- --=[{RED}Payloads {MAGENTA} {payloads_count}  {RED}{YELLOW}]=-- -- +
+{YELLOW}+ -- --=[{RED}Exploits {MAGENTA} {exploits_count}  {RED}{YELLOW}]=-- -- +
+{YELLOW}+ -- --=[{RED}Encoders {MAGENTA} {encoders_count}  {RED}{YELLOW}]=-- -- +
+{YELLOW}+ -- --=[{RED}evasion {MAGENTA} {evasion_count}  {RED}{YELLOW}]=-- -- +
+{YELLOW}+ -- --=[{RED}Post     {MAGENTA} {post_count}      {RED}{YELLOW}]=-- -- +
+{YELLOW}+ -- --=[{RED}Nops     {MAGENTA} {nops_count}      {RED}{YELLOW}]=-- -- +
 {CYAN}==================={GREEN}[ thgconsole-config ]{GREEN}{CYAN}========================
-{YELLOW}+ -- --=[{RED}DB_STATUS =>{MAGENTA}  {RED}{YELLOW}]=-- -- +
+{YELLOW}+ -- --=[{RED}DB_STATUS =>{MAGENTA}{db}  {RED}{YELLOW}]=-- -- +
 
         """.format(os=platform.uname()[0],
+                   db=check,
                    release=platform.uname()[2],
                    versao=platform.uname()[3],
+                   evasion_count=self.modules_count["evasion"],
                    machine=platform.uname()[4],
                    processor=platform.uname()[5],
                    hostname=platform.uname()[1],
@@ -468,15 +488,15 @@ Command       Description
         a = s.getsockname()[0]
         return a
 
-    def __parse_prompt(self):
-        raw_prompt_default_template = "\001\033[4m\002{host}\001\033[0m\002 > "
-        raw_prompt_template = os.getenv("THG_RAW_PROMPT", raw_prompt_default_template).replace('\\033', '\033')
-        self.raw_prompt_template = raw_prompt_template if '{host}' in raw_prompt_template else raw_prompt_default_template
+    def __parse_THGprompt(self):
+        raw_THGprompt_default_template = "\001\033[4m\002{host}\001\033[0m\002 > "
+        raw_THGprompt_template = os.getenv("THG_RAW_PROMPT", raw_THGprompt_default_template).replace('\\033', '\033')
+        self.raw_THGprompt_template = raw_THGprompt_template if '{host}' in raw_THGprompt_template else raw_THGprompt_default_template
 
-        module_prompt_default_template = "\001\033[4m\002{host}\001\033[0m\002 (\001\033[91m\002{module}\001\033[0m\002) > "
-        module_prompt_template = os.getenv("THG_MODULE_PROMPT", module_prompt_default_template).replace('\\033', '\033')
-        self.module_prompt_template = module_prompt_template if all(
-            map(lambda x: x in module_prompt_template, ['{host}', "{module}"])) else module_prompt_default_template
+        module_THGprompt_default_template = "\001\033[4m\002{host}\001\033[0m\002 (\001\033[91m\002{module}\001\033[0m\002) > "
+        module_THGprompt_template = os.getenv("THG_MODULE_PROMPT", module_THGprompt_default_template).replace('\\033', '\033')
+        self.module_THGprompt_template = module_THGprompt_template if all(
+            map(lambda x: x in module_THGprompt_template, ['{host}', "{module}"])) else module_THGprompt_default_template
 
     def __handle_if_noninteractive(self, argv):
         noninteractive = False
@@ -501,12 +521,12 @@ Command       Description
                 set_opts.append(arg)
 
         if noninteractive:
-            self.command_use(module)
+            self.thg_command_use(module)
 
             for opt in set_opts:
-                self.command_set(opt)
+                self.thg_command_set(opt)
 
-            self.command_exploit()
+            self.thg_command_exploit()
 
             sys.exit(0)
 
@@ -515,21 +535,21 @@ Command       Description
         return getattr(self.current_module, "_{}__info__".format(self.current_module.__class__.__name__))
 
     @property
-    def prompt(self):
-        """ Returns prompt string based on current_module attribute.
+    def THGprompt(self):
+        """ Returns THGprompt string based on current_module attribute.
 
         Adding module prefix (module.name) if current_module attribute is set.
 
-        :return: prompt string with appropriate module prefix.
+        :return: THGprompt string with appropriate module prefix.
         """
         if self.current_module:
             try:
-                return self.module_prompt_template.format(host=self.prompt_hostname,
+                return self.module_THGprompt_template.format(host=self.THGprompt_hostname,
                                                           module=self.module_metadata['name'])
             except (AttributeError, KeyError):
-                return self.module_prompt_template.format(host=self.prompt_hostname, module="UnnamedModule")
+                return self.module_THGprompt_template.format(host=self.THGprompt_hostname, module="UnnamedModule")
         else:
-            return self.raw_prompt_template.format(host=self.prompt_hostname)
+            return self.raw_THGprompt_template.format(host=self.THGprompt_hostname)
 
     def import_extra_package(self):
         if self.extra_package_path:
@@ -550,7 +570,7 @@ Command       Description
 
         May need optimization in the future!
 
-        :param text: argument of 'use' command
+        :param text: argument of 'use' thg_command
         :return: list of tab completion hints
         """
         text = pythonize_path(text)
@@ -563,24 +583,24 @@ Command       Description
             matches.add("".join((text, head, sep)))
         return list(map(humanize_path, matches))  # humanize output, replace dots to forward slashes
 
-    def suggested_commands(self):
+    def suggested_thg_commands(self):
         """ Entry point for intelligent tab completion.
 
         Based on state of interpreter this method will return intelligent suggestions.
 
-        :return: list of most accurate command suggestions
+        :return: list of most accurate thg_command suggestions
         """
         if self.current_module and GLOBAL_OPTS:
-            return sorted(itertools.chain(self.module_commands, ("unsetg ",)))
+            return sorted(itertools.chain(self.module_thg_commands, ("unsetg ",)))
         elif self.current_module:
-            return self.module_commands
+            return self.module_thg_commands
         else:
-            return self.global_commands
+            return self.global_thg_commands
 
-    def command_back(self, *args, **kwargs):
+    def thg_command_back(self, *args, **kwargs):
         self.current_module = None
 
-    def command_use(self, module_path, *args, **kwargs):
+    def thg_command_use(self, module_path, *args, **kwargs):
         if module_path.startswith("extra_"):
             module_path = pythonize_path(module_path)
         else:
@@ -603,7 +623,7 @@ Command       Description
                 return self.main_modules_dirs
 
     @module_required
-    def command_run(self, *args, **kwargs):
+    def thg_command_run(self, *args, **kwargs):
         print_status("Running module...")
         try:
             self.current_module.run()
@@ -613,11 +633,11 @@ Command       Description
         except Exception:
             print_error(traceback.format_exc(sys.exc_info()))
 
-    def command_exploit(self, *args, **kwargs):
-        self.command_run()
+    def thg_command_exploit(self, *args, **kwargs):
+        self.thg_command_run()
 
     @module_required
-    def command_set(self, *args, **kwargs):
+    def thg_command_set(self, *args, **kwargs):
         key, _, value = args[0].partition(" ")
         if key in self.current_module.options:
             setattr(self.current_module, key, value)
@@ -638,16 +658,16 @@ Command       Description
             return self.current_module.options
 
     @module_required
-    def command_setg(self, *args, **kwargs):
+    def thg_command_setg(self, *args, **kwargs):
         kwargs['glob'] = True
-        self.command_set(*args, **kwargs)
+        self.thg_command_set(*args, **kwargs)
 
     @stop_after(2)
     def complete_setg(self, text, *args, **kwargs):
         return self.complete_set(text, *args, **kwargs)
 
     @module_required
-    def command_unsetg(self, *args, **kwargs):
+    def thg_command_unsetg(self, *args, **kwargs):
         key, _, value = args[0].partition(' ')
         try:
             del GLOBAL_OPTS[key]
@@ -680,6 +700,25 @@ Command       Description
             else:
                 yield opt_key, opt_display_value, opt_description
 
+####################################################################################
+####################################################################################
+##                            command_help                                        ##
+####################################################################################
+####################################################################################
+    @stop_after(2)
+    def complete_show(self, text, *args, **kwargs):
+        if text:
+            return [thg_command for thg_command in self.show_sub_thg_commands if thg_command.startswith(text)]
+        else:
+            return self.show_sub_thg_commands
+    def thg_command_show(self, *args, **kwargs):
+        sub_thg_command = args[0]
+        try:
+            getattr(self, "_show_{}".format(sub_thg_command))(*args, **kwargs)
+        except AttributeError:
+            print_error("Unknown 'show' sub-thg_command '{}'. "
+                        "What do you want to show?\n"
+                        "Possible choices are: {}".format(sub_thg_command, self.show_sub_thg_commands))
     @module_required
     def _show_info(self, *args, **kwargs):
         pprint_dict_in_order(
@@ -687,7 +726,6 @@ Command       Description
             ("name", "description", "devices", "authors", "references"),
         )
         print_info()
-
     @module_required
     def _show_options(self, *args, **kwargs):
         target_names = ["target", "port", "ssl", "rhost", "rport", "lhost", "lport"]
@@ -703,7 +741,6 @@ Command       Description
             print_table(headers, *self.get_opts(*module_opts))
 
         print_info()
-
     @module_required
     def _show_devices(self, *args, **kwargs):  # TODO: cover with tests
         try:
@@ -720,7 +757,6 @@ Command       Description
             print_info()
         except KeyError:
             print_info("\nTarget devices are not defined")
-
     @module_required
     def _show_wordlists(self, *args, **kwargs):
         headers = ("Wordlist", "Path")
@@ -728,7 +764,6 @@ Command       Description
                      f.endswith(".txt")]
         listw = str(len(wordlists))
         print_table(headers, *wordlists, max_column_length=9000)
-
     @module_required
     def _show_encoders(self, *args, **kwargs):
         if issubclass(self.current_module.__class__, BasePayload):
@@ -739,16 +774,15 @@ Command       Description
                 return
 
         print_error("No encoders available")
-
     def __show_modules(self, root=''):
         for module in [module for module in self.modules if module.startswith(root)]:
             print_info(module.replace('.', os.sep))
-
     def _show_all(self, *args, **kwargs):
         self.__show_modules()
     def _show_auxiliary(self,*args,**kwargs):
         self.__show_modules("auxiliary")
-
+    def _show_evasion(self,*args,**kwargs):
+        self.__show_modules("evasion")
     def _show_encoders(self, *args, **kwargs):
         self.__show_modules("encoders")
     def _show_exploits(self, *args, **kwargs):
@@ -759,40 +793,22 @@ Command       Description
         self.__show_modules('payloads')
     def _show_post(self, *args, **kwargs):
         self.__show_modules('post')
-
     def _show_banner(self, *args, **kwargs):
         os.system("clear")
         print(self.banner)
-
     def _show_version(self, *args, **kwargs):
         print_status(__codenome__ + "-" + __version__)
-
     def _show_ip(self, *args, **kwargs):
         print(self.ipi(darkcde=None))
-
-    # def _show_Eip(self,*args,**kwargs):
-    # print(ipgetter.myip())
     def _show_history(self, *args, **kwargs):
         os.system("cat ~/.THG_history")
-
-    def command_show(self, *args, **kwargs):
-        sub_command = args[0]
-        try:
-            getattr(self, "_show_{}".format(sub_command))(*args, **kwargs)
-        except AttributeError:
-            print_error("Unknown 'show' sub-command '{}'. "
-                        "What do you want to show?\n"
-                        "Possible choices are: {}".format(sub_command, self.show_sub_commands))
-
-    @stop_after(2)
-    def complete_show(self, text, *args, **kwargs):
-        if text:
-            return [command for command in self.show_sub_commands if command.startswith(text)]
-        else:
-            return self.show_sub_commands
-
+####################################################################################
+####################################################################################
+##                            command_iptables                                    ##
+####################################################################################
+####################################################################################
     @module_required
-    def command_check(self, *args, **kwargs):
+    def thg_command_check(self, *args, **kwargs):
         try:
             result = self.current_module.check()
         except Exception as error:
@@ -805,23 +821,28 @@ Command       Description
             else:
                 print_status("Target could not be verified")
 
-    def command_sleep(self, args, **kwargs):
+    def thg_command_sleep(self, args, **kwargs):
         print_success("sleep " + str(args))
         sleep(float(args))
 
-    def command_help(self, *args, **kwargs):
+    def thg_command_help(self, *args, **kwargs):
         print_info(self.global_help)
         if self.current_module:
             print_info("\n", self.module_help)
 
-    def command_log(self, *args, **kwargs):
+    def thg_command_log(self, *args, **kwargs):
         os.system("cat thgconsole.log")
 
-    def command_tcp(self, *args, **kwargs):
-        pass
-
-    def command_del(self,args,**kwargs):
-        commandos = '''usage: dell [-h/--help] [--list] [file]
+    def thg_command_iptables(self, *args, **kwargs):
+        thg_commandos = '''usage: iptables [-h/--help]
+        optional arguments:
+          -h, --help   show help
+        '''  # aqui fica os comentarios do seus argumentos
+        short_cm = ''''''
+        if args == "":
+            print(short_cm)
+    def thg_command_del(self,args,**kwargs):
+        thg_commandos = '''usage: dell [-h/--help] [--list] [file]
 optional arguments:
   -h, --help   show help
   --list       list files 
@@ -830,9 +851,9 @@ optional arguments:
         if args == "":
             print(short_cm)
         elif args == "-h":
-            print(commandos)
+            print(thg_commandos)
         elif args == "--help":
-            print(commandos)
+            print(thg_commandos)
         if os.path.isdir(args) == True:
             print_success("del dir...[%s]".format(args))
             shutil.rmtree(args)
@@ -863,22 +884,24 @@ optional arguments:
             print_success("link deleted successfully => "+args)
             del pathlib
 
-    def command_exec(self, *args, **kwargs):
+    def thg_command_exec(self, *args, **kwargs):
         os.system(args[0])
 
-    def command_shell(self, *args, **kwargs):
+
+
+    def thg_command_shell(self, *args, **kwargs):
         os.system("bash")
 
-    def command_color(self, args, **kwargs):
-        self.prompt_hostname = args
+    def thg_command_color(self, args, **kwargs):
+        self.THGprompt_hostname = args
 
-    def command_python_interpreter(self, *args, **kwargs):
+    def thg_command_python_interpreter(self, *args, **kwargs):
         os.system("python3")
 
-    def command_route(self, args, **kwargs):
+    def thg_command_route(self, args, **kwargs):
         os.system("route " + args)
 
-    def command_cd(self, *args, **kwargs):
+    def thg_command_cd(self, *args, **kwargs):
         dir = os.getcwd()
         try:
             heck = os.path.exists(args[0])
@@ -905,11 +928,11 @@ optional arguments:
         except:
             pass
 
-    def command_quit(self, *args, **kwargs):
+    def thg_command_quit(self, *args, **kwargs):
         print_status("thgconsole stopped")
         exit(1)
 
-    def command_search(self, *args, **kwargs):
+    def thg_command_search(self, *args, **kwargs):
         keyword = args[0]
 
         if not keyword:
@@ -923,5 +946,5 @@ optional arguments:
                     "{}\033[31m{}\033[0m{}".format(*module.partition(keyword))
                 )
 
-    def command_exit(self, *args, **kwargs):
+    def thg_command_exit(self, *args, **kwargs):
         raise EOFError
