@@ -2,426 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e6b10ed-b24d-4ee8-b1c6-2c177b363b00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/thg-framework.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lab_for_test/db_autopwn.rb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lab_for_test/feed.rss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup/PyInstaller-3.2.1.tar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup/autoit-v3-setup.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup/go1.7.5.linux-386.tar.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup/go1.7.5.linux-amd64.tar.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup/ocra-1.3.6.gem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup/pycrypto-2.6.1.win32-py3.4.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup/python-3.4.4.msi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup/pywin32-220.win32-py3.4.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup/ruby_gems-1.8.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup/rubyinstaller-1.8.7-p371.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thgconsole/core/bluetooth/btle/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thgconsole/core/bluetooth/btle/btle_device.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thgconsole/core/bluetooth/btle/btle_scanner.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thgconsole/core/bluetooth/btle_client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thgconsole/core/db/THG.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thgconsole/core/exploit/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thgconsole/core/exploit/encoders.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thgconsole/core/exploit/exceptions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thgconsole/core/exploit/exploit.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thgconsole/core/exploit/option.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thgconsole/core/exploit/payloads.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thgconsole/core/exploit/printer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thgconsole/core/exploit/shell.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thgconsole/core/exploit/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thgconsole/core/exploit/voz.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thgconsole/core/ftp/ftp_client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thgconsole/core/http/http_client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thgconsole/core/snmp/snmp_client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thgconsole/core/ssh/ssh_client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thgconsole/core/tcp/tcp_client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thgconsole/core/telnet/telnet_client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thgconsole/core/udp/udp_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup2.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/setup2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/banner" beforeDir="false" afterPath="$PROJECT_DIR$/banner" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/config/Version.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole/config/Version.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/interpreter.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole/interpreter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole/modules/auxiliary/generic/creds/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole/core/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/acti/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole/core/bluetooth/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/acti/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/acti/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/acti/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/acti/webinterface_http_form_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/american_dynamics/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole/core/ftp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/american_dynamics/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/american_dynamics/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/american_dynamics/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/arecont/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole/core/http/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/arecont/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/arecont/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/arecont/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/avigilon/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole/core/snmp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/avigilon/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/avigilon/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/avigilon/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/avtech/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole/core/ssh/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/avtech/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/avtech/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/avtech/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/axis/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole/core/tcp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/axis/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/axis/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/axis/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/axis/webinterface_http_auth_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/basler/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole/core/telnet/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/basler/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/basler/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/basler/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/basler/webinterface_http_form_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/brickcom/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole/core/udp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/brickcom/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/brickcom/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/brickcom/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/brickcom/webinterface_http_auth_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/canon/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole/modules/auxiliary/generic/creds/generic/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/canon/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/canon/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/canon/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/canon/webinterface_http_auth_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/cisco/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/cisco/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/cisco/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/cisco/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/dlink/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/dlink/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/dlink/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/dlink/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/geovision/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/geovision/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/geovision/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/geovision/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/grandstream/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/grandstream/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/grandstream/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/grandstream/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/hikvision/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/hikvision/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/hikvision/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/hikvision/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/honeywell/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/honeywell/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/honeywell/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/honeywell/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/iqinvision/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/iqinvision/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/iqinvision/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/iqinvision/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/jvc/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/jvc/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/jvc/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/jvc/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/mobotix/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/mobotix/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/mobotix/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/mobotix/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/samsung/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/samsung/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/samsung/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/samsung/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/sentry360/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/sentry360/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/sentry360/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/sentry360/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/siemens/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/siemens/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/siemens/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/siemens/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/speco/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/speco/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/speco/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/speco/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/stardot/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/stardot/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/stardot/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/stardot/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/vacron/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/vacron/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/vacron/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/vacron/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/videoiq/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/videoiq/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/videoiq/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/cameras/videoiq/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/generic/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/generic/ftp_bruteforce.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole/modules/auxiliary/generic/creds/generic/ftp_bruteforce.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/generic/ftp_default.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole/modules/auxiliary/generic/creds/generic/ftp_default.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/generic/http_basic_digest_bruteforce.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole/modules/auxiliary/generic/creds/generic/http_basic_digest_bruteforce.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/generic/http_basic_digest_default.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole/modules/auxiliary/generic/creds/generic/http_basic_digest_default.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/generic/snmp_bruteforce.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole/modules/auxiliary/generic/creds/generic/snmp_bruteforce.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/generic/ssh_bruteforce.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole/modules/auxiliary/generic/creds/generic/ssh_bruteforce.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/generic/ssh_default.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole/modules/auxiliary/generic/creds/generic/ssh_default.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/generic/telnet_bruteforce.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole/modules/auxiliary/generic/creds/generic/telnet_bruteforce.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/generic/telnet_default.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole/modules/auxiliary/generic/creds/generic/telnet_default.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/printers/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/2wire/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/2wire/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/2wire/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/2wire/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/3com/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/3com/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/3com/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/3com/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/asmax/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/asmax/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/asmax/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/asmax/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/asmax/webinterface_http_auth_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/asus/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/asus/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/asus/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/asus/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/belkin/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/belkin/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/belkin/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/belkin/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/bhu/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/bhu/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/bhu/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/bhu/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/billion/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/billion/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/billion/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/billion/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/cisco/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/cisco/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/cisco/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/cisco/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/comtrend/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/comtrend/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/comtrend/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/comtrend/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/dlink/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/dlink/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/dlink/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/dlink/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/fortinet/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/fortinet/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/fortinet/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/fortinet/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/huawei/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/huawei/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/huawei/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/huawei/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/ipfire/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/ipfire/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/ipfire/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/ipfire/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/juniper/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/juniper/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/juniper/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/juniper/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/linksys/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/linksys/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/linksys/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/linksys/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/mikrotik/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/mikrotik/api_ros_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/mikrotik/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/mikrotik/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/mikrotik/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/movistar/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/movistar/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/movistar/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/movistar/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/netcore/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/netcore/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/netcore/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/netcore/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/netgear/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/netgear/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/netgear/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/netgear/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/netsys/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/netsys/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/netsys/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/netsys/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/pfsense/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/pfsense/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/pfsense/webinterface_http_form_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/technicolor/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/technicolor/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/technicolor/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/technicolor/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/thomson/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/thomson/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/thomson/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/thomson/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/tplink/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/tplink/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/tplink/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/tplink/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/ubiquiti/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/ubiquiti/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/ubiquiti/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/ubiquiti/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/zte/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/zte/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/zte/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/zte/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/zyxel/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/zyxel/ftp_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/zyxel/ssh_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/routers/zyxel/telnet_default_creds.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/scanner/autopwn.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole/modules/auxiliary/scanner/autopwn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/scanners/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/scanners/autopwn.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/scanners/cameras/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/scanners/cameras/camera_scan.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole/modules/auxiliary/scanner/cameras/camera_scan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/scanners/misc/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/scanners/misc/misc_scan.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole/modules/auxiliary/scanner/misc/misc_scan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/scanners/routers/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/auxiliary/scanners/routers/router_scan.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole/modules/auxiliary/scanner/routers/router_scan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/2wire/4011g_5012nv_path_traversal.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/2wire/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/2wire/gateway_auth_bypass.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/3com/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/3com/ap8760_password_disclosure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/3com/imc_info_disclosure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/3com/imc_path_traversal.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/3com/officeconnect_info_disclosure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/3com/officeconnect_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/asmax/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/asmax/ar_1004g_password_disclosure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/asmax/ar_804_gu_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/asus/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/asus/asuswrt_lan_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/asus/infosvr_backdoor_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/asus/rt_n16_password_disclosure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/belkin/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/belkin/auth_bypass.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/belkin/g_n150_password_disclosure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/belkin/g_plus_info_disclosure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/belkin/n150_path_traversal.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/belkin/n750_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/belkin/play_max_prce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/bhu/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/bhu/bhu_urouter_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/billion/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/billion/billion_5200w_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/billion/billion_7700nr4_password_disclosure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/cisco/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/cisco/catalyst_2960_rocem.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/cisco/dpc2420_info_disclosure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/cisco/firepower_management60_path_traversal.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/cisco/firepower_management60_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/cisco/ios_http_authorization_bypass.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/cisco/secure_acs_bypass.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/cisco/ucm_info_disclosure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/cisco/ucs_manager_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/cisco/unified_multi_path_traversal.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/comtrend/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/comtrend/ct_5361t_password_disclosure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/dlink/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/dlink/dcs_930l_auth_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/dlink/dgs_1510_add_user.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/dlink/dir_300_320_600_615_info_disclosure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/dlink/dir_300_320_615_auth_bypass.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/dlink/dir_300_600_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/dlink/dir_300_645_815_upnp_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/dlink/dir_645_815_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/dlink/dir_645_password_disclosure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/dlink/dir_815_850l_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/dlink/dir_825_path_traversal.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/dlink/dir_850l_creds_disclosure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/dlink/dir_8xx_password_disclosure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/dlink/dns_320l_327l_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/dlink/dsl_2640b_dns_change.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/dlink/dsl_2730_2750_path_traversal.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/dlink/dsl_2730b_2780b_526b_dns_change.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/dlink/dsl_2740r_dns_change.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/dlink/dsl_2750b_info_disclosure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/dlink/dsl_2750b_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/dlink/dsp_w110_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/dlink/dvg_n5402sp_path_traversal.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/dlink/dwl_3200ap_password_disclosure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/dlink/dwr_932_info_disclosure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/dlink/dwr_932b_backdoor.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/dlink/multi_hedwig_cgi_exec.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/dlink/multi_hnap_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/fortinet/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/fortinet/fortigate_os_backdoor.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/huawei/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/huawei/e5331_mifi_info_disclosure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/huawei/hg520_info_disclosure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/huawei/hg530_hg520b_password_disclosure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/huawei/hg866_password_change.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/ipfire/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/ipfire/ipfire_oinkcode_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/ipfire/ipfire_proxy_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/ipfire/ipfire_shellshock.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/linksys/1500_2500_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/linksys/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/linksys/eseries_themoon_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/linksys/smartwifi_password_disclosure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/linksys/wap54gv3_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/linksys/wrt100_110_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/mikrotik/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/mikrotik/routeros_jailbreak.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/mikrotik/winbox_auth_bypass_creds_disclosure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/movistar/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/movistar/adsl_router_bhs_rta_path_traversal.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/multi/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/multi/gpon_home_gateway_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/multi/misfortune_cookie.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/multi/rom0.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/multi/tcp_32764_info_disclosure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/multi/tcp_32764_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/netcore/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/netcore/udp_53413_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/netgear/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/netgear/dgn2200_dnslookup_cgi_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/netgear/dgn2200_ping_cgi_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/netgear/jnr1010_path_traversal.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/netgear/multi_password_disclosure-2017-5521.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/netgear/multi_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/netgear/n300_auth_bypass.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/netgear/prosafe_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/netgear/r7000_r6400_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/netgear/wnr500_612v3_jnr1010_2010_path_traversal.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/netsys/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/netsys/multi_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/shuttle/915wm_dns_change.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/shuttle/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/technicolor/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/technicolor/dwg855_authbypass.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/technicolor/tc7200_password_disclosure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/technicolor/tc7200_password_disclosure_v2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/technicolor/tg784_authbypass.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/thomson/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/thomson/twg849_info_disclosure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/thomson/twg850_password_disclosure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/tplink/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/tplink/archer_c2_c20i_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/tplink/wdr740nd_wdr740n_backdoor.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/tplink/wdr740nd_wdr740n_path_traversal.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/tplink/wdr842nd_wdr842n_configure_disclosure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/ubiquiti/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/ubiquiti/airos_6_x.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/zte/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/zte/f460_f660_backdoor.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/zte/zxv10_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/zyxel/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/zyxel/d1000_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/zyxel/d1000_wifi_password_disclosure.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/zyxel/p660hn_t_v1_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/zyxel/p660hn_t_v2_rce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/modules/exploits/routers/zyxel/zywall_usg_extract_hashes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/thg_commands_add/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/thg_commands_add/commands.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_for_test/Vagrantfile" beforeDir="false" afterPath="$PROJECT_DIR$/lab_for_test/Vagrantfile" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -451,28 +36,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/docs/cli/templates.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="300">
-                <caret line="20" selection-start-line="20" selection-end-line="20" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thgconsole/modules/auxiliary/scanner/routers/router_scan.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
@@ -487,11 +50,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/extra_libs/thg_lib/setup/setup.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thgconsole.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
@@ -500,14 +58,44 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thgconsole/interpreter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="422" column="85" selection-start-line="422" selection-start-column="85" selection-end-line="422" selection-end-column="85" />
+            <state relative-caret-position="660">
+              <caret line="465" column="17" selection-start-line="465" selection-start-column="17" selection-end-line="465" selection-end-column="17" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/thg.ini">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/setup/setup.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/setup/setup2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lab_for_test/Vagrantfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
@@ -557,15 +145,7 @@
         <option value="$PROJECT_DIR$/thgconsole/libs/show_banner.py" />
         <option value="$PROJECT_DIR$/thgconsole/config/Version.py" />
         <option value="$PROJECT_DIR$/thgconsole/interpreter.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/thg-framework.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/lab_for_test/Vagrantfile" />
       </list>
     </option>
   </component>
@@ -593,7 +173,7 @@
             <path>
               <item name="thg-framework" type="b2602c69:ProjectViewProjectNode" />
               <item name="thg-framework" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="lab_for_test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -668,7 +248,7 @@
       <option name="presentableId" value="Default" />
       <updated>1554700986889</updated>
       <workItem from="1554700993470" duration="245000" />
-      <workItem from="1554907163955" duration="5240000" />
+      <workItem from="1554907163955" duration="7756000" />
     </task>
     <task id="LOCAL-00001" summary="fix doc, fix readme">
       <created>1554908528031</created>
@@ -677,14 +257,22 @@
       <option name="project" value="LOCAL" />
       <updated>1554908528031</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="config setup thg">
+      <created>1554913603982</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1554913603982</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5485000" />
+    <option name="totallyTimeSpent" value="8001000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2524013" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -714,7 +302,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix doc, fix readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix doc, fix readme" />
+    <MESSAGE value="config setup thg" />
+    <option name="LAST_COMMIT_MESSAGE" value="config setup thg" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/thg_framework$show_banner.coverage" NAME="show_banner Coverage Results" MODIFIED="1554910318229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/thgconsole/libs" />
@@ -1021,11 +610,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/thgconsole/interpreter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="422" column="85" selection-start-line="422" selection-start-column="85" selection-end-line="422" selection-end-column="85" />
+        <state relative-caret-position="660">
+          <caret line="465" column="17" selection-start-line="465" selection-start-column="17" selection-end-line="465" selection-end-column="17" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thg.ini">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/setup.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/setup2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab_for_test/Vagrantfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
