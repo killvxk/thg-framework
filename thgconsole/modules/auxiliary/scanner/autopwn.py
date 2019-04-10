@@ -1,15 +1,14 @@
 from os import path
-from thgconsole.core.exploit.exploit  import *
+from thgconsole.core.exploit import *
 from thgconsole.core.exploit.exploit import Protocol
-from thgconsole.core.exploit.option import *
-from thgconsole.core.exploit.utils import *
-from thgconsole.core.exploit.printer import *
+
+
 class Exploit(Exploit):
     __info__ = {
         "name": "AutoPwn",
         "description": "Module scans for all vulnerablities and weaknesses.",
         "authors": (
-            "Marcin Bury <marcin[at]threat9.com>",  # thg module
+            "Marcin Bury <marcin[at]threat9.com>",  # thgconsole module
         ),
         "devices": (
             "Multi",
@@ -36,7 +35,8 @@ class Exploit(Exploit):
         self.creds = []
         self.not_verified = []
         self._exploits_directories = [path.join("thgconsole/modules/exploits/", module) for module in self.modules]
-        self._auxiliary_directories = [path.join("thgconsole/modules/auxiliary/",module) for module in self.modules]
+        self._creds_directories = [path.join("thgconsole/modules/creds/", module) for module in self.modules]
+
     def run(self):
         self.vulnerabilities = []
         self.creds = []
@@ -48,12 +48,22 @@ class Exploit(Exploit):
 
         modules = []
         for directory in self._exploits_directories:
-            for module in iter_modules(directory):
+            for module in utils.iter_modules(directory):
                 modules.append(module)
 
         data = LockedIterator(modules)
         self.run_threads(self.threads, self.exploits_target_function, data)
 
+        # default creds
+        print_info()
+        print_info("\033[94m[*]\033[0m", "{} Starting default credentials check...".format(self.target))
+        modules = []
+        for directory in self._creds_directories:
+            for module in utils.iter_modules(directory):
+                modules.append(module)
+
+        data = LockedIterator(modules)
+        self.run_threads(self.threads, self.creds_target_function, data)
 
         # results:
         print_info()
@@ -128,7 +138,7 @@ class Exploit(Exploit):
                 exploit = module()
 
                 generic = False
-                if exploit.__module__.startswith("thg.modules.creds.generic"):
+                if exploit.__module__.startswith("thgconsole.modules.creds.generic"):
                     if exploit.__module__.endswith("default"):
                         generic = True
                     else:

@@ -33,7 +33,7 @@ parser = argparse.ArgumentParser(description='THG - the hacker group ')
 parser.add_argument('-e',
                     '--extra-package-path',
                     metavar='extra_package_path',
-                    help='Add extra packet(modules) to thg.')
+                    help='Add extra packet(modules) to thg')
 
 
 def thg(extra_package_path=package_path):

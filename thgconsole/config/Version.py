@@ -1,3 +1,3 @@
-__version__  = "1.1-9-dev" #versao-version
-__codenome__ = "codeoff"   #codenome
+__version__  = "2.0.1-dev" #versao-version
+__codenome__ = "0box"   #codenome
 
