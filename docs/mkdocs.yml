@@ -10,7 +10,7 @@ repo_url: 'https://github.com/darkcode357/thg-framework'
 copyright: 'Copyright &copy; 2019 - 2020 darkcode0x00'
 # Configuration
 theme:
-  name: 'cosmo'
+  name: 'cyborg'
 # Customization
 extra:
   manifest: 'manifest.webmanifest'
@@ -28,6 +28,8 @@ markdown_extensions:
         permalink: True
     - sane_lists
 
+plugins:
+  - search
 nav:
 - Overview:
   - Installation: ./cli/install.md
@@ -143,7 +145,7 @@ nav:
     - thg_radio: ./tutorials/radio.md
     - thg_unpacker: ./tutorials/unpacker.md
 - Contributing:
-  - Get Started: ./contributing/get-started.md
+  - Get Started: ./contributing/Contributing-to-thg.md
   - templates: cli/templates.md
   - build: cli/build.md
   - tags: cli/tags.md

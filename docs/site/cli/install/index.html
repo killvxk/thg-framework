@@ -579,15 +579,29 @@
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#thg_concole-install">thg_concole install</a></li>
             <li><a href="#arch-linux">arch linux</a></li>
+            <li><a href="#debianubuntu">debian/ubuntu</a></li>
         <li class="main "><a href="#thg_gui">thg_gui</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
 <h1 id="thg_concole-install">thg_concole install<a class="headerlink" href="#thg_concole-install" title="Permanent link">&para;</a></h1>
-<p>stap for stap to install thg_console</p>
+<p>passo a passo para fazer a instalacao do thg versao 1.0, voce precisa
+insta</p>
 <h2 id="arch-linux">arch linux<a class="headerlink" href="#arch-linux" title="Permanent link">&para;</a></h2>
-<pre><code>pacman -Syy
+<pre><code>pacman -Syy python3 python3-pip
+git clone https://github.com/darkcode357/thg-framework.git
+cd thg-framework
+python3 setup.py
+</code></pre>
+
+<h2 id="debianubuntu">debian/ubuntu<a class="headerlink" href="#debianubuntu" title="Permanent link">&para;</a></h2>
+<pre><code>apt update
+apt install python3
+apt install python3-pip
+git clone https://github.com/darkcode357/thg-framework.git
+cd thg-framework
+python3 setup.py
 </code></pre>
 
 <h1 id="thg_gui">thg_gui<a class="headerlink" href="#thg_gui" title="Permanent link">&para;</a></h1></div>

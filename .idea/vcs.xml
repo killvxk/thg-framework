@@ -2,6 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/docs/metasploit-framework.wiki" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/docs/thg-framework.wiki" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/implementar/nmapexdbsearch" vcs="Git" />
   </component>
 </project>
