@@ -1,242 +1,305 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/thgconsole/interpreter.py" description="dir = os.getcwd()" line="849" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9aefde2-5f91-4780-9d15-b6718a6b6e45" name="Default Changelist" comment="fix command show {all,exploits,payload,nops,post}">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/bluetooth/btle/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/bluetooth/btle_client.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/exploit/encoders.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/udp/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/exploit/payloads.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/config/dbr.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/ssh/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/libs/apiros/apiros_client.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/exploit/exploit.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/libs/apiros/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/ftp/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/tcp/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/bluetooth/btle/btle_scanner.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/bluetooth/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/bluetooth/btle/btle_device.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/snmp/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.travis/run.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/exploit/voz.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/tcp/tcp_client.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/snmp/snmp_client.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/ftp/ftp_client.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/udp/udp_client.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/exploit/option.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/exploit/printer.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/config/setup_db.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/ssh/ssh_client.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_framework/lib_test/thg_test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/telnet/telnet_client.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/thg-framework.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_framework/thgconsole_test/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/exploit/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/http/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/exploit/shell.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/libs/lzs/lzs.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_framework/python_code_quality/use.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/telnet/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/libs/lzs/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.travis/install.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/exploit/exceptions.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/exploit/utils.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thgconsole/core/http/http_client.py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test_framework/lib_test/thg.db" afterPath="$PROJECT_DIR$/thgconsole/core/db/insert_db.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test_framework/__init__.py" afterPath="$PROJECT_DIR$/thgconsole/core/db/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thgconsole/interpreter.py" afterPath="$PROJECT_DIR$/thgconsole/interpreter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thgconsole.py" afterPath="$PROJECT_DIR$/thgconsole.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test_framework/lib_test/__init__.py" afterPath="$PROJECT_DIR$/thgconsole/core/db/db.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test_framework/python_code_quality/__init__.py" afterPath="$PROJECT_DIR$/thgconsole/modules/evasion/__init__.py" />
+    <list default="true" id="6e6b10ed-b24d-4ee8-b1c6-2c177b363b00" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thgconsole/thg_commands_add/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thgconsole/thg_commands_add/commands.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/acti/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/acti/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/acti/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/american_dynamics/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/american_dynamics/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/american_dynamics/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/arecont/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/arecont/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/arecont/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/avigilon/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/avigilon/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/avigilon/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/avtech/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/avtech/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/avtech/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/axis/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/axis/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/axis/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/basler/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/basler/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/basler/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/brickcom/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/brickcom/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/brickcom/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/canon/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/canon/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/canon/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/cisco/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/cisco/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/cisco/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/dlink/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/dlink/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/dlink/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/geovision/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/geovision/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/geovision/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/grandstream/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/grandstream/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/grandstream/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/hikvision/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/hikvision/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/hikvision/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/honeywell/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/honeywell/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/honeywell/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/iqinvision/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/iqinvision/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/iqinvision/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/jvc/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/jvc/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/jvc/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/mobotix/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/mobotix/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/mobotix/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/samsung/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/samsung/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/samsung/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/sentry360/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/sentry360/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/sentry360/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/siemens/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/siemens/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/siemens/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/speco/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/speco/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/speco/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/stardot/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/stardot/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/stardot/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/vacron/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/vacron/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/vacron/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/videoiq/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/videoiq/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/cameras/videoiq/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/asmax/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/asmax/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/asmax/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/asus/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/asus/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/asus/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/belkin/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/belkin/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/belkin/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/bhu/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/bhu/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/bhu/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/billion/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/billion/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/billion/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/cisco/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/cisco/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/cisco/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/comtrend/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/comtrend/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/comtrend/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/dlink/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/dlink/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/dlink/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/fortinet/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/fortinet/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/fortinet/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/huawei/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/huawei/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/huawei/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/ipfire/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/ipfire/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/ipfire/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/juniper/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/juniper/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/juniper/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/linksys/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/linksys/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/linksys/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/mikrotik/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/mikrotik/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/mikrotik/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/movistar/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/movistar/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/movistar/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/netcore/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/netcore/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/netcore/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/netgear/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/netgear/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/netgear/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/netsys/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/netsys/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/netsys/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/pfsense/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/pfsense/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/pfsense/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/technicolor/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/technicolor/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/technicolor/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/thomson/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/thomson/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/thomson/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/tplink/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/tplink/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/tplink/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/ubiquiti/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/ubiquiti/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/ubiquiti/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/zte/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/zte/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/zte/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/zyxel/ftp_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/zyxel/ssh_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/creds/routers/zyxel/telnet_default_creds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/encoders/perl/base64.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/encoders/perl/hex.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/encoders/php/base64.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/encoders/php/hex.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/encoders/python/base64.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/encoders/python/hex.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/exploits/routers/asus/asuswrt_lan_rce.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/exploits/routers/asus/infosvr_backdoor_rce.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/exploits/routers/dlink/dsl_2750b_rce.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/exploits/routers/ipfire/ipfire_proxy_rce.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/exploits/routers/ipfire/ipfire_shellshock.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/exploits/routers/linksys/eseries_themoon_rce.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/exploits/routers/mikrotik/winbox_auth_bypass_creds_disclosure.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/exploits/routers/multi/tcp_32764_info_disclosure.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/exploits/routers/multi/tcp_32764_rce.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/generic/upnp/ssdp_msearch.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/armle/bind_tcp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/armle/reverse_tcp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/cmd/awk_bind_tcp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/cmd/awk_bind_udp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/cmd/awk_reverse_tcp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/cmd/bash_reverse_tcp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/cmd/netcat_bind_tcp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/cmd/netcat_reverse_tcp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/cmd/perl_bind_tcp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/cmd/perl_reverse_tcp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/cmd/php_bind_tcp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/cmd/php_reverse_tcp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/cmd/python_bind_tcp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/cmd/python_bind_udp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/cmd/python_reverse_tcp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/cmd/python_reverse_udp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/mipsbe/bind_tcp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/mipsbe/reverse_tcp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/mipsle/bind_tcp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/mipsle/reverse_tcp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/perl/bind_tcp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/perl/reverse_tcp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/php/bind_tcp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/php/reverse_tcp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/python/bind_tcp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/python/bind_udp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/python/reverse_tcp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/python/reverse_udp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/x64/bind_tcp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/x64/reverse_tcp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/x86/bind_tcp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/modules/payloads/x86/reverse_tcp.md" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
-  </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
-  <component name="FavoritesManager">
-    <favorites_list name="thg-framework" />
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="thgconsole.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thgconsole.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/mkdocs.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="618">
-              <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
-              <folding>
-                <element signature="e#24#61#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="75">
+              <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-              <folding />
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/docs/photos/thg.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/docs/contributing/get-started.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ISSUE_TEMPLATE.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.github/ISSUE_TEMPLATE.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/docs/cli/build.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PULL_REQUEST_TEMPLATE.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.github/PULL_REQUEST_TEMPLATE.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/docs/cli/install.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="insert_db.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thgconsole/core/db/insert_db.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#36#0" expanded="true" />
-              </folding>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/docs/cli/tags.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="info_init.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thgconsole/config/info_init.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#29#0" expanded="true" />
-              </folding>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/docs/cli/templates.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="interpreter.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/thgconsole/interpreter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="804" column="76" selection-start-line="804" selection-start-column="76" selection-end-line="804" selection-end-column="76" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-                <element signature="e#1241#6098#0" expanded="false" />
-                <element signature="e#1368#1405#0" expanded="false" />
-                <element signature="e#1436#2278#0" expanded="false" />
-                <element signature="e#2320#2552#0" expanded="false" />
-                <element signature="e#2601#2654#0" expanded="false" />
-                <element signature="e#2716#3111#0" expanded="false" />
-                <element signature="e#3145#3960#0" expanded="false" />
-                <element signature="e#3217#3232#0" expanded="false" />
-                <element signature="e#3364#3960#0" expanded="false" />
-                <element signature="e#4007#5231#0" expanded="false" />
-                <element signature="e#5279#5539#0" expanded="false" />
-                <element signature="e#5626#5781#0" expanded="false" />
-                <element signature="e#5834#5843#0" expanded="false" />
-                <element signature="e#5891#6098#0" expanded="false" />
-                <element signature="e#6218#12077#0" expanded="false" />
-                <element signature="e#12186#12821#0" expanded="false" />
-                <element signature="e#12880#20921#0" expanded="false" />
-                <element signature="e#13172#13949#0" expanded="false" />
-                <element signature="e#14972#15653#0" expanded="false" />
-                <element signature="e#16406#17276#0" expanded="false" />
-                <element signature="e#17299#19417#0" expanded="false" />
-                <element signature="e#20959#21094#0" expanded="false" />
-                <element signature="e#21137#21917#0" expanded="false" />
-                <element signature="e#21975#22881#0" expanded="false" />
-                <element signature="e#22177#22273#0" expanded="false" />
-                <element signature="e#22317#22671#0" expanded="false" />
-                <element signature="e#22712#22881#0" expanded="false" />
-                <element signature="e#22936#23033#0" expanded="false" />
-                <element signature="e#23082#23799#0" expanded="false" />
-                <element signature="e#23845#24561#0" expanded="false" />
-                <element signature="e#24621#25293#0" expanded="false" />
-                <element signature="e#25040#25192#0" expanded="false" />
-                <element signature="e#25341#25819#0" expanded="false" />
-                <element signature="e#25878#25904#0" expanded="false" />
-                <element signature="e#25975#26425#0" expanded="false" />
-                <element signature="e#26505#26762#0" expanded="false" />
-                <element signature="e#26841#27127#0" expanded="false" />
-                <element signature="e#27189#27211#0" expanded="false" />
-                <element signature="e#27290#27795#0" expanded="false" />
-                <element signature="e#27875#28051#0" expanded="false" />
-                <element signature="e#28131#28198#0" expanded="false" />
-                <element signature="e#28279#28326#0" expanded="false" />
-                <element signature="e#28408#28729#0" expanded="false" />
-                <element signature="e#28812#28976#0" expanded="false" />
-                <element signature="e#29038#29200#1" expanded="false" />
-                <element signature="e#29263#29418#0" expanded="false" />
-                <element signature="e#30076#30255#0" expanded="false" />
-                <element signature="e#30313#30683#0" expanded="false" />
-                <element signature="e#30486#30630#0" expanded="false" />
-                <element signature="e#30756#30915#0" expanded="false" />
-                <element signature="e#30991#31566#0" expanded="false" />
-                <element signature="e#31668#32173#0" expanded="false" />
-                <element signature="e#32251#32527#0" expanded="false" />
-                <element signature="e#32604#32947#0" expanded="false" />
-                <element signature="e#32995#33124#0" expanded="false" />
-                <element signature="e#33175#33196#0" expanded="false" />
-                <element signature="e#33251#33283#0" expanded="false" />
-                <element signature="e#33336#33366#0" expanded="false" />
-                <element signature="e#33422#33453#0" expanded="false" />
-                <element signature="e#33509#33540#0" expanded="false" />
-                <element signature="e#33592#33619#0" expanded="false" />
-                <element signature="e#33675#33706#0" expanded="false" />
-                <element signature="e#33758#33785#0" expanded="false" />
-                <element signature="e#33839#33884#0" expanded="false" />
-                <element signature="e#33939#33985#0" expanded="false" />
-                <element signature="e#34035#34064#0" expanded="false" />
-                <element signature="e#34119#34150#0" expanded="false" />
-                <element signature="e#34655#35042#0" expanded="false" />
-                <element signature="e#34801#35042#0" expanded="false" />
-                <element signature="e#35101#35163#0" expanded="false" />
-                <element signature="e#35222#35329#0" expanded="false" />
-                <element signature="e#35387#35418#0" expanded="false" />
-                <element signature="e#35794#35912#0" expanded="false" />
-                <element signature="e#36256#36397#0" expanded="false" />
-                <element signature="e#36439#37005#0" expanded="false" />
-                <element signature="e#37062#37199#0" expanded="false" />
-                <element signature="e#37253#37450#0" expanded="false" />
-                <element signature="e#37930#38897#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CONTRIBUTING.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CONTRIBUTING.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="300">
+                <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -250,150 +313,89 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>command</find>
-      <find>code</find>
-      <find>thgc</find>
-      <find>thg_shell</find>
-      <find>imp</find>
-      <find>index_extra_modules</find>
-      <find>__parse_prompt</find>
-      <find>package_path</find>
-      <find>route</find>
-      <find>rot</find>
-      <find>command_</find>
-      <find>creds_directories</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/thgconsole/lib/core/CoreUtils/option.py" />
-        <option value="$PROJECT_DIR$/thgconsole/lib/core/CoreUtils/utils.py" />
-        <option value="$PROJECT_DIR$/thgconsole/lib/base/interpreter/config/info_init.py" />
-        <option value="$PROJECT_DIR$/thgconsole/lib/core/ModulesBuild/Auxiliary/auxiliary.py" />
-        <option value="$PROJECT_DIR$/thgconsole/lib/core/ModulesBuild/Encoders/encoders.py" />
-        <option value="$PROJECT_DIR$/thgconsole/lib/core/ModulesBuild/Exploits/exploit.py" />
-        <option value="$PROJECT_DIR$/thgconsole/lib/core/ModulesBuild/Exploits/option.py" />
-        <option value="$PROJECT_DIR$/thgconsole/lib/core/ModulesBuild/Exploits/shell.py" />
-        <option value="$PROJECT_DIR$/thgconsole/lib/core/ModulesBuild/Payloads/payloads.py" />
-        <option value="$PROJECT_DIR$/thgconsole/lib/core/NetworkProtocols/ftp/ftp_client.py" />
-        <option value="$PROJECT_DIR$/thgconsole/lib/core/NetworkProtocols/http/http_client.py" />
-        <option value="$PROJECT_DIR$/thgconsole/lib/core/NetworkProtocols/snmp/snmp_client.py" />
-        <option value="$PROJECT_DIR$/thgconsole/lib/core/NetworkProtocols/ssh/ssh_client.py" />
-        <option value="$PROJECT_DIR$/thgconsole/lib/core/NetworkProtocols/tcp/tcp_client.py" />
-        <option value="$PROJECT_DIR$/thgconsole/lib/core/NetworkProtocols/telnet/telnet_client.py" />
-        <option value="$PROJECT_DIR$/thgconsole/lib/core/NetworkProtocols/udp/udp_client.py" />
-        <option value="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/generic/ftp_bruteforce.py" />
-        <option value="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/generic/ftp_default.py" />
-        <option value="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/generic/http_basic_digest_bruteforce.py" />
-        <option value="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/generic/http_basic_digest_default.py" />
-        <option value="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/generic/snmp_bruteforce.py" />
-        <option value="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/generic/telnet_bruteforce.py" />
-        <option value="$PROJECT_DIR$/thgconsole/modules/auxiliary/creds/generic/telnet_default.py" />
-        <option value="$PROJECT_DIR$/dsa" />
-        <option value="$PROJECT_DIR$/extra_libs/thg_lib/thg/toplevel.py" />
-        <option value="$PROJECT_DIR$/thgconsole/lib/base/interpreter/interpreter.py" />
-        <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/ubuntu-bionic-18.04-cloudimg-console.log" />
-        <option value="$PROJECT_DIR$/Vagrantfile" />
-        <option value="$PROJECT_DIR$/thg.ini" />
-        <option value="$PROJECT_DIR$/.github/ISSUE_TEMPLATE.md" />
-        <option value="$PROJECT_DIR$/.github/PULL_REQUEST_TEMPLATE.md" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/LICENSE" />
-        <option value="$PROJECT_DIR$/Dockerfile" />
-        <option value="$PROJECT_DIR$/CONTRIBUTING.md" />
-        <option value="$PROJECT_DIR$/setup2.py" />
-        <option value="$PROJECT_DIR$/thgconsole/modules/auxiliary/scanner/autopwn.py" />
-        <option value="$PROJECT_DIR$/thgconsole/modules/evasion.py" />
-        <option value="$PROJECT_DIR$/thgconsole/core/db/__init__.py" />
-        <option value="$PROJECT_DIR$/thgconsole/core/db/db.py" />
-        <option value="$PROJECT_DIR$/thgconsole/core/db/insert_db.py" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/thgconsole/THGPlugin.py" />
-        <option value="$PROJECT_DIR$/thgconsole/core/plugins/DSA.py" />
-        <option value="$PROJECT_DIR$/thgconsole/Plugins/THGPlugins.py" />
-        <option value="$PROJECT_DIR$/thgconsole/Plugins/__init__.py" />
-        <option value="$PROJECT_DIR$/thgconsole/Plugins/dsa.py" />
-        <option value="$PROJECT_DIR$/thgconsole.py" />
-        <option value="$PROJECT_DIR$/thgconsole/core/THGPlugin/PluginManager.py" />
+        <option value="$PROJECT_DIR$/thgconsole/thg_commands_add/commands.py" />
         <option value="$PROJECT_DIR$/thgconsole/interpreter.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="27" />
-    <option name="width" value="1920" />
-    <option name="height" value="1053" />
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/thg-framework.iml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="260" />
+    <option name="y" value="53" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
-      <flattenPackages />
-      <showMembers Scratches="true" Scope="true" ProjectPane="true" />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource ProjectPane="true" />
-      <autoscrollFromSource ProjectPane="true" />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Problems" />
-        <subPane subId="Changed Files" />
-        <subPane subId="Scope 'Changed Files'; set:Changed Files; ALL; class com.intellij.packageDependencies.ChangeListScope" />
-        <subPane subId="Project Files" />
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" />
-      </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thg-framework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="thg-framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thg-framework" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thg-framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thg-framework" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thg-framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thg-framework" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thg-framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thg-framework" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="books" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thg-framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thg-framework" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="photos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thg-framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thg-framework" type="462c0819:PsiDirectoryNode" />
+              <item name="thgconsole" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
-      </pane>
-      <pane id="Scratches">
-        <subPane />
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/thgconsole" />
-      <recent name="$PROJECT_DIR$/thgconsole/core" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/thgconsole/libs" />
-      <recent name="$PROJECT_DIR$/thgconsole/lib/base/interpreter" />
-    </key>
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -407,698 +409,236 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.PluginManager">
-    <configuration default="false" name="setup" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="thg-framework" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/setup.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="db" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thgconsole/core/db" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="thg-framework" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/thgconsole/core/db/db.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="insert_db" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thgconsole/core/db" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="thg-framework" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/thgconsole/core/db/insert_db.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="interpreter" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thgconsole" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="thg-framework" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/thgconsole/interpreter.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="PluginManager" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/thgconsole/core/THGPlugin" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="thg-framework" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/thgconsole/core/THGPlugin/PluginManager.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Attests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Nosetests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="py.test">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="testToRun" value="" />
-      <option name="keywords" value="" />
-      <option name="params" value="" />
-      <option name="USE_PARAM" value="false" />
-      <option name="USE_KEYWORD" value="false" />
-      <method />
-    </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.setup" />
-      <item index="1" class="java.lang.String" itemvalue="Python.db" />
-      <item index="2" class="java.lang.String" itemvalue="Python.insert_db" />
-      <item index="3" class="java.lang.String" itemvalue="Python.interpreter" />
-      <item index="4" class="java.lang.String" itemvalue="Python.PluginManager" />
-    </list>
-    <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.PluginManager" />
-        <item index="1" class="java.lang.String" itemvalue="Python.interpreter" />
-        <item index="2" class="java.lang.String" itemvalue="Python.insert_db" />
-        <item index="3" class="java.lang.String" itemvalue="Python.db" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f9aefde2-5f91-4780-9d15-b6718a6b6e45" name="Default Changelist" comment="" />
-      <created>1547349374152</created>
+      <changelist id="6e6b10ed-b24d-4ee8-b1c6-2c177b363b00" name="Default Changelist" comment="" />
+      <created>1554700986889</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1547349374152</updated>
+      <updated>1554700986889</updated>
+      <workItem from="1554700993470" duration="245000" />
+      <workItem from="1554907163955" duration="1343000" />
     </task>
-    <task id="LOCAL-00001" summary="vagrat add">
-      <created>1549199644082</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1549199644082</updated>
-    </task>
-    <task id="LOCAL-00002" summary="add gtts to requi">
-      <created>1549199716794</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1549199716794</updated>
-    </task>
-    <task id="LOCAL-00003" summary="add gmac">
-      <created>1551013506813</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1551013506813</updated>
-    </task>
-    <task id="LOCAL-00004" summary="fix command show {all,exploits,payload,nops,post}">
-      <created>1554376046431</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1554376046431</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
-  <component name="TodoView" selected-index="3">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1588000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22140221" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="760" y="132" width="399" height="911" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995495" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995495" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995495" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2530311" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23471616" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32874617" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2524013" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32924226" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995495" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995495" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995495" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23471616" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09541381" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="760" y="132" width="399" height="911" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32874617" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
-  <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USER_GROUPS">
-      <collection />
-    </option>
-    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-      <collection />
-    </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="MAXIMUM_HISTORY_ROWS" value="9290" />
-    <MESSAGE value="vagrat add" />
-    <MESSAGE value="add gtts to requi" />
-    <MESSAGE value="add gmac" />
-    <MESSAGE value="fix command show {all,exploits,payload,nops,post}" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix command show {all,exploits,payload,nops,post}" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="3" />
-    </breakpoint-manager>
-    <watches-manager />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/thgconsole/core/bluetooth/btle/__init__.py">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a4db00d2-230f-460a-ab2d-a7f99c674fed/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thgconsole/thg_commands_add/commands.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state>
+          <caret column="54" selection-start-column="20" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole/core/bluetooth/btle_client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole/core/bluetooth/btle/btle_scanner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-26">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole/core/bluetooth/btle/btle_device.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="308" column="26" selection-start-line="308" selection-start-column="23" selection-end-line="308" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole/core/exploit/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole/core/exploit/encoders.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole/core/exploit/exploit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-26">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole/core/exploit/payloads.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole/core/exploit/printer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-26">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole/core/exploit/voz.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-26">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole/core/ftp/ftp_client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="119" column="15" selection-start-line="119" selection-start-column="12" selection-end-line="119" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routersploit.log" />
-    <entry file="file://$PROJECT_DIR$/requirements-dev.txt" />
-    <entry file="file://$PROJECT_DIR$/Makefile" />
-    <entry file="file://$PROJECT_DIR$/MANIFEST.in" />
-    <entry file="file://$PROJECT_DIR$/Dockerfile" />
-    <entry file="file://$PROJECT_DIR$/thgconsole/core/http/http_client.py">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="18" column="26" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole/core/snmp/snmp_client.py">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="35" column="37" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole/CHANGELOG.md" />
-    <entry file="file://$PROJECT_DIR$/setup.py" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole/core/exploit/shell.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole/core/exploit/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole/core/exploit/option.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole/modules/auxiliary/scanner/autopwn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml" />
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="207" column="14" selection-start-line="6" selection-start-column="19" selection-end-line="206" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LICENSE">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole/modules/evasion.py" />
-    <entry file="file://$PROJECT_DIR$/thgconsole/config/setup_db.py" />
-    <entry file="file://$PROJECT_DIR$/thgconsole/config/dbr.sh" />
-    <entry file="file://$PROJECT_DIR$/thgconsole/core/db/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole/config/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole/core/db/dsa" />
-    <entry file="file://$PROJECT_DIR$/thgconsole/core/db/dsa.db" />
-    <entry file="file://$PROJECT_DIR$/thgconsole/core/db/db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="708" column="105" selection-start-line="708" selection-start-column="105" selection-end-line="708" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole/config/info_init.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole/core/db/insert_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.github/ISSUE_TEMPLATE.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.github/PULL_REQUEST_TEMPLATE.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole/core/THGPlugin.py" />
-    <entry file="file://$PROJECT_DIR$/thgconsole/core/plugins/DSA.py" />
-    <entry file="file://$PROJECT_DIR$/thgconsole/Plugins/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/thgconsole/Plugins/THGPlugins.py" />
-    <entry file="file://$PROJECT_DIR$/thgconsole/Plugins/dsa.py" />
-    <entry file="file://$PROJECT_DIR$/thgconsole/core/THGPlugin/PluginManager.py" />
-    <entry file="file://$PROJECT_DIR$/CONTRIBUTING.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
-          <folding>
-            <element signature="e#24#61#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/docs/modules/creds/cameras/acti/ftp_default_creds.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/thgconsole/interpreter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="804" column="76" selection-start-line="804" selection-start-column="76" selection-end-line="804" selection-end-column="76" />
+        <state relative-caret-position="472">
+          <caret line="633" column="59" selection-start-line="633" selection-start-column="59" selection-end-line="633" selection-end-column="59" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
-            <element signature="e#1241#6098#0" expanded="false" />
-            <element signature="e#1368#1405#0" expanded="false" />
-            <element signature="e#1436#2278#0" expanded="false" />
-            <element signature="e#2320#2552#0" expanded="false" />
-            <element signature="e#2601#2654#0" expanded="false" />
-            <element signature="e#2716#3111#0" expanded="false" />
-            <element signature="e#3145#3960#0" expanded="false" />
-            <element signature="e#3217#3232#0" expanded="false" />
-            <element signature="e#3364#3960#0" expanded="false" />
-            <element signature="e#4007#5231#0" expanded="false" />
-            <element signature="e#5279#5539#0" expanded="false" />
-            <element signature="e#5626#5781#0" expanded="false" />
-            <element signature="e#5834#5843#0" expanded="false" />
-            <element signature="e#5891#6098#0" expanded="false" />
-            <element signature="e#6218#12077#0" expanded="false" />
-            <element signature="e#12186#12821#0" expanded="false" />
-            <element signature="e#12880#20921#0" expanded="false" />
-            <element signature="e#13172#13949#0" expanded="false" />
-            <element signature="e#14972#15653#0" expanded="false" />
-            <element signature="e#16406#17276#0" expanded="false" />
-            <element signature="e#17299#19417#0" expanded="false" />
-            <element signature="e#20959#21094#0" expanded="false" />
-            <element signature="e#21137#21917#0" expanded="false" />
-            <element signature="e#21975#22881#0" expanded="false" />
-            <element signature="e#22177#22273#0" expanded="false" />
-            <element signature="e#22317#22671#0" expanded="false" />
-            <element signature="e#22712#22881#0" expanded="false" />
-            <element signature="e#22936#23033#0" expanded="false" />
-            <element signature="e#23082#23799#0" expanded="false" />
-            <element signature="e#23845#24561#0" expanded="false" />
-            <element signature="e#24621#25293#0" expanded="false" />
-            <element signature="e#25040#25192#0" expanded="false" />
-            <element signature="e#25341#25819#0" expanded="false" />
-            <element signature="e#25878#25904#0" expanded="false" />
-            <element signature="e#25975#26425#0" expanded="false" />
-            <element signature="e#26505#26762#0" expanded="false" />
-            <element signature="e#26841#27127#0" expanded="false" />
-            <element signature="e#27189#27211#0" expanded="false" />
-            <element signature="e#27290#27795#0" expanded="false" />
-            <element signature="e#27875#28051#0" expanded="false" />
-            <element signature="e#28131#28198#0" expanded="false" />
-            <element signature="e#28279#28326#0" expanded="false" />
-            <element signature="e#28408#28729#0" expanded="false" />
-            <element signature="e#28812#28976#0" expanded="false" />
-            <element signature="e#29038#29200#1" expanded="false" />
-            <element signature="e#29263#29418#0" expanded="false" />
-            <element signature="e#30076#30255#0" expanded="false" />
-            <element signature="e#30313#30683#0" expanded="false" />
-            <element signature="e#30486#30630#0" expanded="false" />
-            <element signature="e#30756#30915#0" expanded="false" />
-            <element signature="e#30991#31566#0" expanded="false" />
-            <element signature="e#31668#32173#0" expanded="false" />
-            <element signature="e#32251#32527#0" expanded="false" />
-            <element signature="e#32604#32947#0" expanded="false" />
-            <element signature="e#32995#33124#0" expanded="false" />
-            <element signature="e#33175#33196#0" expanded="false" />
-            <element signature="e#33251#33283#0" expanded="false" />
-            <element signature="e#33336#33366#0" expanded="false" />
-            <element signature="e#33422#33453#0" expanded="false" />
-            <element signature="e#33509#33540#0" expanded="false" />
-            <element signature="e#33592#33619#0" expanded="false" />
-            <element signature="e#33675#33706#0" expanded="false" />
-            <element signature="e#33758#33785#0" expanded="false" />
-            <element signature="e#33839#33884#0" expanded="false" />
-            <element signature="e#33939#33985#0" expanded="false" />
-            <element signature="e#34035#34064#0" expanded="false" />
-            <element signature="e#34119#34150#0" expanded="false" />
-            <element signature="e#34655#35042#0" expanded="false" />
-            <element signature="e#34801#35042#0" expanded="false" />
-            <element signature="e#35101#35163#0" expanded="false" />
-            <element signature="e#35222#35329#0" expanded="false" />
-            <element signature="e#35387#35418#0" expanded="false" />
-            <element signature="e#35794#35912#0" expanded="false" />
-            <element signature="e#36256#36397#0" expanded="false" />
-            <element signature="e#36439#37005#0" expanded="false" />
-            <element signature="e#37062#37199#0" expanded="false" />
-            <element signature="e#37253#37450#0" expanded="false" />
-            <element signature="e#37930#38897#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/modules/payloads/armle/reverse_tcp.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/modules/payloads/cmd/awk_bind_udp.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/modules/payloads/cmd/bash_reverse_tcp.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/modules/payloads/cmd/perl_bind_tcp.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/modules/payloads/cmd/php_reverse_tcp.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/modules/payloads/cmd/python_reverse_tcp.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/modules/payloads/cmd/python_reverse_udp.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/modules/payloads/x86/reverse_tcp.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/modules/payloads/x86/bind_tcp.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/modules/encoders/perl/base64.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/modules/encoders/perl/hex.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/modules/encoders/php/base64.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/mkdocs.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/docs/photos/thg.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/docs/contributing/get-started.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/docs/cli/build.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/docs/cli/install.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/docs/cli/tags.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/docs/cli/templates.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="300">
+            <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
