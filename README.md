@@ -44,7 +44,7 @@ The "[x]" are the commands that is working and the "[ ]" are the future funciona
 | Command        | Description|
 | -------------  |:-------------: |
 | - [ ] alias    | create or view an alias. |
-| - [ ] del      |  rm |
+| - [x] del      |  rm |
 | - [ ] handler  |  use exploit/multi/handler |
 
 # Core Commands
