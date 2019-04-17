@@ -128,7 +128,7 @@ Command               |Description
 
 Command               |Description
 | -------------       |:-------------: |
-|- [ ] *edit*           |    Edit the current module or a file with the preferred editor
+|- [x] *edit*           |    Edit the current module or a file with the preferred editor
 |- [x] python_interpreter|  Drop into python  scripting mode
 |- [x] log                | Displays framework.log starting at the bottom if possible
 |- [ ] *reload_lib*        | Reload one or more library files from specified paths
