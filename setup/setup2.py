@@ -11,7 +11,7 @@ class THG_INSTALL():
         print("start...")
         self.check_os =""
     def install(self):
-        exitfile = "~/"
+        exitfile = "~/.extra_thg_package"
         infile = system("cp -rv extra_thg_package {}".format(exitfile))
         #print_success(infile)
         with open("requirements.txt") as fl:

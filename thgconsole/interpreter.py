@@ -798,6 +798,13 @@ Command       Description
         print(self.ipi(darkcde=None))
     def _show_history(self, *args, **kwargs):
         os.system("cat ~/.THG_history")
+
+    def thg_command_allw(self, *args, **kwargs):
+        a = []
+        for i in self._show_all():
+            a.append(i)
+        print_success(a)
+
 ####################################################################################
 ####################################################################################
 ##                            command_iptables                                    ##

@@ -48,4 +48,4 @@ if __name__ == "__main__":
     if args.extra_package_path:
             thg(extra_package_path=args.extra_package_path)
     else:
-        thg()
+        thg(extra_package_path="/root/extra_thg_package")
