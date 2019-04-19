@@ -5,5 +5,7 @@
     <mapping directory="$PROJECT_DIR$/docs/metasploit-framework.wiki" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/docs/thg-framework.wiki" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/implementar/nmapexdbsearch" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/implementar/pwntools" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/implementar/solveme" vcs="Git" />
   </component>
 </project>

@@ -1,592 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e6b10ed-b24d-4ee8-b1c6-2c177b363b00" name="Default Changelist" comment="Default Changelist">
+    <list default="true" id="6e6b10ed-b24d-4ee8-b1c6-2c177b363b00" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/banner" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/2wire/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/2wire/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/android/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/android/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/appletv/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/appletv/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/atg/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/atg/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/aws/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/aws/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/backupexec/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/backupexec/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/chromecast/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/chromecast/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/cisco/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/cisco/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/db2/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/db2/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/dns/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/dns/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/edirectory/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/edirectory/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/emc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/emc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/firetv/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/firetv/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/hp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/hp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/http/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/http/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/kerberos/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/kerberos/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/maxdb/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/maxdb/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/misc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/misc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/motorola/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/motorola/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/ms/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/ms/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/mssql/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/mssql/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/mysql/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/mysql/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/natpmp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/natpmp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/netbios/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/netbios/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/officescan/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/officescan/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/oracle/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/oracle/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/oracle/post_exploitation/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/oracle/post_exploitation/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/pop2/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/pop2/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/postgres/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/postgres/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/sap/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/sap/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/scada/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/scada/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/serverprotect/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/serverprotect/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/smb/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/smb/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/sunrpc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/sunrpc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/teradata/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/teradata/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/tftp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/tftp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/tikiwiki/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/tikiwiki/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/upnp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/upnp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/vmware/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/vmware/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/vnc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/vnc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/vxworks/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/vxworks/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/webmin/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/webmin/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/zend/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/admin/zend/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/analyze/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/analyze/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/bnat/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/bnat/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/client/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/client/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/client/hwbridge/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/client/hwbridge/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/client/iec104/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/client/iec104/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/client/mms/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/client/mms/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/client/sms/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/client/sms/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/client/smtp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/client/smtp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/crawler/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/crawler/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/creds/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/creds/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/creds/generic/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/creds/generic/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/creds/generic/ftp_bruteforce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/creds/generic/ftp_default.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/creds/generic/http_basic_digest_bruteforce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/creds/generic/http_basic_digest_default.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/creds/generic/snmp_bruteforce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/creds/generic/ssh_bruteforce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/creds/generic/ssh_default.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/creds/generic/telnet_bruteforce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/creds/generic/telnet_default.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/creds/printers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/creds/printers/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/docx/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/docx/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/android/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/android/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/apple_ios/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/apple_ios/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/cisco/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/cisco/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/dhcp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/dhcp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/dns/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/dns/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/freebsd/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/freebsd/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/freebsd/nfsd/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/freebsd/nfsd/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/hp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/hp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/mdns/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/mdns/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/misc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/misc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/ntp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/ntp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/pptp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/pptp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/rpc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/rpc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/samba/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/samba/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/sap/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/sap/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/scada/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/scada/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/smb/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/smb/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/smtp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/smtp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/solaris/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/solaris/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/solaris/lpd/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/solaris/lpd/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/ssl/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/ssl/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/syslog/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/syslog/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/tcp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/tcp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/upnp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/upnp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/windows/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/windows/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/windows/appian/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/windows/appian/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/windows/browser/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/windows/browser/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/windows/ftp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/windows/ftp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/windows/games/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/windows/games/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/windows/http/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/windows/http/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/windows/llmnr/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/windows/llmnr/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/windows/nat/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/windows/nat/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/windows/rdp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/windows/rdp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/windows/smb/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/windows/smb/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/windows/smtp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/windows/smtp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/windows/ssh/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/windows/ssh/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/windows/tftp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/windows/tftp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/wireshark/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/wireshark/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/encode/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/encode/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/encode/base64.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/fileformat/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/fileformat/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/fuzzers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/fuzzers/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/fuzzers/dns/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/fuzzers/dns/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/fuzzers/ftp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/fuzzers/ftp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/fuzzers/http/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/fuzzers/http/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/fuzzers/ntp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/fuzzers/ntp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/fuzzers/smb/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/fuzzers/smb/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/fuzzers/smtp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/fuzzers/smtp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/fuzzers/ssh/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/fuzzers/ssh/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/fuzzers/tds/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/fuzzers/tds/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/gather/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/gather/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/generic/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/generic/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/parser/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/parser/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/pdf/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/pdf/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/pdf/foxit/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/pdf/foxit/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/acpp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/acpp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/afp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/afp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/autopwn.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/autopwn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/backdoor/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/backdoor/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/cameras/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/cameras/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/cameras/camera_scan.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/chargen/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/chargen/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/couchdb/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/couchdb/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/db2/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/db2/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/dcerpc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/dcerpc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/dect/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/dect/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/discovery/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/discovery/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/dlsw/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/dlsw/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/dns/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/dns/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/elasticsearch/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/elasticsearch/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/emc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/emc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/etcd/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/etcd/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/finger/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/finger/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/ftp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/ftp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/gopher/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/gopher/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/h323/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/h323/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/http/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/http/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/ike/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/ike/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/imap/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/imap/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/ip/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/ip/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/ipmi/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/ipmi/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/jenkins/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/jenkins/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/kademlia/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/kademlia/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/llmnr/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/llmnr/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/lotus/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/lotus/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/mdns/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/mdns/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/memcached/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/memcached/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/misc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/misc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/misc/misc_scan.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/mongodb/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/mongodb/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/motorola/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/motorola/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/mqtt/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/mqtt/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/mssql/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/mssql/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/mysql/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/mysql/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/natpmp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/natpmp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/nessus/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/nessus/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/netbios/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/netbios/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/nexpose/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/nexpose/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/nfs/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/nfs/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/nntp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/nntp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/ntp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/ntp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/openvas/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/openvas/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/oracle/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/oracle/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/pcanywhere/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/pcanywhere/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/pop3/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/pop3/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/portmap/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/portmap/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/portscan/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/portscan/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/postgres/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/postgres/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/printer/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/printer/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/quake/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/quake/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/rdp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/rdp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/redis/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/redis/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/rogue/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/rogue/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/routers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/routers/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/routers/router_scan.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/routers/router_scan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/rservices/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/rservices/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/rsync/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/rsync/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/sap/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/sap/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/scada/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/scada/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/sip/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/sip/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/smb/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/smb/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/smb/impacket/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/smb/impacket/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/smtp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/smtp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/snmp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/snmp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/ssh/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/ssh/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/ssl/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/ssl/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/steam/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/steam/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/telephony/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/telephony/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/telnet/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/telnet/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/teradata/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/teradata/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/tftp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/tftp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/thg/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/thg/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/udp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/udp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/upnp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/upnp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/varnish/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/varnish/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/vmware/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/vmware/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/vnc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/vnc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/voice/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/voice/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/vxworks/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/vxworks/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/winrm/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/winrm/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/wproxy/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/wproxy/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/wsdd/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/wsdd/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/x11/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/x11/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/server/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/server/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/server/capture/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/server/capture/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/server/dns/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/server/dns/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/sniffer/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/sniffer/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/spoof/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/spoof/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/spoof/arp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/spoof/arp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/spoof/cisco/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/spoof/cisco/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/spoof/dns/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/spoof/dns/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/spoof/llmnr/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/spoof/llmnr/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/spoof/mdns/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/spoof/mdns/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/spoof/nbns/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/spoof/nbns/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/spoof/replay/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/spoof/replay/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/sqli/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/sqli/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/sqli/oracle/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/sqli/oracle/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/test/Baixar.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/test/Baixar.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/voip/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/voip/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/vsploit/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/vsploit/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/vsploit/exploit/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/vsploit/exploit/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/vsploit/exploit/dns/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/vsploit/exploit/dns/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/vsploit/malware/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/vsploit/malware/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_auxiliary/vsploit/pii/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/vsploit/pii/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_encoders/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_encoders/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_encoders/cmd/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_encoders/cmd/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_encoders/generic/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_encoders/generic/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_encoders/mipsbe/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_encoders/mipsbe/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_encoders/mipsle/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_encoders/mipsle/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_encoders/perl/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_encoders/perl/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_encoders/perl/base64.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_encoders/perl/base64.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_encoders/perl/hex.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_encoders/perl/hex.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_encoders/php/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_encoders/php/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_encoders/php/base64.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_encoders/php/base64.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_encoders/php/hex.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_encoders/php/hex.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_encoders/ppc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_encoders/ppc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_encoders/python/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_encoders/python/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_encoders/python/base64.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_encoders/python/base64.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_encoders/python/hex.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_encoders/python/hex.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_encoders/ruby/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_encoders/ruby/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_encoders/sparc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_encoders/sparc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_encoders/x64/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_encoders/x64/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_encoders/x86/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_encoders/x86/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/aix/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/aix/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/aix/local/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/aix/local/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/android/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/android/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/android/adb/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/android/adb/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/android/browser/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/android/browser/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/android/fileformat/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/android/fileformat/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/android/local/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/android/local/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/apple_ios/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/apple_ios/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/apple_ios/browser/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/apple_ios/browser/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/apple_ios/email/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/apple_ios/email/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/apple_ios/ssh/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/apple_ios/ssh/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/bsdi/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/bsdi/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/bsdi/softcart/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/bsdi/softcart/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/dialup/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/dialup/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/dialup/multi/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/dialup/multi/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/dialup/multi/login/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/dialup/multi/login/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/firefox/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/firefox/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/firefox/local/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/firefox/local/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/freebsd/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/freebsd/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/freebsd/ftp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/freebsd/ftp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/freebsd/http/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/freebsd/http/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/freebsd/local/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/freebsd/local/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/freebsd/misc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/freebsd/misc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/freebsd/samba/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/freebsd/samba/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/freebsd/tacacs/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/freebsd/tacacs/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/freebsd/telnet/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/freebsd/telnet/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/generic/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/generic/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/generic/heartbleed.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/generic/heartbleed.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/generic/shellshock.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/generic/shellshock.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/generic/ssh_auth_keys.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/generic/ssh_auth_keys.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/hpux/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/hpux/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/hpux/lpd/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/hpux/lpd/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/irix/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/irix/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/irix/lpd/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/irix/lpd/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/linux/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/linux/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/linux/antivirus/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/linux/antivirus/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/linux/browser/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/linux/browser/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/linux/ftp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/linux/ftp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/linux/games/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/linux/games/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/linux/http/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/linux/http/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/linux/ids/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/linux/ids/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/linux/imap/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/linux/imap/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/linux/local/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/linux/local/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/linux/misc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/linux/misc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/linux/mysql/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/linux/mysql/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/linux/pop3/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/linux/pop3/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/linux/postgres/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/linux/postgres/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/linux/pptp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/linux/pptp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/linux/proxy/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/linux/proxy/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/linux/samba/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/linux/samba/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/linux/smtp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/linux/smtp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/linux/ssh/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/linux/ssh/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/linux/telnet/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/linux/telnet/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/linux/upnp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/linux/upnp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/mainframe/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/mainframe/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/mainframe/ftp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/mainframe/ftp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/misc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/misc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/misc/asus/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/misc/asus/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/misc/asus/b1m_projector_rce.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/misc/asus/b1m_projector_rce.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/misc/miele/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/misc/miele/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/misc/miele/pg8528_path_traversal.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/misc/miele/pg8528_path_traversal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/misc/wepresent/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/misc/wepresent/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/misc/wepresent/wipg1000_rce.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/misc/wepresent/wipg1000_rce.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/multi/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/multi/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/multi/browser/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/multi/browser/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/multi/elasticsearch/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/multi/elasticsearch/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/multi/fileformat/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/multi/fileformat/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/multi/ftp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/multi/ftp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/multi/gdb/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/multi/gdb/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/multi/hams/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/multi/hams/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/multi/http/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/multi/http/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/multi/ids/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/multi/ids/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/multi/local/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/multi/local/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/multi/misc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/multi/misc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/multi/mysql/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/multi/mysql/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/multi/ntp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/multi/ntp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/multi/php/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/multi/php/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/multi/postgres/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/multi/postgres/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/multi/realserver/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/multi/realserver/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/multi/samba/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/multi/samba/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/multi/sap/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/multi/sap/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/multi/script/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/multi/script/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/multi/ssh/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/multi/ssh/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/multi/svn/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/multi/svn/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/multi/upnp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/multi/upnp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/multi/vnc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/multi/vnc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/multi/vpn/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/multi/vpn/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/multi/wyse/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/multi/wyse/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/netware/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/netware/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/netware/smb/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/netware/smb/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/netware/sunrpc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/netware/sunrpc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/osx/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/osx/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/osx/afp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/osx/afp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/osx/arkeia/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/osx/arkeia/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/osx/browser/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/osx/browser/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/osx/email/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/osx/email/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/osx/ftp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/osx/ftp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/osx/http/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/osx/http/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/osx/local/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/osx/local/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/osx/mdns/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/osx/mdns/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/osx/misc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/osx/misc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/osx/rtsp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/osx/rtsp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/osx/samba/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/osx/samba/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/solaris/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/solaris/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/solaris/dtspcd/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/solaris/dtspcd/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/solaris/local/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/solaris/local/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/solaris/lpd/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/solaris/lpd/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/solaris/samba/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/solaris/samba/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/solaris/sunrpc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/solaris/sunrpc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/solaris/telnet/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/solaris/telnet/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/unix/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/unix/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/unix/dhcp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/unix/dhcp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/unix/fileformat/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/unix/fileformat/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/unix/ftp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/unix/ftp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/unix/html/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/unix/html/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/unix/irc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/unix/irc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/unix/local/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/unix/local/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/unix/misc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/unix/misc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/unix/smtp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/unix/smtp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/unix/sonicwall/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/unix/sonicwall/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/unix/ssh/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/unix/ssh/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/unix/webapp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/unix/webapp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/unix/x11/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/unix/x11/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/antivirus/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/antivirus/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/arkeia/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/arkeia/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/backdoor/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/backdoor/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/backupexec/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/backupexec/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/browser/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/browser/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/dcerpc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/dcerpc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/email/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/email/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/emc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/emc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/fileformat/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/fileformat/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/firewall/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/firewall/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/ftp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/ftp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/games/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/games/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/http/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/http/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/iis/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/iis/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/imap/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/imap/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/isapi/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/isapi/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/ldap/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/ldap/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/license/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/license/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/local/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/local/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/lotus/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/lotus/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/lpd/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/lpd/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/misc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/misc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/mmsp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/mmsp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/motorola/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/motorola/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/mssql/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/mssql/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/mysql/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/mysql/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/nfs/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/nfs/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/nntp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/nntp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/novell/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/novell/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/oracle/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/oracle/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/pop3/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/pop3/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/postgres/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/postgres/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/proxy/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/proxy/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/scada/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/scada/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/sip/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/sip/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/smb/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/smb/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/smtp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/smtp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/ssh/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/ssh/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/ssl/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/ssl/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/telnet/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/telnet/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/tftp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/tftp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/unicenter/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/unicenter/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/vnc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/vnc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/vpn/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/vpn/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/winrm/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/winrm/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_exploits/windows/wins/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_exploits/windows/wins/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_nops/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_nops/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_nops/aarch64/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_nops/aarch64/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_nops/armle/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_nops/armle/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_nops/mipsbe/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_nops/mipsbe/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_nops/php/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_nops/php/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_nops/ppc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_nops/ppc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_nops/sparc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_nops/sparc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_nops/tty/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_nops/tty/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_nops/x64/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_nops/x64/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_nops/x86/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_nops/x86/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/aix/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/aix/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/aix/ppc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/aix/ppc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/android/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/android/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/apple_ios/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/apple_ios/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/apple_ios/aarch64/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/apple_ios/aarch64/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/bsd/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/bsd/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/bsd/sparc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/bsd/sparc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/bsd/x64/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/bsd/x64/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/bsd/x86/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/bsd/x86/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/bsdi/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/bsdi/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/bsdi/x86/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/bsdi/x86/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/cmd/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/cmd/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/cmd/mainframe/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/cmd/mainframe/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/cmd/unix/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/cmd/unix/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/cmd/windows/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/cmd/windows/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/firefox/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/firefox/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/generic/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/generic/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/java/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/java/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/linux/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/linux/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/linux/aarch64/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/linux/aarch64/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/linux/armbe/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/linux/armbe/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/linux/armle/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/linux/armle/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/linux/mips64/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/linux/mips64/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/linux/mipsbe/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/linux/mipsbe/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/linux/mipsle/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/linux/mipsle/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/linux/ppc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/linux/ppc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/linux/ppc64/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/linux/ppc64/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/linux/ppc64le/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/linux/ppc64le/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/linux/ppce500v2/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/linux/ppce500v2/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/linux/x64/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/linux/x64/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/linux/x86/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/linux/x86/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/linux/zarch/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/linux/zarch/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/mainframe/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/mainframe/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/nodejs/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/nodejs/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/osx/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/osx/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/osx/armle/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/osx/armle/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/osx/ppc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/osx/ppc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/osx/x64/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/osx/x64/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/osx/x86/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/osx/x86/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/php/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/php/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/python/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/python/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/r/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/r/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/ruby/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/ruby/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/solaris/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/solaris/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/solaris/sparc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/solaris/sparc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/solaris/x86/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/solaris/x86/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/tty/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/tty/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/tty/unix/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/tty/unix/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/windows/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/windows/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/singles/windows/x64/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/singles/windows/x64/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stagers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stagers/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stagers/android/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stagers/android/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stagers/bsd/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stagers/bsd/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stagers/bsd/x86/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stagers/bsd/x86/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stagers/bsdi/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stagers/bsdi/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stagers/bsdi/x86/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stagers/bsdi/x86/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stagers/java/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stagers/java/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stagers/liux/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stagers/liux/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stagers/liux/aarch64/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stagers/liux/aarch64/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stagers/liux/armle/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stagers/liux/armle/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stagers/liux/mipsbe/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stagers/liux/mipsbe/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stagers/liux/mipsle/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stagers/liux/mipsle/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stagers/liux/x64/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stagers/liux/x64/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stagers/liux/x86/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stagers/liux/x86/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stagers/mult/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stagers/mult/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stagers/netware/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stagers/netware/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stagers/osx/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stagers/osx/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stagers/osx/armle/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stagers/osx/armle/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stagers/osx/ppc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stagers/osx/ppc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stagers/osx/x64/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stagers/osx/x64/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stagers/osx/x86/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stagers/osx/x86/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stagers/php/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stagers/php/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stagers/python/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stagers/python/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stagers/windows/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stagers/windows/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stagers/windows/x64/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stagers/windows/x64/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stages/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stages/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stages/android/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stages/android/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stages/bsd/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stages/bsd/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stages/bsd/x86/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stages/bsd/x86/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stages/bsdi/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stages/bsdi/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stages/bsdi/x86/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stages/bsdi/x86/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stages/java/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stages/java/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stages/linux/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stages/linux/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stages/linux/aarch64/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stages/linux/aarch64/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stages/linux/armle/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stages/linux/armle/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stages/linux/mipsbe/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stages/linux/mipsbe/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stages/linux/mipsle/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stages/linux/mipsle/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stages/linux/x64/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stages/linux/x64/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stages/linux/x86/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stages/linux/x86/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stages/mult/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stages/mult/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stages/netware/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stages/netware/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stages/osx/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stages/osx/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stages/osx/armle/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stages/osx/armle/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stages/osx/ppc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stages/osx/ppc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stages/osx/x64/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stages/osx/x64/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stages/osx/x86/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stages/osx/x86/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stages/php/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stages/php/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stages/python/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stages/python/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stages/windows/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stages/windows/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/stages/windows/x64/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/stages/windows/x64/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/armle/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/armle/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/armle/bind_tcp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/armle/bind_tcp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/armle/reverse_tcp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/armle/reverse_tcp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/awk_bind_tcp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/awk_bind_tcp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/awk_bind_udp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/awk_bind_udp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/awk_reverse_tcp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/awk_reverse_tcp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/bash_reverse_tcp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/bash_reverse_tcp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/netcat_bind_tcp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/netcat_bind_tcp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/netcat_reverse_tcp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/netcat_reverse_tcp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/perl_bind_tcp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/perl_bind_tcp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/perl_reverse_tcp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/perl_reverse_tcp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/php_bind_tcp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/php_bind_tcp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/php_reverse_tcp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/php_reverse_tcp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/python_bind_tcp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/python_bind_tcp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/python_bind_udp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/python_bind_udp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/python_reverse_tcp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/python_reverse_tcp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/python_reverse_udp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/cmd/python_reverse_udp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/mipsbe/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/mipsbe/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/mipsbe/bind_tcp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/mipsbe/bind_tcp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/mipsbe/reverse_tcp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/mipsbe/reverse_tcp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/mipsle/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/mipsle/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/mipsle/bind_tcp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/mipsle/bind_tcp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/mipsle/reverse_tcp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/mipsle/reverse_tcp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/perl/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/perl/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/perl/bind_tcp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/perl/bind_tcp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/perl/reverse_tcp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/perl/reverse_tcp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/php/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/php/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/php/bind_tcp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/php/bind_tcp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/php/reverse_tcp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/php/reverse_tcp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/python/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/python/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/python/bind_tcp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/python/bind_tcp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/python/bind_udp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/python/bind_udp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/python/reverse_tcp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/python/reverse_tcp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/python/reverse_udp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/python/reverse_udp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/x64/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/x64/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/x64/bind_tcp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/x64/bind_tcp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/x64/reverse_tcp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/x64/reverse_tcp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/x86/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/x86/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/x86/bind_tcp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/x86/bind_tcp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_payloads/thg/x86/reverse_tcp.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_payloads/thg/x86/reverse_tcp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_thg_package/thg_extra_modules/extra_post/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_post/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/setup/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup/setup2.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/setup2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/thgconsole/interpreter.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole/interpreter.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -632,21 +49,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup/setup2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thgconsole.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="50" column="57" lean-forward="true" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="57" />
+            <state relative-caret-position="750">
+              <caret line="50" column="57" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="57" />
               <folding>
                 <element signature="e#24#61#0" expanded="true" />
               </folding>
@@ -655,23 +61,33 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/llmnr/__init__.py">
+        <entry file="file://$PROJECT_DIR$/thgconsole.log">
+          <provider selected="true" editor-type-id="LogFileEditorProvider" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LICENSE">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/lotus/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/mdns/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/memcached/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/CONTRIBUTING.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -692,13 +108,18 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/thgconsole/interpreter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="589" column="45" selection-start-line="589" selection-start-column="45" selection-end-line="589" selection-end-column="45" />
+            <state relative-caret-position="139">
+              <caret line="622" column="69" selection-start-line="622" selection-start-column="69" selection-end-line="622" selection-end-column="69" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/thg_lib/__init__.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -800,8 +221,8 @@
         <option value="$PROJECT_DIR$/db/test.py" />
         <option value="$PROJECT_DIR$/setup/setup2.py" />
         <option value="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/cameras/__init__.py" />
-        <option value="$PROJECT_DIR$/thgconsole/interpreter.py" />
         <option value="$PROJECT_DIR$/thgconsole.py" />
+        <option value="$PROJECT_DIR$/thgconsole/interpreter.py" />
       </list>
     </option>
   </component>
@@ -848,8 +269,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/setup" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/setup" />
       <recent name="$PROJECT_DIR$/thgconsole" />
       <recent name="$PROJECT_DIR$/docs/thg-framework.wiki" />
       <recent name="$PROJECT_DIR$/thgconsole/modules/auxiliary/scanner" />
@@ -1052,7 +473,8 @@
       <workItem from="1555082751553" duration="102000" />
       <workItem from="1555082869583" duration="11577000" />
       <workItem from="1555283987994" duration="1088000" />
-      <workItem from="1555683209872" duration="6687000" />
+      <workItem from="1555683209872" duration="6942000" />
+      <workItem from="1555697947455" duration="383000" />
     </task>
     <task id="LOCAL-00001" summary="fix doc, fix readme">
       <created>1554908528031</created>
@@ -1110,37 +532,44 @@
       <option name="project" value="LOCAL" />
       <updated>1555539030079</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fixx all">
+      <created>1555693764925</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1555693764925</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77474000" />
+    <option name="totallyTimeSpent" value="78112000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25133404" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25400212" />
       <window_info id="Structure" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32969433" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32969433" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="SciView" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1170,7 +599,8 @@
     <MESSAGE value="add command edit fix" />
     <MESSAGE value="add animation" />
     <MESSAGE value="Default Changelist" />
-    <option name="LAST_COMMIT_MESSAGE" value="Default Changelist" />
+    <MESSAGE value="fixx all" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixx all" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1197,31 +627,6 @@
     <SUITE FILE_PATH="coverage/thg_framework$thgconsole__1_.coverage" NAME="thgconsole (1) Coverage Results" MODIFIED="1554991411244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="/usr/bin" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/wireshark/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/dos/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/encode/base64.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/encode/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/fileformat/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/fuzzers/dns/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1267,9 +672,7 @@
     <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/backdoor/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/cameras/camera_scan.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/cameras/camera_scan.py" />
     <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/cameras/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1334,21 +737,7 @@
     <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/llmnr/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/lotus/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/mdns/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/misc/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/misc/misc_scan.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/mongodb/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/misc/misc_scan.py" />
     <entry file="file://$PROJECT_DIR$/setup/setup2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1358,28 +747,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/lotus/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/mdns/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/memcached/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/misc/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/mongodb/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/kademlia/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole/interpreter.py">
+    <entry file="file://$PROJECT_DIR$/thg_lib/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thgconsole.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="589" column="45" selection-start-line="589" selection-start-column="45" selection-end-line="589" selection-end-column="45" />
+        <state relative-caret-position="750">
+          <caret line="50" column="57" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="57" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#24#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole.py">
+    <entry file="file://$PROJECT_DIR$/thgconsole.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CONTRIBUTING.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thgconsole/interpreter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="50" column="57" lean-forward="true" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="57" />
+        <state relative-caret-position="139">
+          <caret line="622" column="69" selection-start-line="622" selection-start-column="69" selection-end-line="622" selection-end-column="69" />
           <folding>
-            <element signature="e#24#61#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -619,6 +619,10 @@ Command       Description
                 return self.main_modules_dirs
 
     @module_required
+    def thg_command_edit(self, *args, **kwargs):
+        os.system("nano thgconsole/modules/"+str(self.current_module)+".py")
+
+    @module_required
     def thg_command_run(self, *args, **kwargs):
         print_status("Running module...")
         try:
