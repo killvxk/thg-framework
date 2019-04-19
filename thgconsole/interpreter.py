@@ -61,11 +61,9 @@ class THGBaseInterpreter(object):
     history_file = os.path.expanduser("~/.history")
     history_length = 100
     global_help = ""
-
     def __init__(self):
         self.setup()
         self.banner = ""
-
     def setup(self):
         """ Initialization of third-party libraries
 
@@ -91,7 +89,6 @@ class THGBaseInterpreter(object):
             readline.parse_and_bind("bind ^I rl_complete")
         else:
             readline.parse_and_bind("tab: complete")
-
     def parse_line(self, line):
         """ Split line into thg_command and argument.
 
@@ -100,12 +97,10 @@ class THGBaseInterpreter(object):
         """
         thg_command, _, arg = line.strip().partition(" ")
         return thg_command, arg.strip()
-
     @property
     def THGprompt(self):
         """ Returns THGprompt string """
         return ">>>"
-
     def get_thg_command_handler(self, thg_command):
         """ Parsing thg_command and returning appropriate handler.
 
@@ -118,7 +113,6 @@ class THGBaseInterpreter(object):
             raise THGtException("Unknown thg_command: '{}'".format(thg_command))
 
         return thg_command_handler
-
     def THGstart(self):
         """ THGconsole main entry point. Starting interpreter loop. """
         # thgvoz.load()
@@ -142,7 +136,6 @@ class THGBaseInterpreter(object):
                 print_info()
             finally:
                 printer_queue.join()
-
     def complete(self, text, state):
         """Return the next possible completion for 'text'.
 
@@ -174,7 +167,6 @@ class THGBaseInterpreter(object):
             return self.completion_matches[state]
         except IndexError:
             return None
-
     def thg_commands(self, *ignored):
         """ Returns full list of interpreter thg_commands.
 
@@ -182,14 +174,11 @@ class THGBaseInterpreter(object):
         :return: full list of interpreter thg_commands
         """
         return [thg_command.rsplit("_").pop() for thg_command in dir(self) if thg_command.startswith("thg_command_")]
-
     def raw_thg_command_completer(self, text, line, start_index, end_index):
         """ Complete thg_command w/o any argument """
         return [thg_command for thg_command in self.suggested_thg_commands() if thg_command.startswith(text)]
-
     def default_completer(self, *ignored):
         return []
-
     def suggested_thg_commands(self):
         """ Entry point for intelligent tab completion.
 
@@ -213,6 +202,12 @@ Command       Description
 #alias         create or view an alias.
 #del           rm
 #handler       use exploit/multi/handler
+
+System command
+==============
+    Command       Description
+    -------       -----------
+    battery       show battery info
 
 Core Commands
 =============
@@ -397,7 +392,8 @@ Command       Description
                                        "route",
                                        "quit",
                                        "sleep",
-                                       "iptables"
+                                       "iptables",
+                                       "battery"
 
                                        ])
         self.module_thg_commands = ["run", "back", "set ", "setg ", "check"]
@@ -477,13 +473,11 @@ Command       Description
                    net=thg_add_init.is_connected(),
                    ip=thg_add_init.ipi(),
                    mac=thg_add_init.get_mac())
-
     def ipi(self, darkcde):
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         s.connect(("8.8.8.8", 80))
         a = s.getsockname()[0]
         return a
-
     def __parse_THGprompt(self):
         raw_THGprompt_default_template = "\001\033[4m\002{host}\001\033[0m\002 > "
         raw_THGprompt_template = os.getenv("THG_RAW_PROMPT", raw_THGprompt_default_template).replace('\\033', '\033')
@@ -493,7 +487,6 @@ Command       Description
         module_THGprompt_template = os.getenv("THG_MODULE_PROMPT", module_THGprompt_default_template).replace('\\033', '\033')
         self.module_THGprompt_template = module_THGprompt_template if all(
             map(lambda x: x in module_THGprompt_template, ['{host}', "{module}"])) else module_THGprompt_default_template
-
     def __handle_if_noninteractive(self, argv):
         noninteractive = False
         module = ""
@@ -525,11 +518,9 @@ Command       Description
             self.thg_command_exploit()
 
             sys.exit(0)
-
     @property
     def module_metadata(self):
         return getattr(self.current_module, "_{}__info__".format(self.current_module.__class__.__name__))
-
     @property
     def THGprompt(self):
         """ Returns THGprompt string based on current_module attribute.
@@ -546,7 +537,6 @@ Command       Description
                 return self.module_THGprompt_template.format(host=self.THGprompt_hostname, module="UnnamedModule")
         else:
             return self.raw_THGprompt_template.format(host=self.THGprompt_hostname)
-
     def import_extra_package(self):
         if self.extra_package_path:
             extra_modules_dir = os.path.join(self.extra_package_path, "thg_extra_modules")
@@ -560,7 +550,6 @@ Command       Description
                 sys.path.append(self.extra_modules_dir)
         else:
             return
-
     def available_modules_completion(self, text):
         """ Looking for tab completion hints using setup.py entry_points.
 
@@ -578,7 +567,6 @@ Command       Description
                 sep = ""
             matches.add("".join((text, head, sep)))
         return list(map(humanize_path, matches))  # humanize output, replace dots to forward slashes
-
     def suggested_thg_commands(self):
         """ Entry point for intelligent tab completion.
 
@@ -592,10 +580,13 @@ Command       Description
             return self.module_thg_commands
         else:
             return self.global_thg_commands
-
+    ####################################################################################
+    ####################################################################################
+    ##                            command_console                                     ##
+    ####################################################################################
+    ####################################################################################
     def thg_command_back(self, *args, **kwargs):
         self.current_module = None
-
     def thg_command_use(self, module_path, *args, **kwargs):
         if module_path.startswith("extra_"):
             module_path = pythonize_path(module_path)
@@ -607,7 +598,6 @@ Command       Description
             self.current_module = import_exploit(module_path)()
         except THGtException as err:
             print_error(str(err))
-
     @stop_after(2)
     def complete_use(self, text, *args, **kwargs):
         if text:
@@ -617,11 +607,9 @@ Command       Description
                 return self.main_modules_dirs + self.extra_modules_dirs
             else:
                 return self.main_modules_dirs
-
     @module_required
     def thg_command_edit(self, *args, **kwargs):
         os.system("nano thgconsole/modules/"+str(self.current_module)+".py")
-
     @module_required
     def thg_command_run(self, *args, **kwargs):
         print_status("Running module...")
@@ -632,10 +620,8 @@ Command       Description
             print_error("Operation cancelled by user")
         except Exception:
             print_error(traceback.format_exc(sys.exc_info()))
-
     def thg_command_exploit(self, *args, **kwargs):
         self.thg_command_run()
-
     @module_required
     def thg_command_set(self, *args, **kwargs):
         key, _, value = args[0].partition(" ")
@@ -649,23 +635,19 @@ Command       Description
         else:
             print_error("You can't set option '{}'.\n"
                         "Available options: {}".format(key, self.current_module.options))
-
     @stop_after(2)
     def complete_set(self, text, *args, **kwargs):
         if text:
             return [" ".join((attr, "")) for attr in self.current_module.options if attr.startswith(text)]
         else:
             return self.current_module.options
-
     @module_required
     def thg_command_setg(self, *args, **kwargs):
         kwargs['glob'] = True
         self.thg_command_set(*args, **kwargs)
-
     @stop_after(2)
     def complete_setg(self, text, *args, **kwargs):
         return self.complete_set(text, *args, **kwargs)
-
     @module_required
     def thg_command_unsetg(self, *args, **kwargs):
         key, _, value = args[0].partition(' ')
@@ -676,14 +658,12 @@ Command       Description
                         "Available global options: {}".format(key, list(GLOBAL_OPTS.keys())))
         else:
             print_success({key: value})
-
     @stop_after(2)
     def complete_unsetg(self, text, *args, **kwargs):
         if text:
             return [' '.join((attr, "")) for attr in GLOBAL_OPTS.keys() if attr.startswith(text)]
         else:
             return list(GLOBAL_OPTS.keys())
-
     @module_required
     def get_opts(self, *args):
         """ Generator returning module's Option attributes (option_name, option_value, option_description)
@@ -699,18 +679,17 @@ Command       Description
                 pass
             else:
                 yield opt_key, opt_display_value, opt_description
-
-####################################################################################
-####################################################################################
-##                            command_help                                        ##
-####################################################################################
-####################################################################################
     @stop_after(2)
     def complete_show(self, text, *args, **kwargs):
         if text:
             return [thg_command for thg_command in self.show_sub_thg_commands if thg_command.startswith(text)]
         else:
             return self.show_sub_thg_commands
+####################################################################################
+####################################################################################
+##                            command_help                                        ##
+####################################################################################
+####################################################################################
     def thg_command_show(self, *args, **kwargs):
         sub_thg_command = args[0]
         try:
@@ -802,16 +781,9 @@ Command       Description
         print(self.ipi(darkcde=None))
     def _show_history(self, *args, **kwargs):
         os.system("cat ~/.THG_history")
-
-    def thg_command_allw(self, *args, **kwargs):
-        a = []
-        for i in self._show_all():
-            a.append(i)
-        print_success(a)
-
 ####################################################################################
 ####################################################################################
-##                            command_iptables                                    ##
+##                            command_s                                           ##
 ####################################################################################
 ####################################################################################
     @module_required
@@ -827,19 +799,15 @@ Command       Description
                 print_error("Target is not vulnerable")
             else:
                 print_status("Target could not be verified")
-
     def thg_command_sleep(self, args, **kwargs):
         print_success("sleep " + str(args))
         sleep(float(args))
-
     def thg_command_help(self, *args, **kwargs):
         print_info(self.global_help)
         if self.current_module:
             print_info("\n", self.module_help)
-
     def thg_command_log(self, *args, **kwargs):
         os.system("cat thgconsole.log")
-
     def thg_command_iptables(self, *args, **kwargs):
         thg_commandos = '''usage: iptables [-h/--help]
         optional arguments:
@@ -890,24 +858,16 @@ optional arguments:
             pathlib.Path.unlink(args)
             print_success("link deleted successfully => "+args)
             del pathlib
-
     def thg_command_exec(self, *args, **kwargs):
         os.system(args[0])
-
-
-
     def thg_command_shell(self, *args, **kwargs):
         os.system("bash")
-
     def thg_command_color(self, args, **kwargs):
         self.THGprompt_hostname = args
-
     def thg_command_python_interpreter(self, *args, **kwargs):
         os.system("python3")
-
     def thg_command_route(self, args, **kwargs):
         os.system("route " + args)
-
     def thg_command_cd(self, *args, **kwargs):
         dir = os.getcwd()
         try:
@@ -934,11 +894,9 @@ optional arguments:
                         print(Fore.RED + i)
         except:
             pass
-
     def thg_command_quit(self, *args, **kwargs):
         print_status("thgconsole stopped")
         exit(1)
-
     def thg_command_search(self, *args, **kwargs):
         keyword = args[0]
 
@@ -952,6 +910,28 @@ optional arguments:
                 print_info(
                     "{}\033[31m{}\033[0m{}".format(*module.partition(keyword))
                 )
-
     def thg_command_exit(self, *args, **kwargs):
         raise EOFError
+####################################################################################
+####################################################################################
+##                            command_systemADM                                   ##
+####################################################################################
+####################################################################################
+    def thg_command_battery(self, *args, **kwargs):
+
+        import psutil
+        if not hasattr(psutil, "sensors_battery"):
+            return sys.exit("platform not supported")
+        batt = psutil.sensors_battery()
+        if batt is None:
+            return sys.exit("no battery is installed")
+
+        print("charge:     %s%%" % round(batt.percent, 2))
+        if batt.power_plugged:
+            print("status:     %s" % (
+                    "charging" if batt.percent < 100 else "fully charged"))
+            print("plugged in: yes")
+        else:
+            print("status:     %s" % "discharging")
+            print("plugged in: no")
+
