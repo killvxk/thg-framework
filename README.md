@@ -46,26 +46,26 @@ The "[x]" are the commands that is working and the "[ ]" are the future funciona
 
 System command
 ==============
-    Command             Description
-    -------             -----------
-    battery            show battery info
-    free              show mmr/swp info
-    killall           kill pid
-    netstat           show connect
-    pmap              show structure pid
-    procsmem          show command line proc info 
-    pstree            show process tree
-    temperatures      show hardware temperature
-    who               list/show current user
-    disk_usage        show devices info
-    fans              show RPM
-    ifconfig          show config network
-    meminfo           show memore info
-    nettop            show netconect
-    procinfo          show procinfo
-    ps                show process
-    sensors           show hardwares sensors
-    top               show process
+Command              | Description
+| -------------      |:-------------: |
+| - [x]    battery            show battery info
+| - [x]    free              show mmr/swp info
+| - [x]    killall           kill pid
+| - [x]    netstat           show connect
+| - [x]    pmap              show structure pid
+| - [x]    procsmem          show command line proc info 
+| - [x]    pstree            show process tree
+| - [x]    temperatures      show hardware temperature
+| - [x]    who               list/show current user
+| - [x]    disk_usage        show devices info
+| - [x]    fans              show RPM
+| - [x]    ifconfig          show config network
+| - [x]    meminfo           show memore info
+| - [x]    nettop            show netconect
+| - [x]    procinfo          show procinfo
+| - [x]    ps                show process
+| - [x]    sensors           show hardwares sensors
+| - [x]    top               show process
 
 # Core Commands
 
