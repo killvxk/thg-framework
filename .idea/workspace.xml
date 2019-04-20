@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e6b10ed-b24d-4ee8-b1c6-2c177b363b00" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/thgconsole/interpreter.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole/interpreter.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,78 +48,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thgconsole.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="50" column="57" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="57" />
-              <folding>
-                <element signature="e#24#61#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thgconsole.log">
-          <provider selected="true" editor-type-id="LogFileEditorProvider" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LICENSE">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CONTRIBUTING.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/misc/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/mongodb/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/kademlia/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/thgconsole/interpreter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="622" column="69" selection-start-line="622" selection-start-column="69" selection-end-line="622" selection-end-column="69" />
+            <state relative-caret-position="161">
+              <caret line="214" column="11" selection-start-line="214" selection-start-column="4" selection-end-line="214" selection-end-column="11" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
+                <element signature="e#41037#41904#0" />
+                <element signature="e#41969#42825#0" />
+                <element signature="e#42886#43342#0" />
+                <element signature="e#43400#43782#0" />
+                <element signature="e#43840#44650#0" />
+                <element signature="e#43864#44634#0" />
+                <element signature="e#44712#46656#0" />
+                <element signature="e#46717#52878#0" />
+                <element signature="e#52938#56802#0" />
+                <element signature="e#57816#60304#0" />
+                <element signature="e#58037#59303#1" />
+                <element signature="e#60361#61444#0" />
+                <element signature="e#61502#69929#0" />
+                <element signature="e#69996#70597#0" />
+                <element signature="e#74083#76703#0" />
+                <element signature="e#79076#93134#0" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thg_lib/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -133,12 +87,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>you ca</find>
-      <find>DB</find>
-      <find>extra</find>
-      <find>import_extra</find>
-      <find>extra_modules_dir</find>
-      <find>module</find>
       <find>current_module</find>
       <find>run</find>
       <find>humanize_path</find>
@@ -151,7 +99,6 @@
       <find>info</find>
       <find>metadata</find>
       <find>plugin</find>
-      <find>iptables</find>
       <find>tab</find>
       <find>thg_commands</find>
       <find>completer</find>
@@ -163,6 +110,13 @@
       <find>current_mo</find>
       <find>UnnamedModule</find>
       <find>version</find>
+      <find>thg_c</find>
+      <find>iptables</find>
+      <find>command</find>
+      <find>iotop</find>
+      <find>cpu_distribution</find>
+      <find>pmap</find>
+      <find>pidof</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -172,20 +126,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/docs/thg-framework.wiki/Nightly-Installers.md" />
-        <option value="$PROJECT_DIR$/docs/thg-framework.wiki/Msftidy.md" />
-        <option value="$PROJECT_DIR$/docs/thg-framework.wiki/Meterpreter-Wishlist.md" />
-        <option value="$PROJECT_DIR$/docs/thg-framework.wiki/Meterpreter-Unicode-Support.md" />
-        <option value="$PROJECT_DIR$/docs/thg-framework.wiki/Meterpreter-Transport-Control.md" />
-        <option value="$PROJECT_DIR$/docs/thg-framework.wiki/How-to-use-Railgun-for-Windows-post-exploitation.md" />
-        <option value="$PROJECT_DIR$/docs/thg-framework.wiki/Exploit-Ranking.md" />
-        <option value="$PROJECT_DIR$/docs/thg-framework.wiki/Committer-Keys.md" />
-        <option value="$PROJECT_DIR$/docs/thg-framework.wiki/git/Git-cheatsheet.md" />
-        <option value="$PROJECT_DIR$/docs/thg-framework.wiki/dev/Setting-Up-a-Metasploit-Development-Environment.md" />
-        <option value="$PROJECT_DIR$/docs/thg-framework.wiki/dev/_Sidebar.md" />
-        <option value="$PROJECT_DIR$/setup.py" />
-        <option value="/usr/bin/thgconsole.py" />
-        <option value="$PROJECT_DIR$/thgconsole/modules/payloads/cmd/awk_bind_tcp.py" />
         <option value="$PROJECT_DIR$/thgconsole/modules/payloads/x64/bind_tcp.py" />
         <option value="$PROJECT_DIR$/dsa.py" />
         <option value="$PROJECT_DIR$/thgconsole/modules/encoders/perl/base64.py" />
@@ -222,6 +162,20 @@
         <option value="$PROJECT_DIR$/setup/setup2.py" />
         <option value="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/cameras/__init__.py" />
         <option value="$PROJECT_DIR$/thgconsole.py" />
+        <option value="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/battery.py" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/pidof.py" />
+        <option value="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/pmap.py" />
+        <option value="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/who.py" />
+        <option value="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/top.py" />
+        <option value="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/temperatures.py" />
+        <option value="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/sensors.py" />
+        <option value="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/pstree.py" />
+        <option value="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/ps.py" />
+        <option value="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/procsmem.py" />
+        <option value="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/procinfo.py" />
+        <option value="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/iotop.py" />
+        <option value="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/killall.py" />
         <option value="$PROJECT_DIR$/thgconsole/interpreter.py" />
       </list>
     </option>
@@ -288,7 +242,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.thgconsole">
+  <component name="RunManager" selected="Python.winmake">
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -330,7 +284,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="database" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="print_api_speed" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="thg-framework" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -338,12 +292,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/db" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/db/database.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal/print_api_speed.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -352,7 +306,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="db_creator" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="print_timeline" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="thg-framework" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -360,12 +314,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/db" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/db/db_creator.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal/print_timeline.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -374,7 +328,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="setup2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="purge_installation" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="thg-framework" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -382,12 +336,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/setup" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/setup/setup2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal/purge_installation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -396,7 +350,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="scriptutils" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="thg-framework" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -404,12 +358,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/db" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/db/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal/scriptutils.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -418,7 +372,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="thgconsole" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="winmake" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="thg-framework" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -426,12 +380,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/thgconsole.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal/winmake.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -441,19 +395,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.database" />
-      <item itemvalue="Python.db_creator" />
-      <item itemvalue="Python.test" />
-      <item itemvalue="Python.setup2" />
-      <item itemvalue="Python.thgconsole" />
+      <item itemvalue="Python.print_api_speed" />
+      <item itemvalue="Python.print_timeline" />
+      <item itemvalue="Python.purge_installation" />
+      <item itemvalue="Python.scriptutils" />
+      <item itemvalue="Python.winmake" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.thgconsole" />
-        <item itemvalue="Python.setup2" />
-        <item itemvalue="Python.test" />
-        <item itemvalue="Python.db_creator" />
-        <item itemvalue="Python.database" />
+        <item itemvalue="Python.winmake" />
+        <item itemvalue="Python.scriptutils" />
+        <item itemvalue="Python.purge_installation" />
+        <item itemvalue="Python.print_timeline" />
+        <item itemvalue="Python.print_api_speed" />
       </list>
     </recent_temporary>
   </component>
@@ -474,7 +428,7 @@
       <workItem from="1555082869583" duration="11577000" />
       <workItem from="1555283987994" duration="1088000" />
       <workItem from="1555683209872" duration="6942000" />
-      <workItem from="1555697947455" duration="383000" />
+      <workItem from="1555697947455" duration="9581000" />
     </task>
     <task id="LOCAL-00001" summary="fix doc, fix readme">
       <created>1554908528031</created>
@@ -539,17 +493,31 @@
       <option name="project" value="LOCAL" />
       <updated>1555693764925</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add command edit">
+      <created>1555698361316</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1555698361316</updated>
+    </task>
+    <task id="LOCAL-00011" summary="System command&#10;==============&#10;    Command       Description&#10;    -------       -----------&#10;    battery       show battery info">
+      <created>1555700832484</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1555700832484</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78112000" />
+    <option name="totallyTimeSpent" value="87310000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25400212" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2534685" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -595,12 +563,13 @@
     <MESSAGE value="fix doc, fix readme" />
     <MESSAGE value="config setup thg" />
     <MESSAGE value="wiki" />
-    <MESSAGE value="add command edit" />
     <MESSAGE value="add command edit fix" />
     <MESSAGE value="add animation" />
     <MESSAGE value="Default Changelist" />
     <MESSAGE value="fixx all" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixx all" />
+    <MESSAGE value="add command edit" />
+    <MESSAGE value="System command&#10;==============&#10;    Command       Description&#10;    -------       -----------&#10;    battery       show battery info" />
+    <option name="LAST_COMMIT_MESSAGE" value="System command&#10;==============&#10;    Command       Description&#10;    -------       -----------&#10;    battery       show battery info" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -616,100 +585,28 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/thg_framework$db.coverage" NAME="db Coverage Results" MODIFIED="1555284095539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db" />
-    <SUITE FILE_PATH="coverage/thg_framework$thgconsole.coverage" NAME="thgconsole Coverage Results" MODIFIED="1555684486656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/thg_framework$scriptutils.coverage" NAME="scriptutils Coverage Results" MODIFIED="1555717149979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal" />
+    <SUITE FILE_PATH="coverage/thg_framework$winmake.coverage" NAME="winmake Coverage Results" MODIFIED="1555717154150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal" />
+    <SUITE FILE_PATH="coverage/thg_framework$print_timeline.coverage" NAME="print_timeline Coverage Results" MODIFIED="1555717134912" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal" />
     <SUITE FILE_PATH="coverage/thg_framework$dsa__1_.coverage" NAME="dsa (1) Coverage Results" MODIFIED="1555087127999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="/home/darkcode" />
-    <SUITE FILE_PATH="coverage/thg_framework$plugin_manager.coverage" NAME="plugin_manager Coverage Results" MODIFIED="1555011600379" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/thgconsole/plugins" />
     <SUITE FILE_PATH="coverage/thg_framework$check_lib.coverage" NAME="check_lib Coverage Results" MODIFIED="1555104402766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/thg_framework$setup2.coverage" NAME="setup2 Coverage Results" MODIFIED="1555683364249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/setup" />
     <SUITE FILE_PATH="coverage/thg_framework$insert_db.coverage" NAME="insert_db Coverage Results" MODIFIED="1555285077980" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db" />
-    <SUITE FILE_PATH="coverage/thg_framework$dsa.coverage" NAME="dsa Coverage Results" MODIFIED="1554997264043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/thg_framework$show_banner.coverage" NAME="show_banner Coverage Results" MODIFIED="1554910318229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/thgconsole/libs" />
+    <SUITE FILE_PATH="coverage/thg_framework$print_access_denied.coverage" NAME="print_access_denied Coverage Results" MODIFIED="1555717105514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal" />
+    <SUITE FILE_PATH="coverage/thg_framework$thgconsole.coverage" NAME="thgconsole Coverage Results" MODIFIED="1555684486656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/thg_framework$print_announce.coverage" NAME="print_announce Coverage Results" MODIFIED="1555717122473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal" />
+    <SUITE FILE_PATH="coverage/thg_framework$_git_pre_commit.coverage" NAME=".git-pre-commit Coverage Results" MODIFIED="1555717081575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal" />
+    <SUITE FILE_PATH="coverage/thg_framework$print_api_speed.coverage" NAME="print_api_speed Coverage Results" MODIFIED="1555717129712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal" />
+    <SUITE FILE_PATH="coverage/thg_framework$plugin_manager.coverage" NAME="plugin_manager Coverage Results" MODIFIED="1555011600379" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/thgconsole/plugins" />
+    <SUITE FILE_PATH="coverage/thg_framework$setup2.coverage" NAME="setup2 Coverage Results" MODIFIED="1555683364249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/setup" />
+    <SUITE FILE_PATH="coverage/thg_framework$bench_oneshot.coverage" NAME="bench_oneshot Coverage Results" MODIFIED="1555717086671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal" />
+    <SUITE FILE_PATH="coverage/thg_framework$generate_manifest.coverage" NAME="generate_manifest Coverage Results" MODIFIED="1555717101008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal" />
+    <SUITE FILE_PATH="coverage/thg_framework$dsa.coverage" NAME="dsa Coverage Results" MODIFIED="1554997264043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/thg_framework$thgconsole__1_.coverage" NAME="thgconsole (1) Coverage Results" MODIFIED="1554991411244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="/usr/bin" />
+    <SUITE FILE_PATH="coverage/thg_framework$check_broken_links.coverage" NAME="check_broken_links Coverage Results" MODIFIED="1555717093432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal" />
+    <SUITE FILE_PATH="coverage/thg_framework$purge_installation.coverage" NAME="purge_installation Coverage Results" MODIFIED="1555717138635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/fuzzers/dns/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/fuzzers/http/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/fuzzers/smb/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/fuzzers/smtp/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/fuzzers/ssh/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/fuzzers/tds/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/fuzzers/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/gather/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/generic/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/parser/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/pdf/foxit/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/pdf/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/acpp/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/afp/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/backdoor/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/cameras/camera_scan.py" />
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/cameras/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/couchdb/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/db2/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/dcerpc/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/dect/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/discovery/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/dns/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/elasticsearch/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/emc/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/etcd/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/finger/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/ftp/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -762,11 +659,31 @@
     <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/mongodb/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/kademlia/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/thg_lib/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementar/sqlalchemy-tutorial/battery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementar/sqlalchemy-tutorial/dsa">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="690">
+            <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thgconsole.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider" />
     </entry>
     <entry file="file://$PROJECT_DIR$/thgconsole.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -775,17 +692,6 @@
           <folding>
             <element signature="e#24#61#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thgconsole.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -800,12 +706,146 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/kademlia/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementar/sqlalchemy-tutorial/pidof.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementar/sqlalchemy-tutorial/pmap.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementar/sqlalchemy-tutorial/winservices.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementar/sqlalchemy-tutorial/who.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementar/sqlalchemy-tutorial/top.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementar/sqlalchemy-tutorial/temperatures.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementar/sqlalchemy-tutorial/sensors.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementar/sqlalchemy-tutorial/pstree.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementar/sqlalchemy-tutorial/ps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementar/sqlalchemy-tutorial/procsmem.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementar/sqlalchemy-tutorial/procinfo.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementar/sqlalchemy-tutorial/iotop.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementar/sqlalchemy-tutorial/killall.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal/.git-pre-commit">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal/bench_oneshot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal/check_broken_links.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal/download_exes.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal/generate_manifest.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal/print_access_denied.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="40" column="16" selection-start-line="27" selection-start-column="11" selection-end-line="40" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal/print_announce.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal/print_api_speed.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal/print_timeline.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal/purge_installation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal/scriptutils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal/winmake.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="41" column="11" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/thgconsole/interpreter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="622" column="69" selection-start-line="622" selection-start-column="69" selection-end-line="622" selection-end-column="69" />
+        <state relative-caret-position="161">
+          <caret line="214" column="11" selection-start-line="214" selection-start-column="4" selection-end-line="214" selection-end-column="11" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#41037#41904#0" />
+            <element signature="e#41969#42825#0" />
+            <element signature="e#42886#43342#0" />
+            <element signature="e#43400#43782#0" />
+            <element signature="e#43840#44650#0" />
+            <element signature="e#43864#44634#0" />
+            <element signature="e#44712#46656#0" />
+            <element signature="e#46717#52878#0" />
+            <element signature="e#52938#56802#0" />
+            <element signature="e#57816#60304#0" />
+            <element signature="e#58037#59303#1" />
+            <element signature="e#60361#61444#0" />
+            <element signature="e#61502#69929#0" />
+            <element signature="e#69996#70597#0" />
+            <element signature="e#74083#76703#0" />
+            <element signature="e#79076#93134#0" />
           </folding>
         </state>
       </provider>
