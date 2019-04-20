@@ -46,26 +46,26 @@ The "[x]" are the commands that is working and the "[ ]" are the future funciona
 
 System command
 ==============
-Command              | Description
-| -------------      |:-------------: |
-| - [x]    battery   |         show battery info
-| - [x]    free       |       show mmr/swp info
+Command                | Description
+| -------------        |:-------------: |
+| - [x]    battery     |         show battery info
+| - [x]    free        |       show mmr/swp info
 | - [x]    killall     |      kill pid
-| - [x]    netstat      |     show connect
-| - [x]    pmap          |    show structure pid
-| - [x]    procsmem       |   show command line proc info 
-| - [x]    pstree          |  show process tree
-| - [x]    temperatures |     show hardware temperature
-| - [x]    who           |    list/show current user
-| - [x]    disk_usage     |   show devices info
-| - [x]    fans           |   show RPM
-| - [x]    ifconfig |         show config network
-| - [x]    meminfo   |        show memore info
-| - [x]    nettop     |       show netconect
+| - [x]    netstat     |     show connect
+| - [x]    pmap        |    show structure pid
+| - [x]    procsmem    |   show command line proc info 
+| - [x]    pstree      |  show process tree
+| - [x]    temperatures|     show hardware temperature
+| - [x]    who         |    list/show current user
+| - [x]    disk_usage  |   show devices info
+| - [x]    fans        |   show RPM
+| - [x]    ifconfig    |         show config network
+| - [x]    meminfo     |        show memore info
+| - [x]    nettop      |       show netconect
 | - [x]    procinfo    |      show procinfo
-| - [x]    ps           |     show process
-| - [x]    sensors       |    show hardwares sensors
-| - [x]    top            |   show process
+| - [x]    ps          |     show process
+| - [x]    sensors     |    show hardwares sensors
+| - [x]    top         |   show process
 
 # Core Commands
 

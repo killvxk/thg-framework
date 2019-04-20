@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e6b10ed-b24d-4ee8-b1c6-2c177b363b00" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thgconsole/interpreter.py" beforeDir="false" afterPath="$PROJECT_DIR$/thgconsole/interpreter.py" afterDir="false" />
-    </list>
+    <list default="true" id="6e6b10ed-b24d-4ee8-b1c6-2c177b363b00" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,11 +44,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thgconsole/interpreter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="214" column="11" selection-start-line="214" selection-start-column="4" selection-end-line="214" selection-end-column="11" />
+            <state relative-caret-position="56">
+              <caret line="207" selection-start-line="207" selection-end-line="229" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
                 <element signature="e#41037#41904#0" />
@@ -72,6 +68,18 @@
                 <element signature="e#74083#76703#0" />
                 <element signature="e#79076#93134#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="1005">
+                <caret line="67" column="41" lean-forward="true" selection-start-line="67" selection-start-column="41" selection-end-line="67" selection-end-column="41" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -163,7 +171,6 @@
         <option value="$PROJECT_DIR$/setup/extra_thg_package/thg_extra_modules/extra_auxiliary/scanner/cameras/__init__.py" />
         <option value="$PROJECT_DIR$/thgconsole.py" />
         <option value="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/battery.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/pidof.py" />
         <option value="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/pmap.py" />
         <option value="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/who.py" />
@@ -177,6 +184,7 @@
         <option value="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/iotop.py" />
         <option value="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/killall.py" />
         <option value="$PROJECT_DIR$/thgconsole/interpreter.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -428,7 +436,7 @@
       <workItem from="1555082869583" duration="11577000" />
       <workItem from="1555283987994" duration="1088000" />
       <workItem from="1555683209872" duration="6942000" />
-      <workItem from="1555697947455" duration="9581000" />
+      <workItem from="1555697947455" duration="9853000" />
     </task>
     <task id="LOCAL-00001" summary="fix doc, fix readme">
       <created>1554908528031</created>
@@ -507,22 +515,36 @@
       <option name="project" value="LOCAL" />
       <updated>1555700832484</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="System command&#10;==============&#10;    Command             Description&#10;    -------             -----------&#10;    battery            show battery info&#10;    free              show mmr/swp info&#10;    killall           kill pid&#10;    netstat           show connect&#10;    pmap              show structure pid&#10;    procsmem          show command line proc info &#10;    pstree            show process tree&#10;    temperatures      show hardware temperature&#10;    who               list/show current user&#10;    disk_usage        show devices info&#10;    fans              show RPM&#10;    ifconfig          show config network&#10;    meminfo           show memore info&#10;    nettop            show netconect&#10;    procinfo          show procinfo&#10;    ps                show process&#10;    sensors           show hardwares sensors&#10;    top               show process">
+      <created>1555718553401</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1555718553401</updated>
+    </task>
+    <task id="LOCAL-00013" summary="System command&#10;==============&#10;    Command             Description&#10;    -------             -----------&#10;    battery            show battery info&#10;    free              show mmr/swp info&#10;    killall           kill pid&#10;    netstat           show connect&#10;    pmap              show structure pid&#10;    procsmem          show command line proc info &#10;    pstree            show process tree&#10;    temperatures      show hardware temperature&#10;    who               list/show current user&#10;    disk_usage        show devices info&#10;    fans              show RPM&#10;    ifconfig          show config network&#10;    meminfo           show memore info&#10;    nettop            show netconect&#10;    procinfo          show procinfo&#10;    ps                show process&#10;    sensors           show hardwares sensors&#10;    top               show process">
+      <created>1555718672349</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1555718672350</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87310000" />
+    <option name="totallyTimeSpent" value="87582000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2534685" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2534685" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32969433" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32969433" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -569,7 +591,8 @@
     <MESSAGE value="fixx all" />
     <MESSAGE value="add command edit" />
     <MESSAGE value="System command&#10;==============&#10;    Command       Description&#10;    -------       -----------&#10;    battery       show battery info" />
-    <option name="LAST_COMMIT_MESSAGE" value="System command&#10;==============&#10;    Command       Description&#10;    -------       -----------&#10;    battery       show battery info" />
+    <MESSAGE value="System command&#10;==============&#10;    Command             Description&#10;    -------             -----------&#10;    battery            show battery info&#10;    free              show mmr/swp info&#10;    killall           kill pid&#10;    netstat           show connect&#10;    pmap              show structure pid&#10;    procsmem          show command line proc info &#10;    pstree            show process tree&#10;    temperatures      show hardware temperature&#10;    who               list/show current user&#10;    disk_usage        show devices info&#10;    fans              show RPM&#10;    ifconfig          show config network&#10;    meminfo           show memore info&#10;    nettop            show netconect&#10;    procinfo          show procinfo&#10;    ps                show process&#10;    sensors           show hardwares sensors&#10;    top               show process" />
+    <option name="LAST_COMMIT_MESSAGE" value="System command&#10;==============&#10;    Command             Description&#10;    -------             -----------&#10;    battery            show battery info&#10;    free              show mmr/swp info&#10;    killall           kill pid&#10;    netstat           show connect&#10;    pmap              show structure pid&#10;    procsmem          show command line proc info &#10;    pstree            show process tree&#10;    temperatures      show hardware temperature&#10;    who               list/show current user&#10;    disk_usage        show devices info&#10;    fans              show RPM&#10;    ifconfig          show config network&#10;    meminfo           show memore info&#10;    nettop            show netconect&#10;    procinfo          show procinfo&#10;    ps                show process&#10;    sensors           show hardwares sensors&#10;    top               show process" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -671,16 +694,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/implementar/sqlalchemy-tutorial/dsa">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="690">
-            <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/thgconsole.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider" />
@@ -826,8 +839,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/thgconsole/interpreter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="214" column="11" selection-start-line="214" selection-start-column="4" selection-end-line="214" selection-end-column="11" />
+        <state relative-caret-position="56">
+          <caret line="207" selection-start-line="207" selection-end-line="229" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
             <element signature="e#41037#41904#0" />
@@ -847,6 +860,16 @@
             <element signature="e#74083#76703#0" />
             <element signature="e#79076#93134#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1005">
+            <caret line="67" column="41" lean-forward="true" selection-start-line="67" selection-start-column="41" selection-end-line="67" selection-end-column="41" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
