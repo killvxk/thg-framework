@@ -1,6 +1,6 @@
 from thgconsole.core.exploit.exploit import Exploit
 from thgconsole.core.exploit.option import OptInteger
-from thgconsole.libs.printer import (
+from thgconsole.core.exploit.printer import (
     print_error,
     print_status
 )

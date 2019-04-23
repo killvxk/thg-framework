@@ -20,6 +20,19 @@ import shutil
 ##mods
 import psutil
 
+##################
+#thg lib
+from thgconsole.core import bluetooth
+from thgconsole.core import db
+from thgconsole.core import exploit
+from thgconsole.core import ftp
+from thgconsole.core import http
+from thgconsole.core import snmp
+from thgconsole.core import ssh
+from thgconsole.core import tcp
+from thgconsole.core import telnet
+from thgconsole.core import udp
+##################
 from thgconsole.config.Version import __codenome__, __version__
 
 from thgconsole.core.exploit.exceptions import THGtException

@@ -1,0 +1,1 @@
+from thgconsole.interpreter import *

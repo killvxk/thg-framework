@@ -3,9 +3,9 @@ import io
 
 from thgconsole.core.exploit.exploit import Exploit
 from thgconsole.core.exploit.exploit import Protocol
-from thgconsole.libs.option import OptBool
-from thgconsole.libs.printer import print_error
-from thgconsole.libs.printer import print_success
+from thgconsole.core.exploit.option import OptBool
+from thgconsole.core.exploit.printer import print_error
+from thgconsole.core.exploit.printer import print_success
 
 
 FTP_TIMEOUT = 8.0

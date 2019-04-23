@@ -4,7 +4,7 @@ from bluepy.btle import (
     ScanEntry,
     AssignedNumbers
 )
-from thgconsole.libs.printer import (
+from thgconsole.core.exploit.printer import (
     print_table,
     print_success,
     print_status,

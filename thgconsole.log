@@ -3364,3 +3364,5 @@
 2019-02-24 10:33:57,521 DEBUG paramiko.transport       EOF in transport thread
 2019-04-23 15:48:46,096 DEBUG getmac       Raw MAC found: 90:cd:b6:a4:64:e1
 
+2019-04-23 18:43:42,641 DEBUG getmac       Raw MAC found: 90:cd:b6:a4:64:e1
+

@@ -2,9 +2,9 @@ from pysnmp.entity.rfc3413.oneliner import cmdgen
 
 from thgconsole.core.exploit.exploit import Exploit
 from thgconsole.core.exploit.exploit import Protocol
-from thgconsole.libs.option import OptBool
-from thgconsole.libs.printer import print_success
-from thgconsole.libs.printer import print_error
+from thgconsole.core.exploit.option import OptBool
+from thgconsole.core.exploit.printer import print_success
+from thgconsole.core.exploit.printer import print_error
 
 
 SNMP_TIMEOUT = 15.0
