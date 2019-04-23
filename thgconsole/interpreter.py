@@ -4,7 +4,6 @@ import atexit
 import itertools
 import os
 import sys
-from glob import glob
 import traceback
 import socket, platform
 from collections import Counter
@@ -20,8 +19,6 @@ import shutil
 ##
 ##mods
 import psutil
-from psutil._common import *
-
 
 from thgconsole.config.Version import __codenome__, __version__
 
@@ -1101,8 +1098,6 @@ optional arguments:
 
         import socket
         from socket import AF_INET, SOCK_STREAM, SOCK_DGRAM
-
-        import psutil
 
         AD = "-"
         AF_INET6 = getattr(socket, 'AF_INET6', object())

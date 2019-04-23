@@ -31,6 +31,7 @@ __thg_module__ = [
     'auxiliares',
     'debugger',
     'firmware',
+    "THG_extra",
     'mobile',
     'social',
     'backdoor',

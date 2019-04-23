@@ -1,4 +1,4 @@
-from thgconsole.core.exploit.option import OptEncoder
+from thgconsole.libs.option import OptEncoder
 from thgconsole.core.exploit.payloads import (
     GenericPayload,
     Architectures,

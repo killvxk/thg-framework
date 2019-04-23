@@ -3362,3 +3362,5 @@
 2019-02-24 10:32:01,139 DEBUG urllib3.connectionpool       Starting new HTTP connection (1): 127.0.0.1:80
 2019-02-24 10:32:01,142 DEBUG urllib3.connectionpool       http://127.0.0.1:80 "GET /../../../../../../../../../../../../etc/shadow HTTP/1.1" 400 173
 2019-02-24 10:33:57,521 DEBUG paramiko.transport       EOF in transport thread
+2019-04-23 15:48:46,096 DEBUG getmac       Raw MAC found: 90:cd:b6:a4:64:e1
+
