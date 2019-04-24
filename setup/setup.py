@@ -15,7 +15,7 @@ setup(
     download_url="https://github.com/darkcode357/thg-framework",
     packages=find_packages(),
     include_package_data=True,
-    scripts=('thgconsole.py',),
+    scripts=('thgcli',),
     entry_points={},
     install_requires=[
         "future",

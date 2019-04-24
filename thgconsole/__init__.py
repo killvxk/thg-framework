@@ -1,1 +1,1 @@
-from thgconsole.interpreter import *
+from .interpreter import *

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/thg_lib" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/thg_lib/thglibs/exploitation/python3-pwntools" vcs="Git" />
   </component>
 </project>
