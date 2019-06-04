@@ -1,1 +1,0 @@
-Securitysan Securitydesu Volatilemann
