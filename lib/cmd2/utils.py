@@ -1,12 +1,14 @@
-#
 # coding=utf-8
 """Shared utility functions"""
 
 import collections
 import os
 import re
+import subprocess
+import sys
+import threading
 import unicodedata
-from typing import Any, Iterable, List, Optional, Union
+from typing import Any, Iterable, List, Optional, TextIO, Union
 
 from wcwidth import wcswidth
 
@@ -68,7 +70,7 @@ def strip_quotes(arg: str) -> str:
 
 
 def namedtuple_with_defaults(typename: str, field_names: Union[str, List[str]],
-                             default_values: collections.Iterable=()):
+                             default_values: collections.Iterable = ()):
     """
     Convenience function for defining a namedtuple with default values
 
@@ -88,6 +90,7 @@ def namedtuple_with_defaults(typename: str, field_names: Union[str, List[str]],
         Node(val=4, left=None, right=7)
     """
     T = collections.namedtuple(typename, field_names)
+    # noinspection PyProtectedMember,PyUnresolvedReferences
     T.__new__.__defaults__ = (None,) * len(T._fields)
     if isinstance(default_values, collections.Mapping):
         prototype = T(**default_values)
@@ -138,7 +141,6 @@ def which(editor: str) -> Optional[str]:
     :param editor: filename of the editor to check, ie 'notepad.exe' or 'vi'
     :return: a full path or None
     """
-    import subprocess
     try:
         editor_path = subprocess.check_output(['which', editor], stderr=subprocess.STDOUT).strip()
         editor_path = editor_path.decode()
@@ -260,49 +262,91 @@ def natural_sort(list_to_sort: Iterable[str]) -> List[str]:
     return sorted(list_to_sort, key=natural_keys)
 
 
-class StdSim(object):
-    """Class to simulate behavior of sys.stdout or sys.stderr.
+def unquote_specific_tokens(args: List[str], tokens_to_unquote: List[str]) -> None:
+    """
+    Unquote a specific tokens in a list of command-line arguments
+    This is used when certain tokens have to be passed to another command
+    :param args: the command line args
+    :param tokens_to_unquote: the tokens, which if present in args, to unquote
+    """
+    for i, arg in enumerate(args):
+        unquoted_arg = strip_quotes(arg)
+        if unquoted_arg in tokens_to_unquote:
+            args[i] = unquoted_arg
 
+
+def expand_user(token: str) -> str:
+    """
+    Wrap os.expanduser() to support expanding ~ in quoted strings
+    :param token: the string to expand
+    """
+    if token:
+        if is_quoted(token):
+            quote_char = token[0]
+            token = strip_quotes(token)
+        else:
+            quote_char = ''
+
+        token = os.path.expanduser(token)
+
+        # Restore the quotes even if not needed to preserve what the user typed
+        if quote_char:
+            token = quote_char + token + quote_char
+
+    return token
+
+
+def expand_user_in_tokens(tokens: List[str]) -> None:
+    """
+    Call expand_user() on all tokens in a list of strings
+    :param tokens: tokens to expand
+    """
+    for index, _ in enumerate(tokens):
+        tokens[index] = expand_user(tokens[index])
+
+
+def find_editor() -> str:
+    """Find a reasonable editor to use by default for the system that the cmd2 application is running on."""
+    editor = os.environ.get('EDITOR')
+    if not editor:
+        if sys.platform[:3] == 'win':
+            editor = 'notepad'
+        else:
+            # Favor command-line editors first so we don't leave the terminal to edit
+            for editor in ['vim', 'vi', 'emacs', 'nano', 'pico', 'gedit', 'kate', 'subl', 'geany', 'atom']:
+                if which(editor):
+                    break
+    return editor
+
+
+class StdSim(object):
+    """
+    Class to simulate behavior of sys.stdout or sys.stderr.
     Stores contents in internal buffer and optionally echos to the inner stream it is simulating.
     """
-    class ByteBuf(object):
-        """Inner class which stores an actual bytes buffer and does the actual output if echo is enabled."""
-        def __init__(self, inner_stream, echo: bool = False,
-                     encoding: str='utf-8', errors: str='replace') -> None:
-            self.byte_buf = b''
-            self.inner_stream = inner_stream
-            self.echo = echo
-            self.encoding = encoding
-            self.errors = errors
-
-        def write(self, b: bytes) -> None:
-            """Add bytes to internal bytes buffer and if echo is True, echo contents to inner stream."""
-            if not isinstance(b, bytes):
-                raise TypeError('a bytes-like object is required, not {}'.format(type(b)))
-            self.byte_buf += b
-            if self.echo:
-                self.inner_stream.buffer.write(b)
-
     def __init__(self, inner_stream, echo: bool = False,
-                 encoding: str='utf-8', errors: str='replace') -> None:
+                 encoding: str = 'utf-8', errors: str = 'replace') -> None:
         """
         Initializer
-        :param inner_stream: the emulated stream
+        :param inner_stream: the wrapped stream. Should be a TextIO or StdSim instance.
         :param echo: if True, then all input will be echoed to inner_stream
         :param encoding: codec for encoding/decoding strings (defaults to utf-8)
         :param errors: how to handle encoding/decoding errors (defaults to replace)
         """
-        self.buffer = self.ByteBuf(inner_stream, echo)
         self.inner_stream = inner_stream
         self.echo = echo
         self.encoding = encoding
         self.errors = errors
+        self.pause_storage = False
+        self.buffer = ByteBuf(self)
 
     def write(self, s: str) -> None:
         """Add str to internal bytes buffer and if echo is True, echo contents to inner stream"""
         if not isinstance(s, str):
             raise TypeError('write() argument must be str, not {}'.format(type(s)))
-        self.buffer.byte_buf += s.encode(encoding=self.encoding, errors=self.errors)
+
+        if not self.pause_storage:
+            self.buffer.byte_buf += s.encode(encoding=self.encoding, errors=self.errors)
         if self.echo:
             self.inner_stream.write(s)
 
@@ -312,7 +356,7 @@ class StdSim(object):
 
     def getbytes(self) -> bytes:
         """Get the internal contents as bytes"""
-        return self.buffer.byte_buf
+        return bytes(self.buffer.byte_buf)
 
     def read(self) -> str:
         """Read from the internal contents as a str and then clear them out"""
@@ -328,7 +372,25 @@ class StdSim(object):
 
     def clear(self) -> None:
         """Clear the internal contents"""
-        self.buffer.byte_buf = b''
+        self.buffer.byte_buf.clear()
+
+    def isatty(self) -> bool:
+        """StdSim only considered an interactive stream if `echo` is True and `inner_stream` is a tty."""
+        if self.echo:
+            return self.inner_stream.isatty()
+        else:
+            return False
+
+    @property
+    def line_buffering(self) -> bool:
+        """
+        Handle when the inner stream doesn't have a line_buffering attribute which is the case
+        when running unit tests because pytest sets stdout to a pytest EncodedFile object.
+        """
+        try:
+            return self.inner_stream.line_buffering
+        except AttributeError:
+            return False
 
     def __getattr__(self, item: str):
         if item in self.__dict__:
@@ -337,13 +399,166 @@ class StdSim(object):
             return getattr(self.inner_stream, item)
 
 
-def unquote_redirection_tokens(args: List[str]) -> None:
+class ByteBuf(object):
     """
-    Unquote redirection tokens in a list of command-line arguments
-    This is used when redirection tokens have to be passed to another command
-    :param args: the command line args
+    Used by StdSim to write binary data and stores the actual bytes written
     """
-    for i, arg in enumerate(args):
-        unquoted_arg = strip_quotes(arg)
-        if unquoted_arg in constants.REDIRECTION_TOKENS:
-            args[i] = unquoted_arg
+    # Used to know when to flush the StdSim
+    NEWLINES = [b'\n', b'\r']
+
+    def __init__(self, std_sim_instance: StdSim) -> None:
+        self.byte_buf = bytearray()
+        self.std_sim_instance = std_sim_instance
+
+    def write(self, b: bytes) -> None:
+        """Add bytes to internal bytes buffer and if echo is True, echo contents to inner stream."""
+        if not isinstance(b, bytes):
+            raise TypeError('a bytes-like object is required, not {}'.format(type(b)))
+        if not self.std_sim_instance.pause_storage:
+            self.byte_buf += b
+        if self.std_sim_instance.echo:
+            self.std_sim_instance.inner_stream.buffer.write(b)
+
+            # Since StdSim wraps TextIO streams, we will flush the stream if line buffering is on
+            # and the bytes being written contain a new line character. This is helpful when StdSim
+            # is being used to capture output of a shell command because it causes the output to print
+            # to the screen more often than if we waited for the stream to flush its buffer.
+            if self.std_sim_instance.line_buffering:
+                if any(newline in b for newline in ByteBuf.NEWLINES):
+                    self.std_sim_instance.flush()
+
+
+class ProcReader(object):
+    """
+    Used to captured stdout and stderr from a Popen process if any of those were set to subprocess.PIPE.
+    If neither are pipes, then the process will run normally and no output will be captured.
+    """
+    def __init__(self, proc: subprocess.Popen, stdout: Union[StdSim, TextIO],
+                 stderr: Union[StdSim, TextIO]) -> None:
+        """
+        ProcReader initializer
+        :param proc: the Popen process being read from
+        :param stdout: the stream to write captured stdout
+        :param stderr: the stream to write captured stderr
+        """
+        self._proc = proc
+        self._stdout = stdout
+        self._stderr = stderr
+
+        self._out_thread = threading.Thread(name='out_thread', target=self._reader_thread_func,
+                                            kwargs={'read_stdout': True})
+
+        self._err_thread = threading.Thread(name='out_thread', target=self._reader_thread_func,
+                                            kwargs={'read_stdout': False})
+
+        # Start the reader threads for pipes only
+        if self._proc.stdout is not None:
+            self._out_thread.start()
+        if self._proc.stderr is not None:
+            self._err_thread.start()
+
+    def send_sigint(self) -> None:
+        """Send a SIGINT to the process similar to if <Ctrl>+C were pressed."""
+        import signal
+        if sys.platform.startswith('win'):
+            signal_to_send = signal.CTRL_C_EVENT
+        else:
+            signal_to_send = signal.SIGINT
+        self._proc.send_signal(signal_to_send)
+
+    def terminate(self) -> None:
+        """Terminate the process"""
+        self._proc.terminate()
+
+    def wait(self) -> None:
+        """Wait for the process to finish"""
+        if self._out_thread.is_alive():
+            self._out_thread.join()
+        if self._err_thread.is_alive():
+            self._err_thread.join()
+
+        # Handle case where the process ended before the last read could be done.
+        # This will return None for the streams that weren't pipes.
+        out, err = self._proc.communicate()
+
+        if out:
+            self._write_bytes(self._stdout, out)
+        if err:
+            self._write_bytes(self._stderr, err)
+
+    def _reader_thread_func(self, read_stdout: bool) -> None:
+        """
+        Thread function that reads a stream from the process
+        :param read_stdout: if True, then this thread deals with stdout. Otherwise it deals with stderr.
+        """
+        if read_stdout:
+            read_stream = self._proc.stdout
+            write_stream = self._stdout
+        else:
+            read_stream = self._proc.stderr
+            write_stream = self._stderr
+
+        # The thread should have been started only if this stream was a pipe
+        assert read_stream is not None
+
+        # Run until process completes
+        while self._proc.poll() is None:
+            # noinspection PyUnresolvedReferences
+            available = read_stream.peek()
+            if available:
+                read_stream.read(len(available))
+                self._write_bytes(write_stream, available)
+
+    @staticmethod
+    def _write_bytes(stream: Union[StdSim, TextIO], to_write: bytes) -> None:
+        """
+        Write bytes to a stream
+        :param stream: the stream being written to
+        :param to_write: the bytes being written
+        """
+        try:
+            stream.buffer.write(to_write)
+        except BrokenPipeError:
+            # This occurs if output is being piped to a process that closed
+            pass
+
+
+class ContextFlag(object):
+    """A context manager which is also used as a boolean flag value within the default sigint handler.
+
+    Its main use is as a flag to prevent the SIGINT handler in cmd2 from raising a KeyboardInterrupt
+    while a critical code section has set the flag to True. Because signal handling is always done on the
+    main thread, this class is not thread-safe since there is no need.
+    """
+    def __init__(self) -> None:
+        # When this flag has a positive value, it is considered set.
+        # When it is 0, it is not set. It should never go below 0.
+        self.__count = 0
+
+    def __bool__(self) -> bool:
+        return self.__count > 0
+
+    def __enter__(self) -> None:
+        self.__count += 1
+
+    def __exit__(self, *args) -> None:
+        self.__count -= 1
+        if self.__count < 0:
+            raise ValueError("count has gone below 0")
+
+
+class RedirectionSavedState(object):
+    """Created by each command to store information about their redirection."""
+
+    def __init__(self, self_stdout: Union[StdSim, TextIO], sys_stdout: Union[StdSim, TextIO],
+                 pipe_proc_reader: Optional[ProcReader]) -> None:
+        # Used to restore values after the command ends
+        self.saved_self_stdout = self_stdout
+        self.saved_sys_stdout = sys_stdout
+        self.saved_pipe_proc_reader = pipe_proc_reader
+
+        # Tells if the command is redirecting
+        self.redirecting = False
+
+        # If the command created a process to pipe to, then then is its reader
+        self.pipe_proc_reader = None

@@ -2,15 +2,24 @@
 # -*- coding: utf-8 -*-
 """Statement parsing classes for cmd2"""
 
-import os
 import re
 import shlex
-from typing import List, Tuple, Dict
+from typing import Dict, Iterable, List, Optional, Tuple, Union
 
 import attr
 
 from . import constants
 from . import utils
+
+
+def shlex_split(str_to_split: str) -> List[str]:
+    """A wrapper around shlex.split() that uses cmd2's preferred arguments.
+
+    This allows other classes to easily call split() the same way StatementParser does
+    :param str_to_split: the string being split
+    :return: A list of tokens
+    """
+    return shlex.split(str_to_split, comments=False, posix=False)
 
 
 @attr.s(frozen=True)
@@ -150,13 +159,13 @@ class Statement(str):
     # characters appearing after the terminator but before output redirection, if any
     suffix = attr.ib(default='', validator=attr.validators.instance_of(str))
 
-    # if output was piped to a shell command, the shell command as a list of tokens
-    pipe_to = attr.ib(default=attr.Factory(list), validator=attr.validators.instance_of(list))
+    # if output was piped to a shell command, the shell command as a string
+    pipe_to = attr.ib(default='', validator=attr.validators.instance_of(str))
 
     # if output was redirected, the redirection token, i.e. '>>'
     output = attr.ib(default='', validator=attr.validators.instance_of(str))
 
-    # if output was redirected, the destination file
+    # if output was redirected, the destination file token (quotes preserved)
     output_to = attr.ib(default='', validator=attr.validators.instance_of(str))
 
     def __new__(cls, value: object, *pos_args, **kw_args):
@@ -188,6 +197,31 @@ class Statement(str):
         return rtn
 
     @property
+    def post_command(self) -> str:
+        """A string containing any ending terminator, suffix, and redirection chars"""
+        rtn = ''
+        if self.terminator:
+            rtn += self.terminator
+
+        if self.suffix:
+            rtn += ' ' + self.suffix
+
+        if self.pipe_to:
+            rtn += ' | ' + self.pipe_to
+
+        if self.output:
+            rtn += ' ' + self.output
+            if self.output_to:
+                rtn += ' ' + self.output_to
+
+        return rtn
+
+    @property
+    def expanded_command_line(self) -> str:
+        """Combines command_and_args and post_command"""
+        return self.command_and_args + self.post_command
+
+    @property
     def argv(self) -> List[str]:
         """a list of arguments a la sys.argv.
 
@@ -210,58 +244,42 @@ class StatementParser:
     Shortcuts is a list of tuples with each tuple containing the shortcut and
     the expansion.
     """
-    def __init__(
-            self,
-            allow_redirection: bool = True,
-            terminators: List[str] = None,
-            multiline_commands: List[str] = None,
-            aliases: Dict[str, str] = None,
-            shortcuts: List[Tuple[str, str]] = None,
-    ):
+    def __init__(self,
+                 allow_redirection: bool = True,
+                 terminators: Optional[Iterable[str]] = None,
+                 multiline_commands: Optional[Iterable[str]] = None,
+                 aliases: Optional[Dict[str, str]] = None,
+                 shortcuts: Optional[Iterable[Tuple[str, str]]] = None) -> None:
+        """Initialize an instance of StatementParser.
+
+        The following will get converted to an immutable tuple before storing internally:
+        * terminators
+        * multiline commands
+        * shortcuts
+
+        :param allow_redirection: (optional) should redirection and pipes be allowed?
+        :param terminators: (optional) iterable containing strings which should terminate multiline commands
+        :param multiline_commands: (optional) iterable containing the names of commands that accept multiline input
+        :param aliases: (optional) dictionary contaiing aliases
+        :param shortcuts (optional) an iterable of tuples with each tuple containing the shortcut and the expansion
+        """
         self.allow_redirection = allow_redirection
         if terminators is None:
-            self.terminators = [';']
+            self.terminators = (constants.MULTILINE_TERMINATOR,)
         else:
-            self.terminators = terminators
+            self.terminators = tuple(terminators)
         if multiline_commands is None:
-            self.multiline_commands = []
+            self.multiline_commands = tuple()
         else:
-            self.multiline_commands = multiline_commands
+            self.multiline_commands = tuple(multiline_commands)
         if aliases is None:
-            self.aliases = {}
+            self.aliases = dict()
         else:
             self.aliases = aliases
         if shortcuts is None:
-            self.shortcuts = []
+            self.shortcuts = tuple()
         else:
-            self.shortcuts = shortcuts
-
-        # this regular expression matches C-style comments and quoted
-        # strings, i.e. stuff between single or double quote marks
-        # it's used with _comment_replacer() to strip out the C-style
-        # comments, while leaving C-style comments that are inside either
-        # double or single quotes.
-        #
-        # this big regular expression can be broken down into 3 regular
-        # expressions that are OR'ed together with a pipe character
-        #
-        # /\*.*\*/               Matches C-style comments (i.e. /* comment */)
-        #                        does not match unclosed comments.
-        # \'(?:\\.|[^\\\'])*\'   Matches a single quoted string, allowing
-        #                        for embedded backslash escaped single quote
-        #                        marks.
-        # "(?:\\.|[^\\"])*"      Matches a double quoted string, allowing
-        #                        for embedded backslash escaped double quote
-        #                        marks.
-        #
-        # by way of reminder the (?:...) regular expression syntax is just
-        # a non-capturing version of regular parenthesis. We need the non-
-        # capturing syntax because _comment_replacer() looks at match
-        # groups
-        self.comment_pattern = re.compile(
-            r'/\*.*\*/|\'(?:\\.|[^\\\'])*\'|"(?:\\.|[^\\"])*"',
-            re.DOTALL | re.MULTILINE
-        )
+            self.shortcuts = tuple(shortcuts)
 
         # commands have to be a word, so make a regular expression
         # that matches the first word in the line. This regex has three
@@ -315,6 +333,9 @@ class StatementParser:
         if not word:
             return False, 'cannot be an empty string'
 
+        if word.startswith(constants.COMMENT_CHAR):
+            return False, 'cannot start with the comment character'
+
         for (shortcut, _) in self.shortcuts:
             if word.startswith(shortcut):
                 # Build an error string with all shortcuts listed
@@ -335,35 +356,47 @@ class StatementParser:
                 errmsg = ''
         return valid, errmsg
 
-    def tokenize(self, line: str) -> List[str]:
-        """Lex a string into a list of tokens.
+    def tokenize(self, line: str, expand: bool = True) -> List[str]:
+        """
+        Lex a string into a list of tokens. Shortcuts and aliases are expanded and comments are removed
 
-        Comments are removed, and shortcuts and aliases are expanded.
-
-        Raises ValueError if there are unclosed quotation marks.
+        :param line: the command line being lexed
+        :param expand: If True, then aliases and shortcuts will be expanded.
+                       Set this to False if no expansion should occur because the command name is already known.
+                       Otherwise the command could be expanded if it matched an alias name. This is for cases where
+                       a do_* method was called manually (e.g do_help('alias').
+        :return: A list of tokens
+        :raises ValueError if there are unclosed quotation marks.
         """
 
-        # strip C-style comments
-        # shlex will handle the python/shell style comments for us
-        line = re.sub(self.comment_pattern, self._comment_replacer, line)
-
         # expand shortcuts and aliases
-        line = self._expand(line)
+        if expand:
+            line = self._expand(line)
+
+        # check if this line is a comment
+        if line.lstrip().startswith(constants.COMMENT_CHAR):
+            return []
 
         # split on whitespace
-        lexer = shlex.shlex(line, posix=False)
-        lexer.whitespace_split = True
+        tokens = shlex_split(line)
 
         # custom lexing
-        tokens = self._split_on_punctuation(list(lexer))
+        tokens = self._split_on_punctuation(tokens)
         return tokens
 
-    def parse(self, line: str) -> Statement:
-        """Tokenize the input and parse it into a Statement object, stripping
+    def parse(self, line: str, expand: bool = True) -> Statement:
+        """
+        Tokenize the input and parse it into a Statement object, stripping
         comments, expanding aliases and shortcuts, and extracting output
         redirection directives.
 
-        Raises ValueError if there are unclosed quotation marks.
+        :param line: the command line being parsed
+        :param expand: If True, then aliases and shortcuts will be expanded.
+                       Set this to False if no expansion should occur because the command name is already known.
+                       Otherwise the command could be expanded if it matched an alias name. This is for cases where
+                       a do_* method was called manually (e.g do_help('alias').
+        :return: A parsed Statement
+        :raises ValueError if there are unclosed quotation marks
         """
 
         # handle the special case/hardcoded terminator of a blank line
@@ -378,7 +411,7 @@ class StatementParser:
         arg_list = []
 
         # lex the input into a list of tokens
-        tokens = self.tokenize(line)
+        tokens = self.tokenize(line, expand)
 
         # of the valid terminators, find the first one to occur in the input
         terminator_pos = len(tokens) + 1
@@ -419,56 +452,56 @@ class StatementParser:
                 arg_list = tokens[1:]
                 tokens = []
 
-        # check for a pipe to a shell process
-        # if there is a pipe, everything after the pipe needs to be passed
-        # to the shell, even redirected output
-        # this allows '(Cmd) say hello | wc > countit.txt'
-        try:
-            # find the first pipe if it exists
-            pipe_pos = tokens.index(constants.REDIRECTION_PIPE)
-            # save everything after the first pipe as tokens
-            pipe_to = tokens[pipe_pos + 1:]
-
-            for pos, cur_token in enumerate(pipe_to):
-                unquoted_token = utils.strip_quotes(cur_token)
-                pipe_to[pos] = os.path.expanduser(unquoted_token)
-
-            # remove all the tokens after the pipe
-            tokens = tokens[:pipe_pos]
-        except ValueError:
-            # no pipe in the tokens
-            pipe_to = []
-
-        # check for output redirect
+        pipe_to = ''
         output = ''
         output_to = ''
+
+        # Find which redirector character appears first in the command
         try:
-            output_pos = tokens.index(constants.REDIRECTION_OUTPUT)
-            output = constants.REDIRECTION_OUTPUT
+            pipe_index = tokens.index(constants.REDIRECTION_PIPE)
+        except ValueError:
+            pipe_index = len(tokens)
+
+        try:
+            redir_index = tokens.index(constants.REDIRECTION_OUTPUT)
+        except ValueError:
+            redir_index = len(tokens)
+
+        try:
+            append_index = tokens.index(constants.REDIRECTION_APPEND)
+        except ValueError:
+            append_index = len(tokens)
+
+        # Check if output should be piped to a shell command
+        if pipe_index < redir_index and pipe_index < append_index:
+
+            # Get the tokens for the pipe command and expand ~ where needed
+            pipe_to_tokens = tokens[pipe_index + 1:]
+            utils.expand_user_in_tokens(pipe_to_tokens)
+
+            # Build the pipe command line string
+            pipe_to = ' '.join(pipe_to_tokens)
+
+            # remove all the tokens after the pipe
+            tokens = tokens[:pipe_index]
+
+        # Check for output redirect/append
+        elif redir_index != append_index:
+            if redir_index < append_index:
+                output = constants.REDIRECTION_OUTPUT
+                output_index = redir_index
+            else:
+                output = constants.REDIRECTION_APPEND
+                output_index = append_index
 
             # Check if we are redirecting to a file
-            if len(tokens) > output_pos + 1:
-                unquoted_path = utils.strip_quotes(tokens[output_pos + 1])
-                output_to = os.path.expanduser(unquoted_path)
+            if len(tokens) > output_index + 1:
+                unquoted_path = utils.strip_quotes(tokens[output_index + 1])
+                if unquoted_path:
+                    output_to = utils.expand_user(tokens[output_index + 1])
 
             # remove all the tokens after the output redirect
-            tokens = tokens[:output_pos]
-        except ValueError:
-            pass
-
-        try:
-            output_pos = tokens.index(constants.REDIRECTION_APPEND)
-            output = constants.REDIRECTION_APPEND
-
-            # Check if we are redirecting to a file
-            if len(tokens) > output_pos + 1:
-                unquoted_path = utils.strip_quotes(tokens[output_pos + 1])
-                output_to = os.path.expanduser(unquoted_path)
-
-            # remove all tokens after the output redirect
-            tokens = tokens[:output_pos]
-        except ValueError:
-            pass
+            tokens = tokens[:output_index]
 
         if terminator:
             # whatever is left is the suffix
@@ -559,27 +592,57 @@ class StatementParser:
                               )
         return statement
 
-    def _expand(self, line: str) -> str:
-        """Expand shortcuts and aliases"""
+    def get_command_arg_list(self, command_name: str, to_parse: Union[Statement, str],
+                             preserve_quotes: bool) -> Tuple[Statement, List[str]]:
+        """
+        Called by the argument_list and argparse wrappers to retrieve just the arguments being
+        passed to their do_* methods as a list.
 
-        # expand aliases
-        # make a copy of aliases so we can edit it
-        tmp_aliases = list(self.aliases.keys())
-        keep_expanding = bool(tmp_aliases)
+        :param command_name: name of the command being run
+        :param to_parse: what is being passed to the do_* method. It can be one of two types:
+                         1. An already parsed Statement
+                         2. An argument string in cases where a do_* method is explicitly called
+                            e.g.: Calling do_help('alias create') would cause to_parse to be 'alias create'
+
+                            In this case, the string will be converted to a Statement and returned along
+                            with the argument list.
+
+        :param preserve_quotes: if True, then quotes will not be stripped from the arguments
+        :return: A tuple containing:
+                    The Statement used to retrieve the arguments
+                    The argument list
+        """
+        # Check if to_parse needs to be converted to a Statement
+        if not isinstance(to_parse, Statement):
+            to_parse = self.parse(command_name + ' ' + to_parse, expand=False)
+
+        if preserve_quotes:
+            return to_parse, to_parse.arg_list
+        else:
+            return to_parse, to_parse.argv[1:]
+
+    def _expand(self, line: str) -> str:
+        """Expand aliases and shortcuts"""
+
+        # Make a copy of aliases so we can keep track of what aliases have been resolved to avoid an infinite loop
+        remaining_aliases = list(self.aliases.keys())
+        keep_expanding = bool(remaining_aliases)
+
         while keep_expanding:
-            for cur_alias in tmp_aliases:
-                keep_expanding = False
-                # apply our regex to line
-                match = self._command_pattern.search(line)
-                if match:
-                    # we got a match, extract the command
-                    command = match.group(1)
-                    if command and command == cur_alias:
-                        # rebuild line with the expanded alias
-                        line = self.aliases[cur_alias] + match.group(2) + line[match.end(2):]
-                        tmp_aliases.remove(cur_alias)
-                        keep_expanding = bool(tmp_aliases)
-                        break
+            keep_expanding = False
+
+            # apply our regex to line
+            match = self._command_pattern.search(line)
+            if match:
+                # we got a match, extract the command
+                command = match.group(1)
+
+                # Check if this command matches an alias that wasn't already processed
+                if command in remaining_aliases:
+                    # rebuild line with the expanded alias
+                    line = self.aliases[command] + match.group(2) + line[match.end(2):]
+                    remaining_aliases.remove(command)
+                    keep_expanding = bool(remaining_aliases)
 
         # expand shortcuts
         for (shortcut, expansion) in self.shortcuts:
@@ -609,15 +672,6 @@ class StatementParser:
             args = ' '.join(tokens[1:])
 
         return command, args
-
-    @staticmethod
-    def _comment_replacer(match):
-        matched_string = match.group(0)
-        if matched_string.startswith('/'):
-            # the matched string was a comment, so remove it
-            return ''
-        # the matched string was a quoted string, return the match
-        return matched_string
 
     def _split_on_punctuation(self, tokens: List[str]) -> List[str]:
         """Further splits tokens from a command line using punctuation characters

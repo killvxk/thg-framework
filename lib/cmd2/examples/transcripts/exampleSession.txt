@@ -1,0 +1,16 @@
+# Run this transcript with "python decorator_example.py -t exampleSession.txt"
+# The regex for colors is because no color on Windows.
+# The regex for editor will match whatever program you use.
+# regexes on prompts just make the trailing space obvious
+(Cmd) set
+colors: /(Terminal|Always|Never)/
+continuation_prompt: >/ /
+debug: False
+echo: False
+editor: /.*?/
+feedback_to_output: False
+locals_in_py: False
+maxrepeats: 3
+prompt: (Cmd)/ /
+quiet: False
+timing: False

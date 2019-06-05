@@ -17,7 +17,7 @@ How to supply completion options for each argument:
             parser = argparse.ArgumentParser()
             parser.add_argument('-o', '--options', dest='options')
             choices = {}
-            mycompleter = AutoCompleter(parser, completer, 1, choices)
+            mycompleter = AutoCompleter(parser, cmd2_app, completer, 1, choices)
 
         - static list - provide a static list for each argument name
           ex:
@@ -61,20 +61,18 @@ Released under MIT license, see LICENSE file
 """
 
 import argparse
-from colorama import Fore
 import os
+import re as _re
 import sys
-from typing import List, Dict, Tuple, Callable, Union
-
 
 # imports copied from argparse to support our customized argparse functions
 from argparse import ZERO_OR_MORE, ONE_OR_MORE, ArgumentError, _, _get_action_name, SUPPRESS
+from typing import List, Dict, Tuple, Callable, Union
 
-import re as _re
-
+from colorama import Fore
 
 from .rl_utils import rl_force_redisplay
-
+from .utils import ansi_safe_wcswidth
 
 # attribute that can optionally added to an argparse argument (called an Action) to
 # define the completion choices for the argument. You may provide a Collection or a Function.
@@ -261,21 +259,21 @@ class AutoCompleter(object):
 
     def __init__(self,
                  parser: argparse.ArgumentParser,
+                 cmd2_app,
                  token_start_index: int = 1,
                  arg_choices: Dict[str, Union[List, Tuple, Callable]] = None,
                  subcmd_args_lookup: dict = None,
-                 tab_for_arg_help: bool = True,
-                 cmd2_app=None) -> None:
+                 tab_for_arg_help: bool = True) -> None:
         """
         Create an AutoCompleter
 
         :param parser: ArgumentParser instance
+        :param cmd2_app: reference to the Cmd2 application. Enables argparse argument completion with class methods
         :param token_start_index: index of the token to start parsing at
         :param arg_choices: dictionary mapping from argparse argument 'dest' name to list of choices
         :param subcmd_args_lookup: mapping a sub-command group name to a tuple to fill the child\
         AutoCompleter's arg_choices and subcmd_args_lookup parameters
         :param tab_for_arg_help: Enable of disable argument help when there's no completion result
-        :param cmd2_app: reference to the Cmd2 application. Enables argparse argument completion with class methods
         """
         if not subcmd_args_lookup:
             subcmd_args_lookup = {}
@@ -283,10 +281,10 @@ class AutoCompleter(object):
         else:
             forward_arg_choices = False
         self._parser = parser
+        self._cmd2_app = cmd2_app
         self._arg_choices = arg_choices.copy() if arg_choices is not None else {}
         self._token_start_index = token_start_index
         self._tab_for_arg_help = tab_for_arg_help
-        self._cmd2_app = cmd2_app
 
         self._flags = []  # all flags in this command
         self._flags_without_args = []  # all flags that don't take arguments
@@ -328,11 +326,12 @@ class AutoCompleter(object):
                             subcmd in args_for_action else \
                             (arg_choices, subcmd_args_lookup) if forward_arg_choices else ({}, {})
                         subcmd_start = token_start_index + len(self._positional_actions)
-                        sub_completers[subcmd] = AutoCompleter(action.choices[subcmd], subcmd_start,
+                        sub_completers[subcmd] = AutoCompleter(action.choices[subcmd],
+                                                               cmd2_app,
+                                                               token_start_index=subcmd_start,
                                                                arg_choices=subcmd_args,
                                                                subcmd_args_lookup=subcmd_lookup,
-                                                               tab_for_arg_help=tab_for_arg_help,
-                                                               cmd2_app=cmd2_app)
+                                                               tab_for_arg_help=tab_for_arg_help)
                         sub_commands.append(subcmd)
                     self._positional_completers[action.dest] = sub_completers
                     self._arg_choices[action.dest] = sub_commands
@@ -558,8 +557,8 @@ class AutoCompleter(object):
         # a flag prefix then we'll complete the list of flag options
         if not flag_arg.needed and len(tokens[-1]) > 0 and tokens[-1][0] in self._parser.prefix_chars and \
                 not skip_remaining_flags:
-            return AutoCompleter.basic_complete(text, line, begidx, endidx,
-                                                [flag for flag in self._flags if flag not in matched_flags])
+            return self._cmd2_app.basic_complete(text, line, begidx, endidx,
+                                                 [flag for flag in self._flags if flag not in matched_flags])
         # we're not at a positional argument, see if we're in a flag argument
         elif not current_is_positional:
             if flag_action is not None:
@@ -587,12 +586,19 @@ class AutoCompleter(object):
 
     def _format_completions(self, action, completions: List[Union[str, CompletionItem]]) -> List[str]:
         if completions and len(completions) > 1 and isinstance(completions[0], CompletionItem):
-            token_width = len(action.dest)
+
+            # If the user has not already sorted the CompletionItems, then sort them before appending the descriptions
+            if not self._cmd2_app.matches_sorted:
+                completions.sort(key=self._cmd2_app.matches_sort_key)
+                self._cmd2_app.matches_sorted = True
+
+            token_width = ansi_safe_wcswidth(action.dest)
             completions_with_desc = []
 
             for item in completions:
-                if len(item) > token_width:
-                    token_width = len(item)
+                item_width = ansi_safe_wcswidth(item)
+                if item_width > token_width:
+                    token_width = item_width
 
             term_size = os.get_terminal_size()
             fill_width = int(term_size.columns * .6) - (token_width + 2)
@@ -610,7 +616,6 @@ class AutoCompleter(object):
 
             self._cmd2_app.completion_header = header
             self._cmd2_app.display_matches = completions_with_desc
-            self._cmd2_app.matches_sorted = True
 
         return completions
 
@@ -625,7 +630,7 @@ class AutoCompleter(object):
                         if token in completers:
                             return completers[token].complete_command_help(tokens, text, line, begidx, endidx)
                         else:
-                            return self.basic_complete(text, line, begidx, endidx, completers.keys())
+                            return self._cmd2_app.basic_complete(text, line, begidx, endidx, completers.keys())
         return []
 
     def format_help(self, tokens: List[str]) -> str:
@@ -662,7 +667,7 @@ class AutoCompleter(object):
 
                 if callable(arg_choices[0]):
                     completer = arg_choices[0]
-                elif isinstance(arg_choices[0], str) and callable(getattr(self._cmd2_app, arg_choices[0])):
+                else:
                     completer = getattr(self._cmd2_app, arg_choices[0])
 
                 # extract the positional and keyword arguments from the tuple
@@ -673,22 +678,19 @@ class AutoCompleter(object):
                         list_args = arg_choices[index]
                     elif isinstance(arg_choices[index], dict):
                         kw_args = arg_choices[index]
-                try:
-                    # call the provided function differently depending on the provided positional and keyword arguments
-                    if list_args is not None and kw_args is not None:
-                        return completer(text, line, begidx, endidx, *list_args, **kw_args)
-                    elif list_args is not None:
-                        return completer(text, line, begidx, endidx, *list_args)
-                    elif kw_args is not None:
-                        return completer(text, line, begidx, endidx, **kw_args)
-                    else:
-                        return completer(text, line, begidx, endidx)
-                except TypeError:
-                    # assume this is due to an incorrect function signature, return nothing.
-                    return []
+
+                # call the provided function differently depending on the provided positional and keyword arguments
+                if list_args is not None and kw_args is not None:
+                    return completer(text, line, begidx, endidx, *list_args, **kw_args)
+                elif list_args is not None:
+                    return completer(text, line, begidx, endidx, *list_args)
+                elif kw_args is not None:
+                    return completer(text, line, begidx, endidx, **kw_args)
+                else:
+                    return completer(text, line, begidx, endidx)
             else:
-                return AutoCompleter.basic_complete(text, line, begidx, endidx,
-                                                    self._resolve_choices_for_arg(action, used_values))
+                return self._cmd2_app.basic_complete(text, line, begidx, endidx,
+                                                     self._resolve_choices_for_arg(action, used_values))
 
         return []
 
@@ -699,35 +701,17 @@ class AutoCompleter(object):
             # is the argument a string? If so, see if we can find an attribute in the
             # application matching the string.
             if isinstance(args, str):
-                try:
-                    args = getattr(self._cmd2_app, args)
-                except AttributeError:
-                    # Couldn't find anything matching the name
-                    return []
+                args = getattr(self._cmd2_app, args)
 
             # is the provided argument a callable. If so, call it
             if callable(args):
                 try:
-                    if self._cmd2_app is not None:
-                        try:
-                            args = args(self._cmd2_app)
-                        except TypeError:
-                            args = args()
-                    else:
-                        args = args()
+                    args = args(self._cmd2_app)
                 except TypeError:
-                    return []
+                    args = args()
 
-            try:
-                iter(args)
-            except TypeError:
-                pass
-            else:
-                # filter out arguments we already used
-                args = [arg for arg in args if arg not in used_values]
-
-                if len(args) > 0:
-                    return args
+            # filter out arguments we already used
+            return [arg for arg in args if arg not in used_values]
 
         return []
 
@@ -780,21 +764,6 @@ class AutoCompleter(object):
 
         # Redraw prompt and input line
         rl_force_redisplay()
-
-    # noinspection PyUnusedLocal
-    @staticmethod
-    def basic_complete(text: str, line: str, begidx: int, endidx: int, match_against: List[str]) -> List[str]:
-        """
-        Performs tab completion against a list
-
-        :param text: the string prefix we are attempting to match (all returned matches must begin with it)
-        :param line: the current input line with leading whitespace removed
-        :param begidx: the beginning index of the prefix text
-        :param endidx: the ending index of the prefix text
-        :param match_against: the list being matched against
-        :return: a list of possible tab completions
-        """
-        return [cur_match for cur_match in match_against if cur_match.startswith(text)]
 
 
 ###############################################################################
@@ -921,7 +890,7 @@ class ACHelpFormatter(argparse.RawTextHelpFormatter):
                 # join lines into usage
                 usage = '\n'.join(lines)
 
-        # prefix with 'usage:'
+        # prefix with 'Usage:'
         return '%s%s\n\n' % (prefix, usage)
 
     def _format_action_invocation(self, action) -> str:
@@ -983,9 +952,6 @@ class ACHelpFormatter(argparse.RawTextHelpFormatter):
             result = super()._format_args(action, default_metavar)
         return result
 
-    def format_help(self):
-        return super().format_help() + '\n'
-
 
 # noinspection PyCompatibility
 class ACArgumentParser(argparse.ArgumentParser):
@@ -1001,7 +967,7 @@ class ACArgumentParser(argparse.ArgumentParser):
         self._custom_error_message = ''
 
     # Begin cmd2 customization
-    def set_custom_message(self, custom_message: str='') -> None:
+    def set_custom_message(self, custom_message: str = '') -> None:
         """
         Allows an error message override to the error() function, useful when forcing a
         re-parse of arguments with newly required parameters
@@ -1018,7 +984,7 @@ class ACArgumentParser(argparse.ArgumentParser):
 
     def error(self, message: str) -> None:
         """Custom error override. Allows application to control the error being displayed by argparse"""
-        if len(self._custom_error_message) > 0:
+        if self._custom_error_message:
             message = self._custom_error_message
             self._custom_error_message = ''
 
@@ -1032,10 +998,8 @@ class ACArgumentParser(argparse.ArgumentParser):
                 formatted_message += '\n       ' + line
             linum += 1
 
-        sys.stderr.write(Fore.LIGHTRED_EX + '{}\n\n'.format(formatted_message) + Fore.RESET)
-        # sys.stderr.write('{}\n\n'.format(formatted_message))
-        self.print_help()
-        sys.exit(1)
+        self.print_usage(sys.stderr)
+        self.exit(2, Fore.LIGHTRED_EX + '{}\n\n'.format(formatted_message) + Fore.RESET)
 
     def format_help(self) -> str:
         """Copy of format_help() from argparse.ArgumentParser with tweaks to separately display required parameters"""
@@ -1085,7 +1049,7 @@ class ACArgumentParser(argparse.ArgumentParser):
         formatter.add_text(self.epilog)
 
         # determine help from format above
-        return formatter.format_help()
+        return formatter.format_help() + '\n'
 
     def _get_nargs_pattern(self, action) -> str:
         # Override _get_nargs_pattern behavior to use the nargs ranges provided by AutoCompleter
@@ -1142,7 +1106,7 @@ class ACArgumentParser(argparse.ArgumentParser):
             # all args after -- are non-options
             if arg_string == '--':
                 arg_string_pattern_parts.append('-')
-                for arg_string in arg_strings_iter:
+                for cur_string in arg_strings_iter:
                     arg_string_pattern_parts.append('A')
 
             # otherwise, add the arg to the arg strings

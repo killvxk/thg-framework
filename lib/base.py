@@ -3,15 +3,17 @@ import time
 import threading
 from queue import Queue
 from lib.cmd2 import Cmd, with_category, with_argparser
-from art import text2art, art
+from art import text2art
 from utils import module
 from pathlib import Path
-from colorama import Fore, Style
+import atexit
+import os
+import readline
+from colorama import Style
 from tabulate import tabulate
-import platform
 from colorama import Fore
-from config.Version import __codenome__,__version__
-from config.info_init import *
+from lib.config.Version import __codenome__,__version__
+from lib.config.info_init import *
 from importlib import import_module, reload
 from lib.Database import Database
 from lib.BaseOption import ExploitOption
@@ -32,11 +34,29 @@ class THGBASECONSOLE(Cmd, Database):
     CMD_MODULE = "Module Command"
 
     def __init__(self):
-        super(THGBASECONSOLE, self).__init__()
+        shortcuts = dict()
+        shortcuts.update({'add': 'commandos longos do thg'})
+        alias_script = os.path.join(os.path.dirname(__file__), '.cmd2rc')
+        super(THGBASECONSOLE, self).__init__(startup_script=alias_script,
+                                             use_ipython=True,
+                                             completekey="tab",
+                                             persistent_history_file="history",
+                                             persistent_history_length=999999,
+                                             multiline_commands=['orate'],
+                                             shortcuts=shortcuts)
+        self.allow_redirection = False
+        self.allow_cli_args = False
         Database.__init__(self)
         self.prompt = self.console_prompt + self.console_prompt_end
         self.do_banner(None)
+        self.poutput("dsadsadsadsadsa")
 
+    def do_eat(self, arg):
+        sauce = self.select('sweet salty', 'Sauce? ')
+        result = '{food} with {sauce} sauce, yum!'
+        result = result.format(food=arg, sauce=sauce)
+        self.stdout.write(result + '\n')
+        
     @with_category(CMD_CORE)
     def do_banner(self, args):
         # exploits_count=self.modules_count["exploits"] + self.modules_count['extra_exploits'],
@@ -415,9 +435,7 @@ class THGBASECONSOLE(Cmd, Database):
                 self._print_item(error, Fore.RED)
             return False
 
-        # 处理指定多个目标的情况
         if self.module_instance.multi_target:
-            # 读取多个目标
             target_type = self.module_instance.target_type
             target_field = None
 
