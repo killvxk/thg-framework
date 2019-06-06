@@ -1,4 +1,4 @@
-from lib.base import THGBASECONSOLE
+from lib.BaseMode.base import THGBASECONSOLE
 
 
 class THGSTART(THGBASECONSOLE):

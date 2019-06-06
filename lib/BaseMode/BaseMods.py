@@ -1,6 +1,6 @@
-from lib.BaseOption import ExploitOption
-from lib.BaseOptions import ExploitOptions
-from lib.BaseResult import ExploitResult
+from lib.BaseMode.BaseOptions import BaseOption
+from lib.BaseMode.BaseOptions import BaseOptions
+from lib.BaseMode.BaseResult import BaseResult
 
 
 class BaseExploit:
@@ -22,8 +22,8 @@ class BaseExploit:
         self.multi_target = False
         self.target_type = None
         self.targets = []
-        self.options = ExploitOptions()
-        self.results = ExploitResult()
+        self.options = BaseOptions()
+        self.results = BaseResult()
 
     def get_info(self):
         info = {}
@@ -34,18 +34,18 @@ class BaseExploit:
     def register_tcp_target(self, port_value=None, timeout_value=5, threads_value=1):
         self.target_type = "tcp"
         self.register_options([
-            ExploitOption(name="HOST", required=True, description="The IP address to be tested"),
-            ExploitOption(name="PORT", required=True, description="The port to be tested", value=port_value),
-            ExploitOption(name="TIMEOUT", required=True, description="Connection timeout", value=timeout_value),
-            ExploitOption(name="THREADS", required=True, description="The number of threads", value=threads_value)
+            BaseOption(name="HOST", required=True, description="The IP address to be tested"),
+            BaseOption(name="PORT", required=True, description="The port to be tested", value=port_value),
+            BaseOption(name="TIMEOUT", required=True, description="Connection timeout", value=timeout_value),
+            BaseOption(name="THREADS", required=True, description="The number of threads", value=threads_value)
         ])
 
     def register_http_target(self, timeout_value=5, threads_value=1):
         self.target_type = "http"
         self.register_options([
-            ExploitOption(name="URL", required=True, description="The url to be tested"),
-            ExploitOption(name="TIMEOUT", required=True, description="Connection timeout", value=timeout_value),
-            ExploitOption(name="THREADS", required=True, description="The number of threads", value=threads_value)
+            BaseOption(name="URL", required=True, description="The url to be tested"),
+            BaseOption(name="TIMEOUT", required=True, description="Connection timeout", value=timeout_value),
+            BaseOption(name="THREADS", required=True, description="The number of threads", value=threads_value)
         ])
 
     def update_info(self, info):

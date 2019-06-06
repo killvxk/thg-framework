@@ -1,0 +1,79 @@
+alias 
+alias  list
+dsa
+ls
+dsa
+alias create dsa !ls
+sda
+dsa
+!ls
+ls
+use test/test 
+show info 
+info
+show info
+db_rebuild 
+set debug true
+db_rebuild 
+search 
+help 
+eat 
+help 
+save
+load 
+unload
+load 
+load data/
+load data/mime.yml 
+ls
+help 
+shell
+shell-h
+shell -h 
+shell nano a
+load a
+grep
+|
+| grep
+history 
+mmmmmmmmmmmmmmmmmmmmmmm\
+ip
+set debug true
+ip
+help 
+exit
+quit 
+help 
+exit 
+help 
+edit 
+edit -h
+help 
+edit 
+help 
+ip
+help 
+exit 
+help 
+help --long
+help 
+help --help
+help -v
+alias create help "help -v"
+help 
+alias create help help -v
+help 
+shortcuts 
+shortcuts -h
+shortcuts --help
+help 
+exec 
+exec  ls
+exec
+exec l
+exec ls
+help 
+help -v
+help 
+help -v
+exit 

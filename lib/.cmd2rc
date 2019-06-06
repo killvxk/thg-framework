@@ -1,2 +1,1 @@
-#futuros commandos para o thg-console
-alias create dsa !ls
+alias create help help -v

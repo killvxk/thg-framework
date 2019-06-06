@@ -6,23 +6,19 @@ from lib.cmd2 import Cmd, with_category, with_argparser
 from art import text2art
 from utils import module
 from pathlib import Path
-import atexit
-import os
-import readline
 from colorama import Style
 from tabulate import tabulate
 from colorama import Fore
 from lib.config.Version import __codenome__,__version__
 from lib.config.info_init import *
 from importlib import import_module, reload
-from lib.Database import Database
-from lib.BaseOption import ExploitOption
+from lib.BaseMode.Database import Database
+from lib.BaseMode.BaseOptions import BaseOption
 from lib.exception.Module import ModuleNotUseException
 
 
 class THGBASECONSOLE(Cmd, Database):
     colors = "Always"
-
     console_prompt = "{COLOR_START}thg-console{COLOR_END}".format(COLOR_START=Fore.CYAN, COLOR_END=Fore.BLUE)
     console_prompt_end = " > "
     module_name = None
@@ -32,6 +28,7 @@ class THGBASECONSOLE(Cmd, Database):
     # command categories
     CMD_CORE = "Core Command"
     CMD_MODULE = "Module Command"
+    CMD_DATABASE= "Database Backend Commands"
 
     def __init__(self):
         shortcuts = dict()
@@ -50,13 +47,14 @@ class THGBASECONSOLE(Cmd, Database):
         self.prompt = self.console_prompt + self.console_prompt_end
         self.do_banner(None)
         self.poutput("dsadsadsadsadsa")
-
+    '''
+    add select
     def do_eat(self, arg):
         sauce = self.select('sweet salty', 'Sauce? ')
         result = '{food} with {sauce} sauce, yum!'
         result = result.format(food=arg, sauce=sauce)
         self.stdout.write(result + '\n')
-        
+    '''
     @with_category(CMD_CORE)
     def do_banner(self, args):
         # exploits_count=self.modules_count["exploits"] + self.modules_count['extra_exploits'],
@@ -112,7 +110,149 @@ class THGBASECONSOLE(Cmd, Database):
                            ip=thg_add_init.ipi(),
                            mac=thg_add_init.get_mac())
         print(self.banner)
+        '''
+        #Alias Commands
+==============
+Command       Description
+-------       -----------
+#alias         create or view an alias.
+#del           rm
+#handler       use exploit/multi/handler
+System command
+==============
+    Command             Description
+    -------             -----------
+    battery            show battery info
+    free              show mmr/swp info
+    killall           kill pid
+    netstat           show connect
+    pmap              show structure pid
+    procsmem          show command line proc info 
+    pstree            show process tree
+    temperatures      show hardware temperature
+    who               list/show current user
+    disk_usage        show devices info
+    fans              show RPM
+    ifconfig          show config network
+    meminfo           show memore info
+    nettop            show netconect
+    procinfo          show procinfo
+    ps                show process
+    sensors           show hardwares sensors
+    top               show process
+Core Commands
+=============
+    Command       Description
+    -------       -----------
+    show banner    Display an awesome thgbanner
+    show Ip        show internal ip 
+    exit           Exit the console
+    unsetg         Unsets one or more global variables
+    help           Help menu
+    show history   Show thg_command history
+    setg           Sets a global variable to a value
+    set            Sets a context-specific variable to a value
+    exec           <shell thg_command> <args> Execute a thg_command in a shell
+    cd             Change the current working directory
+    color          Toggle color
+    route          Route traffic through a session V-1base
+    show version   Show the framework and console library version numbers
+    quit           Exit the console
+    #connect       Communicate with a host
+    #grep          Grep the output of another thg_command
+    #load          Load a framework plugin
+    #save          Saves the active datastores
+    #sessions      Dump session listings and display information about sessions
+    sleep         Do nothing for the specified number of seconds
+    #spool         Write console output into a file as well the screen
+    #unload        Unload a framework plugin
+#Module Commands
+===============
+    #Command        Description
+    -------        -----------
+    show all       show all modules {red}->{magent} (@sys_module){Blue}{grn}{grn}
+    show creds     show creds in db {red}->{Blue} (@module_required){Blue}{grn}{grn}
+    show devices   show devices modules {red}->{Blue} (@module_required){Blue}{grn}{grn}
+    show encoders  show encoders for module {red}->{Blue} (@module_required){Blue}{grn}{grn}
+    show exploits  show exploit modules {red}->{magent} (@sys_module){Blue}{grn}{grn}   
+    show auxiliary show auxiliary modules {red}->{magent} (@sys_module){Blue}{grn}{grn}
+    show nops      show nops modules {red}->{magent} (@sys_module){Blue}{grn}{grn}
+    show payloads  show payload modules {red}->{magent} (@sys_module){Blue}{grn}{grn}
+    show post      show post modules {red}->{magent} (@sys_module){Blue}{grn}{grn}
+    show info      show info modules {red}->{Blue} (@module_required){Blue}{grn}{grn}
+    show options   show options in the modules {red}->{Blue} (@module_required){Blue}{grn}{grn}
+    show wordlists show wordlist in thgconsole date {red}->{Blue} (@module_required){Blue}{grn}{grn}
+    show threads   View and manipulate background threads {red}->{Blue} (@module_required){Blue}{grn}{grn}
+    #advanced      Displays advanced options for one or more modules {red}->{magent} (@sys_module){Blue}{grn}{grn}
+    back           Move back from the current context {red}->{magent} (@sys_module){Blue}{grn}{grn}
+    show info      Displays information about one or more modules
+    #loadpath      Searches for and loads modules from a path {red}->{magent} (@sys_module){Blue}{grn}{grn}
+    options        Displays global options or for one or more modules
+    #popm          Pops the latest module off the stack and makes it active {red}->{magent} (@sys_module){Blue}{grn}{grn}
+    #previous      Sets the previously loaded module as the current module {red}->{magent} (@sys_module){Blue}{grn}{grn}
+    #pushm         Pushes the active or list of modules onto the module stack {red}->{magent} (@sys_module){Blue}{grn}{grn}
+    #reload_all    Reloads all modules from all defined module paths {red}->{magent} (@sys_module){Blue}{grn}{grn}
+    search         Searches module names and descriptions {red}->{magent} (@sys_module){Blue}{grn}{grn}
+    show           Displays modules of a given type, or all modules {red}->{magent} (@sys_module){Blue}{grn}{grn}
+    use            Selects a module by name {red}->{magent} (@sys_module){Blue}{grn}{grn}
+#Job Commands
+============
+#Command       Description
+-------       -----------
+#handler       Start a payload handler as job
+#jobs          Displays and manages jobs
+#kill          Kill a job
+#rename_job    Rename a job
+#Resource Script Commands
+========================
+#Command       Description
+-------       -----------
+#makerc        Save thg_commands entered since start to a file
+#resource      Run the thg_commands stored in a file
+#Developer Commands
+==================
+#Command       Description
+-------       -----------
+#edit               Edit the current module or a file with the preferred editor
+python_interpreter  Drop into python  scripting mode
+log                 Displays framework.log starting at the bottom if possible
+#reload_lib         Reload one or more library files from specified paths
+#Database Backend Commands
+=========================
+#Command           Description
+-------           -----------
+#db_connect        Connect to an existing database
+#db_disconnect     Disconnect from the current database instance
+#db_export         Export a file containing the contents of the database
+#db_import         Import a scan result file (filetype will be auto-detected)
+#db_nmap           Executes nmap and records the output automatically
+#db_rebuild_cache  Rebuilds the database-stored module cache
+#db_status         Show the current database status
+#hosts             List all hosts in the database
+#loot              List all loot in the database
+#notes             List all notes in the database
+#services          List all services in the database
+#vulns             List all vulnerabilities in the database
+#workspace         Switch between database workspaces
+Credentials Backend Commands
+============================
+Command       Description
+-------       -----------
+#creds         List all credentials in the database
+        '''
 
+    @with_category(CMD_CORE)
+    def do_ip(self,args):
+        """show ip"""
+        self._print_item(thg_add_init.ipi())
+    @with_category(CMD_CORE)
+    def do_exit(self,args):
+        """Exit the console"""
+        exit(1)
+    @with_category(CMD_CORE)
+    def do_exec(self,args):
+        """ <shell thg_command> <args> Execute a thg_command in a shell"""
+        os.system(args)
     @with_category(CMD_MODULE)
     def do_listmod(self, args):
         """List all modules"""
@@ -247,7 +387,7 @@ class THGBASECONSOLE(Cmd, Database):
 
         if content == "options" or content == "info":
             options = self.module_instance.options.get_options()
-            default_options_instance = ExploitOption()
+            default_options_instance = BaseOption()
             options_table = []
             for option in options:
                 options_table_row = []
@@ -270,7 +410,7 @@ class THGBASECONSOLE(Cmd, Database):
                 self.poutput("No option missing!", color=Fore.CYAN)
                 return None
 
-            default_options_instance = ExploitOption()
+            default_options_instance = BaseOption()
             missing_options_table = []
             for option in missing_options:
                 options_table_row = []
@@ -507,13 +647,13 @@ class THGBASECONSOLE(Cmd, Database):
             style_end=Style.RESET_ALL
         ))
 
-    @with_category(CMD_CORE)
+    @with_category(CMD_DATABASE)
     def do_db_rebuild(self, args):
         """Rebuild database for search"""
         self.db_rebuild()
         self.poutput("Database rebuild done.", color=Fore.GREEN)
 
-    @with_category(CMD_MODULE)
+    @with_category(CMD_DATABASE)
     def do_reload(self, args):
         """reload the chose module"""
         self.do_use(self.module_name, module_reload=True)
