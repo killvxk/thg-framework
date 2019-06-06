@@ -62,8 +62,10 @@ __thg_module__ = [
 ]
 for i in __thg_module__:
     try:
+        os.mkdir(i)
+        os.chdir(i)
         os.system("touch " + i + ".md")
-
+        os.chdir("../")
     except FileExistsError:
         print(i + " pass")
 

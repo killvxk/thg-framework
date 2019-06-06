@@ -144,22 +144,13 @@ Core Commands
 =============
     Command       Description
     -------       -----------
-    show banner    Display an awesome thgbanner
-    show Ip        show internal ip 
-    exit           Exit the console
     unsetg         Unsets one or more global variables
-    help           Help menu
-    show history   Show thg_command history
     setg           Sets a global variable to a value
-    set            Sets a context-specific variable to a value
     exec           <shell thg_command> <args> Execute a thg_command in a shell
     cd             Change the current working directory
     color          Toggle color
     route          Route traffic through a session V-1base
-    show version   Show the framework and console library version numbers
-    quit           Exit the console
     #connect       Communicate with a host
-    #grep          Grep the output of another thg_command
     #load          Load a framework plugin
     #save          Saves the active datastores
     #sessions      Dump session listings and display information about sessions
@@ -170,7 +161,6 @@ Core Commands
 ===============
     #Command        Description
     -------        -----------
-    show all       show all modules {red}->{magent} (@sys_module){Blue}{grn}{grn}
     show creds     show creds in db {red}->{Blue} (@module_required){Blue}{grn}{grn}
     show devices   show devices modules {red}->{Blue} (@module_required){Blue}{grn}{grn}
     show encoders  show encoders for module {red}->{Blue} (@module_required){Blue}{grn}{grn}
@@ -179,22 +169,15 @@ Core Commands
     show nops      show nops modules {red}->{magent} (@sys_module){Blue}{grn}{grn}
     show payloads  show payload modules {red}->{magent} (@sys_module){Blue}{grn}{grn}
     show post      show post modules {red}->{magent} (@sys_module){Blue}{grn}{grn}
-    show info      show info modules {red}->{Blue} (@module_required){Blue}{grn}{grn}
-    show options   show options in the modules {red}->{Blue} (@module_required){Blue}{grn}{grn}
     show wordlists show wordlist in thgconsole date {red}->{Blue} (@module_required){Blue}{grn}{grn}
     show threads   View and manipulate background threads {red}->{Blue} (@module_required){Blue}{grn}{grn}
     #advanced      Displays advanced options for one or more modules {red}->{magent} (@sys_module){Blue}{grn}{grn}
-    back           Move back from the current context {red}->{magent} (@sys_module){Blue}{grn}{grn}
-    show info      Displays information about one or more modules
     #loadpath      Searches for and loads modules from a path {red}->{magent} (@sys_module){Blue}{grn}{grn}
     options        Displays global options or for one or more modules
     #popm          Pops the latest module off the stack and makes it active {red}->{magent} (@sys_module){Blue}{grn}{grn}
     #previous      Sets the previously loaded module as the current module {red}->{magent} (@sys_module){Blue}{grn}{grn}
     #pushm         Pushes the active or list of modules onto the module stack {red}->{magent} (@sys_module){Blue}{grn}{grn}
     #reload_all    Reloads all modules from all defined module paths {red}->{magent} (@sys_module){Blue}{grn}{grn}
-    search         Searches module names and descriptions {red}->{magent} (@sys_module){Blue}{grn}{grn}
-    show           Displays modules of a given type, or all modules {red}->{magent} (@sys_module){Blue}{grn}{grn}
-    use            Selects a module by name {red}->{magent} (@sys_module){Blue}{grn}{grn}
 #Job Commands
 ============
 #Command       Description
@@ -241,6 +224,10 @@ Command       Description
 #creds         List all credentials in the database
         '''
 
+    @with_category(CMD_CORE)
+    def do_version(self,args):
+        """show version"""
+        self._print_item(__version__)
     @with_category(CMD_CORE)
     def do_ip(self,args):
         """show ip"""
@@ -528,10 +515,10 @@ Command       Description
 
         exploit_result = self.module_instance.exploit()
         if exploit_result.status:
-            self._print_item("Exploit success!")
+            self._print_item("module success!")
             self._print_item(exploit_result.success_message)
         else:
-            self._print_item("Exploit failure!", color=Fore.RED)
+            self._print_item("module failure!", color=Fore.RED)
             self._print_item(exploit_result.error_message, color=Fore.RED)
         self.poutput("{style}[*]{style_end} module execution completed".format(
             style=Fore.BLUE + Style.BRIGHT,
@@ -663,15 +650,15 @@ Command       Description
             module_type=module_type,
             module_name=module_name.replace(module_type + "/", ""),
             color=Fore.RED,
-            color_end=Fore.RESET
+            color_end=Fore.RESETlistmod
         )
         self.prompt = self.console_prompt + module_prompt + self.console_prompt_end
 
     def _print_modules(self, modules, title):
         self.poutput(title, "\n\n", color=Fore.CYAN)
-        self.poutput(tabulate(modules, headers=('module_name', 'check', 'disclosure_date', 'description')), '\n\n')
+        self.poutput(tabulate(modules,headers=('name', 'module_name', 'description', 'author', 'disclosure_date', 'service_name', 'service_version', 'check')), '\n\n')
 
-    def _print_item(self, message, color=Fore.YELLOW):
+    def _print_item(self, message, color=Fore.GREEN):
         self.poutput("{style}[+]{style_end} {message}".format(
             style=color + Style.BRIGHT,
             style_end=Style.RESET_ALL,

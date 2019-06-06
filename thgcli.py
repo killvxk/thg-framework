@@ -1,6 +1,5 @@
 from lib.BaseMode.base import THGBASECONSOLE
 
-
 class THGSTART(THGBASECONSOLE):
     def run(self):
         self.cmdloop()

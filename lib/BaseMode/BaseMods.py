@@ -47,6 +47,12 @@ class BaseExploit:
             BaseOption(name="TIMEOUT", required=True, description="Connection timeout", value=timeout_value),
             BaseOption(name="THREADS", required=True, description="The number of threads", value=threads_value)
         ])
+    def register_encode_target(self, encode=""):
+        self.target_type = "encode"
+        self.register_options([
+            BaseOption(name="string", required=True, description="string to encode"),
+            BaseOption(name="encode", required=True, description="encode", value=encode),
+        ])
 
     def update_info(self, info):
         for name in info:

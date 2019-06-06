@@ -41,7 +41,7 @@ The "[x]" are the commands that is working and the "[ ]" are the future funciona
 | Command        | Description|
 | -------------  |:-------------: |
 | - [x] alias    | create or view an alias. |
-| - [x] del      |  rm |
+| - [] del      |  rm |
 | - [ ] handler  |  use exploit/multi/handler |
 
 System command
@@ -71,23 +71,23 @@ Command                | Description
 
 Command              | Description
 | -------------      |:-------------: |
-| - [x] show banner  |    Display an awesome thgbanner|
-| - [x] show Ip      |   show internal ip|
+| - [x] banner       |    Display an awesome thgbanner|
+| - [x] ip           |   show internal ip|
 | - [x] exit         |   Exit the console|
-| - [] unsetg       |  Unsets one or more global variables|
+| - [] unsetg        |  Unsets one or more global variables|
 | - [x] help         | Help menu|
-| - [x] show history | Show command history|
-| - [] setg         | Sets a global variable to a value|
+| - [x] history      | Show command history|
+| - [] setg          | Sets a global variable to a value|
 | - [x] set          | Sets a context-specific variable to a value|
 | - [x] exec         | <shell command> <args> Execute a command in a shell|
-| - [] cd           | Change the current working directory|
-| - [] color        | Toggle color|
-| - [] route        | Route traffic through a session V-1base|
-| - [x] show version | Show the framework and console library version numbers|
+| - [] cd            | Change the current working directory|
+| - [] color         | Toggle color|
+| - [] route         | Route traffic through a session V-1base|
+| - [x]version       | Show the framework and console library version numbers|
 | - [x] quit         | Exit the console|
 | - [ ] *connect*    |  Communicate with a host|
-| - [ ] *grep*       |  Grep the output of another command|
-| - [ ] *load*       | Load a framework plugin|
+| - [X] *grep*       |  Grep the output of another command|
+| - [x] *load*       | Load a framework plugin|
 | - [ ] *save*       | Saves the active datastores|
 | - [ ] *sessions*   | Dump session listings and display information about sessions|
 | - [x] sleep        | Do nothing for the specified number of seconds|
@@ -108,7 +108,7 @@ Command               |Description
 | - [] show auxiliary|  show auxiliary modules -> (@sys_module)|
 | - [] show nops     |  show nops modules -> (@sys_module)|
 | - [] show payloads |  show payload modules -> (@sys_module)|
-| - [] show post     |  show post modules -> (@sys_module)|
+| - [] show post     |  show post modules -> (@sys_module)| 
 | - [x] show info     | show info modules -> (@module_required)|
 | - [x] show options  | show options in the modules -> (@module_required)|
 | - [] show wordlists| show wordlist in thgconsole date -> (@module_required)|

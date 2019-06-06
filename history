@@ -77,3 +77,100 @@ help -v
 help 
 help -v
 exit 
+help 
+use test/a 
+show info 
+reload 
+help 
+show info 
+use auxiliary/encode/base64 
+show options 
+set string darkcode
+show missing 
+db_rebuild 
+show options 
+run
+use auxiliary/encode/base64 
+show info 
+set encode darkcode
+run
+show missing 
+set string darkcode
+show missing 
+show options 
+show info 
+use auxiliary/encode/base64 
+show options 
+use auxiliary/encode/base64 
+show options 
+use auxiliary/encode/base64 
+show options 
+use auxiliary/encode/base64 
+use 
+set debug true
+use 
+use auxiliary/encode/base64 
+show options 
+set encode 
+set encode -h
+use auxiliary/encode/base64 
+show options 
+set string darkcode
+run
+check 
+use auxiliary/encode/base64 
+run
+set string darkcode
+run
+check 
+use auxiliary/encode/base64 
+show options 
+set string darkcode
+check 
+use auxiliary/encode/base64 
+set string darkcode
+check 
+run
+use auxiliary/encode/base64 
+check 
+set string dark
+run
+info
+show missing 
+show options 
+use auxiliary/encode/base64 
+set string darkcode
+run
+use auxiliary/encode/base64 
+show options 
+set string dark
+run
+use auxiliary/encode/base64 
+run
+set string dark
+run
+use auxiliary/encode/base64 
+set string dark
+run
+use auxiliary/encode/base64 
+set string dark
+run
+use auxiliary/encode/base64 
+show options 
+set string dsa
+run
+use auxiliary/encode/base64 
+show options 
+set string dark
+run
+use auxiliary/encode/base64 
+set string dark
+run
+use auxiliary/encode/base64 
+set string dark
+run
+use auxiliary/encode/base64 
+show options 
+set string dark
+run
+listmod 
