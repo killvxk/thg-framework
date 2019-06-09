@@ -36,8 +36,15 @@ nav:
   - Introduction: index.md
   - Community: community.md
   - Conceptual: conceptual.md
+  - build: cli/build.md
+  - tags: cli/tags.md
+  - LICENSE: ./LICENSE.md
 
-- english:
+- Contributing:
+  - Get Started: ./contributing/Contributing-to-thg.md
+  - templates: cli/templates.md
+
+- documentation:
   - capture the flag:
     - basic:
       - analysis:
@@ -89,66 +96,60 @@ nav:
 - CLI:
   - THG-PART-1:
     - THG: ./tutorials/thg.md
-    - thg_server: ./tutorials/server.md
-    - thg_version: ./tutorials/version.md
-    - thg_shells: ./tutorials/shells.md
-    - thg_docs:  ./tutorials/thg_docs.md
-    - thg_auxiliares: ./tutorials/auxiliares.md
-    - thg_anti_forensic: ./tutorials/anti_forensic.md
-    - thg_crypto: ./tutorials/crypto.md
-    - thg_drone: ./tutorials/drone.md
-    - thg_keylogger: ./tutorials/keylogger.md
-    - thg_recon: ./tutorials/recon.md
-    - thg_voip: ./tutorials/voip.md
-    - thg_automation: ./tutorials/automation.md
-    - thg_cryptography: ./tutorials/cryptography.md
-    - thg_exploitation: ./tutorials/exploitation.md
-    - thg_malware: ./tutorials/malware.md
-    - thg_reversing: ./tutorials/reversing.md
-    - thg_windows: ./tutorials/thg_windows.md
-    - thg_automobile: ./tutorials/automobile.md
-    - thg_database: ./tutorials/database.md
-    - thg_fingerprint: ./tutorials/fingerprint.md
-    - thg_misc: ./tutorials/misc.md
-    - thg_sniffer: ./tutorials/sniffer.md
-    - thg_wireless: ./tutorials/wireless.md
-    - thg_debugger: ./tutorials/debugger.md
-    - thg_firmware: ./tutorials/firmware.md
-    - thg_mobile: ./tutorials/mobile.md
-    - thg_social: ./tutorials/social.md
-    - thg_backdoor: ./tutorials/backdoor.md
-    - thg_decompiler: ./tutorials/decompiler.md
-    - thg_forensic: ./tutorials/forensic.md
+    - thg_server: ./tutorials/server/server.md
+    - thg_version: ./tutorials/version/version.md
+    - thg_shells: ./tutorials/shells/shells.md
+    - thg_docs:  ./tutorials/thg_docs/thg_docs.md
+    - thg_auxiliares: ./tutorials/auxiliares/auxiliares.md
+    - thg_anti_forensic: ./tutorials/anti_forensic/anti_forensic.md
+    - thg_crypto: ./tutorials/crypto/crypto.md
+    - thg_drone: ./tutorials/drone/drone.md
+    - thg_keylogger: ./tutorials/keylogger/keylogger.md
+    - thg_recon: ./tutorials/recon/recon.md
+    - thg_voip: ./tutorials/voip/voip.md
+    - thg_automation: ./tutorials/automation/automation.md
+    - thg_cryptography: ./tutorials/cryptography/cryptography.md
+    - thg_exploitation: ./tutorials/exploitation/exploitation.md
+    - thg_malware: ./tutorials/malware/malware.md
+    - thg_reversing: ./tutorials/reversing/reversing.md
+    - thg_windows: ./tutorials/thg_windows/thg_windows.md
+    - thg_automobile: ./tutorials/automobile/automobile.md
+    - thg_database: ./tutorials/database/database.md
+    - thg_fingerprint: ./tutorials/fingerprint/fingerprint.md
+    - thg_misc: ./tutorials/misc/misc.md
+    - thg_sniffer: ./tutorials/sniffer/sniffer.md
+    - thg_wireless: ./tutorials/wireless/wireless.md
+    - thg_debugger: ./tutorials/debugger/debugger.md
+    - thg_firmware: ./tutorials/firmware/firmware.md
+    - thg_mobile: ./tutorials/mobile/mobile.md
+    - thg_social: ./tutorials/social/social.md
+    - thg_backdoor: ./tutorials/backdoor/backdoor.md
+    - thg_decompiler: ./tutorials/decompiler/decompiler.md
+    - thg_forensic: ./tutorials/forensic/forensic.md
   - THG-PART-2:
-    - thg_networking: ./tutorials/networking.md
-    - thg_spoff: ./tutorials/spoff.md
-    - thg_binary: ./tutorials/binary.md
-    - thg_defensensive: ./tutorials/defensensive.md
-    - thg_gpu: ./tutorials/gpu.md
-    - thg_os: ./tutorials/os.md
-    - thg_nfc: ./tutorials/nfc.md
-    - thg_spoof: ./tutorials/spoof.md
-    - thg_version: ./tutorials/version.md
-    - thg_bluetooth: ./tutorials/bluetooth.md
-    - thg_defensive: ./tutorials/defensive.md
-    - thg_hardware: ./tutorials/hardware.md
-    - thg_packer: ./tutorials/packer.md
-    - thg_stego: ./tutorials/stego.md
-    - thg_code_audit: ./tutorials/code_audit.md
-    - thg_disassembler: ./tutorials/disassembler.md
-    - thg_honeypot: ./tutorials/honeypot.md
-    - thg_proxy: ./tutorials/proxy.md
-    - thg_tunnel: ./tutorials/tunnel.md
-    - thg_cracker: ./tutorials/cracker.md
-    - thg_dos: ./tutorials/dos.md
-    - thg_ids: ./tutorials/ids.md
-    - thg_radio: ./tutorials/radio.md
-    - thg_unpacker: ./tutorials/unpacker.md
-- Contributing:
-  - Get Started: ./contributing/Contributing-to-thg.md
-  - templates: cli/templates.md
-  - build: cli/build.md
-  - tags: cli/tags.md
-  - LICENSE: ./LICENSE.md
+    - thg_networking: ./tutorials/networking/networking.md
+    - thg_spoff: ./tutorials/spoff/spoff.md
+    - thg_binary: ./tutorials/binary/binary.md
+    - thg_defensensive: ./tutorials/defensensive/defensensive.md
+    - thg_gpu: ./tutorials/gpu/gpu.md
+    - thg_os: ./tutorials/os/os.md
+    - thg_nfc: ./tutorials/nfc/nfc.md
+    - thg_spoof: ./tutorials/spoof/spoof.md
+    - thg_version: ./tutorials/version/version.md
+    - thg_bluetooth: ./tutorials/bluetooth/bluetooth.md
+    - thg_defensive: ./tutorials/defensive/defensive.md
+    - thg_hardware: ./tutorials/hardware/hardware.md
+    - thg_packer: ./tutorials/packer/packer.md
+    - thg_stego: ./tutorials/stego/stego.md
+    - thg_code_audit: ./tutorials/code_audit/code_audit.md
+    - thg_disassembler: ./tutorials/disassembler/disassembler.md
+    - thg_honeypot: ./tutorials/honeypot/honeypot.md
+    - thg_proxy: ./tutorials/proxy/proxy.md
+    - thg_tunnel: ./tutorials/tunnel/tunnel.md
+    - thg_cracker: ./tutorials/cracker/cracker.md
+    - thg_dos: ./tutorials/dos/dos.md
+    - thg_ids: ./tutorials/ids/ids.md
+    - thg_radio: ./tutorials/radio/radio.md
+    - thg_unpacker: ./tutorials/unpacker/unpacker.md
 
 
