@@ -1,3 +1,4 @@
+![banner](https://github.com/darkcode357/thg-framework/blob/master/documentation/xss_main.jpg)
 ## THG-FRAMEWORK
 # About the project
 
