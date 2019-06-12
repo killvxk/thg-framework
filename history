@@ -174,3 +174,131 @@ show options
 set string dark
 run
 listmod 
+help 
+help -v 
+ipy
+py
+help 
+shell 
+shell  apt install
+shell  apt install ipython*
+help 
+ipy -h
+ipy  --help
+help ipy  
+ipy
+y
+load 
+load -h
+macro 
+macro -h
+py -h
+shell -h
+shortcuts -h
+shortcuts 
+print 
+ip
+help 
+alias list 
+help 
+banner 
+help 
+banner 
+listmod 
+db_rebuild 
+reload 
+help 
+exec 
+exec  -h 
+exec  ls
+exit 
+help 
+ip
+version 
+db_rebuild 
+db_rebuild  -h 
+reload 
+set debug true
+reload 
+use auxiliary/encode/base64 
+use test/a 
+use test/test 
+edit 
+help 
+search a
+shell ls modules
+search 
+search r
+search t
+help 
+reload 
+set debug true
+reload 
+use auxiliary/encode/base64 
+show info 
+edit 
+edit dsa.py
+load dsa.py 
+edit dsa.py
+load dsa.py 
+load 
+reload 
+use auxiliary/encode/base64 
+help 
+db_rebuild 
+set debug true
+db_rebuild 
+edit /tools/thg-framework/modules/auxiliary/encode/base64.py
+db_rebuild 
+reload 
+db_rebuild 
+listmod 
+edit auxiliary/encode/base64
+use auxiliary/encode/base64 
+show info 
+edit modules/auxiliary/encode/base64.py 
+reload 
+edit modules/auxiliary/encode/base64.py 
+show info 
+help 
+use auxiliary/encode/base64 
+db_rebuild 
+search 
+use auxiliary/encode/base64 
+show info 
+show missing 
+show options 
+help ]
+back 
+use auxiliary/encode/base64 
+check 
+set string darkcode
+check 
+exploit 
+help 
+listmod 
+search pay
+search 
+db_rebuild 
+search 
+listmod 
+help 
+run
+set
+set -h
+edit 
+edit trg
+set -f tth
+set -f trg string
+show options 
+run
+set -f string  trg
+run
+edit trg
+set -f string  trg
+run
+help 
+use
+use -h
+help use 
+use 

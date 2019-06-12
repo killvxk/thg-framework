@@ -40,7 +40,9 @@ class THGBASECONSOLE(Cmd, Database):
                                              persistent_history_file="history",
                                              persistent_history_length=999999,
                                              multiline_commands=['orate'],
-                                             shortcuts=shortcuts)
+                                             shortcuts=shortcuts,
+                                             )
+        self.editor = "nano"
         self.allow_redirection = False
         self.allow_cli_args = False
         Database.__init__(self)
@@ -64,7 +66,7 @@ class THGBASECONSOLE(Cmd, Database):
         # payloads_count=self.modules_count["payloads"] + self.modules_count['extra_payloads'],
         # post_count=self.modules_count["post"] + self.modules_count['extra_post'],
         #                    evasion_count=self.modules_count["evasion"],
-        """Print thg-console banner"""
+        """Print thg-console bannercolor_end=Fore.RESETlistmod"""
         ascii_text = text2art("thg-console", "rand")
         self.poutput("\n\n")
         self.poutput(ascii_text, '\n\n', color=Fore.LIGHTCYAN_EX)
@@ -90,7 +92,7 @@ class THGBASECONSOLE(Cmd, Database):
 
         {CYAN}==================={GREEN}[ thgconsole-info ]{GREEN}{CYAN}========================
         {CYAN}==================={GREEN}[ thgconsole-config ]{GREEN}{CYAN}========================
-        {YELLOW}+ -- --=[{RED}DB_STATUS =>{MAGENTA}off next fix 2.0.4  {RED}{YELLOW}]=-- -- +
+        {YELLOW}+ -- --=[{RED}DB_STATUS =>{MAGENTA}on{RED}{YELLOW}]=-- -- +
                 """.format(os=platform.uname()[0],
                            release=platform.uname()[2],
                            versao=platform.uname()[3],
@@ -650,7 +652,7 @@ Command       Description
             module_type=module_type,
             module_name=module_name.replace(module_type + "/", ""),
             color=Fore.RED,
-            color_end=Fore.RESETlistmod
+            color_end=Fore.GREEN
         )
         self.prompt = self.console_prompt + module_prompt + self.console_prompt_end
 
