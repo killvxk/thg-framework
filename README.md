@@ -4,7 +4,7 @@
 THG Framework is a system for exploitation available to Linux/Windows, like Metasploit but is more easy to use, fast and litghtweight than Metasploit.
 
 ## Requeriments
-- MySql 3.0
+- sqlite 3.0
 - Python 3.7
 
 ## Instalation
