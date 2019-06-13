@@ -43,7 +43,7 @@ ul.nav .main {
 }
 
 .clicky :target::before {
-    animation-name: collapse-anchor-padding-2;
+  animation-name: collapse-anchor-padding-2;
 }
 
 @keyframes collapse-anchor-padding-1 {
@@ -60,11 +60,10 @@ ul.nav .main {
     }
 }
 
-code {
-    padding: 1px 3px;
-    background: #f5f5f5;
-    border: solid 1px #ccc;
-    color: #333;
+pre, code {
+    background: #151515;
+    color: #888;
+    border: 1px solid #030303;
 }
 
 pre code {
@@ -73,11 +72,7 @@ pre code {
 }
 
 a code {
-    color: #007fff;
-}
-
-a:hover code, a:focus code {
-    color: #0059b3;
+    color: #2a9fd6;
 }
 
 kbd {
@@ -104,18 +99,24 @@ footer {
 /* Style the admonitions. */
 
 .admonition {
-    margin-bottom: 21px;
-    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    border: 1px solid #282828;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    color: #888;
+    background-color: #222;
 }
 
 .admonition > .admonition-title {
     margin: 0;
     padding: 10px 15px;
-    border-bottom: 1px solid #ddd;
-    color: #333;
-    background-color: #f5f5f5;
-    font-size: 17px;
-    font-weight: 300;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-bottom: 1px solid #282828;
+    background-color: #3c3c3c;
+    font-size: 16px;
+    font-weight: 500;
     line-height: 1.1;
 }
 
@@ -136,30 +137,30 @@ footer {
 /* Style each kind of admonition. */
 
 .admonition.note, .admonition.note > .admonition-title {
-    border-color: #7643a8;
+    border-color: #6e2caf;
 }
 
 .admonition.note > .admonition-title {
     color: #fff;
-    background-color: #9954bb;
+    background-color: #9933cc;
 }
 
 .admonition.warning, .admonition.warning > .admonition-title {
-    border-color: #ff4309;
+    border-color: #f05800;
 }
 
 .admonition.warning > .admonition-title {
     color: #fff;
-    background-color: #ff7518;
+    background-color: #ff8800;
 }
 
 .admonition.danger, .admonition.danger > .admonition-title {
-    border-color: #f0005e;
+    border-color: #bd001f;
 }
 
 .admonition.danger > .admonition-title {
     color: #fff;
-    background-color: #ff0039;
+    background-color: #cc0000;
 }
 
 /*
@@ -269,6 +270,9 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
     left: 100%;
     margin-top: 0px;
     margin-left: -1px;
+    -webkit-border-radius: 0 4px 4px 4px;
+    -moz-border-radius: 0 4px 4px;
+    border-radius: 0 4px 4px 4px;
 }
 
 /* display sub menu on hover*/
@@ -293,5 +297,5 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
 
 /* little arrow of parent menu */
 .dropdown-submenu:hover>a:after {
-    border-left-color: #404040;
+    border-left-color: #fff;
 }
