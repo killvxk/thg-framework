@@ -1,39 +1,32 @@
 ![banner](https://github.com/darkcode357/thg-framework/blob/master/documentation/xss_main.jpg)
-## THG-FRAMEWORK
-# About the project
+# THG-FRAMEWORK
 
-Project build to be a development and pentesting tool of SO, build using python in the lastest version, currently V3.7
+THG Framework is a system for exploitation available to Linux/Windows, like Metasploit but is more easy to use, fast and litghtweight than Metasploit.
 
-# Instalation
-Just run this on Terminal:
-```
-git clone https://github.com/darkcode357/thg-framework.git
-cd thg-framework
-python3 setup.py
-```
-# Use
+## Requeriments
+- MySql 3.0
+- Python 3.7
+
+## Instalation
+Just clone te repository
+`git clone https://github.com/darkcode357/thg-framework.git`
+
+Open the folder project
+`cd thg-framework`
+
+Configure the application
+`python3 setup.py`
+
+## Use
 To open THGConsole run:
-```python
+```
 python3 thgconsole.py
 ```
 
-# Terminal Screenshot
-![logo](https://github.com/darkcode357/thg-framework/blob/master/docs/docs/photos/thg.png)
+## Read the docs
+For more information, please [read the docs](https://darkcode357.github.io/thg-framework/). 
 
-# Documentation
-=> https://darkcode357.github.io/thg-framework/
-
-# How to contribute:
-Follow the link bellow with all instructions.
-=> https://darkcode357.github.io/thg-framework/contributing/get-started/
-
-# Credits:
-| Name|	Nickname| E-Mail | GPG Key ID |Role|
-|-----| --------| ------ | -------|----|
-|luiz gustavo| darkcode0x00|darkcode357@gmail.com|3819CFCAD958D824|	Founder, Developer|
-
-# Future updates
-The "[x]" are the commands that is working and the "[ ]" are the future funcionalities to be applied.
-
+## How to contribute:
+Follow the [manual to contribute](https://darkcode357.github.io/thg-framework/contributing/get-started/).
 
 License: BSD-3-clause
