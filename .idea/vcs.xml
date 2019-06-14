@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lib/cmd2/cmd2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/pyexlib/python3-pwntools" vcs="Git" />
   </component>
 </project>

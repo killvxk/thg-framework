@@ -1,5 +1,5 @@
 
-from lib.exception.Option import OptionRequired
+from lib.BaseMode.exception.Option import OptionRequired
 
 
 class BaseOption:

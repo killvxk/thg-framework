@@ -2,124 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e6b10ed-b24d-4ee8-b1c6-2c177b363b00" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/thg-framework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/thg-framework.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/thg.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/thg.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/LICENSE/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/LICENSE/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/analysis/linux/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/analysis/linux/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/analysis/malware/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/analysis/malware/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/analysis/windows/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/analysis/windows/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/detect/analysis/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/detect/analysis/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/detect/editcap/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/detect/editcap/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/detect/linux/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/detect/linux/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/detect/mergecap/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/detect/mergecap/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/detect/snort/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/detect/snort/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/detect/tcpdump/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/detect/tcpdump/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/detect/tshark/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/detect/tshark/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/detect/windows/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/detect/windows/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/identify/basic/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/identify/basic/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/identify/linux/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/identify/linux/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/identify/nessus/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/identify/nessus/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/identify/nmap/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/identify/nmap/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/identify/openvas/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/identify/openvas/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/identify/windows/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/identify/windows/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/prootect_defend/linux/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/prootect_defend/linux/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/prootect_defend/windows/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/prootect_defend/windows/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/recover/backuo/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/recover/backuo/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/recover/patching/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/recover/patching/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/tips_end_tricks/decoding/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/tips_end_tricks/decoding/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/tips_end_tricks/dos/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/tips_end_tricks/dos/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/tips_end_tricks/os_cheats/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/tips_end_tricks/os_cheats/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/tips_end_tricks/snort/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/tips_end_tricks/snort/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/tips_end_tricks/tools/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/capturetheflag/basic/tips_end_tricks/tools/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/cli/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/cli/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/cli/install/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/cli/install/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/cli/tags/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/cli/tags/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/cli/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/cli/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/community/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/community/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/conceptual/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/conceptual/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/contributing/get-started/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/css/bootstrap-custom.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/css/bootstrap-custom.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/deployment/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/deployment/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/pentest_standard/exploration/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/pentest_standard/exploration/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/pentest_standard/ig/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/pentest_standard/ig/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/pentest_standard/postexploration/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/pentest_standard/postexploration/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/pentest_standard/preengagemente/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/pentest_standard/preengagemente/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/pentest_standard/report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/pentest_standard/report/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/pentest_standard/tecguidelines/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/pentest_standard/tecguidelines/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/pentest_standard/threatmodeling/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/pentest_standard/threatmodeling/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/pentest_standard/vulnterability/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/pentest_standard/vulnterability/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/search/search_index.json" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/search/search_index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/sitemap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/sitemap.xml.gz" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/sitemap.xml.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/anti_forensic/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/automation/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/automobile/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/auxiliares/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/backdoor/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/binary/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/bluetooth/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/code_audit/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/cracker/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/create_dir.py" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/tutorials/create_dir.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/crypto/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/cryptography/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/database/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/debugger/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/decompiler/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/defensensive/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/defensive/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/disassembler/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/dos/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/drone/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/exploitation/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/fingerprint/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/firmware/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/forensic/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/gpu/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/hardware/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/honeypot/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/ids/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/keylogger/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/malware/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/misc/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/mobile/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/networking/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/nfc/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/os/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/packer/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/proxy/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/radio/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/recon/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/reversing/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/server/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/shells/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/sniffer/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/social/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/spoff/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/spoof/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/stego/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/thg/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/site/tutorials/thg/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/thg_docs/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/thg_windows/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/tunnel/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/unpacker/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/version/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/voip/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentation/site/tutorials/wireless/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dsa.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/history" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/auxiliary/encode/base64.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/payloads/stagers/netware/base64.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/setup/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup/setup.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup/setup2.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/setup2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/BaseMode/BaseMods.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/BaseMode/mods/Auxiliary/Auxiliary.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/BaseMode/BaseOptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/BaseMode/BaseOptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/BaseMode/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/BaseMode/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/config/info_init.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/config/info_init.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/exception/Module.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/exception/Option.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/exception/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/encoders/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/BaseMode/mods/Auxiliary/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/encoders/cmd/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/BaseMode/mods/Evasion/Evasion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/encoders/generic/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/BaseMode/mods/Evasion/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/encoders/mipsbe/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/BaseMode/mods/Exploit/Exploit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/encoders/mipsle/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/BaseMode/mods/Exploit/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/encoders/perl/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/BaseMode/mods/Nops/Nops.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/encoders/php/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/BaseMode/mods/Nops/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/encoders/ppc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/BaseMode/mods/Payload/Payload.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/encoders/python/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/BaseMode/mods/Payload/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/encoders/ruby/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/BaseMode/mods/Post/Post.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/encoders/sparc/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/BaseMode/mods/Post/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/encoders/x64/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/BaseMode/mods/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/encoders/x86/__init__.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -167,36 +71,72 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thgcli.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/history">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="mock:///root/.PyCharm2019.1/system/snapshots/thg-framework.pstat">
-          <provider selected="true" editor-type-id="profiler-session-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/documentation/mkdocs.yml">
+        <entry file="file://$PROJECT_DIR$/lib/BaseMode/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="296">
+              <caret line="154" column="32" selection-start-line="154" selection-start-column="32" selection-end-line="154" selection-end-column="32" />
               <folding>
-                <element signature="e#1092#3583#1" />
+                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#2310#5940#0" />
+                <element signature="e#11999#12131#0" />
+                <element signature="e#12203#13326#0" />
+                <element signature="e#13392#13734#0" />
+                <element signature="e#14143#14881#0" />
+                <element signature="e#14947#15173#0" />
+                <element signature="e#15270#15921#0" />
+                <element signature="e#15991#16156#0" />
+                <element signature="e#16223#16442#0" />
+                <element signature="e#16515#18777#0" />
+                <element signature="e#16773#17100#0" />
+                <element signature="e#17168#17856#0" />
+                <element signature="e#17903#18777#0" />
+                <element signature="e#18846#18903#0" />
+                <element signature="e#18978#19826#0" />
+                <element signature="e#19899#22927#0" />
+                <element signature="e#23000#23846#0" />
+                <element signature="e#23917#27120#0" />
+                <element signature="e#27198#27322#0" />
+                <element signature="e#27396#27483#0" />
+                <element signature="e#27545#27878#0" />
+                <element signature="e#27934#28146#0" />
+                <element signature="e#28210#28383#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/BaseMode/BaseMods.py">
+        <entry file="file://$PROJECT_DIR$/lib/config/info_init.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="29" selection-start-line="29" selection-end-line="31" selection-end-column="19" />
+            <state relative-caret-position="225">
+              <caret line="18" column="88" lean-forward="true" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/BaseMode/exception/Module.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/BaseMode/exception/Option.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/BaseMode/mods/Auxiliary/Auxiliary.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1035">
+              <caret line="71" selection-start-line="71" selection-end-line="71" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
               </folding>
@@ -205,54 +145,26 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/tmpt_mod/__init__.py">
+        <entry file="file://$PROJECT_DIR$/lib/BaseMode/BaseOptions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/BaseMode/mods/Evasion/Evasion.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/BaseMode/BaseOptions.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="47" selection-start-line="1" selection-start-column="47" selection-end-line="11" selection-end-column="24" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/lib/BaseMode/mods/Exploit/Exploit.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup/requirements.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup/setup2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/module.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="40" column="41" lean-forward="true" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/evasion/base64.py">
+        <entry file="file://$PROJECT_DIR$/lib/BaseMode/mods/Nops/Nops.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -267,12 +179,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pidof</find>
-      <find>route</find>
-      <find>command_use</find>
-      <find>command_exploit</find>
-      <find>current_module</find>
-      <find>sea</find>
       <find>pkg</find>
       <find>sear</find>
       <find>THGBaseInterpreter</find>
@@ -297,6 +203,12 @@
       <find>./tutorials/thg.md</find>
       <find>color_end=Fore.RESETlistmod</find>
       <find>reload</find>
+      <find>thread_queue</find>
+      <find>Queue</find>
+      <find>continuation_prompt</find>
+      <find>CMD_CORE</find>
+      <find>module_reload</find>
+      <find>ip</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -306,14 +218,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/thgconsole/thg_lib/thglibs/auxiliares/__init__.py" />
-        <option value="$PROJECT_DIR$/thgconsole/libs/__init__.py" />
-        <option value="$PROJECT_DIR$/thgconsole/thglibs/auxiliares/__init__.py" />
-        <option value="$PROJECT_DIR$/thgconsole/thglibs/__init__.py" />
-        <option value="$PROJECT_DIR$/thgconsole/core/exploit/shell.py" />
-        <option value="$PROJECT_DIR$/interactive.py" />
-        <option value="$PROJECT_DIR$/thgconsole/__init__.py" />
-        <option value="$PROJECT_DIR$/thglibs/__init__.py" />
         <option value="$PROJECT_DIR$/implementar/tools/modules/aws-aggregator-userdata.sh" />
         <option value="$PROJECT_DIR$/implementar/tools/modules/committer_count.rb" />
         <option value="$PROJECT_DIR$/implementar/tools/modules/file_pull_requests.rb" />
@@ -334,7 +238,6 @@
         <option value="$PROJECT_DIR$/modules/test.py" />
         <option value="$PROJECT_DIR$/lib/Database.py" />
         <option value="$PROJECT_DIR$/lib/BaseMods.py" />
-        <option value="$PROJECT_DIR$/lib/BaseMode/BaseOptions.py" />
         <option value="$PROJECT_DIR$/lib/.cmd2rc" />
         <option value="$PROJECT_DIR$/data/post/powershell/Invoke-LoginPrompt.ps1" />
         <option value="$PROJECT_DIR$/documentation/docs/tutorials/create_dir.py" />
@@ -350,13 +253,22 @@
         <option value="$PROJECT_DIR$/documentation/docs/index.md" />
         <option value="$PROJECT_DIR$/lib/BaseMode/.cmd2rc" />
         <option value="$PROJECT_DIR$/lib/config/Version.py" />
-        <option value="$PROJECT_DIR$/lib/BaseMode/base.py" />
         <option value="$PROJECT_DIR$/modules/test/a.py" />
         <option value="$PROJECT_DIR$/modules/test/test.py" />
         <option value="$PROJECT_DIR$/modules/auxiliary/encode/base64.py" />
-        <option value="$PROJECT_DIR$/lib/BaseMode/BaseMods.py" />
         <option value="$PROJECT_DIR$/modules/payloads/stagers/netware/base64.py" />
         <option value="$PROJECT_DIR$/setup/setup2.py" />
+        <option value="$PROJECT_DIR$/history" />
+        <option value="$PROJECT_DIR$/lib/BaseMode/BaseMods.py" />
+        <option value="$PROJECT_DIR$/lib/BaseMode/mods/Auxiliary.py" />
+        <option value="$PROJECT_DIR$/lib/BaseMode/mods/Evasion.py" />
+        <option value="$PROJECT_DIR$/lib/BaseMode/mods/Exploit.py" />
+        <option value="$PROJECT_DIR$/lib/BaseMode/mods/Payload.py" />
+        <option value="$PROJECT_DIR$/lib/BaseMode/mods/Nops.py" />
+        <option value="$PROJECT_DIR$/lib/BaseMode/mods/Post.py" />
+        <option value="$PROJECT_DIR$/lib/BaseMode/BaseOptions.py" />
+        <option value="$PROJECT_DIR$/lib/config/info_init.py" />
+        <option value="$PROJECT_DIR$/lib/BaseMode/base.py" />
       </list>
     </option>
   </component>
@@ -385,7 +297,30 @@
             <path>
               <item name="thg-framework" type="b2602c69:ProjectViewProjectNode" />
               <item name="thg-framework" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thg-framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thg-framework" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="BaseMode" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thg-framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thg-framework" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thg-framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thg-framework" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thg-framework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thg-framework" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="tmpt_mod" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -404,11 +339,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/BaseMode/mods/Nops" />
+      <recent name="$PROJECT_DIR$/lib/BaseMode/mods/Exploit" />
+      <recent name="$PROJECT_DIR$/lib/BaseMode/mods/Evasion" />
+      <recent name="$PROJECT_DIR$/lib/BaseMode/mods/Auxiliary" />
       <recent name="$PROJECT_DIR$/setup" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/lib/BaseMode" />
-      <recent name="$PROJECT_DIR$/lib" />
-      <recent name="$PROJECT_DIR$/db" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/modules/payloads/stagers/netware" />
@@ -626,7 +561,8 @@
       <workItem from="1559863059500" duration="2954000" />
       <workItem from="1560105486812" duration="7401000" />
       <workItem from="1560307118842" duration="7402000" />
-      <workItem from="1560390776837" duration="1685000" />
+      <workItem from="1560390776837" duration="3182000" />
+      <workItem from="1560484144231" duration="7827000" />
     </task>
     <task id="LOCAL-00001" summary="fix doc, fix readme">
       <created>1554908528031</created>
@@ -737,19 +673,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142904000" />
+    <option name="totallyTimeSpent" value="152228000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19756502" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19977863" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Concurrent Activities Diagram" sideWeight="0.4991699" weight="0.32897604" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4991699" visible="true" weight="0.3267974" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4969563" visible="true" weight="0.32897604" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4969563" visible="true" weight="0.32897604" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -760,6 +695,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5030437" side_tool="true" visible="true" weight="0.32897604" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" sideWeight="0.4991699" weight="0.32897604" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -878,69 +814,16 @@
     <SUITE FILE_PATH="coverage/thg_framework$check_broken_links.coverage" NAME="check_broken_links Coverage Results" MODIFIED="1555717093432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/documentation/docs/tutorials/bluetooth.md" />
-    <entry file="file://$PROJECT_DIR$/documentation/docs/tutorials/binary.md" />
-    <entry file="file://$PROJECT_DIR$/documentation/docs/tutorials/backdoor.md" />
-    <entry file="file://$PROJECT_DIR$/documentation/docs/conceptual.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/documentation/docs/community.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/documentation/docs/photos/dark.py" />
-    <entry file="file://$PROJECT_DIR$/documentation/docs/tutorials/create_dir.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="64" column="18" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/documentation/docs/photos/thg.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/documentation/docs/photos/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/exception/Module.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/exception/Option.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/config/info_init.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/exception/Module.py" />
+    <entry file="file://$PROJECT_DIR$/lib/exception/Option.py" />
     <entry file="file://$PROJECT_DIR$/lib/BaseMode/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="2340">
-            <caret line="156" column="12" lean-forward="true" selection-start-line="156" selection-start-column="12" selection-end-line="156" selection-end-column="12" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/documentation/docs/capturetheflag/basic/analysis/linux.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -1075,16 +958,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/BaseMode/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4755">
-          <caret line="333" column="42" selection-start-line="333" selection-start-column="36" selection-end-line="333" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/config/Version.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1105,29 +978,10 @@
     <entry file="file://$PROJECT_DIR$/modules/evasion/base64.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/trg">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/payloads/stagers/netware/base64.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dsa.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/setup.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="4" lean-forward="true" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/trg" />
+    <entry file="file://$PROJECT_DIR$/modules/payloads/stagers/netware/base64.py" />
+    <entry file="file://$PROJECT_DIR$/dsa.py" />
+    <entry file="file://$PROJECT_DIR$/setup/setup.py" />
     <entry file="file://$PROJECT_DIR$/setup/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1135,43 +989,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/history">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/auxiliary/encode/base64.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/auxiliary/encode/base64.py" />
     <entry file="file://$PROJECT_DIR$/modules/tmpt_mod/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/BaseMode/BaseOptions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="47" selection-start-line="1" selection-start-column="47" selection-end-line="11" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/BaseMode/BaseMods.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="29" selection-start-line="29" selection-end-line="31" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/module.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="40" column="41" lean-forward="true" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
+          <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -1192,6 +1017,97 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/BaseMode/BaseMods.py" />
+    <entry file="file://$PROJECT_DIR$/lib/BaseMode/mods/Payload.py" />
+    <entry file="file://$PROJECT_DIR$/lib/BaseMode/mods/Post.py" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="480">
+            <caret line="32" selection-start-line="32" selection-end-line="32" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/history">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/BaseMode/mods/Auxiliary/Auxiliary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/BaseMode/mods/Evasion/Evasion.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/BaseMode/mods/Exploit/Exploit.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/BaseMode/mods/Nops/Nops.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/BaseMode/BaseOptions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/BaseMode/exception/Module.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/BaseMode/exception/Option.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/config/info_init.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="18" column="88" lean-forward="true" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/BaseMode/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="154" column="32" selection-start-line="154" selection-start-column="32" selection-end-line="154" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#2310#5940#0" />
+            <element signature="e#11999#12131#0" />
+            <element signature="e#12203#13326#0" />
+            <element signature="e#13392#13734#0" />
+            <element signature="e#14143#14881#0" />
+            <element signature="e#14947#15173#0" />
+            <element signature="e#15270#15921#0" />
+            <element signature="e#15991#16156#0" />
+            <element signature="e#16223#16442#0" />
+            <element signature="e#16515#18777#0" />
+            <element signature="e#16773#17100#0" />
+            <element signature="e#17168#17856#0" />
+            <element signature="e#17903#18777#0" />
+            <element signature="e#18846#18903#0" />
+            <element signature="e#18978#19826#0" />
+            <element signature="e#19899#22927#0" />
+            <element signature="e#23000#23846#0" />
+            <element signature="e#23917#27120#0" />
+            <element signature="e#27198#27322#0" />
+            <element signature="e#27396#27483#0" />
+            <element signature="e#27545#27878#0" />
+            <element signature="e#27934#28146#0" />
+            <element signature="e#28210#28383#0" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,6 +1,7 @@
 import argparse
 import time
 import threading
+from io import BytesIO
 from queue import Queue
 from lib.cmd2 import Cmd, with_category, with_argparser
 from art import text2art
@@ -14,7 +15,7 @@ from lib.config.info_init import *
 from importlib import import_module, reload
 from lib.BaseMode.Database import Database
 from lib.BaseMode.BaseOptions import BaseOption
-from lib.exception.Module import ModuleNotUseException
+from lib.BaseMode.exception.Module import ModuleNotUseException
 
 
 class THGBASECONSOLE(Cmd, Database):
@@ -42,13 +43,16 @@ class THGBASECONSOLE(Cmd, Database):
                                              multiline_commands=['orate'],
                                              shortcuts=shortcuts,
                                              )
+
+        self.locals_in_py = True
+        self.debug = True
         self.editor = "nano"
         self.allow_redirection = False
         self.allow_cli_args = False
         Database.__init__(self)
         self.prompt = self.console_prompt + self.console_prompt_end
         self.do_banner(None)
-        self.poutput("dsadsadsadsadsa")
+        self.poutput("frase")
     '''
     add select
     def do_eat(self, arg):
@@ -57,6 +61,14 @@ class THGBASECONSOLE(Cmd, Database):
         result = result.format(food=arg, sauce=sauce)
         self.stdout.write(result + '\n')
     '''
+
+    '''
+     # command categories
+    CMD_CORE = "Core Command"
+    CMD_MODULE = "Module Command"
+    CMD_DATABASE= "Database Backend Commands"    
+    '''
+
     @with_category(CMD_CORE)
     def do_banner(self, args):
         # exploits_count=self.modules_count["exploits"] + self.modules_count['extra_exploits'],
@@ -86,7 +98,6 @@ class THGBASECONSOLE(Cmd, Database):
         {YELLOW}+ -- --=[{RED}machine =>{MAGENTA} {machine}            {RED}{YELLOW}]=-- -- +      
         {YELLOW}+ -- --=[{RED}gcc     =>{MAGENTA} {gccv}             {RED}{YELLOW}]=-- -- +
         {YELLOW}+ -- --=[{RED}python  =>{MAGENTA} {python}               {RED}{YELLOW}]=-- -- +
-        {YELLOW}+ -- --=[{RED}net     =>{MAGENTA} {net}        {RED}{YELLOW}]=-- -- +
         {YELLOW}+ -- --=[{RED}ip      =>{MAGENTA} {ip}       {RED}{YELLOW}]=-- -- +
         {YELLOW}+ -- --=[{RED}mac     =>{MAGENTA} {mac} {RED}{YELLOW}]=-- -- +
 
@@ -108,132 +119,45 @@ class THGBASECONSOLE(Cmd, Database):
                            MAGENTA=Fore.MAGENTA,
                            gccv=thg_add_init.check_gcc_version(),
                            python=thg_add_init.check_python_version(),
-                           net=thg_add_init.is_connected(),
                            ip=thg_add_init.ipi(),
                            mac=thg_add_init.get_mac())
         print(self.banner)
-        '''
-        #Alias Commands
-==============
-Command       Description
--------       -----------
-#alias         create or view an alias.
-#del           rm
-#handler       use exploit/multi/handler
-System command
-==============
-    Command             Description
-    -------             -----------
-    battery            show battery info
-    free              show mmr/swp info
-    killall           kill pid
-    netstat           show connect
-    pmap              show structure pid
-    procsmem          show command line proc info 
-    pstree            show process tree
-    temperatures      show hardware temperature
-    who               list/show current user
-    disk_usage        show devices info
-    fans              show RPM
-    ifconfig          show config network
-    meminfo           show memore info
-    nettop            show netconect
-    procinfo          show procinfo
-    ps                show process
-    sensors           show hardwares sensors
-    top               show process
-Core Commands
-=============
-    Command       Description
-    -------       -----------
-    unsetg         Unsets one or more global variables
-    setg           Sets a global variable to a value
-    exec           <shell thg_command> <args> Execute a thg_command in a shell
-    cd             Change the current working directory
-    color          Toggle color
-    route          Route traffic through a session V-1base
-    #connect       Communicate with a host
-    #load          Load a framework plugin
-    #save          Saves the active datastores
-    #sessions      Dump session listings and display information about sessions
-    sleep         Do nothing for the specified number of seconds
-    #spool         Write console output into a file as well the screen
-    #unload        Unload a framework plugin
-#Module Commands
-===============
-    #Command        Description
-    -------        -----------
-    show creds     show creds in db {red}->{Blue} (@module_required){Blue}{grn}{grn}
-    show devices   show devices modules {red}->{Blue} (@module_required){Blue}{grn}{grn}
-    show encoders  show encoders for module {red}->{Blue} (@module_required){Blue}{grn}{grn}
-    show exploits  show exploit modules {red}->{magent} (@sys_module){Blue}{grn}{grn}   
-    show auxiliary show auxiliary modules {red}->{magent} (@sys_module){Blue}{grn}{grn}
-    show nops      show nops modules {red}->{magent} (@sys_module){Blue}{grn}{grn}
-    show payloads  show payload modules {red}->{magent} (@sys_module){Blue}{grn}{grn}
-    show post      show post modules {red}->{magent} (@sys_module){Blue}{grn}{grn}
-    show wordlists show wordlist in thgconsole date {red}->{Blue} (@module_required){Blue}{grn}{grn}
-    show threads   View and manipulate background threads {red}->{Blue} (@module_required){Blue}{grn}{grn}
-    #advanced      Displays advanced options for one or more modules {red}->{magent} (@sys_module){Blue}{grn}{grn}
-    #loadpath      Searches for and loads modules from a path {red}->{magent} (@sys_module){Blue}{grn}{grn}
-    options        Displays global options or for one or more modules
-    #popm          Pops the latest module off the stack and makes it active {red}->{magent} (@sys_module){Blue}{grn}{grn}
-    #previous      Sets the previously loaded module as the current module {red}->{magent} (@sys_module){Blue}{grn}{grn}
-    #pushm         Pushes the active or list of modules onto the module stack {red}->{magent} (@sys_module){Blue}{grn}{grn}
-    #reload_all    Reloads all modules from all defined module paths {red}->{magent} (@sys_module){Blue}{grn}{grn}
-#Job Commands
-============
-#Command       Description
--------       -----------
-#handler       Start a payload handler as job
-#jobs          Displays and manages jobs
-#kill          Kill a job
-#rename_job    Rename a job
-#Resource Script Commands
-========================
-#Command       Description
--------       -----------
-#makerc        Save thg_commands entered since start to a file
-#resource      Run the thg_commands stored in a file
-#Developer Commands
-==================
-#Command       Description
--------       -----------
-#edit               Edit the current module or a file with the preferred editor
-python_interpreter  Drop into python  scripting mode
-log                 Displays framework.log starting at the bottom if possible
-#reload_lib         Reload one or more library files from specified paths
-#Database Backend Commands
-=========================
-#Command           Description
--------           -----------
-#db_connect        Connect to an existing database
-#db_disconnect     Disconnect from the current database instance
-#db_export         Export a file containing the contents of the database
-#db_import         Import a scan result file (filetype will be auto-detected)
-#db_nmap           Executes nmap and records the output automatically
-#db_rebuild_cache  Rebuilds the database-stored module cache
-#db_status         Show the current database status
-#hosts             List all hosts in the database
-#loot              List all loot in the database
-#notes             List all notes in the database
-#services          List all services in the database
-#vulns             List all vulnerabilities in the database
-#workspace         Switch between database workspaces
-Credentials Backend Commands
-============================
-Command       Description
--------       -----------
-#creds         List all credentials in the database
-        '''
-
     @with_category(CMD_CORE)
     def do_version(self,args):
         """show version"""
-        self._print_item(__version__)
+        if args == "all":
+            self._print_item(__version__+" "+__codenome__)
+        if args == "codenome":
+            self._print_item(__codenome__)
+        if args =="version":
+            self._print_item(__version__)
+        if args == "":
+            self._print_item("help")
+        if args =="help":
+            self._print_item("all => show version+codenome")
+            self._print_item("codenome => show codenome")
+            self._print_item("version => show version")
     @with_category(CMD_CORE)
     def do_ip(self,args):
         """show ip"""
-        self._print_item(thg_add_init.ipi())
+        if args == "external":
+            self._print_item("send pycurl request...")
+            import pycurl
+            c = pycurl.Curl()
+            c.setopt(c.URL, 'https://ident.me')
+            buffer = BytesIO()
+            c.setopt(c.WRITEDATA, buffer)
+            c.perform()
+            # ok
+            # Decode the response body:
+            string_body = buffer.getvalue().decode('utf-8')
+            self._print_item(str(string_body))
+
+        elif args =="internal":
+            self._print_item(thg_add_init.ipi())
+        elif args == "help":
+            self._print_item("external => show external ip ")
+            self._print_item("internal => show internal ip ")
     @with_category(CMD_CORE)
     def do_exit(self,args):
         """Exit the console"""
