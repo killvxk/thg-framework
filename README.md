@@ -7,6 +7,9 @@ THG Framework is a system for exploitation available to Linux/Windows, like Meta
 - sqlite 3.0
 - Python 3.7
 
+For install Python requeriments, open setup folder and run:
+`pip3 install -r requeriments.txt`
+
 ## Instalation
 Just clone te repository
 `git clone https://github.com/darkcode357/thg-framework.git`
