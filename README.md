@@ -18,7 +18,6 @@ Open the folder project
 Configure the application (Debian-Based)
 `python3 setup.py`
 
-or
 For install Python requeriments, open setup folder and run:
 `pip3 install -r requeriments.txt`
 
