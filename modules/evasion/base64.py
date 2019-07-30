@@ -1,5 +1,5 @@
 import socket
-from lib.BaseMode.BaseMods import BaseExploit
+from lib.BaseMode.mods.Auxiliary.Auxiliary import BaseExploit
 import base64, binascii
 from colorama import Fore
 class Exploit(BaseExploit):

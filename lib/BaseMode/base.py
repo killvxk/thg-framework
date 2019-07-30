@@ -3,7 +3,7 @@ import time
 import threading
 from io import BytesIO
 from queue import Queue
-from  thgcmd import *
+from  lib.cmd2 import *
 from thgcmd.utils import basic_complete
 from art import text2art
 from utils import module

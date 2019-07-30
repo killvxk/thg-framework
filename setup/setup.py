@@ -6,6 +6,8 @@ try:
         import apt
     elif distro.linux_distribution()[0] == 'Arch Linux':
         import pacman
+    else:
+        pass
 except ImportError:
     pass
 def arch_linux():

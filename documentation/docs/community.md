@@ -1,22 +1,21 @@
-System command
-==============
-Command                | Description
-| -------------        |:-------------: |
-| - [X]    battery     |         show battery info
-| - [X]    free        |       show mmr/swp info
-| - []    killall     |      kill pid
-| - [X]    netstat     |     show connect
-| - []    pmap        |    show structure pid
-| - []    procsmem    |   show command line proc info 
-| - []    pstree      |  show process tree
-| - [X]    temperatures|     show hardware temperature
-| - []    who         |    list/show current user
-| - []    disk_usage  |   show devices info
-| - []    fans        |   show RPM
-| - []    ifconfig    |         show config network
-| - []    meminfo     |        show memore info
-| - []    nettop      |       show netconect
-| - [X]    procinfo    |      show procinfo
-| - []    ps          |     show process
-| - []    sensors     |    show hardwares sensors
-| - []    top         |   show process
+# Core Commands
+
+Command              | Description
+| -------------      |:-------------: |
+| - [x] banner       |    Display an awesome thgbanner|
+| - [x] ip           |   show internal ip|
+| - [x] exit         |   Exit the console|
+| - [] unsetg        |  Unsets one or more global variables|
+| - [x] help         | Help menu|
+| - [x] history      | Show command history|
+| - [] setg          | Sets a global variable to a value|
+| - [x] set          | Sets a context-specific variable to a value|
+| - [x] exec         | <shell command> <args> Execute a command in a shell|
+| - [] cd            | Change the current working directory|
+| - [] color         | Toggle color|
+| - [] route         | Route traffic through a session V-1base|
+| - [x]version       | Show the framework and console library version numbers|
+| - [x] quit         | Exit the console|
+| - [ ] *connect*    |  Communicate with a host|
+| - [X] *grep*       |  Grep the output of another command|
+| - [x] *load*       | Load a framewo

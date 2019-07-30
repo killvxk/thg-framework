@@ -1,0 +1,4 @@
+import subprocess
+process = subprocess.Popen("postgresql")
+stdoutdata, stderrdata = process.communicate()
+print (process.returncode)
