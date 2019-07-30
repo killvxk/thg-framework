@@ -33,9 +33,18 @@ def deb_ubu():
         except Exception as  arg:
             print("Sorry, package installation failed [{err}]".format(err=str(arg)))
 
+def confpostgre():
+    system("ps ax | grep postgresql")
+    print(Fore.CYAN+"habilitando o postgresql no sistema")
+    system("update-rc.d postgresql enable")
+    print(Fore.CYAN+"habilitando autostart do postgresql")
+    system("service postgresql start")
+    print(Fore.CYAN + "verificando estatus do postgresql")
+    system("service postgresql status")
+    print("ok")
 def check():
     linux = distro.linux_distribution()[0]
     if linux == "ubuntu" or "debian":
         deb_ubu()
-
+        confpostgre()
 check()
