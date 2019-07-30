@@ -1,11 +1,13 @@
 import distro,sys
 from os import system
 from colorama import Fore
-if distro.linux_distribution()[0] == 'debian' or 'ubuntu':
-    import apt
-elif distro.linux_distribution()[0] == 'Arch Linux':
-    import pacman
-
+try:
+    if distro.linux_distribution()[0] == 'debian' or 'ubuntu':
+        import apt
+    elif distro.linux_distribution()[0] == 'Arch Linux':
+        import pacman
+except ImportError:
+    pass
 def arch_linux():
     #lista de programas
     listt = ['docker.io', "nmap"]
@@ -78,4 +80,4 @@ def check():
     elif linux == "Arch Linux":
         arch_linux()
         confpostgre()
-confpostgre()
+check()
