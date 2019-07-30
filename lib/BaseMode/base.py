@@ -11,13 +11,13 @@ from pathlib import Path
 from colorama import Style
 from tabulate import tabulate
 from colorama import Fore
+import psutil
 from lib.config.Version import __codenome__,__version__
 from lib.config.info_init import *
 from importlib import import_module, reload
 from lib.BaseMode.Database import Database
 from lib.BaseMode.BaseOptions import BaseOption
 from lib.BaseMode.exception.Module import ModuleNotUseException
-
 
 class THGBASECONSOLE(Cmd, Database):
     colors = "Always"
@@ -31,6 +31,7 @@ class THGBASECONSOLE(Cmd, Database):
     CMD_CORE = "Core Command"
     CMD_MODULE = "Module Command"
     CMD_DATABASE= "Database Backend Commands"
+    CMD_SYSTEM= "SYSTEM Commands"
 
     def __init__(self):
         shortcuts = dict()
@@ -580,6 +581,67 @@ class THGBASECONSOLE(Cmd, Database):
             color_end=Fore.GREEN
         )
         self.prompt = self.console_prompt + module_prompt + self.console_prompt_end
+###################################################################################
+###################################system##########################################
+###################################################################################
+    @with_category(CMD_SYSTEM)
+    def thgcmd_battery(self,*args):
+        def secs2hours(secs):
+            mm, ss = divmod(secs, 60)
+            hh, mm = divmod(mm, 60)
+            return "%d:%02d:%02d" % (hh, mm, ss)
+
+        def main():
+            if not hasattr(psutil, "sensors_battery"):
+                return sys.exit("platform not supported")
+            batt = psutil.sensors_battery()
+            if batt is None:
+                return sys.exit("no battery is installed")
+
+            print("charge:     %s%%" % round(batt.percent, 2))
+            if batt.power_plugged:
+                print("status:     %s" % (
+                    "charging" if batt.percent < 100 else "fully charged"))
+                print("plugged in: yes")
+            else:
+                print("left:       %s" % secs2hours(batt.secsleft))
+                print("status:     %s" % "discharging")
+                print("plugged in: no")
+
+        main()
+    @with_category(CMD_SYSTEM)
+    def thgcmd_who(self, *args):
+        # !/usr/bin/env python
+
+        # Copyright (c) 2009, Giampaolo Rodola'. All rights reserved.
+        # Use of this source code is governed by a BSD-style license that can be
+        # found in the LICENSE file.
+
+        """
+        A clone of 'who' command; print information about users who are
+        currently logged in.
+        $ python scripts/who.py
+        giampaolo    console    2017-03-25 22:24                loginwindow
+        giampaolo    ttys000    2017-03-25 23:28 (10.0.2.2)     sshd
+        """
+
+        from datetime import datetime
+
+        import psutil
+
+        def main():
+            users = psutil.users()
+            for user in users:
+                proc_name = psutil.Process(user.pid).name() if user.pid else ""
+                print("%-12s %-10s %-10s %-14s %s" % (
+                    user.name,
+                    user.terminal or '-',
+                    datetime.fromtimestamp(user.started).strftime("%Y-%m-%d %H:%M"),
+                    "(%s)" % user.host if user.host else "",
+                    proc_name
+                ))
+
+        main()
 
     def _print_modules(self, modules, title):
         self.poutput(title, "\n\n", color=Fore.CYAN)

@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e6b10ed-b24d-4ee8-b1c6-2c177b363b00" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentation/docs/community.md" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/docs/community.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/BaseMode/Database.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/BaseMode/Database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/BaseMode/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/BaseMode/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/psutil/scripts/top.py" beforeDir="false" afterPath="$PROJECT_DIR$/psutil/scripts/top.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/setup.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,8 +61,8 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="ProjectId" id="1OfgxOozKUjVyueemAt4XayjonE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -74,7 +78,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -101,7 +105,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.setup2">
+  <component name="RunManager" selected="Python.Database">
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -120,6 +124,28 @@
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <method />
+    </configuration>
+    <configuration name="Database" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="thg-framework" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lib/BaseMode" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lib/BaseMode/Database.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -157,28 +183,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lib/cmd2/cmd2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="colors" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="thg-framework" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lib/cmd2/examples" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lib/cmd2/examples/colors.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -254,19 +258,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.colors" />
       <item itemvalue="Python.dark" />
       <item itemvalue="Python.create_dir" />
       <item itemvalue="Python.setup2" />
       <item itemvalue="Python.cmd2" />
+      <item itemvalue="Python.Database" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Database" />
         <item itemvalue="Python.setup2" />
         <item itemvalue="Python.cmd2" />
         <item itemvalue="Python.create_dir" />
         <item itemvalue="Python.dark" />
-        <item itemvalue="Python.colors" />
       </list>
     </recent_temporary>
   </component>
@@ -306,7 +310,8 @@
       <workItem from="1564377491390" duration="2414000" />
       <workItem from="1564442325165" duration="604000" />
       <workItem from="1564453027810" duration="2518000" />
-      <workItem from="1564508827207" duration="6497000" />
+      <workItem from="1564508827207" duration="9331000" />
+      <workItem from="1564518945372" duration="2416000" />
     </task>
     <task id="LOCAL-00001" summary="fix doc, fix readme">
       <created>1554908528031</created>
@@ -441,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564513443644</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="fix setup">
+      <created>1564516101134</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1564516101134</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,7 +510,8 @@
     <MESSAGE value="fix" />
     <MESSAGE value="fix thgcmd&#10;fix setup {debian,ubuntu base}" />
     <MESSAGE value="lib requirementes thg" />
-    <option name="LAST_COMMIT_MESSAGE" value="lib requirementes thg" />
+    <MESSAGE value="fix setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix setup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -528,10 +541,11 @@
     <SUITE FILE_PATH="coverage/thg_framework$print_announce.coverage" NAME="print_announce Coverage Results" MODIFIED="1555717122473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal" />
     <SUITE FILE_PATH="coverage/thg_framework$dark.coverage" NAME="dark Coverage Results" MODIFIED="1559864257862" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/documentation/docs/photos" />
     <SUITE FILE_PATH="coverage/thg_framework$async_printing.coverage" NAME="async_printing Coverage Results" MODIFIED="1559841001301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib/cmd2/examples" />
+    <SUITE FILE_PATH="coverage/thg_framework$Database.coverage" NAME="Database Coverage Results" MODIFIED="1564518863605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib/BaseMode" />
     <SUITE FILE_PATH="coverage/thg_framework$alias_startup.coverage" NAME="alias_startup Coverage Results" MODIFIED="1559840970469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib/cmd2/examples" />
     <SUITE FILE_PATH="coverage/thg_framework$check_lib.coverage" NAME="check_lib Coverage Results" MODIFIED="1555104402766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/thg_framework$insert_db.coverage" NAME="insert_db Coverage Results" MODIFIED="1555285077980" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db" />
-    <SUITE FILE_PATH="coverage/thg_framework$setup2.coverage" NAME="setup2 Coverage Results" MODIFIED="1564510527406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/setup" />
+    <SUITE FILE_PATH="coverage/thg_framework$setup2.coverage" NAME="setup2 Coverage Results" MODIFIED="1564517215903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/setup" />
     <SUITE FILE_PATH="coverage/thg_framework$thgconsole__1_.coverage" NAME="thgconsole (1) Coverage Results" MODIFIED="1554991411244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="/usr/bin" />
     <SUITE FILE_PATH="coverage/thg_framework$show_banner.coverage" NAME="show_banner Coverage Results" MODIFIED="1554910318229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/thgconsole/libs" />
     <SUITE FILE_PATH="coverage/thg_framework$_git_pre_commit.coverage" NAME=".git-pre-commit Coverage Results" MODIFIED="1555717081575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/implementar/sqlalchemy-tutorial/internal" />

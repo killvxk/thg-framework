@@ -4,7 +4,7 @@ from colorama import Fore
 import apt,sys
 def deb_ubu():
     #lista de programas
-    listt= ['fish',"postgresql","nmap","postgresql-all",'postgresql-contrib']
+    listt= ['docker.io',"nmap"]
     #procura no cache
     cache = apt.cache.Cache()
     #atualiza o cache
@@ -34,17 +34,15 @@ def deb_ubu():
             print("Sorry, package installation failed [{err}]".format(err=str(arg)))
 
 def confpostgre():
-    system("ps ax | grep postgresql")
-    print(Fore.CYAN+"habilitando o postgresql no sistema")
-    system("update-rc.d postgresql enable")
-    print(Fore.CYAN+"habilitando autostart do postgresql")
-    system("service postgresql start")
-    print(Fore.CYAN + "verificando estatus do postgresql")
-    system("service postgresql status")
-    print("ok")
+        system("""docker run --name thgdb \
+    -e POSTGRES_PASSWORD=thgdb \
+    -e POSTGRES_USER=thgdb \
+    -e POSTGRES_DB=thgdb \
+    -p 5432:5432 \
+    -d postgres""")
 def check():
     linux = distro.linux_distribution()[0]
     if linux == "ubuntu" or "debian":
         deb_ubu()
         confpostgre()
-check()
+confpostgre()
