@@ -3,7 +3,8 @@ import time
 import threading
 from io import BytesIO
 from queue import Queue
-from lib.cmd2 import Cmd, with_category, with_argparser
+from  thgcmd import *
+from thgcmd.utils import basic_complete
 from art import text2art
 from utils import module
 from pathlib import Path
@@ -39,7 +40,7 @@ class THGBASECONSOLE(Cmd, Database):
                                              use_ipython=True,
                                              completekey="tab",
                                              persistent_history_file="history",
-                                             persistent_history_length=999999,
+                                              persistent_history_length=999999,
                                              multiline_commands=['orate'],
                                              shortcuts=shortcuts,
                                              )
@@ -51,11 +52,11 @@ class THGBASECONSOLE(Cmd, Database):
         self.allow_cli_args = False
         Database.__init__(self)
         self.prompt = self.console_prompt + self.console_prompt_end
-        self.do_banner(None)
+        self.thgcmd_banner(None)
         self.poutput("frase")
     '''
     add select
-    def do_eat(self, arg):
+    def thgcmd_eat(self, arg):
         sauce = self.select('sweet salty', 'Sauce? ')
         result = '{food} with {sauce} sauce, yum!'
         result = result.format(food=arg, sauce=sauce)
@@ -70,7 +71,7 @@ class THGBASECONSOLE(Cmd, Database):
     '''
 
     @with_category(CMD_CORE)
-    def do_banner(self, args):
+    def thgcmd_banner(self, args):
         # exploits_count=self.modules_count["exploits"] + self.modules_count['extra_exploits'],
         # encoders_count=self.modules_count["encoders"] + self.modules_count['extra_encoders'],
         # auxiliary_count=self.modules_count["auxiliary"] + self.modules_count['extra_auxiliary'],
@@ -81,7 +82,7 @@ class THGBASECONSOLE(Cmd, Database):
         """Print thg-console bannercolor_end=Fore.RESETlistmod"""
         ascii_text = text2art("thg-console", "rand")
         self.poutput("\n\n")
-        self.poutput(ascii_text, '\n\n', color=Fore.LIGHTCYAN_EX)
+        #self.poutput(ascii_text, '\n\n', color=Fore.LIGHTCYAN_EX)
         #self.poutput("thg-console has {count} modules".format(count=self.get_module_count()), "\n\n", color=Fore.MAGENTA)
         self.banner = """
         {CYAN}==================={GREEN}[ thgconsole {version} ]{GREEN}{CYAN}===================
@@ -123,7 +124,7 @@ class THGBASECONSOLE(Cmd, Database):
                            mac=thg_add_init.get_mac())
         print(self.banner)
     @with_category(CMD_CORE)
-    def do_version(self,args):
+    def thgcmd_version(self,args):
         """show version"""
         if args == "all":
             self._print_item(__version__+" "+__codenome__)
@@ -138,7 +139,7 @@ class THGBASECONSOLE(Cmd, Database):
             self._print_item("codenome => show codenome")
             self._print_item("version => show version")
     @with_category(CMD_CORE)
-    def do_ip(self,args):
+    def thgcmd_ip(self,args):
         """show ip"""
         if args == "external":
             self._print_item("send pycurl request...")
@@ -159,21 +160,21 @@ class THGBASECONSOLE(Cmd, Database):
             self._print_item("external => show external ip ")
             self._print_item("internal => show internal ip ")
     @with_category(CMD_CORE)
-    def do_exit(self,args):
+    def thgcmd_exit(self,args):
         """Exit the console"""
         exit(1)
     @with_category(CMD_CORE)
-    def do_exec(self,args):
+    def thgcmd_exec(self,args):
         """ <shell thg_command> <args> Execute a thg_command in a shell"""
         os.system(args)
     @with_category(CMD_MODULE)
-    def do_listmod(self, args):
+    def thgcmd_listmod(self, args):
         """List all modules"""
         local_modules = module.get_local_modules()
         self._print_modules(local_modules, "Module List:")
 
     @with_category(CMD_MODULE)
-    def do_search(self, args):
+    def thgcmd_search(self, args):
         """
         Search modules
 
@@ -209,7 +210,7 @@ class THGBASECONSOLE(Cmd, Database):
             completion_items = ['debug']
             if self.module_instance:
                 completion_items += [option.name for option in self.module_instance.options.get_options()]
-        return self.basic_complete(text, line, begidx, endidx, completion_items)
+        return basic_complete(text, line, begidx, endidx, completion_items)
 
     set_parser = argparse.ArgumentParser()
     set_parser.add_argument("name", help="The name of the field you want to set")
@@ -218,7 +219,7 @@ class THGBASECONSOLE(Cmd, Database):
 
     @with_argparser(set_parser)
     @with_category(CMD_MODULE)
-    def do_set(self, args):
+    def thgcmd_set(self, args):
         """Set module option value/ set program config"""
         if args.name == 'debug':
             self.debug = args.value
@@ -244,10 +245,10 @@ class THGBASECONSOLE(Cmd, Database):
             modules = []
         else:
             modules = [local_module[0] for local_module in module.get_local_modules()]
-        return self.basic_complete(text, line, begidx, endidx, modules)
+        return basic_complete(text, line, begidx, endidx, modules)
 
     @with_category(CMD_MODULE)
-    def do_use(self, module_name, module_reload=False):
+    def thgcmd_use(self, module_name, module_reload=False):
         """Chose a module"""
         module_file = module.name_convert(module_name)
         module_type = module_name.split("/")[0]
@@ -264,7 +265,7 @@ class THGBASECONSOLE(Cmd, Database):
             self.poutput("Module/Exploit not found.")
 
     @with_category(CMD_MODULE)
-    def do_back(self, args):
+    def thgcmd_back(self, args):
         """Clear module that chose"""
         self.module_name = None
         self.module_instance = None
@@ -275,10 +276,10 @@ class THGBASECONSOLE(Cmd, Database):
             completion_items = []
         else:
             completion_items = ['info', 'options', 'missing']
-        return self.basic_complete(text, line, begidx, endidx, completion_items)
+        return basic_complete(text, line, begidx, endidx, completion_items)
 
     @with_category(CMD_MODULE)
-    def do_show(self, content):
+    def thgcmd_show(self, content):
         """
         Display module information
 
@@ -340,9 +341,9 @@ class THGBASECONSOLE(Cmd, Database):
             )
 
     @with_category(CMD_MODULE)
-    def do_run(self, args):
+    def thgcmd_run(self, args):
         """alias to exploit"""
-        self.do_exploit(args=args)
+        self.thgcmd_exploit(args=args)
 
     def exploit_thread(self, target, target_type, thread_queue):
         target_field = None
@@ -370,7 +371,7 @@ class THGBASECONSOLE(Cmd, Database):
         thread_queue.get(1)
 
     @with_category(CMD_MODULE)
-    def do_exploit(self, args):
+    def thgcmd_exploit(self, args):
         """Execute module exploit"""
         if not self.module_instance:
             raise ModuleNotUseException()
@@ -477,7 +478,7 @@ class THGBASECONSOLE(Cmd, Database):
         thread_queue.get(1)
 
     @with_category(CMD_MODULE)
-    def do_check(self, args):
+    def thgcmd_check(self, args):
         """Execute module check"""
         if not self.module_instance:
             raise ModuleNotUseException()
@@ -561,15 +562,15 @@ class THGBASECONSOLE(Cmd, Database):
         ))
 
     @with_category(CMD_DATABASE)
-    def do_db_rebuild(self, args):
+    def thgcmd_db_rebuild(self, args):
         """Rebuild database for search"""
         self.db_rebuild()
         self.poutput("Database rebuild done.", color=Fore.GREEN)
 
     @with_category(CMD_DATABASE)
-    def do_reload(self, args):
+    def thgcmd_reload(self, args):
         """reload the chose module"""
-        self.do_use(self.module_name, module_reload=True)
+        self.thgcmd_use(self.module_name, module_reload=True)
 
     def set_prompt(self, module_type, module_name):
         module_prompt = " {module_type}({color}{module_name}{color_end})".format(
