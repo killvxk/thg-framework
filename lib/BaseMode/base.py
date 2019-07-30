@@ -586,6 +586,7 @@ class THGBASECONSOLE(Cmd, Database):
 ###################################################################################
     @with_category(CMD_SYSTEM)
     def thgcmd_battery(self,*args):
+        """show battery status"""
         def secs2hours(secs):
             mm, ss = divmod(secs, 60)
             hh, mm = divmod(mm, 60)
@@ -611,18 +612,9 @@ class THGBASECONSOLE(Cmd, Database):
         main()
     @with_category(CMD_SYSTEM)
     def thgcmd_who(self, *args):
-        # !/usr/bin/env python
-
-        # Copyright (c) 2009, Giampaolo Rodola'. All rights reserved.
-        # Use of this source code is governed by a BSD-style license that can be
-        # found in the LICENSE file.
-
         """
         A clone of 'who' command; print information about users who are
         currently logged in.
-        $ python scripts/who.py
-        giampaolo    console    2017-03-25 22:24                loginwindow
-        giampaolo    ttys000    2017-03-25 23:28 (10.0.2.2)     sshd
         """
 
         from datetime import datetime
@@ -642,7 +634,298 @@ class THGBASECONSOLE(Cmd, Database):
                 ))
 
         main()
+    @with_category(CMD_SYSTEM)
+    def thgcmd_free(self,*args):
+        """show memore info"""
+        def main():
+            virt = psutil.virtual_memory()
+            swap = psutil.swap_memory()
+            templ = "%-7s %10s %10s %10s %10s %10s %10s"
+            print(templ % ('', 'total', 'used', 'free', 'shared', 'buffers', 'cache'))
+            print(templ % (
+                'Mem:',
+                int(virt.total / 1024),
+                int(virt.used / 1024),
+                int(virt.free / 1024),
+                int(getattr(virt, 'shared', 0) / 1024),
+                int(getattr(virt, 'buffers', 0) / 1024),
+                int(getattr(virt, 'cached', 0) / 1024)))
+            print(templ % (
+                'Swap:', int(swap.total / 1024),
+                int(swap.used / 1024),
+                int(swap.free / 1024),
+                '',
+                '',
+                ''))
 
+        main()
+    @with_category(CMD_SYSTEM)
+    def thgcmd_sensors_temperatures(self,*args):
+        """
+        utility on Linux printing hardware temperatures.
+        """
+        def main():
+            if not hasattr(psutil, "sensors_temperatures"):
+                sys.exit("platform not supported")
+            temps = psutil.sensors_temperatures()
+            if not temps:
+                sys.exit("can't read any temperature")
+            for name, entries in temps.items():
+                print(name)
+                for entry in entries:
+                    print("    %-20s %s °C (high = %s °C, critical = %s °C)" % (
+                        entry.label or name, entry.current, entry.high,
+                        entry.critical))
+                print()
+
+        main()
+    @with_category(CMD_SYSTEM)
+    def thgcmd_sensor(self,*args):
+
+        """
+        A clone of 'sensors' utility on Linux printing hardware temperatures,
+        fans speed and battery info.
+        """
+
+
+
+        def secs2hours(secs):
+            mm, ss = divmod(secs, 60)
+            hh, mm = divmod(mm, 60)
+            return "%d:%02d:%02d" % (hh, mm, ss)
+
+        def main():
+            if hasattr(psutil, "sensors_temperatures"):
+                temps = psutil.sensors_temperatures()
+            else:
+                temps = {}
+            if hasattr(psutil, "sensors_fans"):
+                fans = psutil.sensors_fans()
+            else:
+                fans = {}
+            if hasattr(psutil, "sensors_battery"):
+                battery = psutil.sensors_battery()
+            else:
+                battery = None
+
+            if not any((temps, fans, battery)):
+                print("can't read any temperature, fans or battery info")
+                return
+
+            names = set(list(temps.keys()) + list(fans.keys()))
+            for name in names:
+                print(name)
+                # Temperatures.
+                if name in temps:
+                    print("    Temperatures:")
+                    for entry in temps[name]:
+                        print("        %-20s %s°C (high=%s°C, critical=%s°C)" % (
+                            entry.label or name, entry.current, entry.high,
+                            entry.critical))
+                # Fans.
+                if name in fans:
+                    print("    Fans:")
+                    for entry in fans[name]:
+                        print("        %-20s %s RPM" % (
+                            entry.label or name, entry.current))
+
+            # Battery.
+            if battery:
+                print("Battery:")
+                print("    charge:     %s%%" % round(battery.percent, 2))
+                if battery.power_plugged:
+                    print("    status:     %s" % (
+                        "charging" if battery.percent < 100 else "fully charged"))
+                    print("    plugged in: yes")
+                else:
+                    print("    left:       %s" % secs2hours(battery.secsleft))
+                    print("    status:     %s" % "discharging")
+                    print("    plugged in: no")
+
+        main()
+    @with_category(CMD_SYSTEM)
+    def thgcmd_fans(self,*args):
+        """
+        Show fans information.
+        """
+
+        import sys
+
+        import psutil
+
+        def main():
+            if not hasattr(psutil, "sensors_fans"):
+                return sys.exit("platform not supported")
+            fans = psutil.sensors_fans()
+            if not fans:
+                print("no fans detected")
+                return
+            for name, entries in fans.items():
+                print(name)
+                for entry in entries:
+                    print("    %-20s %s RPM" % (entry.label or name, entry.current))
+                print()
+
+
+        main()
+    @with_category(CMD_SYSTEM)
+    def thgcmd_netstat(self,*args):
+        # !/usr/bin/env python
+
+        """
+        A clone of 'netstat -antp' on Linux.
+        """
+
+        import socket
+        from socket import AF_INET, SOCK_STREAM, SOCK_DGRAM
+
+        import psutil
+
+        AD = "-"
+        AF_INET6 = getattr(socket, 'AF_INET6', object())
+        proto_map = {
+            (AF_INET, SOCK_STREAM): 'tcp',
+            (AF_INET6, SOCK_STREAM): 'tcp6',
+            (AF_INET, SOCK_DGRAM): 'udp',
+            (AF_INET6, SOCK_DGRAM): 'udp6',
+        }
+
+        def main():
+            templ = "%-5s %-30s %-30s %-13s %-6s %s"
+            print(templ % (
+                "Proto", "Local address", "Remote address", "Status", "PID",
+                "Program name"))
+            proc_names = {}
+            for p in psutil.process_iter(attrs=['pid', 'name']):
+                proc_names[p.info['pid']] = p.info['name']
+            for c in psutil.net_connections(kind='inet'):
+                laddr = "%s:%s" % (c.laddr)
+                raddr = ""
+                if c.raddr:
+                    raddr = "%s:%s" % (c.raddr)
+                print(templ % (
+                    proto_map[(c.family, c.type)],
+                    laddr,
+                    raddr or AD,
+                    c.status,
+                    c.pid or AD,
+                    proc_names.get(c.pid, '?')[:15],
+                ))
+
+        main()
+    @with_category(CMD_SYSTEM)
+    def thgcmd_procsmensage(self,*args):
+        """
+        Show detailed memory usage about all (querable) processes.
+        """
+
+        import sys
+
+        import psutil
+
+        if not (psutil.LINUX or psutil.MACOS or psutil.WINDOWS):
+            sys.exit("platform not supported")
+
+        def convert_bytes(n):
+            symbols = ('K', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y')
+            prefix = {}
+            for i, s in enumerate(symbols):
+                prefix[s] = 1 << (i + 1) * 10
+            for s in reversed(symbols):
+                if n >= prefix[s]:
+                    value = float(n) / prefix[s]
+                    return '%.1f%s' % (value, s)
+            return "%sB" % n
+
+        def main():
+            ad_pids = []
+            procs = []
+            for p in psutil.process_iter():
+                with p.oneshot():
+                    try:
+                        mem = p.memory_full_info()
+                        info = p.as_dict(attrs=["cmdline", "username"])
+                    except psutil.AccessDenied:
+                        ad_pids.append(p.pid)
+                    except psutil.NoSuchProcess:
+                        pass
+                    else:
+                        p._uss = mem.uss
+                        p._rss = mem.rss
+                        if not p._uss:
+                            continue
+                        p._pss = getattr(mem, "pss", "")
+                        p._swap = getattr(mem, "swap", "")
+                        p._info = info
+                        procs.append(p)
+
+            procs.sort(key=lambda p: p._uss)
+            templ = "%-7s %-7s %-30s %7s %7s %7s %7s"
+            print(templ % ("PID", "User", "Cmdline", "USS", "PSS", "Swap", "RSS"))
+            print("=" * 78)
+            for p in procs[:86]:
+                line = templ % (
+                    p.pid,
+                    p._info["username"][:7] if p._info["username"] else "",
+                    " ".join(p._info["cmdline"])[:30],
+                    convert_bytes(p._uss),
+                    convert_bytes(p._pss) if p._pss != "" else "",
+                    convert_bytes(p._swap) if p._swap != "" else "",
+                    convert_bytes(p._rss),
+                )
+                print(line)
+            if ad_pids:
+                print("warning: access denied for %s pids" % (len(ad_pids)),
+                      file=sys.stderr)
+
+
+        sys.exit(main())
+    @with_category(CMD_SYSTEM)
+    def thgcmd_pstree(self,*args):
+        """
+        Similar to 'ps aux --forest' on Linux, prints the process list
+        as a tree structure.
+        """
+        import collections
+        import sys
+
+        import psutil
+
+        def print_tree(parent, tree, indent=''):
+            try:
+                name = psutil.Process(parent).name()
+            except psutil.Error:
+                name = "?"
+            print(parent, name)
+            if parent not in tree:
+                return
+            children = tree[parent][:-1]
+            for child in children:
+                sys.stdout.write(indent + "|- ")
+                print_tree(child, tree, indent + "| ")
+            child = tree[parent][-1]
+            sys.stdout.write(indent + "`_ ")
+            print_tree(child, tree, indent + "  ")
+
+        def main():
+            # construct a dict where 'values' are all the processes
+            # having 'key' as their parent
+            tree = collections.defaultdict(list)
+            for p in psutil.process_iter():
+                try:
+                    tree[p.ppid()].append(p.pid)
+                except (psutil.NoSuchProcess, psutil.ZombieProcess):
+                    pass
+            # on systems supporting PID 0, PID 0's parent is usually 0
+            if 0 in tree and 0 in tree[0]:
+                tree[0].remove(0)
+            print_tree(min(tree), tree)
+
+        main()
+
+###################################################################################
+###################################################################################
+###################################################################################
     def _print_modules(self, modules, title):
         self.poutput(title, "\n\n", color=Fore.CYAN)
         self.poutput(tabulate(modules,headers=('name', 'module_name', 'description', 'author', 'disclosure_date', 'service_name', 'service_version', 'check')), '\n\n')
