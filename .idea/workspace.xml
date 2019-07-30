@@ -2,13 +2,119 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e6b10ed-b24d-4ee8-b1c6-2c177b363b00" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/documentation/docs/community.md" beforeDir="false" afterPath="$PROJECT_DIR$/documentation/docs/community.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/BaseMode/Database.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/BaseMode/Database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/BaseMode/.cmd2rc" beforeDir="false" afterPath="$PROJECT_DIR$/lib/BaseMode/.cmd2rc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/BaseMode/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/BaseMode/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/psutil/scripts/top.py" beforeDir="false" afterPath="$PROJECT_DIR$/psutil/scripts/top.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/argcomplete_bridge.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/argparse_completer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/clipboard.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/cmd2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/constants.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/alternatives.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/argument_processing.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/conf.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/freefeatures.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/hooks.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/index.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/install.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/integrating.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/make.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/overview.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/settingchanges.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/transcript.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/unfreefeatures.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/.cmd2rc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/alias_startup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/arg_print.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/async_printing.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/cmd2_history.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/cmd_as_argument.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/colors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/decorator_example.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/environment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/event_loops.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/example.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/exit_code.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/hello_cmd2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/help_categories.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/hooks.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/paged_output.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/persistent_history.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/pirate.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/plumbum_colors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/python_scripting.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/remove_unused.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/scripts/arg_printer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/scripts/conditional.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/scripts/nested.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/scripts/save_help_text.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/scripts/script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/scripts/script.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/subcommands.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/tab_autocomp_dynamic.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/tab_autocompletion.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/tab_completion.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/table_display.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/test_plugin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/transcripts/exampleSession.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/transcripts/pirate.transcript" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/transcripts/transcript_regex.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/history.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/parsing.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/plugin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/pyscript_bridge.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/rl_utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/conftest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/pyscript/help.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/pyscript/pyscript_dir.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/pyscript/stdout_capture.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/relative_multiple.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/script.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/scripts/binary.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/scripts/empty.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/scripts/help.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/scripts/nested.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/scripts/one_down.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/scripts/postcmds.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/scripts/precmds.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/scripts/raises_exception.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/scripts/recursive.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/scripts/utf8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/test_acargparse.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/test_argparse.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/test_autocompletion.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/test_cmd2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/test_completion.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/test_history.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/test_parsing.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/test_plugin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/test_pyscript.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/test_transcript.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/test_utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/bol_eol.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/characterclass.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/dotstar.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/extension_notation.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/failure.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/from_cmdloop.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/multiline_no_regex.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/multiline_regex.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/no_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/no_output_last.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/regex_set.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/singleslash.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/slashes_escaped.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/slashslash.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/spaces.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/word_boundaries.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/transcript.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/cmd2/utils.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -311,7 +417,7 @@
       <workItem from="1564442325165" duration="604000" />
       <workItem from="1564453027810" duration="2518000" />
       <workItem from="1564508827207" duration="9331000" />
-      <workItem from="1564518945372" duration="2416000" />
+      <workItem from="1564518945372" duration="6772000" />
     </task>
     <task id="LOCAL-00001" summary="fix doc, fix readme">
       <created>1554908528031</created>
@@ -453,7 +559,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564516101134</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="fix commands">
+      <created>1564523452491</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1564523452491</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,7 +624,8 @@
     <MESSAGE value="fix thgcmd&#10;fix setup {debian,ubuntu base}" />
     <MESSAGE value="lib requirementes thg" />
     <MESSAGE value="fix setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix setup" />
+    <MESSAGE value="fix commands" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix commands" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
