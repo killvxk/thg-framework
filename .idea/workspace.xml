@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e6b10ed-b24d-4ee8-b1c6-2c177b363b00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/setup/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/thg-framework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/thg-framework.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/BaseMode/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/BaseMode/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup/setup2.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -309,7 +304,7 @@
       <workItem from="1564377491390" duration="2414000" />
       <workItem from="1564442325165" duration="604000" />
       <workItem from="1564453027810" duration="2518000" />
-      <workItem from="1564508827207" duration="2742000" />
+      <workItem from="1564508827207" duration="3611000" />
     </task>
     <task id="LOCAL-00001" summary="fix doc, fix readme">
       <created>1554908528031</created>
@@ -430,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564380707771</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="fix thgcmd&#10;fix setup {debian,ubuntu base}">
+      <created>1564511919174</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1564511919174</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -485,7 +487,8 @@
     <MESSAGE value="fix doc" />
     <MESSAGE value="fix time to run&#10;fix ip()&#10;fix ipi()&#10;add pycurl" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="fix thgcmd&#10;fix setup {debian,ubuntu base}" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix thgcmd&#10;fix setup {debian,ubuntu base}" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
