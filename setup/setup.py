@@ -1,16 +1,52 @@
-import sys, platform
-import docker
+import sys, distro
 from os import system
 from colorama import Fore
+distro = distro.id()
+
+#### verificacao da python-pip
+try:
+   import pip
+except ImportError:
+   if distro == 'debian' or distro == 'ubundu':
+       system("apt install python3-pip")
+       import pip
+   elif distro == 'arch':
+       system("pacman -S python-pip")
+       import pip
+   else:
+       print("instalar manual o pip... thg finalizado")
+       exit(1)
 
 try:
-    distro = platform.node()
-    if distro == 'debian' or distro == 'ubuntu':
-        import apt
-    elif distro == 'arch':
-        import pacman
+    import  docker
 except ImportError:
-    pass
+   if distro == 'debian' or distro == 'ubundu':
+       system("apt install docker.io")
+       import docker
+   elif distro == 'arch':
+       system("pacman -S docker.io")
+       import docker
+   else:
+       print("instalar manual o pip... thg finalizado")
+       exit(1)
+
+
+try:
+    import apt
+except ImportError:
+    if distro == 'debian' or distro == 'ubuntu':
+       system("apt install python3-apt")
+       import apt
+try:
+   import pacman
+except ImportError:
+   if distro == 'arch':
+       system("pip install python-pacman ") 
+       try:
+          import pacman 
+       except ImportError:
+          print("instalacao manual do python-pacman\nlink:https://pypi.org/project/python-pacman/")       
+
 
 '''
 Instala os pacotes para o debian
@@ -107,7 +143,8 @@ Verifica a distro e configura o banco de dados
 
 
 def check():
-    linux = platform.node()
+    linux = str(distro.id())
+    print(linux)
     if linux == "ubuntu" or linux == "debian":
         deb_ubu()
         confpostgre()

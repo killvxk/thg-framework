@@ -2,118 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25d45202-a621-49bf-9362-b756fc0eeb29" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/thg-framework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/thg-framework.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/history" beforeDir="false" afterPath="$PROJECT_DIR$/history" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/BaseMode/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/BaseMode/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/argcomplete_bridge.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/argcomplete_bridge.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/argparse_completer.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/argparse_completer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/clipboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/clipboard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/cmd2.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/cmd2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/docs/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/docs/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/alternatives.rst" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/docs/alternatives.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/argument_processing.rst" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/docs/argument_processing.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/docs/conf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/freefeatures.rst" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/docs/freefeatures.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/hooks.rst" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/docs/hooks.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/docs/index.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/install.rst" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/docs/install.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/integrating.rst" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/docs/integrating.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/make.bat" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/docs/make.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/overview.rst" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/docs/overview.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/settingchanges.rst" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/docs/settingchanges.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/transcript.rst" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/docs/transcript.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/docs/unfreefeatures.rst" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/docs/unfreefeatures.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/.cmd2rc" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/.cmd2rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/alias_startup.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/alias_startup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/arg_print.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/arg_print.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/async_printing.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/async_printing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/cmd2_history.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/cmd2_history.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/cmd_as_argument.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/cmd_as_argument.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/colors.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/colors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/decorator_example.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/decorator_example.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/environment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/event_loops.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/event_loops.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/example.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/example.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/exit_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/exit_code.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/hello_cmd2.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/hello_cmd2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/help_categories.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/help_categories.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/hooks.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/hooks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/paged_output.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/paged_output.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/persistent_history.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/persistent_history.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/pirate.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/pirate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/plumbum_colors.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/plumbum_colors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/python_scripting.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/python_scripting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/remove_unused.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/remove_unused.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/scripts/arg_printer.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/scripts/arg_printer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/scripts/conditional.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/scripts/conditional.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/scripts/nested.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/scripts/nested.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/scripts/save_help_text.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/scripts/save_help_text.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/scripts/script.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/scripts/script.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/scripts/script.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/scripts/script.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/subcommands.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/subcommands.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/tab_autocomp_dynamic.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/tab_autocomp_dynamic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/tab_autocompletion.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/tab_autocompletion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/tab_completion.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/tab_completion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/table_display.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/table_display.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/test_plugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/test_plugin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/transcripts/exampleSession.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/transcripts/exampleSession.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/transcripts/pirate.transcript" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/transcripts/pirate.transcript" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/examples/transcripts/transcript_regex.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/examples/transcripts/transcript_regex.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/history.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/history.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/parsing.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/parsing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/plugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/plugin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/pyscript_bridge.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/pyscript_bridge.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/rl_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/rl_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/pyscript/help.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/pyscript/help.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/pyscript/pyscript_dir.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/pyscript/pyscript_dir.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/pyscript/stdout_capture.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/pyscript/stdout_capture.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/relative_multiple.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/relative_multiple.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/script.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/script.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/script.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/script.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/scripts/binary.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/scripts/binary.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/scripts/empty.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/scripts/empty.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/scripts/help.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/scripts/help.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/scripts/nested.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/scripts/nested.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/scripts/one_down.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/scripts/one_down.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/scripts/postcmds.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/scripts/postcmds.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/scripts/precmds.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/scripts/precmds.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/scripts/raises_exception.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/scripts/raises_exception.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/scripts/recursive.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/scripts/recursive.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/scripts/utf8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/scripts/utf8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/test_acargparse.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/test_acargparse.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/test_argparse.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/test_argparse.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/test_autocompletion.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/test_autocompletion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/test_cmd2.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/test_cmd2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/test_completion.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/test_completion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/test_history.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/test_history.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/test_parsing.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/test_parsing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/test_plugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/test_plugin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/test_pyscript.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/test_pyscript.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/test_transcript.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/test_transcript.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/test_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/test_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/bol_eol.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/transcripts/bol_eol.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/characterclass.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/transcripts/characterclass.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/dotstar.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/transcripts/dotstar.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/extension_notation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/transcripts/extension_notation.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/failure.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/transcripts/failure.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/from_cmdloop.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/transcripts/from_cmdloop.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/multiline_no_regex.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/transcripts/multiline_no_regex.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/multiline_regex.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/transcripts/multiline_regex.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/no_output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/transcripts/no_output.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/no_output_last.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/transcripts/no_output_last.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/regex_set.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/transcripts/regex_set.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/singleslash.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/transcripts/singleslash.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/slashes_escaped.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/transcripts/slashes_escaped.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/slashslash.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/transcripts/slashslash.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/spaces.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/transcripts/spaces.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/tests/transcripts/word_boundaries.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/tests/transcripts/word_boundaries.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/transcript.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/transcript.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/cmd2/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/thgcmd/utils.py" afterDir="false" />
     </list>
     <list id="d12166c1-58e5-4e48-96ec-47208eb395c8" name="fim da fazer beta" comment="fim da fazer beta&#10;remo;'ao do cmd2&#10;fiz .cmd2rc&#10;add thgcmd&#10;fix commands system&#10;&#10;(cherry picked from commit 2411abc00e8d5242e8d0a8286503998593d73eab)">
       <changelist_data name="darkcode357" email="mortebranca357@357" date="1564529135000" />
@@ -124,6 +15,25 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="THG [2]" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="MIXED" />
@@ -133,12 +43,14 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -163,7 +75,10 @@
       <option name="presentableId" value="Default" />
       <updated>1564530164203</updated>
       <workItem from="1564530166016" duration="829000" />
-      <workItem from="1564595088672" duration="2065000" />
+      <workItem from="1564595088672" duration="4326000" />
+      <workItem from="1564603858527" duration="402000" />
+      <workItem from="1564604524753" duration="34000" />
+      <workItem from="1564604945614" duration="123000" />
     </task>
     <task id="LOCAL-00001" summary="fix setup">
       <created>1564530544630</created>
