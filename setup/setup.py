@@ -1,18 +1,26 @@
-import distro,sys
+import sys, platform
+import docker
 from os import system
 from colorama import Fore
+
 try:
-    if distro.linux_distribution()[0] == 'debian' or 'ubuntu':
+    distro = platform.node()
+    if distro == 'debian' or distro == 'ubuntu':
         import apt
-    elif distro.linux_distribution()[0] == 'Arch Linux':
+    elif distro == 'arch':
         import pacman
-    else:
-        pass
 except ImportError:
     pass
+
+'''
+Instala os pacotes para o debian
+'''
+
+
 def arch_linux():
-    #lista de programas
-    listt = ['docker.io', "nmap"]
+    import pacman
+    # lista de programas
+    listt = ['docker', "nmap"]
     # procura no cache
     pacman.refresh()
     banner = '''
@@ -24,24 +32,30 @@ def arch_linux():
    ╚═╝   ╚═╝  ╚═╝ ╚═════╝       ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝      ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝
                                                                                                                           
     '''
-    print(Fore.BLUE+banner)
-    #faz o check dos programas
+    print(Fore.BLUE + banner)
+    # faz o check dos programas
     for i in listt:
         if i in pacman.get_installed():
             print("{colorp}{i} =>{color} already installed".format(colorp=Fore.RED, color=Fore.CYAN, i=i))
         else:
-            #instala
-            pacman.install(i)
-        #try:
-        #except Exception as arg:
-        #   print("Sorry, package installation failed [{err}]".format(err=str(arg)))
+            # instala
+            try:
+                pacman.install(i)
+            except Exception as arg:
+                print("Sorry, package installation failed [{err}]".format(err=str(arg)))
+
+
+'''
+Instala os pacotes para o debian
+'''
+
 
 def deb_ubu():
-    #lista de programas
-    listt= ['docker.io',"nmap"]
-    #procura no cache
+    # lista de programas
+    listt = ['docker.io', "nmap"]
+    # procura no cache
     cache = apt.cache.Cache()
-    #atualiza o cache
+    # atualiza o cache
     cache.update()
     cache.open()
     banner = '''
@@ -53,33 +67,57 @@ def deb_ubu():
    ╚═╝   ╚═╝  ╚═╝ ╚═════╝        ╚═════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝   ╚═╝    ╚═════╝       ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝
                                                                                                                                                   
     '''
-    print(Fore.BLUE+banner)
-    #faz o check dos programas
+    print(Fore.BLUE + banner)
+    # faz o check dos programas
     for i in listt:
+        pass
         pkg = cache[i]
         if pkg.is_installed:
-            print("{colorp}{i} =>{color} already installed".format(colorp=Fore.RED,color=Fore.CYAN,i=i))
+            print("{colorp}{i} =>{color} already installed".format(colorp=Fore.RED, color=Fore.CYAN, i=i))
         else:
-            #instala
+            # instala
             print(pkg.mark_install())
         try:
             cache.commit()
         except Exception as  arg:
             print("Sorry, package installation failed [{err}]".format(err=str(arg)))
 
+
+'''
+cria  e configura banco de dados
+'''
+
+
 def confpostgre():
-        system("""docker run --name thgdb \
-    -e POSTGRES_PASSWORD=thgdb \
-    -e POSTGRES_USER=thgdb \
-    -e POSTGRES_DB=thgdb \
-    -p 5432:5432 \
-    -d postgres""")
+    client = docker.from_env()
+    if client.images.get("postgres") != None:
+        if client.containers.get("thgdb") != None:
+            print("Database already exist!")
+        else:
+            client.api.create_container("postgres", "POSTGRES_DB=thgdb", "POSTGRES_USER=thgdb",
+                                        "POSTGRES_PASSWORD=thgdb", "port=5432")
+    else:
+        client.image.pull("postgres")
+
+
+
+'''
+Verifica a distro e configura o banco de dados
+'''
+
+
 def check():
-    linux = distro.linux_distribution()[0]
-    if linux == "ubuntu" or "debian":
+    linux = platform.node()
+    if linux == "ubuntu" or linux == "debian":
         deb_ubu()
         confpostgre()
-    elif linux == "Arch Linux":
+    elif linux == "arch":
         arch_linux()
         confpostgre()
+    else:
+        print("Sorry, distro not found")
+        pass
+    print(Fore.RESET)
+
+
 check()
