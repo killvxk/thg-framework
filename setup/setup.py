@@ -90,14 +90,28 @@ cria  e configura banco de dados
 
 def confpostgre():
     client = docker.from_env()
-    if client.images.get("postgres") != None:
-        if client.containers.get("thgdb") != None:
+    try:
+        img = client.images.get("postgres")
+    except docker.errors.ImageNotFound:
+        img = client.images.pull("postgres")
+
+    try:
+        container = client.containers.get("thgdb")
+    except docker.errors.NotFound:
+        container = None
+
+    if img != None:
+        if container != None:
             print("Database already exist!")
+            container.start()
         else:
-            client.api.create_container("postgres", "POSTGRES_DB=thgdb", "POSTGRES_USER=thgdb",
-                                        "POSTGRES_PASSWORD=thgdb", "port=5432")
-    else:
-        client.image.pull("postgres")
+            print("Creating container...")
+            client.containers.run("postgres", name="thgdb", environment={
+                            "POSTGRES_PASSWORD": "thgdb",
+                            "POSTGRES_USER": "thgdb",
+                            "POSTGRES_DB": "thgdb",
+                    }, ports={'5432/tcp': 5432}, detach=True)
+            print("Container created!")
 
 
 
