@@ -5,7 +5,7 @@ distro = distro.id()
 
 #### verificacao da python-pip
 try:
-   import pip
+    import pip
 except ImportError:
    if distro == 'debian' or distro == 'ubundu':
        system("apt install python3-pip")
@@ -18,18 +18,17 @@ except ImportError:
        exit(1)
 
 try:
-    import  docker
+    import docker
 except ImportError:
    if distro == 'debian' or distro == 'ubundu':
        system("apt install docker.io")
        import docker
    elif distro == 'arch':
-       system("pacman -S docker.io")
+       system("pacman -S docker")
        import docker
    else:
        print("instalar manual o pip... thg finalizado")
        exit(1)
-
 
 try:
     import apt
@@ -38,7 +37,7 @@ except ImportError:
        system("apt install python3-apt")
        import apt
 try:
-   import pacman
+    import pacman
 except ImportError:
    if distro == 'arch':
        system("pip install python-pacman ") 
@@ -157,7 +156,7 @@ Verifica a distro e configura o banco de dados
 
 
 def check():
-    linux = str(distro.id())
+    linux = distro.id()
     print(linux)
     if linux == "ubuntu" or linux == "debian":
         deb_ubu()
