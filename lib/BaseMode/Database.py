@@ -1,6 +1,6 @@
 #conexao com o banco de dados
 from sqlalchemy import create_engine
-
+import psycopg2
 
 
 
@@ -13,14 +13,16 @@ from importlib import import_module
 
 
 class Database:
-    db_file = '{root_path}/db/thg.db'.format(root_path=ROOT_PATH)
+    #db_file = '{root_path}/db/thg.db'.format(root_path=ROOT_PATH)
+    db = create_engine("postgresql+psycopg2://thgdb:thgdb@localhost/thgdb", encoding="UTF-8")
     connection = None
     cursor = None
     searchable_fields = ['name', 'module_name', 'description', 'author', 'disclosure_date', 'service_name', 'service_version', 'check']
 
     def __init__(self):
-        self.connection = sqlite3.connect(self.db_file)
-        self.cursor = self.connection.cursor()
+        #self.connection = sqlite3.connect(self.db_file)
+        self.connection = db.connect()
+        #self.cursor = self.connection.cursor()
 
         self.create_table()
 
