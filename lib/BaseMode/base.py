@@ -73,7 +73,7 @@ class THGBASECONSOLE(Cmd, Database):
 
     @with_category(CMD_CORE)
     def thgcmd_banner(self, args):
-        # exploits_count=self.modules_count["exploits"] + self.modules_count['extra_exploits'],
+        # self.module_class.Exploits_count=self.modules_count["exploits"] + self.modules_count['extra_exploits'],
         # encoders_count=self.modules_count["encoders"] + self.modules_count['extra_encoders'],
         # auxiliary_count=self.modules_count["auxiliary"] + self.modules_count['extra_auxiliary'],
         # nops_count=self.modules_count["nops"] + self.modules_count['extra_nops'],
@@ -260,7 +260,7 @@ class THGBASECONSOLE(Cmd, Database):
                 self.module_class = reload(self.module_class)
             else:
                 self.module_class = import_module("modules.{module_name}".format(module_name=module_name.replace("/", ".")))
-            self.module_instance = self.module_class.Exploit()
+            self.module_instance = self.module_class.Modules()
             self.set_prompt(module_type=module_type, module_name=module_name)
         else:
             self.poutput("Module/Exploit not found.")
@@ -355,7 +355,7 @@ class THGBASECONSOLE(Cmd, Database):
             target_field = "HOST"
         elif target_type == "http":
             target_field = "URL"
-        exp = self.module_class.Exploit()
+        exp = self.module_class.Modules()
         exp.options.set_option(target_field, target)
         exp.options.set_option("TIMEOUT", self.module_instance.options.get_option("TIMEOUT"))
         if port:
@@ -462,7 +462,7 @@ class THGBASECONSOLE(Cmd, Database):
             target_field = "HOST"
         elif target_type == "http":
             target_field = "URL"
-        exp = self.module_class.Exploit()
+        exp = self.module_class.Modules()
         exp.options.set_option(target_field, target)
         exp.options.set_option("TIMEOUT", self.module_instance.options.get_option("TIMEOUT"))
         if port:

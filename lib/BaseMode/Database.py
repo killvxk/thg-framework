@@ -82,7 +82,7 @@ class Database:
                     module_class = import_module("modules.{module_name}".format(
                         module_name=module_name.replace("/", ".")
                     ))
-                    module_instance = module_class.Exploit()
+                    module_instance = module_class.Modules()
                     module_info = module_instance.get_info()
                     module_info['module_name'] = module_name
                     try:

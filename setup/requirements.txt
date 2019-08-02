@@ -1,3 +1,7 @@
+mkdocs
+mkdocs-bootswatch
+mkdocs-bootstrap
+pycurl
 thgcmd
 getmac
 colorama==0.4.1

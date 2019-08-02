@@ -2,21 +2,20 @@ from lib.BaseMode.BaseOptions import BaseOption
 from lib.BaseMode.BaseOptions import BaseOptions
 from lib.BaseMode.BaseResult import BaseResult
 
-
-class BaseExploit:
-    name = None
-    description = None
-    author = []
-    references = []
-    disclosure_date = None
-    service_name = None
-    service_version = None
-    info_fields = ['name', 'description', 'author', 'references', 'disclosure_date', 'service_name', 'service_version']
-    multi_target = False
-    targets = []
-    target_type = None
-    options = None
-    results = None
+class BaseAuxiliary:
+    name = None #nome do auxiliar
+    description = None #descricao do auxiliar
+    author = [] # nome do autor
+    references = []#referenia do exploit
+    disclosure_date = None #data de divulgacao
+    service_name = None #nome do servico
+    service_version = None #versao do servico
+    dbinfo = ['name', 'description', 'author', 'references', 'disclosure_date', 'service_name', 'service_version']#info database
+    multi_target = False#vvarios alvos
+    targets = []#alvo
+    target_type = None#tipo de alvo
+    options = None #opcoes
+    results = None #resultados
 
     def __init__(self):
         self.multi_target = False
@@ -27,7 +26,7 @@ class BaseExploit:
 
     def get_info(self):
         info = {}
-        for field_name in self.info_fields:
+        for field_name in self.dbinfo:
             info[field_name] = getattr(self, field_name)
         return info
 
@@ -47,16 +46,16 @@ class BaseExploit:
             BaseOption(name="TIMEOUT", required=True, description="Connection timeout", value=timeout_value),
             BaseOption(name="THREADS", required=True, description="The number of threads", value=threads_value)
         ])
-    def register_encode_target(self, encode=""):
+    def register_encode_string(self, encode=""):
         self.target_type = "encode"
         self.register_options([
             BaseOption(name="string", required=True, description="string to encode"),
             BaseOption(name="encode", required=True, description="encode", value=encode),
         ])
 
-    def update_info(self, info):
+    def thg_update_info(self, info):
         for name in info:
-            if name in self.info_fields:
+            if name in self.dbinfo:
                 setattr(self, name, info[name])
 
     def register_options(self, option_array):
