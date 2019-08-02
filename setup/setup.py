@@ -69,12 +69,14 @@ def arch_linux():
     print(Fore.BLUE + banner)
     # faz o check dos programas
     for i in listt:
-        if i in pacman.get_installed():
-            print("{colorp}{i} =>{color} already installed".format(colorp=Fore.RED, color=Fore.CYAN, i=i))
+        if pacman.is_installed(i):
+            print("{colorp}{i} =>{color} already installed.".format(colorp=Fore.RED, color=Fore.CYAN, i=i))
         else:
             # instala
             try:
+                print("Installing {}...".format(i))
                 pacman.install(i)
+                print("{} installed.".format(i))
             except Exception as arg:
                 print("Sorry, package installation failed [{err}]".format(err=str(arg)))
 
@@ -125,11 +127,14 @@ cria  e configura banco de dados
 def confpostgre():
     client = docker.from_env()
     try:
+        print("Getting postgres image for docker.")
         img = client.images.get("postgres")
     except docker.errors.ImageNotFound:
+        print("Downloading image from dockerhub.")
         img = client.images.pull("postgres")
 
     try:
+        print("Trying to get thgdb container.")
         container = client.containers.get("thgdb")
     except docker.errors.NotFound:
         container = None
@@ -138,6 +143,7 @@ def confpostgre():
         if container != None:
             print("Database already exist!")
             container.start()
+            print("Container started!")
         else:
             print("Creating container...")
             client.containers.run("postgres", name="thgdb", environment={
