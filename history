@@ -1,0 +1,37 @@
+use tmpt_mod/mod 
+show options 
+set HOST 127.0.0.1
+run
+use tmpt_mod/mod 
+show options 
+help 
+show options 
+set HOST 127.0.0.1
+run
+set PORT 3333
+run
+use tmpt_mod/mod 
+show options 
+set string darkode
+run
+set HOST localhost
+run
+set PORT 3333
+run
+use tmpt_mod/mod 
+show options 
+set PORT 3333
+set HOST 127.0.0.1
+RUN
+run
+help 
+search a
+db_rebuild 
+help 
+ip
+ip help
+ip externo
+ip external
+use tmpt_mod/mod 
+show options 
+show info 
