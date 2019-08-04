@@ -1,5 +1,5 @@
 
-from lib.BaseMode.exception.Option import OptionRequired
+from lib.thg.base.exception.Option import OptionRequired
 
 
 class BaseOption:

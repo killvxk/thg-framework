@@ -3,7 +3,7 @@ import time
 import threading
 from io import BytesIO
 from queue import Queue
-from  lib.thgcmd import *
+from lib.thg.thgcmd import *
 from thgcmd.utils import basic_complete
 from art import text2art
 from utils import module
@@ -11,13 +11,16 @@ from pathlib import Path
 from colorama import Style
 from tabulate import tabulate
 from colorama import Fore
-import psutil
-from lib.config.Version import __codenome__,__version__
-from lib.config.info_init import *
+from random import *
+from lib.thg.base.config.mensagens import mensagem_do_dia
+import psutil,os,platform,sys
+from lib.thg.base.config.Version import __codenome__,__version__
+from lib.thg.base.config.info_init import thg_add_init
 from importlib import import_module, reload
 from lib.BaseMode.Database import Database
-from lib.BaseMode.BaseOptions import BaseOption
-from lib.BaseMode.exception.Module import ModuleNotUseException
+from lib.thg.base.BaseOptions import BaseOption
+from lib.thg.base.exception.Module import ModuleNotUseException
+
 
 class THGBASECONSOLE(Cmd, Database):
     colors = "Always"
@@ -54,15 +57,9 @@ class THGBASECONSOLE(Cmd, Database):
         Database.__init__(self)
         self.prompt = self.console_prompt + self.console_prompt_end
         self.thgcmd_banner(None)
-        self.poutput("frase")
-    '''
-    add select
-    def thgcmd_eat(self, arg):
-        sauce = self.select('sweet salty', 'Sauce? ')
-        result = '{food} with {sauce} sauce, yum!'
-        result = result.format(food=arg, sauce=sauce)
-        self.stdout.write(result + '\n')
-    '''
+        secure_random = SystemRandom()
+        item = secure_random.choice(mensagem_do_dia)
+        print("\n"+Fore.RED+"'''"+item+"'''"+"\n")
 
     '''
      # command categories

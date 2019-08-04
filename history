@@ -47,3 +47,27 @@ set PORT 44
 run
 set HOST google.com
 run
+use 
+use tmpt_mod/mod 
+show options 
+!ls
+use tmpt_mod/mod 
+show options 
+use tmpt_mod/mod 
+show options 
+set HOST www.google.com
+set PORT 443
+run
+set PORT 443
+use tmpt_mod/mod 
+show options 
+run
+set HOST 127.0.0.1
+run
+use tmpt_mod/mod 
+show options 
+listmod 
+use tmpt_mod/mod 
+python
+py
+ls

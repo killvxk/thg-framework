@@ -1,7 +1,4 @@
 #conexao com o banco de dados
-from sqlalchemy import create_engine
-
-
 
 
 import os

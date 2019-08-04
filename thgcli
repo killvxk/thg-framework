@@ -1,4 +1,5 @@
-from lib.BaseMode.base import THGBASECONSOLE
+#! /usr/bin/python3
+from lib.thg.base.base import THGBASECONSOLE
 class THGSTART(THGBASECONSOLE):
     def run(self):
         self.cmdloop()

@@ -1,6 +1,6 @@
-from lib.BaseMode.BaseOptions import BaseOption
-from lib.BaseMode.BaseOptions import BaseOptions
-from lib.BaseMode.BaseResult import BaseResult
+from lib.thg.base.BaseOptions import BaseOption
+from lib.thg.base.BaseOptions import BaseOptions
+from lib.thg.base.BaseResult import BaseResult
 
 class BaseAuxiliary:
     name = None #nome do auxiliar
