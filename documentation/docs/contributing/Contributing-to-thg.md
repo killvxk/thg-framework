@@ -1,4 +1,7 @@
-===================== Guia de desenvolvimento de módulos =====================
+# Guia de desenvolvimento de módulos 
+
+
+
 
 Fazer o melhor trabalho requer esforços conjuntos de todos.
 
@@ -25,7 +28,7 @@ Para escrever um módulo completo do thg, você precisa atender aos seguintes re
 ##darkcode357/luiz gustavo correa
 ###
 
-Case: redis unauthorized detection module
+Case: test unauthorized detection module
 ----------------------------
 
 Basic code: ::
@@ -91,87 +94,88 @@ Basic code: ::
 Writing module
 ---------
 
-Here is an example of a redis unauthorized vulnerability.
 
-First create the file: ``/modules/exploits/server/redis_unauthorized.py``
+Aqui está um exemplo de uma vulnerabilidade de acesso não autorizado.
+Primeiro crie o arquivo: ``/modules/__tipo_do_modulo__/__nome__/__nome_modulo__.py``
+Introduzir a classe `` Base{BaseExploit/BaseAuxiliary/BasePost/BasePayload/BaseNops/BaseEvasion}`` e dentro da class ```base{que voce escolheu}``` tem a class `` BaseOption``  e o nome da class tem que do modulo tem que ser `` Modules``, herdando a classe `` Base{mod}``
+Todos os módulos devem herdar a classe `` Base{mode}`` e o nome da classe deve ser `` Modules`` e a class`` BaseOption``e automaticamente  importada  para registrar os parâmetros do módulo.
 
-Introduce the ``BaseExploit`` class and the ``ExploitOption`` class, and write the ``Exploit`` class, inheriting the ``BaseExploit`` class
-
-All modules must inherit the ``BaseExploit`` class and the class name must be ``Exploit`` and ``ExploitOption`` to register the module parameters.
-
-Declare the Exploit class
+Declarar a classe Modules
 --------------
 
-First write class ::
+Primeira classe de escrita ::
 
-    From lib.BaseExploit import BaseExploit
-    From lib.ExploitOption import ExploitOption
-
-
-    Class Exploit(BaseExploit):
-        Pass
+    from lib.BaseMode.mods.Auxiliary.Auxiliary import BaseAuxiliary
+    from lib.BaseMode.mods.Evasion.Evasion import BaseEvasion
+    from lib.BaseMode.mods.Exploit.Exploit import BaseExploit
+    from lib.BaseMode.mods.Nops.Nops import BaseNops
+    from lib.BaseMode.mods.Payload.Payload import BasePayload
+    from lib.BaseMode.mods.Post.Post import BasePost
+    from lib.BaseMode.mods.Osint.Osint import BaseOsint
+    
+    class Modules(BaseAuxiliary):
+        pass
 
 Complete the __init__ method
 -----------------
 
-Then complete the ``__init__`` method: ::
+Então complete o método `` __init__``: ::
 
-    Def __init__(self):
-        Super(Exploit, self).__init__()
-        Self.thg_update_info({
-            "name": "redis unauthorized",
-            "description": "redis unauthorized",
-            "author": ["unknown"],
-            "references": [
-                "https://www.freebuf.com/column/158065.html",
-            ],
-            "disclosure_date": "2019-02-28",
-            "service_name": "redis",
-            "service_version": "*",
-        })
+    def __init__(self):
+        super(Modules, self).__init__()
+        self.thg_update_info({
+                "name": "base",
+                "description": "descricao da modulo",
+                "author": ["darkcode"],
+                "references": [
+                    "referencia ",
+                ],
+                "disclosure_date": "data do modulo",
+                "service_name": "nome do servico",
+                "service_version": "versao do servico",
+            })
         Self.register_tcp_target(port_value=6379)
 
-To explain this, first look at the first line of the ``__init__`` method: ::
+Para explicar isso, primeiro observe a primeira linha do método `` __init__``: ::
 
-    Super(Exploit, self).__init__()
+    Super (Modules, self) .__ init __ ()
 
-This line is required, and you need to call the parent class's ``__init__`` method to initialize the module.
+Esta linha é necessária, e você precisa chamar o método `` __init__`` da classe pai para inicializar o módulo.
 
-Then update the module information using the ``self.thg_update_info`` method: ::
+Em seguida, atualize as informações do módulo usando o método `` self.thg_update_info``: ::
+    
+           self.thg_update_info({
+                "name": "base",
+                "description": "descricao da modulo",
+                "author": ["darkcode"],
+                "references": [
+                    "referencia ",
+                ],
+                "disclosure_date": "data do modulo",
+                "service_name": "nome do servico",
+                "service_version": "versao do servico",
+            })
 
-    Self.thg_update_info({
-        "name": "redis unauthorized",
-        "description": "redis unauthorized",
-        "author": ["unknown"],
-        "references": [
-            "https://www.freebuf.com/column/158065.html",
-        ],
-        "disclosure_date": "2019-02-28",
-        "service_name": "redis",
-        "service_version": "*",
-    })
+Então use o método `` self.register_tcp_target`` para registrar um alvo do tipo tcp. Este método registra automaticamente os seguintes parâmetros para nós:
+       
+    self.register_options([
+      BaseOption(name="HOST", required=True, description="The IP address to be tested"),
+      BaseOption(name="PORT", required=True, description="The port to be tested", value=port_value),
+      BaseOption(name="TIMEOUT", required=True, description="Connection timeout", value=timeout_value),
+      BaseOption(name="THREADS", required=True, description="The number of threads", value=threads_value)
+        ])
 
-Then use the ``self.register_tcp_target`` method to register a target of type tcp. This method automatically registers the following parameters for us: ::
+Para nossas vulnerabilidades não autorizadas de ****, HOST e PORT são suficientes, portanto não há necessidade de registrar os parâmetros adicionais.
+Se você precisar registrar parâmetros adicionais, você pode chamar o método `` self.register_options``, passando uma lista contendo o objeto `` BaseOption``.
 
-    Self.register_options([
-        ExploitOption(name="HOST", required=True, description="The IP address to be tested"),
-        ExploitOption(name="PORT", required=True, description="The port to be tested", value=port_value),
-        ExploitOption(name="TIMEOUT", required=True, description="Connection timeout", value=timeout_value),
-        ExploitOption(name="THREADS", required=True, description="The number of threads", value=threads_value)
-    ])
+Método de importação automatico da class base que voce escolheu 
 
-For our redis unauthorized vulnerabilities, HOST and PORT are sufficient, so there is no need to register additional parameters.
-
-If you need to register additional parameters, you can call the ``self.register_options`` method, passing in a list containing the ``ExploitOption`` object.
-
-``ExploitOption`` import method: ``from lib.ExploitOption import ExploitOption``
-
-Complete the check method
+Complete o método de verificação
 --------------
 
-The check method mainly writes to detect the existence of a vulnerability, and there is no attack behavior. code show as below: ::
-
-    Def check(self):
+O método de verificação grava principalmente para detectar a existência de uma vulnerabilidade e não há comportamento de ataque. código mostra como abaixo:
+        
+     Def check(self):
         Host = self.options.get_option("HOST")
         Port = int(self.options.get_option("PORT"))
         Timeout = int(self.options.get_option("TIMEOUT"))
@@ -182,17 +186,17 @@ The check method mainly writes to detect the existence of a vulnerability, and t
             S.connect((host, port))
             S.send(bytes("INFO\r\n", encoding="utf-8"))
             Result = s.recv(1024)
-            If bytes("redis_version", encoding="utf-8") in result:
+            If bytes("mod_version", encoding="utf-8") in result:
                 Self.results.success(
                     Data={
                         "host": host,
                         "port": port,
                     },
-                    Message="Host {host}:{port} exists redis unauthorized vulnerability".format(host=host, port=port)
+                    Message="Host {host}:{port} exists mod unauthorized vulnerability".format(host=host, port=port)
                 )
             Else:
                 Self.results.failure(
-                    Error_message="Host {host}:{port} does not exists redis unauthorized vulnerability".format(
+                    Error_message="Host {host}:{port} does not exists mod unauthorized vulnerability".format(
                         Host=host,
                         Port=port
                     )
@@ -201,47 +205,48 @@ The check method mainly writes to detect the existence of a vulnerability, and t
             Self.results.failure(error_message="Host {host}:{port}: {error}".format(host=host, port=port, error=e))
         Return self.results
 
-First, the first three lines use the ``self.options.get_option()`` method to get the module parameters.
+Primeiro, as primeiras três linhas usam o método `` self.options.get_option () `` para obter os parâmetros do módulo.
 
-Then the exp process is executed.
+Então o processo exp é executado.
 
-Successful execution, found a vulnerability, called the ``self.results.success`` method, incoming data and success information: ::
+Execução bem-sucedida, encontrou uma vulnerabilidade, chamada de método `` self.results.success``,  dados de entrada e informações de sucesso: ::
 
     Self.results.success(
         Data={
             "host": host,
             "port": port,
         },
-        Message="Host {host}:{port} exists redis unauthorized vulnerability".format(host=host, port=port)
+        Message="Host {host}:{port} exists mod unauthorized vulnerability".format(host=host, port=port)
     )
 
-If the vulnerability does not exist, the ``self.results.failure`` method is executed, and the failure message is passed in: ::
+Se a vulnerabilidade não existe, o método `` self.results.failure`` é executado, e a mensagem de falha é passada em: ::
 
     Self.results.failure(
-        Error_message="Host {host}:{port} does not exists redis unauthorized vulnerability".format(
+        Error_message="Host {host}:{port} does not exists mod unauthorized vulnerability".format(
             Host=host,
             Port=port
         )
     )
 
-The check method must return ``self.results``. ::
+O método de verificação deve retornar `` self.results`` ::
 
     Return self.results
-Complete the exploit method
+
+Complete o método de exploração
 ----------------
 
-This vulnerability is relatively simple, so you can not return the self.check method without implementing the exploit method. ::
-
+Essa vulnerabilidade é relativamente simples, portanto, você não pode retornar o método self.check sem implementar o método de exploração. ::
+     
      Def exploit(self):
          Return self.check()
 
-The exploit method must also return ``self.results``, because the check method also returns ``self.results``, so you can call ``self.check()`` directly.
+O método exploit também deve retornar `` self.results``, porque o método de verificação também retorna `` self.results``, então você pode chamar `` self.check () `` diretamente.
 
-More cases
+Mais casos
 --------------
 
-Now that most of the framework's functionality has been completed, I will start writing some modules myself.
+Agora que a maior parte da funcionalidade da estrutura foi concluída, vou começar a escrever alguns módulos.
 
-You can refer to the modules I have written to complete their own modules.
+Você pode consultar os módulos escritos  para completar seus próprios módulos.
 
-All modules are in the modules directory of the github repository.
+Todos os módulos estão no diretório modules do repositório do github.

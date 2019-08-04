@@ -35,3 +35,15 @@ ip external
 use tmpt_mod/mod 
 show options 
 show info 
+use tmpt_mod/mod 
+show options 
+set HOST www.google.com
+set PORT 433
+run
+use tmpt_mod/mod 
+show options 
+set HOST 127.0.0.1
+set PORT 44
+run
+set HOST google.com
+run

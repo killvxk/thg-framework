@@ -1,3 +1,5 @@
+####configuracao da documentacao
+
 # Project information
 site_name: 'thg-framework'
 site_description: 'thg full docs'
@@ -24,12 +26,14 @@ extra:
 #exx
 markdown_extensions:
     - smarty
+    - admonition
     - toc:
         permalink: True
     - sane_lists
 
 plugins:
   - search
+
 nav:
 - Overview:
   - Installation: ./cli/install.md

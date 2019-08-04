@@ -1,3 +1,5 @@
+pymdown-nomnoml
+pymdown-extensions
 mkdocs
 mkdocs-bootswatch
 mkdocs-bootstrap

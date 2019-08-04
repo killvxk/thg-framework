@@ -577,11 +577,229 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#guia-de-desenvolvimento-de-modulos">Guia de desenvolvimento de módulos</a></li>
+            <li><a href="#visao-geral">visão geral</a></li>
+            <li><a href="#darkcode357luiz-gustavo-correa">darkcode357/luiz gustavo correa</a></li>
+            <li><a href="#case-test-unauthorized-detection-module">Case: test unauthorized detection module</a></li>
+            <li><a href="#writing-module">Writing module</a></li>
+            <li><a href="#declarar-a-classe-modules">Declarar a classe Modules</a></li>
+            <li><a href="#complete-the-init-method">Complete the init method</a></li>
+            <li><a href="#complete-o-metodo-de-verificacao">Complete o método de verificação</a></li>
+            <li><a href="#complete-o-metodo-de-exploracao">Complete o método de exploração</a></li>
+            <li><a href="#mais-casos">Mais casos</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-</div>
+<h1 id="guia-de-desenvolvimento-de-modulos">Guia de desenvolvimento de módulos<a class="headerlink" href="#guia-de-desenvolvimento-de-modulos" title="Permanent link">&para;</a></h1>
+<p>Fazer o melhor trabalho requer esforços conjuntos de todos.</p>
+<p>Todos são bem-vindos para desenvolver módulos, trocar tecnologia de segurança e melhorar as habilidades de desenvolvimento </p>
+<p>Vou insistir em manter a biblioteca de módulos por um longo tempo e gostarioa de ajuda de todos </p>
+<h2 id="visao-geral">visão geral<a class="headerlink" href="#visao-geral" title="Permanent link">&para;</a></h2>
+<p>Para escrever um módulo completo do thg, você precisa atender aos seguintes requisitos:</p>
+<ul>
+<li>O módulo deve ser uma <code>class</code> e o nome da classe é <code>Modules</code></li>
+<li>A classe <code>Modules</code> deve herdar de <code>BaseExploit/BaseAuxiliary/BasePost/BasePayload/BaseNops/BaseEvasion</code> (introduzido por <code>lib.BaseMode.mods import Base*</code>)</li>
+<li>O módulo deve conter o método <code>__init__</code>, que deve chamar o método <code>__init__</code> da classe pai (via <code>super ("Modules"", self) .__ init __ ()</code>)</li>
+<li>O módulo deve preencher as informações relevantes, usando o método <code>self.thg_update_info ()</code></li>
+<li>Os objetivos do POC estão atualmente divididos em tipos <code>http</code> e <code>tcp</code>, usando <code>self.register_tcp_target ()</code> para registrar alvos do tipo tcp. Registre o tipo de destino http com <code>self.register_http_target ()</code>.</li>
+<li>Após o registro, o alvo pode ser recuperado usando <code>self.options.get_option</code>.</li>
+<li>O método <code>check</code> é usado para detectar vulnerabilidades e não há comportamento de ataque.</li>
+<li>O método <code>exploit</code> é usado para implementar o comportamento de ataque, mas não pode ser usado para afetar a operação normal do servidor.</li>
+<li>Nos métodos <code>check</code> e <code>exploit</code>, se o teste for bem sucedido, chame o método <code>self.results.success ()</code> para salvar o resultado. Se falha  chamer <code>self.results.failure ()</code> para salvar o resultado.</li>
+<li>No processo de escrever os módulo do thg, se você usar <code>pycharm</code>, você pode seguir o método acima para ver o código e melhorar sua compreencao. Se você tiver dúvidas ou sugestões, não hesite em entrar em contato comigo.</li>
+</ul>
+<h3 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h2 id="darkcode357luiz-gustavo-correa">darkcode357/luiz gustavo correa<a class="headerlink" href="#darkcode357luiz-gustavo-correa" title="Permanent link">&para;</a></h2>
+<h3 id="_2"><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h2 id="case-test-unauthorized-detection-module">Case: test unauthorized detection module<a class="headerlink" href="#case-test-unauthorized-detection-module" title="Permanent link">&para;</a></h2>
+<p>Basic code: ::</p>
+<pre><code>import socket
+from lib.BaseMode.mods.Auxiliary.Auxiliary import BaseAuxiliary
+
+class Modules(BaseAuxiliary):
+    def __init__(self):
+        super(Modules, self).__init__()
+        self.thg_update_info({
+            "name": "base",
+            "description": "descricao da modulo",
+            "author": ["darkcode"],
+            "references": [
+                "referencia ",
+            ],
+            "disclosure_date": "data do modulo",
+            "service_name": "nome do servico",
+            "service_version": "versao do servico",
+        })
+        # Como o modulo so preciasa do thg, entao。
+        self.register_tcp_target(port_value=6379)
+
+def check(self):
+    #Esses três parâmetros são registrados pelo método de destino self.register tcp, que pode ser chamado diretamente aqui.
+    host = self.options.get_option("HOST")
+    port = int(self.options.get_option("PORT"))
+    timeout = int(self.options.get_option("TIMEOUT"))
+
+    #Todo o processo de execução do teste é melhor colocado na tentativa(try) e, em seguida, capturar o erro no except diretamente chamando self.results.failure para imprimir o erro.
+    try:
+        socket.setdefaulttimeout(timeout)
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.connect((host, port))
+        s.send(bytes("INFO\r\n", encoding="utf-8"))
+        result = s.recv(1024)
+        if bytes("INFO", encoding="utf-8") in result:
+            #Existe uma lacuna, a chamada dos dados deste método pode ser passada para um dicionário, sendo atualmente inútil ou não.
+            self.results.success(
+                data={
+                    "host": host,
+                    "port": port,
+                },
+                #Como vários alvos podem ser executados, é melhor escrever o destino e a porta no resultado para facilitar a identificação.
+                message="Host {host}:{port} exists *** unauthorized vulnerability".format(host=host, port=port)
+            )
+        else:
+            # Não existe vulnerabilidade. Chame o método self.results.failure para passar a mensagem de erro
+            self.results.failure(
+                error_message="Host {host}:{port} does not exists *** unauthorized vulnerability".format(
+                    host=host,
+                    port=port
+                )
+            )
+    except Exception as e:
+        # Erro de execução, use self.results.failure para passar a mensagem de erro.
+        self.results.failure(error_message="Host {host}:{port}: {error}".format(host=host, port=port, error=e))
+    return self.results
+
+def exploit(self):
+    return self.check()
+</code></pre>
+<h2 id="writing-module">Writing module<a class="headerlink" href="#writing-module" title="Permanent link">&para;</a></h2>
+<p>Aqui está um exemplo de uma vulnerabilidade de acesso não autorizado.
+Primeiro crie o arquivo: <code>/modules/__tipo_do_modulo__/__nome__/__nome_modulo__.py</code>
+Introduzir a classe <code>Base{BaseExploit/BaseAuxiliary/BasePost/BasePayload/BaseNops/BaseEvasion}</code> e dentro da class <code>base{que voce escolheu}</code> tem a class <code>BaseOption</code>  e o nome da class tem que do modulo tem que ser <code>Modules</code>, herdando a classe <code>Base{mod}</code>
+Todos os módulos devem herdar a classe <code>Base{mode}</code> e o nome da classe deve ser <code>Modules</code> e a class<code>BaseOption</code>e automaticamente  importada  para registrar os parâmetros do módulo.</p>
+<h2 id="declarar-a-classe-modules">Declarar a classe Modules<a class="headerlink" href="#declarar-a-classe-modules" title="Permanent link">&para;</a></h2>
+<p>Primeira classe de escrita ::</p>
+<pre><code>from lib.BaseMode.mods.Auxiliary.Auxiliary import BaseAuxiliary
+from lib.BaseMode.mods.Evasion.Evasion import BaseEvasion
+from lib.BaseMode.mods.Exploit.Exploit import BaseExploit
+from lib.BaseMode.mods.Nops.Nops import BaseNops
+from lib.BaseMode.mods.Payload.Payload import BasePayload
+from lib.BaseMode.mods.Post.Post import BasePost
+from lib.BaseMode.mods.Osint.Osint import BaseOsint
+
+class Modules(BaseAuxiliary):
+    pass
+</code></pre>
+<h2 id="complete-the-init-method">Complete the <strong>init</strong> method<a class="headerlink" href="#complete-the-init-method" title="Permanent link">&para;</a></h2>
+<p>Então complete o método <code>__init__</code>: ::</p>
+<pre><code>def __init__(self):
+    super(Modules, self).__init__()
+    self.thg_update_info({
+            "name": "base",
+            "description": "descricao da modulo",
+            "author": ["darkcode"],
+            "references": [
+                "referencia ",
+            ],
+            "disclosure_date": "data do modulo",
+            "service_name": "nome do servico",
+            "service_version": "versao do servico",
+        })
+    Self.register_tcp_target(port_value=6379)
+</code></pre>
+<p>Para explicar isso, primeiro observe a primeira linha do método <code>__init__</code>: ::</p>
+<pre><code>Super (Modules, self) .__ init __ ()
+</code></pre>
+<p>Esta linha é necessária, e você precisa chamar o método <code>__init__</code> da classe pai para inicializar o módulo.</p>
+<p>Em seguida, atualize as informações do módulo usando o método <code>self.thg_update_info</code>: ::</p>
+<pre><code>       self.thg_update_info({
+            "name": "base",
+            "description": "descricao da modulo",
+            "author": ["darkcode"],
+            "references": [
+                "referencia ",
+            ],
+            "disclosure_date": "data do modulo",
+            "service_name": "nome do servico",
+            "service_version": "versao do servico",
+        })
+</code></pre>
+<p>Então use o método <code>self.register_tcp_target</code> para registrar um alvo do tipo tcp. Este método registra automaticamente os seguintes parâmetros para nós:</p>
+<pre><code>self.register_options([
+  BaseOption(name="HOST", required=True, description="The IP address to be tested"),
+  BaseOption(name="PORT", required=True, description="The port to be tested", value=port_value),
+  BaseOption(name="TIMEOUT", required=True, description="Connection timeout", value=timeout_value),
+  BaseOption(name="THREADS", required=True, description="The number of threads", value=threads_value)
+    ])
+</code></pre>
+<p>Para nossas vulnerabilidades não autorizadas de ****, HOST e PORT são suficientes, portanto não há necessidade de registrar os parâmetros adicionais.
+Se você precisar registrar parâmetros adicionais, você pode chamar o método <code>self.register_options</code>, passando uma lista contendo o objeto <code>BaseOption</code>.</p>
+<p>Método de importação automatico da class base que voce escolheu </p>
+<h2 id="complete-o-metodo-de-verificacao">Complete o método de verificação<a class="headerlink" href="#complete-o-metodo-de-verificacao" title="Permanent link">&para;</a></h2>
+<p>O método de verificação grava principalmente para detectar a existência de uma vulnerabilidade e não há comportamento de ataque. código mostra como abaixo:</p>
+<pre><code> Def check(self):
+    Host = self.options.get_option("HOST")
+    Port = int(self.options.get_option("PORT"))
+    Timeout = int(self.options.get_option("TIMEOUT"))
+
+    Try:
+        Socket.setdefaulttimeout(timeout)
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        S.connect((host, port))
+        S.send(bytes("INFO\r\n", encoding="utf-8"))
+        Result = s.recv(1024)
+        If bytes("mod_version", encoding="utf-8") in result:
+            Self.results.success(
+                Data={
+                    "host": host,
+                    "port": port,
+                },
+                Message="Host {host}:{port} exists mod unauthorized vulnerability".format(host=host, port=port)
+            )
+        Else:
+            Self.results.failure(
+                Error_message="Host {host}:{port} does not exists mod unauthorized vulnerability".format(
+                    Host=host,
+                    Port=port
+                )
+            )
+    Except Exception as e:
+        Self.results.failure(error_message="Host {host}:{port}: {error}".format(host=host, port=port, error=e))
+    Return self.results
+</code></pre>
+<p>Primeiro, as primeiras três linhas usam o método <code>self.options.get_option ()</code> para obter os parâmetros do módulo.</p>
+<p>Então o processo exp é executado.</p>
+<p>Execução bem-sucedida, encontrou uma vulnerabilidade, chamada de método <code>self.results.success</code>,  dados de entrada e informações de sucesso: ::</p>
+<pre><code>Self.results.success(
+    Data={
+        "host": host,
+        "port": port,
+    },
+    Message="Host {host}:{port} exists mod unauthorized vulnerability".format(host=host, port=port)
+)
+</code></pre>
+<p>Se a vulnerabilidade não existe, o método <code>self.results.failure</code> é executado, e a mensagem de falha é passada em: ::</p>
+<pre><code>Self.results.failure(
+    Error_message="Host {host}:{port} does not exists mod unauthorized vulnerability".format(
+        Host=host,
+        Port=port
+    )
+)
+</code></pre>
+<p>O método de verificação deve retornar <code>self.results</code> ::</p>
+<pre><code>Return self.results
+</code></pre>
+<h2 id="complete-o-metodo-de-exploracao">Complete o método de exploração<a class="headerlink" href="#complete-o-metodo-de-exploracao" title="Permanent link">&para;</a></h2>
+<p>Essa vulnerabilidade é relativamente simples, portanto, você não pode retornar o método self.check sem implementar o método de exploração. ::</p>
+<pre><code> Def exploit(self):
+     Return self.check()
+</code></pre>
+<p>O método exploit também deve retornar <code>self.results</code>, porque o método de verificação também retorna <code>self.results</code>, então você pode chamar <code>self.check ()</code> diretamente.</p>
+<h2 id="mais-casos">Mais casos<a class="headerlink" href="#mais-casos" title="Permanent link">&para;</a></h2>
+<p>Agora que a maior parte da funcionalidade da estrutura foi concluída, vou começar a escrever alguns módulos.</p>
+<p>Você pode consultar os módulos escritos  para completar seus próprios módulos.</p>
+<p>Todos os módulos estão no diretório modules do repositório do github.</p></div>
         </div>
 
         <footer class="col-md-12">
