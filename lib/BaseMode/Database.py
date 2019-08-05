@@ -18,6 +18,12 @@ dotenv.load_dotenv(dotenv_file)
 class Database:
     #db_file = '{root_path}/db/thg.db'.format(root_path=ROOT_PATH)
     #db = create_engine("postgresql+psycopg2://thgdb:thgdb@localhost/thgdb", encoding="UTF-8")
+    mongoengine.connect(
+        db=dotenv.get_key(dotenv_file, "MONGODB_DATABASE"),
+        username=dotenv.get_key(dotenv_file, "MONGODB_USERNAME"),
+        password=dotenv.get_key(dotenv_file, "MONGODB_PASSWORD"),
+        host='mongodb://admin:qwerty@localhost/production'
+    )
 
     connection = None
     cursor = None
@@ -27,12 +33,6 @@ class Database:
         #self.connection = sqlite3.connect(self.db_file)
         #self.connection = db.Session()
         #self.cursor = self.connection.cursor()
-        mongoengine.connect(
-            db=dotenv.get_key(dotenv_file, "MONGODB_DATABASE"),
-            username=dotenv.get_key(dotenv_file, "MONGODB_USERNAME"),
-            password=dotenv.get_key(dotenv_file, "MONGODB_PASSWORD"),
-            host='mongodb://admin:qwerty@localhost/production'
-        )
 
         self.create_table()
 
