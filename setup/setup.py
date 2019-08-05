@@ -1,6 +1,11 @@
-import sys, distro
+import sys, distro, string, random, hashlib
+import dotenv, base64
 from os import system
 from colorama import Fore
+from pathlib import Path
+env_path = Path('..')
+dotenv_file = dotenv.find_dotenv()
+dotenv.load_dotenv(dotenv_file)
 
 #### verificacao da python-pip
 try:
@@ -127,19 +132,21 @@ cria  e configura banco de dados
 def confpostgre():
     client = docker.from_env()
     try:
-        print("Getting postgres image for docker.")
-        img = client.images.get("postgres")
+        print("Getting mongodb image for docker.")
+        #img = client.images.get("postgres")
+        img = client.images.get("bitnami/mongodb")
     except docker.errors.ImageNotFound:
-        print("Downloading image from dockerhub.")
-        img = client.images.pull("postgres")
+        print("Downloading image from dockerhub...")
+        #img = client.images.pull("postgres")
+        img = client.images.pull("bitnami/mongodb")
 
     try:
         print("Trying to get thgdb container.")
-        container = client.containers.get("thgdb")
+        container = client.containers.get("thgdb-mongodb")
     except docker.errors.NotFound:
         container = None
 
-    if img != None:
+    """if img != None:
         if container != None:
             print("Database already exist!")
             container.start()
@@ -151,9 +158,34 @@ def confpostgre():
                             "POSTGRES_USER": "thgdb",
                             "POSTGRES_DB": "thgdb",
                     }, ports={'5432/tcp': 5432}, detach=True)
+            print("Container created!")"""
+
+    if img != None:
+        if container != None:
+            print("Database already exist!")
+            container.start()
+            print("Container started!")
+        else:
+            print("Creating container...")
+            db_name = dotenv.get_key(dotenv_file, "MONGODB_DATABASE")
+            db_user = dotenv.get_key(dotenv_file, "MONGODB_USERNAME")
+            db_pass = HashGen()
+            client.containers.run("bitnami/mongodb", name="thgdb-mongodb", environment={
+                    "MONGODB_DATABASE": db_name,
+                    "MONGODB_USERNAME": db_name,
+                    "MONGODB_PASSWORD": db_pass
+                    }, ports={'27017/tcp': 27017}, detach=True)
             print("Container created!")
 
-
+def HashGen():
+    STAGING_KEY = "RANDOM"
+    set_chars = string.ascii_letters + string.digits + string.punctuation
+    STAGING_KEY = ''.join([ random.SystemRandom().choice( set_chars) for _ in range( 128) ])
+    hash = hashlib.md5(STAGING_KEY.encode("UTF-8")).hexdigest()
+    b64 = base64.b64encode(hash.encode('UTF-8'))
+    b64str = b64.decode("UTF-8")
+    dotenv.set_key(dotenv_file,"MONGODB_PASSWORD", b64str)
+    return b64str
 
 '''
 Verifica a distro e configura o banco de dados
