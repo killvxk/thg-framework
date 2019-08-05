@@ -12,6 +12,8 @@ from colorama import Style
 from tabulate import tabulate
 from colorama import Fore
 from random import *
+import dis
+from lib.thg.base import plugins
 from lib.thg.base.config.mensagens import mensagem_do_dia
 import psutil,os,platform,sys
 from lib.thg.base.config.Version import __codenome__,__version__
@@ -20,7 +22,7 @@ from importlib import import_module, reload
 from lib.BaseMode.Database import Database
 from lib.thg.base.BaseOptions import BaseOption
 from lib.thg.base.exception.Module import ModuleNotUseException
-
+import sys,sqlite3,hashlib,time,fnmatch,shlex,marshal,pkgutil,importlib,threading, json,base64
 
 class THGBASECONSOLE(Cmd, Database):
     colors = "Always"
@@ -35,6 +37,7 @@ class THGBASECONSOLE(Cmd, Database):
     CMD_MODULE = "Module Command"
     CMD_DATABASE= "Database Backend Commands"
     CMD_SYSTEM= "SYSTEM Commands"
+    CMD_PLUGINS = "Plugins Commands"
 
     def __init__(self):
         shortcuts = dict()
@@ -60,6 +63,8 @@ class THGBASECONSOLE(Cmd, Database):
         secure_random = SystemRandom()
         item = secure_random.choice(mensagem_do_dia)
         print("\n"+Fore.RED+"'''"+item+"'''"+"\n")
+        self.loadedPlugins = {}
+        self.resourceQueue = []
 
     '''
      # command categories
@@ -67,6 +72,61 @@ class THGBASECONSOLE(Cmd, Database):
     CMD_MODULE = "Module Command"
     CMD_DATABASE= "Database Backend Commands"    
     '''
+
+    @with_category(CMD_PLUGINS)
+    def thgcmd_plugins(self, args):
+        "List all available and active plugins."
+        pluginPath = os.path.abspath("plugins")
+        print(Fore.RED+"[*] Searching for plugins at {}".format(pluginPath))
+        # From walk_packages: "Note that this function must import all packages
+        # (not all modules!) on the given path, in order to access the __path__
+        # attribute to find submodules."
+        pluginNames = [name for _, name, _ in pkgutil.walk_packages([pluginPath])]
+        numFound = len(pluginNames)
+        print(numFound)
+
+        # say how many we found, handling the 1 case
+        if numFound == 1:
+            print(Fore.RED+"[*] {} plugin found".format(numFound))
+        else:
+            print(Fore.RED+"[*] {} plugins found".format(numFound))
+
+        # if we found any, list them
+        if numFound > 0:
+            print("\tName\tActive")
+            print("\t----\t------")
+            activePlugins = self.loadedPlugins.keys()
+            for name in pluginNames:
+                active = ""
+                if name in activePlugins:
+                    active = "******"
+                print("\t" + name + "\t" + active)
+
+        print("")
+        print(Fore.RED+"[*] Use \"plugin <plugin name>\" to load a plugin.")
+
+    @with_category(CMD_PLUGINS)
+    def thgcmd_plugin(self, pluginName):
+        "Load a plugin file to extend thg."
+        pluginPath = os.path.abspath("plugins")
+        print(Fore.RED+"[*] Searching for plugins at {}".format(pluginPath))
+        # From walk_packages: "Note that this function must import all packages
+        # (not all modules!) on the given path, in order to access the __path__
+        # attribute to find submodules."
+        pluginNames = [name for _, name, _ in pkgutil.walk_packages([pluginPath])]
+        if pluginName in pluginNames:
+            print(Fore.RED+"[*] Plugin {} found.".format(pluginName))
+
+            message = "[*] Loading plugin {}".format(pluginName)
+            signal = json.dumps({
+                'print': True,
+                'message': message
+            })
+
+            # 'self' is the mainMenu object
+            plugins.load_plugin(self, pluginName)
+        else:
+            raise Exception("[!] Error: the plugin specified does not exist in {}.".format(pluginPath))
 
     @with_category(CMD_CORE)
     def thgcmd_banner(self, args):
@@ -121,6 +181,8 @@ class THGBASECONSOLE(Cmd, Database):
                            ip=thg_add_init.ipi(),
                            mac=thg_add_init.get_mac())
         print(self.banner)
+
+
     @with_category(CMD_CORE)
     def thgcmd_version(self,args):
         """show version"""

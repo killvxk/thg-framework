@@ -1,8 +1,6 @@
 from thglibs import *
 
-"""
 
-"""
 
 try:
     import cPickle as pickle

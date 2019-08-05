@@ -1,6 +1,5 @@
 #conexao com o banco de dados
 
-
 import os
 import sqlite3
 from fnmatch import fnmatchcase
