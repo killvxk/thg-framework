@@ -3,12 +3,15 @@
 #import psycopg2
 import mongoengine
 import dotenv
-import Connection, Models
+from lib.BaseMode.Database.Connection import connect_db
+from lib.BaseMode.Database import Models
+import setup
+#import Connection, Models
 import os
 import sqlite3
 from fnmatch import fnmatchcase
-#from utils.files import ROOT_PATH
-#from utils.module import name_convert
+from utils.files import ROOT_PATH
+from utils.module import name_convert
 from importlib import import_module
 
 dotenv_file = dotenv.find_dotenv()
@@ -37,10 +40,10 @@ class Database:
         module.save()
 
     def db_rebuild(self):
-        self.delete_table()
-        self.create_table()
+        #
+        setup.check()
 
-        for directory_name, directories, filenames in os.walk('modules/'):
+        """for directory_name, directories, filenames in os.walk('modules/'):
             for filename in filenames:
                 if filename not in ['__init__.py']\
                         and not fnmatchcase(filename, "*.pyc")\
@@ -58,7 +61,7 @@ class Database:
                         module_info['check'] = 'True'
                     except AttributeError:
                         module_info['check'] = 'False'
-                    self.insert_module(module_info)
+                    self.insert_module(module_info)"""
 
     def get_modules(self):
         sql = "select `module_name`, `check`, `disclosure_date`, `description` from modules;"

@@ -24,7 +24,8 @@ from lib.thg.base.BaseOptions import BaseOption
 from lib.thg.base.exception.Module import ModuleNotUseException
 import sys,sqlite3,hashlib,time,fnmatch,shlex,marshal,pkgutil,importlib,threading, json,base64
 
-class THGBASECONSOLE(Cmd, Database):
+class THGBASECONSOLE(Cmd):
+    #__metaclass__ = Database
     colors = "Always"
     console_prompt = "{COLOR_START}thg-console{COLOR_END}".format(COLOR_START=Fore.CYAN, COLOR_END=Fore.BLUE)
     console_prompt_end = " > "
@@ -57,7 +58,7 @@ class THGBASECONSOLE(Cmd, Database):
         self.editor = "nano"
         self.allow_redirection = False
         self.allow_cli_args = False
-        Database.__init__(self)
+        #Database.__init__()
         self.prompt = self.console_prompt + self.console_prompt_end
         self.thgcmd_banner(None)
         secure_random = SystemRandom()
@@ -70,7 +71,7 @@ class THGBASECONSOLE(Cmd, Database):
      # command categories
     CMD_CORE = "Core Command"
     CMD_MODULE = "Module Command"
-    CMD_DATABASE= "Database Backend Commands"    
+    CMD_DATABASE= "Database Backend Commands"
     '''
 
     @with_category(CMD_PLUGINS)
@@ -145,16 +146,16 @@ class THGBASECONSOLE(Cmd, Database):
         self.banner = """
         {CYAN}==================={GREEN}[ thgconsole {version} ]{GREEN}{CYAN}===================
 
-        {YELLOW}+ -- --=[{RED}THGEF   :{MAGENTA} The Hacker Group Exploitation Framework{RED}{YELLOW}]=-- -- +    
-        {YELLOW}+ -- --=[{RED}Code by :{MAGENTA} Darkcode                               {RED}{YELLOW}]=-- -- + 
-        {YELLOW}+ -- --=[{RED}Codename:{MAGENTA} {codenome}                                {RED}{YELLOW}]=-- -- + 
-        {YELLOW}+ -- --=[{RED}Homepage:{MAGENTA} https://www.facebook.com/darckode0x00/ {RED}{YELLOW}]=-- -- + 
-        {YELLOW}+ -- --=[{RED}youtube :{MAGENTA} darkcode programming                   {RED}{YELLOW}]=-- -- + 
+        {YELLOW}+ -- --=[{RED}THGEF   :{MAGENTA} The Hacker Group Exploitation Framework{RED}{YELLOW}]=-- -- +
+        {YELLOW}+ -- --=[{RED}Code by :{MAGENTA} Darkcode                               {RED}{YELLOW}]=-- -- +
+        {YELLOW}+ -- --=[{RED}Codename:{MAGENTA} {codenome}                                {RED}{YELLOW}]=-- -- +
+        {YELLOW}+ -- --=[{RED}Homepage:{MAGENTA} https://www.facebook.com/darckode0x00/ {RED}{YELLOW}]=-- -- +
+        {YELLOW}+ -- --=[{RED}youtube :{MAGENTA} darkcode programming                   {RED}{YELLOW}]=-- -- +
 
         {CYAN}==================={GREEN}[ thgconsole-pc ]{GREEN}{CYAN}========================
 
-        {YELLOW}+ -- --=[{RED}system  =>{MAGENTA} {os}             {RED}{YELLOW}]=-- -- + 
-        {YELLOW}+ -- --=[{RED}machine =>{MAGENTA} {machine}            {RED}{YELLOW}]=-- -- +      
+        {YELLOW}+ -- --=[{RED}system  =>{MAGENTA} {os}             {RED}{YELLOW}]=-- -- +
+        {YELLOW}+ -- --=[{RED}machine =>{MAGENTA} {machine}            {RED}{YELLOW}]=-- -- +
         {YELLOW}+ -- --=[{RED}gcc     =>{MAGENTA} {gccv}             {RED}{YELLOW}]=-- -- +
         {YELLOW}+ -- --=[{RED}python  =>{MAGENTA} {python}               {RED}{YELLOW}]=-- -- +
         {YELLOW}+ -- --=[{RED}ip      =>{MAGENTA} {ip}       {RED}{YELLOW}]=-- -- +
@@ -624,7 +625,8 @@ class THGBASECONSOLE(Cmd, Database):
     @with_category(CMD_DATABASE)
     def thgcmd_db_rebuild(self, args):
         """Rebuild database for search"""
-        self.db_rebuild()
+        print(Database)
+        Database.db_rebuild(Database)
         self.poutput("Database rebuild done.", color=Fore.GREEN)
 
     @with_category(CMD_DATABASE)

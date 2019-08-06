@@ -129,7 +129,7 @@ cria  e configura banco de dados
 '''
 
 
-def confpostgre():
+def conf_db():
     client = docker.from_env()
     try:
         print("Getting mongodb image for docker.")
@@ -163,19 +163,30 @@ def confpostgre():
     if img != None:
         if container != None:
             print("Database already exist!")
-            container.start()
-            print("Container started!")
+            #container.start()
+            remove_container()
+            create_container()
+            print("Database container recreated.")
         else:
-            print("Creating container...")
-            db_name = dotenv.get_key(dotenv_file, "MONGODB_DATABASE")
-            db_user = dotenv.get_key(dotenv_file, "MONGODB_USERNAME")
-            db_pass = HashGen()
-            client.containers.run("bitnami/mongodb", name="thgdb-mongodb", environment={
-                    "MONGODB_DATABASE": db_name,
-                    "MONGODB_USERNAME": db_user,
-                    "MONGODB_PASSWORD": db_pass
-                    }, ports={'27017/tcp': 27017}, detach=True)
-            print("Container created!")
+            create_container()
+            print("Database container created.")
+
+def remove_container():
+    client.containers.stop("thgdb-mongodb")
+    print("Database container stopped.")
+    client.containers.remove("thgdb-mongodb")
+    print("Database container removed.")
+
+def create_container():
+    print("Creating container...")
+    db_name = dotenv.get_key(dotenv_file, "MONGODB_DATABASE")
+    db_user = dotenv.get_key(dotenv_file, "MONGODB_USERNAME")
+    db_pass = HashGen()
+    client.containers.run("bitnami/mongodb", name="thgdb-mongodb", environment={
+            "MONGODB_DATABASE": db_name,
+            "MONGODB_USERNAME": db_user,
+            "MONGODB_PASSWORD": db_pass
+            }, ports={'27017/tcp': 27017}, detach=True)
 
 def HashGen():
     STAGING_KEY = "RANDOM"
@@ -196,10 +207,10 @@ def check():
     linux = distro.id()
     if linux == "ubuntu" or linux == "debian":
         deb_ubu()
-        confpostgre()
+        conf_db()
     elif linux == "arch":
         arch_linux()
-        confpostgre()
+        conf_db()
     else:
         print("Sorry, distro not found")
         pass
