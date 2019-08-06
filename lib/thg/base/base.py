@@ -19,12 +19,12 @@ import psutil,os,platform,sys
 from lib.thg.base.config.Version import __codenome__,__version__
 from lib.thg.base.config.info_init import thg_add_init
 from importlib import import_module, reload
-from lib.BaseMode.Database import Database
+from lib.BaseMode.Database.Database import Database
 from lib.thg.base.BaseOptions import BaseOption
 from lib.thg.base.exception.Module import ModuleNotUseException
 import sys,sqlite3,hashlib,time,fnmatch,shlex,marshal,pkgutil,importlib,threading, json,base64
 
-class THGBASECONSOLE(Cmd):
+class THGBASECONSOLE(Cmd, Database):
     #__metaclass__ = Database
     colors = "Always"
     console_prompt = "{COLOR_START}thg-console{COLOR_END}".format(COLOR_START=Fore.CYAN, COLOR_END=Fore.BLUE)
@@ -58,7 +58,7 @@ class THGBASECONSOLE(Cmd):
         self.editor = "nano"
         self.allow_redirection = False
         self.allow_cli_args = False
-        #Database.__init__()
+        Database.__init__(Database)
         self.prompt = self.console_prompt + self.console_prompt_end
         self.thgcmd_banner(None)
         secure_random = SystemRandom()
@@ -625,8 +625,7 @@ class THGBASECONSOLE(Cmd):
     @with_category(CMD_DATABASE)
     def thgcmd_db_rebuild(self, args):
         """Rebuild database for search"""
-        print(Database)
-        Database.db_rebuild(Database)
+        self.db_rebuild()
         self.poutput("Database rebuild done.", color=Fore.GREEN)
 
     @with_category(CMD_DATABASE)

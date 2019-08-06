@@ -51,7 +51,7 @@ class THGBASECONSOLE(Cmd, Database):
         self.editor = "nano"
         self.allow_redirection = False
         self.allow_cli_args = False
-        Database.__init__(self)
+        self.Database.__init__(self)
         self.prompt = self.console_prompt + self.console_prompt_end
         self.thgcmd_banner(None)
         self.poutput("frase")

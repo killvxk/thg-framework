@@ -1,48 +1,35 @@
 #conexao com o banco de dados
-#from sqlalchemy import create_engine
-#import psycopg2
-import mongoengine
-import dotenv
-from lib.BaseMode.Database.Connection import connect_db
+import mongoengine, dotenv, os
+from lib.BaseMode.Database import Connection
 from lib.BaseMode.Database import Models
-import setup
-#import Connection, Models
-import os
-import sqlite3
-from fnmatch import fnmatchcase
-from utils.files import ROOT_PATH
-from utils.module import name_convert
-from importlib import import_module
+from lib.setup import setup
+#from fnmatch import fnmatchcase
+#from utils.files import ROOT_PATH
+#from utils.module import name_convert
+#from importlib import import_module
 
 dotenv_file = dotenv.find_dotenv()
 dotenv.load_dotenv(dotenv_file)
 
 class Database:
-
-    connection = None
-    cursor = None
-    searchable_fields = ['name', 'module_name', 'description', 'author', 'disclosure_date', 'service_name', 'service_version', 'check', 'rank']
+    searchable_fields = ['name', 'module_name', 'description', 'author',
+                         'disclosure_date', 'service_name', 'service_version',
+                         'check', 'rank']
 
     def __init__(self):
-        #self.insert_module(self, {"module": "Module 4 Teste", "mtype": "Tipo 4", "ref": "asdasasdasdasd"})
-        #self.get_module_count(self)
-        print(Models.mod_refs())
-        #self.create_table()
-        #if self.get_module_count() == 0:
-        #    self.db_rebuild()
+        self.connection = Connection.connect_db()
 
-    #def get_module_count(self):
-        #count =
-        #print(count)
+    def get_module_count(self):
+        count = Models.mod_refs.objects.all().count()
+        return count
 
     def insert_module(self, info):
         module = Models.mod_refs(module = info['module'], mtype = info['mtype'], ref = info['ref'])
         module.save()
 
     def db_rebuild(self):
-        #
+        print("Rebuilding Database..")
         setup.check()
-
         """for directory_name, directories, filenames in os.walk('modules/'):
             for filename in filenames:
                 if filename not in ['__init__.py']\
@@ -64,9 +51,7 @@ class Database:
                     self.insert_module(module_info)"""
 
     def get_modules(self):
-        sql = "select `module_name`, `check`, `disclosure_date`, `description` from modules;"
-        rs = self.cursor.execute(sql)
-        return rs.fetchall()
+        return Models.mod_refs.objects.all()
 
     def search_modules(self, search_conditions):
         name = search_conditions.get('name', '')
@@ -77,27 +62,3 @@ class Database:
         service_name = search_conditions.get('service_name', '')
         service_version = search_conditions.get('service_version', '')
         check = search_conditions.get('check', '')
-        sql = (
-            'select `module_name`, `check`, `disclosure_date`, `description` from modules where '
-            '`name` like "%{name}%" '
-            'and `module_name` like "%{module_name}%" '
-            'and `description` like "%{description}%" '
-            'and `author` like "%{author}%" '
-            'and `disclosure_date` like "%{disclosure_date}%" '
-            'and `service_name` like "%{service_name}%" '
-            'and `service_version` like "%{service_version}%" '
-            'and `check` like "%{check}%" ;'
-        ).format(
-            name=name,
-            module_name=module_name,
-            description=description,
-            author=author,
-            disclosure_date=disclosure_date,
-            service_name=service_name,
-            service_version=service_version,
-            check=check
-        )
-        rs = self.cursor.execute(sql)
-        return rs.fetchall()
-
-#Database.__init__(Database)
