@@ -172,7 +172,7 @@ def confpostgre():
             db_pass = HashGen()
             client.containers.run("bitnami/mongodb", name="thgdb-mongodb", environment={
                     "MONGODB_DATABASE": db_name,
-                    "MONGODB_USERNAME": db_name,
+                    "MONGODB_USERNAME": db_user,
                     "MONGODB_PASSWORD": db_pass
                     }, ports={'27017/tcp': 27017}, detach=True)
             print("Container created!")

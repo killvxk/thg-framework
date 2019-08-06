@@ -3,82 +3,38 @@
 #import psycopg2
 import mongoengine
 import dotenv
-
+import Connection, Models
 import os
 import sqlite3
 from fnmatch import fnmatchcase
-from utils.files import ROOT_PATH
-from utils.module import name_convert
+#from utils.files import ROOT_PATH
+#from utils.module import name_convert
 from importlib import import_module
 
 dotenv_file = dotenv.find_dotenv()
 dotenv.load_dotenv(dotenv_file)
 
-
 class Database:
-    #db_file = '{root_path}/db/thg.db'.format(root_path=ROOT_PATH)
-    #db = create_engine("postgresql+psycopg2://thgdb:thgdb@localhost/thgdb", encoding="UTF-8")
-    mongoengine.connect(
-        db=dotenv.get_key(dotenv_file, "MONGODB_DATABASE"),
-        username=dotenv.get_key(dotenv_file, "MONGODB_USERNAME"),
-        password=dotenv.get_key(dotenv_file, "MONGODB_PASSWORD"),
-        host='mongodb://admin:qwerty@localhost/production'
-    )
 
     connection = None
     cursor = None
     searchable_fields = ['name', 'module_name', 'description', 'author', 'disclosure_date', 'service_name', 'service_version', 'check', 'rank']
 
     def __init__(self):
-        #self.connection = sqlite3.connect(self.db_file)
-        #self.connection = db.Session()
-        #self.cursor = self.connection.cursor()
+        #self.insert_module(self, {"module": "Module 4 Teste", "mtype": "Tipo 4", "ref": "asdasasdasdasd"})
+        #self.get_module_count(self)
+        print(Models.mod_refs())
+        #self.create_table()
+        #if self.get_module_count() == 0:
+        #    self.db_rebuild()
 
-        self.create_table()
-
-        if self.get_module_count() == 0:
-            self.db_rebuild()
-
-    def get_module_count(self):
-        sql = 'select count(*) from modules;'
-        rs = self.cursor.execute(sql)
-        (count, ) = rs.fetchone()
-        return count
-
-    def create_table(self):
-        init_table_sql = (
-            'CREATE TABLE IF NOT EXISTS "modules" ('
-            '"id" INTEGER NOT NULL,'
-            '"name" TEXT,'
-            '"module_name" TEXT,'
-            '"description" TEXT,'
-            '"author" TEXT,'
-            '"references" TEXT,'
-            '"disclosure_date" TEXT,'
-            '"service_name" TEXT,'
-            '"service_version" TEXT,'
-            '"check" TEXT,'
-            'PRIMARY KEY("id")'
-            ');'
-        )
-        self.cursor.execute(init_table_sql)
-
-    def delete_table(self):
-        delete_table_sql = "delete from modules;"
-        with self.connection:
-            self.connection.execute(delete_table_sql)
+    #def get_module_count(self):
+        #count =
+        #print(count)
 
     def insert_module(self, info):
-        with self.connection:
-            self.connection.execute(
-                "insert into modules \
-                (name, module_name, description, author, 'references', disclosure_date, service_name,"
-                "service_version, 'check') \
-                values (?, ?, ?, ?, ?, ?, ?, ?, ?)",
-                (info.get('name'), info.get('module_name'), info.get('description'), '|'.join(info.get('author')),
-                 '|'.join(info.get('references')), info.get('disclosure_date'), info.get('service_name'),
-                 info.get('service_version'), info.get('check'))
-            )
+        module = Models.mod_refs(module = info['module'], mtype = info['mtype'], ref = info['ref'])
+        module.save()
 
     def db_rebuild(self):
         self.delete_table()
@@ -140,3 +96,5 @@ class Database:
         )
         rs = self.cursor.execute(sql)
         return rs.fetchall()
+
+#Database.__init__(Database)
