@@ -1,6 +1,6 @@
 #
 # coding=utf-8
-"""Classes for the thgcmd plugin system"""
+"""Classes for the cmd2 plugin system"""
 import attr
 
 

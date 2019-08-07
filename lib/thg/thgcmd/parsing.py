@@ -1,6 +1,6 @@
 #
 # -*- coding: utf-8 -*-
-"""Statement parsing classes for thgcmd"""
+"""Statement parsing classes for cmd2"""
 
 import re
 import shlex
@@ -13,7 +13,7 @@ from . import utils
 
 
 def shlex_split(str_to_split: str) -> List[str]:
-    """A wrapper around shlex.split() that uses thgcmd's preferred arguments.
+    """A wrapper around shlex.split() that uses cmd2's preferred arguments.
 
     This allows other classes to easily call split() the same way StatementParser does
     :param str_to_split: the string being split
@@ -56,7 +56,7 @@ class MacroArg:
 
 @attr.s(frozen=True)
 class Macro:
-    """Defines a thgcmd macro"""
+    """Defines a cmd2 macro"""
 
     # Name of the macro
     name = attr.ib(validator=attr.validators.instance_of(str))
@@ -76,7 +76,7 @@ class Statement(str):
     """String subclass with additional attributes to store the results of parsing.
 
     The cmd module in the standard library passes commands around as a
-    string. To retain backwards compatibility, thgcmd does the same. However, we
+    string. To retain backwards compatibility, cmd2 does the same. However, we
     need a place to capture the additional output of the command parsing, so we add
     our own attributes to this subclass.
 
@@ -100,7 +100,7 @@ class Statement(str):
     arg_list - the arguments to the command, excluding output redirection and
                command terminators. Each argument is represented as an element
                in the list. Quoted arguments remain quoted. If you want to
-               remove the quotes, use `thgcmd.utils.strip_quotes()` or use
+               remove the quotes, use `cmd2.utils.strip_quotes()` or use
                `argv[1:]`
 
     command_and_args - join the args and the command together with a space. Output
@@ -128,7 +128,7 @@ class Statement(str):
 
     Tips:
 
-    1. `argparse` is your friend for anything complex. `thgcmd` has two decorators
+    1. `argparse` is your friend for anything complex. `cmd2` has two decorators
        (`with_argparser`, and `with_argparser_and_unknown_args`) which you can use
        to make your command method receive a namespace of parsed arguments, whether
        positional or denoted with switches.
@@ -185,7 +185,7 @@ class Statement(str):
         """Combine command and args with a space separating them.
 
         Quoted arguments remain quoted. Output redirection and piping are
-        excluded, as are any multiline command terminators.
+        excluded, as are any command terminators.
         """
         if self.command and self.args:
             rtn = '{} {}'.format(self.command, self.args)
@@ -245,11 +245,10 @@ class StatementParser:
     the expansion.
     """
     def __init__(self,
-                 allow_redirection: bool = True,
                  terminators: Optional[Iterable[str]] = None,
                  multiline_commands: Optional[Iterable[str]] = None,
                  aliases: Optional[Dict[str, str]] = None,
-                 shortcuts: Optional[Iterable[Tuple[str, str]]] = None) -> None:
+                 shortcuts: Optional[Dict[str, str]] = None) -> None:
         """Initialize an instance of StatementParser.
 
         The following will get converted to an immutable tuple before storing internally:
@@ -257,13 +256,11 @@ class StatementParser:
         * multiline commands
         * shortcuts
 
-        :param allow_redirection: (optional) should redirection and pipes be allowed?
-        :param terminators: (optional) iterable containing strings which should terminate multiline commands
-        :param multiline_commands: (optional) iterable containing the names of commands that accept multiline input
-        :param aliases: (optional) dictionary contaiing aliases
-        :param shortcuts (optional) an iterable of tuples with each tuple containing the shortcut and the expansion
+        :param terminators: iterable containing strings which should terminate commands
+        :param multiline_commands: iterable containing the names of commands that accept multiline input
+        :param aliases: dictionary containing aliases
+        :param shortcuts: dictionary containing shortcuts
         """
-        self.allow_redirection = allow_redirection
         if terminators is None:
             self.terminators = (constants.MULTILINE_TERMINATOR,)
         else:
@@ -276,10 +273,13 @@ class StatementParser:
             self.aliases = dict()
         else:
             self.aliases = aliases
+
         if shortcuts is None:
-            self.shortcuts = tuple()
-        else:
-            self.shortcuts = tuple(shortcuts)
+            shortcuts = constants.DEFAULT_SHORTCUTS
+
+        # Sort the shortcuts in descending order by name length because the longest match
+        # should take precedence. (e.g., @@file should match '@@' and not '@'.
+        self.shortcuts = tuple(sorted(shortcuts.items(), key=lambda x: len(x[0]), reverse=True))
 
         # commands have to be a word, so make a regular expression
         # that matches the first word in the line. This regex has three
@@ -356,22 +356,17 @@ class StatementParser:
                 errmsg = ''
         return valid, errmsg
 
-    def tokenize(self, line: str, expand: bool = True) -> List[str]:
+    def tokenize(self, line: str) -> List[str]:
         """
         Lex a string into a list of tokens. Shortcuts and aliases are expanded and comments are removed
 
         :param line: the command line being lexed
-        :param expand: If True, then aliases and shortcuts will be expanded.
-                       Set this to False if no expansion should occur because the command name is already known.
-                       Otherwise the command could be expanded if it matched an alias name. This is for cases where
-                       a do_* method was called manually (e.g do_help('alias').
         :return: A list of tokens
         :raises ValueError if there are unclosed quotation marks.
         """
 
         # expand shortcuts and aliases
-        if expand:
-            line = self._expand(line)
+        line = self._expand(line)
 
         # check if this line is a comment
         if line.lstrip().startswith(constants.COMMENT_CHAR):
@@ -381,21 +376,17 @@ class StatementParser:
         tokens = shlex_split(line)
 
         # custom lexing
-        tokens = self._split_on_punctuation(tokens)
+        tokens = self.split_on_punctuation(tokens)
         return tokens
 
-    def parse(self, line: str, expand: bool = True) -> Statement:
+    def parse(self, line: str) -> Statement:
         """
         Tokenize the input and parse it into a Statement object, stripping
         comments, expanding aliases and shortcuts, and extracting output
         redirection directives.
 
         :param line: the command line being parsed
-        :param expand: If True, then aliases and shortcuts will be expanded.
-                       Set this to False if no expansion should occur because the command name is already known.
-                       Otherwise the command could be expanded if it matched an alias name. This is for cases where
-                       a do_* method was called manually (e.g do_help('alias').
-        :return: A parsed Statement
+        :return: the created Statement
         :raises ValueError if there are unclosed quotation marks
         """
 
@@ -411,7 +402,7 @@ class StatementParser:
         arg_list = []
 
         # lex the input into a list of tokens
-        tokens = self.tokenize(line, expand)
+        tokens = self.tokenize(line)
 
         # of the valid terminators, find the first one to occur in the input
         terminator_pos = len(tokens) + 1
@@ -530,8 +521,7 @@ class StatementParser:
                               suffix=suffix,
                               pipe_to=pipe_to,
                               output=output,
-                              output_to=output_to,
-                              )
+                              output_to=output_to)
         return statement
 
     def parse_command_only(self, rawinput: str) -> Statement:
@@ -557,7 +547,12 @@ class StatementParser:
         Different from parse(), this method does not remove redundant whitespace
         within args. However, it does ensure args has no leading or trailing
         whitespace.
+
+        :param rawinput: the command line as entered by the user
+        :return: the created Statement
         """
+        line = rawinput
+
         # expand shortcuts and aliases
         line = self._expand(rawinput)
 
@@ -588,8 +583,7 @@ class StatementParser:
         statement = Statement(args,
                               raw=rawinput,
                               command=command,
-                              multiline_command=multiline_command,
-                              )
+                              multiline_command=multiline_command)
         return statement
 
     def get_command_arg_list(self, command_name: str, to_parse: Union[Statement, str],
@@ -614,7 +608,7 @@ class StatementParser:
         """
         # Check if to_parse needs to be converted to a Statement
         if not isinstance(to_parse, Statement):
-            to_parse = self.parse(command_name + ' ' + to_parse, expand=False)
+            to_parse = self.parse(command_name + ' ' + to_parse)
 
         if preserve_quotes:
             return to_parse, to_parse.arg_list
@@ -673,7 +667,7 @@ class StatementParser:
 
         return command, args
 
-    def _split_on_punctuation(self, tokens: List[str]) -> List[str]:
+    def split_on_punctuation(self, tokens: List[str]) -> List[str]:
         """Further splits tokens from a command line using punctuation characters
 
         Punctuation characters are treated as word breaks when they are in
@@ -685,8 +679,7 @@ class StatementParser:
         """
         punctuation = []
         punctuation.extend(self.terminators)
-        if self.allow_redirection:
-            punctuation.extend(constants.REDIRECTION_CHARS)
+        punctuation.extend(constants.REDIRECTION_CHARS)
 
         punctuated_tokens = []
 
