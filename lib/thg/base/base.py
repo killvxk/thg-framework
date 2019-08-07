@@ -4,7 +4,7 @@ import threading
 from io import BytesIO
 from queue import Queue
 from lib.thg.thgcmd import *
-from thgcmd.utils import basic_complete
+from lib.thg.thgcmd.utils import  basic_complete
 from art import text2art
 from utils import module
 from pathlib import Path

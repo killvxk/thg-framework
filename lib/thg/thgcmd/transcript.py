@@ -6,15 +6,14 @@ If the user wants to run a transcript (see docs/transcript.rst),
 we need a mechanism to run each command in the transcript as
 a unit test, comparing the expected output to the actual output.
 
-This file contains the classess necessary to make that work. These
-classes are used in thgcmd.py::run_transcript_tests()
+This file contains the class necessary to make that work. This
+class is used in cmd2.py::run_transcript_tests()
 """
 import re
-import glob
 import unittest
 from typing import Tuple
 
-from . import utils
+from . import ansi, utils
 
 
 class Cmd2TestCase(unittest.TestCase):
@@ -28,23 +27,18 @@ class Cmd2TestCase(unittest.TestCase):
     """
     cmdapp = None
 
-    def fetchTranscripts(self):
-        self.transcripts = {}
-        for fileset in self.cmdapp.testfiles:
-            for fname in glob.glob(fileset):
-                tfile = open(fname)
-                self.transcripts[fname] = iter(tfile.readlines())
-                tfile.close()
-        if not len(self.transcripts):
-            raise Exception("No test files found - nothing to test.")
-
     def setUp(self):
         if self.cmdapp:
-            self.fetchTranscripts()
+            self._fetchTranscripts()
 
             # Trap stdout
             self._orig_stdout = self.cmdapp.stdout
             self.cmdapp.stdout = utils.StdSim(self.cmdapp.stdout)
+
+    def tearDown(self):
+        if self.cmdapp:
+            # Restore stdout
+            self.cmdapp.stdout = self._orig_stdout
 
     def runTest(self):  # was testall
         if self.cmdapp:
@@ -52,16 +46,23 @@ class Cmd2TestCase(unittest.TestCase):
             for (fname, transcript) in its:
                 self._test_transcript(fname, transcript)
 
+    def _fetchTranscripts(self):
+        self.transcripts = {}
+        for fname in self.cmdapp.testfiles:
+            tfile = open(fname)
+            self.transcripts[fname] = iter(tfile.readlines())
+            tfile.close()
+
     def _test_transcript(self, fname: str, transcript):
         line_num = 0
         finished = False
-        line = utils.strip_ansi(next(transcript))
+        line = ansi.strip_ansi(next(transcript))
         line_num += 1
         while not finished:
             # Scroll forward to where actual commands begin
             while not line.startswith(self.cmdapp.visible_prompt):
                 try:
-                    line = utils.strip_ansi(next(transcript))
+                    line = ansi.strip_ansi(next(transcript))
                 except StopIteration:
                     finished = True
                     break
@@ -84,17 +85,19 @@ class Cmd2TestCase(unittest.TestCase):
                 line_num += 1
             command = ''.join(command)
             # Send the command into the application and capture the resulting output
-            # TODO: Should we get the return value and act if stop == True?
-            self.cmdapp.onecmd_plus_hooks(command)
+            stop = self.cmdapp.onecmd_plus_hooks(command)
             result = self.cmdapp.stdout.read()
+            stop_msg = 'Command indicated application should quit, but more commands in transcript'
             # Read the expected result from transcript
-            if utils.strip_ansi(line).startswith(self.cmdapp.visible_prompt):
+            if ansi.strip_ansi(line).startswith(self.cmdapp.visible_prompt):
                 message = '\nFile {}, line {}\nCommand was:\n{}\nExpected: (nothing)\nGot:\n{}\n'.format(
                           fname, line_num, command, result)
                 self.assertTrue(not (result.strip()), message)
+                # If the command signaled the application to quit there should be no more commands
+                self.assertFalse(stop, stop_msg)
                 continue
             expected = []
-            while not utils.strip_ansi(line).startswith(self.cmdapp.visible_prompt):
+            while not ansi.strip_ansi(line).startswith(self.cmdapp.visible_prompt):
                 expected.append(line)
                 try:
                     line = next(transcript)
@@ -102,9 +105,13 @@ class Cmd2TestCase(unittest.TestCase):
                     finished = True
                     break
                 line_num += 1
-            expected = ''.join(expected)
+
+            if stop:
+                # This should only be hit if the command that set stop to True had output text
+                self.assertTrue(finished, stop_msg)
 
             # transform the expected text into a valid regular expression
+            expected = ''.join(expected)
             expected = self._transform_transcript_expected(expected)
             message = '\nFile {}, line {}\nCommand was:\n{}\nExpected:\n{}\nGot:\n{}\n'.format(
                       fname, line_num, command, expected, result)
@@ -203,8 +210,3 @@ class Cmd2TestCase(unittest.TestCase):
                     # slash is not escaped, this is what we are looking for
                     break
         return regex, pos, start
-
-    def tearDown(self):
-        if self.cmdapp:
-            # Restore stdout
-            self.cmdapp.stdout = self._orig_stdout

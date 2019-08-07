@@ -2,52 +2,31 @@
 """Shared utility functions"""
 
 import collections
+import glob
 import os
 import re
+import shutil
 import subprocess
 import sys
 import threading
 import unicodedata
 from typing import Any, Iterable, List, Optional, TextIO, Union
 
-from wcwidth import wcswidth
-
 from . import constants
-
-
-def strip_ansi(text: str) -> str:
-    """Strip ANSI escape codes from a string.
-
-    :param text: string which may contain ANSI escape codes
-    :return: the same string with any ANSI escape codes removed
-    """
-    return constants.ANSI_ESCAPE_RE.sub('', text)
-
-
-def ansi_safe_wcswidth(text: str) -> int:
-    """
-    Wraps wcswidth to make it compatible with colored strings
-
-    :param text: the string being measured
-    """
-    # Strip ANSI escape codes since they cause wcswidth to return -1
-    return wcswidth(strip_ansi(text))
 
 
 def is_quoted(arg: str) -> bool:
     """
     Checks if a string is quoted
+
     :param arg: the string being checked for quotes
     :return: True if a string is quoted
     """
     return len(arg) > 1 and arg[0] == arg[-1] and arg[0] in constants.QUOTES
 
 
-def quote_string_if_needed(arg: str) -> str:
-    """ Quotes a string if it contains spaces and isn't already quoted """
-    if is_quoted(arg) or ' ' not in arg:
-        return arg
-
+def quote_string(arg: str) -> str:
+    """Quote a string"""
     if '"' in arg:
         quote = "'"
     else:
@@ -56,8 +35,16 @@ def quote_string_if_needed(arg: str) -> str:
     return quote + arg + quote
 
 
+def quote_string_if_needed(arg: str) -> str:
+    """Quote a string if it contains spaces and isn't already quoted"""
+    if is_quoted(arg) or ' ' not in arg:
+        return arg
+
+    return quote_string(arg)
+
+
 def strip_quotes(arg: str) -> str:
-    """ Strip outer quotes from a string.
+    """Strip outer quotes from a string.
 
      Applies to both single and double quotes.
 
@@ -306,7 +293,7 @@ def expand_user_in_tokens(tokens: List[str]) -> None:
 
 
 def find_editor() -> str:
-    """Find a reasonable editor to use by default for the system that the thgcmd application is running on."""
+    """Find a reasonable editor to use by default for the system that the cmd2 application is running on."""
     editor = os.environ.get('EDITOR')
     if not editor:
         if sys.platform[:3] == 'win':
@@ -317,6 +304,78 @@ def find_editor() -> str:
                 if which(editor):
                     break
     return editor
+
+
+def files_from_glob_pattern(pattern: str, access=os.F_OK) -> List[str]:
+    """Return a list of file paths based on a glob pattern.
+
+    Only files are returned, not directories, and optionally only files for which the user has a specified access to.
+
+    :param pattern: file name or glob pattern
+    :param access: file access type to verify (os.* where * is F_OK, R_OK, W_OK, or X_OK)
+    :return: list of files matching the name or glob pattern
+    """
+    return [f for f in glob.glob(pattern) if os.path.isfile(f) and os.access(f, access)]
+
+
+def files_from_glob_patterns(patterns: List[str], access=os.F_OK) -> List[str]:
+    """Return a list of file paths based on a list of glob patterns.
+
+    Only files are returned, not directories, and optionally only files for which the user has a specified access to.
+
+    :param patterns: list of file names and/or glob patterns
+    :param access: file access type to verify (os.* where * is F_OK, R_OK, W_OK, or X_OK)
+    :return: list of files matching the names and/or glob patterns
+    """
+    files = []
+    for pattern in patterns:
+        matches = files_from_glob_pattern(pattern, access=access)
+        files.extend(matches)
+    return files
+
+
+def get_exes_in_path(starts_with: str) -> List[str]:
+    """Returns names of executables in a user's path
+
+    :param starts_with: what the exes should start with. leave blank for all exes in path.
+    :return: a list of matching exe names
+    """
+    # Purposely don't match any executable containing wildcards
+    wildcards = ['*', '?']
+    for wildcard in wildcards:
+        if wildcard in starts_with:
+            return []
+
+    # Get a list of every directory in the PATH environment variable and ignore symbolic links
+    paths = [p for p in os.getenv('PATH').split(os.path.pathsep) if not os.path.islink(p)]
+
+    # Use a set to store exe names since there can be duplicates
+    exes_set = set()
+
+    # Find every executable file in the user's path that matches the pattern
+    for path in paths:
+        full_path = os.path.join(path, starts_with)
+        matches = files_from_glob_pattern(full_path + '*', access=os.X_OK)
+
+        for match in matches:
+            exes_set.add(os.path.basename(match))
+
+    return list(exes_set)
+
+
+def center_text(msg: str, *, pad: str = ' ') -> str:
+    """Centers text horizontally for display within the current terminal, optionally padding both sides.
+
+    :param msg: message to display in the center
+    :param pad: if provided, the first character will be used to pad both sides of the message
+    :return: centered message, optionally padded on both sides with pad_char
+    """
+    term_width = shutil.get_terminal_size().columns
+    surrounded_msg = ' {} '.format(msg)
+    if not pad:
+        pad = ' '
+    fill_char = pad[:1]
+    return surrounded_msg.center(term_width, fill_char)
 
 
 class StdSim(object):
@@ -430,7 +489,7 @@ class ByteBuf(object):
 
 class ProcReader(object):
     """
-    Used to captured stdout and stderr from a Popen process if any of those were set to subprocess.PIPE.
+    Used to capture stdout and stderr from a Popen process if any of those were set to subprocess.PIPE.
     If neither are pipes, then the process will run normally and no output will be captured.
     """
     def __init__(self, proc: subprocess.Popen, stdout: Union[StdSim, TextIO],
@@ -526,7 +585,7 @@ class ProcReader(object):
 class ContextFlag(object):
     """A context manager which is also used as a boolean flag value within the default sigint handler.
 
-    Its main use is as a flag to prevent the SIGINT handler in thgcmd from raising a KeyboardInterrupt
+    Its main use is as a flag to prevent the SIGINT handler in cmd2 from raising a KeyboardInterrupt
     while a critical code section has set the flag to True. Because signal handling is always done on the
     main thread, this class is not thread-safe since there is no need.
     """
@@ -562,3 +621,19 @@ class RedirectionSavedState(object):
 
         # If the command created a process to pipe to, then then is its reader
         self.pipe_proc_reader = None
+
+
+# noinspection PyUnusedLocal
+def basic_complete(text: str, line: str, begidx: int, endidx: int, match_against: Iterable) -> List[str]:
+    """
+    Basic tab completion function that matches against a list of strings without considering line contents
+    or cursor position. The args required by this function are defined in the header of Pythons's cmd.py.
+
+    :param text: the string prefix we are attempting to match (all matches must begin with it)
+    :param line: the current input line with leading whitespace removed
+    :param begidx: the beginning index of the prefix text
+    :param endidx: the ending index of the prefix text
+    :param match_against: the strings being matched against
+    :return: a list of possible tab completions
+    """
+    return [cur_match for cur_match in match_against if cur_match.startswith(text)]
