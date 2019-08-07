@@ -1,7 +1,6 @@
 #conexao com o banco de dados
-import mongoengine, dotenv, os, json
-from lib.BaseMode.Database import Connection
-from lib.BaseMode.Database import Models
+import dotenv, json
+from lib.thg.core.Database import Models, Connection
 from lib.setup import setup
 #from fnmatch import fnmatchcase
 #from utils.files import ROOT_PATH
