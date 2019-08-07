@@ -129,7 +129,7 @@ cria  e configura banco de dados
 
 
 def conf_db():
-    #client = docker.from_env()
+    client = docker.from_env()
     try:
         print("Getting mongodb image for docker.")
         #img = client.images.get("postgres")
@@ -165,6 +165,7 @@ def remove_container(container):
     print("Database container removed.")
 
 def create_container():
+    client = docker.from_env()
     print("Creating container...")
     db_name = dotenv.get_key(dotenv_file, "MONGODB_DATABASE")
     db_user = dotenv.get_key(dotenv_file, "MONGODB_USERNAME")

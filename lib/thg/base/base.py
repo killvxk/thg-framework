@@ -240,29 +240,41 @@ class THGBASECONSOLE(Cmd, Database):
         Search modules
 
         Support fields:
-            name, module_name, description, author, disclosure_date, service_name, service_version, check
+            module_name, description, author, disclosure_date, service_name, service_version, check
         Eg:
             search redis
             search service_name=phpcms  service_version=9.6.0
         """
-        search_conditions = args.split(" ")
+        search_args = args.split(" ")
+        if len(search_args) < 2:
+            print("You need to specify the type of search and the name.")
+            return
+        search_type = search_args[0]
+        search_type = search_type.lower()
+        search_query = search_args[1]
         db_conditions = {}
-        for condition in search_conditions:
-            cd = condition.split("=")
-            if len(cd) is 1:
-                [module_name] = cd
-                db_conditions['module_name'] = module_name
-            else:
-                [field, value] = cd
-                if field in self.searchable_fields:
-                    db_conditions[field] = value
+        if search_type == "auxiliary":
+            """for condition in search_query:
+                cd = condition
+                if len(cd) is 1:
+                    [module_name] = cd
+                    db_conditions['module_name'] = module_name
+                else:
+                    [field, value] = cd
+                    if field in self.searchable_fields:
+                        db_conditions[field] = value
+                print(cd)"""
 
-        modules = self.search_modules(db_conditions)
+            search = self.search_modules(search_query)
+            modules = search[0]
+            fields = search[1]
+            print(modules)
+            print(fields)
 
-        self._print_modules(modules, 'Search results:')
-        self._print_item("search mod => name, module_name, description, author, disclosure_date, service_name, service_version, check")
-        self._print_item("The search is only retrieved from the database")
-        self._print_item("If you add/delete some new modules, please execute `db_rebuild` first\n\n")
+            self._print_modules(modules, fields, 'Search results:')
+            #self._print_item("search mod => module_name, description, author, disclosure_date, service_name, service_version, check")
+            #self._print_item("The search is only retrieved from the database")
+            #self._print_item("If you add/delete some new modules, please execute `db_rebuild` first\n\n")
 
     def complete_set(self, text, line, begidx, endidx):
         if len(line.split(" ")) > 2:
@@ -986,9 +998,9 @@ class THGBASECONSOLE(Cmd, Database):
 ###################################################################################
 ###################################################################################
 ###################################################################################
-    def _print_modules(self, modules, title):
+    def _print_modules(self, modules, fields, title):
         self.poutput(title, "\n\n", color=Fore.CYAN)
-        self.poutput(tabulate(modules,headers=('name', 'module_name', 'description', 'author', 'disclosure_date', 'service_name', 'service_version', 'check')), '\n\n')
+        self.poutput(tabulate([modules],headers=(fields)), '\n\n')
 
     def _print_item(self, message, color=Fore.GREEN):
         self.poutput("{style}[+]{style_end} {message}".format(

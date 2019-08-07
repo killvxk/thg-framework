@@ -1,5 +1,5 @@
 #conexao com o banco de dados
-import mongoengine, dotenv, os
+import mongoengine, dotenv, os, json
 from lib.BaseMode.Database import Connection
 from lib.BaseMode.Database import Models
 from lib.setup import setup
@@ -18,6 +18,7 @@ class Database:
 
     def __init__(self):
         self.connection = Connection.connect_db()
+        #self.insert_module(self, {'module': "Module1",'mtype': "payload", 'ref': 'sdasdasdasdas'})
 
     def get_module_count(self):
         count = Models.mod_refs.objects.all().count()
@@ -53,12 +54,26 @@ class Database:
     def get_modules(self):
         return Models.mod_refs.objects.all()
 
-    def search_modules(self, search_conditions):
-        name = search_conditions.get('name', '')
-        module_name = search_conditions.get('module_name', '')
-        description = search_conditions.get('description', '')
-        author = search_conditions.get('author', '')
-        disclosure_date = search_conditions.get('disclosure_date', '')
-        service_name = search_conditions.get('service_name', '')
-        service_version = search_conditions.get('service_version', '')
-        check = search_conditions.get('check', '')
+    def search_modules(self, search):
+        #name = search_conditions.get('name', '')
+        #valid_args = ['module_name', 'description', 'author', 'disclosure_date',
+        #                 'service_name', 'service_version', 'check']
+        #self.validate_search(search['module_name'])
+        module = json.loads(Models.mod_refs.objects(module=search).to_json())[0]
+        """module_name = search.get('module_name', '')
+        description = search.get('description', '')
+        author = search.get('author', '')
+        disclosure_date = search.get('disclosure_date', '')
+        service_name = search.get('service_name', '')
+        service_version = search.get('service_version', '')
+        check = search.get('check', '')"""
+        #if len(module) > 0:
+        #    return module
+        module.pop('_id')
+        values = module.values()
+        keys = module.keys()
+        return [list(values), list(keys)]
+
+    #def validate_search(self, search):
+    #    #
+    #    print(search)

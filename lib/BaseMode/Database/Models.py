@@ -19,6 +19,12 @@ class automatic_exploitation_match_results(mongoengine.Document):
     #)
     #index_automatic_exploitation_match_results_on_match_id = self.match_id
     #index_automatic_exploitation_match_results_on_run_id = self.run_id
+    """meta = {
+        'indexes': {
+            name: '',
+            fields: ['']
+        }
+    }"""
 class automatic_exploitation_match_sets (mongoengine.Document):
     #__tablename__="automatic_exploitation_match_sets"
     workspace_id = mongoengine.IntField()
@@ -330,6 +336,14 @@ class module_actions(mongoengine.Document):
     """meta = (
         Index('index_module_actions_on_detail_id', 'detail_id'),
     )"""
+    meta = {
+        'indexes': [
+            {
+                'name': 'index_module_actions_on_detail_id',
+                'fields': ['detail_id']
+            }
+        ]
+    }
 class module_archs(mongoengine.Document):
     #__tablename__= "module_archs"
     detail_id=mongoengine.IntField(null=False, unique=True)
@@ -337,6 +351,14 @@ class module_archs(mongoengine.Document):
     """meta = (
         Index('index_module_archs_on_detail_id', 'detail_id'),
     )"""
+    meta = {
+        'indexes': [
+            {
+                'name': 'index_module_archs_on_detail_id',
+                'fields': ['detail_id']
+            }
+        ]
+    }
 class module_authors(mongoengine.Document):
     #__tablename__ = "module_authors"
     detail_id=mongoengine.IntField(null=False, unique=True)
@@ -345,6 +367,14 @@ class module_authors(mongoengine.Document):
     """meta = (
         Index('index_module_authors_on_detail_id', 'detail_id'),
     )"""
+    meta = {
+        'indexes': [
+            {
+                'name': 'index_module_authors_on_detail_id',
+                'fields': ['detail_id']
+            }
+        ]
+    }
 class module_details(mongoengine.Document):
     #__tablename__="module_details"
     id=mongoengine.IntField(unique=True)
@@ -369,6 +399,12 @@ class module_details(mongoengine.Document):
         Index('index_module_details_on_name', 'name'),
         Index('index_module_details_on_refname', 'refname'),
     )"""
+    """meta = {
+        'indexes': {
+            name: 'index_module_authors_on_detail_id',
+            fields: ['detail_id']
+        }
+    }"""
 class module_mixins(mongoengine.Document):
     #__tablename__="module_mixins"
     detail_id=mongoengine.IntField(unique=True)
