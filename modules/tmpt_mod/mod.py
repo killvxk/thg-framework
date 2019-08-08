@@ -1,7 +1,7 @@
 import socket
-from lib.BaseMode.mods.Auxiliary.Auxiliary import BaseAuxiliary
+from lib.thg.core.mods.Auxiliary.auth_brute import BaseAuxiliary_Brute
 
-class Modules(BaseAuxiliary):
+class Modules(BaseAuxiliary_Brute):
     def __init__(self):
         super(Modules, self).__init__()
         self.thg_update_info({

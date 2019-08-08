@@ -1,9 +1,8 @@
 import argparse
-import time
-import threading
 from io import BytesIO
 from queue import Queue
 from lib.thg.thgcmd import *
+from lib.thg.thgcmd.ansi import style
 from lib.thg.thgcmd.utils import  basic_complete
 from art import text2art
 from utils import module
@@ -12,17 +11,17 @@ from lib.thg.thgcmd.ansi import style
 from tabulate import tabulate
 from colorama import Fore
 from random import *
-import dis
 from lib.thg.base import plugins
 from lib.thg.base.config.mensagens import mensagem_do_dia
-import psutil,os,platform,sys
+import psutil,os,platform
 from lib.thg.base.config.Version import __codenome__,__version__
 from lib.thg.base.config.info_init import thg_add_init
 from importlib import import_module, reload
-from lib.BaseMode.Database.Database import Database
+from lib.thg.core.Database.Database import Database
 from lib.thg.base.BaseOptions import BaseOption
 from lib.thg.base.exception.Module import ModuleNotUseException
-import sys,sqlite3,hashlib,time,fnmatch,shlex,marshal,pkgutil,importlib,threading, json,base64
+import sys, time, pkgutil, threading, json
+
 
 class THGBASECONSOLE(Cmd, Database):
     #__metaclass__ = Database
@@ -369,10 +368,10 @@ class THGBASECONSOLE(Cmd, Database):
         if content == "info":
             info = self.module_instance.get_info()
             info_table = []
-            self.poutput("Module info:", "\n\n", color=Fore.CYAN)
+            self.poutput(style("Module info:"))
             for item in info.keys():
                 info_table.append([item + ":", info.get(item)])
-            self.poutput(tabulate(info_table, colalign=("right",), tablefmt="plain"), "\n\n")
+            self.poutput(tabulate(info_table, colalign=("right",), tablefmt="plain"), )
 
         if content == "options" or content == "info":
             options = self.module_instance.options.get_options()
@@ -384,19 +383,13 @@ class THGBASECONSOLE(Cmd, Database):
                     options_table_row.append(getattr(option, field))
                 options_table.append(options_table_row)
 
-            self.poutput("Module options:", "\n\n", color=Fore.CYAN)
-            self.poutput(
-                tabulate(
-                    options_table,
-                    headers=default_options_instance.__dict__.keys(),
-                ),
-                "\n\n"
-            )
+            self.poutput(style("Module options:",fg="red"))
+            self.poutput(style(tabulate(options_table,headers=default_options_instance.__dict__.keys(),),fg="red"))
 
         if content == "missing":
             missing_options = self.module_instance.get_missing_options()
             if len(missing_options) is 0:
-                self.poutput("No option missing!", color=Fore.CYAN)
+                self.poutput(style("No option missing!"))
                 return None
 
             default_options_instance = BaseOption()
@@ -406,14 +399,8 @@ class THGBASECONSOLE(Cmd, Database):
                 for field in default_options_instance.__dict__.keys():
                     options_table_row.append(getattr(option, field))
                 missing_options_table.append(options_table_row)
-            self.poutput("Missing Module options:", "\n\n", color=Fore.CYAN)
-            self.poutput(
-                tabulate(
-                    missing_options_table,
-                    headers=default_options_instance.__dict__.keys(),
-                ),
-                "\n\n"
-            )
+            self.poutput(style("Missing Module options:"))
+            self.poutput(style(tabulate(missing_options_table,headers=default_options_instance.__dict__.keys(),),))
 
     @with_category(CMD_MODULE)
     def thgcmd_run(self, args):
@@ -442,7 +429,7 @@ class THGBASECONSOLE(Cmd, Database):
         if exploit_result.status:
             self._print_item(exploit_result.success_message)
         else:
-            self._print_item(exploit_result.error_message, color=Fore.RED)
+            self._print_item(exploit_result.error_message)
         thread_queue.get(1)
 
     @with_category(CMD_MODULE)
@@ -454,7 +441,7 @@ class THGBASECONSOLE(Cmd, Database):
         [validate_result, validate_message] = self.module_instance.options.validate()
         if not validate_result:
             for error in validate_message:
-                self._print_item(error, color=Fore.RED)
+                self._print_item(error)
             return False
 
 
