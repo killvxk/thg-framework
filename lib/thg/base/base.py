@@ -8,7 +8,7 @@ from lib.thg.thgcmd.utils import  basic_complete
 from art import text2art
 from utils import module
 from pathlib import Path
-from colorama import Style
+from lib.thg.thgcmd.ansi import style
 from tabulate import tabulate
 from colorama import Fore
 from random import *
@@ -220,10 +220,10 @@ class THGBASECONSOLE(Cmd, Database):
         elif args == "help":
             self._print_item("external => show external ip ")
             self._print_item("internal => show internal ip ")
-    @with_category(CMD_CORE)
-    def thgcmd_exit(self,args):
-        """Exit the console"""
-        exit(1)
+    #@with_category(CMD_CORE)
+    #def thgcmd_exit(self,args):
+    #    """Exit the console"""
+    #    exit(1)
     @with_category(CMD_CORE)
     def thgcmd_exec(self,args):
         """ <shell thg_command> <args> Execute a thg_command in a shell"""
@@ -266,12 +266,14 @@ class THGBASECONSOLE(Cmd, Database):
                 print(cd)"""
 
             search = self.search_modules(search_query)
-            modules = search[0]
-            fields = search[1]
-            print(modules)
-            print(fields)
+            if(search == []):
+                modules = search
+                fields = search
+            else:
+                modules = search[0]
+                fields = search[1]
 
-            self._print_modules(modules, fields, 'Search results:')
+            self._print_modules(modules, fields, 'Search results for : ' + search_query )
             #self._print_item("search mod => module_name, description, author, disclosure_date, service_name, service_version, check")
             #self._print_item("The search is only retrieved from the database")
             #self._print_item("If you add/delete some new modules, please execute `db_rebuild` first\n\n")
@@ -999,8 +1001,11 @@ class THGBASECONSOLE(Cmd, Database):
 ###################################################################################
 ###################################################################################
     def _print_modules(self, modules, fields, title):
-        self.poutput(title, "\n\n", color=Fore.CYAN)
-        self.poutput(tabulate([modules],headers=(fields)), '\n\n')
+        self.poutput(style(title+ "\n", fg="cyan"))
+        if(modules != [] and fields != []):
+            self.poutput(style(tabulate(modules, headers=(fields), tablefmt='orgtbl') + '\n', fg="Green"))
+        else:
+            self.poutput(style("Module not found!", fg="Green"))
 
     def _print_item(self, message, color=Fore.GREEN):
         self.poutput("{style}[+]{style_end} {message}".format(

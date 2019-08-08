@@ -18,7 +18,7 @@ class Database:
 
     def __init__(self):
         self.connection = Connection.connect_db()
-        #self.insert_module(self, {'module': "Module1",'mtype': "payload", 'ref': 'sdasdasdasdas'})
+        #self.insert_module(self, {'module': "Module4",'mtype': "payload", 'ref': 'sdasdasdasdas'})
 
     def get_module_count(self):
         count = Models.mod_refs.objects.all().count()
@@ -59,7 +59,10 @@ class Database:
         #valid_args = ['module_name', 'description', 'author', 'disclosure_date',
         #                 'service_name', 'service_version', 'check']
         #self.validate_search(search['module_name'])
-        module = json.loads(Models.mod_refs.objects(module=search).to_json())[0]
+        modules = []
+        query = json.loads(Models.mod_refs.objects(module__icontains=search).to_json())
+        if(query == []):
+            return query
         """module_name = search.get('module_name', '')
         description = search.get('description', '')
         author = search.get('author', '')
@@ -67,12 +70,13 @@ class Database:
         service_name = search.get('service_name', '')
         service_version = search.get('service_version', '')
         check = search.get('check', '')"""
-        #if len(module) > 0:
-        #    return module
-        module.pop('_id')
-        values = module.values()
-        keys = module.keys()
-        return [list(values), list(keys)]
+        for q in query:
+            q.pop('_id')
+            modules.append(q)
+        keys = modules[0].keys()
+        m_values =[[row[key] for key in keys] for row in modules]
+        #print(m_values)
+        return [m_values, list(keys)]
 
     #def validate_search(self, search):
     #    #

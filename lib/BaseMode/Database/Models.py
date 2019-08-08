@@ -6,6 +6,7 @@ class api_keys(mongoengine.Document):
     token = mongoengine.StringField()
     created_at = mongoengine.DateTimeField(null=False)
     updated_at = mongoengine.DateTimeField(null=False)
+
 class automatic_exploitation_match_results(mongoengine.Document):
     #__tablename__ = "automatic_exploitation_match_results"
     match_id = mongoengine.IntField()
@@ -19,12 +20,12 @@ class automatic_exploitation_match_results(mongoengine.Document):
     #)
     #index_automatic_exploitation_match_results_on_match_id = self.match_id
     #index_automatic_exploitation_match_results_on_run_id = self.run_id
-    """meta = {
-        'indexes': {
-            name: '',
-            fields: ['']
-        }
-    }"""
+    meta = {
+        'indexes': [{
+            'fields': ['match_id', 'run_id']
+        }]
+    }
+
 class automatic_exploitation_match_sets (mongoengine.Document):
     #__tablename__="automatic_exploitation_match_sets"
     workspace_id = mongoengine.IntField()
@@ -37,6 +38,11 @@ class automatic_exploitation_match_sets (mongoengine.Document):
     #)
     """index_automatic_exploitation_match_sets_on_user_id = self.user_id
     index_automatic_exploitation_match_sets_on_workspace_id = self.workspace_id"""
+    meta = {
+        'indexes': [{
+            'fields': ['user_id', 'workspace_id']
+        }]
+    }
 
 class automatic_exploitation_matches(mongoengine.Document):
     #__tablename__="automatic_exploitation_matches"
@@ -55,6 +61,12 @@ class automatic_exploitation_matches(mongoengine.Document):
     #)
     """index_automatic_exploitation_matches_on_module_detail_id = self.module_detail_id
     index_automatic_exploitation_matches_on_module_full_name = self.module_full_name"""
+    meta = {
+        'indexes': [{
+            'fields': ['module_detail_id', 'module_fullname']
+        }]
+    }
+
 class automatic_exploitation_runs(mongoengine.Document):
     #__tablename__ ="automatic_exploitation_runs"
     workspace_id=mongoengine.IntField(unique=True)
@@ -68,6 +80,12 @@ class automatic_exploitation_runs(mongoengine.Document):
         index_automatic_exploitation_runs_on_workspace_id = workspace_id
 
     )"""
+    meta = {
+        'indexes': [{
+            'fields': ['match_set_id', 'user_id', 'workspace_id']
+        }]
+    }
+
 class clients(mongoengine.Document):
     #__tablename__ = "clients"
     host_id=mongoengine.IntField(unique=True)
@@ -76,14 +94,17 @@ class clients(mongoengine.Document):
     ua_name=mongoengine.StringField()
     ua_ver=mongoengine.StringField()
     updated_at=mongoengine.DateTimeField(null=False)
+
 class credential_cores_tasks(mongoengine.Document):
     #__tablename__ = "credential_cores_tasks"
     core_id=mongoengine.IntField(unique=True)
     task_id=mongoengine.IntField(unique=True)
+
 class credential_logins_tasks(mongoengine.Document):
     #__tablename__ = "credential_logins_tasks"
     login_id=mongoengine.IntField(unique=True)
     task_id=mongoengine.IntField(unique=True)
+
 class creds(mongoengine.Document):
     #__tablename__ ="creds"
     service_id=mongoengine.IntField(unique=True, null=False)
@@ -96,6 +117,7 @@ class creds(mongoengine.Document):
     source_type=mongoengine.StringField()
     created_at = mongoengine.DateTimeField(null=False)
     updated_at = mongoengine.DateTimeField(null=False)
+
 class events(mongoengine.Document):
     #__tablename__="events"
     workspace_id=mongoengine.IntField(unique=True)
@@ -105,6 +127,7 @@ class events(mongoengine.Document):
     seen=mongoengine.BooleanField(unique=False, default=False)
     username=mongoengine.StringField()
     info=mongoengine.StringField()
+
 class exploit_attempts(mongoengine.Document):
     #__tablename__= "exploit_attempts"
     host_id=mongoengine.IntField(unique=True)
@@ -120,6 +143,7 @@ class exploit_attempts(mongoengine.Document):
     port=mongoengine.IntField()
     proto=mongoengine.StringField()
     fail_detail=mongoengine.StringField()
+
 class exploited_hosts(mongoengine.Document):
     #__tablename__="exploited_hosts"
     host_id=mongoengine.IntField(null=False, unique=True)
@@ -129,6 +153,7 @@ class exploited_hosts(mongoengine.Document):
     payload=mongoengine.IntField()
     created_at = mongoengine.DateTimeField(null=False)
     updated_at = mongoengine.DateTimeField(null=False)
+
 class host_details(mongoengine.Document):
     #__tablename__="host_details"
     host_id=mongoengine.IntField(unique=True)
@@ -139,6 +164,7 @@ class host_details(mongoengine.Document):
     nx_site_importance=mongoengine.StringField()
     nx_scan_template=mongoengine.StringField()
     nx_risk_score=mongoengine.StringField()
+
 class hosts(mongoengine.Document):
     #__tablename__ = "hosts"
     address=mongoengine.StringField()
@@ -173,10 +199,17 @@ class hosts(mongoengine.Document):
         Index('index_hosts_on_state','state'),
         Index('index_hosts_on_workspace_id_and_address','workspace_id','address'),
     )"""
+    meta = {
+        'indexes': [{
+            'fields': ['name', 'os_flavor', 'os_name', 'purpose', 'state', 'workspace_id', 'address']
+        }]
+    }
+
 class hosts_tags(mongoengine.Document):
     #__tablename__ = "hosts_tags"
     host_id=mongoengine.IntField(unique=True)
     tag_id=mongoengine.IntField(unique=True)
+
 class listeners(mongoengine.Document):
     #__tablename__="listeners"
     workspace_id = mongoengine.IntField(null=False,default=1)
@@ -190,6 +223,7 @@ class listeners(mongoengine.Document):
     macro=mongoengine.StringField()
     created_at = mongoengine.DateTimeField(null=False)
     updated_at = mongoengine.DateTimeField(null=False)
+
 class loots(mongoengine.Document):
     #__tablename__="loots"
     workspace_id = mongoengine.IntField(default=1,null=False,unique=True)
@@ -208,6 +242,12 @@ class loots(mongoengine.Document):
         Index('index_loots_on_module_run_id', 'module_run_id'),
 
     )"""
+    meta = {
+        'indexes': [{
+            'fields': ['module_run_id']
+        }]
+    }
+
 class Macros(mongoengine.Document):
     #__tablename__="Macros"
     id=mongoengine.IntField(unique=True)
@@ -218,6 +258,7 @@ class Macros(mongoengine.Document):
     prefs=mongoengine.BinaryField()
     created_at = mongoengine.DateTimeField(null=False)
     updated_at = mongoengine.DateTimeField(null=False)
+
 class thg_credential_cores(mongoengine.Document):
     #__tablename__="thg_credential_cores"
     origin_id=mongoengine.IntField(unique=True,default=0)
@@ -242,6 +283,12 @@ class thg_credential_cores(mongoengine.Document):
         Index('unique_privateless_thg_credential_cores','workspace_id','realm_id','public_id'),
         Index('index_thg_credential_cores_on_workspace_id','workspace_id')
     )"""
+    meta = {
+        'indexes': [{
+            'fields': ['origin_type', 'origin_id', 'private_id', 'public_id', 'realm_id', 'workspace_id']
+        }]
+    }
+
 class thg_credential_logins(mongoengine.Document):
     #__tablename__="thg_credential_logins"
     core_id=mongoengine.IntField(unique=True,null=False)
@@ -255,6 +302,12 @@ class thg_credential_logins(mongoengine.Document):
         Index('index_thg_credential_logins_on_core_id_and_service_id', 'service_id', 'core_id'),
         Index('index_thg_credential_logins_on_service_id_and_core_id', 'service_id','core_id'),
     )"""
+    meta = {
+        'indexes': [{
+            'fields': ['service_id', 'core_id']
+        }]
+    }
+
 class thg_credential_origin_cracked_passwords(mongoengine.Document):
     #__tablename__="thg_credential_origin_cracked_passwords"
     thg_credential_core_id=mongoengine.IntField(unique=True,null=False)
@@ -263,6 +316,12 @@ class thg_credential_origin_cracked_passwords(mongoengine.Document):
     """meta = (
         Index('originating_credential_cores', 'thg_credential_core_id'),
     )"""
+    meta = {
+        'indexes': [{
+            'fields': ['thg_credential_core_id']
+        }]
+    }
+
 class thg_credential_origin_imports(mongoengine.Document):
     #__tablename__ ="thg_credential_origin_imports"
     filename=mongoengine.StringField()
@@ -272,6 +331,12 @@ class thg_credential_origin_imports(mongoengine.Document):
     """meta = (
         Index('index_thg_credential_origin_imports_on_task_id', 'task_id'),
     )"""
+    meta = {
+        'indexes': [{
+            'fields': ['task_id']
+        }]
+    }
+
 class thg_credential_origin_manuals(mongoengine.Document):
     #__tablename__ ="thg_credential_origin_manuals"
     user_id=mongoengine.IntField(unique=True,null=False)
@@ -280,6 +345,12 @@ class thg_credential_origin_manuals(mongoengine.Document):
     """meta = (
         Index('index_thg_credential_origin_manuals_on_user_id', 'user_id'),
     )"""
+    meta = {
+        'indexes': [{
+            'fields': ['user_id']
+        }]
+    }
+
 class thg_credential_origin_services(mongoengine.Document):
     #__tablename__ ="thg_credential_origin_services"
     service_id=mongoengine.IntField(unique=True,null=False)
@@ -287,6 +358,12 @@ class thg_credential_origin_services(mongoengine.Document):
     """meta = (
         Index('unique_thg_credential_origin_services', 'service_id','module_full_name'),
     )"""
+    meta = {
+        'indexes': [{
+            'fields': ['service_id', 'module_full_name']
+        }]
+    }
+
 class thg_credential_origin_sessions(mongoengine.Document):
     #__tablename__ = "thg_credential_origin_sessions"
     post_reference_name=mongoengine.StringField(null=False)
@@ -294,6 +371,12 @@ class thg_credential_origin_sessions(mongoengine.Document):
     """meta = (
         Index('unique_thg_credential_origin_sessions', 'session_id', 'post_reference_name'),
     )"""
+    meta = {
+        'indexes': [{
+            'fields': ['session_id', 'post_reference_name']
+        }]
+    }
+
 class thg_credential_privates(mongoengine.Document):
     #__tablename__="thg_credential_privates"
     id = mongoengine.IntField(null=False,unique=True)
@@ -306,6 +389,12 @@ class thg_credential_privates(mongoengine.Document):
         Index('index_thg_credential_privates_on_type_and_data', 'types', 'data'),
         Index('index_thg_credential_privates_on_type_and_data_sshkey','types')
     )"""
+    meta = {
+        'indexes': [{
+            'fields': ['types', 'data']
+        }]
+    }
+
 class thg_credential_publics(mongoengine.Document):
     #__tablename__="thg_credential_publics"
     id = mongoengine.IntField(null=False,unique=True)
@@ -315,6 +404,12 @@ class thg_credential_publics(mongoengine.Document):
     """meta = (
         Index('index_thg_credential_publics_on_username', 'username'),
     )"""
+    meta = {
+        'indexes': [{
+            'fields': ['username']
+        }]
+    }
+
 class thg_credential_realms(mongoengine.Document):
     #__tablename__="thg_credential_realms"
     id = mongoengine.IntField(null=False, unique=True)
@@ -323,12 +418,19 @@ class thg_credential_realms(mongoengine.Document):
     """meta = (
         Index('index_thg_credential_realms_on_key_and_value', 'key','value'),
     )"""
+    meta = {
+        'indexes': [{
+            'fields': ['key', 'value']
+        }]
+    }
+
 class mod_refs(mongoengine.Document):
     #__tablename__ = "mod_refs"
     #id = mongoengine.IntField(null=False, unique=True)
     module=mongoengine.StringField(unique=True,null=False)
     mtype=mongoengine.StringField(null=False)
     ref=mongoengine.StringField(null=False)
+
 class module_actions(mongoengine.Document):
     #__tablename__ = "module_actions"
     detail_id=mongoengine.IntField(null=False, unique=True)
@@ -337,13 +439,12 @@ class module_actions(mongoengine.Document):
         Index('index_module_actions_on_detail_id', 'detail_id'),
     )"""
     meta = {
-        'indexes': [
-            {
-                'name': 'index_module_actions_on_detail_id',
-                'fields': ['detail_id']
-            }
-        ]
+        'indexes': [{
+            'name': 'index_module_actions_on_detail_id',
+            'fields': ['detail_id']
+        }]
     }
+
 class module_archs(mongoengine.Document):
     #__tablename__= "module_archs"
     detail_id=mongoengine.IntField(null=False, unique=True)
@@ -352,13 +453,12 @@ class module_archs(mongoengine.Document):
         Index('index_module_archs_on_detail_id', 'detail_id'),
     )"""
     meta = {
-        'indexes': [
-            {
-                'name': 'index_module_archs_on_detail_id',
-                'fields': ['detail_id']
-            }
-        ]
+        'indexes': [{
+            'name': 'index_module_archs_on_detail_id',
+            'fields': ['detail_id']
+        }]
     }
+
 class module_authors(mongoengine.Document):
     #__tablename__ = "module_authors"
     detail_id=mongoengine.IntField(null=False, unique=True)
@@ -368,13 +468,12 @@ class module_authors(mongoengine.Document):
         Index('index_module_authors_on_detail_id', 'detail_id'),
     )"""
     meta = {
-        'indexes': [
-            {
-                'name': 'index_module_authors_on_detail_id',
-                'fields': ['detail_id']
-            }
-        ]
+        'indexes': [{
+            'name': 'index_module_authors_on_detail_id',
+            'fields': ['detail_id']
+        }]
     }
+
 class module_details(mongoengine.Document):
     #__tablename__="module_details"
     id=mongoengine.IntField(unique=True)
@@ -405,6 +504,12 @@ class module_details(mongoengine.Document):
             fields: ['detail_id']
         }
     }"""
+    meta = {
+        'indexes': [{
+            'fields': ['description', 'mtype', 'name', 'refname']
+        }]
+    }
+
 class module_mixins(mongoengine.Document):
     #__tablename__="module_mixins"
     detail_id=mongoengine.IntField(unique=True)
@@ -412,6 +517,13 @@ class module_mixins(mongoengine.Document):
     """meta = (
         Index('index_module_mixins_on_detail_id', 'detail_id'),
     )"""
+    meta = {
+        'indexes': [{
+            'name': 'index_module_mixins_on_detail_id',
+            'fields': ['detail_id']
+        }]
+    }
+
 class module_platforms(mongoengine.Document):
     #__tablename__="module_platforms"
     detail_id=mongoengine.IntField(unique=True)
@@ -419,6 +531,13 @@ class module_platforms(mongoengine.Document):
     """meta = (
         Index('index_module_platforms_on_detail_id', 'detail_id'),
     )"""
+    meta = {
+        'indexes': [{
+            'name': 'index_module_platforms_on_detail_id',
+            'fields': ['detail_id']
+        }]
+    }
+
 class module_refs(mongoengine.Document):
     #__tablename__="module_refs"
     detail_id=mongoengine.IntField(unique=True)
@@ -427,6 +546,12 @@ class module_refs(mongoengine.Document):
         Index('index_module_refs_on_detail_id', 'detail_id'),
         Index('index_module_refs_on_name','name'),
     )"""
+    meta = {
+        'indexes': [{
+            'fields': ['name', 'detail_id']
+        }]
+    }
+
 class module_runs(mongoengine.Document):
     #__tablename__="module_runs"
     id = mongoengine.IntField(unique=True,)
@@ -448,15 +573,26 @@ class module_runs(mongoengine.Document):
         Index('index_module_runs_on_session_id', 'session_id'),
         Index('index_module_runs_on_user_id','user_id'),
     )"""
+    meta = {
+        'indexes': [{
+            'fields': ['user_id', 'session_id']
+        }]
+    }
+
 class module_targets(mongoengine.Document):
     #__tablename__="module_targets"
-
     detail_id=mongoengine.IntField(null=False,unique=True)
     index=mongoengine.IntField(null=False)
     name=mongoengine.StringField(null=False)
     """meta = (
         Index('index_module_targets_on_detail_id', 'detail_id'),
     )"""
+    meta = {
+        'indexes': [{
+            'fields': ['detail_id']
+        }]
+    }
+
 class nexpose_consoles(mongoengine.Document):
     #__tablename__="nexpose_consoles"
     id= mongoengine.IntField(unique=True)
@@ -473,6 +609,7 @@ class nexpose_consoles(mongoengine.Document):
     name=mongoengine.StringField(null=False)
     created_at = mongoengine.DateTimeField(null=False)
     updated_at = mongoengine.DateTimeField(null=False)
+
 class notes(mongoengine.Document):
     #__tablename__ ="notes"
     id = mongoengine.IntField(unique=True)
@@ -490,6 +627,12 @@ class notes(mongoengine.Document):
         Index('index_notes_on_ntype', 'ntype'),
         Index('index_notes_on_vuln_id', 'vuln_id'),
     )"""
+    meta = {
+        'indexes': [{
+            'fields': ['ntype', 'vuln_id']
+        }]
+    }
+
 class payloads(mongoengine.Document):
     #__tablename__ ="payloads"
     id = mongoengine.IntField(unique=True)
@@ -508,6 +651,7 @@ class payloads(mongoengine.Document):
     workspace_id= mongoengine.IntField(null=False)
     created_at = mongoengine.DateTimeField(null=False)
     updated_at = mongoengine.DateTimeField(null=False)
+
 class profiles(mongoengine.Document):
     #__tablename__= "profiles"
     id = mongoengine.IntField( unique=True)
@@ -515,6 +659,7 @@ class profiles(mongoengine.Document):
     name=mongoengine.StringField(null=False)
     owner=mongoengine.StringField(null=False)
     settings =mongoengine.BinaryField()
+
 class refs(mongoengine.Document):
     #__tablename__ = "refs"
     id = mongoengine.IntField( unique=True)
@@ -525,6 +670,12 @@ class refs(mongoengine.Document):
     """meta = (
         Index('index_refs_on_name', 'name'),
     )"""
+    meta = {
+        'indexes': [{
+            'fields': ['name']
+        }]
+    }
+
 class report_templates(mongoengine.Document):
     #__tablename__="report_templates"
     workspace_id = mongoengine.IntField(unique=True,null=False)
@@ -533,6 +684,7 @@ class report_templates(mongoengine.Document):
     name= mongoengine.StringField(null=False)
     created_at = mongoengine.DateTimeField(null=False)
     updated_at = mongoengine.DateTimeField(null=False)
+
 class reports(mongoengine.Document):
     #__tablename__= "reports"
     workspace_id = mongoengine.IntField( unique=True, null=False)
@@ -542,14 +694,15 @@ class reports(mongoengine.Document):
     options=mongoengine.StringField(null=False)
     downloaded_at=mongoengine.StringField()
     task_id= mongoengine.IntField( unique=True, null=False)
+
 class routes(mongoengine.Document):
     #__tablename__ = "routes"
     session_id=mongoengine.StringField(null=False,unique=True)
     subnet=mongoengine.StringField(null=False)
     netmask=mongoengine.StringField(null=False)
+
 class services(mongoengine.Document):
     #__tablename__= "services"
-
     host_id=mongoengine.IntField( null=False,unique=True)
     port=mongoengine.StringField(null=False)
     proto=mongoengine.StringField(null=False)
@@ -563,6 +716,12 @@ class services(mongoengine.Document):
         Index('index_services_on_proto', 'name'),
         Index('index_services_on_state', 'state'),
     )"""
+    meta = {
+        'indexes': [{
+            'fields': ['name', 'host_id', 'port', 'proto', 'state']
+        }]
+    }
+
 class session_events(mongoengine.Document):
     #__tablename__ = "session_events"
     session_id =mongoengine.IntField(unique=True,null=True)
@@ -573,6 +732,7 @@ class session_events(mongoengine.Document):
     local_path =mongoengine.StringField(null=False)
     created_at = mongoengine.DateTimeField(null=False)
     updated_at = mongoengine.DateTimeField(null=False)
+
 class sessions(mongoengine.Document):
     #__tablename__ = "sessions"
     host_id=mongoengine.IntField(unique=True,null=True)
@@ -590,8 +750,13 @@ class sessions(mongoengine.Document):
     module_run_id= mongoengine.IntField(null=False,unique=True)
     created_at = mongoengine.DateTimeField(null=False)
     updated_at = mongoengine.DateTimeField(null=False)
-
     """meta = (Index('index_sessions_on_module_run_id','module_run_id'),)"""
+    meta = {
+        'indexes': [{
+            'fields': ['module_run_id']
+        }]
+    }
+
 class tags(mongoengine.Document):
     #__tablename__ = "tags"
     user_id= mongoengine.IntField(unique=True,null=False)
@@ -602,30 +767,35 @@ class tags(mongoengine.Document):
     critical= mongoengine.BinaryField(default=False,null=False)
     created_at = mongoengine.DateTimeField(null=False)
     updated_at = mongoengine.DateTimeField(null=False)
+
 class task_creds(mongoengine.Document):
     #__tablename__ = "task_creds"
     task_id= mongoengine.IntField(unique=True,null=False)
     cred_id= mongoengine.IntField(unique=True,null=False)
     created_at = mongoengine.DateTimeField(null=False)
     updated_at = mongoengine.DateTimeField(null=False)
+
 class task_hosts(mongoengine.Document):
     #__tablename__ ="task_hosts"
     task_id= mongoengine.IntField(unique=True,null=False)
     cred_id= mongoengine.IntField(unique=True,null=False)
     created_at = mongoengine.DateTimeField(null=False)
     updated_at = mongoengine.DateTimeField(null=False)
+
 class task_services(mongoengine.Document):
     #__tablename__ ="task_services"
     task_id= mongoengine.IntField(unique=True,null=False)
     cred_id= mongoengine.IntField(unique=True,null=False)
     created_at = mongoengine.DateTimeField(null=False)
     updated_at = mongoengine.DateTimeField(null=False)
+
 class task_sessions(mongoengine.Document):
     #__tablename__ ="task_sessions"
     task_id= mongoengine.IntField(unique=True,null=False)
     cred_id= mongoengine.IntField(unique=True,null=False)
     created_at = mongoengine.DateTimeField(null=False)
     updated_at = mongoengine.DateTimeField(null=False)
+
 class tasks(mongoengine.Document):
     #__tablename__ ="tasks"
     workspace_id = mongoengine.IntField(default=1,unique=True,null=False)
@@ -643,6 +813,7 @@ class tasks(mongoengine.Document):
     settings = mongoengine.BinaryField()
     created_at = mongoengine.DateTimeField(null=False)
     updated_at = mongoengine.DateTimeField(null=False)
+
 class users(mongoengine.Document):
     #__tablename__ ="users"
     id = mongoengine.IntField(unique=True)
@@ -658,6 +829,7 @@ class users(mongoengine.Document):
     admin = mongoengine.BooleanField(default=True,null=False)
     created_at = mongoengine.DateTimeField(null=False)
     updated_at = mongoengine.DateTimeField(null=False)
+
 class vuln_attempts(mongoengine.Document):
     #__tablename__ ="vuln_attempts"
     vuln_id =mongoengine.IntField(unique=True)
@@ -671,6 +843,7 @@ class vuln_attempts(mongoengine.Document):
     fail_detail =mongoengine.StringField(null=False)
     created_at = mongoengine.DateTimeField(null=False)
     updated_at = mongoengine.DateTimeField(null=False)
+
 class vuln_details(mongoengine.Document):
     #__tablename__ ="vuln_details"
     vuln_id=mongoengine.IntField(null=False,unique=True)
@@ -697,6 +870,7 @@ class vuln_details(mongoengine.Document):
     nx_pci_compliance_status=mongoengine.StringField(null=False)
     created_at = mongoengine.DateTimeField(null=False)
     updated_at = mongoengine.DateTimeField(null=False)
+
 class vulns(mongoengine.Document):
     #__tablename__="vulns"
     host_id= mongoengine.IntField(null=False)
@@ -711,12 +885,19 @@ class vulns(mongoengine.Document):
     created_at = mongoengine.DateTimeField(null=False)
     updated_at = mongoengine.DateTimeField(null=False)
     """meta = (Index('index_vulns_on_name','name'),Index('index_vulns_on_origin_id','origin_id'))"""
+    meta = {
+        'indexes': [{
+            'fields': ['name', 'origin_id']
+        }]
+    }
+
 class vulns_refs(mongoengine.Document):
     #__tablename__ = "vulns_refs"
     ref_id =mongoengine.IntField(null=False)
     vuln_id =mongoengine.IntField(null=False)
     created_at = mongoengine.DateTimeField(null=False)
     updated_at = mongoengine.DateTimeField(null=False)
+
 class web_forms(mongoengine.Document):
     #__tablename__ ="web_forms"
     web_site_id =mongoengine.IntField(null=False)
@@ -727,9 +908,14 @@ class web_forms(mongoengine.Document):
     created_at = mongoengine.DateTimeField(null=False)
     updated_at = mongoengine.DateTimeField(null=False)
     """meta = (Index('index_web_forms_on_path','path'),)"""
+    meta = {
+        'indexes': [{
+            'fields': ['path']
+        }]
+    }
+
 class web_pages(mongoengine.Document):
     #__tablename__="web_pages"
-
     web_site_id=mongoengine.IntField(unique=True,null=False)
     path=mongoengine.StringField(null=False)
     query=mongoengine.StringField(null=False)
@@ -745,9 +931,14 @@ class web_pages(mongoengine.Document):
     created_at = mongoengine.DateTimeField(null=False)
     updated_at = mongoengine.DateTimeField(null=False)
     """meta = (Index('index_web_pages_on_path', 'path'),Index('index_web_pages_on_query','query'))"""
+    meta = {
+        'indexes': [{
+            'fields': ['path', 'query']
+        }]
+    }
+
 class web_sites(mongoengine.Document):
     #__tablename__="web_sites"
-
     service_id=mongoengine.IntField(unique=True,null=False)
     vhost=mongoengine.StringField(null=False)
     comments=mongoengine.StringField(null=False)
@@ -755,6 +946,12 @@ class web_sites(mongoengine.Document):
     created_at = mongoengine.DateTimeField(null=False)
     updated_at = mongoengine.DateTimeField(null=False)
     """meta = (Index('index_web_sites_on_comments', 'comments'),Index('index_web_sites_on_options','options'),Index('index_web_sites_on_vhost','vhost'))"""
+    meta = {
+        'indexes': [{
+            'fields': ['comments', 'options', 'vhost']
+        }]
+    }
+
 class web_vulns(mongoengine.Document):
     #__tablename__= "web_vulns"
     web_site_id = mongoengine.IntField(unique=True,null=False)
@@ -778,6 +975,12 @@ class web_vulns(mongoengine.Document):
     """meta= (Index('index_web_vulns_on_method','method'),
                       Index('index_web_vulns_on_name','name'),
                       Index('index_web_vulns_on_path','path'),)"""
+    meta = {
+        'indexes': [{
+            'fields': ['method', 'name', 'path']
+        }]
+    }
+
 class wmap_requests(mongoengine.Document):
     #__tablename__="wmap_requests"
     host=mongoengine.StringField(null=False)
@@ -794,6 +997,7 @@ class wmap_requests(mongoengine.Document):
     response=mongoengine.StringField(null=False)
     created_at = mongoengine.DateTimeField(null=False)
     updated_at = mongoengine.DateTimeField(null=False)
+
 class wmap_targets(mongoengine.Document):
     #__tablename__ = "wmap_targets"
     host=mongoengine.StringField(null=False)
@@ -803,10 +1007,12 @@ class wmap_targets(mongoengine.Document):
     selected=mongoengine.IntField(null=False)
     created_at = mongoengine.DateTimeField(null=False)
     updated_at = mongoengine.DateTimeField(null=False)
+
 class workspace_members(mongoengine.Document):
     #__tablename__ = "workspace_members"
     workspace_id=mongoengine.IntField(null=False)
     user_id=mongoengine.IntField(null=False)
+
 class workspaces(mongoengine.Document):
     #__tablename__="workspaces"
     name=mongoengine.StringField(null=False)
