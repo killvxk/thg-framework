@@ -627,7 +627,7 @@ class THGBASECONSOLE(Cmd, Database):
     def thgcmd_db_rebuild(self, args):
         """Rebuild database for search"""
         self.db_rebuild()
-        self.poutput("Database rebuild done.", color=Fore.GREEN)
+        self.poutput(style("Database rebuild done.", fg='GREEN'))
 
     @with_category(CMD_DATABASE)
     def thgcmd_reload(self, args):
@@ -990,7 +990,7 @@ class THGBASECONSOLE(Cmd, Database):
     def _print_modules(self, modules, fields, title):
         self.poutput(style(title+ "\n", fg="cyan"))
         if(modules != [] and fields != []):
-            self.poutput(style(tabulate(modules, headers=(fields), tablefmt='orgtbl') + '\n', fg="Green"))
+            self.poutput(style(tabulate(modules, headers=(fields), tablefmt='grid') + '\n', fg="Green"))
         else:
             self.poutput(style("Module not found!", fg="Green"))
 
