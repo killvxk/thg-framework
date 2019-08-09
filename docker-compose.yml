@@ -1,0 +1,21 @@
+version: '1'#version thg
+services:
+  ms:
+    image: #imagem thg
+    environment:
+      DATABASE_URL: #database
+    links:
+      - db
+    ports:
+      - 4444:4444
+    volumes:
+      - #
+
+  db:
+    image: postgres:10-alpine
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+volumes:
+  pg_data:
+    driver: local

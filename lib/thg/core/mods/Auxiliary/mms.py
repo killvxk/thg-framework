@@ -2,7 +2,7 @@ from lib.thg.base.BaseOptions import BaseOption
 from lib.thg.base.BaseOptions import BaseOptions
 from lib.thg.base.BaseResult import BaseResult
 
-class BaseAuxiliary:
+class BaseAuxiliary_Mms:
 
   def __init__(self):
     self.multi_target = False
@@ -30,11 +30,7 @@ class BaseAuxiliary:
       info[field_name] = getattr(self, field_name)
     return info
 
-
-
-
-
-  def register_crawler(self, timeout_value=5, threads_value=1):
+  def register_Mms(self, timeout_value=5, threads_value=1):
     self.target_type = "http"
     BaseOption(name="RHOST", required=True, description="ip to test"),
 

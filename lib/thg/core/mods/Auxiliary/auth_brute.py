@@ -30,7 +30,7 @@ class BaseAuxiliary_Brute:
             info[field_name] = getattr(self, field_name)
         return info
 
-    def register_tcp_target(self, port_value=None, timeout_value=5, threads_value=1):
+    def register_tcp_target_brute(self, port_value=None, timeout_value=5, threads_value=1):
       self.target_type = "tcp"
       self.register_options([
         BaseOption(name="HOST", required=True, description="The IP address to be tested"),
@@ -45,42 +45,25 @@ class BaseAuxiliary_Brute:
         BaseOption(name='PASSWORD', required=False, description='A specific password to authenticate with'),
         BaseOption(name='USER_FILE', required=False, description="File containing usernames, one per line"),
         BaseOption(name='PASS_FILE', required=False, description="File containing passwords, one per line"),
-        BaseOption(name='USERPASS_FILE', required=False,
-                   description="File containing users and passwords separated by space, one pair per line"),
+        BaseOption(name='USERPASS_FILE', required=False, description="File containing users and passwords separated by space, one pair per line"),
         BaseOption(name='BRUTEFORCE_SPEED', required=True, description="How fast to bruteforce, from 0 to 5"),
         BaseOption(name='VERBOSE', required=True, description="Whether to print output for all attempts"),
         BaseOption(name='BLANK_PASSWORDS', required=False, description="Try blank passwords for all users"),
         BaseOption(name='USER_AS_PASS', required=False, description="Try the username as the password for all users"),
-        BaseOption(name='DB_ALL_CREDS', required=False,
-                   description="Try each user/password couple stored in the current database"),
-        BaseOption(name='DB_ALL_USERS', required=False,
-                   description="Add all users in the current database to the list"),
-        BaseOption(name='DB_ALL_PASS', required=False,
-                   description="Add all passwords in the current database to the list"),
-        BaseOption(name='STOP_ON_SUCCESS', required=True,
-                   description="Stop guessing when a credential works for a host"),
-        BaseOption(name='REMOVE_USER_FILE', required=True,
-                   description="Automatically delete the USER_FILE on module completion", value=False),
-        BaseOption(name='REMOVE_PASS_FILE', required=True,
-                   description="Automatically delete the PASS_FILE on module completion", value=False),
-        BaseOption(name='REMOVE_USERPASS_FILE', required=True,
-                   description="Automatically delete the USERPASS_FILE on module completion", value=False),
-        BaseOption(name='PASSWORD_SPRAY', required=True,
-                   description="Reverse the credential pairing order. For each password, attempt every possible user.",
-                   value=False),
-        BaseOption(name='TRANSITION_DELAY', required=False,
-                   description="Amount of time (in minutes) to delay before transitioning to the next user in the array (or password when PASSWORD_SPRAY=true)",
-                   value=0),
-        BaseOption(name='MaxGuessesPerService', required=False,
-                   description="Maximum number of credentials to try per service instance. If set to zero or a non-number, this option will not be used.",
-                   value=0),
-        BaseOption(name='MaxMinutesPerService', required=False,
-                   description="Maximum time in minutes to bruteforce the service instance. If set to zero or a non-number, this option will not be used.",
-                   value=0),
-        BaseOption(name='MaxGuessesPerUser', required=False,
-                   description="Maximum guesses for a particular username for the service instance.Note that users are considered unique among different services")
+        BaseOption(name='DB_ALL_CREDS', required=False,description="Try each user/password couple stored in the current database"),
+        BaseOption(name='DB_ALL_USERS', required=False,description="Add all users in the current database to the list"),
+        BaseOption(name='DB_ALL_PASS', required=False,description="Add all passwords in the current database to the list"),
+        BaseOption(name='STOP_ON_SUCCESS', required=True,description="Stop guessing when a credential works for a host"),
+        BaseOption(name='REMOVE_USER_FILE', required=True,description="Automatically delete the USER_FILE on module completion", value=False),
+        BaseOption(name='REMOVE_PASS_FILE', required=True,description="Automatically delete the PASS_FILE on module completion", value=False),
+        BaseOption(name='REMOVE_USERPASS_FILE', required=True,description="Automatically delete the USERPASS_FILE on module completion", value=False),
+        BaseOption(name='PASSWORD_SPRAY', required=True,description="Reverse the credential pairing order. For each password, attempt every possible user.",value=False),
+        BaseOption(name='TRANSITION_DELAY', required=False,description="Amount of time (in minutes) to delay before transitioning to the next user in the array (or password when PASSWORD_SPRAY=true)",value=0),
+        BaseOption(name='MaxGuessesPerService', required=False,description="Maximum number of credentials to try per service instance. If set to zero or a non-number, this option will not be used.",value=0),
+        BaseOption(name='MaxMinutesPerService', required=False,description="Maximum time in minutes to bruteforce the service instance. If set to zero or a non-number, this option will not be used.",value=0),
+        BaseOption(name='MaxGuessesPerUser', required=False,description="Maximum guesses for a particular username for the service instance.Note that users are considered unique among different services")
       ])
-    def register_http_target(self, timeout_value=5, threads_value=1):
+    def register_http_target_brute(self, timeout_value=5, threads_value=1):
       self.target_type = "http"
       self.register_options([
         BaseOption(name="URL", required=True, description="The url to be tested"),

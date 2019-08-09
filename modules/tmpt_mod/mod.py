@@ -1,7 +1,7 @@
 import socket
-from lib.thg.core.mods.Auxiliary.auth_brute import BaseAuxiliary_Brute
+from lib.thg.core.mods.Auxiliary.Auxiliary import BaseAuxiliary_Crawler
 
-class Modules(BaseAuxiliary_Brute):
+class Modules(BaseAuxiliary_Crawler):
     def __init__(self):
         super(Modules, self).__init__()
         self.thg_update_info({
@@ -16,7 +16,7 @@ class Modules(BaseAuxiliary_Brute):
             "service_version": "versao do servico",
         })
         # Como o modulo so preciasa do thg, entao。
-        self.register_tcp_target(port_value=6379)
+        self.register_crawler()
 
     def check(self):
         #Esses três parâmetros são registrados pelo método de destino self.register tcp, que pode ser chamado diretamente aqui.

@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 echo "clear pyc"
 find . -name "*.pyc" -exec rm -rfv {} \;
 echo ".idea/*"

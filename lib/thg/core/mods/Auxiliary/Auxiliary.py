@@ -1,16 +1,10 @@
-'''
-    name = None #nome do auxiliar
-    description = None #descricao do auxiliar
-    author = [] # nome do autor
-    references = []#referenia do exploit
-    disclosure_date = None #data de divulgacao
-    service_name = None #nome do servico
-    service_version = None #versao do servico
-    dbinfo = ['name', 'description', 'author', 'references', 'disclosure_date', 'service_name', 'service_version']#info database
-    multi_target = False#vvarios alvos
-    targets = []#alvo
-    target_type = None#tipo de alvo
-    options = None #opcoes
-    results = None #resultados
-
-'''
+from .auth_brute import BaseAuxiliary_Brute
+from .crawler import BaseAuxiliary_Crawler
+from .ntp import BaseAuxiliary_Ntp
+from .pii import BaseAuxiliary_Pii
+from .redis import BaseAuxiliary_Redis
+from .rservices import BaseAuxiliary_Rservices
+from .scanner import BaseAuxiliary_Scanner
+from .sms import BaseAuxiliary_Sms
+from .timed import BaseAuxiliary_Timed
+from .udp_scanner import BaseAuxiliary_Udp_Scanner
