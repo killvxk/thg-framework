@@ -3,7 +3,7 @@ import mongoengine, dotenv, os, json
 from lib.thg.core.Database import Connection
 from lib.thg.core.Database import Models
 from lib.setup import setup
-from lib.DBGen.module import *
+import lib.DBGen.module
 #from fnmatch import fnmatchcase
 #from utils.files import ROOT_PATH
 #from utils.module import name_convert
@@ -18,7 +18,6 @@ class Database:
                          'check', 'rank']
 
     def __init__(self):
-        print(dotenv_file)
         self.connection = Connection.connect_db()
         #self.insert_module(self, {'module': "Module4",'mtype': "payload", 'ref': 'sdasdasdasdas'})
 
@@ -59,7 +58,7 @@ class Database:
         return Models.mod_refs.objects.all()"""
 
     def load_modules():
-        return self.get_local_modules()
+        return DBGen.module.get_local_modules()
 
     def search_modules(self, search):
         #name = search_conditions.get('name', '')
@@ -68,9 +67,9 @@ class Database:
         #self.validate_search(search['module_name'])
         modules = []
         query = json.loads(Models.mod_refs.objects(module__icontains=search).to_json())
-        q2 = json.dumps(load_modules())
+        #q2 = load_modules()
         #q2 = json.loads(Models.module_details.objects().to_json())
-        print(q2)
+        print(load_modules())
         #must have [ module_mixins, module_name, module_type, module_info,
         #           module_archs, module_authors, module_details, module_class ]
         if(query == []):

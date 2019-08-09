@@ -1,18 +1,14 @@
 from mongoengine import connect
-from lib.setup.setup import GenerateDotEnv, HashGen
+from lib.setup.setup import *
 from dotenv import load_dotenv, find_dotenv, get_key
 
 dotenv_file = find_dotenv()
 load_dotenv(dotenv_file)
-try:
-    db_name = get_key(dotenv_file, "MONGODB_DATABASE")
-    db_user = get_key(dotenv_file, "MONGODB_USERNAME")
-    db_pass = get_key(dotenv_file, "MONGODB_PASSWORD")
-except:
-    GenerateDotEnv()
-    db_name = dotenv.set_key(dotenv_file, "MONGODB_DATABASE", "thgdb")
-    db_user = dotenv.set_key(dotenv_file, "MONGODB_USERNAME", "thguser")
-    db_pass = HashGen()
+if( get_key(dotenv_file, "MONGODB_DATABASE") == None or get_key(dotenv_file, "MONGODB_USERNAME") == None):
+    check()
+db_name = get_key(dotenv_file, "MONGODB_DATABASE")
+db_user = get_key(dotenv_file, "MONGODB_USERNAME")
+db_pass = get_key(dotenv_file, "MONGODB_PASSWORD")
 
 def connect_db():
     db = connect(

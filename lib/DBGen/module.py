@@ -1,9 +1,10 @@
 import os
-from utils.files import ROOT_PATH
 from fnmatch import fnmatchcase
 from importlib import import_module
 from ipaddress import ip_address
 from urllib.parse import urlparse
+from pathlib import Path
+ROOT_PATH = Path.resolve(Path(__file__).parent.parent.parent)
 
 
 def name_convert(name):

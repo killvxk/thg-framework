@@ -5,7 +5,6 @@ from lib.thg.thgcmd import *
 from lib.thg.thgcmd.ansi import style
 from lib.thg.thgcmd.utils import  basic_complete
 from art import text2art
-from utils import module
 from pathlib import Path
 from lib.thg.thgcmd.ansi import style
 from tabulate import tabulate

@@ -75,13 +75,7 @@ def GenerateDotEnv():
     db_name = dotenv.set_key(dotenv_file, "MONGODB_DATABASE", "thgdb")
     db_user = dotenv.set_key(dotenv_file, "MONGODB_USERNAME", "thguser")
     db_pass = HashGen()
-
-try:
-    db_name = get_key(dotenv_file, "MONGODB_DATABASE")
-    db_user = get_key(dotenv_file, "MONGODB_USERNAME")
-    db_pass = get_key(dotenv_file, "MONGODB_PASSWORD")
-except:
-    GenerateDotEnv()
+    return [db_name, db_user, db_pass]
 
 '''
 Instala os pacotes para o debian
@@ -200,7 +194,10 @@ def remove_container(container):
 def create_container():
     client = docker.from_env()
     print("Creating container...")
-    GenerateDotEnv()
+    db = GenerateDotEnv()
+    db_name = db[0]
+    db_user = db[1]
+    db_pass = db[2]
     client.containers.run("bitnami/mongodb", name="thgdb-mongodb", environment={
             "MONGODB_DATABASE": db_name,
             "MONGODB_USERNAME": db_user,
