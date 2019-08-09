@@ -1,0 +1,36 @@
+Copyright (C) 2019-2020, DARKCODE0X00, Inc.
+Todos os direitos reservados.
+
+Redistribuição e utilização nas formas fonte e binária, com ou sem modificação,
+são permitidas desde que as seguintes condições sejam atendidas:
+
+    * As redistribuições do código fonte devem manter o aviso de copyright acima,
+    esta lista de condições e a seguinte renúncia.
+
+    * As redistribuições em formato binário devem reproduzir o aviso de copyright acima,
+    esta lista de condições e a seguinte exclusão de responsabilidade na documentação
+    e / ou outros materiais fornecidos com a distribuição.
+
+    * Nem o nome de DARKCODE0X00, Inc. nem os nomes de seus colaboradores
+    pode ser usado para endossar ou promover produtos derivados deste software
+    sem permissão prévia específica por escrito.
+
+ESTE SOFTWARE É FORNECIDO PELOS DETENTORES DE DIREITOS AUTORAIS E COLABORADORES "COMO ESTÁ" E
+QUAISQUER GARANTIAS EXPRESSAS OU IMPLÍCITAS, INCLUINDO, MAS NÃO SE LIMITANDO, À
+GARANTIAS DE COMERCIALIZAÇÃO E ADEQUAÇÃO A UM DETERMINADO FIM SÃO
+RENUNCIADA EM NENHUM CASO, O PROPRIETÁRIO DOS DIREITOS DE AUTOR OU OS COLABORADORES SERÃO RESPONSÁVEIS POR
+QUAISQUER DANOS DIRETOS, INDIRETOS, INCIDENTAIS, ESPECIAIS, EXEMPLARES OU CONSEQÜENCIAIS
+(INCLUINDO, MAS NÃO LIMITADO A, AQUISIÇÃO DE BENS OU SERVIÇOS SUBSTITUTOS;
+PERDA DE USO, DADOS OU LUCROS; OU INTERRUPÇÃO DE NEGÓCIOS), PORÉM, CAUSADO E
+QUALQUER TEORIA DE RESPONSABILIDADE, SEJA EM CONTRATO, RESPONSABILIDADE ESTRITA OU DELITO
+(INCLUINDO NEGLIGÊNCIA OU DE OUTRA FORMA) DECORRENTE DE QUALQUER FORMA DO USO DESTE
+SOFTWARE, MESMO QUE AVISADO DA POSSIBILIDADE DE TAIS DANOS.
+
+================================================== ==============================
+
+O thg Framework é fornecido sob a licença BSD de 3 cláusulas acima.
+
+Os direitos autorais deste pacote são de propriedade de DARKCODE0X00, Inc.
+
+Esta licença não se aplica a vários componentes dentro do THG
+Árvore de fontes do Framework. Para mais detalhes, consulte o arquivo LICENSE.

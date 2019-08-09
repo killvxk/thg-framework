@@ -1,0 +1,14 @@
+version: '1'#versao
+
+services:
+  ms:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        BUNDLER_ARGS: --jobs=10
+    image: #thgdev
+    environment:
+      DATABASE_URL: #database
+    volumes:
+      - #

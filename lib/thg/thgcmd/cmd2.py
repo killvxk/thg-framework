@@ -2970,12 +2970,11 @@ class Cmd(cmd.Cmd):
     set_parser = Cmd2ArgumentParser(description=set_description)
     set_parser.add_argument('-a', '--all', action='store_true', help='display read-only settings as well')
     set_parser.add_argument('-l', '--long', action='store_true', help='describe function of parameter')
-    set_parser.add_argument('param', nargs=argparse.OPTIONAL, help='parameter to set or view',
-                            choices_method=_get_settable_completion_items, descriptive_header='Description')
+    set_parser.add_argument('param', nargs=argparse.OPTIONAL, help='parameter to set or view',choices_method=_get_settable_completion_items, descriptive_header='Description')
     set_parser.add_argument('value', nargs=argparse.OPTIONAL, help='the new value for settable')
 
     @with_argparser(set_parser)
-    def thgcmd_set(self, args: argparse.Namespace) -> None:
+    def thgcmd_setcmd(self, args: argparse.Namespace) -> None:
         """Set a settable parameter or show current settings of parameters"""
 
         # Check if param was passed in

@@ -2,7 +2,7 @@ from lib.thg.base.BaseOptions import BaseOption
 from lib.thg.base.BaseOptions import BaseOptions
 from lib.thg.base.BaseResult import BaseResult
 
-class BaseAuxiliary:
+class BaseAuxiliary_Mqtt:
 
   def __init__(self):
     self.multi_target = False
@@ -34,14 +34,13 @@ class BaseAuxiliary:
 
 
 
-  def register_crawler(self, timeout_value=5, threads_value=1):
+  def register_Mqtt(self, timeout_value=5, threads_value=1):
     self.target_type = "http"
-    BaseOption(name="RHOST", required=True, description="ip to test"),
 
     self.register_options([
         #Opt::RPORT(Rex::Proto::MQTT::DEFAULT_PORT)
-        BaseOption(name='CLIENT_ID', [false, 'The client ID to send if necessary for bypassing clientid_prefixes']),
-        BaseOption(name='READ_TIMEOUT', [true, 'Seconds to wait while reading MQTT responses', 5])
+        BaseOption(name='CLIENT_ID', required=False, description='The client ID to send if necessary for bypassing clientid_prefixes'),
+        BaseOption(name='READ_TIMEOUT', required=False, description='Seconds to wait while reading MQTT responses', value=5)
         #register_autofilter_ports([Rex::Proto::MQTT::DEFAULT_PORT, Rex::Proto::MQTT::DEFAULT_SSL_PORT])
     ])
 
