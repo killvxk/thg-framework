@@ -272,7 +272,7 @@ class THGBASECONSOLE(Cmd, Database):
                 modules = search[0]
                 fields = search[1]
 
-            self._print_modules(modules, fields, 'Search results for : ' + search_query )
+            self._print_modules(modules, fields, 'Search results for : ' + Fore.BLUE + search_query )
             #self._print_item("search mod => module_name, description, author, disclosure_date, service_name, service_version, check")
             #self._print_item("The search is only retrieved from the database")
             #self._print_item("If you add/delete some new modules, please execute `db_rebuild` first\n\n")
@@ -990,9 +990,9 @@ class THGBASECONSOLE(Cmd, Database):
     def _print_modules(self, modules, fields, title):
         self.poutput(style(title+ "\n", fg="cyan"))
         if(modules != [] and fields != []):
-            self.poutput(style(tabulate(modules, headers=(fields), tablefmt='grid') + '\n', fg="Green"))
+            self.poutput(style(tabulate(modules, headers=(fields), tablefmt='fancy_grid') + '\n', fg="Green"))
         else:
-            self.poutput(style("Module not found!", fg="Green"))
+            self.poutput(style("No modules found!\n", fg="Green"))
 
     def _print_item(self, message, color=Fore.GREEN):
         self.poutput("{style}[+]{style_end} {message}".format(

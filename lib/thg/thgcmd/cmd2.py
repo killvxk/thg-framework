@@ -2975,7 +2975,7 @@ class Cmd(cmd.Cmd):
     set_parser.add_argument('value', nargs=argparse.OPTIONAL, help='the new value for settable')
 
     @with_argparser(set_parser)
-    def thgcmd_set(self, args: argparse.Namespace) -> None:
+    def thgcmd_setcmd(self, args: argparse.Namespace) -> None:
         """Set a settable parameter or show current settings of parameters"""
 
         # Check if param was passed in

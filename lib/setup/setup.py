@@ -2,8 +2,19 @@ import sys, distro, string, random, hashlib
 import dotenv, base64
 from os import system
 from colorama import Fore
-dotenv_file = dotenv.find_dotenv()
-dotenv.load_dotenv(dotenv_file)
+from pathlib import Path
+
+ROOT_PATH = Path.resolve(Path(__file__).parent.parent.parent)
+dotenv_path = Path(str(ROOT_PATH) + "/.env")
+if dotenv_path.exists() == False:
+    Path(str(ROOT_PATH) + "/.env").touch()
+
+try:
+    dotenv_file = dotenv.find_dotenv()
+    dotenv.load_dotenv(dotenv_file)
+except e:
+    print("Error occurred loading .env file: ")
+    print("Error detail: \n {}".format(e))
 
 #### verificacao da python-pip
 try:
@@ -49,6 +60,28 @@ except ImportError:
           print("instalacao manual do python-pacman\nlink:https://pypi.org/project/python-pacman/")
 
 client = docker.from_env()
+
+def HashGen():
+    STAGING_KEY = "RANDOM"
+    set_chars = string.ascii_letters + string.digits + string.punctuation
+    STAGING_KEY = ''.join([ random.SystemRandom().choice( set_chars) for _ in range( 128) ])
+    hash = hashlib.md5(STAGING_KEY.encode("UTF-8")).hexdigest()
+    b64 = base64.b64encode(hash.encode('UTF-8'))
+    b64str = b64.decode("UTF-8")
+    dotenv.set_key(dotenv_file,"MONGODB_PASSWORD", b64str)
+    return b64str
+
+def GenerateDotEnv():
+    db_name = dotenv.set_key(dotenv_file, "MONGODB_DATABASE", "thgdb")
+    db_user = dotenv.set_key(dotenv_file, "MONGODB_USERNAME", "thguser")
+    db_pass = HashGen()
+
+try:
+    db_name = get_key(dotenv_file, "MONGODB_DATABASE")
+    db_user = get_key(dotenv_file, "MONGODB_USERNAME")
+    db_pass = get_key(dotenv_file, "MONGODB_PASSWORD")
+except:
+    GenerateDotEnv()
 
 '''
 Instala os pacotes para o debian
@@ -167,24 +200,13 @@ def remove_container(container):
 def create_container():
     client = docker.from_env()
     print("Creating container...")
-    db_name = dotenv.get_key(dotenv_file, "MONGODB_DATABASE")
-    db_user = dotenv.get_key(dotenv_file, "MONGODB_USERNAME")
-    db_pass = HashGen()
+    GenerateDotEnv()
     client.containers.run("bitnami/mongodb", name="thgdb-mongodb", environment={
             "MONGODB_DATABASE": db_name,
             "MONGODB_USERNAME": db_user,
             "MONGODB_PASSWORD": db_pass
             }, ports={'27017/tcp': 27017}, detach=True)
 
-def HashGen():
-    STAGING_KEY = "RANDOM"
-    set_chars = string.ascii_letters + string.digits + string.punctuation
-    STAGING_KEY = ''.join([ random.SystemRandom().choice( set_chars) for _ in range( 128) ])
-    hash = hashlib.md5(STAGING_KEY.encode("UTF-8")).hexdigest()
-    b64 = base64.b64encode(hash.encode('UTF-8'))
-    b64str = b64.decode("UTF-8")
-    dotenv.set_key(dotenv_file,"MONGODB_PASSWORD", b64str)
-    return b64str
 
 '''
 Verifica a distro e configura o banco de dados
