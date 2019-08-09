@@ -72,7 +72,3 @@ class BaseAuxiliary_Crawler:
 
         missing_options = filter(is_missing, self.options.get_options())
         return list(missing_options)
-
-
-
-

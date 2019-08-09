@@ -1,9 +1,8 @@
 #conexao com o banco de dados
 import mongoengine, dotenv, os, json
-from lib.thg.core.Database import Connection
+from lib.thg.core.Database import Connection, DBGen
 from lib.thg.core.Database import Models
 from lib.setup import setup
-import lib.DBGen.module
 #from fnmatch import fnmatchcase
 #from utils.files import ROOT_PATH
 #from utils.module import name_convert
@@ -32,6 +31,8 @@ class Database:
     def db_rebuild(self):
         print("Rebuilding Database..")
         setup.check()
+        mongoengine.disconnect(alias="default")
+        self.connection = Connection.connect_db()
         """for directory_name, directories, filenames in os.walk('modules/'):
             for filename in filenames:
                 if filename not in ['__init__.py']\
@@ -69,7 +70,7 @@ class Database:
         query = json.loads(Models.mod_refs.objects(module__icontains=search).to_json())
         #q2 = load_modules()
         #q2 = json.loads(Models.module_details.objects().to_json())
-        print(load_modules())
+        #print(type(q2))
         #must have [ module_mixins, module_name, module_type, module_info,
         #           module_archs, module_authors, module_details, module_class ]
         if(query == []):

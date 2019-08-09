@@ -246,23 +246,14 @@ class THGBASECONSOLE(Cmd, Database):
         search_args = args.split(" ")
         if len(search_args) < 2:
             print("You need to specify the type of search and the name.")
+            print("Usage: search 'type' 'module_name'")
+            print("Ex.: search auxiliary module_name")
             return
         search_type = search_args[0]
         search_type = search_type.lower()
         search_query = search_args[1]
         db_conditions = {}
         if search_type == "auxiliary":
-            """for condition in search_query:
-                cd = condition
-                if len(cd) is 1:
-                    [module_name] = cd
-                    db_conditions['module_name'] = module_name
-                else:
-                    [field, value] = cd
-                    if field in self.searchable_fields:
-                        db_conditions[field] = value
-                print(cd)"""
-
             search = self.search_modules(search_query)
             if(search == []):
                 modules = search

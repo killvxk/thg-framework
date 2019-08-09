@@ -5,10 +5,10 @@ from colorama import Fore
 from pathlib import Path
 from lib.thg.rootpath import ROOT_PATH
 
+### Verifica o arquivo  .env
 dotenv_path = Path(str(ROOT_PATH) + "/.env")
 if dotenv_path.exists() == False:
     Path(str(ROOT_PATH) + "/.env").touch()
-
 try:
     dotenv_file = dotenv.find_dotenv()
     dotenv.load_dotenv(dotenv_file)
@@ -30,6 +30,7 @@ except ImportError:
        print("instalar manual o pip... thg finalizado")
        exit(1)
 
+### instala o docker
 try:
     import docker
 except ImportError:
@@ -43,6 +44,7 @@ except ImportError:
        print("instalar manual o pip... thg finalizado")
        exit(1)
 
+### instala o apt
 try:
     import apt
 except ImportError:
@@ -59,8 +61,10 @@ except ImportError:
        except ImportError:
           print("instalacao manual do python-pacman\nlink:https://pypi.org/project/python-pacman/")
 
+### variavel global para usar o docker
 client = docker.from_env()
 
+### Gera o hash que será usado como senha no db
 def HashGen():
     STAGING_KEY = "RANDOM"
     set_chars = string.ascii_letters + string.digits + string.punctuation
@@ -71,6 +75,7 @@ def HashGen():
     dotenv.set_key(dotenv_file,"MONGODB_PASSWORD", b64str)
     return b64str
 
+#configura o arquivo .env
 def GenerateDotEnv():
     db_name = dotenv.set_key(dotenv_file, "MONGODB_DATABASE", "thgdb")
     db_user = dotenv.set_key(dotenv_file, "MONGODB_USERNAME", "thguser")
@@ -176,14 +181,14 @@ def conf_db():
     if img != None:
         if container != None:
             print("Database already exist!")
-            #container.start()
             remove_container(container)
-            create_container()
+            create_container().start()
             print("Database container recreated.")
         else:
-            create_container()
+            create_container().start()
             print("Database container created.")
 
+### remove o docker container
 def remove_container(container):
     client = docker.from_env()
     container.stop()
@@ -191,18 +196,20 @@ def remove_container(container):
     container.remove()
     print("Database container removed.")
 
+### cria o docker container
 def create_container():
     client = docker.from_env()
     print("Creating container...")
-    db = GenerateDotEnv()
-    db_name = db[0]
-    db_user = db[1]
-    db_pass = db[2]
-    client.containers.run("bitnami/mongodb", name="thgdb-mongodb", environment={
+    GenerateDotEnv()
+    db_name = dotenv.get_key(dotenv_file, "MONGODB_DATABASE")
+    db_user = dotenv.get_key(dotenv_file, "MONGODB_USERNAME")
+    db_pass = dotenv.get_key(dotenv_file, "MONGODB_PASSWORD")
+    container = client.containers.run("bitnami/mongodb", name="thgdb-mongodb", environment={
             "MONGODB_DATABASE": db_name,
             "MONGODB_USERNAME": db_user,
             "MONGODB_PASSWORD": db_pass
             }, ports={'27017/tcp': 27017}, detach=True)
+    return container
 
 
 '''

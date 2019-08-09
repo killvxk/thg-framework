@@ -18,6 +18,9 @@ class Modules(BaseAuxiliary_Crawler):
         # Como o modulo so preciasa do thg, entao。
         self.register_crawler()
 
+    def info(self):
+        return self.get_info()
+
     def check(self):
         #Esses três parâmetros são registrados pelo método de destino self.register tcp, que pode ser chamado diretamente aqui.
         host = self.options.get_option("HOST")
