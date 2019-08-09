@@ -1,16 +1,20 @@
 from mongoengine import connect
 from lib.setup.setup import *
-from dotenv import load_dotenv, find_dotenv, get_key
+from dotenv import load_dotenv, find_dotenv, get_key, dotenv_values
+from lib.thg.rootpath import ROOT_PATH
 
 dotenv_file = find_dotenv()
 load_dotenv(dotenv_file)
-if( get_key(dotenv_file, "MONGODB_DATABASE") == None or get_key(dotenv_file, "MONGODB_USERNAME") == None):
-    check()
-db_name = get_key(dotenv_file, "MONGODB_DATABASE")
-db_user = get_key(dotenv_file, "MONGODB_USERNAME")
-db_pass = get_key(dotenv_file, "MONGODB_PASSWORD")
 
 def connect_db():
+    file_db_creds = dotenv_values(dotenv_file)
+    dbcreds = {"MONGODB_DATABASE", "MONGODB_USERNAME", "MONGODB_PASSWORD"}
+    if( file_db_creds  == {} or not ( file_db_creds.keys() >= dbcreds) ):
+        check()
+
+    db_name = get_key(dotenv_file, "MONGODB_DATABASE")
+    db_user = get_key(dotenv_file, "MONGODB_USERNAME")
+    db_pass = get_key(dotenv_file, "MONGODB_PASSWORD")
     db = connect(
         db=db_name,
         username=db_user,

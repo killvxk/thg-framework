@@ -3,8 +3,8 @@ import dotenv, base64
 from os import system
 from colorama import Fore
 from pathlib import Path
+from lib.thg.rootpath import ROOT_PATH
 
-ROOT_PATH = Path.resolve(Path(__file__).parent.parent.parent)
 dotenv_path = Path(str(ROOT_PATH) + "/.env")
 if dotenv_path.exists() == False:
     Path(str(ROOT_PATH) + "/.env").touch()

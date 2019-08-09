@@ -3,8 +3,7 @@ from fnmatch import fnmatchcase
 from importlib import import_module
 from ipaddress import ip_address
 from urllib.parse import urlparse
-from pathlib import Path
-ROOT_PATH = Path.resolve(Path(__file__).parent.parent.parent)
+from lib.thg.rootpath import ROOT_PATH
 
 
 def name_convert(name):
