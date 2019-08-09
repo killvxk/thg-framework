@@ -20,7 +20,7 @@ from lib.thg.core.Database.Database import Database
 from lib.thg.base.BaseOptions import BaseOption
 from lib.thg.base.exception.Module import ModuleNotUseException
 import sys, time, pkgutil, threading, json
-
+from lib.thg.core.Database import DBGen
 
 class THGBASECONSOLE(Cmd, Database):
     #__metaclass__ = Database
@@ -229,7 +229,7 @@ class THGBASECONSOLE(Cmd, Database):
     @with_category(CMD_MODULE)
     def thgcmd_listmod(self, args):
         """List all modules"""
-        local_modules = module.get_local_modules()
+        local_modules = DBGen.module.get_local_modules()
         self._print_modules(local_modules, "Module List:")
 
     @with_category(CMD_MODULE)
@@ -308,7 +308,7 @@ class THGBASECONSOLE(Cmd, Database):
         if len(line.split(" ")) > 2:
             modules = []
         else:
-            modules = [local_module[0] for local_module in module.get_local_modules()]
+            modules = [local_module[0] for local_module in DBGen.module.get_local_modules()]
         return basic_complete(text, line, begidx, endidx, modules)
 
     @with_category(CMD_MODULE)
