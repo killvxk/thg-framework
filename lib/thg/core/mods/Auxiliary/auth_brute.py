@@ -1,7 +1,7 @@
 from lib.thg.base.BaseOptions import BaseOption
 from lib.thg.base.BaseOptions import BaseOptions
 from lib.thg.base.BaseResult import BaseResult
-
+from data import wordlists
 class BaseAuxiliary_Brute:
     name = None #nome do auxiliar
     description = None #descricao do auxiliar
@@ -43,7 +43,7 @@ class BaseAuxiliary_Brute:
         BaseOption(name='PASS_FILE', required=True, description="File containing passwords, one per line"),
         BaseOption(name='USERNAME', required=False, description='A specific username to authenticate as'),
         BaseOption(name='PASSWORD', required=False, description='A specific password to authenticate with'),
-        BaseOption(name='USER_FILE', required=False, description="File containing usernames, one per line"),
+        BaseOption(name='USER_FILE', required=False, description="File containing usernames, one per line",value=wordlists.aspx),
         BaseOption(name='PASS_FILE', required=False, description="File containing passwords, one per line"),
         BaseOption(name='USERPASS_FILE', required=False, description="File containing users and passwords separated by space, one pair per line"),
         BaseOption(name='BRUTEFORCE_SPEED', required=True, description="How fast to bruteforce, from 0 to 5"),

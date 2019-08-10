@@ -1,22 +1,20 @@
 import socket
-from lib.thg.core.mods.Auxiliary.Auxiliary import BaseAuxiliary_Crawler
-
-class Modules(BaseAuxiliary_Crawler):
+from lib.thg.core.mods.Auxiliary.Auxiliary import BaseAuxiliary_Brute
+from data import wordlists
+class Modules(BaseAuxiliary_Brute):
     def __init__(self):
         super(Modules, self).__init__()
         self.thg_update_info({
-            "name": "base",
-            "description": "descricao da modulo",
-            "author": ["darkcode"],
-            "references": [
-                "referencia ",
-            ],
-            "disclosure_date": "data do modulo",
-            "service_name": "nome do servico",
-            "service_version": "versao do servico",
+            "name": "xcode_mod",
+            "description": "exploraco do servico",
+            "author": "darkcode",
+            "references": "xcode",
+            "disclosure_date": "12/2/1999",
+            "service_name": "vpn",
+            "service_version": "12",
         })
         # Como o modulo so preciasa do thg, entao。
-        self.register_crawler()
+        self.register_tcp_target_brute()
 
     def info(self):
         return self.get_info()
