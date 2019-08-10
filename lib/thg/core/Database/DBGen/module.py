@@ -35,12 +35,13 @@ def get_local_modules():
                     module_info['check'] = 'True'
                 except AttributeError:
                     module_info['check'] = 'False'
-                local_modules.append((
+                """local_modules.append((
                     module_info['module_name'],
                     module_info['check'],
                     module_info['disclosure_date'],
                     module_info['description']
-                ))
+                ))"""
+                local_modules.append(module_info)
     return local_modules
 
 

@@ -58,7 +58,7 @@ class Database:
     """def get_modules(self):
         return Models.mod_refs.objects.all()"""
 
-    def load_modules():
+    def load_modules(self):
         return DBGen.module.get_local_modules()
 
     def search_modules(self, search):
@@ -68,9 +68,9 @@ class Database:
         #self.validate_search(search['module_name'])
         modules = []
         query = json.loads(Models.mod_refs.objects(module__icontains=search).to_json())
-        #q2 = load_modules()
+        q2 = self.load_modules()
         #q2 = json.loads(Models.module_details.objects().to_json())
-        #print(type(q2))
+        print(q2)
         #must have [ module_mixins, module_name, module_type, module_info,
         #           module_archs, module_authors, module_details, module_class ]
         if(query == []):

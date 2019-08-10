@@ -30,6 +30,9 @@ class BaseAuxiliary_Crawler:
             info[field_name] = getattr(self, field_name)
         return info
 
+    def get_full_info(self):
+        return self.dbinfo
+
     def register_crawler(self):
       self.target_type = "http"
       self.register_options([

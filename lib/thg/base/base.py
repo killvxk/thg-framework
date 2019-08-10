@@ -230,7 +230,13 @@ class THGBASECONSOLE(Cmd, Database):
     def thgcmd_listmod(self, args):
         """List all modules"""
         local_modules = module.get_local_modules()
-        self._print_modules(local_modules, "Module List:")
+        modules_values = list(local_modules[0].values())
+        modules_keys = list(local_modules[0].keys())
+        list_modules = []
+        for local_module in local_modules:
+            list_modules.append(list(local_module.values()))
+
+        self._print_modules(list_modules, modules_keys, "Module List: ")
 
     @with_category(CMD_MODULE)
     def thgcmd_search(self, args):
@@ -308,7 +314,7 @@ class THGBASECONSOLE(Cmd, Database):
         if len(line.split(" ")) > 2:
             modules = []
         else:
-            modules = [local_module[0] for local_module in module.get_local_modules()]
+            modules = [local_module["module_name"] for local_module in module.get_local_modules()]
         return basic_complete(text, line, begidx, endidx, modules)
 
     @with_category(CMD_MODULE)
