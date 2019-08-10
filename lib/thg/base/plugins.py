@@ -9,7 +9,7 @@ def load_plugin(THGBASECONSOLE, pluginName):
     fullPluginName = "plugins." + pluginName
     module = importlib.import_module(fullPluginName)
     pluginObj = module.Plugin(THGBASECONSOLE)
-    THGBASECONSOLE.loadedPlugins[pluginName] = pluginObj
+    THGBASECONSOLE.loadedPlugins[str(pluginName)] = pluginObj
 
 
 class Plugin():

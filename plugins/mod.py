@@ -12,6 +12,7 @@ from lib.thg.thgcmd import cmd2
 class Plugin(cmd2.Cmd):
     def __init__(self, *args):
         super().__init__(*args)
+        print("Hello from your new plugin!")
         self.register_postparsing_hook(self.hookTestMethod)
 
     def hookTestMethod(self, params: cmd2.plugin.PostparsingData) -> cmd2.plugin.PostparsingData:

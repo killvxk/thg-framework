@@ -85,7 +85,7 @@ class THGBASECONSOLE(Cmd,Database):
         # attribute to find submodules."
         pluginNames = [name for _, name, _ in pkgutil.walk_packages([pluginPath])]
         numFound = len(pluginNames)
-        print(numFound)
+        #print(numFound)
 
         # say how many we found, handling the 1 case
         if numFound == 1:
