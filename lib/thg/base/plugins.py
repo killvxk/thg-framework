@@ -11,6 +11,7 @@ def load_plugin(THGBASECONSOLE, pluginName):
     pluginObj = module.Plugin(THGBASECONSOLE)
     THGBASECONSOLE.loadedPlugins[pluginName] = pluginObj
 
+
 class Plugin():
     # to be overwritten by child
     description = "This is a description of this plugin."

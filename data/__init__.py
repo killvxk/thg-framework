@@ -1,1 +1,10 @@
-from . import *
+import pkg_resources
+domino_endpoints_coldfusion39 = 'file://' + pkg_resources.resource_filename(__name__, 'domino-endpoints-coldfusion39.txt')
+error = 'file://' + pkg_resources.resource_filename(__name__, 'error.txt')
+joomla_plugins_fuzz = 'file://' + pkg_resources.resource_filename(__name__, 'joomla-plugins.fuzz.txt')
+axis = 'file://' + pkg_resources.resource_filename(__name__, 'axis.txt')
+tftp_fuzz = 'file://' + pkg_resources.resource_filename(__name__, 'tftp.fuzz.txt')
+probable_v2_wpa_top62 = 'file://' + pkg_resources.resource_filename(__name__, 'probable-v2-wpa-top62.txt')
+common_and_french = 'file://' + pkg_resources.resource_filename(__name__, 'common-and-french.txt')
+test = 'file://' + pkg_resources.resource_filename(__name__, 'test.txt')
+common_and_portugese = 'file://' + pkg_resources.resource_filename(__name__, 'common-and-portugese.txt')

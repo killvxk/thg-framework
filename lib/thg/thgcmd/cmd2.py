@@ -421,7 +421,7 @@ class Cmd(cmd.Cmd):
             }
 
         # Commands to exclude from the help menu and tab completion
-        self.hidden_commands = ['eof', '_relative_load', '_relative_run_script']
+        self.hidden_commands = ['eof', '_relative_load', '_relative_autoload']
 
         # Commands to exclude from the history command
         # initialize history
@@ -452,7 +452,7 @@ class Cmd(cmd.Cmd):
         # Built-in commands don't make use of this.  It is purely there for user-defined commands and convenience.
         self.last_result = None
 
-        # Used by run_script command to store current script dir as a LIFO queue to support _relative_run_script command
+        # Used by autoload command to store current script dir as a LIFO queue to support _relative_autoload command
         self._script_dir = []
 
         # Context manager used to protect critical sections in the main thread from stopping due to a KeyboardInterrupt
@@ -490,7 +490,7 @@ class Cmd(cmd.Cmd):
         if startup_script is not None:
             startup_script = os.path.abspath(os.path.expanduser(startup_script))
             if os.path.exists(startup_script) and os.path.getsize(startup_script) > 0:
-                self._startup_commands.append("run_script '{}'".format(startup_script))
+                self._startup_commands.append("autoload '{}'".format(startup_script))
 
         # Transcript files to run instead of interactive command loop
         self._transcript_files = None
@@ -3313,7 +3313,7 @@ class Cmd(cmd.Cmd):
         args.script_path = os.path.expanduser(args.script_path)
 
         # Add some protection against accidentally running a non-Python file. The happens when users
-        # mix up run_script and run_pyscript.
+        # mix up autoload and run_pyscript.
         if not args.script_path.endswith('.py'):
             self.pwarning("'{}' does not have a .py extension".format(args.script_path))
             selection = self.select('Yes No', 'Continue to try to run it as a Python script? ')
@@ -3492,7 +3492,7 @@ class Cmd(cmd.Cmd):
                 self.thgcmd_edit(quoted_fname)
 
                 # noinspection PyTypeChecker
-                self.thgcmd_run_script(quoted_fname)
+                self.thgcmd_autoload(quoted_fname)
             finally:
                 os.remove(fname)
         elif args.output_file:
@@ -3605,7 +3605,7 @@ class Cmd(cmd.Cmd):
         Generate a transcript file from a given history of commands
         """
         # Validate the transcript file path to make sure directory exists and write access is available
-        transcript_path = os.path.abspath(os.path.expanduser(transcript_file))
+        transcript_path = os.path.abspath(os.path.expanduser(transcript_file+".thg"))
         transcript_dir = os.path.dirname(transcript_path)
         if not os.path.isdir(transcript_dir) or not os.access(transcript_dir, os.W_OK):
             self.perror("{!r} is not a directory or you don't have write access".format(transcript_dir))
@@ -3671,7 +3671,7 @@ class Cmd(cmd.Cmd):
         # finally, we can write the transcript out to the file
         try:
             with open(transcript_file, 'w') as fout:
-                fout.write(transcript)
+                fout.write(transcript+".thg")
         except OSError as ex:
             self.pexcept('Failed to save transcript: {}'.format(ex))
         else:
@@ -3714,7 +3714,7 @@ class Cmd(cmd.Cmd):
         else:
             return None
 
-    run_script_description = ("Run commands in script file that is encoded as either ASCII or UTF-8 text\n"
+    autoload_description = ("Run commands in script file that is encoded as either ASCII or UTF-8 text\n"
                               "\n"
                               "Script should contain one command per line, just like the command would be\n"
                               "typed in the console.\n"
@@ -3722,14 +3722,14 @@ class Cmd(cmd.Cmd):
                               "If the -t/--transcript flag is used, this command instead records\n"
                               "the output of the script commands to a transcript for testing purposes.\n")
 
-    run_script_parser = Cmd2ArgumentParser(description=run_script_description)
-    run_script_parser.add_argument('-t', '--transcript', metavar='TRANSCRIPT_FILE',
+    autoload_parser = Cmd2ArgumentParser(description=autoload_description)
+    autoload_parser.add_argument('-t', '--transcript', metavar='TRANSCRIPT_FILE',
                                    help='record the output of the script as a transcript file',
                                    completer_method=path_complete)
-    run_script_parser.add_argument('script_path', help="path to the script file", completer_method=path_complete)
+    autoload_parser.add_argument('script_path', help="path to the script file", completer_method=path_complete)
 
-    @with_argparser(run_script_parser)
-    def thgcmd_run_script(self, args: argparse.Namespace) -> Optional[bool]:
+    @with_argparser(autoload_parser)
+    def thgcmd_autoload(self, args: argparse.Namespace) -> Optional[bool]:
         """Run commands in script file that is encoded as either ASCII or UTF-8 text.
 
         :return: True if running of commands should stop
@@ -3757,7 +3757,7 @@ class Cmd(cmd.Cmd):
             return
 
         # Add some protection against accidentally running a Python file. The happens when users
-        # mix up run_script and run_pyscript.
+        # mix up autoload and run_pyscript.
         if expanded_path.endswith('.py'):
             self.pwarning("'{}' appears to be a Python file".format(expanded_path))
             selection = self.select('Yes No', 'Continue to try to run it as a text script? ')
@@ -3788,21 +3788,21 @@ class Cmd(cmd.Cmd):
                 if orig_script_dir_count != len(self._script_dir):
                     self._script_dir.pop()
 
-    relative_run_script_description = run_script_description
-    relative_run_script_description += (
+    relative_autoload_description = autoload_description
+    relative_autoload_description += (
         "\n\n"
         "If this is called from within an already-running script, the filename will be\n"
         "interpreted relative to the already-running script's directory.")
 
-    relative_run_script_epilog = ("Notes:\n"
+    relative_autoload_epilog = ("Notes:\n"
                                   "  This command is intended to only be used within text file scripts.")
 
-    relative_run_script_parser = Cmd2ArgumentParser(description=relative_run_script_description,
-                                                    epilog=relative_run_script_epilog)
-    relative_run_script_parser.add_argument('file_path', help='a file path pointing to a script')
+    relative_autoload_parser = Cmd2ArgumentParser(description=relative_autoload_description,
+                                                    epilog=relative_autoload_epilog)
+    relative_autoload_parser.add_argument('file_path', help='a file path pointing to a script')
 
-    @with_argparser(relative_run_script_parser)
-    def thgcmd__relative_run_script(self, args: argparse.Namespace) -> Optional[bool]:
+    @with_argparser(relative_autoload_parser)
+    def thgcmd__relative_autoload(self, args: argparse.Namespace) -> Optional[bool]:
         """
         Run commands in script file that is encoded as either ASCII or UTF-8 text
         :return: True if running of commands should stop
@@ -3812,7 +3812,7 @@ class Cmd(cmd.Cmd):
         relative_path = os.path.join(self._current_script_dir or '', file_path)
 
         # noinspection PyTypeChecker
-        return self.thgcmd_run_script(utils.quote_string(relative_path))
+        return self.thgcmd_autoload(utils.quote_string(relative_path))
 
     def _run_transcript_tests(self, transcript_paths: List[str]) -> None:
         """Runs transcript tests for provided file(s).

@@ -13,16 +13,19 @@ from random import *
 from lib.thg.base import plugins
 from lib.thg.base.config.mensagens import mensagem_do_dia
 import psutil,os,platform
+from utils.module import *
+from utils import module
 from lib.thg.base.config.Version import __codenome__,__version__
 from lib.thg.base.config.info_init import thg_add_init
 from importlib import import_module, reload
+from utils import module
 from lib.thg.core.Database.Database import Database
 from lib.thg.base.BaseOptions import BaseOption
 from lib.thg.base.exception.Module import ModuleNotUseException
 import sys, time, pkgutil, threading, json
 from lib.thg.core.Database.DBGen import module
 
-class THGBASECONSOLE(Cmd, Database):
+class THGBASECONSOLE(Cmd,Database):
     #__metaclass__ = Database
     colors = "Always"
     console_prompt = "{COLOR_START}thg-console{COLOR_END}".format(COLOR_START=Fore.CYAN, COLOR_END=Fore.BLUE)

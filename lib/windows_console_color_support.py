@@ -1,4 +1,4 @@
-# Windows console color support
+''''#
 # Copyright 2011 Michael 'mihi' Schierl
 # Licensed under MSF license
 
@@ -58,3 +58,4 @@ class WindowsConsoleColorSupport
     @SetConsoleTextAttribute.Call(@hConsoleHandle, wAttr)
   end		
 end
+'''
