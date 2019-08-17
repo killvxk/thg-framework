@@ -1,37 +1,3 @@
-# -*- coding: binary -*-
-
-#module Msf
-#module Exploit::Remote::SMB
-#This mixin provides a minimal SMB server
-#module Server
-#include Msf::Exploit::Remote::TcpServer
-#include Msf::Exploit::NTLM
-#CONST = ::Rex::Proto::SMB::Constants
-#CRYPT = ::Rex::Proto::SMB::Crypt
-#UTILS = ::Rex::Proto::SMB::Utils
-#XCEPT = ::Rex::Proto::SMB::Exceptions
-#EVADE = ::Rex::Proto::SMB::Evasions
-#deregister_options('SSL', 'SSLCert')
-#require 'rex/proto/dcerpc/svcctl'
-#require 'windows_error'
-#require 'windows_error/win32'
-#require 'msf/core/exploit/exe'
-#require 'msf/core/exploit/wbemexec'
-#include WindowsError::Win32
-#module Msf
-####
-# Makes use of a WebEx service vulnerability that works similarly to psexec.
-#
-# This code was stolen straight out of the psexec module which was stolen from
-# the standalone Psexec tool. Thanks very much for all who contributed to that
-# module!! Instead of uploading and running a binary.
-####
-#module Exploit::Remote::SMB::Client::WebExec
-#  include Msf::Exploit::Windows_Constants
-#  include Msf::Exploit::Remote::DCERPC
-#  include Msf::Exploit::Remote::SMB::Client::Authenticated
-#  include Msf::Exploit::Failure
-
 from lib.thg.base.BaseOptions import BaseOption
 from lib.thg.base.BaseOptions import BaseOptions
 from lib.thg.base.BaseResult import BaseResult
@@ -64,13 +30,14 @@ class BaseAuxiliary_Drdos:
             info[field_name] = getattr(self, field_name)
         return info
 
-    def register_client_dns(self):
+    def register_alphanum(self):
+      self.target_type = "http"
       self.register_options([
-            BaseOption(name='SRVPORT', required=True, description= 'The local port to listen on.', value=445 )
-            BaseOption(name='SMBServerMaximumBuffer', required=True, description= 'The maximum number of data in megabytes to buffer', value=2 ),
-            BaseOption(name=('SMBServerIdleTimeout', required=True, description= 'The maximum amount of time to keep an idle session open in seconds', value=120 )
+        BaseOption(name='BufferRegister', required=False, description="The register that pointers to the encoded payload"),
+        BaseOption(name='BufferOffset', required=False, description="The offset to the buffer from the start of the register", value=False ),
+        BaseOption(name='AllowWin32SEH', required=True, description="Use SEH to determine the address of the stub (Windows only)", value=False )
 
-  ])
+      ])
 
     def thg_update_info(self, info):
         for name in info:
@@ -87,4 +54,5 @@ class BaseAuxiliary_Drdos:
 
         missing_options = filter(is_missing, self.options.get_options())
         return list(missing_options)
+
 
