@@ -1,0 +1,6 @@
+from pwn import *
+session = ssh('darkcode', 'localhost', password='dsa')
+
+io = session.process('bash', env={"PS1":""})
+io.sendline('echo Hello, world!')
+io.recvline()

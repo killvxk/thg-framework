@@ -1,0 +1,12 @@
+py from pwn import *
+
+py io = remote('google.com', 80)
+py io.send('GET /\r\n\r\n')
+py io.recvline()
+
+py dns  = remote('8.8.8.8', 53, typ='udp')
+py tcp6 = remote('google.com', 80, fam='ipv6')
+
+py print(dns,tcp6)
+py print("[+] start listem")
+py client = listen(8080).wait_for_connection()
