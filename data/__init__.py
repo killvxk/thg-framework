@@ -8,3 +8,4 @@ probable_v2_wpa_top62 = 'file://' + pkg_resources.resource_filename(__name__, 'p
 common_and_french = 'file://' + pkg_resources.resource_filename(__name__, 'common-and-french.txt')
 test = 'file://' + pkg_resources.resource_filename(__name__, 'test.txt')
 common_and_portugese = 'file://' + pkg_resources.resource_filename(__name__, 'common-and-portugese.txt')
+named_pipes  = 'file://' + pkg_resources.resource_filename(__name__, 'named_pipes.txt')

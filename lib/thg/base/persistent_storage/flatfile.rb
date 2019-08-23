@@ -1,4 +1,6 @@
-# -*- coding: binary -*-
+######################
+# -*- coding: thg -*-#
+######################
 module Msf
 class PersistentStorage
 

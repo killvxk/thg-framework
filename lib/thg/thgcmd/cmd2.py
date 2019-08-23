@@ -55,6 +55,12 @@ from .parsing import StatementParser, Statement, Macro, MacroArg, shlex_split
 # Set up readline
 from .rl_utils import rl_type, RlType, rl_get_point, rl_set_prompt, vt100_support, rl_make_safe_prompt
 
+CMD_CORE = "Core Command"
+CMD_MODULE = "Module Command"
+CMD_DATABASE = "Database Backend Commands"
+CMD_SYSTEM = "SYSTEM Commands"
+CMD_PLUGINS = "Plugins Commands"
+
 if rl_type == RlType.NONE:  # pragma: no cover
     rl_warning = "Readline features including tab completion have been disabled since no \n" \
                  "supported version of readline was found. To resolve this, install \n" \
@@ -2444,6 +2450,7 @@ class Cmd(cmd.Cmd):
 
     # Preserve quotes since we are passing strings to other commands
     @with_argparser(alias_parser, preserve_quotes=True)
+    @with_category(CMD_CORE)
     def thgcmd_alias(self, args: argparse.Namespace) -> None:
         """Manage aliases"""
         func = getattr(args, 'func', None)
@@ -2646,6 +2653,7 @@ class Cmd(cmd.Cmd):
 
     # Preserve quotes since we are passing strings to other commands
     @with_argparser(macro_parser, preserve_quotes=True)
+    @with_category(CMD_CORE)
     def thgcmd_macro(self, args: argparse.Namespace) -> None:
         """Manage macros"""
         func = getattr(args, 'func', None)
@@ -2716,6 +2724,7 @@ class Cmd(cmd.Cmd):
         delattr(cmd.Cmd, 'complete_help')
 
     @with_argparser(help_parser)
+    @with_category(CMD_CORE)
     def thgcmd_help(self, args: argparse.Namespace) -> None:
         """List available commands or provide detailed help for a specific command"""
         # print(args)
@@ -2885,6 +2894,7 @@ class Cmd(cmd.Cmd):
                 self.stdout.write("\n")
 
     @with_argparser(Cmd2ArgumentParser(description="List available shortcuts"))
+    @with_category(CMD_CORE)
     def thgcmd_shortcuts(self, _: argparse.Namespace) -> None:
         """List available shortcuts"""
         # Sort the shortcut tuples by name
@@ -2899,6 +2909,7 @@ class Cmd(cmd.Cmd):
         return True
 
     @with_argparser(Cmd2ArgumentParser(description="Exit this application"))
+    @with_category(CMD_CORE)
     def thgcmd_quit(self, _: argparse.Namespace) -> bool:
         """Exit this application"""
         # Return True to stop the command loop
@@ -3000,6 +3011,7 @@ class Cmd(cmd.Cmd):
     set_parser.add_argument('value', nargs=argparse.OPTIONAL, help='the new value for settable')
 
     @with_argparser(set_parser)
+    @with_category(CMD_CORE)
     def thgcmd_setcmd(self, args: argparse.Namespace) -> None:
         """Set a settable parameter or show current settings of parameters"""
 
@@ -3044,6 +3056,7 @@ class Cmd(cmd.Cmd):
 
     # Preserve quotes since we are passing these strings to the shell
     @with_argparser(shell_parser, preserve_quotes=True)
+    @with_category(CMD_CORE)
     def thgcmd_shell(self, args: argparse.Namespace) -> None:
         """Execute a command as if at the OS prompt"""
         import subprocess
@@ -3206,7 +3219,7 @@ class Cmd(cmd.Cmd):
     py_parser.add_argument('command', nargs=argparse.OPTIONAL, help="command to run")
     py_parser.add_argument('remainder', nargs=argparse.REMAINDER, help="remainder of command")
 
-    # This is a hidden flag for telling thgcmd_py to run a pyscript. It is intended only to be used by run_pyscript
+    # This is a hidden flag for telling thgcmd_thgpy to run a pyscript. It is intended only to be used by run_pyscript
     # after it sets up sys.argv for the script being run. When this flag is present, it takes precedence over all
     # other arguments. run_pyscript uses this method instead of "py run('file')" because file names with
     # 2 or more consecutive spaces cause issues with our parser, which isn't meant to parse Python statements.
@@ -3214,7 +3227,8 @@ class Cmd(cmd.Cmd):
 
     # Preserve quotes since we are passing these strings to Python
     @with_argparser(py_parser, preserve_quotes=True)
-    def thgcmd_py(self, args: argparse.Namespace) -> Optional[bool]:
+    @with_category(CMD_CORE)
+    def thgcmd_thgpy(self, args: argparse.Namespace) -> Optional[bool]:
         """
         Enter an interactive Python shell
         :return: True if running of commands should stop
@@ -3329,8 +3343,10 @@ class Cmd(cmd.Cmd):
     run_pyscript_parser.add_argument('script_arguments', nargs=argparse.REMAINDER,
                                      help='arguments to pass to script', completer_method=path_complete)
 
+
     @with_argparser(run_pyscript_parser)
-    def thgcmd_run_pyscript(self, args: argparse.Namespace) -> Optional[bool]:
+    @with_category(CMD_CORE)
+    def thgcmd_run_thgscript(self, args: argparse.Namespace) -> Optional[bool]:
         """
         Run a Python script file inside the console
          :return: True if running of commands should stop
@@ -3356,7 +3372,7 @@ class Cmd(cmd.Cmd):
             sys.argv = [args.script_path] + args.script_arguments
 
             # noinspection PyTypeChecker
-            py_return = self.thgcmd_py('--pyscript {}'.format(utils.quote_string(args.script_path)))
+            py_return = self.thgcmd_thgpy('--pyscript {}'.format(utils.quote_string(args.script_path)))
 
         except KeyboardInterrupt:
             pass
@@ -3370,6 +3386,7 @@ class Cmd(cmd.Cmd):
     # Only include the thgcmd_ipy() method if IPython is available on the system
     if ipython_available:  # pragma: no cover
         @with_argparser(Cmd2ArgumentParser(description="Enter an interactive IPython shell"))
+        @with_category(CMD_CORE)
         def thgcmd_ipy(self, _: argparse.Namespace) -> None:
             """Enter an interactive IPython shell"""
             from .py_bridge import PyBridge
@@ -3435,6 +3452,7 @@ class Cmd(cmd.Cmd):
     history_parser.add_argument('arg', nargs=argparse.OPTIONAL, help=history_arg_help)
 
     @with_argparser(history_parser)
+    @with_category(CMD_CORE)
     def thgcmd_history(self, args: argparse.Namespace) -> Optional[bool]:
         """
         View, run, edit, save, or clear previously entered commands
@@ -3720,6 +3738,7 @@ class Cmd(cmd.Cmd):
                              help="path to a file to open in editor", completer_method=path_complete)
 
     @with_argparser(edit_parser)
+    @with_category(CMD_CORE)
     def thgcmd_edit(self, args: argparse.Namespace) -> None:
         """Edit a file in a text editor"""
         if not self.editor:
@@ -3755,6 +3774,7 @@ class Cmd(cmd.Cmd):
     autoload_parser.add_argument('script_path', help="path to the script file", completer_method=path_complete)
 
     @with_argparser(autoload_parser)
+    @with_category(CMD_CORE)
     def thgcmd_autoload(self, args: argparse.Namespace) -> Optional[bool]:
         """Run commands in script file that is encoded as either ASCII or UTF-8 text.
 
