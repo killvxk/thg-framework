@@ -1,23 +1,62 @@
 """ An example of a plugin. """
 
 #from lib.thg.base.plugins import Plugin
+import argparse
 from colorama import Fore
 from lib.thg.base.base import THGBASECONSOLE
-from lib.thg.base.base import THGBASECONSOLE
-from lib.thg.thgcmd import cmd2
+from lib.thg.thgcmd import cmd2, parsing, plugin
 # anything you simply write out (like a script) will run immediately when the
 # module is imported (before the class is instantiated)
 
 # this class MUST be named Plugin
 class Plugin(cmd2.Cmd):
-    def __init__(self, *args):
-        super().__init__(*args)
-        print("Hello from your new plugin!")
-        self.register_postparsing_hook(self.hookTestMethod)
+    def __init__(self, *args, **kwargs):
+        """Init"""
+        super().__init__(*args, **kwargs)
+        self.reset_counters()
 
-    def hookTestMethod(self, params: cmd2.plugin.PostparsingData) -> cmd2.plugin.PostparsingData:
-        print("Hello from your new plugin!")
-        #self.poutput("before the loop begins")
+    def reset_counters(self):
+        """Reset hooks counters"""
+        self.called_preparse = 0
+        self.called_postparsing = 0
+        self.called_precmd = 0
+        self.called_postcmd = 0
+        self.called_cmdfinalization = 0
+
+    def thgcmd_say(self, msg):
+        """Print the message"""
+        self.poutput(msg)
+
+    def help_say(self):
+        """ help for say method"""
+        print("Say help!")
+
+    def hookTestMethod(self) -> None:
+        self.poutput("before the loop begins")
+        self.caju = 10
+        # if not '|' in params.statement.raw:
+        #     newinput = params.statement.raw + ' | less'
+        #     params.statement = self.statement_parser.parse(newinput)
+        # return params
+    # def precmd(self, statement: cmd2.Statement) -> cmd2.Statement:
+    #     """Override cmd.Cmd method"""
+    #     self.called_precmd += 1
+    #     return statement
+
+    def precmd_hook(self, data: plugin.PrecommandData) -> plugin.PrecommandData:
+        """A precommand hook"""
+        self.called_precmd += 1
+        return data
+
+    # def thgcmd_say(self):
+    #     """A help for this plugin"""
+
+    def onLoad(self, line):
+        """Load all hooks"""
+        # self.hookTestMethod()
+        self.register_preloop_hook(self.hookTestMethod)
+        self.register_precmd_hook(self.precmd_hook)
+        self.onecmd_plus_hooks('say mod loaded successfully')
 
     # description = "An example plugin."
     #

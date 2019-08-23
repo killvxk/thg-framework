@@ -2,8 +2,10 @@
 from lib.thg.base.base import THGBASECONSOLE
 class THGSTART(THGBASECONSOLE):
     def run(self):
+        """Run the cli"""
         self.cmdloop()
 
 if __name__ == '__main__':
+    """Main function cli"""
     thg = THGSTART()
     thg.run()
