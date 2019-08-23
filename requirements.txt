@@ -1,3 +1,5 @@
+flask-mongoengine
+rebound
 pymdown-nomnoml
 pymdown-extensions
 mkdocs
@@ -15,6 +17,5 @@ tabulate==0.8.3
 requests==2.21.0
 python-pacman
 sqlalchemy
-psycopg2
 docker
 python-dotenv

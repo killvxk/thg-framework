@@ -4,11 +4,13 @@
 import argparse
 from colorama import Fore
 from lib.thg.base.base import THGBASECONSOLE
+from  lib.thg.thgcmd.cmd2 import with_category
 from lib.thg.thgcmd import cmd2, parsing, plugin
+
 # anything you simply write out (like a script) will run immediately when the
 # module is imported (before the class is instantiated)
-
 # this class MUST be named Plugin
+
 class Plugin(cmd2.Cmd):
     def __init__(self, *args, **kwargs):
         """Init"""
@@ -23,9 +25,11 @@ class Plugin(cmd2.Cmd):
         self.called_postcmd = 0
         self.called_cmdfinalization = 0
 
-    def thgcmd_say(self, msg):
+    @with_category("template")
+    def thgcmd_template(self, msg):
         """Print the message"""
         self.poutput(msg)
+
 
     def help_say(self):
         """ help for say method"""
