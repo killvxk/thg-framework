@@ -31,9 +31,9 @@ class Plugin(cmd2.Cmd):
 
 
     def help_template(self):
-        """ help for template method"""
+        """help for template method"""
 
-    def hookTestMethod(self) -> None:
+    def hookTestMethod(self):
         self.poutput("before the loop begins")
         self.caju = 10
 
@@ -42,9 +42,8 @@ class Plugin(cmd2.Cmd):
         self.called_precmd += 1
         return data
 
-    def onLoad(self, line):
+    def onLoad(self, args_raw):
         """Load all hooks"""
-        # self.hookTestMethod()
         self.register_preloop_hook(self.hookTestMethod)
         self.register_precmd_hook(self.precmd_hook)
-        self.onecmd_plus_hooks('say mod loaded successfully')
+        self.onecmd_plus_hooks('template plugin loaded successfully!')

@@ -46,7 +46,8 @@ nav:
 
 - Contributing:
   - Get Started: ./contributing/Contributing-to-thg.md
-  - templates: cli/templates.md
+  - Templates: cli/templates.md
+  - Plugins: ./plugins/plugin-creation.md
 
 - documentation:
   - capture the flag:
@@ -155,5 +156,3 @@ nav:
     - thg_ids: ./tutorials/ids/ids.md
     - thg_radio: ./tutorials/radio/radio.md
     - thg_unpacker: ./tutorials/unpacker/unpacker.md
-
-

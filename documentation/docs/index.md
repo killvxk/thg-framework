@@ -1,6 +1,6 @@
 # Welcome to THG-FRAMEWORK
 
-## introduction to thg_FRAMEWORK
+## Introduction to THG_FRAMEWORK
 
 novo sistema de exploracao e associacao de dados, voltados para comprovar a tese de desenvolvimento de uma versao alternativa do metasploit feito em python
 
@@ -9,14 +9,14 @@ novo sistema de exploracao e associacao de dados, voltados para comprovar a tese
         ===================[ thgconsole 2.0.1-dev ]===================
 
         + -- --=[THGEF   : The Hacker Group Exploitation Framework]=-- -- +    
-        + -- --=[Code by : Darkcode                               ]=-- -- + 
-        + -- --=[Codename: 0box                                ]=-- -- + 
-        + -- --=[Homepage: https://www.facebook.com/darckode0x00/ ]=-- -- + 
-        + -- --=[youtube : darkcode programming                   ]=-- -- + 
+        + -- --=[Code by : Darkcode                               ]=-- -- +
+        + -- --=[Codename: 0box                                ]=-- -- +
+        + -- --=[Homepage: https://www.facebook.com/darckode0x00/ ]=-- -- +
+        + -- --=[youtube : darkcode programming                   ]=-- -- +
 
         ===================[ thgconsole-pc ]========================
 
-        + -- --=[system  => Linux              ]=-- -- + 
+        + -- --=[system  => Linux              ]=-- -- +
         + -- --=[machine => x86_64             ]=-- -- +      
         + -- --=[gcc     => 8.3.0              ]=-- -- +
         + -- --=[python  => 3.7                ]=-- -- +
@@ -27,11 +27,11 @@ novo sistema de exploracao e associacao de dados, voltados para comprovar a tese
         ===================[ thgconsole-info   ]========================
         ===================[ thgconsole-config ]========================
         + -- --=[DB_STATUS =>on                ]=-- -- +
-                
 
-thg-console > 
+
+thg-console >
 ```
-#thg commandos
+#THG Commands
 ```
 thg-console > help -v
 
@@ -77,7 +77,7 @@ quit                Exit this application
 shell               Execute a command as if at the OS prompt
 shortcuts           List available shortcuts
 
-thg-console > 
+thg-console >
 ```
 
 #Core Command
@@ -106,7 +106,7 @@ set                 Set module option value/ set program config
 show                Display module information
 use                 Chose a module
 ```
-## show 
+## show
 ```
 show Display module information
 
@@ -123,7 +123,7 @@ search name             =>  search for name
 search module_name      =>  search for module name   
 search description      =>  search for description   
 search author           =>  search for author  
-search disclosure_date  =>  search for disclosure_date 
+search disclosure_date  =>  search for disclosure_date
 search service_name     =>  search for service_name  
 search service_version  =>  search for service_version  
 search check            =>  search for check  
@@ -165,7 +165,7 @@ sub-commands:
     list                list aliases
 
 ```
-## edit 
+## edit
 ```
 
 
@@ -340,7 +340,7 @@ optional arguments:
   -h, --help    show this help message and exit
 
 ```
-##shortcuts 
+##shortcuts
 ```
 shortcuts           List available shortcuts
 shortcuts -h

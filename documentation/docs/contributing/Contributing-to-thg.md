@@ -1,13 +1,13 @@
-# Guia de desenvolvimento de módulos 
+# Guia de desenvolvimento de módulos
 
 
 
 
 Fazer o melhor trabalho requer esforços conjuntos de todos.
 
-Todos são bem-vindos para desenvolver módulos, trocar tecnologia de segurança e melhorar as habilidades de desenvolvimento 
+Todos são bem-vindos para desenvolver módulos, trocar tecnologia de segurança e melhorar as habilidades de desenvolvimento
 
-Vou insistir em manter a biblioteca de módulos por um longo tempo e gostarioa de ajuda de todos 
+Vou insistir em manter a biblioteca de módulos por um longo tempo e gostaria da ajuda de todos
 
 visão geral
 -------------
@@ -16,7 +16,7 @@ Para escrever um módulo completo do thg, você precisa atender aos seguintes re
 
  * O módulo deve ser uma `` class`` e o nome da classe é ``Modules``
  * A classe `` Modules`` deve herdar de `` BaseExploit/BaseAuxiliary/BasePost/BasePayload/BaseNops/BaseEvasion`` (introduzido por `` lib.BaseMode.mods import Base*``)
- * O módulo deve conter o método `` __init__``, que deve chamar o método `` __init__`` da classe pai (via `` super ("Modules"", self) .__ init __ () ``)
+ * O módulo deve conter o método `` __init__``, que deve chamar o método `` __init__`` da classe pai (via `` super("Modules", self).__init__() ``)
  * O módulo deve preencher as informações relevantes, usando o método `` self.thg_update_info () ``
  * Os objetivos do POC estão atualmente divididos em tipos `` http`` e `` tcp``, usando `` self.register_tcp_target () `` para registrar alvos do tipo tcp. Registre o tipo de destino http com `` self.register_http_target () ``.
  * Após o registro, o alvo pode ser recuperado usando `` self.options.get_option``.
@@ -35,7 +35,7 @@ Basic code: ::
 
     import socket
     from lib.BaseMode.mods.Auxiliary.Auxiliary import BaseAuxiliary
-    
+
     class Modules(BaseAuxiliary):
         def __init__(self):
             super(Modules, self).__init__()
@@ -112,7 +112,7 @@ Primeira classe de escrita ::
     from lib.BaseMode.mods.Payload.Payload import BasePayload
     from lib.BaseMode.mods.Post.Post import BasePost
     from lib.BaseMode.mods.Osint.Osint import BaseOsint
-    
+
     class Modules(BaseAuxiliary):
         pass
 
@@ -143,7 +143,7 @@ Para explicar isso, primeiro observe a primeira linha do método `` __init__``: 
 Esta linha é necessária, e você precisa chamar o método `` __init__`` da classe pai para inicializar o módulo.
 
 Em seguida, atualize as informações do módulo usando o método `` self.thg_update_info``: ::
-    
+
            self.thg_update_info({
                 "name": "base",
                 "description": "descricao da modulo",
@@ -157,7 +157,7 @@ Em seguida, atualize as informações do módulo usando o método `` self.thg_up
             })
 
 Então use o método `` self.register_tcp_target`` para registrar um alvo do tipo tcp. Este método registra automaticamente os seguintes parâmetros para nós:
-       
+
     self.register_options([
       BaseOption(name="HOST", required=True, description="The IP address to be tested"),
       BaseOption(name="PORT", required=True, description="The port to be tested", value=port_value),
@@ -168,13 +168,13 @@ Então use o método `` self.register_tcp_target`` para registrar um alvo do tip
 Para nossas vulnerabilidades não autorizadas de ****, HOST e PORT são suficientes, portanto não há necessidade de registrar os parâmetros adicionais.
 Se você precisar registrar parâmetros adicionais, você pode chamar o método `` self.register_options``, passando uma lista contendo o objeto `` BaseOption``.
 
-Método de importação automatico da class base que voce escolheu 
+Método de importação automatico da class base que voce escolheu
 
 Complete o método de verificação
 --------------
 
 O método de verificação grava principalmente para detectar a existência de uma vulnerabilidade e não há comportamento de ataque. código mostra como abaixo:
-        
+
      Def check(self):
         Host = self.options.get_option("HOST")
         Port = int(self.options.get_option("PORT"))
@@ -236,7 +236,7 @@ Complete o método de exploração
 ----------------
 
 Essa vulnerabilidade é relativamente simples, portanto, você não pode retornar o método self.check sem implementar o método de exploração. ::
-     
+
      Def exploit(self):
          Return self.check()
 
