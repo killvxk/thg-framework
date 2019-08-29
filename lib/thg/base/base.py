@@ -120,16 +120,15 @@ class THGBASECONSOLE(Cmd,Database):
         if pluginName in pluginNames:
             print(Fore.RED+"[*] Plugin {} found.".format(pluginName))
             # 'self' is the mainMenu object
-            self.mods_commands = plugins.load_plugin(self, pluginName, args.raw, self.statement_parser)
-            self.thgcmd_say = self.mods_commands[0]#reload plugins && with_category
-            self.all_names.append("thgcmd_say")
-            # print(help(argparse))
-            # print(help(self.loadedPlugins['mod']))
+            self.plugin_object = plugins.load_plugin(self, pluginName, args.raw, self.statement_parser)
+            plugin_method_names = self.plugin_object["method_names"]
+            plugin_methods = self.plugin_object["methods"]
+            for name in plugin_method_names:
+                self.all_names.append(name)
+                cont = plugin_method_names.index(name)
+                setattr(self, name, plugin_methods[cont])
         else:
             raise Exception("[!] Error: the plugin specified does not exist in {}.".format(pluginPath))
-        # print(help(plugins.Plugin))
-        # for key, value in plugins.Plugin.__dict__.items():
-        #     print(str(key) + " <=> " + str(value) + "\n")
 
     @with_category(CMD_CORE)
     def thgcmd_banner(self, args):
