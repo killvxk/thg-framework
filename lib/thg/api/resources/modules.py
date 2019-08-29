@@ -1,5 +1,4 @@
 from flask_restful import Resource, reqparse
-
 hoteis = [
         {
         'hotel_id': 'alpha',

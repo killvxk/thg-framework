@@ -1,0 +1,49 @@
+2019-08-24 19:59:34,819 DEBUG urllib3.connectionpool       http://localhost:None "GET /v1.35/containers/thgdb-mongodb/json HTTP/1.1" 200 None
+2019-08-24 19:59:34,836 DEBUG urllib3.connectionpool       http://localhost:None "POST /v1.35/containers/1a18b54b1b917a9a8aba6a2ba13251099426628b958bf04a18fc280e058917aa/start HTTP/1.1" 304 0
+2019-08-24 19:59:34,842 DEBUG getmac       Raw MAC found: 90:cd:b6:a4:64:e1
+
+2019-08-24 20:03:10,944 DEBUG urllib3.connectionpool       http://localhost:None "GET /v1.35/containers/thgdb-mongodb/json HTTP/1.1" 404 47
+2019-08-24 20:03:27,024 DEBUG docker.utils.config       Trying paths: ['/home/darkcode/.docker/config.json', '/home/darkcode/.dockercfg']
+2019-08-24 20:03:27,025 DEBUG docker.utils.config       No config file found
+2019-08-24 20:03:27,025 DEBUG docker.utils.config       Trying paths: ['/home/darkcode/.docker/config.json', '/home/darkcode/.dockercfg']
+2019-08-24 20:03:27,025 DEBUG docker.utils.config       No config file found
+2019-08-24 20:03:27,031 DEBUG urllib3.connectionpool       http://localhost:None "GET /v1.35/images/bitnami/mongodb/json HTTP/1.1" 200 None
+2019-08-24 20:03:27,033 DEBUG urllib3.connectionpool       http://localhost:None "GET /v1.35/containers/thgdb-mongodb/json HTTP/1.1" 404 47
+2019-08-24 20:03:27,034 DEBUG docker.utils.config       Trying paths: ['/home/darkcode/.docker/config.json', '/home/darkcode/.dockercfg']
+2019-08-24 20:03:27,034 DEBUG docker.utils.config       No config file found
+2019-08-24 20:03:27,035 DEBUG docker.utils.config       Trying paths: ['/home/darkcode/.docker/config.json', '/home/darkcode/.dockercfg']
+2019-08-24 20:03:27,035 DEBUG docker.utils.config       No config file found
+2019-08-24 20:03:27,315 DEBUG urllib3.connectionpool       http://localhost:None "POST /v1.35/containers/create?name=thgdb-mongodb HTTP/1.1" 201 90
+2019-08-24 20:03:27,318 DEBUG urllib3.connectionpool       http://localhost:None "GET /v1.35/containers/c1e6c9cded39a5ec48253ea40d21545ba9ff2f7c2957eac5dda5ffebae10b91b/json HTTP/1.1" 200 None
+2019-08-24 20:03:27,959 DEBUG urllib3.connectionpool       http://localhost:None "POST /v1.35/containers/c1e6c9cded39a5ec48253ea40d21545ba9ff2f7c2957eac5dda5ffebae10b91b/start HTTP/1.1" 204 0
+2019-08-24 20:03:27,962 DEBUG urllib3.connectionpool       http://localhost:None "POST /v1.35/containers/c1e6c9cded39a5ec48253ea40d21545ba9ff2f7c2957eac5dda5ffebae10b91b/start HTTP/1.1" 304 0
+2019-08-24 20:03:27,971 DEBUG getmac       Raw MAC found: 90:cd:b6:a4:64:e1
+
+2019-08-24 20:04:50,935 DEBUG urllib3.connectionpool       http://localhost:None "GET /v1.35/containers/thgdb-mongodb/json HTTP/1.1" 200 None
+2019-08-24 20:04:50,937 DEBUG urllib3.connectionpool       http://localhost:None "POST /v1.35/containers/c1e6c9cded39a5ec48253ea40d21545ba9ff2f7c2957eac5dda5ffebae10b91b/start HTTP/1.1" 304 0
+2019-08-24 20:04:50,940 DEBUG getmac       Raw MAC found: 90:cd:b6:a4:64:e1
+
+2019-08-24 20:05:04,999 DEBUG docker.utils.config       Trying paths: ['/home/darkcode/.docker/config.json', '/home/darkcode/.dockercfg']
+2019-08-24 20:05:04,999 DEBUG docker.utils.config       No config file found
+2019-08-24 20:05:05,000 DEBUG docker.utils.config       Trying paths: ['/home/darkcode/.docker/config.json', '/home/darkcode/.dockercfg']
+2019-08-24 20:05:05,000 DEBUG docker.utils.config       No config file found
+2019-08-24 20:05:05,004 DEBUG urllib3.connectionpool       http://localhost:None "GET /v1.35/images/bitnami/mongodb/json HTTP/1.1" 200 None
+2019-08-24 20:05:05,007 DEBUG urllib3.connectionpool       http://localhost:None "GET /v1.35/containers/thgdb-mongodb/json HTTP/1.1" 200 None
+2019-08-24 20:05:05,008 DEBUG docker.utils.config       Trying paths: ['/home/darkcode/.docker/config.json', '/home/darkcode/.dockercfg']
+2019-08-24 20:05:05,008 DEBUG docker.utils.config       No config file found
+2019-08-24 20:05:05,008 DEBUG docker.utils.config       Trying paths: ['/home/darkcode/.docker/config.json', '/home/darkcode/.dockercfg']
+2019-08-24 20:05:05,009 DEBUG docker.utils.config       No config file found
+2019-08-24 20:05:05,733 DEBUG urllib3.connectionpool       http://localhost:None "POST /v1.35/containers/c1e6c9cded39a5ec48253ea40d21545ba9ff2f7c2957eac5dda5ffebae10b91b/stop HTTP/1.1" 204 0
+2019-08-24 20:05:05,755 DEBUG urllib3.connectionpool       http://localhost:None "DELETE /v1.35/containers/c1e6c9cded39a5ec48253ea40d21545ba9ff2f7c2957eac5dda5ffebae10b91b?v=False&link=False&force=False HTTP/1.1" 204 0
+2019-08-24 20:05:05,756 DEBUG docker.utils.config       Trying paths: ['/home/darkcode/.docker/config.json', '/home/darkcode/.dockercfg']
+2019-08-24 20:05:05,756 DEBUG docker.utils.config       No config file found
+2019-08-24 20:05:05,756 DEBUG docker.utils.config       Trying paths: ['/home/darkcode/.docker/config.json', '/home/darkcode/.dockercfg']
+2019-08-24 20:05:05,757 DEBUG docker.utils.config       No config file found
+2019-08-24 20:05:05,786 DEBUG urllib3.connectionpool       http://localhost:None "POST /v1.35/containers/create?name=thgdb-mongodb HTTP/1.1" 201 90
+2019-08-24 20:05:05,789 DEBUG urllib3.connectionpool       http://localhost:None "GET /v1.35/containers/58c31ca2b2f6461be319f92317c45afada172c388c4751b60b1ea98f973e71e4/json HTTP/1.1" 200 None
+2019-08-24 20:05:06,240 DEBUG urllib3.connectionpool       http://localhost:None "POST /v1.35/containers/58c31ca2b2f6461be319f92317c45afada172c388c4751b60b1ea98f973e71e4/start HTTP/1.1" 204 0
+2019-08-24 20:05:06,242 DEBUG urllib3.connectionpool       http://localhost:None "POST /v1.35/containers/58c31ca2b2f6461be319f92317c45afada172c388c4751b60b1ea98f973e71e4/start HTTP/1.1" 304 0
+2019-08-27 12:53:19,610 DEBUG urllib3.connectionpool       http://localhost:None "GET /v1.35/containers/thgdb-mongodb/json HTTP/1.1" 200 None
+2019-08-27 12:53:20,194 DEBUG urllib3.connectionpool       http://localhost:None "POST /v1.35/containers/58c31ca2b2f6461be319f92317c45afada172c388c4751b60b1ea98f973e71e4/start HTTP/1.1" 204 0
+2019-08-27 12:53:20,196 DEBUG getmac       Raw MAC found: 90:cd:b6:a4:64:e1
+
