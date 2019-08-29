@@ -16,7 +16,6 @@ def load_plugin(THGBASECONSOLE, pluginName, line, statement):
     pluginObj = module.Plugin(THGBASECONSOLE, cmd2.StatementParser)
     THGBASECONSOLE.loadedPlugins = {str(pluginName): pluginObj}
     pluginObj.onLoad(line)
-    thgcmd_say = getattr(pluginObj, "thgcmd_say")
     base_funcs = [name for name in THGBASECONSOLE.__dict__["all_names"] if name.startswith(COMMAND_FUNC_PREFIX) or name.startswith(HELP_FUNC_PREFIX)]
     plugin_funcs = [name for name in pluginObj.__dict__["all_names"] if name.startswith(COMMAND_FUNC_PREFIX) or name.startswith(HELP_FUNC_PREFIX)]
     plugin_method_names = [name for name in plugin_funcs if name not in base_funcs]
