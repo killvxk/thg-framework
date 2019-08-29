@@ -30,9 +30,8 @@ class Plugin(cmd2.Cmd):
         self.poutput(msg)
 
 
-    def help_say(self):
-        """ help for say method"""
-        print("Say help!")
+    def help_template(self):
+        """ help for template method"""
 
     def hookTestMethod(self) -> None:
         self.poutput("before the loop begins")
