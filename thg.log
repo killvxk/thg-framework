@@ -47,6 +47,7 @@
 2019-08-27 12:53:20,194 DEBUG urllib3.connectionpool       http://localhost:None "POST /v1.35/containers/58c31ca2b2f6461be319f92317c45afada172c388c4751b60b1ea98f973e71e4/start HTTP/1.1" 204 0
 2019-08-27 12:53:20,196 DEBUG getmac       Raw MAC found: 90:cd:b6:a4:64:e1
 
+<<<<<<< HEAD
 2019-09-04 08:36:36,489 DEBUG urllib3.connectionpool       http://localhost:None "GET /v1.35/containers/thgdb-mongodb/json HTTP/1.1" 200 None
 2019-09-04 08:36:37,040 DEBUG urllib3.connectionpool       http://localhost:None "POST /v1.35/containers/019548d453a4b00894a5411066e6206e69154853859c6fcd9dfec516d967e8f4/start HTTP/1.1" 204 0
 2019-09-04 08:36:37,043 DEBUG getmac       Raw MAC found: 90:cd:b6:a4:64:e1
@@ -97,3 +98,5 @@
 2019-09-04 08:38:14,306 DEBUG urllib3.connectionpool       http://localhost:None "POST /v1.35/containers/b77c381912771d865199129b61f2eb6ee268530d2737d41343ef0e8b852dcdcd/start HTTP/1.1" 304 0
 2019-09-04 08:38:14,308 DEBUG urllib3.connectionpool       http://localhost:None "GET /v1.35/containers/thgdb-mongodb/json HTTP/1.1" 200 None
 2019-09-04 08:38:14,309 DEBUG urllib3.connectionpool       http://localhost:None "POST /v1.35/containers/b77c381912771d865199129b61f2eb6ee268530d2737d41343ef0e8b852dcdcd/start HTTP/1.1" 304 0
+=======
+>>>>>>> 2374ad3070fcdf4d7e947077f4abe9663dd0412f
