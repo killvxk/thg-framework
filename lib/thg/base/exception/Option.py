@@ -5,4 +5,4 @@ class OptionRequired(Exception):
         self.option = option
 
     def __str__(self):
-        return "Module option {name} is required".format(name=self.option.name)
+        return "Module option {name} is required".format(name=self.option.nome)

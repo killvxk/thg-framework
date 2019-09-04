@@ -1,0 +1,34 @@
+# -*- coding: utf-8 -*-
+
+from setuptools import setup, find_packages
+
+
+with open('README.rst') as f:
+    readme = f.read()
+
+with open('LICENSE') as f:
+    license = f.read()
+
+setup(
+    name='$setup_name',
+    version='$setup_version',
+    description='$setup_description',
+    long_description=readme,
+    author='$setup_author',
+    author_email='$setup_author_email',
+    url='$setup_url',
+    license=license,
+    packages=find_packages(exclude=('tests', 'docs')),
+    include_package_data=True,
+    install_requires=[],  # packages needed outside the standard library
+    python_requires='>=3',
+    classifiers=[
+        'Development Status :: 2 - Pre-Alpha',
+        'Intended Audience :: Developers',
+        'Natural Language :: English',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+    ]
+)

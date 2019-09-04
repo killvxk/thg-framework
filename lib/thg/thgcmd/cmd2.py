@@ -379,6 +379,7 @@ class Cmd(cmd.Cmd):
         # initialize plugin system
         # needs to be done before we call __init__(0)
         self._initialize_plugin_system()
+        # self.all_commands = self.get_all_commands()
 
         # Call super class constructor
         super().__init__(completekey=completekey, stdin=stdin, stdout=stdout)
@@ -587,6 +588,8 @@ class Cmd(cmd.Cmd):
         # If any command has been categorized, then all other commands that haven't been categorized
         # will display under this section in the help output.
         self.default_category = 'Uncategorized'
+
+        self.all_names = self.get_names()
 
     # -----  Methods related to presenting output to the user -----
 
@@ -1597,7 +1600,9 @@ class Cmd(cmd.Cmd):
 
     def get_all_commands(self) -> List[str]:
         """Return a list of all commands"""
-        return [name[len(COMMAND_FUNC_PREFIX):] for name in self.get_names()
+        if not hasattr(self, 'all_names'):
+            self.all_names = self.get_names()
+        return [name[len(COMMAND_FUNC_PREFIX):] for name in self.all_names
                 if name.startswith(COMMAND_FUNC_PREFIX) and callable(getattr(self, name))]
 
     def get_visible_commands(self) -> List[str]:
@@ -1635,9 +1640,18 @@ class Cmd(cmd.Cmd):
         macro_names = set(self.macros)
         return list(visible_commands | alias_names | macro_names)
 
+    # def set_names(self, name):
+    #     self.all_names = self.get_names().append(name)
+    #     print("Setting complete.")
+    #     return self.all_names
+
     def get_help_topics(self) -> List[str]:
         """ Returns a list of help topics """
-        return [name[len(HELP_FUNC_PREFIX):] for name in self.get_names()
+        # print(self.get_names())
+        #all_names = self.get_names()
+        # self.all_names = self.get_names()
+        # print(self.all_names)
+        return [name[len(HELP_FUNC_PREFIX):] for name in self.all_names
                 if name.startswith(HELP_FUNC_PREFIX) and callable(getattr(self, name))]
 
     # noinspection PyUnusedLocal
@@ -2713,6 +2727,9 @@ class Cmd(cmd.Cmd):
     @with_category(CMD_CORE)
     def thgcmd_help(self, args: argparse.Namespace) -> None:
         """List available commands or provide detailed help for a specific command"""
+        # print(args)
+        # print(HELP_FUNC_PREFIX + str(args.command))
+        # help_func = HELP_FUNC_PREFIX + str(args.command)
         if not args.command or args.verbose:
             self._help_menu(args.verbose)
 
@@ -2740,7 +2757,16 @@ class Cmd(cmd.Cmd):
 
             # Otherwise delegate to cmd base class thgcmd_help()
             else:
-                super().thgcmd_help(args.command)
+                funcs = list(self.loadedPlugins.values())
+                # func_list = [key for key in funcs]
+                func_name = HELP_FUNC_PREFIX + args.command
+                # print(func_list.index(func))
+                # print(type(func_name))
+                for key in funcs:
+                    func = getattr(key, func_name, None)
+                    if(func is not None):
+                        self.poutput(func.__doc__)
+
 
     def _help_menu(self, verbose: bool = False) -> None:
         """Show a list of commands which help can be displayed for.
@@ -4091,7 +4117,7 @@ class Cmd(cmd.Cmd):
                                  of the command being disabled.
                                  ex: message_to_print = "{} is currently disabled".format(COMMAND_NAME)
         """
-        all_commands = self.get_all_commands()
+        # all_commands = self.get_all_commands()
 
         for cmd_name in all_commands:
             func = self.cmd_func(cmd_name)

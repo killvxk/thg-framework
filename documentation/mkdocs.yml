@@ -44,10 +44,17 @@ nav:
   - tags: cli/tags.md
   - LICENSE: ./LICENSE.md
 
+
+- thg_dev:
+    - Roadmaps:
+      - 2019:
+        - Roadmap: ./dev/roadmaps/2019/2019-Roadmap.md
+        - Roadmap_Review: ./dev/roadmaps/2019/2019-Roadmap-Review.md
+
+
 - Contributing:
   - Get Started: ./contributing/Contributing-to-thg.md
   - templates: cli/templates.md
-
 - documentation:
   - capture the flag:
     - basic:

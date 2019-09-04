@@ -1,0 +1,11 @@
+{
+    "base": [
+        "setup.py",
+        ".gitignore"
+    ],
+    "bin": [
+        "project.py",
+        "__init__.py",
+        "<--"
+    ]
+}

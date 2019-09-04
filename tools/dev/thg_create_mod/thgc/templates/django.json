@@ -1,0 +1,42 @@
+{
+    "base": [
+        "manage.py",
+        "README.rst",
+        "AUTHORS.rst",
+        "LICENSE",
+        ".gitignore"
+    ],
+    "bin": [
+        "__init__.py",
+        "urls.py",
+        "wsgi.py"
+    ],
+    "settings": [
+        "__init__.py",
+        "base.py",
+        "dev.py",
+        "prod.py",
+        "<--",
+        "<--"
+    ],
+    "static": [],
+    "css": [
+        "<--"
+    ],
+    "js": [
+        "<--",
+        "<--"
+    ],
+    "templates": [
+        "base.html",
+        "index.html",
+        "<--"
+    ],
+    "requirements": [
+        "base.txt",
+        "dev.txt",
+        "test.txt",
+        "prod.txt",
+        "<--"
+    ]
+}

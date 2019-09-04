@@ -1,29 +1,28 @@
+import sys, time, pkgutil, threading, json
 import argparse
 from io import BytesIO
 from queue import Queue
+from colorama import Fore
+from tabulate import tabulate
 from lib.thg.thgcmd import *
 from lib.thg.thgcmd.ansi import style
 from lib.thg.thgcmd.utils import  basic_complete
-from art import text2art
-from pathlib import Path
-from lib.thg.thgcmd.ansi import style
-from tabulate import tabulate
-from colorama import Fore
-from random import *
 from lib.thg.base import plugins
 from lib.thg.base.config.mensagens import mensagem_do_dia
-import psutil,os,platform
-from utils.module import *
-from utils import module
 from lib.thg.base.config.Version import __codenome__,__version__
 from lib.thg.base.config.info_init import thg_add_init
-from importlib import import_module, reload
-from utils import module
 from lib.thg.core.Database.Database import Database
 from lib.thg.base.BaseOptions import BaseOption
 from lib.thg.base.exception.Module import ModuleNotUseException
-import sys, time, pkgutil, threading, json
 from lib.thg.core.Database.DBGen import module
+from lib.thg.thgcmd.cmd2 import Cmd
+from art import text2art
+from pathlib import Path
+from utils.module import *
+from utils import module
+from importlib import import_module, reload
+from random import *
+import psutil,os,platform
 
 class THGBASECONSOLE(Cmd,Database):
     #__metaclass__ = Database
@@ -41,7 +40,7 @@ class THGBASECONSOLE(Cmd,Database):
     CMD_SYSTEM= "SYSTEM Commands"
     CMD_PLUGINS = "Plugins Commands"
 
-    def __init__(self):
+    def __init__(self, *args):
         shortcuts = dict()
         shortcuts.update({'add': 'commandos longos do thg'})
         alias_script = os.path.join(os.path.dirname(__file__), '.cmd2rc')
@@ -67,6 +66,7 @@ class THGBASECONSOLE(Cmd,Database):
         print("\n"+Fore.RED+"'''"+item+"'''"+"\n")
         self.loadedPlugins = {}
         self.resourceQueue = []
+        self.all_names = self.get_names()
 
     '''
      # command categories
@@ -108,27 +108,28 @@ class THGBASECONSOLE(Cmd,Database):
         print(Fore.RED+"[*] Use \"plugin <plugin name>\" to load a plugin.")
 
     @with_category(CMD_PLUGINS)
-    def thgcmd_plugin(self, pluginName):
+    def thgcmd_plugin(self, args):
         "Load a plugin file to extend thg."
         pluginPath = os.path.abspath("plugins")
         print(Fore.RED+"[*] Searching for plugins at {}".format(pluginPath))
         # From walk_packages: "Note that this function must import all packages
         # (not all modules!) on the given path, in order to access the __path__
         # attribute to find submodules."
+        pluginName = args
         pluginNames = [name for _, name, _ in pkgutil.walk_packages([pluginPath])]
         if pluginName in pluginNames:
             print(Fore.RED+"[*] Plugin {} found.".format(pluginName))
-
-            message = "[*] Loading plugin {}".format(pluginName)
-            signal = json.dumps({
-                'print': True,
-                'message': message
-            })
-
             # 'self' is the mainMenu object
-            plugins.load_plugin(self, pluginName)
+            self.mods_commands = plugins.load_plugin(self, pluginName, args.raw, self.statement_parser)
+            self.thgcmd_say = self.mods_commands[0]#reload plugins && with_category
+            self.all_names.append("thgcmd_say")
+            # print(help(argparse))
+            # print(help(self.loadedPlugins['mod']))
         else:
             raise Exception("[!] Error: the plugin specified does not exist in {}.".format(pluginPath))
+        # print(help(plugins.Plugin))
+        # for key, value in plugins.Plugin.__dict__.items():
+        #     print(str(key) + " <=> " + str(value) + "\n")
 
     @with_category(CMD_CORE)
     def thgcmd_banner(self, args):
@@ -186,13 +187,13 @@ class THGBASECONSOLE(Cmd,Database):
 
 
     @with_category(CMD_CORE)
-    def thgcmd_version(self,args):
+    def thgcmd_version(self, args):
         """show version"""
         if args == "all":
             self._print_item(__version__+" "+__codenome__)
         if args == "codenome":
             self._print_item(__codenome__)
-        if args =="version":
+        if args == "version":
             self._print_item(__version__)
         if args == "":
             self._print_item("help")
@@ -201,7 +202,7 @@ class THGBASECONSOLE(Cmd,Database):
             self._print_item("codenome => show codenome")
             self._print_item("version => show version")
     @with_category(CMD_CORE)
-    def thgcmd_ip(self,args):
+    def thgcmd_ip(self, args):
         """show ip"""
         if args == "external":
             self._print_item("send pycurl request...")
@@ -216,7 +217,7 @@ class THGBASECONSOLE(Cmd,Database):
             string_body = buffer.getvalue().decode('utf-8')
             self._print_item(str(string_body))
 
-        elif args =="internal":
+        elif args == "internal":
             self._print_item(thg_add_init.ipi())
         elif args == "help":
             self._print_item("external => show external ip ")
@@ -226,7 +227,7 @@ class THGBASECONSOLE(Cmd,Database):
     #    """Exit the console"""
     #    exit(1)
     @with_category(CMD_CORE)
-    def thgcmd_exec(self,args):
+    def thgcmd_exec(self, args):
         """ <shell thg_command> <args> Execute a thg_command in a shell"""
         os.system(args)
     @with_category(CMD_MODULE)
@@ -370,7 +371,7 @@ class THGBASECONSOLE(Cmd,Database):
             self.poutput(style("Module info:"))
             for item in info.keys():
                 info_table.append([item + ":", info.get(item)])
-            self.poutput(tabulate(info_table, colalign=("right",), tablefmt="plain"), )
+            self.poutput(tabulate(info_table, colalign=("right", ), tablefmt="plain"), )
 
         if content == "options" or content == "info":
             options = self.module_instance.options.get_options()
@@ -382,8 +383,8 @@ class THGBASECONSOLE(Cmd,Database):
                     options_table_row.append(getattr(option, field))
                 options_table.append(options_table_row)
 
-            self.poutput(style("Module options:",fg="red"))
-            self.poutput(style(tabulate(options_table,headers=default_options_instance.__dict__.keys(),),fg="red"))
+            self.poutput(style("Module options:", fg="red"))
+            self.poutput(style(tabulate(options_table, headers=default_options_instance.__dict__.keys(), ), fg="red"))
 
         if content == "missing":
             missing_options = self.module_instance.get_missing_options()
@@ -404,9 +405,10 @@ class THGBASECONSOLE(Cmd,Database):
     @with_category(CMD_MODULE)
     def thgcmd_run(self, args):
         """alias to exploit"""
-        self.thgcmd_exploit(args=args)
+        self.thgcmd_exploit(args = args)
 
     def exploit_thread(self, target, target_type, thread_queue):
+        """exploit thread"""
         target_field = None
         port = None
 
@@ -720,7 +722,7 @@ class THGBASECONSOLE(Cmd,Database):
 
         main()
     @with_category(CMD_SYSTEM)
-    def thgcmd_sensors_temperatures(self,*args):
+    def thgcmd_sensors_temperatures(self, *args):
         """
         utility on Linux printing hardware temperatures.
         """
@@ -740,7 +742,7 @@ class THGBASECONSOLE(Cmd,Database):
 
         main()
     @with_category(CMD_SYSTEM)
-    def thgcmd_sensor(self,*args):
+    def thgcmd_sensor(self, *args):
 
         """
         A clone of 'sensors' utility on Linux printing hardware temperatures,
@@ -804,7 +806,7 @@ class THGBASECONSOLE(Cmd,Database):
 
         main()
     @with_category(CMD_SYSTEM)
-    def thgcmd_fans(self,*args):
+    def thgcmd_fans(self, *args):
         """
         Show fans information.
         """
@@ -829,7 +831,7 @@ class THGBASECONSOLE(Cmd,Database):
 
         main()
     @with_category(CMD_SYSTEM)
-    def thgcmd_netstat(self,*args):
+    def thgcmd_netstat(self, *args):
         # !/usr/bin/env python
 
         """
@@ -874,7 +876,7 @@ class THGBASECONSOLE(Cmd,Database):
 
         main()
     @with_category(CMD_SYSTEM)
-    def thgcmd_procsmensage(self,*args):
+    def thgcmd_procsmensage(self, *args):
         """
         Show detailed memory usage about all (querable) processes.
         """
@@ -941,7 +943,7 @@ class THGBASECONSOLE(Cmd,Database):
 
         sys.exit(main())
     @with_category(CMD_SYSTEM)
-    def thgcmd_pstree(self,*args):
+    def thgcmd_pstree(self, *args):
         """
         Similar to 'ps aux --forest' on Linux, prints the process list
         as a tree structure.

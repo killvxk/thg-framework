@@ -1,0 +1,33 @@
+{
+    "base": [
+        "setup.py",
+        "requirements.txt",
+        "README.rst",
+        "AUTHORS.rst",
+        "LICENSE",
+        "MANIFEST.in",
+        ".gitignore"
+    ],
+    "bin": [
+        "__init__.py",
+        "views.py",
+        "models.py",
+        "forms.py"
+    ],
+    "static": [
+        "style.css",
+        "<--"
+    ],
+    "templates": [
+        "layout.html",
+        "index.html",
+        "login.html",
+        "<--",
+        "<--"
+    ],
+    "tests": [
+        "__init__.py",
+        "test_project.py",
+        "<--"
+    ]
+}

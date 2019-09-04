@@ -142,7 +142,6 @@ def deb_ubu():
     print(Fore.BLUE + banner)
     # faz o check dos programas
     for i in listt:
-        pass
         pkg = cache[i]
         if pkg.is_installed:
             print("{colorp}{i} =>{color} already installed".format(colorp=Fore.RED, color=Fore.CYAN, i=i))

@@ -1,0 +1,26 @@
+ {
+    "base": [
+        "LICENSE",
+        "setup.py",
+        "README.rst",
+        "AUTHORS.rst",
+        ".gitignore",
+        "requirements.txt",
+        "test-requirements.txt",
+        "MANIFEST.in"
+    ],
+    "bin": [
+        "project.py",
+        "__init__.py",
+        "<--"
+    ],
+    "docs": [
+        "index.rst",
+        "<--"
+    ],
+    "tests": [
+        "__init__.py",
+        "test_project.py",
+        "<--"
+    ]
+}
