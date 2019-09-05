@@ -74,12 +74,12 @@ def makefile(file, project_name):
     # change the names of project_name.py and test_project.py
     if file == 'project.py':
         file = '{}'.format(project_name + '.py')
-        print(file)
+
     elif file == 'test_project.py':
         file = '{}'.format('test_' + project_name + '.py')
-        print(file)
+
     if file == '<--':  # go back one directory
-        print(file)
+
         os.chdir('..')
     else:
         try:

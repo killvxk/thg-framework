@@ -1,62 +1,54 @@
-Release notes inform our users about the stuff we're shipping in each release. By looking at our release notes, our users should be able to easily understand what's new, what's fixed, and what's changed in the release. Therefore, **all PRs, except for minor fixes and tweaks, must have release notes.**
+* As notas de versão informam nossos usuários sobre o material que estamos enviando em cada versão. Observando nossas notas de versão, nossos usuários devem ser capazes de entender facilmente o que há de novo, o que foi corrigido e o que foi alterado no lançamento. Portanto, todos os PRs, exceto pequenas correções e ajustes, devem ter notas de versão. 
+* Para adicionar uma nota de versão a uma solicitação pull, você precisará adicioná-la como um comentário, assim:
 
-To add a release note to a pull request, you'll need to add it as a comment, like so:
+Você precisará marcar o comentário para inclusão nas notas de versão usando o cabeçalho `# Release Notes '. Depois de aplicar o cabeçalho das notas de versão, você pode inserir o texto das notas de versão que deseja usar.
+É isso aí! Depois de adicionar o texto das notas de versão, poderemos extraí-las das solicitações pull quando executamos nosso script de notas de versão e compilamos em um único documento.
 
-![](http://i1097.photobucket.com/albums/g350/doanosaur/gh-release-notes_zpsbdkholll.jpg)
+### Como escrever notas de versão
 
-You'll need to tag the comment for inclusion in the release notes by using the `# Release Notes` heading. After you apply the release notes heading, you can enter the release notes text you want to use. 
+Ok, agora que você sabe como adicionar uma nota de versão, está se perguntando o que deveria escrever.
+Basicamente, uma nota de versão resume a solicitação de recebimento e descreve o valor do reparo / recurso para o usuário. Cada nota de versão possui um título, um número PR e uma breve descrição.
+Aqui está um exemplo de como uma nota de versão se parece:
 
-That's it! After you add the release notes text, we'll be able to extract them from the pull requests when we run our release notes script and compile them into a single document. 
+>a class plugin esta funcionando 
 
-### Writing Release Notes 
+#### Notas da versão para aprimoramentos
 
-Okay, so now that you know how to add a release note, you're wondering what you're supposed to write. 
+Um aprimoramento indica que um aprimoramento ou novo recurso foi adicionado à estrutura. Os aprimoramentos incluem itens como módulos auxiliares, módulos pós-exploração e novos payloads.
 
-Basically, a release note summarizes the pull request and describes the value of the fix/feature to the user. Each release note has a title, a PR number, and a brief description. 
+Ao escrever notas de versão para um aprimoramento, tente responder às seguintes perguntas:
 
-Here's an example of what a release note looks likes:
+* Qual é o aprimoramento?
+* Por que é valioso ou importante para os usuários?
+* Como eles podem usá-lo?
 
->The Beholder plugin automatically captures keystrokes, screenshots, and webcam snapshots from your active sessions. Run this plugin to collect data from your compromised targets every 30 seconds. 
+Por exemplo, a seguir, uma nota de versão para um aprimoramento:
 
-#### Release Notes for Enhancements
+> Os novos comandos 'plugin $plugin_name, plugins' permite executar pesquisas de plugins
+>
+#### Notas da versão para defeitos
+Um defeito é uma correção para um problema que fazia com que um recurso ou funcionalidade específico não funcionasse da maneira esperada. Basicamente, um defeito indica que algo foi quebrado e foi corrigido.
 
-An enhancement indicates that an improvement or new feature has been added to the framework. Enhancements include things like auxiliary modules, post-exploitation modules, and new payloads. 
+Ao escrever notas de versão para um defeito, tente responder às seguintes perguntas:
 
-When you write release notes for an enhancement, you should try to answer the following questions:
+* O que foi quebrado?
+* Como foi consertado?
+* Por que isso é importante para os usuários?
 
-* What is the enhancement?
-* Why is it valuable or important to users?
-* How can they use it?
+Aqui está um exemplo de um defeito:
 
-For example, the following is a release note for an enhancement:
+> O cabeçalho do email continha cabeçalhos de data e assunto duplicados, o que fazia com que servidores de email como o AWS SES rejeitassem os emails. Essa correção remove os cabeçalhos duplicados para que as campanhas possam enviar e-mails com êxito.
 
-> The new  'resolve' command enables you to perform DNS lookups with Meterpreter, without leaving the session to run additional modules. To resolve host names on the target, you can run the 'resolve' command followed by the host name. For example, in the Meterpreter prompt, you can type something like 'resolve rapid7.com' to view the host resolutions for Rapid7.
+#### Notas da versão para explorações
 
-#### Release Notes for Defects
+Uma exploração é um módulo que tira proveito de uma vulnerabilidade e fornece algum tipo de acesso ao destino. Nós chamamos explorações explicitamente porque elas são gostosas.
 
-A defect is a fix for an issue that caused a particular feature or functionality to not work the way it's expected to work. Basically, a defect indicates that something was broken, and we've fixed it. 
+Ao escrever notas de versão para uma exploração, tente responder às seguintes perguntas:
 
-When you write release notes for a defect, you should try to answer the following questions:
+* Qual vulnerabilidade o módulo está explorando?
+* Que tipo de acesso você pode obter com o módulo?
+* Você precisa de credenciais para explorar a vulnerabilidade?
 
-* What was broken?
-* How was it fixed?
-* Why is this important to users? 
+E, finalmente, aqui está um exemplo de exploits:
 
-Here's an example for a defect: 
-
-> The email header contained duplicate date and subject headers, which caused email servers like AWS SES, to reject the emails. This fix removes the duplicate headers so that campaigns can send emails successfully. 
-
-#### Release Notes for Exploits
-
-An exploit is a module that takes advantage of a vulnerability and provides some type of access to the target. We call out exploits explicitly because they're the hotness.
-
-When you write release notes for an exploit, you should try to answer the following questions:
-
-* What vulnerability is the module exploiting?
-* What type of access can you achieve with the module?
-* Do you need credentials to exploit the vulnerability?
-
-And finally, here's an example for exploits:
-
-> This module allows you to exploit HP Data Protector, a backup and recovery system, to remotely upload files to the file share. Versions 6.10, 6.10, and 6.20 are vulnerable. You don’t need to authenticate to exploit this vulnerability. 
-
+> Este módulo permite explorar o HP Data Protector, um sistema de backup e recuperação, para carregar remotamente arquivos no compartilhamento de arquivos. As versões 6.10, 6.10 e 6.20 são vulneráveis. Você não precisa se autenticar para explorar esta vulnerabilidade.

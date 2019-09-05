@@ -6,41 +6,51 @@ Criado por darkcode0x00
 
 É incerto se esse formato de pacote suportará ou não o estilo antigo do módulo. Poderia ser feito para funcionar, eu acho, mas exigiria um pouco de esforço e ingenuidade para funcionar corretamente. Por uma questão de simplicidade, descreverei o conceito de pacote como ele se aplica aos módulos externos / coldstone e, em seguida, descreverei possíveis adaptações no final.
 
-## Estrutura do diretório
+## Estrutura do diretório class / plugin
 
 Exemplo de módulo python :
 
 ```
-tree --dirsfirst --charset=ascii -F python-package-template/
-python-package-template/
+thgc create darkcode -t thgclass 
+tree --dirsfirst --charset=ascii -F plugins_name/
+plugins_name/
 |-- docs/
-|   |-- _static/
-|   |-- authors.rst
-|   |-- changelog.rst
-|   |-- conf.py
-|   |-- index.rst
-|   |-- license.rst
-|   `-- Makefile
-|-- src/
-|   `-- python-package-template/
+|-- imagens/
+|-- requirements/
+|   |-- base.txt
+|   |-- dev.txt
+|   |-- prod.txt
+|   `-- test.txt
+|-- test_thg_plugin_class/
+|   |-- __init__.py
+|   |-- pylintrc
+|   `-- test_myplugin.py
+|-- thg_plugin_class/
+|   `-- source/
 |       |-- __init__.py
-|       `-- skeleton.py
-|-- tests/
-|   |-- conftest.py
-|   `-- test_skeleton.py
-|-- AUTHORS.rst
-|-- CHANGELOG.rst
-|-- LICENSE.txt
-|-- README.rst
-|-- requirements.txt
+|       |-- myplugin.py
+|       `-- pylintrc
+|-- thg_plugin_class_example/
+|   `-- example.py
+|-- build-pyenvs.sh
+|-- CHANGELOG.md
+|-- LICENSE.md
+|-- Pipfile
+|-- Pipfile.lock
+|-- README.md
 |-- setup.cfg
-`-- setup.py
+|-- setup.py
+|-- tasks.py
+`-- tox.init
 
-5 directories, 17 files
+7 directories, 21 files
 
 
 ```
 
+```
+dsa
+```
 ## modulos info
 
  - O executável principal recebe  o nome do módulo (igual ao diretório)

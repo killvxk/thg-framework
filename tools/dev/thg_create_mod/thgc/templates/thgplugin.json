@@ -19,18 +19,18 @@
     "imagens": [
         "<--"
     ],
-    "thg_plugin_class": [],
+    "thg_plugin": [],
         "source":[
             "__init__.py",
-            "myplugin.py",
+            "thg_plugin.py",
             "pylintrc",
             "<--", "<--"
     ],
-    "thg_plugin_class_example": [
-        "example.py",
+    "thg_plugin_example": [
+        "thg_plugin.py",
         "<--"
     ],
-    "test_thg_plugin_class":[
+    "test_thg_plugin":[
         "__init__.py",
         "pylintrc",
         "test_myplugin.py",
