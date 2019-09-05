@@ -30,8 +30,8 @@ def create(project_name, template):
     """
     # long messages
     notice = '\nthgc will create your {} Project Structure.'.format(project_name)
-    notice_t = '\nthgc will create {} project using {} file Template.'.format(
-        project_name, template)
+    notice_t = '\nthgc will create {} project using {} file Template.'.format(project_name, template)
+
     done = '{} was created on {}'
 
     # checks if a template was passed

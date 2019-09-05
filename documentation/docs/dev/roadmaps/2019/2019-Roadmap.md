@@ -1,30 +1,32 @@
-# Metasploit's 2017 Roadmap
 
-Starting in 2017, we will provide an open roadmap for setting our goals for the year. The goals are based on many discussions we have had over the past year with users, developers, and customers. The intent is to provide focus for core developers and contributors alike, so that we can together work toward a common vision for how we want Metasploit to evolve.
 
-This year, the themes for Metasploit are modularity, reusability, and reliability.
+# THG Roadmap 2019 
 
-Metasploit has grown organically over the years into a very large project, combining thousands of modules, payloads, a database, session handling, user interaction and more into a single monolithic application. While the design has served us well, it has reached some limits for maintainability and agility. While we continue to refactor, improve, and reorganize Metasploit, large-scale improvements become increasingly difficult and highlight fragility in the overall system, due to its highly interdependent design.
+A partir de 2019, forneceremos um roteiro aberto para definir nossas metas para o ano. As metas são baseadas em muitas discussões que tivemos no nucleo de desenvolvimento `thg-xcode-dev` com usuários, desenvolvedores e clientes. A intenção é fornecer foco para os principais desenvolvedores e colaboradores, para que possamos trabalhar juntos em direção a uma visão comum de como queremos que o thg evolua.
 
-We want to allow users to effortlessly contribute to the portions of Metasploit they are interested in, and be able to reuse code, both from inside and and outside of the project. Language and licensing constraints have presented barriers to users, both real and imagined. Python, Go, C# and other languages are dominating influences on the infosec community. We would like to be able to welcome more developers, researchers, and tooling into the Metasploit ecosystem, taking advantage of the best-in-breed and avoiding not-invented-here syndrome wherever possible.
+Este ano, os temas do THG são modularidade, ,desenvolvimento do nucleo,estabilidade,modelos de class
 
-In short, we want to develop reusable, modular, and reliable services to enable researchers, pen-testers, students, and red-teamers to work efficiently, have access to the latest technologies and techniques, and to continue to grow the Metasploit community.
+O THG cresceu organicamente ao longo dos anos em um projeto muito grande, combinando  os módulos, cargas úteis, junto a grande  banco de dados, interação do usuário e muito mais em um único aplicativo monolítico. Embora o design tenha nos servido bem, ele atingiu alguns limites de manutenção e agilidade. Enquanto continuamos a refatorar, aprimorar e reorganizar o THG diariamente, aprimoramentos em larga escala se tornam cada vez mais difíceis e destacam a fragilidade no sistema geral, devido ao seu design altamente interdependente.
 
-## The roadmap
+Queremos permitir que os usuários contribuam sem esforço para as partes do THG em que estão interessados ​​e possam reutilizar o código, tanto dentro como fora do projeto. As restrições de idioma e licenciamento apresentaram barreiras para os usuários, reais e imaginários. Python, Go, C # e outras linguagens estão influenciando predominantemente a comunidade infosec. Gostaríamos de poder acolher mais desenvolvedores, pesquisadores e ferramentas no ecossistema do THG, aproveitando o melhor da categoria e evitando a `síndrome não inventada` aqui sempre que possível.
 
- * The Metasploit data model backend should be separated into its own project. Plans include a data service that provides a RESTful interface, both an event-oriented and classic workspace-oriented view of incoming data, improved performance, and easy direct interoperability with other tools.
+Em resumo, queremos desenvolver serviços reutilizáveis, modulares e confiáveis ​​para permitir que pesquisadores, testadores , estudantes e equipes vermelhas trabalhem eficientemente, tenham acesso às mais recentes tecnologias e técnicas e continuem a crescer a comunidade THG.
 
- * Session handling should be able to operate independently of framework, allowing users to share sessions and allowing servers to be as performant, reliable, and light-weight as possible. We have already begun a project called 'metasploit-aggregator' which is a first generation of this design. Once this is complete, direct integration into other frameworks should also be possible.
 
- * Metasploit should support asynchronous sessions. Many testers today use asynchronous frameworks like Empire to maintain light-weight persistence or a footholds into a network, then have to pivot to Meterpreter for interactive sessions. We would like to be able seamlessly support both modes of operation, including the ability to run post exploitation modules and modules over pivots asynchronously as well.
 
- * Metasploit should support running exploit and auxiliary modules in an isolated mode. Plans are underway to support supporting an RPC-style module API to Metasploit framework, providing core services like payload and session handling, network routing, reporting and logging. Modules are run as child processes to Metasploit, and are only loaded into memory as-needed. Networking from a module point-of-view will be handled via SOCKS5 proxy support, hooking the child environment, or remote API calls, largely removing the need for specially-crafted socket objects or changes to 3rd-party protocol libraries. Modules, when written for the Metasploit API, could even be tested and used independently from the full Metasploit framework.
+## O roteiro
 
-In addition to these primary goals, we'd also like to explore:
+ * O back-end do modelo de dados do TGH deve ser separado em seu próprio projeto. Os planos incluem um serviço de dados que fornece uma interface RESTful, uma visualização orientada a eventos e  suporte a co-rotinas, desempenho aprimorado e fácil interoperabilidade direta com outras ferramentas.
 
- * *SMB 2.0* SMB 1.0 increasingly being disabled in many networks, making Metasploit modules using this protocol ineffective. We would like to implement at least server-side support for SMB 2.0, both for sharing files and for named pipe communications.
- * *iOS and macOS support* The mettle and python meterpreter payloads will continue evolving to further support OS X and iOS, along with more post exploitation support.
- * *Native Android support in Mettle* We began the work last year with mettle now supporting all of the basic operations for a Meterpreter implementation. We would like to continue adding Android post-exploitation capabilities to mettle as well.
- * *Streamlining Windows Meterpreter* mettle soon will replace the original POSIX meterpreter, which will reduce the size of the Windows meterpreter. Switching from OpenSSL to native SChannel support will simplify and shrink Windows meterpreter, allowing to focus on what it supports best.
- * *Router and IoT research* We would like to continue research and support for embedded device exploitation and first-class support for resource-constrained environments.
- * *Modernizing payload generation* We are investigating being able to integrate with third-party toolchains for building assembly, C, .NET, Java, on the fly, making it easy for a user to acquire the and use the tools, while providing first-class support for many architectures and platforms.
+ * O tratamento de sessões deve poder operar independentemente da estrutura, permitindo que os usuários compartilhem sessões e permitindo que os servidores tenham o melhor desempenho, a confiabilidade e o menor peso possível. Já começamos um projeto chamado 'xcode-socket-0x00', que é a primeira geração desse design. Uma vez concluído, a integração direta com outras estruturas também deve ser possível.
+
+ * O THG deve suportar sessões assíncronas. Atualmente, muitos testadores usam estruturas assíncronas, como o Empire, para manter uma persistência leve ou pontos de apoio em uma rede, e depois precisam interagir com a CybersX nas sessões interativas. Gostaríamos de poder suportar perfeitamente os dois modos de operação, incluindo a capacidade de executar módulos pós-exploração e módulos sobre pivôs de maneira assíncrona.
+
+ * O THG deve suportar a execução de exploração e módulos auxiliares em um modo isolado. Estão em andamento planos para oferecer suporte a uma API de módulo RPC/RESTFULL para a estrutura do THG, fornecendo serviços principais como carga útil e manipulação de sessões, roteamento de rede, relatórios e registros. Os módulos são executados como processos filhos no THG e são carregados apenas na memória, conforme necessário. A rede do ponto de vista do módulo será gerenciada por meio do suporte a proxy SOCKS5, conectando o ambiente filho ou chamadas remotas à API, removendo amplamente a necessidade de objetos de SOCKETS especialmente criados ou alterações nas bibliotecas de protocolos de terceiros. Os módulos, quando escritos para a API THG, podem até ser testados e usados ​​independentemente da estrutura completa do THG .
+
+Além dessas metas principais, também gostaríamos de explorar:
+
+* Gostaríamos de implementar pelo menos o suporte do servidor para SMB 2.0, tanto para compartilhar arquivos quanto para comunicações de pipe nomeado.
+ * * A otimização do medidor do medidor do Windows * em breve substituirá o medidor do POSIX original, o que reduzirá o tamanho do medidor do Windows. Mudar do OpenSSL para o suporte nativo ao SChannel simplificará e reduzirá o indicador do medidor do Windows, permitindo focar no que ele suporta melhor.
+ * * Pesquisa de roteador e IoT * Gostaríamos de continuar a pesquisa e suporte para exploração de dispositivos incorporados e suporte de primeira classe para ambientes com recursos limitados.
+ * * Modernizando a geração de carga útil * Estamos investigando a possibilidade de integração com cadeias de ferramentas de terceiros para a montagem e compilacao de  C, .NET, Java, dinamicamente, facilitando ao usuário a aquisição e o uso das ferramentas, fornecendo o primeiro Suporte a várias arquiteturas e plataformas.

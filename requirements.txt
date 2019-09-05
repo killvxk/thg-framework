@@ -1,3 +1,4 @@
+mkdocs-bootswatch
 pyscaffold[all]
 pyscaffoldext-custom-extension
 pre-commit
@@ -7,7 +8,6 @@ pyelftools
 capstone
 ropgadget
 pyserial
-requests
 pip
 tox
 pygments

@@ -1,0 +1,2 @@
+rm -rf thgc_pack.egg-info build dist  dark 
+#&& python3 setup.py install && thgc create dark -t thgclass

@@ -57,7 +57,9 @@ def makedir(directory, project_name):
     # change the name of base and bin for the name of the project
     if (directory == 'base') or (directory == 'bin'):
         directory = project_name
+
     try:  # write the folders
+
         os.makedirs(directory)
         os.chdir(directory)
     except FileExistsError:
@@ -72,10 +74,12 @@ def makefile(file, project_name):
     # change the names of project_name.py and test_project.py
     if file == 'project.py':
         file = '{}'.format(project_name + '.py')
+        print(file)
     elif file == 'test_project.py':
         file = '{}'.format('test_' + project_name + '.py')
-
+        print(file)
     if file == '<--':  # go back one directory
+        print(file)
         os.chdir('..')
     else:
         try:

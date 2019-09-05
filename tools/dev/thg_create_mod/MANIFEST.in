@@ -1,4 +1,4 @@
 include LICENSE
 
-recursive-include do *
-recursive-include do/templates *
+recursive-include thgc *
+recursive-include thgc/templates *
