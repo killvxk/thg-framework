@@ -1,43 +1,16 @@
-This page lists the keys in use by [Metasploit committers][msf-committers] and
-can be used to verify merge commits made to https://github.com/rapid7/metasploit-framework.
+Esta página lista as chaves em uso por [THG committers] [thg-committers] e
+pode ser usado para verificar as confirmações de mesclagem feitas em https://gitlab.com/darkcode357/thg-framework/.
 
-### Keybase.io identities
+### Identidades do Keybase.io
 
-Keybase.io is used by Metasploit as an easy way to verify identities of committers.
+O Keybase.io é usado pelo THG como uma maneira fácil de verificar as identidades dos confirmadores.
 
-If you're a committer on metasploit-framework, and you need an invite, just ask.
+Se você é um colaborador do THG HACKER GROUP e precisa de um convite, basta perguntar.
 
-| Github Username                                   | Keybase.io Username                                |
+| Gitlab Username                                   | Keybase.io Username                                |
 | ------------------------------------------------- | -------------------------------------------------- |
-| [@acammack-r7](https://github.com/acammack-r7)    | [acammackr7](https://keybase.io/acammackr7)        |
-| [@bcoles](https://github.com/bcoles)              | [bcoles](https://keybase.io/bcoles)                |
-| [@busterb](https://github.com/busterb)            | [busterb](https://keybase.io/busterb)              |
-| [@bpatterson-r7](https://github.com/bpatterson-r7)| [bpatterson](https://keybase.io/bpatterson)        |
-| [@bwatters-r7](https://github.com/bwatters-r7)    | [bwatters](https://keybase.io/bwatters)            |
-| [@chiggins](https://github.com/chiggins)          | [chiggins](https://keybase.io/chiggins)            |
-| [@clee-r7](https://github.com/clee-r7)            | [cleer7](https://keybase.io/cleer7)                |
-| [@egypt](https://github.com/egypt)                | [egypt](https://keybase.io/egypt)                  |
-| [@FireFart](https://github.com/FireFart)          | [firefart](https://keybase.io/firefart)            |
-| [@Green-m](https://github.com/Green-m)            | [green-m](https://keybase.io/green_m)              |
-| [@h00die](https://github.com/h00die)              | [h00die](https://keybase.io/h00die)                |
-| [@jbarnett-r7](https://github.com/jbarnett-r7)    | [jmbarnett](https://keybase.io/jmbarnett)          |
-| [@jmartin-r7](https://github.com/jmartin-r7)      | [jmartinr7](https://keybase.io/jmartinr7)          |
-| [@jrobles-r7](https://github.com/jrobles-r7)      | [jroblesr7](https://keybase.io/jroblesr7)          |
-| [@lsato-r7](https://github.com/lsato-r7)          | [louissato](https://keybase.io/lsato)              |
-| [@Meatballs1](https://github.com/Meatballs1)      | [meatballs](https://keybase.io/meatballs)          |
-| [@mkienow-r7](https://github.com/mkienow-r7)      | [inokii](https://keybase.io/inokii)                |
-| [@mubix](https://github.com/mubix)                | [mubix](https://keybase.io/mubix)                  |
-| [@OJ](https://github.com/OJ)                      | [oj](https://keybase.io/oj)                        |
-| [@scriptjunkie](https://github.com/scriptjunkie)  | [scriptjunkie](https://keybase.io/scriptjunkie)    |
-| [@sgonzalez-r7](https://github.com/sgonzalez-r7)  | [essgee](https://keybase.io/essgee)                |
-| [@space-r7](https://github.com/space-r7)          | [shelbyp](https://keybase.io/shelbyp)              |
-| [@tdoan-r7](https://github.com/tdoan-r7)          | [doanosaur](https://keybase.io/doanosaur)          |
-| [@timwr](https://github.com/timwr)                | [timwr](https://keybase.io/timwr)                  |
-| [@todb-r7](https://github.com/todb-r7)            | [todb](https://keybase.io/todb)                    |
-| [@void-in](https://github.com/void-in)            | [void_in](https://keybase.io/void_in)              |
-| [@wchen-r7](https://github.com/wchen-r7)          | [wchenr7](https://keybase.io/wchenr7)              |
-| [@wvu-r7](https://github.com/wvu-r7)              | [wvu](https://keybase.io/wvu)                      |
-| [@zeroSteiner](https://github.com/zeroSteiner)    | [zerosteiner](https://keybase.io/zerosteiner)      |
+| [@darkcode357](https://gitlab.com/darkcode357)    | [acammackr7](https://keybase.io/acammackr7)        |
+| [@KillerBean](https://gitlab.com/KillerBean)      | [bcoles](https://keybase.io/bcoles)                |
 
 Note, keybase.io does **not require** your private key to prove your GitHub
 identity. Actually sharing your private key with Keybase.io is a matter of

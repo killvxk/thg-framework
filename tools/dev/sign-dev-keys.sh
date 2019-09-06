@@ -1,9 +1,8 @@
 #!/bin/bash
 
-# Imports and signs dev keys fetched from Keybase, as asserted by the
-# Metasploit-Framework development wiki. Requires bash version 3 or so for
-# regular expression pattern match
-
+# importando a chave de assinanatura dev buscadas no Keybase, conforme afirmado pelo
+# Wiki de desenvolvimento do thg-Framework. Requer o bash versão 3 ou mais para
+# correspondência de padrão de expressão regular
 COMMITTER_KEYS_URL='https://raw.githubusercontent.com/wiki/rapid7/metasploit-framework/Committer-Keys.md'
 KEYBASE_KEY_URLS=$(
  \curl -sSL $COMMITTER_KEYS_URL |
