@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="darkcode0x00 luizcorrea">
+        <link rel="canonical" href="https://darkcode357.github.io/thg-framework/dev/dark/Rolling-back-merges/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Rolling back merges - thg-framework</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">thg-framework</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../cli/install/">Installation</a>
+</li>
+                                    
+<li >
+    <a href="../../..">Introduction</a>
+</li>
+                                    
+<li >
+    <a href="../../../community/">Community</a>
+</li>
+                                    
+<li >
+    <a href="../../../conceptual/">Conceptual</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/build/">build</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/tags/">tags</a>
+</li>
+                                    
+<li >
+    <a href="../../../LICENSE/">LICENSE</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">thg_dev <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../thg_dev/_Sidebar/">thg_dev</a>
+</li>
+                                    
+<li >
+    <a href="../../contributing/Contributing-to-thg/">Get Started</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/templates/">templates</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Roadmaps</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">2019</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap/">Roadmap</a>
+</li>
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap-Review/">Roadmap_Review</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">git</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../git/Using-Git/">Using-Git</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-cheatsheet/">Git_cheatsheet</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-Reference-Sites/">Git-Reference-Sites</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">documentation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">capture the flag</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">basic</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">analysis</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/malware/">malware</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">recovery</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/backuo/">backup</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/patching/">patching</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">tips_end_tricks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/tools/">tools</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/decoding/">decoding</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/dos/">dos</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/os_cheats/">os_cheats</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/snort/">snort</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/basic/">basic</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nmap/">nmap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nessus/">nessus</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/openvas/">openvas</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">defend</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tcpdump/">tcpdump</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/editcap/">edicap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/mergecap/">mergecap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/snort/">snort</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tshark/">tshark</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/analysis/">analysis</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">os</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/windows/">windows</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../../../deployment/">Deployment</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">hash_crack</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/">index</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/CORE_HASH_CRACKING_KNOWLEDGE/">CORE_HASH_CRACKING_KNOWLEDGE</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">pentest_standard</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../pentest_standard/preengagemente/">Pre engagement Interactions</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/ig/">Intelligence Gathering</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/threatmodeling/">Threat Modeling</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/vulnterability/">Vulnerability Analysis</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/exploration/">Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/postexploration/">Post Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/report/">Reporting</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/tecguidelines/">Technical Guidelines</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">CLI <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-1</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/thg/">THG</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/server/server/">thg_server</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/shells/shells/">thg_shells</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_docs/thg_docs/">thg_docs</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/auxiliares/auxiliares/">thg_auxiliares</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/anti_forensic/anti_forensic/">thg_anti_forensic</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/crypto/crypto/">thg_crypto</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/drone/drone/">thg_drone</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/keylogger/keylogger/">thg_keylogger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/recon/recon/">thg_recon</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/voip/voip/">thg_voip</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automation/automation/">thg_automation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cryptography/cryptography/">thg_cryptography</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/exploitation/exploitation/">thg_exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/malware/malware/">thg_malware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/reversing/reversing/">thg_reversing</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_windows/thg_windows/">thg_windows</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automobile/automobile/">thg_automobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/database/database/">thg_database</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/fingerprint/fingerprint/">thg_fingerprint</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/misc/misc/">thg_misc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/sniffer/sniffer/">thg_sniffer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/wireless/wireless/">thg_wireless</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/debugger/debugger/">thg_debugger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/firmware/firmware/">thg_firmware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/mobile/mobile/">thg_mobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/social/social/">thg_social</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/backdoor/backdoor/">thg_backdoor</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/decompiler/decompiler/">thg_decompiler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/forensic/forensic/">thg_forensic</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-2</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/networking/networking/">thg_networking</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoff/spoff/">thg_spoff</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/binary/binary/">thg_binary</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensensive/defensensive/">thg_defensensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/gpu/gpu/">thg_gpu</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/os/os/">thg_os</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/nfc/nfc/">thg_nfc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoof/spoof/">thg_spoof</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/bluetooth/bluetooth/">thg_bluetooth</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensive/defensive/">thg_defensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/hardware/hardware/">thg_hardware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/packer/packer/">thg_packer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/stego/stego/">thg_stego</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/code_audit/code_audit/">thg_code_audit</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/disassembler/disassembler/">thg_disassembler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/honeypot/honeypot/">thg_honeypot</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/proxy/proxy/">thg_proxy</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/tunnel/tunnel/">thg_tunnel</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cracker/cracker/">thg_cracker</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/dos/dos/">thg_dos</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/ids/ids/">thg_ids</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/radio/radio/">thg_radio</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/unpacker/unpacker/">thg_unpacker</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li>
+                                <a href="https://github.com/darkcode357/thg-framework/edit/master/docs/dev/dark/Rolling-back-merges.md">Edit on darkcode357/thg-framework</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#whats-a-bad-merge">What's a bad merge?</a></li>
+        <li class="main "><a href="#a-merge-revert-example">A merge revert example</a></li>
+            <li><a href="#figure-out-what-broke-things">Figure out what broke things.</a></li>
+            <li><a href="#check-out-the-bad-merge-tip">Check out the bad merge tip.</a></li>
+            <li><a href="#revert-the-merge">Revert the merge</a></li>
+            <li><a href="#create-a-new-pr">Create a new PR.</a></li>
+            <li><a href="#bug-the-committers-until-your-revert-lands">Bug the committers until your revert lands.</a></li>
+            <li><a href="#thats-it">That's it!</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p>Since the Metasploit-framework repository&rsquo;s master branch is the bleeding edge of development, occasionally mistakes happen. This page will attempt to give some guidance on how to roll back a bad merge.</p>
+<h1 id="whats-a-bad-merge">What&rsquo;s a bad merge?<a class="headerlink" href="#whats-a-bad-merge" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Anything that causes <a href="travis-ci.org/rapid7/metasploit-framework/builds">Travis-CI</a> to fail rspec tests consistently.</li>
+<li>Anything that hits untested code that otherwise causes problems with <code>msfconsole</code>, <code>msfcli</code>, <code>msfvenom</code>, and other console commands.</li>
+</ul>
+<p>Sometimes, Travis-CI does choke up, due to network weather. Every build is a fresh clone, and all gems have to be reinstalled every time. Also, some rspec tests require network connections to assets on the Internet. Sometimes, Travis-CI itself is under a lot of load, and builds time out.</p>
+<p>The best way to diagnose these problems is simply to restart the build. Note, only <a href="https://github.com/rapid7/metasploit-framework/wiki/Committer-Rights">Committers</a> have rights to do this. If that doesn&rsquo;t clear things up, or if it&rsquo;s obvious that there are real failures (since you&rsquo;ve read the rspec results and have read the tests), the first order of business is to undo your bad commit.</p>
+<p><strong>Note</strong>: in branches other than <code>master</code>, you can usually just fix things normally with new commits. There are plenty of &ldquo;whoops&rdquo; commit messages in our history.</p>
+<h1 id="a-merge-revert-example">A merge revert example<a class="headerlink" href="#a-merge-revert-example" title="Permanent link">&para;</a></h1>
+<p>Once, there was a bad merge on <a href="https://github.com/rapid7/metasploit-framework/pull/2320">PR #2320</a>. The fellow landing this pull request ran into a merge conflict while landing, thought he fixed it, and pushed the results, which ended up breaking about a dozen Rspec tests. Whoops. That was a bad merge. <a href="https://github.com/rapid7/metasploit-framework/pull/2624">PR #2624</a> fixed it. Here&rsquo;s the procedure used.</p>
+<h3 id="figure-out-what-broke-things">Figure out what broke things.<a class="headerlink" href="#figure-out-what-broke-things" title="Permanent link">&para;</a></h3>
+<p>In this case, the failed build was pretty obvious: <a href="https://travis-ci.org/rapid7/metasploit-framework/builds/13816889">Build #5216</a> was red, and rerunning Travis-CI didn&rsquo;t solve. Reading the build log, we can see this was <a href="http://github.com/rapid7/metasploit-framework/commit/3996557ec61a6eeefaa3448480012205b8825374">merge commit 3996557</a>.</p>
+<h3 id="check-out-the-bad-merge-tip">Check out the bad merge tip.<a class="headerlink" href="#check-out-the-bad-merge-tip" title="Permanent link">&para;</a></h3>
+<p>These commands will put the local repo back to the bad merge, and create a local branch as such:</p>
+<p><code>git checkout 3996557</code>
+<code>git checkout -b bad-merge</code></p>
+<p>You can inspect exactly what commits are contained in this merge with the following:</p>
+<p><code>git log bad-merge...bad-merge~ --oneline</code></p>
+<p>Like so:</p>
+<pre><code>$ git log bad-merge...bad-merge~ --oneline
+3996557 Fix conflcit lib/msf/util/exe.rb
+6296c4f Merge pull request #9 from tabassassin/retab/pr/2320
+d0a3ea6 Retab changes for PR #2320
+bff7d0e Merge for retab
+4c9e6a8 Default to exe-small
+</code></pre>
+
+<p>The syntax is a little wacky, but this is saying, &ldquo;Show me all the commit hashes that occur from the <code>bad-merge</code> point to one back from <code>bad-merge</code> (iow, from right before <code>bad-merge</code> was merged). That&rsquo;s what the tilde (~) means. You could also use <code>bad-merge^</code> or <code>bad-merge^1</code>, they&rsquo;re all equivalent.</p>
+<p>You can see the diff with the following command. Note the reverse placement of the <code>bad-merge</code> and <code>bad-merge~</code> commit points!</p>
+<p><code>git diff bad-merge~ bad-merge</code></p>
+<p>Take a look at that, confirm that yes, this is exactly what you want to revert, and then pull the trigger.</p>
+<h3 id="revert-the-merge">Revert the merge<a class="headerlink" href="#revert-the-merge" title="Permanent link">&para;</a></h3>
+<p><code>git revert -m 1 bad-merge</code></p>
+<p>The <code>-m 1</code> bit is important, because that specifies that you want the branch to return to the point from before the merge &ndash; I have never had reason to revert a merge and throw out the other side of the merge, but I imagine it comes up often enough for other people to not have it be the default behavior.</p>
+<p>Note that this does /not/ reach into the repo and change history; for that, you would need to git push &ndash;force, and you <a href="www.reddit.com/r/programming/comments/1qefox/jenkins_developers_accidentally_do_git_push_force/">never want to do that on the master branch</a>. Instead, you are generating a new commit that reverses the contents of the merge commit. As usual, you will want to edit the commit message to be meaningful &ndash; mention the affected commit hash and the affected pull request.</p>
+<p>You will also want to <code>git commit -S --amend</code> after this to sign the commit; <code>git revert</code> does not take a <code>-S</code> option. Bummer.</p>
+<h3 id="create-a-new-pr">Create a new PR.<a class="headerlink" href="#create-a-new-pr" title="Permanent link">&para;</a></h3>
+<p>You will now create a new PR with your revert commit. That&rsquo;s simple enough. Again, be sure that the affected PRs are also informed; they may think their material landed, and while it technically did, it&rsquo;s no longer there; they will need to open new PRs and figure out how to resubmit their changes (hopefully, this time without causing merge conflicts).</p>
+<h3 id="bug-the-committers-until-your-revert-lands">Bug the committers until your revert lands.<a class="headerlink" href="#bug-the-committers-until-your-revert-lands" title="Permanent link">&para;</a></h3>
+<p>Until your revert commit lands, master will remain broken, so dealing with this situation should be blocking basically anything else. Be vocal.</p>
+<h2 id="thats-it">That&rsquo;s it!<a class="headerlink" href="#thats-it" title="Permanent link">&para;</a></h2>
+<p>If you have suggestions for fixes on this page, please bother <a href="https://github.com/todb-r7">@todb-r7</a> with them.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2019 - 2020 darkcode0x00</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="darkcode0x00 luizcorrea">
+        <link rel="canonical" href="https://darkcode357.github.io/thg-framework/dev/dark/MSF6-Feature-Proposals/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>MSF6 Feature Proposals - thg-framework</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">thg-framework</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../cli/install/">Installation</a>
+</li>
+                                    
+<li >
+    <a href="../../..">Introduction</a>
+</li>
+                                    
+<li >
+    <a href="../../../community/">Community</a>
+</li>
+                                    
+<li >
+    <a href="../../../conceptual/">Conceptual</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/build/">build</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/tags/">tags</a>
+</li>
+                                    
+<li >
+    <a href="../../../LICENSE/">LICENSE</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">thg_dev <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../thg_dev/_Sidebar/">thg_dev</a>
+</li>
+                                    
+<li >
+    <a href="../../contributing/Contributing-to-thg/">Get Started</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/templates/">templates</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Roadmaps</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">2019</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap/">Roadmap</a>
+</li>
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap-Review/">Roadmap_Review</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">git</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../git/Using-Git/">Using-Git</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-cheatsheet/">Git_cheatsheet</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-Reference-Sites/">Git-Reference-Sites</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">documentation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">capture the flag</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">basic</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">analysis</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/malware/">malware</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">recovery</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/backuo/">backup</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/patching/">patching</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">tips_end_tricks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/tools/">tools</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/decoding/">decoding</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/dos/">dos</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/os_cheats/">os_cheats</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/snort/">snort</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/basic/">basic</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nmap/">nmap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nessus/">nessus</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/openvas/">openvas</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">defend</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tcpdump/">tcpdump</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/editcap/">edicap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/mergecap/">mergecap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/snort/">snort</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tshark/">tshark</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/analysis/">analysis</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">os</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/windows/">windows</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../../../deployment/">Deployment</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">hash_crack</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/">index</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/CORE_HASH_CRACKING_KNOWLEDGE/">CORE_HASH_CRACKING_KNOWLEDGE</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">pentest_standard</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../pentest_standard/preengagemente/">Pre engagement Interactions</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/ig/">Intelligence Gathering</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/threatmodeling/">Threat Modeling</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/vulnterability/">Vulnerability Analysis</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/exploration/">Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/postexploration/">Post Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/report/">Reporting</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/tecguidelines/">Technical Guidelines</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">CLI <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-1</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/thg/">THG</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/server/server/">thg_server</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/shells/shells/">thg_shells</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_docs/thg_docs/">thg_docs</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/auxiliares/auxiliares/">thg_auxiliares</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/anti_forensic/anti_forensic/">thg_anti_forensic</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/crypto/crypto/">thg_crypto</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/drone/drone/">thg_drone</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/keylogger/keylogger/">thg_keylogger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/recon/recon/">thg_recon</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/voip/voip/">thg_voip</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automation/automation/">thg_automation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cryptography/cryptography/">thg_cryptography</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/exploitation/exploitation/">thg_exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/malware/malware/">thg_malware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/reversing/reversing/">thg_reversing</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_windows/thg_windows/">thg_windows</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automobile/automobile/">thg_automobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/database/database/">thg_database</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/fingerprint/fingerprint/">thg_fingerprint</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/misc/misc/">thg_misc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/sniffer/sniffer/">thg_sniffer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/wireless/wireless/">thg_wireless</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/debugger/debugger/">thg_debugger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/firmware/firmware/">thg_firmware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/mobile/mobile/">thg_mobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/social/social/">thg_social</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/backdoor/backdoor/">thg_backdoor</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/decompiler/decompiler/">thg_decompiler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/forensic/forensic/">thg_forensic</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-2</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/networking/networking/">thg_networking</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoff/spoff/">thg_spoff</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/binary/binary/">thg_binary</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensensive/defensensive/">thg_defensensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/gpu/gpu/">thg_gpu</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/os/os/">thg_os</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/nfc/nfc/">thg_nfc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoof/spoof/">thg_spoof</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/bluetooth/bluetooth/">thg_bluetooth</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensive/defensive/">thg_defensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/hardware/hardware/">thg_hardware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/packer/packer/">thg_packer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/stego/stego/">thg_stego</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/code_audit/code_audit/">thg_code_audit</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/disassembler/disassembler/">thg_disassembler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/honeypot/honeypot/">thg_honeypot</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/proxy/proxy/">thg_proxy</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/tunnel/tunnel/">thg_tunnel</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cracker/cracker/">thg_cracker</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/dos/dos/">thg_dos</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/ids/ids/">thg_ids</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/radio/radio/">thg_radio</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/unpacker/unpacker/">thg_unpacker</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li>
+                                <a href="https://github.com/darkcode357/thg-framework/edit/master/docs/dev/dark/MSF6-Feature-Proposals.md">Edit on darkcode357/thg-framework</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#payloads-and-post-exploitation">Payloads and Post-exploitation</a></li>
+            <li><a href="#meterpreter-transport-and-scalability-overhaul">Meterpreter Transport and Scalability Overhaul</a></li>
+            <li><a href="#integration-with-external-c2-frameworks">Integration with external C2 frameworks</a></li>
+            <li><a href="#integration-of-native-tool-chains">Integration of native tool-chains</a></li>
+            <li><a href="#native-first-class-uuid-aware-async-stager-payload">Native first-class UUID-aware, async stager payload</a></li>
+        <li class="main "><a href="#module-interface">Module Interface</a></li>
+            <li><a href="#overhaul-network-targeting">Overhaul network targeting</a></li>
+            <li><a href="#overhaul-credential-targeting">Overhaul credential targeting</a></li>
+            <li><a href="#collapse-module-types-expose-module-abilities-or-methods-instead">Collapse module types, expose module 'abilities' or 'methods' instead</a></li>
+            <li><a href="#integration-with-external-exploitation-frameworks">Integration with external exploitation frameworks</a></li>
+            <li><a href="#changing-module-structure-on-disk">Changing module structure on disk</a></li>
+        <li class="main "><a href="#data-model">Data Model</a></li>
+            <li><a href="#temporal-log-oriented-data-model">Temporal / log-oriented data model</a></li>
+            <li><a href="#data-model-is-always-available">Data model is always available</a></li>
+        <li class="main "><a href="#infrastructure">Infrastructure</a></li>
+            <li><a href="#first-class-user-oriented-documentation">First class user-oriented documentation</a></li>
+            <li><a href="#make-metasploit-higher-performance-lighter-weight">Make Metasploit Higher-performance / lighter weight</a></li>
+            <li><a href="#sunsetting-separation-of-old-module-code">Sunsetting, separation of old module / code</a></li>
+            <li><a href="#integration-of-separate-metasploit-projects-into-fewer-repos-rex-payloads-metasploit-data-models">Integration of separate Metasploit projects into fewer repos (rex / payloads / metasploit data models)</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p>List of potential major features (things that would make major breaking changes) for MSF6:</p>
+<h1 id="payloads-and-post-exploitation">Payloads and Post-exploitation<a class="headerlink" href="#payloads-and-post-exploitation" title="Permanent link">&para;</a></h1>
+<h2 id="meterpreter-transport-and-scalability-overhaul">Meterpreter Transport and Scalability Overhaul<a class="headerlink" href="#meterpreter-transport-and-scalability-overhaul" title="Permanent link">&para;</a></h2>
+<p>The Meterpreter Protocol &ldquo;TLV&rdquo; is enhanced to support modern features such as logging, unidirectional messages, obfuscation, sequence number reassembly and more. This feature will enable Meterpreter sessions to be more robust, faster, and evade detection with greater ease than before.</p>
+<p>Additionally, Meterpreter payload listeners, rather than being integrated straight into <code>msfconsole</code>, will run as an independent process that communicates with msfconsole (1 or more users) over RPC similar to the msfdb_ws (Metasploit Database Web Service). The external listener then replaces the &lsquo;metasploit-aggregator&rsquo; project by not requiring an intermediate proxy to park or share sessions, these are done directly by having the listeners independent of console users.</p>
+<p>Listener capabilities be embeddable directly into Meterpreter payloads, allowing local listeners and remote listeners internal to other networks could be implemented the same way, enabling greater scalability and facilitating pivoting across more complex networks, allowing better post-exploitation possibilities in modern network environments.</p>
+<h2 id="integration-with-external-c2-frameworks">Integration with external C2 frameworks<a class="headerlink" href="#integration-with-external-c2-frameworks" title="Permanent link">&para;</a></h2>
+<p>If listeners are externalized, then there is an API layer both for interactive interaction with remote sessions, and a way for the Post-exploitation API to communicate with the external sessions. That should mean that if an external C2 framework supports at minimum shell interaction, a bulk of the Post-exploitation API should be applicable against external C2 frameworks as well. Metasploit would then be able to integrate both with other open-source C2 frameworks, as well as private ones.</p>
+<h2 id="integration-of-native-tool-chains">Integration of native tool-chains<a class="headerlink" href="#integration-of-native-tool-chains" title="Permanent link">&para;</a></h2>
+<p>Tools like Veil, pwnlib, etc. have for a long time used native compilers and tooling to build payloads and evasions. Metasploit has opted mostly for native Ruby solutions, though it does have some implicit runtime dependencies like <code>apktool</code> for Android payload injection. However, these tools are getting harder to maintain and use (e.g. metasm has a diffcult time building any non-trivial C code, we just spent a month fixing a bug it had with Ruby 2.5 and Windows). It would be nice to have either be able to depend on a set of first-class toolchains being available in the environment, or have some way to package them natively with Metasploit itself. A full suite of compilers and tools does consume considerable amounts of space (e.g. mettle&rsquo;s toolchain is 1.8GB uncompressed), but this is probably less of a problem than it was 15 years ago.</p>
+<h2 id="native-first-class-uuid-aware-async-stager-payload">Native first-class UUID-aware, async stager payload<a class="headerlink" href="#native-first-class-uuid-aware-async-stager-payload" title="Permanent link">&para;</a></h2>
+<p>Make a new async payload type (based on pingback payload work) making secure comms, endpoint verification, and async communication first-class citizens, and on by default. These session types would support a much more limited set of actions than Meterpreter, only supporting sleep/upload/download/stage, but would be upgraded to Meterpreter directly as-needed (maybe even transparently). Network protocols can be much more exotic for this, and the listener/payload should be usable externally from Metasploit as well. Todo: pull in async payload proposal notes from @bwatters-r7.</p>
+<h1 id="module-interface">Module Interface<a class="headerlink" href="#module-interface" title="Permanent link">&para;</a></h1>
+<h2 id="overhaul-network-targeting">Overhaul network targeting<a class="headerlink" href="#overhaul-network-targeting" title="Permanent link">&para;</a></h2>
+<p>Setting at least 5 variables RHOSTS/RPORT/SSL/VHOST/SSL_Version/User/Pass/etc&hellip; to target a single web application is very cumbersome. When these variables also do not apply to multiple RHOSTS exactly, the scheme of multiple variables falls apart futher. Metasploit should be able to target URLs directly, that can all have their own independent ports, users, hostnames, etc:</p>
+<pre><code>set TARGETS https://user:password@target_app:4343 https://target_app2
+</code></pre>
+
+<h2 id="overhaul-credential-targeting">Overhaul credential targeting<a class="headerlink" href="#overhaul-credential-targeting" title="Permanent link">&para;</a></h2>
+<p>The credential datastore options also has many different co-dependent and independent variables, which are confusing and awkward to use. In addition, there is little in the way of user-parallelism for using login scanners against single-service web apps. MSF6 should have an easier less messy overhaul of targeting multiple users and apps as well. Maybe TARGETS could be used the same way?</p>
+<h2 id="collapse-module-types-expose-module-abilities-or-methods-instead">Collapse module types, expose module &lsquo;abilities&rsquo; or &lsquo;methods&rsquo; instead<a class="headerlink" href="#collapse-module-types-expose-module-abilities-or-methods-instead" title="Permanent link">&para;</a></h2>
+<p>Modules in Metasploit are classified according to what they can do (&lsquo;exploits can exploit, scanners can scan&rsquo;) but often its useful to be able to scan for exploitable targets. Workarounds include reaching between modules and sharing library code and mixins. This proposal suggests that &lsquo;exploit&rsquo; and &lsquo;scanner&rsquo;, as well as many other aux-type modules should collapse into a single module type. They simply expose capabilities like &lsquo;scan&rsquo;, &lsquo;check&rsquo;, &lsquo;exploit&rsquo;, etc. and a single module can do all of these.</p>
+<p>Additionally, &lsquo;admin&rsquo; modules could be collapsed. For instance, why have a chromecast_reset and chromecast_youtube module when you can use &lsquo;admin/chromecast&rsquo; and just type &lsquo;cast&rsquo; or &lsquo;reset&rsquo; as methods on this single module. This would also replace the &lsquo;ACTIONS&rsquo; datastore option where they are used in multi-action aux modules.</p>
+<h2 id="integration-with-external-exploitation-frameworks">Integration with external exploitation frameworks<a class="headerlink" href="#integration-with-external-exploitation-frameworks" title="Permanent link">&para;</a></h2>
+<p>E.g. could we just use routersploit or wpsploit directly from within framework and gather loot/run post exploitation, etc. through them? Maybe using the external module RPC, just being able to expose multiple modules behind the same API?</p>
+<h2 id="changing-module-structure-on-disk">Changing module structure on disk<a class="headerlink" href="#changing-module-structure-on-disk" title="Permanent link">&para;</a></h2>
+<p>Currently a non-trivial exploit module will require adding code to 4 different subdirectories (lib, modules, documentation, external) which makes it both hard to follow all of the moving pieces, but also makes it harder to extract modules for independent use. See https://github.com/rapid7/metasploit-framework/wiki/Bundled-Modules-Proposal for a more detailed proposal.</p>
+<h1 id="data-model">Data Model<a class="headerlink" href="#data-model" title="Permanent link">&para;</a></h1>
+<h2 id="temporal-log-oriented-data-model">Temporal / log-oriented data model<a class="headerlink" href="#temporal-log-oriented-data-model" title="Permanent link">&para;</a></h2>
+<p>Metasploit implements a standard Ruby-on-Rails CRUD model for storing data about an environment. A Host object is created, updated, deleted, etc. But, anything can update anything, making it easy to lose data, and hard to notice changes over time. A workaround is religious use of workspaces to segregate observations, but that&rsquo;s more of a workaround. A log-structured data model (observations about hosts/loot/credentials/services, etc.) should just be objects that are imported into a datastore that prioritizes search over everything else.</p>
+<p>As a concrete example, say every <code>report_*</code> method just wrote a JSON blob into elasticsearch. Then you would have first observed data, and when something else happens, say a password is cracked, rather than modifying a credential object, there would just be an enrichment object added to the data store, and both could be matched together later. The current data model also often doesn&rsquo;t have ways of storing arbitrary information from modules that need it; loot is often used as a workaround, but it&rsquo;s not searchable by content. Providing a way to store arbitrary JSON from modules would allow the flexibility to store anything, search for anything, and to never lose anything. Also, services would be removable as well from the database when a service is down.</p>
+<p>Note: a temporal data model will likely need something better able to show data relations than the current tabular rex-table approach in msfconsole. Web UI?</p>
+<h2 id="data-model-is-always-available">Data model is always available<a class="headerlink" href="#data-model-is-always-available" title="Permanent link">&para;</a></h2>
+<p>The database in Metasploit has historically been optional. Not everyone needs to store data and setting up and maintaining the database is often a burden to the user, with many possible failure modes. Having the data model not always be available often complicates Metasploit&rsquo;s code, and made some features like UUID tracking for payloads difficult to implement reliably. Metasploit 5 added web services for the data mode, which further complicated the code paths, adding a third way for behavior to possibly differ.</p>
+<p>We should make a light-weight in-memory database service that can run automatically if a persistent database is unavailable or unconfigured, which can always provide some sort of database service to Metasploit, even if it is ephemeral and exits when msfconsole/listeners, etc. have exited. <code>framework.db</code> should always exist, even if the data it stores goes into a temporary bit bucket. Then all of the conditional code paths can go away.</p>
+<h1 id="infrastructure">Infrastructure<a class="headerlink" href="#infrastructure" title="Permanent link">&para;</a></h1>
+<h2 id="first-class-user-oriented-documentation">First class user-oriented documentation<a class="headerlink" href="#first-class-user-oriented-documentation" title="Permanent link">&para;</a></h2>
+<p>Provide a means for the community to document changes to how Metasploit works (developer and user), unify various documentation resources.</p>
+<h2 id="make-metasploit-higher-performance-lighter-weight">Make Metasploit Higher-performance / lighter weight<a class="headerlink" href="#make-metasploit-higher-performance-lighter-weight" title="Permanent link">&para;</a></h2>
+<p>As subcomponents get carved off (external database service, external listeners), they should be implemented in a lighter weight way. We have some prototypes of the database web service rewritten in golang, and a persistent payload generation service that can be used my a client-only <code>msfvenom</code>-like tool can speed up execution considerably.</p>
+<h2 id="sunsetting-separation-of-old-module-code">Sunsetting, separation of old module / code<a class="headerlink" href="#sunsetting-separation-of-old-module-code" title="Permanent link">&para;</a></h2>
+<p>Metasploit has some really old modules that probably don&rsquo;t get used very often. Can we segregate these or sunset them so that the overall number of modules is reduced?</p>
+<h2 id="integration-of-separate-metasploit-projects-into-fewer-repos-rex-payloads-metasploit-data-models">Integration of separate Metasploit projects into fewer repos (rex / payloads / metasploit data models)<a class="headerlink" href="#integration-of-separate-metasploit-projects-into-fewer-repos-rex-payloads-metasploit-data-models" title="Permanent link">&para;</a></h2>
+<p>Metasploit is spread out across over a dozen different repos. Let&rsquo;s merge them as much as we can to make it easier to change them across the board (e.g. when changing the data model) and to make it easier to have parallel branches for stable/unstable work.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2019 - 2020 darkcode0x00</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

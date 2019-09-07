@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="darkcode0x00 luizcorrea">
+        <link rel="canonical" href="https://darkcode357.github.io/thg-framework/dev/dark/Committer-Rights/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Metasploit Committers - thg-framework</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">thg-framework</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../cli/install/">Installation</a>
+</li>
+                                    
+<li >
+    <a href="../../..">Introduction</a>
+</li>
+                                    
+<li >
+    <a href="../../../community/">Community</a>
+</li>
+                                    
+<li >
+    <a href="../../../conceptual/">Conceptual</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/build/">build</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/tags/">tags</a>
+</li>
+                                    
+<li >
+    <a href="../../../LICENSE/">LICENSE</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">thg_dev <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../thg_dev/_Sidebar/">thg_dev</a>
+</li>
+                                    
+<li >
+    <a href="../../contributing/Contributing-to-thg/">Get Started</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/templates/">templates</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Roadmaps</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">2019</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap/">Roadmap</a>
+</li>
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap-Review/">Roadmap_Review</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">git</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../git/Using-Git/">Using-Git</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-cheatsheet/">Git_cheatsheet</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-Reference-Sites/">Git-Reference-Sites</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">documentation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">capture the flag</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">basic</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">analysis</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/malware/">malware</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">recovery</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/backuo/">backup</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/patching/">patching</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">tips_end_tricks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/tools/">tools</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/decoding/">decoding</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/dos/">dos</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/os_cheats/">os_cheats</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/snort/">snort</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/basic/">basic</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nmap/">nmap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nessus/">nessus</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/openvas/">openvas</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">defend</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tcpdump/">tcpdump</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/editcap/">edicap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/mergecap/">mergecap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/snort/">snort</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tshark/">tshark</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/analysis/">analysis</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">os</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/windows/">windows</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../../../deployment/">Deployment</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">hash_crack</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/">index</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/CORE_HASH_CRACKING_KNOWLEDGE/">CORE_HASH_CRACKING_KNOWLEDGE</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">pentest_standard</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../pentest_standard/preengagemente/">Pre engagement Interactions</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/ig/">Intelligence Gathering</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/threatmodeling/">Threat Modeling</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/vulnterability/">Vulnerability Analysis</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/exploration/">Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/postexploration/">Post Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/report/">Reporting</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/tecguidelines/">Technical Guidelines</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">CLI <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-1</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/thg/">THG</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/server/server/">thg_server</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/shells/shells/">thg_shells</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_docs/thg_docs/">thg_docs</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/auxiliares/auxiliares/">thg_auxiliares</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/anti_forensic/anti_forensic/">thg_anti_forensic</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/crypto/crypto/">thg_crypto</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/drone/drone/">thg_drone</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/keylogger/keylogger/">thg_keylogger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/recon/recon/">thg_recon</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/voip/voip/">thg_voip</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automation/automation/">thg_automation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cryptography/cryptography/">thg_cryptography</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/exploitation/exploitation/">thg_exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/malware/malware/">thg_malware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/reversing/reversing/">thg_reversing</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_windows/thg_windows/">thg_windows</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automobile/automobile/">thg_automobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/database/database/">thg_database</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/fingerprint/fingerprint/">thg_fingerprint</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/misc/misc/">thg_misc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/sniffer/sniffer/">thg_sniffer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/wireless/wireless/">thg_wireless</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/debugger/debugger/">thg_debugger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/firmware/firmware/">thg_firmware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/mobile/mobile/">thg_mobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/social/social/">thg_social</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/backdoor/backdoor/">thg_backdoor</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/decompiler/decompiler/">thg_decompiler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/forensic/forensic/">thg_forensic</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-2</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/networking/networking/">thg_networking</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoff/spoff/">thg_spoff</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/binary/binary/">thg_binary</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensensive/defensensive/">thg_defensensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/gpu/gpu/">thg_gpu</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/os/os/">thg_os</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/nfc/nfc/">thg_nfc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoof/spoof/">thg_spoof</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/bluetooth/bluetooth/">thg_bluetooth</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensive/defensive/">thg_defensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/hardware/hardware/">thg_hardware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/packer/packer/">thg_packer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/stego/stego/">thg_stego</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/code_audit/code_audit/">thg_code_audit</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/disassembler/disassembler/">thg_disassembler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/honeypot/honeypot/">thg_honeypot</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/proxy/proxy/">thg_proxy</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/tunnel/tunnel/">thg_tunnel</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cracker/cracker/">thg_cracker</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/dos/dos/">thg_dos</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/ids/ids/">thg_ids</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/radio/radio/">thg_radio</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/unpacker/unpacker/">thg_unpacker</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li>
+                                <a href="https://github.com/darkcode357/thg-framework/edit/master/docs/dev/dark/Committer-Rights.md">Edit on darkcode357/thg-framework</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#metasploit-committers">Metasploit Committers</a></li>
+            <li><a href="#how-to-be-a-committer">How to be a Committer</a></li>
+            <li><a href="#how-to-gain-commit-rights">How to Gain Commit Rights</a></li>
+            <li><a href="#how-to-lose-commit-rights">How to Lose Commit Rights</a></li>
+            <li><a href="#useful-links-for-committers">Useful Links for Committers</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="metasploit-committers">Metasploit Committers<a class="headerlink" href="#metasploit-committers" title="Permanent link">&para;</a></h1>
+<p>The term &ldquo;Metasploit Committers&rdquo; describes people who have direct write access to the <a href="https://github.com/rapid7/metasploit-framework">Rapid7 Metasploit-Framework fork</a>. These are the people who can land changes to this main fork of the Framework. However, it is not necessary to have committer rights in order to contribute to Metasploit. Much of our code comes from non-committers.</p>
+<p>We encourage anyone to fork the Metasploit project, make changes, fix bugs, and notify the core committers about those changes via <a href="http://github.com/rapid7/metasploit-framework/pulls">Pull Requests</a>. The process for getting started is most comprehensively documented in the <a href="https://github.com/rapid7/metasploit-framework/wiki/Metasploit-Development-Environment">Metasploit Development Environment</a> setup guide.</p>
+<p>Metasploit committers are a mix of <a href="http://rapid7.com">Rapid7</a> employees and outside contributors. Anyone can become a contributor, with the following expectations:</p>
+<ol>
+<li>Committers are empowered to participate in code review, help newbies, and be positive role models in the larger development community.</li>
+<li>Committers are likely to take up chores such as writing documentation, evangelization, writing test cases, and code review.</li>
+<li>Committers help maintain the character of the Metasploit Framework as a truly independent open source project.</li>
+</ol>
+<p>The Metasploit community is built on the core belief that open contributions and open discussion of security issues has strong benefits for the Internet in general and human society as a whole. By helping each other demonstrate security vulnerabilities and exposures, we foster a community of excellent, ethical practitioners of information security.</p>
+<h2 id="how-to-be-a-committer">How to be a Committer<a class="headerlink" href="#how-to-be-a-committer" title="Permanent link">&para;</a></h2>
+<p>Committers tend to review pull requests that come in from other committers and from the wider Metasploit community. Committers generally should not land their own code without some sort of review from another contributor or committer.</p>
+<p>For most changes, please open a pull request. In addition, always ask for someone to review your work. Even simple fixes might be better done otherwise. If you get no feedback on your pull requests, ask again. Be annoying if necessary! Don&rsquo;t submit a pull request or make a comment and let it rot because nobody responds.</p>
+<p>Pull requests should be merged with a <code>git merge -S --no-ff</code> in order to ensure a merge commit is always generated, and your merge commit is signed with your PGP key. Avoid clicking the green &ldquo;merge&rdquo; button in Github in order to avoid race conditions with landing code that may sneak past review, and of course, so you can sign your commits.</p>
+<p>If you reject a pull request, be clear in the pull request why it was rejected, with some effort made to point at helpful resources for next time. Most people don&rsquo;t often commit to open source code, so when someone does, please be respectful of their efforts.</p>
+<p>Even if someone else approves of a pull request, and it is shown to be broken later, then it is still your responsibility to correct it. Make every effort to get a fix or revert in as soon as possible, whether you wrote the code, landed it, or approved it. Blame is shared equally.</p>
+<p>A list of committer public keys <a href="https://github.com/rapid7/metasploit-framework/wiki/Committer-Keys">is here</a>.</p>
+<h2 id="how-to-gain-commit-rights">How to Gain Commit Rights<a class="headerlink" href="#how-to-gain-commit-rights" title="Permanent link">&para;</a></h2>
+<p>Commit rights are granted via votes on the committers mailing list. Voting records are archived for the benefit for current and future committers.</p>
+<ol>
+<li>Any current committer may nominate any one person as a potential committer by writing to the committers mailing list.</li>
+<li>The nominator must provide a justification for committer rights, and include the nominee&rsquo;s e-mail address.</li>
+<li>After some discussion on the mailing list, there will be a group vote on the nominee.</li>
+<li>The Metasploit manager (@busterb) will inform the new committer of their new commit rights and responsibilities, add the new committer to the appropriate ACL groups and mailing lists, and inform the mailing list of the successful completion of these tasks.</li>
+</ol>
+<p>Committers introduced in this way will have commit rights to the <a href="https://github.com/orgs/rapid7/teams/framework-public-committers/repositories">public framework repositories</a>.</p>
+<h2 id="how-to-lose-commit-rights">How to Lose Commit Rights<a class="headerlink" href="#how-to-lose-commit-rights" title="Permanent link">&para;</a></h2>
+<p>Committer rights are not granted strictly on the basis of proven code quality; committer rights are a statement of trust by the existing body of committers, so there are highly subjective criteria in play as well. Elements like an agreeable personality, the ability to remain calm in the face of trolling, the avoidance of criminal proceedings, and other aspects of a committer&rsquo;s life all play a part in the initial granting of commit access.</p>
+<p>Breaches of trust in terms of malicious or malformed code, or the demonstration of poor judgement that would reflect poorly on the Metasploit project will lead to a discussion on the committer mailing list, and which is likely result in the removal of committer rights.</p>
+<h2 id="useful-links-for-committers">Useful Links for Committers<a class="headerlink" href="#useful-links-for-committers" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/rapid7/metasploit-framework/wiki/Setting-Up-a-Metasploit-Development-Environment">http://r-7.co/MSF-DEV</a> is pretty much required reading.</li>
+<li>So is <a href="https://github.com/rapid7/metasploit-framework/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a></li>
+<li>Check out the Apache Software Foundation&rsquo;s <a href="https://www.apache.org/dev/committers">Guide for Committers</a>. It&rsquo;s illuminating.</li>
+<li><a href="http://www.producingoss.com/gl/">Producing Open Source Software</a> by Ken Fogel is a must-read.</li>
+<li>Zach Holman&rsquo;s <a href="https://speakerdeck.com/holman/open-source-misfeasance">Open Source Misfeasance</a> slides &ndash; the video is gone!</li>
+<li><a href="https://www.youtube.com/watch?v=Q52kFL8zVoM">How to Survive Poisonous People</a> by Ben Collins-Sussman and Brian Fitzpatrick</li>
+<li><a href="http://www.faqs.org/rfcs/rfc1855.html">The Netiquette RFC</a> is about how to be polite.</li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2019 - 2020 darkcode0x00</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

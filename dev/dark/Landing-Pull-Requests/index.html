@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="darkcode0x00 luizcorrea">
+        <link rel="canonical" href="https://darkcode357.github.io/thg-framework/dev/dark/Landing-Pull-Requests/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Landing Pull Requests - thg-framework</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">thg-framework</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../cli/install/">Installation</a>
+</li>
+                                    
+<li >
+    <a href="../../..">Introduction</a>
+</li>
+                                    
+<li >
+    <a href="../../../community/">Community</a>
+</li>
+                                    
+<li >
+    <a href="../../../conceptual/">Conceptual</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/build/">build</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/tags/">tags</a>
+</li>
+                                    
+<li >
+    <a href="../../../LICENSE/">LICENSE</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">thg_dev <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../thg_dev/_Sidebar/">thg_dev</a>
+</li>
+                                    
+<li >
+    <a href="../../contributing/Contributing-to-thg/">Get Started</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/templates/">templates</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Roadmaps</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">2019</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap/">Roadmap</a>
+</li>
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap-Review/">Roadmap_Review</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">git</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../git/Using-Git/">Using-Git</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-cheatsheet/">Git_cheatsheet</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-Reference-Sites/">Git-Reference-Sites</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">documentation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">capture the flag</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">basic</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">analysis</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/malware/">malware</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">recovery</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/backuo/">backup</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/patching/">patching</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">tips_end_tricks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/tools/">tools</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/decoding/">decoding</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/dos/">dos</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/os_cheats/">os_cheats</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/snort/">snort</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/basic/">basic</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nmap/">nmap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nessus/">nessus</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/openvas/">openvas</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">defend</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tcpdump/">tcpdump</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/editcap/">edicap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/mergecap/">mergecap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/snort/">snort</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tshark/">tshark</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/analysis/">analysis</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">os</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/windows/">windows</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../../../deployment/">Deployment</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">hash_crack</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/">index</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/CORE_HASH_CRACKING_KNOWLEDGE/">CORE_HASH_CRACKING_KNOWLEDGE</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">pentest_standard</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../pentest_standard/preengagemente/">Pre engagement Interactions</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/ig/">Intelligence Gathering</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/threatmodeling/">Threat Modeling</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/vulnterability/">Vulnerability Analysis</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/exploration/">Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/postexploration/">Post Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/report/">Reporting</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/tecguidelines/">Technical Guidelines</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">CLI <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-1</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/thg/">THG</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/server/server/">thg_server</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/shells/shells/">thg_shells</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_docs/thg_docs/">thg_docs</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/auxiliares/auxiliares/">thg_auxiliares</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/anti_forensic/anti_forensic/">thg_anti_forensic</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/crypto/crypto/">thg_crypto</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/drone/drone/">thg_drone</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/keylogger/keylogger/">thg_keylogger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/recon/recon/">thg_recon</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/voip/voip/">thg_voip</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automation/automation/">thg_automation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cryptography/cryptography/">thg_cryptography</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/exploitation/exploitation/">thg_exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/malware/malware/">thg_malware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/reversing/reversing/">thg_reversing</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_windows/thg_windows/">thg_windows</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automobile/automobile/">thg_automobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/database/database/">thg_database</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/fingerprint/fingerprint/">thg_fingerprint</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/misc/misc/">thg_misc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/sniffer/sniffer/">thg_sniffer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/wireless/wireless/">thg_wireless</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/debugger/debugger/">thg_debugger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/firmware/firmware/">thg_firmware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/mobile/mobile/">thg_mobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/social/social/">thg_social</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/backdoor/backdoor/">thg_backdoor</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/decompiler/decompiler/">thg_decompiler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/forensic/forensic/">thg_forensic</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-2</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/networking/networking/">thg_networking</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoff/spoff/">thg_spoff</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/binary/binary/">thg_binary</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensensive/defensensive/">thg_defensensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/gpu/gpu/">thg_gpu</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/os/os/">thg_os</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/nfc/nfc/">thg_nfc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoof/spoof/">thg_spoof</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/bluetooth/bluetooth/">thg_bluetooth</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensive/defensive/">thg_defensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/hardware/hardware/">thg_hardware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/packer/packer/">thg_packer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/stego/stego/">thg_stego</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/code_audit/code_audit/">thg_code_audit</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/disassembler/disassembler/">thg_disassembler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/honeypot/honeypot/">thg_honeypot</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/proxy/proxy/">thg_proxy</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/tunnel/tunnel/">thg_tunnel</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cracker/cracker/">thg_cracker</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/dos/dos/">thg_dos</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/ids/ids/">thg_ids</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/radio/radio/">thg_radio</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/unpacker/unpacker/">thg_unpacker</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li>
+                                <a href="https://github.com/darkcode357/thg-framework/edit/master/docs/dev/dark/Landing-Pull-Requests.md">Edit on darkcode357/thg-framework</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#the-short-story">The short story</a></li>
+        <li class="main "><a href="#handy-git-aliases">Handy Git aliases</a></li>
+        <li class="main "><a href="#fork-and-clone">Fork and clone</a></li>
+        <li class="main "><a href="#branching-from-prs">Branching from PRs</a></li>
+            <li><a href="#checking-out-branches-from-a-remote-forked-repo-in-your-forked-repo">Checking out branches from a remote forked repo in your forked repo</a></li>
+        <li class="main "><a href="#making-changes">Making changes</a></li>
+        <li class="main "><a href="#collaboration-between-contributors">Collaboration between contributors</a></li>
+        <li class="main "><a href="#landing-to-upstream">Landing to upstream</a></li>
+        <li class="main "><a href="#cross-linking-prs-bugs-and-commits">Cross-linking PRs, Bugs, and Commits</a></li>
+        <li class="main "><a href="#merge-conflicts">Merge conflicts</a></li>
+        <li class="main "><a href="#questions-and-corrections">Questions and Corrections</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p><strong>This page is meant for Committers. If you are unsure whether you are a committer, you are not.</strong></p>
+<p>Metasploit is built incrementally by the community through GitHub&rsquo;s <a href="https://github.com/rapid7/metasploit-framework/pulls">Pull Request</a> mechanism. Submitting pull requests (or PRs) is already discussed in the <a href="https://github.com/rapid7/metasploit-framework/wiki/Setting-Up-a-Metasploit-Development-Environment">Dev environment setup</a> documentation. It&rsquo;s important to realize that PRs are a feature of GitHub, not git, so this document will take a look at how to get your git environment to deal with them sensibly.</p>
+<h1 id="the-short-story">The short story<a class="headerlink" href="#the-short-story" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Configure your git environment as described <a href="https://github.com/rapid7/metasploit-framework/wiki/Setting-Up-a-Metasploit-Development-Environment#keeping-in-sync">here</a>.</li>
+<li>Add the <code>fetch = +refs/pull/*/head:refs/remotes/upstream/pr/*</code> line to your <code>.git/config</code>.</li>
+<li>Add your signing key: <code>git config --global user.signingkey</code></li>
+<li>When merging code from a pull request, always, always <code>merge -S --no-ff --edit</code>, and write a meaningful <a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">50/72</a> commit message that references the original PR as <code>#1234</code> (not PR1234, not PR#1234, not 1234). For example, your message should look like this:</li>
+</ul>
+<pre><code>Land #1234, a whizbang bug fix
+
+Adds a whiz to the existing bang. It appears that without this,
+bad things can occasionally happen. Thanks @mcfakepants!
+
+Fixes #1024, also see #999.
+</code></pre>
+
+<ul>
+<li>The <code>--no-ff</code> flag goes for PRs that go back to a contributor&rsquo;s branch as well as PRs that land in rapid7&rsquo;s master branch.</li>
+<li>The <code>-S</code> indicates that you&rsquo;re going to sign the merge with your PGP/GPG key, which is a nice assurance that you&rsquo;re really you.</li>
+<li>If you&rsquo;re making changes (often the case), merge to a landing branch, then merge <strong>that</strong> branch to upstream/master with the <code>-S --no-ff --edit</code> options.</li>
+</ul>
+<h1 id="handy-git-aliases">Handy Git aliases<a class="headerlink" href="#handy-git-aliases" title="Permanent link">&para;</a></h1>
+<p>Check out <a href="https://gist.github.com/todb-r7/3fbee1a9e7b36d82ca55">this gist</a> that automates (mostly) landing pull requests, signing the merge commit, all while rarely losing a race with other committers.</p>
+<h1 id="fork-and-clone">Fork and clone<a class="headerlink" href="#fork-and-clone" title="Permanent link">&para;</a></h1>
+<p>First, fork and clone the <code>rapid7/metasploit-framework</code> repo, <a href="https://help.github.com/articles/fork-a-repo">following these instructions</a>. I like using ssh with <code>~/.ssh/config</code> aliases <a href="https://github.com/rapid7/metasploit-framework/wiki/Setting-Up-a-Metasploit-Development-Environment#wiki-ssh">as described here</a>, but the https method will work, too.</p>
+<p>Once this is done, you will have a remote repository called &ldquo;origin,&rdquo; which points to your forked repository on GitHub. You will be doing most of your work in your own fork of Metasploit, even if you have commit rights to Rapid7&rsquo;s fork. Now, we&rsquo;re going to add an &ldquo;upstream&rdquo; repository to talk to the Rapid7 repository.</p>
+<p>In addition, we&rsquo;re going to add a magical line to the config file that will let us see all pull requests against the Rapid7 repo (both open and closed). Note that this will take a minute since you&rsquo;re adding some hundreds of megs to your clone&rsquo;s refs.</p>
+<p>So, open up <code>metasploit-framework/.git/config</code> with your favorite editor, add an upstream remote, and add the pull request refs for both your and Rapid7&rsquo;s forks. In the end, you should have a section that started off like this:</p>
+<pre><code class="config">[remote &quot;upstream&quot;]
+  fetch = +refs/heads/*:refs/remotes/upstream/*
+  fetch = +refs/pull/*/head:refs/remotes/upstream/pr/*
+  url = https://github.com/rapid7/metasploit-framework
+</code></pre>
+
+<p>And now it looks like this:</p>
+<pre><code class="config">[remote &quot;upstream&quot;]
+  fetch = +refs/heads/*:refs/remotes/upstream/*
+  fetch = +refs/pull/*/head:refs/remotes/upstream/pr/*
+  url = git@github.com:rapid7/metasploit-framework.git
+[remote &quot;origin&quot;]
+  fetch = +refs/heads/*:refs/remotes/origin/*
+  fetch = +refs/pull/*/head:refs/remotes/origin/pr/*
+  url = https://github.com/YOURNAME/metasploit-framework
+</code></pre>
+
+<p>Some people like to copy these over into remotes named &ldquo;rapid7&rdquo; and &ldquo;yourusername&rdquo; just so they don&rsquo;t have to remember about &ldquo;origin&rdquo; and &ldquo;upstream,&rdquo; but for this doc, we&rsquo;ll just assume you have &ldquo;origin&rdquo; and &ldquo;upstream&rdquo; defined like this.</p>
+<p>Now, you can git fetch the remote PRs. This will take a little bit, since we have a couple dozen MBs of pull request data. Storage is cheap, though, right?</p>
+<pre><code>$ git fetch --all
+Fetching todb-r7
+remote: Counting objects: 13, done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 7 (delta 6), reused 7 (delta 6)
+Unpacking objects: 100% (7/7), done.
+From https://github.com/todb-r7/metasploit-framework
+ * [new ref]         refs/pull/1/head -&gt; origin/pr/1
+ * [new ref]         refs/pull/2/head -&gt; origin/pr/2
+Fetching upstream
+remote: Counting objects: 91, done.
+remote: Compressing objects: 100% (29/29), done.
+remote: Total 59 (delta 47), reused 42 (delta 30)
+Unpacking objects: 100% (59/59), done.
+From https://github.com/rapid7/metasploit-framework
+ [... bunches of tags and PRs ...]
+ * [new ref]         refs/pull/1701/head -&gt; upstream/pr/1701
+ * [new ref]         refs/pull/1702/head -&gt; upstream/pr/1702
+</code></pre>
+
+<p>You can <code>git fetch</code> a remote any time, and you&rsquo;ll get access to the latest changes to all branches and pull requests.</p>
+<h1 id="branching-from-prs">Branching from PRs<a class="headerlink" href="#branching-from-prs" title="Permanent link">&para;</a></h1>
+<p>A manageable strategy for dealing with outstanding PRs is to start pre-merge testing on the pull request in isolation. For example, to work on PR #1217, we would:</p>
+<pre><code>$ git checkout upstream/pr/1217
+Note: checking out 'upstream/pr/1217'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 9e499e5... Make BindTCP test more robust
+((no branch)) todb@mazikeen:~/git/rapid7/metasploit-framework
+```
+```
+$ git checkout -b landing-1217
+</code></pre>
+
+<p>Now, we&rsquo;re on a local branch identical to the original pull request, and can move on from there. We can make our changes, isolated from master, and then either send them back to the contributor (this requires looking up the original contributor&rsquo;s GitHub username and branch name on GitHub), or if there aren&rsquo;t any changes or the changes are trivial, we can land them (if you have committer rights to Rapid7&rsquo;s repo, this is where you land them to the upstream repo).</p>
+<p>In this particular case with PR #1217, I did want to send some changes back to the contributor.</p>
+<p><strong>Important</strong>: If the codebase the contributor&rsquo;s PR is based on is severely outdated (e.g., they branched off an outdated <code>master</code>), you should not test their PR in isolation as described above. Instead, you should create a test branch that is identical to the latest codebase, merge the contributor&rsquo;s PR into the test branch, and then start your testing.</p>
+<p>Here&rsquo;s an example with #6954 (your workflow may vary):</p>
+<pre><code>$ git checkout upstream/master 
+Note: checking out 'upstream/master'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b &lt;new-branch-name&gt;
+
+HEAD is now at afbeb2b... Land #7023, fixes for swagger exploit
+$ git merge --no-ff --no-edit upstream/pr/6954
+Merge made by the 'recursive' strategy.
+ modules/exploits/windows/local/payload_inject.rb | 5 +++++
+ 1 file changed, 5 insertions(+)
+[*] Running msftidy.rb in .git/hooks/post-merge mode
+--- Checking new and changed module syntax with tools/dev/msftidy.rb ---
+modules/exploits/windows/local/payload_inject.rb - msftidy check passed
+------------------------------------------------------------------------
+</code></pre>
+
+<p>This ensures that the contributor&rsquo;s PR is being tested against the latest codebase and not an outdated one. <strong>If you do not do this</strong>, when you land the PR, you may end up breaking Metasploit.</p>
+<h2 id="checking-out-branches-from-a-remote-forked-repo-in-your-forked-repo">Checking out branches from a remote forked repo in your forked repo<a class="headerlink" href="#checking-out-branches-from-a-remote-forked-repo-in-your-forked-repo" title="Permanent link">&para;</a></h2>
+<p>After your .git/config is set up per the above, and you successfully run <code>git fetch --all</code>, you are two steps away from being able to check out a branch from a contributor&rsquo;s forked repo.</p>
+<p>You need to add their fork once as a remote: <code>git remote add OTHER_USER git://github.com/OTHER_USER/metasploit-framework.git</code>. Now pull down the latest from them: <code>git fetch OTHER_USER</code>. Now you can check out branches from OTHER_USER per usual, e.g. <code>git checkout bug/foo</code>.</p>
+<h1 id="making-changes">Making changes<a class="headerlink" href="#making-changes" title="Permanent link">&para;</a></h1>
+<pre><code>$ gvim .gitignore
+[... make some changes and some commits ...]
+(landing-1217) todb@mazikeen:~/git/rapid7/metasploit-framework
+$ git checkout -b pr1217-fix-gitignore-conflict
+Switched to a new branch 'pr1217-fix-gitignore-conflict'
+(pr1217-fix-gitignore-conflict) todb@mazikeen:~/git/rapid7/metasploit-framework
+$ git push origin pr1271-fix-gitignore-conflict
+(pr1217-fix-gitignore-conflict) todb@mazikeen:~/git/rapid7/metasploit-framework
+$ git pr-url schierlm javapayload-maven
+Created new window in existing browser session.
+</code></pre>
+
+<p>This sequence does a few things after editing the .gitconfig. It creates another copy of landing-1217 (which is itself a copy of upstream/pr/1217)). Next, I push those changes to my branch (todb-r7, aka &ldquo;origin&rdquo;). Finally, I have a mighty <a href="https://gist.github.com/todb-r7/5438391">.gitconfig alias here</a> to open a browser window to send a pull request to the original contributor&rsquo;s branch (you will want to edit yours to reflect your real GitHub username, of course).</p>
+<pre><code>pr-url = !&quot;echo https://github.com/YOURNAME/metasploit-framework/pull/new/HISNAME:HISBRANCH...YOURBRANCH&quot;
+</code></pre>
+
+<p>Filling in the blanks (provided by the original PR&rsquo;s information from GitHub) gets me:</p>
+<pre><code>https://github.com/todb-r7/metasploit-framework/pull/new/schierlm:javapayload-maven...pr1217-fix-gitignore-conflict
+</code></pre>
+
+<p>I opened that in a browser, and ended up with https://github.com/schierlm/metasploit-framework/pull/1 . Once @schierlm landed it on his branch (again, using <code>git merge --no-ff</code> and a short, informational merge commit message), all I (or anyone) had to do was <code>git fetch</code> to get the change reflected in upstream/pr/1217, and then the integration of the PR could continue.</p>
+<h1 id="collaboration-between-contributors">Collaboration between contributors<a class="headerlink" href="#collaboration-between-contributors" title="Permanent link">&para;</a></h1>
+<p>Note the important bit here: <strong>you do not need commit rights to Rapid7 to branch pull requests</strong>. If Alice knows a solution to Bob&rsquo;s pull request that Juan pointed out, it is <strong>easy</strong> for Alice to provide that solution by following the procedure above. <code>git blame</code> will still work correctly, commit histories will all be accurate, everyone on the pull request will be notified of Alice&rsquo;s changes, and Juan doesn&rsquo;t have to wait around for Bob to figure out how to use <code>send_request_cgi()</code> or whatever the problem was. The hardest part is remembering how to construct the pull request to Bob &ndash; lucky for you, <a href="https://gist.github.com/todb-r7/5438391">this .git/config alias</a> makes that part pretty push-button.</p>
+<h1 id="landing-to-upstream">Landing to upstream<a class="headerlink" href="#landing-to-upstream" title="Permanent link">&para;</a></h1>
+<p>Back to PR #1217. Turns out, my change was enough to land the original chunk of work. So, someone else (@jlee-r7) was able to to do something like this:</p>
+<pre><code>$ git fetch upstream
+remote: Counting objects: 12, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 7 (delta 5), reused 7 (delta 5)
+Unpacking objects: 100% (7/7), done.
+From https://github.com/rapid7/metasploit-framework
+   9e499e5..263e967  refs/pull/1651/head -&gt; upstream/pr/1651
+</code></pre>
+
+<p>This all looked good, so he could land this to Rapid7&rsquo;s repo with:</p>
+<pre><code>$ git checkout -b upstream-master --track upstream/master
+$ git merge -S --no-ff --edit landing-1217
+$ git push upstream upstream-master:master
+</code></pre>
+
+<p>Or, if he already have upstream-master checked out:</p>
+<pre><code>$ git checkout upstream-master
+$ git rebase upstream/master
+$ git merge -S --no-ff --edit landing-1217
+$ git push upstream upstream-master:master
+</code></pre>
+
+<p>The <code>--edit</code> is optional if we have our editor configured correctly in <code>$HOME/.gitconfig</code>. The point here is that we <em>always</em> want a merge commit, and we <em>never</em> want to use the (often useless) default merge commit message. For #1217, this was changed to:</p>
+<pre><code class="commit">Land #1217, java payload build system refactor
+
+</code></pre>
+
+<p>Note that you should rebase <em>before</em> landing &ndash; otherwise, your merge commit will be lost in the rebase.</p>
+<p>Finally, the -S indicates we are going to sign the merge, using our GPG key. This is a nice way to prove in a secure way that this merge is, in fact, coming from you, and not someone impersonating you. For more on signing merges, see <a href="http://mikegerwitz.com/papers/git-horror-story.html">A Git Horror Story: Repository Integrity With Signed Commits</a>.</p>
+<p>To set yourself up for signing, your .gitconfig (or metasploit-framework/git/.config) file should have these entries:</p>
+<pre><code>[user]
+name = Your Name
+email = your@email.xxx
+signingkey = DEADBEEF # Must match exactly with your key for &quot;Your Name &lt;your@email.xxx&gt;&quot;
+[alias]
+c = commit -S --edit
+m = merge -S --no-ff --edit
+</code></pre>
+
+<p>People with commit rights to rapid7/metasploit-framework will have their <a href="https://github.com/rapid7/metasploit-framework/wiki/Committer-Keys">keys listed here</a>.</p>
+<h1 id="cross-linking-prs-bugs-and-commits">Cross-linking PRs, Bugs, and Commits<a class="headerlink" href="#cross-linking-prs-bugs-and-commits" title="Permanent link">&para;</a></h1>
+<p>TODO: Update in this new post-Redmine, GitHub issues world</p>
+<h1 id="merge-conflicts">Merge conflicts<a class="headerlink" href="#merge-conflicts" title="Permanent link">&para;</a></h1>
+<p>The nice thing about this strategy is that you can test for merge conflicts straight away. You&rsquo;d use a sequence like:</p>
+<pre><code>git checkout upstream/pr/1234
+git checkout -b landing-1234
+git checkout master
+git checkout -b master-temp
+git merge landing-1234 master-temp
+</code></pre>
+
+<p>If that works, great, you know you don&rsquo;t have any merge conflicts right now.</p>
+<h1 id="questions-and-corrections">Questions and Corrections<a class="headerlink" href="#questions-and-corrections" title="Permanent link">&para;</a></h1>
+<p>Bug @todb-r7, either on Freenode on the #metasploit channel (he&rsquo;s todb there), or by e-mailing the <a href="https://lists.sourceforge.net/lists/listinfo/metasploit-hackers">metasploit-hackers</a> mailing list.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2019 - 2020 darkcode0x00</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

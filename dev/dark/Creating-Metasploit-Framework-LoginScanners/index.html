@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="darkcode0x00 luizcorrea">
+        <link rel="canonical" href="https://darkcode357.github.io/thg-framework/dev/dark/Creating-Metasploit-Framework-LoginScanners/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Creating Metasploit Framework LoginScanners - thg-framework</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">thg-framework</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../cli/install/">Installation</a>
+</li>
+                                    
+<li >
+    <a href="../../..">Introduction</a>
+</li>
+                                    
+<li >
+    <a href="../../../community/">Community</a>
+</li>
+                                    
+<li >
+    <a href="../../../conceptual/">Conceptual</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/build/">build</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/tags/">tags</a>
+</li>
+                                    
+<li >
+    <a href="../../../LICENSE/">LICENSE</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">thg_dev <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../thg_dev/_Sidebar/">thg_dev</a>
+</li>
+                                    
+<li >
+    <a href="../../contributing/Contributing-to-thg/">Get Started</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/templates/">templates</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Roadmaps</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">2019</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap/">Roadmap</a>
+</li>
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap-Review/">Roadmap_Review</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">git</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../git/Using-Git/">Using-Git</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-cheatsheet/">Git_cheatsheet</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-Reference-Sites/">Git-Reference-Sites</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">documentation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">capture the flag</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">basic</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">analysis</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/malware/">malware</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">recovery</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/backuo/">backup</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/patching/">patching</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">tips_end_tricks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/tools/">tools</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/decoding/">decoding</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/dos/">dos</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/os_cheats/">os_cheats</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/snort/">snort</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/basic/">basic</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nmap/">nmap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nessus/">nessus</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/openvas/">openvas</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">defend</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tcpdump/">tcpdump</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/editcap/">edicap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/mergecap/">mergecap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/snort/">snort</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tshark/">tshark</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/analysis/">analysis</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">os</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/windows/">windows</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../../../deployment/">Deployment</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">hash_crack</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/">index</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/CORE_HASH_CRACKING_KNOWLEDGE/">CORE_HASH_CRACKING_KNOWLEDGE</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">pentest_standard</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../pentest_standard/preengagemente/">Pre engagement Interactions</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/ig/">Intelligence Gathering</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/threatmodeling/">Threat Modeling</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/vulnterability/">Vulnerability Analysis</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/exploration/">Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/postexploration/">Post Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/report/">Reporting</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/tecguidelines/">Technical Guidelines</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">CLI <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-1</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/thg/">THG</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/server/server/">thg_server</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/shells/shells/">thg_shells</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_docs/thg_docs/">thg_docs</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/auxiliares/auxiliares/">thg_auxiliares</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/anti_forensic/anti_forensic/">thg_anti_forensic</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/crypto/crypto/">thg_crypto</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/drone/drone/">thg_drone</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/keylogger/keylogger/">thg_keylogger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/recon/recon/">thg_recon</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/voip/voip/">thg_voip</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automation/automation/">thg_automation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cryptography/cryptography/">thg_cryptography</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/exploitation/exploitation/">thg_exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/malware/malware/">thg_malware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/reversing/reversing/">thg_reversing</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_windows/thg_windows/">thg_windows</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automobile/automobile/">thg_automobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/database/database/">thg_database</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/fingerprint/fingerprint/">thg_fingerprint</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/misc/misc/">thg_misc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/sniffer/sniffer/">thg_sniffer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/wireless/wireless/">thg_wireless</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/debugger/debugger/">thg_debugger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/firmware/firmware/">thg_firmware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/mobile/mobile/">thg_mobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/social/social/">thg_social</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/backdoor/backdoor/">thg_backdoor</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/decompiler/decompiler/">thg_decompiler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/forensic/forensic/">thg_forensic</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-2</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/networking/networking/">thg_networking</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoff/spoff/">thg_spoff</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/binary/binary/">thg_binary</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensensive/defensensive/">thg_defensensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/gpu/gpu/">thg_gpu</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/os/os/">thg_os</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/nfc/nfc/">thg_nfc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoof/spoof/">thg_spoof</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/bluetooth/bluetooth/">thg_bluetooth</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensive/defensive/">thg_defensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/hardware/hardware/">thg_hardware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/packer/packer/">thg_packer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/stego/stego/">thg_stego</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/code_audit/code_audit/">thg_code_audit</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/disassembler/disassembler/">thg_disassembler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/honeypot/honeypot/">thg_honeypot</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/proxy/proxy/">thg_proxy</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/tunnel/tunnel/">thg_tunnel</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cracker/cracker/">thg_cracker</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/dos/dos/">thg_dos</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/ids/ids/">thg_ids</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/radio/radio/">thg_radio</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/unpacker/unpacker/">thg_unpacker</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li>
+                                <a href="https://github.com/darkcode357/thg-framework/edit/master/docs/dev/dark/Creating-Metasploit-Framework-LoginScanners.md">Edit on darkcode357/thg-framework</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#credential-objects">Credential Objects</a></li>
+        <li class="main "><a href="#result-objects">Result Objects</a></li>
+        <li class="main "><a href="#credentialcollection">CredentialCollection</a></li>
+        <li class="main "><a href="#loginscanner-base">LoginScanner Base</a></li>
+            <li><a href="#attributes">Attributes</a></li>
+            <li><a href="#methods">Methods</a></li>
+            <li><a href="#constants">Constants</a></li>
+        <li class="main "><a href="#pulling-it-all-together-in-a-module">Pulling it all Together in a module</a></li>
+            <li><a href="#the-cred-collection">The Cred Collection</a></li>
+            <li><a href="#initialising-the-scanner">Initialising the Scanner</a></li>
+            <li><a href="#the-scan-block">The scan block</a></li>
+            <li><a href="#ftp_login-final-view">ftp_login final view</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p>So, you want to make a Login Scanner Module in Metasploit, eh? There are a few things you will need to know before you begin. This article will try to illustrate all the moving pieces involved in creating an effective bruteforce/login scanner module.</p>
+<ul>
+<li><a href="#credential-objects">Credential objects</a></li>
+<li><a href="#result-objects">Result objects</a></li>
+<li><a href="#credentialcollection">CredentialCollection</a></li>
+<li><a href="#loginscanner-base">LoginScanner Base</a> </li>
+<li><a href="#attributes">Attributes</a></li>
+<li><a href="#methods">Methods</a></li>
+<li><a href="#constants">Constants</a></li>
+<li><a href="#pulling-it-all-together-in-a-module">Pulling it all Together in a module</a></li>
+<li><a href="#the-cred-collection">The Cred Collection</a></li>
+<li><a href="#initialising-the-scanner">Initialising the Scanner</a></li>
+<li><a href="#the-scan-block">The scan block</a></li>
+<li><a href="#ftp_login-final-view">ftp_login final view</a></li>
+</ul>
+<h3 id="credential-objects">Credential Objects<a class="headerlink" href="#credential-objects" title="Permanent link">&para;</a></h3>
+<p>Metasploit::Framework::Credential
+(lib/metasploit/framework/credential.rb)</p>
+<p>These objects represent the most basic concept of how we now think about Credentials.</p>
+<ul>
+<li>Public: The public part of a credential refers to the part that can be publicly known. In almost all cases this is the username.</li>
+<li>Private: The private part of the credential, this is the part that should be a secret. This currently represents: Password, SSH Key, NTLM Hash etc.</li>
+<li>Private Type: This defines what type of private credential is defined above</li>
+<li>Realm: This represents an authentication realm that the credential is valid for. This is a teritary part of the authentication process. Examples include: Active Directory Domain, Postgres Database etc.</li>
+<li>Realm Key: This defines what type of Realm the Realm Attribute represents</li>
+<li>Paired: This attribute is a boolean value that sets whether the Credential must have both a public and private to be valid</li>
+</ul>
+<p>All LoginScanners use Credential objects as the basis for their attempts.</p>
+<h3 id="result-objects">Result Objects<a class="headerlink" href="#result-objects" title="Permanent link">&para;</a></h3>
+<p>Metasploit::Framework::LoginScanner::Result
+(lib/metasploit/framework/login_scanner/result.rb)</p>
+<p>These are the objects yielded by the scan! method on each LoginScanner.  They contain:</p>
+<ul>
+<li>Access Level: an optional Access Level which can describe the level of access granted by the login attempt. </li>
+<li>Credential : the Credential object that achieved that result</li>
+<li>Proof: an optional proof string to show why we think the result is valid</li>
+<li>Status: The status of the login attempt. These values come from Metasploit::model::Login::Status , examples include &ldquo;Incorrect&rdquo;, &ldquo;Unable to Connect&rdquo;, &ldquo;Untried&rdquo; etc</li>
+</ul>
+<h3 id="credentialcollection">CredentialCollection<a class="headerlink" href="#credentialcollection" title="Permanent link">&para;</a></h3>
+<p>Metasploit::Framework::CredentialCollection
+(lib/metasploit/framework/credential_collection.rb)</p>
+<p>This class is used to take datastore options from a module and yield Credential objects from an each method. It takes wordlist files, as well as direct username and password options. It also takes options for username as pass and blank apssword. It can be passed in as the cred_details on the LoginScanner, and responds to #each and yields crafted Credentials.</p>
+<p>Example (from modules/auxiliary/scanner/ftp/ftp_login.rb):</p>
+<pre><code class="ruby">cred_collection = Metasploit::Framework::CredentialCollection.new(
+        blank_passwords: datastore['BLANK_PASSWORDS'],
+        pass_file: datastore['PASS_FILE'],
+        password: datastore['PASSWORD'],
+        user_file: datastore['USER_FILE'],
+        userpass_file: datastore['USERPASS_FILE'],
+        username: datastore['USERNAME'],
+        user_as_pass: datastore['USER_AS_PASS'],
+        prepended_creds: anonymous_creds
+    )
+</code></pre>
+
+<h3 id="loginscanner-base">LoginScanner Base<a class="headerlink" href="#loginscanner-base" title="Permanent link">&para;</a></h3>
+<p>Metasploit::Framework::LoginScanner::Base
+(lib/metasploit/framework/login_scanner/base.rb)</p>
+<p>This is a Ruby Module that contains all the base behaviour for all LoginScanners. All LoginScanner classes should include this module.</p>
+<p>The specs for this behaviour are kept in a shared example group. Specs for your LoginScanner should use the following syntax to include these tests:</p>
+<pre><code class="ruby">it_behaves_like 'Metasploit::Framework::LoginScanner::Base', has_realm_key: false, has_default_realm: false
+</code></pre>
+
+<p>Where has_realm_key and has_default_realm should be set according to whether your LoginScanner has those things. (More on this later)</p>
+<p>LoginScanners always take a collection of Crednetials to try and one host and port. so each LoginScanner object attempts to login to only one specific service.</p>
+<h4 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h4>
+<ul>
+<li>connection_timeout: The time to wait for a connection to timeout</li>
+<li>cred_details: An object that yeilds credentials on each (like credentialCollection or an Array)</li>
+<li>host: The address for the target host</li>
+<li>port: the port number for the target service</li>
+<li>proxies: any proxies to use in the connection (some scanners might not support this)</li>
+<li>stop_on_success: whether to stop trying after a successful login is found</li>
+</ul>
+<h4 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h4>
+<ul>
+<li>each_credential : You will not have to worry much about this method, Be aware that it is there. It iterates through whatever is in cred_details, does some normalization and tries to make sure each Credential is properly setup for use by the given LoginScanner. It yields each Credential in a block.</li>
+</ul>
+<p>```ruby
+ def each_credential
+            cred_details.each do |raw_cred|
+              # This could be a Credential object, or a Credential Core, or an Attempt object
+              # so make sure that whatever it is, we end up with a Credential.
+              credential = raw_cred.to_credential</p>
+<pre><code>          if credential.realm.present? &amp;&amp; self.class::REALM_KEY.present?
+            credential.realm_key = self.class::REALM_KEY
+            yield credential
+          elsif credential.realm.blank? &amp;&amp; self.class::REALM_KEY.present? &amp;&amp; self.class::DEFAULT_REALM.present?
+            credential.realm_key = self.class::REALM_KEY
+            credential.realm     = self.class::DEFAULT_REALM
+            yield credential
+          elsif credential.realm.present? &amp;&amp; self.class::REALM_KEY.blank?
+            second_cred = credential.dup
+            # Strip the realm off here, as we don't want it
+            credential.realm = nil
+            credential.realm_key = nil
+            yield credential
+            # Some services can take a domain in the username like this even though
+            # they do not explicitly take a domain as part of the protocol.
+            second_cred.public = "#{second_cred.realm}\\#{second_cred.public}"
+            second_cred.realm = nil
+            second_cred.realm_key = nil
+            yield second_cred
+          else
+            yield credential
+          end
+        end
+      end
+</code></pre>
+<pre><code>
+
+ - set_sane_defaults: This method will be overridden by each specific Loginscanner. This is called at the end of the initializer and sets any sane defaults for attributes that have them and were not given a specific value in the initializer.
+
+ ```ruby
+ # This is a placeholder method. Each LoginScanner class
+          # will override this with any sane defaults specific to
+          # its own behaviour.
+          # @abstract
+          # @return [void]
+          def set_sane_defaults
+            self.connection_timeout = 30 if self.connection_timeout.nil?
+          end
+ ```
+
+ -  attempt_login: This method is just a stub on the Base mixin. It will be ovverriden in each LoginScanner class to contain the logic to take one single Credential object and use it to make a login attempt against the target service. It returns a ::Metasploit::Framework::LoginScanner::Result object containing all the information about that attempt's result. For an example let's look at the attempt_login method from Metasploit::Framework::LoginScanner::FTP (lib/metasploit/framework/login_scanner/ftp.rb)
+
+ ```ruby
+ # (see Base#attempt_login)
+        def attempt_login(credential)
+          result_options = {
+              credential: credential
+          }
+
+          begin
+            success = connect_login(credential.public, credential.private)
+          rescue ::EOFError,  Rex::AddressInUse, Rex::ConnectionError, Rex::ConnectionTimeout, ::Timeout::Error
+            result_options[:status] = Metasploit::Model::Login::Status::UNABLE_TO_CONNECT
+            success = false
+          end
+
+
+          if success
+            result_options[:status] = Metasploit::Model::Login::Status::SUCCESSFUL
+          elsif !(result_options.has_key? :status)
+            result_options[:status] = Metasploit::Model::Login::Status::INCORRECT
+          end
+
+          ::Metasploit::Framework::LoginScanner::Result.new(result_options)
+
+        end
+ ```
+
+ - scan! : This method is the main one you will be concerned with. This method does several things. 
+    - It calls valid! which will check all of the validations on the class and raise an Metasploit::Framework::LoginScanner::Invalid if any of the Vlidations fail. This exception will contain all the errors messages for any failing validations.
+    - it keeps track of the connection error count, and will bail out if we have too many connection errors or too many in a row
+    - it runs throguh all of the credentials by calling each_credential with a block
+    - in that block it passes each credential to #attempt_login
+    - it yields the Result object into the block it is passed
+    - if stop_on_success is set it will also exit out early if it the reuslt was a success
+
+```ruby
+# Attempt to login with every {Credential credential} in
+          # {#cred_details}, by calling {#attempt_login} once for each.
+          #
+          # If a successful login is found for a user, no more attempts
+          # will be made for that user.
+          #
+          # @yieldparam result [Result] The {Result} object for each attempt
+          # @yieldreturn [void]
+          # @return [void]
+          def scan!
+            valid!
+
+            # Keep track of connection errors.
+            # If we encounter too many, we will stop.
+            consecutive_error_count = 0
+            total_error_count = 0
+
+            successful_users = Set.new
+
+            each_credential do |credential|
+              next if successful_users.include?(credential.public)
+
+              result = attempt_login(credential)
+              result.freeze
+
+              yield result if block_given?
+
+              if result.success?
+                consecutive_error_count = 0
+                break if stop_on_success
+                successful_users &lt;&lt; credential.public
+              else
+                if result.status == Metasploit::Model::Login::Status::UNABLE_TO_CONNECT
+                  consecutive_error_count += 1
+                  total_error_count += 1
+                  break if consecutive_error_count &gt;= 3
+                  break if total_error_count &gt;= 10
+                end
+              end
+            end
+            nil
+          end
+</code></pre>
+
+<h4 id="constants">Constants<a class="headerlink" href="#constants" title="Permanent link">&para;</a></h4>
+<p>Although not defined on Base, each LoginScanner has a series of Constants that can be defined on it to assist with critical behaviour.</p>
+<ul>
+<li>DEFAULT_PORT: DEFAULT_PORT is a simple constant for use with set_sane_defaults. If the port isn&rsquo;t set by the user it will use DEFAULT_PORT. This is put in a constant so it can be quickly referenced from outside the scanner.</li>
+</ul>
+<p>These next two Constants are used by the LoginScanner namespace method classes_for_services. This method invoked by <code>Metasploit::Framework::LoginScanner.classes_for_service(&lt;Mdm::service&gt;)</code> will actually return an array of LoginScanner classes that may be useful to try against that particular Service.
+ - LIKELY_PORTS : This constant holds n array of port numbers that it would be likely useful to use this scanner against.
+ - LIKELY_SERVICE_NAMES : like above except with strings for service names instead of port numbers.</p>
+<ul>
+<li>PRIVATE_TYPES : This contains an array of symbols representing the different Private credential types it supports. It should always match the demodulize result for the Private class i.e :password, :ntlm_hash, :ssh_key</li>
+</ul>
+<p>These constants are fore LoginScanners that have to deal with Realms such as AD domains or Database Names.</p>
+<ul>
+<li>REALM_KEY: The type of Realm this scanner expects to deal with. Should always be a constants from metasploit::Model::Login::Status</li>
+<li>
+<p>DEFAULT_REALM: Some scanners have a default realm (like WORKSTATION for AD domain stuff). If a credential is given to a scanner that requires a realm, but the credential has no realm, this value will be added to the credential as the realm.</p>
+</li>
+<li>
+<p>CAN_GET_SESSION: this should be either true or false as to whether we expect we could somehow get a session with a Credential found from this scanner.</p>
+</li>
+</ul>
+<p>example1 ( Metasploit::Framework::LoginScanner::FTP)</p>
+<p><code>ruby
+  DEFAULT_PORT         = 21
+        LIKELY_PORTS         = [ DEFAULT_PORT, 2121 ]
+        LIKELY_SERVICE_NAMES = [ 'ftp' ]
+        PRIVATE_TYPES        = [ :password ]
+        REALM_KEY           = nil</code></p>
+<p>example2 ( Metasploit::Framework::LoginScanner::SMB)</p>
+<pre><code class="ruby">  CAN_GET_SESSION      = true
+        DEFAULT_REALM        = 'WORKSTATION'
+        LIKELY_PORTS         = [ 139, 445 ]
+        LIKELY_SERVICE_NAMES = [ &quot;smb&quot; ]
+        PRIVATE_TYPES        = [ :password, :ntlm_hash ]
+        REALM_KEY            = Metasploit::Model::Realm::Key::ACTIVE_DIRECTORY_DOMAIN
+</code></pre>
+
+<h3 id="pulling-it-all-together-in-a-module">Pulling it all Together in a module<a class="headerlink" href="#pulling-it-all-together-in-a-module" title="Permanent link">&para;</a></h3>
+<p>So now you hopefully have a good diea of all the moving peices involved in creating a LoginScanner. The next step is using your brand new LoginScanner in an actual module. </p>
+<p>Let&rsquo;s look at the ftp_login module:</p>
+<p><code>def run_host(ip)</code></p>
+<p>Every Bruteforce/Login module should be a scanner and should use the run_host method which will run once for each RHOST.</p>
+<h4 id="the-cred-collection">The Cred Collection<a class="headerlink" href="#the-cred-collection" title="Permanent link">&para;</a></h4>
+<pre><code class="ruby">    cred_collection = Metasploit::Framework::CredentialCollection.new(
+        blank_passwords: datastore['BLANK_PASSWORDS'],
+        pass_file: datastore['PASS_FILE'],
+        password: datastore['PASSWORD'],
+        user_file: datastore['USER_FILE'],
+        userpass_file: datastore['USERPASS_FILE'],
+        username: datastore['USERNAME'],
+        user_as_pass: datastore['USER_AS_PASS'],
+        prepended_creds: anonymous_creds
+    )
+
+</code></pre>
+
+<p>So here we see the CredentialCollection getting created using the datastore options. We pass in the options for Cred creation such as wordlists, raw usernames and passwords, whether to try the username as a password, and whether to try blank passwords. </p>
+<p>you&rsquo;ll also notice an option here called prepended_creds. FTP is one of the only module to make use of this, but it is generally available through the CredentialCollection. This option is an array of Metasploit::Framework::Credential objects that should be spit back by the collection before any others. FTP uses this to deal with testing for anon FTP access.</p>
+<h4 id="initialising-the-scanner">Initialising the Scanner<a class="headerlink" href="#initialising-the-scanner" title="Permanent link">&para;</a></h4>
+<pre><code class="ruby">scanner = Metasploit::Framework::LoginScanner::FTP.new(
+        host: ip,
+        port: rport,
+        proxies: datastore['PROXIES'],
+        cred_details: cred_collection,
+        stop_on_success: datastore['STOP_ON_SUCCESS'],
+        connection_timeout: 30
+    )
+</code></pre>
+
+<p>Here we actually create our Scanner object. We set the IP and Port based on data the module already knows about. We can pull any user supplied proxy data from the datatstore. we also pull from the datastore whether to stop on a success for this service. the cred details object is populated by our Credentialcollection which will handle all the credential generation for us invisibly.</p>
+<p>This gives us our scanner object, all configured and ready to go.</p>
+<h4 id="the-scan-block">The scan block<a class="headerlink" href="#the-scan-block" title="Permanent link">&para;</a></h4>
+<pre><code class="ruby"> scanner.scan! do |result|
+      credential_data = result.to_h
+      credential_data.merge!(
+          module_fullname: self.fullname,
+          workspace_id: myworkspace_id
+      )
+      if result.success?
+        credential_core = create_credential(credential_data)
+        credential_data[:core] = credential_core
+        create_credential_login(credential_data)
+
+        print_good &quot;#{ip}:#{rport} - LOGIN SUCCESSFUL: #{result.credential}&quot;
+      else
+        invalidate_login(credential_data)
+        print_status &quot;#{ip}:#{rport} - LOGIN FAILED: #{result.credential} (#{result.status}: #{result.proof})&quot;
+      end
+    end
+
+</code></pre>
+
+<p>This is the real heart of the matter here. We call scan! on our scanner, and pass it a block. As we mentioned before, the scanner yields each attempt&rsquo;s Result object into that block. We check the result&rsquo;s status to see if it was successful or not.</p>
+<p>The result object now as a .to_h method which returns a hash compatible with our credential creation methods. We take that hash and merge in our module specific information and workspace id.</p>
+<p>In the case of a success we build some info hashes and call create_credential. This is a method found in the metasploit-credential gem under lib/metasploit/credential/creation.rb in a mixin called Metasploit::Credential::Creation. This mixin is included in the Report mixin, so if your module includes that mixin you&rsquo;ll get these methods for free.</p>
+<p>create_credential creates a Metasploit::Credential::Core. We then take that core, the service data, and merge it with some additional data. This additional data includes the access level, the current time (to update last_attempted_at on the Metasploit::Credential::Login), the the status. </p>
+<p>Finally, for a success, we output the result to the console.</p>
+<p>In the case of a failure, we call the invalidate_login method. This method also comes from the Creation mixin. This method looks to see if a Login object already exists for this credential:service pair. If it does, it updates the status to the status we got back from the scanner. This is primarily to account for Login objects created by things like Post modules that have an untried status.</p>
+<h4 id="ftp_login-final-view">ftp_login final view<a class="headerlink" href="#ftp_login-final-view" title="Permanent link">&para;</a></h4>
+<p>Pulling it all together, we get a new ftp_login module that looks something like this:</p>
+<pre><code class="ruby">##
+# This module requires Metasploit: http//metasploit.com/download
+# Current source: https://github.com/rapid7/metasploit-framework
+##
+
+require 'msf/core'
+require 'metasploit/framework/credential_collection'
+require 'metasploit/framework/login_scanner/ftp'
+
+class Metasploit3 &lt; Msf::Auxiliary
+
+  include Msf::Exploit::Remote::Ftp
+  include Msf::Auxiliary::Scanner
+  include Msf::Auxiliary::Report
+  include Msf::Auxiliary::AuthBrute
+
+  def proto
+    'ftp'
+  end
+
+  def initialize
+    super(
+      'Name'        =&gt; 'FTP Authentication Scanner',
+      'Description' =&gt; %q{
+        This module will test FTP logins on a range of machines and
+        report successful logins.  If you have loaded a database plugin
+        and connected to a database this module will record successful
+        logins and hosts so you can track your access.
+      },
+      'Author'      =&gt; 'todb',
+      'References'     =&gt;
+        [
+          [ 'CVE', '1999-0502'] # Weak password
+        ],
+      'License'     =&gt; MSF_LICENSE
+    )
+
+    register_options(
+      [
+        Opt::RPORT(21),
+        OptBool.new('RECORD_GUEST', [ false, &quot;Record anonymous/guest logins to the database&quot;, false])
+      ], self.class)
+
+    register_advanced_options(
+      [
+        OptBool.new('SINGLE_SESSION', [ false, 'Disconnect after every login attempt', false])
+      ]
+    )
+
+    deregister_options('FTPUSER','FTPPASS') # Can use these, but should use 'username' and 'password'
+    @accepts_all_logins = {}
+  end
+
+
+  def run_host(ip)
+    print_status(&quot;#{ip}:#{rport} - Starting FTP login sweep&quot;)
+
+    cred_collection = Metasploit::Framework::CredentialCollection.new(
+        blank_passwords: datastore['BLANK_PASSWORDS'],
+        pass_file: datastore['PASS_FILE'],
+        password: datastore['PASSWORD'],
+        user_file: datastore['USER_FILE'],
+        userpass_file: datastore['USERPASS_FILE'],
+        username: datastore['USERNAME'],
+        user_as_pass: datastore['USER_AS_PASS'],
+        prepended_creds: anonymous_creds
+    )
+
+    scanner = Metasploit::Framework::LoginScanner::FTP.new(
+        host: ip,
+        port: rport,
+        proxies: datastore['PROXIES'],
+        cred_details: cred_collection,
+        stop_on_success: datastore['STOP_ON_SUCCESS'],
+        connection_timeout: 30
+    )
+
+    scanner.scan! do |result|
+      credential_data = result.to_h
+      credential_data.merge!(
+          module_fullname: self.fullname,
+          workspace_id: myworkspace_id
+      )
+      if result.success?
+        credential_core = create_credential(credential_data)
+        credential_data[:core] = credential_core
+        create_credential_login(credential_data)
+
+        print_good &quot;#{ip}:#{rport} - LOGIN SUCCESSFUL: #{result.credential}&quot;
+      else
+        invalidate_login(credential_data)
+        print_status &quot;#{ip}:#{rport} - LOGIN FAILED: #{result.credential} (#{result.status}: #{result.proof})&quot;
+      end
+    end
+
+  end
+
+
+  # Always check for anonymous access by pretending to be a browser.
+  def anonymous_creds
+    anon_creds = [ ]
+    if datastore['RECORD_GUEST']
+      ['IEUser@', 'User@', 'mozilla@example.com', 'chrome@example.com' ].each do |password|
+        anon_creds &lt;&lt; Metasploit::Framework::Credential.new(public: 'anonymous', private: password)
+      end
+    end
+    anon_creds
+  end
+
+  def test_ftp_access(user,scanner)
+    dir = Rex::Text.rand_text_alpha(8)
+    write_check = scanner.send_cmd(['MKD', dir], true)
+    if write_check and write_check =~ /^2/
+      scanner.send_cmd(['RMD',dir], true)
+      print_status(&quot;#{rhost}:#{rport} - User '#{user}' has READ/WRITE access&quot;)
+      return 'Read/Write'
+    else
+      print_status(&quot;#{rhost}:#{rport} - User '#{user}' has READ access&quot;)
+      return 'Read-only'
+    end
+  end
+
+
+end
+
+
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2019 - 2020 darkcode0x00</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

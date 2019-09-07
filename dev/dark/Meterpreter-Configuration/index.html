@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="darkcode0x00 luizcorrea">
+        <link rel="canonical" href="https://darkcode357.github.io/thg-framework/dev/dark/Meterpreter-Configuration/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Meterpreter Configuration - thg-framework</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">thg-framework</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../cli/install/">Installation</a>
+</li>
+                                    
+<li >
+    <a href="../../..">Introduction</a>
+</li>
+                                    
+<li >
+    <a href="../../../community/">Community</a>
+</li>
+                                    
+<li >
+    <a href="../../../conceptual/">Conceptual</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/build/">build</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/tags/">tags</a>
+</li>
+                                    
+<li >
+    <a href="../../../LICENSE/">LICENSE</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">thg_dev <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../thg_dev/_Sidebar/">thg_dev</a>
+</li>
+                                    
+<li >
+    <a href="../../contributing/Contributing-to-thg/">Get Started</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/templates/">templates</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Roadmaps</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">2019</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap/">Roadmap</a>
+</li>
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap-Review/">Roadmap_Review</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">git</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../git/Using-Git/">Using-Git</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-cheatsheet/">Git_cheatsheet</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-Reference-Sites/">Git-Reference-Sites</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">documentation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">capture the flag</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">basic</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">analysis</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/malware/">malware</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">recovery</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/backuo/">backup</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/patching/">patching</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">tips_end_tricks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/tools/">tools</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/decoding/">decoding</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/dos/">dos</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/os_cheats/">os_cheats</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/snort/">snort</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/basic/">basic</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nmap/">nmap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nessus/">nessus</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/openvas/">openvas</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">defend</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tcpdump/">tcpdump</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/editcap/">edicap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/mergecap/">mergecap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/snort/">snort</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tshark/">tshark</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/analysis/">analysis</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">os</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/windows/">windows</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../../../deployment/">Deployment</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">hash_crack</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/">index</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/CORE_HASH_CRACKING_KNOWLEDGE/">CORE_HASH_CRACKING_KNOWLEDGE</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">pentest_standard</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../pentest_standard/preengagemente/">Pre engagement Interactions</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/ig/">Intelligence Gathering</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/threatmodeling/">Threat Modeling</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/vulnterability/">Vulnerability Analysis</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/exploration/">Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/postexploration/">Post Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/report/">Reporting</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/tecguidelines/">Technical Guidelines</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">CLI <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-1</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/thg/">THG</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/server/server/">thg_server</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/shells/shells/">thg_shells</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_docs/thg_docs/">thg_docs</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/auxiliares/auxiliares/">thg_auxiliares</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/anti_forensic/anti_forensic/">thg_anti_forensic</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/crypto/crypto/">thg_crypto</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/drone/drone/">thg_drone</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/keylogger/keylogger/">thg_keylogger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/recon/recon/">thg_recon</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/voip/voip/">thg_voip</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automation/automation/">thg_automation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cryptography/cryptography/">thg_cryptography</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/exploitation/exploitation/">thg_exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/malware/malware/">thg_malware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/reversing/reversing/">thg_reversing</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_windows/thg_windows/">thg_windows</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automobile/automobile/">thg_automobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/database/database/">thg_database</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/fingerprint/fingerprint/">thg_fingerprint</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/misc/misc/">thg_misc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/sniffer/sniffer/">thg_sniffer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/wireless/wireless/">thg_wireless</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/debugger/debugger/">thg_debugger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/firmware/firmware/">thg_firmware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/mobile/mobile/">thg_mobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/social/social/">thg_social</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/backdoor/backdoor/">thg_backdoor</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/decompiler/decompiler/">thg_decompiler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/forensic/forensic/">thg_forensic</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-2</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/networking/networking/">thg_networking</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoff/spoff/">thg_spoff</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/binary/binary/">thg_binary</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensensive/defensensive/">thg_defensensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/gpu/gpu/">thg_gpu</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/os/os/">thg_os</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/nfc/nfc/">thg_nfc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoof/spoof/">thg_spoof</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/bluetooth/bluetooth/">thg_bluetooth</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensive/defensive/">thg_defensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/hardware/hardware/">thg_hardware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/packer/packer/">thg_packer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/stego/stego/">thg_stego</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/code_audit/code_audit/">thg_code_audit</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/disassembler/disassembler/">thg_disassembler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/honeypot/honeypot/">thg_honeypot</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/proxy/proxy/">thg_proxy</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/tunnel/tunnel/">thg_tunnel</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cracker/cracker/">thg_cracker</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/dos/dos/">thg_dos</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/ids/ids/">thg_ids</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/radio/radio/">thg_radio</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/unpacker/unpacker/">thg_unpacker</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li>
+                                <a href="https://github.com/darkcode357/thg-framework/edit/master/docs/dev/dark/Meterpreter-Configuration.md">Edit on darkcode357/thg-framework</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#how-the-configuration-is-found">How the configuration is found</a></li>
+            <li><a href="#loading-configuration-in-windows-meterpreter">Loading configuration in Windows Meterpreter</a></li>
+            <li><a href="#loading-configuration-in-posix-meterpreter">Loading configuration in POSIX Meterpreter</a></li>
+        <li class="main "><a href="#configuration-block-structure">Configuration Block Structure</a></li>
+            <li><a href="#session-configuration-block">Session configuration block</a></li>
+            <li><a href="#transport-configuration-block">Transport configuration block</a></li>
+            <li><a href="#extension-configuration-block">Extension configuration block</a></li>
+        <li class="main "><a href="#configuration-block-overview">Configuration Block Overview</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p>Meterpreter has always had the need to be configured on the fly so that it knows how to talk to Metasploit. For many years, this configuration management was achieved by hot-patching a copy of the <code>metsrv</code> DLL/binary using a simple &ldquo;string replace&rdquo; approach. This worked well enough to support a number of situations, but restricted the flexibility of Meterpreter and its support for handling multiple transports.</p>
+<p>It wasn&rsquo;t just transports that were locked down, but the ability to provide payloads that contained way more than the core Meterpreter (metsrv) itself. It was also not easy to pass other forms of information on the fly to the Meterpreter instance because the stagers were only able to pass in a copy of the active socket handle.</p>
+<p>Recent modifications to Meterpreter have done away with this old method and have replaced with with a dynamic configuration block that can be used to alleviate these problems and provide the flexibility for other more interesting things down the track.</p>
+<p>This document contains information on the structure and layout of the new configuration block, along with how it is used by Meterpreter.</p>
+<h2 id="how-the-configuration-is-found">How the configuration is found<a class="headerlink" href="#how-the-configuration-is-found" title="Permanent link">&para;</a></h2>
+<p>In the past Meterpreter has required that the stager (or stage0 as some like to call it) pass in a handle to the active socket so that it can take over communications without creating a new socket (at least in the case of <code>TCP</code> connections). While this feature is still required, it doesn&rsquo;t happen in the way that it used to. Instead, Meterpreter now requires that the stager pass in a pointer to the start of the configuration block. The configuration block can be anywhere in memory, so long as the memory region is marked as <code>RWX</code>.</p>
+<h3 id="loading-configuration-in-windows-meterpreter">Loading configuration in Windows Meterpreter<a class="headerlink" href="#loading-configuration-in-windows-meterpreter" title="Permanent link">&para;</a></h3>
+<p>Stage 1 of loading Windows Meterpreter now utilises a new loader, called <code>meterpreter_loader</code> (<a href="https://github.com/rapid7/metasploit-framework/blob/master/lib/msf/core/payload/windows/meterpreter_loader.rb">Win x86</a>, <a href="https://github.com/rapid7/metasploit-framework/blob/master/lib/msf/core/payload/windows/x64/meterpreter_loader.rb">Win x64</a>), which does the following:</p>
+<ul>
+<li>Loads the <code>metsrv</code> DLL from disk.</li>
+<li>Patches the DOS header of the DLL so that it contains executable shellcode that correctly initialises <code>metsrv</code> and calculates the location that points to the end of <code>metsrv</code> in memory. It also takes any existing socket value (found in <code>edi</code> or <code>rdi</code> depending on the architecture) and writes that directly to the configuration (more on this later).</li>
+<li>Generates a configuration block and appends this to the <code>metsrv</code> binary.</li>
+</ul>
+<p>The result is that the payload has the following structure once it has been prepared:</p>
+<pre><code>  +--------------+
+  | Patched DOS  |
+  |    header    |
+  +--------------+
+  |              |
+  .              .
+  .  metsrv dll  .
+  .              .
+  |              |
+  +--------------+
+  | config block |
+  +--------------+
+</code></pre>
+
+<h3 id="loading-configuration-in-posix-meterpreter">Loading configuration in POSIX Meterpreter<a class="headerlink" href="#loading-configuration-in-posix-meterpreter" title="Permanent link">&para;</a></h3>
+<p>POSIX Meterpreter functions in the same way, except that it doesn&rsquo;t have patched header that does the bootstrapping. The format of the payload is otherwise the same, and hence looks like this:</p>
+<pre><code>  +--------------+
+  |              |
+  .              .
+  .  metsrv bin  .
+  .              .
+  |              |
+  +--------------+
+  | config block |
+  +--------------+
+</code></pre>
+
+<p><strong>TODO: confirm with @bcook-r7 that this is correct</strong></p>
+<p>The structure of the configuration block is documented next.</p>
+<h2 id="configuration-block-structure">Configuration Block Structure<a class="headerlink" href="#configuration-block-structure" title="Permanent link">&para;</a></h2>
+<p>In order to pass information to Meterpreter and not have it break, a known format of configuration is required. This format needs to be consistent on each invocation much like you would expect with any configuration. In the case of binary Meterpreter (POSIX and Windows), this configuration block contains the following:</p>
+<ul>
+<li>One Session configuration block.</li>
+<li>One or more Transport Configuration blocks, followed by a terminator.</li>
+<li>One or more Extension configuration blocks, followed by a terminator.</li>
+</ul>
+<p>Each of these blocks are described in detail in the sections below.</p>
+<h3 id="session-configuration-block">Session configuration block<a class="headerlink" href="#session-configuration-block" title="Permanent link">&para;</a></h3>
+<p>The notion of a session configuration block is used to wrap up the following values:</p>
+<ul>
+<li>Socket handle - When Meterpreter is invoked with TCP communications, an active socket is already in use. This socket handle is intended to be reused by Meterpreter when <code>metsrv</code> executes. This socket handle is written to the configuration block on the fly by the loader. It is stored in the Session configuration block so that it has a known location. This value is always a 32-bit DWORD, even on 64-bit platforms.</li>
+<li>Exit func - This value is a 32-bit DWORD value that identifies the method that should be used when terminating the Meterpreter session. This value is the equivalent of the <a href="https://github.com/rapid7/metasploit-framework/blob/master/lib/rex/text.rb#L1685">Block API Hash</a> that represents the function to be invoked. Meterpreter used to delegate the responsibility of handling this to the stager that had invoked it. Meterpreter no longer does this, instead it handles the closing of the Meterpreter session by itself, and hence the chosen method for termination must be made known in the configuration.</li>
+<li>Session expiry value - This is a 32-bit DWORD that contains the number of seconds that the Meterpreter session should last for. While Meterpreter is running, this value is continually checked, and if the session expiry time is reached, then Meterpreter shuts itself down. For more information, please read the <strong>Timeout documentation</strong> (link coming soon).</li>
+<li>UUID - This is a 16-byte value that represents a payload UUID. A UUID is a new concept that has come to Metasploit with a goal of tracking payload type and origin, and validing that sessions received by Metasploit are intended for use by the current installation. For more information, please read the <strong>UUID documentation</strong> (link coming soon).</li>
+</ul>
+<p>The layout of this block in memory looks like this:</p>
+<pre><code>  +--------------+
+  |Socket Handle |
+  +--------------+
+  |  Exit func   |
+  +--------------+
+  |Session Expiry|
+  +--------------+
+  |              |
+  |     UUID     |
+  |              |
+  |              |
+  +--------------+
+
+  | &lt;- 4 bytes -&gt;|
+</code></pre>
+
+<p>With this structure in place, Meterpreter knows that the session configuration block is exactly <code>28</code> bytes in size.</p>
+<p>The Session configuration block description can be found in the <a href="https://github.com/rapid7/meterpreter/blob/master/source/common/config.h#L25">Meterpreter source</a>.</p>
+<h3 id="transport-configuration-block">Transport configuration block<a class="headerlink" href="#transport-configuration-block" title="Permanent link">&para;</a></h3>
+<p>The Transport configuration block is a term used to refer to the group of transport configurations that are present in the payload. Meterpreter now supports multiple transports, and so the configuration should support multiple transports too.</p>
+<p>There are two main issues when dealing with transport configurations:</p>
+<ol>
+<li>The configuration should allow for many transport configurations to be specified.</li>
+<li>The configuration should allow for each transport to be of a different type and size.</li>
+</ol>
+<p>Meterpreter&rsquo;s current transport implementations provide two main &ldquo;classes&rdquo; of transport, those being <code>HTTP(S)</code> and <code>TCP</code>. Each of these transport classes require different configuration values, as well as common values, in order to function.</p>
+<h4 id="common-configuration-values">Common configuration values<a class="headerlink" href="#common-configuration-values" title="Permanent link">&para;</a></h4>
+<p>The values that are common to both <code>HTTP(S)</code> and <code>TCP</code> transports are:</p>
+<ul>
+<li>URL - This value is a meta-description of the transport and is used not only as a configuration element for the transport itself but also as a way of determining exactly what type of transport this block represents. The field is a total of <code>512</code> <em>characters</em> (Windows Meterpreter uses <code>wchar_t</code>, while POSIX Meterpreter uses <code>char</code>). Transport types are specified by the scheme element in the URL, and the body of the URL specifies key information such as host and port information. Meterpreter inspects this to determine what type of transport block is in use, and hence from there is able to determine the size of the block. Valid values look like the following:<ul>
+<li><code>tcp://&lt;host&gt;:&lt;port&gt;</code> - indicates that this payload is a <em>reverse</em> <strong>IPv4</strong> <code>TCP</code> connection.</li>
+<li><code>tcp6://&lt;host&gt;:&lt;port&gt;?&lt;scope&gt;</code> - indicates that this payload is a <em>reverse</em> <strong>IPv6</strong> <code>TCP</code> connection.</li>
+<li><code>tcp://:&lt;port&gt;</code> - indicates that this payload is a <em>bind</em> payload listening on the specified port (note that no host is specifed).</li>
+<li><code>http://&lt;host&gt;:&lt;port&gt;/&lt;uri&gt;</code> - indicates that this payload is an HTTP connection (can only be <em>reverse</em>).</li>
+<li><code>https://&lt;host&gt;:&lt;port&gt;/&lt;uri&gt;</code> - indicates that this payload is an HTTPS connection (can only be <em>reverse</em>).</li>
+</ul>
+</li>
+<li>Communications expiry - This value is another 32-bit DWORD value that represents the number of seconds to wait between successful packet/receive calls. For more information, please read the <strong>Timeout documentation</strong> (link coming soon).</li>
+<li>Retry total - This value is 32-bit DWORD value that represents the number of seconds that Meterpreter should continue to attempt to reconnect on this transport before giving up. For more information, please read the <strong>Timeout documentation</strong> (link coming soon).</li>
+<li>Retry wait - This value is 32-bit DWORD value that represents the number of seconds between each attempt that Meterpreter makes to reconnect on this transport. For more information, please read the <strong>Timeout documentation</strong> (link coming soon).</li>
+</ul>
+<p>The layout of this block in memory looks like the following:</p>
+<pre><code>  +--------------+
+  |              |
+  |      URL     |
+  .              .
+  .              .  512 characters worth
+  .              .  (POSIX -&gt; ASCII -&gt; char)
+  .              .  (Windows -&gt; wide char -&gt; wchar_t)
+  .              .
+  |              |
+  +--------------+
+  |  Comms T/O   |
+  +--------------+
+  |  Retry Total |
+  +--------------+
+  |  Retry Wait  |
+  +--------------+
+
+  | &lt;- 4 bytes -&gt;|
+</code></pre>
+
+<p>The common transport configuration block description can be found in the <a href="https://github.com/rapid7/meterpreter/blob/master/source/common/config.h#L33">Meterpreter source</a>.</p>
+<h4 id="tcp-configuration-values">TCP configuration values<a class="headerlink" href="#tcp-configuration-values" title="Permanent link">&para;</a></h4>
+<p>At this time, there are no <code>TCP</code>-specific configuration values, as the common configuration block caters for all of the needs of <code>TCP</code> transports. This may change down the track.</p>
+<h4 id="https-configuration-values">HTTP/S configuration values<a class="headerlink" href="#https-configuration-values" title="Permanent link">&para;</a></h4>
+<p><code>HTTP</code> and <code>HTTPS</code> connections have a number of extra configuration values that are required in order to make it function correctly in various environments. Those values are:</p>
+<ul>
+<li>Proxy host - In environments where proxies are required to be set manually, this field contains the detail of the proxy to use. The field is <code>128</code> characters in size (<code>wchar_t</code> only, given that we don&rsquo;t yet have <code>HTTP/S</code> transport in POSIX), and can be in one of the following formats:<ul>
+<li><code>http://&lt;proxy ip&gt;:&lt;proxy port&gt;</code> in the case of <code>HTTP</code> proxies.</li>
+<li><code>socks=&lt;socks ip&gt;:&lt;sock port&gt;</code> in the case of <code>socks</code> proxies.</li>
+</ul>
+</li>
+<li>Proxy user name - Some proxies require authentication. In such cases, this value contains the username that should be used to authenticate with the given proxy. This field is <code>64</code> characters in size (<code>wchar_t</code>).</li>
+<li>Proxy password - This value will accompany the user name field in the case where proxy authentication is required. It contains the password used to authenticate with the proxy, and is also <code>64</code> characters in size (<code>wchar_t</code>).</li>
+<li>User agent string - Customisable user agent string. This changes the user agent that is used when <code>HTTP/S</code> requests are made to Metasploit. This field is <code>256</code> characters in size (<code>wchar_t</code>).</li>
+<li>Expected SSL certificate hash - Meterpreter has the capability of validating the SSL certificate that Metasploit presents when using <code>HTTPS</code>. This value contains the <code>20</code>-byte SHA1 hash of the expected certificate. For more information, please read the <strong>SSL certificate validation documentation</strong> (link coming soon).</li>
+</ul>
+<p>All values that are shown above need to be specified in the configuration, including SSL certificate validation for plain <code>HTTP</code> connections. Values that are not used should be zeroed out.</p>
+<p>The structure of the <code>HTTP/S</code> configuration is as follows.</p>
+<pre><code>  +--------------+
+  |              |
+  |  Proxy host  |
+  .              .  128 characters worth (wchar_t)
+  |              |
+  +--------------+
+  |              |
+  |  Proxy user  |
+  .              .  64 characters worth (wchar_t)
+  |              |
+  +--------------+
+  |              |
+  |  Proxy pass  |
+  .              .  64 characters worth (wchar_t)
+  |              |
+  +--------------+
+  |              |
+  |  User agent  |
+  .              .  256 characters worth (wchar_t)
+  |              |
+  +--------------+
+  |              |
+  |   SSL cert   |
+  |   SHA1 hash  |
+  |              |
+  |              |
+  +--------------+
+
+  | &lt;- 4 bytes -&gt;|
+</code></pre>
+
+<p>The <code>HTTP/S</code> transport configuration block description can be found in the <a href="https://github.com/rapid7/meterpreter/blob/master/source/common/config.h#L48">Meterpreter source</a>.</p>
+<h4 id="transport-configuration-list">Transport configuration list<a class="headerlink" href="#transport-configuration-list" title="Permanent link">&para;</a></h4>
+<p>As already mentioned, more than one of these transport configuration blocks can be specified. In order to facilitate this, Meterpreter needs to know when the &ldquo;list&rdquo; of transports has ended. Using the <code>URL</code>, Meterpreter can determine the size of the block, and can move to the next block depending on the type that is discovered. As soon as Meterpreter detects a transport configuration <code>URL</code> value that has a string length of zero (ie. a single <code>NULL</code> ASCII char in POSIX and a single <code>NULL</code> multi-byte char in Windows) it assumes that the transport list has been terminated. The byte immediately following this is deemed to be the start of the Extension configuration, which is documented in the next section.</p>
+<h3 id="extension-configuration-block">Extension configuration block<a class="headerlink" href="#extension-configuration-block" title="Permanent link">&para;</a></h3>
+<p>The extension configuration block is designed to allow Meterpreter payloads to contain any extra extensions that the user wants to bundle in. The goal is to provide the ability to have <strong>Stageless payloads</strong> (link coming soon), and to provide the means for sharing of extensions during migration (though this hasn&rsquo;t been implemented yet). Each of the extensions must have been compiled with <a href="https://github.com/rapid7/ReflectiveDLLInjection/">Reflective DLL Injection</a> support, as this is the mechanism that is used to load the extensions when Meterpreter starts. For more information on this facility, please see the <strong>Stageless payloads</strong> (link coming soon) documentation.</p>
+<p>The extension configuration block also functions as a &ldquo;list&rdquo; to allow for an arbitrary number of extensions to be included. Each extension entry needs to contain the following:</p>
+<ul>
+<li>Size - This is the exact size, in bytes, of the extension DLL itself. The value is a 32-bit DWORD.</li>
+<li>Extension binary - This is the full binary directly copied from the DLL. This value needs to be exactly the same length as what is specified in the Size field.</li>
+</ul>
+<p>When loading the extensions from the configuration, Meterpreter will continue to parse entries until it finds a <code>size</code> value of <code>0</code>. At this point Meterpreter assumes it has reached the end of the extension list and will stop parsing.</p>
+<p>The structure is simply laid out like the following:</p>
+<pre><code>  +--------------+
+  |  Ext. Size   |
+  +--------------+
+  | Ext. content |
+  +--------------+
+  |  NULL term.  |
+  |   (4 bytes)  |
+  +--------------+
+</code></pre>
+
+<h2 id="configuration-block-overview">Configuration Block Overview<a class="headerlink" href="#configuration-block-overview" title="Permanent link">&para;</a></h2>
+<p>To summarise, the following shows the layout of a full configuration:</p>
+<pre><code>  +--------------+
+  |Socket Handle |
+  +--------------+
+  |  Exit func   |
+  +--------------+
+  |Session Expiry|
+  +--------------+
+  |              |
+  |     UUID     |
+  |              |
+  |              |
+  +--------------+
+  |  Transport 1 |
+  |  tcp://...   |
+  .              .
+  |              |
+  +--------------+
+  |  Comms T/O   |
+  +--------------+
+  |  Retry Total |
+  +--------------+
+  |  Retry Wait  |
+  +--------------+
+  |  Transport 2 |
+  |  http://...  |
+  .              .
+  |              |
+  +--------------+
+  |  Comms T/O   |
+  +--------------+
+  |  Retry Total |
+  +--------------+
+  |  Retry Wait  |
+  +--------------+
+  |              |
+  |  Proxy host  |
+  |              |
+  +--------------+
+  |              |
+  |  Proxy user  |
+  |              |
+  +--------------+
+  |              |
+  |  Proxy pass  |
+  |              |
+  +--------------+
+  |              |
+  |  User agent  |
+  |              |
+  +--------------+
+  |              |
+  |   SSL cert   |
+  |   SHA1 hash  |
+  |              |
+  +--------------+
+  |  NULL term.  |
+  |(1 or 2 bytes)|
+  +--------------+
+  | Ext 1. Size  |
+  +--------------+
+  |Ext 1. content|
+  +--------------+
+  | Ext 2. Size  |
+  +--------------+
+  |Ext 2. content|
+  +--------------+
+  |  NULL term.  |
+  +--------------+
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2019 - 2020 darkcode0x00</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

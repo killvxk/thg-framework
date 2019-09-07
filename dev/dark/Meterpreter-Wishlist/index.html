@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="darkcode0x00 luizcorrea">
+        <link rel="canonical" href="https://darkcode357.github.io/thg-framework/dev/dark/Meterpreter-Wishlist/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Meterpreter Wishlist - thg-framework</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">thg-framework</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../cli/install/">Installation</a>
+</li>
+                                    
+<li >
+    <a href="../../..">Introduction</a>
+</li>
+                                    
+<li >
+    <a href="../../../community/">Community</a>
+</li>
+                                    
+<li >
+    <a href="../../../conceptual/">Conceptual</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/build/">build</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/tags/">tags</a>
+</li>
+                                    
+<li >
+    <a href="../../../LICENSE/">LICENSE</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">thg_dev <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../thg_dev/_Sidebar/">thg_dev</a>
+</li>
+                                    
+<li >
+    <a href="../../contributing/Contributing-to-thg/">Get Started</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/templates/">templates</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Roadmaps</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">2019</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap/">Roadmap</a>
+</li>
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap-Review/">Roadmap_Review</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">git</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../git/Using-Git/">Using-Git</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-cheatsheet/">Git_cheatsheet</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-Reference-Sites/">Git-Reference-Sites</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">documentation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">capture the flag</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">basic</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">analysis</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/malware/">malware</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">recovery</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/backuo/">backup</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/patching/">patching</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">tips_end_tricks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/tools/">tools</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/decoding/">decoding</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/dos/">dos</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/os_cheats/">os_cheats</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/snort/">snort</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/basic/">basic</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nmap/">nmap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nessus/">nessus</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/openvas/">openvas</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">defend</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tcpdump/">tcpdump</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/editcap/">edicap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/mergecap/">mergecap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/snort/">snort</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tshark/">tshark</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/analysis/">analysis</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">os</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/windows/">windows</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../../../deployment/">Deployment</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">hash_crack</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/">index</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/CORE_HASH_CRACKING_KNOWLEDGE/">CORE_HASH_CRACKING_KNOWLEDGE</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">pentest_standard</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../pentest_standard/preengagemente/">Pre engagement Interactions</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/ig/">Intelligence Gathering</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/threatmodeling/">Threat Modeling</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/vulnterability/">Vulnerability Analysis</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/exploration/">Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/postexploration/">Post Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/report/">Reporting</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/tecguidelines/">Technical Guidelines</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">CLI <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-1</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/thg/">THG</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/server/server/">thg_server</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/shells/shells/">thg_shells</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_docs/thg_docs/">thg_docs</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/auxiliares/auxiliares/">thg_auxiliares</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/anti_forensic/anti_forensic/">thg_anti_forensic</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/crypto/crypto/">thg_crypto</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/drone/drone/">thg_drone</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/keylogger/keylogger/">thg_keylogger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/recon/recon/">thg_recon</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/voip/voip/">thg_voip</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automation/automation/">thg_automation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cryptography/cryptography/">thg_cryptography</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/exploitation/exploitation/">thg_exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/malware/malware/">thg_malware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/reversing/reversing/">thg_reversing</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_windows/thg_windows/">thg_windows</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automobile/automobile/">thg_automobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/database/database/">thg_database</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/fingerprint/fingerprint/">thg_fingerprint</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/misc/misc/">thg_misc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/sniffer/sniffer/">thg_sniffer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/wireless/wireless/">thg_wireless</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/debugger/debugger/">thg_debugger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/firmware/firmware/">thg_firmware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/mobile/mobile/">thg_mobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/social/social/">thg_social</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/backdoor/backdoor/">thg_backdoor</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/decompiler/decompiler/">thg_decompiler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/forensic/forensic/">thg_forensic</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-2</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/networking/networking/">thg_networking</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoff/spoff/">thg_spoff</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/binary/binary/">thg_binary</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensensive/defensensive/">thg_defensensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/gpu/gpu/">thg_gpu</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/os/os/">thg_os</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/nfc/nfc/">thg_nfc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoof/spoof/">thg_spoof</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/bluetooth/bluetooth/">thg_bluetooth</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensive/defensive/">thg_defensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/hardware/hardware/">thg_hardware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/packer/packer/">thg_packer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/stego/stego/">thg_stego</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/code_audit/code_audit/">thg_code_audit</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/disassembler/disassembler/">thg_disassembler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/honeypot/honeypot/">thg_honeypot</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/proxy/proxy/">thg_proxy</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/tunnel/tunnel/">thg_tunnel</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cracker/cracker/">thg_cracker</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/dos/dos/">thg_dos</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/ids/ids/">thg_ids</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/radio/radio/">thg_radio</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/unpacker/unpacker/">thg_unpacker</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li>
+                                <a href="https://github.com/darkcode357/thg-framework/edit/master/docs/dev/dark/Meterpreter-Wishlist.md">Edit on darkcode357/thg-framework</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#meterpreter-platform-support">Meterpreter Platform Support</a></li>
+        <li class="main "><a href="#mimikatz-integration">Mimikatz Integration</a></li>
+        <li class="main "><a href="#meterpreter-pivoting">Meterpreter Pivoting</a></li>
+        <li class="main "><a href="#privilege-escalation">Privilege Escalation</a></li>
+        <li class="main "><a href="#remote-file-access">Remote File Access</a></li>
+        <li class="main "><a href="#meterpreter-features">Meterpreter Features</a></li>
+        <li class="main "><a href="#metepreter-stager-support">Metepreter Stager Support</a></li>
+        <li class="main "><a href="#meterpreter-transport-flexibility">Meterpreter Transport Flexibility</a></li>
+        <li class="main "><a href="#meterpreter-http-transport-options">Meterpreter HTTP Transport Options</a></li>
+        <li class="main "><a href="#meterpreter-proxy-support">Meterpreter Proxy Support</a></li>
+        <li class="main "><a href="#communication-protection">Communication Protection</a></li>
+        <li class="main "><a href="#communications-evasion">Communications Evasion</a></li>
+        <li class="main "><a href="#session-handlers">Session Handlers</a></li>
+        <li class="main "><a href="#session-reliability">Session Reliability</a></li>
+        <li class="main "><a href="#android-meterpreter-features">Android Meterpreter Features</a></li>
+        <li class="main "><a href="#payload-generation">Payload Generation</a></li>
+        <li class="main "><a href="#unit-testing-for-payloads">Unit testing for payloads</a></li>
+        <li class="main "><a href="#meterpreter-specifications">Meterpreter Specifications</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p>This document is our live wishlist of features and changes for the Metasploit Meterpreter payloads. The majority of this list came from a survey sent out to the community in early 2015. If you plan to work on one of these features, please add a note to the item, and reference any open tickets or pull requests that are relevant. This document only contains survey suggestions that were specific to Meterpreter. Duplicate and similar items have been combined.</p>
+<p>Items currently in development have been marked [<strong>IN PROGRESS</strong>]</p>
+<p>Items landed to master have been marked [<strong>DONE</strong>]</p>
+<p>Related open tickets (slightly broader than Meterpreter):
+ * <a href="https://github.com/rapid7/metasploit-framework/issues/4933">Make User-Agent easier to control across modules and more consistent</a>
+ * <a href="https://github.com/rapid7/metasploit-framework/issues/4895">Comprehensively refactor Windows reverse_http stagers</a>
+ * <a href="https://github.com/rapid7/metasploit-framework/pull/4978">Python reverse HTTPS stager</a>
+ * <a href="https://github.com/rapid7/metasploit-framework/pull/4939">Port windows reverse_tcp &amp; bind_tcp to Metasm</a></p>
+<h3 id="meterpreter-platform-support">Meterpreter Platform Support<a class="headerlink" href="#meterpreter-platform-support" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Mac Meterpreter</li>
+<li>iOS Meterpreter</li>
+<li>PHP Meterpreter should have equivalent functionality to Win32</li>
+<li>Python Meterpreter should have equivalent functionality to Win32</li>
+<li>POSIX Meterpreter should have equivalent functionality to Win32 (extract it from Win32 codebase)</li>
+<li>Powershell Meterpreter</li>
+<li>Some users indicated that the Python/PHP Meterpreters were important because the POSIX/Linux Meterpreter was not working for them</li>
+</ul>
+<h3 id="mimikatz-integration">Mimikatz Integration<a class="headerlink" href="#mimikatz-integration" title="Permanent link">&para;</a></h3>
+<ul>
+<li>In-memory pass-the-hash (basically this runs a process as “netonly” I believe, then injects real credential hashes supplied by the user in order to perform network based auth to things with only a hash)</li>
+<li>Exporting of certificates, keys, and tickets in base64 format (already supported) then down to real files on disk for the attacker <a href="https://github.com/gentilkiwi/mimikatz/wiki/module-~-standard#base64">info</a></li>
+<li>Add on-target minidump extraction</li>
+<li>Add sekurla::searchpasswords</li>
+<li>Expand mimikatz and contribute back to it</li>
+<li>Integration of Mimikatz with the credential database</li>
+<li>Latest version of Mimikatz to be used as the plugin</li>
+<li>It would be great to have a method to generate a golden ticket for a specific period of time (month, 6-months, year) rather than only 10 years.</li>
+</ul>
+<h3 id="meterpreter-pivoting">Meterpreter Pivoting<a class="headerlink" href="#meterpreter-pivoting" title="Permanent link">&para;</a></h3>
+<ul>
+<li>VPN Pivoting for Framework  (WinPcap still better than nothing)</li>
+<li>Reverse pivoting from the target machine back to the attacker (TCP/UDP) . For many years I’ve asked for this feature. Basically Meterpreter needs to be able to say, listen on port 8080 on victim 1 and it go through the Meterpreter session to port whatever (9060) on the attacker’s machine or a designated alternate IP. then, whenever someone hits that port it’s auto forwarded through the session. This could help out a lot for SMB capture, Post exploitation phishing, and other things like setting a user’s proxy to use your forwarded port instead of the corporate proxy.</li>
+<li>Improved pivoting speed and latency</li>
+<li>Pivoting that is reliable and works well with different transports.  In particular, I want the ability to pivot one session through another even if the first session is reverse_tcp or reverse_https, regardless of the second sessions transport.  This will be difficult without installing drivers, but I would like several useful, working transports that I know I can pivot reliably with.</li>
+<li>Carry portforwards and other channels along with a migrate.</li>
+</ul>
+<h3 id="privilege-escalation">Privilege Escalation<a class="headerlink" href="#privilege-escalation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Allow privilege escalation modules to increase the privileges of the current session instead of firing off a new session.</li>
+<li>Automated privesc for all platforms - not just Windows.</li>
+<li>Implement a &ldquo;privup&rdquo; command that is similar to getsystem which automatically tries to get higher privs using local exploits. Allow the user to specify a &ldquo;force&rdquo; flag to automatically try &ldquo;dangerous&rdquo; privilege escalations (kernel mode, etc)</li>
+<li>Make the &ldquo;local&rdquo; modules more seamlessly accessible inside Meterpreter without requiring sending your session to background and running a local module separately against it.Would be nice to have a built-in Meterpreter command called &ldquo;local&rdquo; with tab complete that would list the local modules relevant to that platform/arch - then running one of the local modules auto selects your current session, spawns a new metepreter session and transfers you over to that session automatically if successful with a clear message/indication that your now in a new elevated Meterpreter session.</li>
+</ul>
+<h3 id="remote-file-access">Remote File Access<a class="headerlink" href="#remote-file-access" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[<strong>DONE</strong>] Console/Meterpreter: Support for uploading, downloading, deleting, renaming, and listing files using UTF-8 input and showing UTF-8 output, converting this in the Meterpreter payload as necessary to support accessing unicode paths on the target.</li>
+<li>[<strong>DONE</strong>] Console: The ls command should support wildcards in the directory listing, ex: ls *.csv</li>
+<li>[<strong>DONE</strong>] Console: The ls command should support sorting files by date, name, or size</li>
+<li>[<strong>DONE</strong>] Console: The ls command should support listing MSDOS 8.3 (short) names if available on Windows</li>
+<li>[<strong>DONE</strong>] Console: The download command should support filtering files based on a wildcard match (recursively, too)</li>
+<li>[<strong>DONE</strong>] Console: The download command should mirroring an entire remote file system to a local directory (names, paths, and timestamps)</li>
+</ul>
+<h3 id="meterpreter-features">Meterpreter Features<a class="headerlink" href="#meterpreter-features" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Direct Powershell integration on Windows (load &amp; run .NET runtimes from inside Meterpreter)</li>
+<li>Remote (target-side) scripting</li>
+<li>Builtin userland persistence</li>
+<li>Builtin rootkit/bootkit payload persistence</li>
+<li>Create payloads that only &ldquo;install&rdquo; on specific computers (based on hardware, windows domain, etc)</li>
+<li>Acquire a physical RAM image without touching the disk. This currently requires uploading winpmem[64].sys to windows\system32 and invoking it through post/windows/manage/driver_loader. As loaded winpmem.sys exposes the RAM as disk device I can then suck it through post/windows/manage/nbd_server. Please make this possible without dropping winpmem.sys to system32 folder if possible</li>
+<li>
+<p>Manage multiple Meterpreter processes as one session as described in #4715. Many times there have been situations where a keyscan, or sniffer was going and something else occurred that required migration or cancelling to perform an action. “Installing” jobs in processes less likely to die would allow a pentester to still move around as needed but also be able to have persistent tasks going. A pipe dream of this feature would be to install a “rev2system” jobs whereby I could migrate to a low priv status for accessing Cryptolib encrypted storage but also get back to SYSTEM when I’m done without needing to pop a shell again. Another pipe dream here would be to also have jobs that if the user logged out, then back in the next day and I had a shell come back then, I could re-attach to my running jobs and get their results</p>
+</li>
+<li>
+<p>PrependTokenSteal / PrependEnvironmentSteal: Basically with proxies and other perimeter defenses being SYSTEM doesn’t work well. This would be an addition to a payload that would work to execute as SYSTEM but would then locate a logged in user and steal their environment to call back to the handler. Very useful when pivoting around with PSEXEC</p>
+</li>
+<li>Binary installed death dates: A way putting a date in a binary where after that date the binary no longer functions would be useful and possibly even perform self-deletion. Time zones would be a tricky matter, but is something handled by many programmers already (probably just not in shellcode)</li>
+<li>Allow Meterpreter sesssions to resolve L3 addresses (#4793)</li>
+<li>Track whether or not the current session has admin credentials (#4633)d</li>
+<li>Support Metasploit-side zlib compression of sessions</li>
+<li>Being able to use Meterpreter instances to easily forward commands &amp; exfil</li>
+<li>Automatic cleanup and removal of session and any recorded persistence after predetermined amount of time (server-side)</li>
+<li>Change desktop/phone background</li>
+<li>Remote mouse control</li>
+<li>Play sound on the remote system</li>
+<li>Read words outloud via text to speech on the remote system</li>
+<li>Volume control</li>
+<li>RSS feed from reverse_http(s) mult-handler that I can connect a RSS reader to (or something like IFTTT) and get notices when new sessions are created</li>
+<li>MessageBox popups</li>
+<li>Call the system &ldquo;open&rdquo; command easily (ShellExecute on windows, launch intent on Android)</li>
+<li>Gather credentials from Google Chrome</li>
+<li>LNK (binary) modification: Editing a LNK file’s ICON location (for SMB capturing), “Starting Directory” (for DLL injection) or target binary would make some post exploitation tasks easier</li>
+<li>“Pinned” app modification: Knowing which apps are pinned, and what they link to (be it taskbar or start menu) would be useful intelligence, but also being able to modify the target of these links would be better and a very easy user-land persistence. (Run this &amp;&amp; the real thing you want)</li>
+<li>Remote Registry automation: Remotely editing or reading the registry of a remote system works currently (sometimes) but it has no smarts about if the Remote Registry service is on or not. It would be nice to automate the starting and stopping of the remote registry service as well as possibly warning the user if they are attempting to do this as SYSTEM (probably going to fail). The use case for this is installing persistence on lots of systems quickly as well as reading user lists, MRUs and other intelligence important keys. (like finding a system with the puTTY keys)</li>
+<li>“ps” and “kill” for remote systems: This would remove the need to drop to a shell and attempt to remember how to format “taskkill” and “tasklist”’s argument list. Tasklist also automatically removes the IPC$ connection after it’s done so results in some annoying disconnected share viewing</li>
+<li>Scheduled Tasks / AT: Many of the ways to pivot or stay persistent use AT or Scheduled Tasks, to do so. This functionality to do tasks both locally and on remote hosts would greatly decrease the number of times a pentester would need to drop to cmd.exe</li>
+<li>[<strong>DONE</strong>] Execute with login credentials: When a user is no longer online it is overkill to PSEXEC (which would just net a SYSTEM shell anyways with MSF) and “RunAs” isn’t supported since it requires a password at a prompt, so adding a simple CreateProcesWithLogon feature would help with reviving dead tokens <a href="https://github.com/rapid7/metasploit-framework/pull/4649">#4649</a></li>
+<li>ListDrives: Most of the time shares and other drives rather than just C:\ are where important files are stored. This feature would list local storage (plus USB) and network storage (SMB connected drives with where they are connected from and as what user) to start, but this feature would need to grow to support “Cloud” drives as well, like Dropbox, Box, Google Drive, and SkyDrive.</li>
+<li>Enumerables support in Railgun: Windows is full of “Enumerables” like EnumWindows that would be nice to have the ability to create code for. That example is bad since ExtAPI has EnumWindows now but the argument doesn’t go away for railgun</li>
+<li>DACL / Permissions enumeration: This is just needed in general for privilege escalation enumeration, share permissions, and reporting (“Why did you have access to this share, it was only supposed to be for X”)</li>
+<li>Gina/SSP support: This would probably need to be an injected “job” but the basic premise is an in-memory load of a SSP or inject into Gina so when a new login happens against the system a set of clear text credentials are captured. 2 extremely use cases would be on a terminal server, or a server that no one is logged into at the time of infection due to time zone or operating hour differences</li>
+<li>Websnapshot: Currently there isn’t a way to weed out web applications once in a network. This feature would, using IE, or another method be able to generate a screenshot of what a page looks like in a browser (given a PROTOCOL/URL/PORT). Biggest requirement is auto-accepting any self signed SSL certs and showing when authentication is required.</li>
+<li>On-target resource cloning: Allowing a pentester to drop a binary and clone the ICON (in particular) of a binary would add to the stealthiness of an operation and add attack opportunities that weren’t previously thought plausible</li>
+<li>Scatterbomb: Persistence is difficult, and making sure your session doesn’t die because you chose the wrong process to migrate into or the user exited that process because the PDF looked hung. This would work by attempting OpenProcess on every process or a select list of processes and inject Meterpreter threads into them. But it would rely on the Mutex feature so that only one would be calling back at a time. Basically allowing for a resilient semi-persistent Meterpreter session that would save you from yourself when you accidentally type exit on the Meterpreter&gt; prompt instead of your other terminal</li>
+<li>Mutex checking binary exports: This follows up with the scatterbomb but essentially when installing persistence as a pentester I only install one because installing more than one would raise the noise level of a compromised host. If the binary/callback would check a mutex before doing anything and looping based on a timeout that even better.</li>
+<li>OLE / Office Controls: This is basically an open ended feature request asking for support of for Office, mostly Outlook (like read newest emails, search email, etc).</li>
+<li>Configurable character set conversation for Shell sessions and channels.  When spawning a windows shell from meterpreter, on a host that uses a German version of windows, all the special characters (e.g. öäü) are broken, i.e. they are either not rendered at all, or replaced with that default &ldquo;character not found&rdquo; unicode character. Forcing the terminal emulator to use cp850 made it work for now.</li>
+</ul>
+<h3 id="metepreter-stager-support">Metepreter Stager Support<a class="headerlink" href="#metepreter-stager-support" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[<strong>DONE</strong>] Network error tolerant versions of existing stagers</li>
+<li>[<strong>DONE</strong>] Tagged stagers that send the payload type, arch, platform during the staging process to enable shared listeners</li>
+<li>[<strong>DONE</strong>] Stagers that contain an embedded unique ID that can be used to identify which payload triggered what session</li>
+<li>[<strong>DONE</strong>] Stagers that are &ldquo;stageless&rdquo; for Meterpreter (include the entire main Meterpreter payload, plus any required extensions). In situations of high network latency or extreme network detection a non-staged exe is the only way to go. Ulta-met is a project that does this but isn’t as stable or easy to work with as if it were just built into the binary creation options.</li>
+<li>[<strong>DONE</strong>] Stagers that are &ldquo;stageless&rdquo; for Meterpreter and include all potential functionality (all extensions)</li>
+</ul>
+<h3 id="meterpreter-transport-flexibility">Meterpreter Transport Flexibility<a class="headerlink" href="#meterpreter-transport-flexibility" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[<strong>DONE</strong>] Support for changing the transport (host, port, URL) of a live session to a new endpoint or protocol</li>
+<li>[<strong>DONE</strong>] Support for multiple transports for the initial session, using the first transport that works</li>
+<li>[<strong>DONE</strong>] Support for multiple endpoints across multiple transports for the initial session</li>
+<li>[<strong>DONE</strong>] Support for automatic switching between multiple transports while the session is running</li>
+<li>[<strong>DONE</strong>] Support for user-configured callback frequency and endpoint rotation</li>
+<li>Support for Tor tunneling to .onion and internet-facing listeners</li>
+<li>Support for time-based callback, such as limiting callbacks to certain times of the day.</li>
+<li>Support for P2P style callbacks. Gossip protocol to find other Meterpreters on the network and use them as exfiltration point. This callback would reduce the amount of endpoints that would call “out” to a handler to 1. Whoever the “master” was. All comms would automatically (because, math) find and delegate this master and finally send through the master all of their comms. This could happen over a named pipe, or a forwarded port or something. (DHT?)</li>
+<li>Support for DNS A/TXT transports</li>
+<li>Support for UDP transports</li>
+<li>Support for ICMP transports</li>
+<li>Support for TLS encrypted bind listeners</li>
+<li>Support for HTTP application listener (ie CGI mode Meterpreter session, tomcat servlets, etc)</li>
+<li>Support for third-party communication transports (Github, Twitter, pastebin, etc)</li>
+<li>Support for XMPP transports. Many organizations use IM and chat clients internally and support them going outbound. reverse_tcp being stopped for the most part these days and more and more catching reverse_http(s) due to proxies, this might become the next outlet. Possibly using server that are already established in the industry ;-) but mainly supporting XYZ jabber server as a pass through. This would probably be a very big piece of shellcode as I don’t believe any Windows OSs support XMPP out of the box.</li>
+<li>Support for IE callback: One method deployed by some more infamous malware is to only communicate when IE is running and surfing and only by hooking IE to send comms. This callback would operate very much the same and would support any kind of proxy by default as IE does.</li>
+<li>Support for Outlook callback:  This callback would use email back and forth either directly to a MSF run SMTP server or through other services, but the C2 channel would be locally (not on the exchange filter system) auto-filtered to a non-visible folder (using PidTagAttributeHidden). This type of comms would greatly increase the lag time supported in Metepreter simply due to the inherent lag in email.</li>
+</ul>
+<h3 id="meterpreter-http-transport-options">Meterpreter HTTP Transport Options<a class="headerlink" href="#meterpreter-http-transport-options" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[<strong>DONE</strong>] Create a whitelist of allowed URLs on the handler, have these persistent between metasploit runs</li>
+<li>[<strong>DONE</strong>] Indicate whether a given handler should silently accept, accept and report, or drop connections using unregistered URLs</li>
+<li>[<strong>DONE</strong>] Whitelisted URLs should be referencing using an alias, stored persistently with the URL</li>
+<li>[<strong>DONE</strong>] Session listing output should indicate what URL and URL alias a particular session is associated with</li>
+<li>[<strong>DONE</strong>] URLs can be anywhere from 30 to 128 bytes long</li>
+</ul>
+<h3 id="meterpreter-proxy-support">Meterpreter Proxy Support<a class="headerlink" href="#meterpreter-proxy-support" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[<strong>DONE</strong>] Use Windows Credentials with NTLM Authentication to connect via System Proxy back to attacker</li>
+<li>If Meterpreter executes as system - option to find a user, and use that users proxy settings for comms (temporarily or cleanup on exit) - maybe something like RunAsCurrentUser</li>
+<li>[<strong>DONE</strong>] Better proxy support and the ability to sleep. Still more to done on burstable updates</li>
+</ul>
+<h3 id="communication-protection">Communication Protection<a class="headerlink" href="#communication-protection" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Authenticated callbacks: This is pretty straight forward, when a pentester no longer controls the IP they were attacking from and failed to clean up every binary and phishing email there is a chance of compromise by proxy. The problem was somewhat solved with  SessionExpirationTimeout and SessionCommunicationTimeout but both of them are loaded in the stage, not hard coded into any binary built, so it’s very easy to get into this situation. Authenticated callbacks would allow a pentester to add a small layer of protections if this event were to happen and a callback from a client was sent to an IP no longer in the pentester’s control</li>
+<li>Embedded TLS cert or hash of cert to verify Meterpreter instance on the Metasploit side</li>
+<li>[<strong>DONE</strong>] Embedded TLS cert or hash of cert to verify Metasploit instance on the Meterpreter side</li>
+<li>Embedded password to verify Meterpreter instance on the Metasploit side (challenge-response)</li>
+<li>Embedded password to verify Metasploit instance on the Meterpreter side (challenge-response)</li>
+<li>[<strong>DONE</strong>] Enable TLS verification to verify Metasploit instance on the Meterpreter side</li>
+<li>[<strong>DONE</strong>] Allow open, relaxed, strict modes of payload authentication (everything, everything but flag unauthorized, drop non-authorized)</li>
+</ul>
+<h3 id="communications-evasion">Communications Evasion<a class="headerlink" href="#communications-evasion" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Emulation of common web application traffic when using HTTP-based transports</li>
+<li>Change web application traffic emulation fingerprints on the fly when using HTTP-based transports</li>
+<li>[<strong>DONE</strong>] Sleeping for a specified period of time before reconnecting to Metasploit</li>
+<li>[<strong>DONE</strong>] Automatic shutdown/cleanup after a specified amount of time has passed</li>
+<li>Traffic shaping or malleable communications, especially for HTTP(S), can be very useful for blending in, or even for adversary simulation. See Maligno (OSS - http://www.encripto.no/tools/)</li>
+<li>Malleable network signatures in general</li>
+<li>Malleable file artefacts - Make Meterpreter look like PlugX / Poison Ivy / etc.</li>
+<li>Stealthier network comms (C2 DLL inject into web browser)</li>
+<li>Better support to automatically identify applications that use a corporate proxy that allows outside connections and then leverage this application&rsquo;s features</li>
+<li>Emulate various real world malware</li>
+<li>Being able to use Meterpreter instances to easily forward commands &amp; exfil</li>
+<li>Supporting a set URI path for reverse_http(s), so you can use other webservers as a reverse proxy.</li>
+</ul>
+<h3 id="session-handlers">Session Handlers<a class="headerlink" href="#session-handlers" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[<strong>DONE</strong>] Generate a unique ID for each session (target-side)</li>
+<li>[<strong>DONE</strong>] Generate a unique ID for each generated payload  Backdooring/Persisting on more than 10 machines over months it gets very difficult to know when a host hasn’t called back in a while or when a new host arrives. This would need not to be based on gateway, local IP, or any other transient information. This can be processed at any step as long as when STDAPI is loaded I can quickly identify if it’s a system that I’ve known about, and how long it’s been since I’ve seen it.</li>
+<li>Shared listeners that can stage multiple payload architectures and platforms (using tags). Depends on new stagers and a new listener and unique IDs. [<strong>IN PROGRESS</strong>]</li>
+<li>[<strong>DONE</strong>] Track the last time a given session checked in</li>
+<li>Track user defined state data in the db, such as specific user / member of group logged in, specific shares open, certain tuple of IP:port in network connections (1.2.3.4 over 22 where 1.2.3.4 is an IP of interest)</li>
+<li>Reconnecting payloads will have different IPs, take this into account for session methods (peerinfo/tunnelinfo, etc)</li>
+</ul>
+<h3 id="session-reliability">Session Reliability<a class="headerlink" href="#session-reliability" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[<strong>DONE</strong>] Metasploit payloads should always restore connections if there is a network error unless the user explicitly kills the session</li>
+<li>Improve reliability, encryption, authentication. Better integration for custom payloads.</li>
+<li>Spawn a new session before running a module that could crash the current session (mostly privilege escalation, but some buggy post modules too [railgun])</li>
+<li>Meterpreter should work robustly in a VM, on a cloud server, or through corp proxies</li>
+</ul>
+<h3 id="android-meterpreter-features">Android Meterpreter Features<a class="headerlink" href="#android-meterpreter-features" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Android gather modules for auth tokens &amp; sqlite databases (call logs, contacts,  email, etc)</li>
+<li>[<strong>DONE</strong>] Android lock screen removal</li>
+<li>Crack the lock screen hash to reveal the password, pin code or gesture</li>
+<li>Remote screen control</li>
+<li>Add record_mic_stream (trigger based on event, like phone call)</li>
+<li>[<strong>DONE</strong>] Grab photos from front and rear cameras</li>
+<li>Android desktop background, sound play, vibrate, screenshot</li>
+<li>[<strong>DONE</strong>] Quickly grab GPS coordinates</li>
+<li>Windows post module to install Meterpreter on any attached android devices</li>
+<li>Better pivoting (e.g bridging between WiFi and 4g)</li>
+<li>More root exploits</li>
+<li>Dump browsing history and cookies</li>
+<li>Comprehensive test suite (including rspec)</li>
+<li>ARM/POSIX Meterpreter</li>
+<li>[<strong>DONE</strong>] Support for native payloads in the addJavascriptInterface exploit</li>
+</ul>
+<h3 id="payload-generation">Payload Generation<a class="headerlink" href="#payload-generation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Msfvenom should support injecting into existing APKs for Android Meterpreter deployment. Otherwise, it&rsquo;s just an app the target installs for 10 seconds and removes after confirming it has no user interface, barely allowing the Meterpreter session to be created. [<strong>IN PROGRESS</strong>]</li>
+<li>Msfvenom really needs to spit out some C# payloads. You can pretty easily modify some of the powershell ones to be C#, but there really ought to be a built in C# payload.</li>
+<li>[<strong>DONE</strong>] Generated payloads should default to exiting the process when the shellcode completes</li>
+<li>[<strong>DONE</strong>] Payload generation should allow named UUIDs to be injected into payloads</li>
+</ul>
+<h3 id="unit-testing-for-payloads">Unit testing for payloads<a class="headerlink" href="#unit-testing-for-payloads" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Metasploit payload classes should have specs, new specs should be created when any class is changed if there isn’t an existing spec.</li>
+<li>Metasploit payload tests that can run in Travis, should be automatically tested end-to-end</li>
+<li>Metasploit payload tests that can’t run in Travis should be run by Jenkins and target a virtual machine (local or cloud-hosted).</li>
+<li>Meterpreter payloads should test every advertised console command.</li>
+<li>Meterpreter payloads should test a subset of the full APIs available.</li>
+</ul>
+<h3 id="meterpreter-specifications">Meterpreter Specifications<a class="headerlink" href="#meterpreter-specifications" title="Permanent link">&para;</a></h3>
+<ul>
+<li>These define compatibility, quality, and order of preference for Meterpreter payload modules, including stages and stages.</li>
+<li>Payload Flags (for matching with exploits/generators/handlers):</li>
+<li>Supports SSL</li>
+<li>Supports ZLIB</li>
+<li>Staged / Unstaged</li>
+<li>Quality Rank (for prioritizing bugs/feature work):</li>
+<li>Leverage using Rank system</li>
+<li>Windows: Excellent</li>
+<li>Python: Great</li>
+<li>Java: Good</li>
+<li>PHP: Normal</li>
+<li>POSIX: Normal</li>
+<li>Capabilities (queried post-stage to determine features):</li>
+<li>Filesystem</li>
+<li>Registry</li>
+<li>Pivoting (sockets)</li>
+<li>Pivoting vpn)</li>
+<li>Process listing, kill, execute</li>
+<li>Process memory read, write, injection</li>
+<li>Migration</li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2019 - 2020 darkcode0x00</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

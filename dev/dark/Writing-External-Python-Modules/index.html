@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="darkcode0x00 luizcorrea">
+        <link rel="canonical" href="https://darkcode357.github.io/thg-framework/dev/dark/Writing-External-Python-Modules/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Writing Python Modules for Metasploit - thg-framework</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">thg-framework</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../cli/install/">Installation</a>
+</li>
+                                    
+<li >
+    <a href="../../..">Introduction</a>
+</li>
+                                    
+<li >
+    <a href="../../../community/">Community</a>
+</li>
+                                    
+<li >
+    <a href="../../../conceptual/">Conceptual</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/build/">build</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/tags/">tags</a>
+</li>
+                                    
+<li >
+    <a href="../../../LICENSE/">LICENSE</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">thg_dev <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../thg_dev/_Sidebar/">thg_dev</a>
+</li>
+                                    
+<li >
+    <a href="../../contributing/Contributing-to-thg/">Get Started</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/templates/">templates</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Roadmaps</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">2019</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap/">Roadmap</a>
+</li>
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap-Review/">Roadmap_Review</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">git</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../git/Using-Git/">Using-Git</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-cheatsheet/">Git_cheatsheet</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-Reference-Sites/">Git-Reference-Sites</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">documentation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">capture the flag</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">basic</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">analysis</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/malware/">malware</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">recovery</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/backuo/">backup</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/patching/">patching</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">tips_end_tricks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/tools/">tools</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/decoding/">decoding</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/dos/">dos</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/os_cheats/">os_cheats</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/snort/">snort</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/basic/">basic</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nmap/">nmap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nessus/">nessus</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/openvas/">openvas</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">defend</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tcpdump/">tcpdump</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/editcap/">edicap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/mergecap/">mergecap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/snort/">snort</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tshark/">tshark</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/analysis/">analysis</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">os</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/windows/">windows</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../../../deployment/">Deployment</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">hash_crack</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/">index</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/CORE_HASH_CRACKING_KNOWLEDGE/">CORE_HASH_CRACKING_KNOWLEDGE</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">pentest_standard</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../pentest_standard/preengagemente/">Pre engagement Interactions</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/ig/">Intelligence Gathering</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/threatmodeling/">Threat Modeling</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/vulnterability/">Vulnerability Analysis</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/exploration/">Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/postexploration/">Post Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/report/">Reporting</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/tecguidelines/">Technical Guidelines</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">CLI <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-1</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/thg/">THG</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/server/server/">thg_server</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/shells/shells/">thg_shells</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_docs/thg_docs/">thg_docs</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/auxiliares/auxiliares/">thg_auxiliares</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/anti_forensic/anti_forensic/">thg_anti_forensic</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/crypto/crypto/">thg_crypto</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/drone/drone/">thg_drone</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/keylogger/keylogger/">thg_keylogger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/recon/recon/">thg_recon</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/voip/voip/">thg_voip</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automation/automation/">thg_automation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cryptography/cryptography/">thg_cryptography</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/exploitation/exploitation/">thg_exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/malware/malware/">thg_malware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/reversing/reversing/">thg_reversing</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_windows/thg_windows/">thg_windows</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automobile/automobile/">thg_automobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/database/database/">thg_database</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/fingerprint/fingerprint/">thg_fingerprint</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/misc/misc/">thg_misc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/sniffer/sniffer/">thg_sniffer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/wireless/wireless/">thg_wireless</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/debugger/debugger/">thg_debugger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/firmware/firmware/">thg_firmware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/mobile/mobile/">thg_mobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/social/social/">thg_social</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/backdoor/backdoor/">thg_backdoor</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/decompiler/decompiler/">thg_decompiler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/forensic/forensic/">thg_forensic</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-2</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/networking/networking/">thg_networking</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoff/spoff/">thg_spoff</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/binary/binary/">thg_binary</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensensive/defensensive/">thg_defensensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/gpu/gpu/">thg_gpu</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/os/os/">thg_os</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/nfc/nfc/">thg_nfc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoof/spoof/">thg_spoof</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/bluetooth/bluetooth/">thg_bluetooth</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensive/defensive/">thg_defensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/hardware/hardware/">thg_hardware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/packer/packer/">thg_packer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/stego/stego/">thg_stego</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/code_audit/code_audit/">thg_code_audit</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/disassembler/disassembler/">thg_disassembler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/honeypot/honeypot/">thg_honeypot</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/proxy/proxy/">thg_proxy</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/tunnel/tunnel/">thg_tunnel</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cracker/cracker/">thg_cracker</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/dos/dos/">thg_dos</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/ids/ids/">thg_ids</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/radio/radio/">thg_radio</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/unpacker/unpacker/">thg_unpacker</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li>
+                                <a href="https://github.com/darkcode357/thg-framework/edit/master/docs/dev/dark/Writing-External-Python-Modules.md">Edit on darkcode357/thg-framework</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#writing-python-modules-for-metasploit">Writing Python Modules for Metasploit</a></li>
+            <li><a href="#python-library">Python Library</a></li>
+            <li><a href="#describe-yourself">Describe Yourself</a></li>
+            <li><a href="#full-example">Full Example</a></li>
+            <li><a href="#coding-with-style">Coding with Style</a></li>
+            <li><a href="#potentially-common-questions">(Potentially) Common Questions</a></li>
+            <li><a href="#additional-resources">Additional Resources</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="writing-python-modules-for-metasploit">Writing Python Modules for Metasploit<a class="headerlink" href="#writing-python-modules-for-metasploit" title="Permanent link">&para;</a></h1>
+<p>This is an example of how to write a Python module for Metasploit Framework that uses a Python metasploit library to communicate with framework via JSON-RPC over stdin/stdout.</p>
+<h2 id="python-library">Python Library<a class="headerlink" href="#python-library" title="Permanent link">&para;</a></h2>
+<p>The library currently supports a few function calls that can be used to report information to Metasploit Framework. The <code>metasploit</code> library can be loaded into your Python module by including the following line:</p>
+<pre><code class="python">from metasploit import module
+</code></pre>
+
+<p>The location of the <a href="https://github.com/rapid7/metasploit-framework/tree/master/lib/msf/core/modules/external/python">metasploit library</a> is automatically added to the <code>PYTHONPATH</code> environment variable before the Python module is executed.</p>
+<h2 id="describe-yourself">Describe Yourself<a class="headerlink" href="#describe-yourself" title="Permanent link">&para;</a></h2>
+<p>Metasploit modules include information about authors of the modules, references to other sources with information about the vulnerabilities, descriptions of the modules, options, etc.</p>
+<p>Python modules need to include this metadata information as well. The structure of the data is similar to modules written in Ruby. The following is an example template of metadata information:</p>
+<pre><code class="python">metadata = {
+    'name': '&lt;name&gt;',
+    'description': '''
+        &lt;description&gt;
+    ''',
+    'authors': [
+        '&lt;author&gt;',
+        '&lt;author&gt;'
+    ],
+    'date': 'YYYY-MM-DD',
+    'license': '&lt;license&gt;',
+    'references': [
+        {'type': 'url', 'ref': '&lt;url&gt;'},
+        {'type': 'cve', 'ref': 'YYYY-#'},
+        {'type': 'edb', 'ref': '#'},
+        {'type': 'aka', 'ref': '&lt;name&gt;'}
+    ],
+    'type': '&lt;module type&gt;',
+    'options': {
+        '&lt;name&gt;': {'type': 'address', 'description': '&lt;description&gt;', 'required': &lt;True/False&gt;, 'default': None},
+        '&lt;name&gt;': {'type': 'string', 'description': '&lt;description&gt;', 'required': &lt;True/False&gt;, 'default': None},
+        '&lt;name&gt;': {'type': 'string', 'description': '&lt;description&gt;', 'required': &lt;True/False&gt;, 'default': None}
+    }
+}
+</code></pre>
+
+<h3 id="module-type">Module Type<a class="headerlink" href="#module-type" title="Permanent link">&para;</a></h3>
+<p>As shown in the metadata template information, a <code>type</code> is also include for the module. The module type is used to select an ERB template, which generates a Ruby document for the module. The ERB templates can be found <a href="https://github.com/rapid7/metasploit-framework/tree/master/lib/msf/core/modules/external/templates">here</a>. The following templates are currently available:</p>
+<pre><code>remote_exploit_cmd_stager
+capture_server
+dos
+single_scanner
+multi_scanner
+</code></pre>
+
+<p>The <code>remote_exploit_cmd_stager</code> module type is used when writing an exploit for command execution or code injection vulnerabilities and provides the command to inject into the vulnerable code based on the <a href="https://github.com/rapid7/metasploit-framework/wiki/How-to-use-command-stagers">flavor</a> specified for the command stager.</p>
+<p>The <code>capture_server</code> module type is used when a module is designed to simulate a service to capture credentials for connecting clients.</p>
+<p>The <code>dos</code> module type is used when the module will send packets to a remote service that will crash the service or put it in an unusable state.</p>
+<p>The <code>single_scanner</code> module type is used when creating a module to scan hosts without batching.</p>
+<p>The <code>multi_scanner</code> module type is used for modules that are going to scan hosts in batches. The <code>batch_size</code> option is registered in the mutli_scanner ERB template with a default of 200.</p>
+<h3 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h3>
+<p>The <code>options</code> dictionary in the metadata are the options that will be available in msfconsole when the module is loaded. The options can be required (necessary for the module to run) or not (provide additional functionality).</p>
+<h3 id="communication">Communication<a class="headerlink" href="#communication" title="Permanent link">&para;</a></h3>
+<p>To pass the metadata information, as well as the starting function of your Python module, to msfconsole, use the <code>module.run()</code> function. The <code>module.run()</code> function takes two arguments, the first is the metadata and the second is the callback function to use when executing the module from msfconsole. The code snippet will look like the following:</p>
+<pre><code class="python">def run(args):
+    # Your code here
+    pass
+
+
+if __name__ == '__main__':
+    module.run(metadata, run)
+</code></pre>
+
+<p>When msfconsole sends a <code>describe</code> request to the Python module, the metadata information is returned. When msfconsole sends a <code>run</code> request to the module, the callback function, <code>run</code> in this example, will be called with the arguments provided to msfconsole.</p>
+<p>A <a href="https://github.com/rapid7/metasploit-framework/pull/9739">LogHandler</a> can be setup and used to communicate status information back to framework during execution of the Python module. Here is code snippet that uses the LogHandler:</p>
+<pre><code class="python">import logging
+from metasploit import module
+
+module.LogHandler.setup(msg_prefix='logging test: ')
+logging.info('info')
+logging.error('error')
+logging.warning('warning')
+logging.debug('debug')
+</code></pre>
+
+<p>The <code>module.LogHandler.setup()</code> function is used the create a Handler and Formatter that will call <code>module.log()</code> with the appropriate log level.</p>
+<h2 id="full-example">Full Example<a class="headerlink" href="#full-example" title="Permanent link">&para;</a></h2>
+<pre><code class="python">#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+# standard modules
+import logging
+
+# extra modules
+dependencies_missing = False
+try:
+    import requests
+except ImportError:
+    dependencies_missing = True
+
+from metasploit import module
+
+
+metadata = {
+    'name': 'Python Module Example',
+    'description': '''
+        Python communication with msfconsole.
+    ''',
+    'authors': [
+        'Jacob Robles'
+    ],
+    'date': '2018-03-22',
+    'license': 'MSF_LICENSE',
+    'references': [
+        {'type': 'url', 'ref': 'https://blog.rapid7.com/2017/12/28/regifting-python-in-metasploit/'},
+        {'type': 'aka', 'ref': 'Coldstone'}
+    ],
+    'type': 'single_scanner',
+    'options': {
+        'targeturi': {'type': 'string', 'description': 'The base path', 'required': True, 'default': '/'},
+        'rhost': {'type': 'address', 'description': 'Target address', 'required': True, 'default': None}
+    }
+}
+
+
+def run(args):
+    module.LogHandler.setup(msg_prefix='{} - '.format(args['rhost']))
+    if dependencies_missing:
+        logging.error('Module dependency (requests) is missing, cannot continue')
+        return
+
+    # Your code here
+    try:
+        r = requests.get('https://{}/{}'.format(args['rhost'], args['targeturi']), verify=False)
+    except requests.exceptions.RequestException as e:
+        logging.error('{}'.format(e))
+        return
+
+    logging.info('{}...'.format(r.text[0:50]))
+
+
+if __name__ == '__main__':
+    module.run(metadata, run)
+</code></pre>
+
+<p>The example sends a get request to the given <code>rhost</code> and <code>targeturi</code>, then calls <code>logging.info()</code> on the result to have the output displayed in msfconsole.</p>
+<h2 id="coding-with-style">Coding with Style<a class="headerlink" href="#coding-with-style" title="Permanent link">&para;</a></h2>
+<p>All the Python code in Metasploit aims to be <a href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a> compliant. The biggest differences coming from Metasploit&rsquo;s Ruby style:
+  * Two lines between functions (but not class methods)
+  * Two lines between different types of code (like imports and the metadata, see above)
+  * Four spaces for indenting</p>
+<p>Some coding choices to think about when writing your module:
+  * Prefer <code>"foo {}".format('bar')</code> over interpolation with <code>%</code>
+  * Keep your callback methods short and readable. If it gets cluttered, break out sub-tasks into well-named functions
+  * Variable names should be descriptive, readable, and short (<a href="http://journal.stuffwithstuff.com/2016/06/16/long-names-are-long">a guide</a>)
+  * If you really need Python3 features in your module, use <code>#!/usr/bin/env python3</code> for the shebang
+  * If you have a lot of legacy code in 2.7 or need a 2.7 library, use <code>#!/usr/bin/env python2.7</code> (macOS in particular does not ship with a <code>python2</code> executable by default)
+  * If possible, have your module compatible with both and use <code>#!/usr/bin/env python</code></p>
+<h2 id="potentially-common-questions">(Potentially) Common Questions<a class="headerlink" href="#potentially-common-questions" title="Permanent link">&para;</a></h2>
+<h3 id="why-doesnt-the-module-appear-when-i-search-for-it-in-msfconsole">Why doesn&rsquo;t the module appear when I search for it in msfconsole?<a class="headerlink" href="#why-doesnt-the-module-appear-when-i-search-for-it-in-msfconsole" title="Permanent link">&para;</a></h3>
+<p>The module may have errors and fail to load inside of msfconsole. Check the framework log file, <code>~/.msf4/logs/framework.log</code>, for error messages. Also, if the module is not marked as executable, then it will not show up when you search for it in msfconsole.</p>
+<h3 id="why-is-the-output-from-the-python-module-not-showing-up-in-msfconsole">Why is the output from the Python module not showing up in msfconsole?<a class="headerlink" href="#why-is-the-output-from-the-python-module-not-showing-up-in-msfconsole" title="Permanent link">&para;</a></h3>
+<p>The external modules communicate with framework via JSON-RPC. If your Python module contains <code>print</code> statements, framework may not recognize those as JSON-RPC requests. Use the <code>LogHandler</code> or <code>module.log()</code> to send status information, which will be displayed in msfconsole.</p>
+<h2 id="additional-resources">Additional Resources<a class="headerlink" href="#additional-resources" title="Permanent link">&para;</a></h2>
+<p><a href="https://blog.rapid7.com/2017/12/28/regifting-python-in-metasploit/">Rapid7 Blog: Regifting Python in Metasploit</a></p>
+<p><a href="https://blog.rapid7.com/2018/09/05/external-metasploit-modules-the-gift-that-keeps-on-slithering/">Rapid7 Blog: External Metasploit Modules: The Gift That Keeps On Slithering</a></p>
+<p><a href="https://github.com/rapid7/metasploit-framework/blob/master/lib/msf/core/modules/external/python/">Metasploit Python library</a></p>
+<p><a href="https://github.com/rapid7/metasploit-framework/tree/master/lib/msf/core/modules/external/templates">ERB Templates</a></p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2019 - 2020 darkcode0x00</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

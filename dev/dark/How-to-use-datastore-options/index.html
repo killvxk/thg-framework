@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="darkcode0x00 luizcorrea">
+        <link rel="canonical" href="https://darkcode357.github.io/thg-framework/dev/dark/How-to-use-datastore-options/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>How to use datastore options - thg-framework</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">thg-framework</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../cli/install/">Installation</a>
+</li>
+                                    
+<li >
+    <a href="../../..">Introduction</a>
+</li>
+                                    
+<li >
+    <a href="../../../community/">Community</a>
+</li>
+                                    
+<li >
+    <a href="../../../conceptual/">Conceptual</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/build/">build</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/tags/">tags</a>
+</li>
+                                    
+<li >
+    <a href="../../../LICENSE/">LICENSE</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">thg_dev <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../thg_dev/_Sidebar/">thg_dev</a>
+</li>
+                                    
+<li >
+    <a href="../../contributing/Contributing-to-thg/">Get Started</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/templates/">templates</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Roadmaps</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">2019</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap/">Roadmap</a>
+</li>
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap-Review/">Roadmap_Review</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">git</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../git/Using-Git/">Using-Git</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-cheatsheet/">Git_cheatsheet</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-Reference-Sites/">Git-Reference-Sites</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">documentation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">capture the flag</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">basic</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">analysis</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/malware/">malware</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">recovery</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/backuo/">backup</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/patching/">patching</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">tips_end_tricks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/tools/">tools</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/decoding/">decoding</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/dos/">dos</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/os_cheats/">os_cheats</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/snort/">snort</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/basic/">basic</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nmap/">nmap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nessus/">nessus</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/openvas/">openvas</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">defend</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tcpdump/">tcpdump</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/editcap/">edicap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/mergecap/">mergecap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/snort/">snort</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tshark/">tshark</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/analysis/">analysis</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">os</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/windows/">windows</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../../../deployment/">Deployment</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">hash_crack</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/">index</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/CORE_HASH_CRACKING_KNOWLEDGE/">CORE_HASH_CRACKING_KNOWLEDGE</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">pentest_standard</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../pentest_standard/preengagemente/">Pre engagement Interactions</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/ig/">Intelligence Gathering</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/threatmodeling/">Threat Modeling</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/vulnterability/">Vulnerability Analysis</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/exploration/">Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/postexploration/">Post Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/report/">Reporting</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/tecguidelines/">Technical Guidelines</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">CLI <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-1</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/thg/">THG</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/server/server/">thg_server</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/shells/shells/">thg_shells</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_docs/thg_docs/">thg_docs</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/auxiliares/auxiliares/">thg_auxiliares</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/anti_forensic/anti_forensic/">thg_anti_forensic</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/crypto/crypto/">thg_crypto</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/drone/drone/">thg_drone</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/keylogger/keylogger/">thg_keylogger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/recon/recon/">thg_recon</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/voip/voip/">thg_voip</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automation/automation/">thg_automation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cryptography/cryptography/">thg_cryptography</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/exploitation/exploitation/">thg_exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/malware/malware/">thg_malware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/reversing/reversing/">thg_reversing</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_windows/thg_windows/">thg_windows</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automobile/automobile/">thg_automobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/database/database/">thg_database</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/fingerprint/fingerprint/">thg_fingerprint</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/misc/misc/">thg_misc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/sniffer/sniffer/">thg_sniffer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/wireless/wireless/">thg_wireless</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/debugger/debugger/">thg_debugger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/firmware/firmware/">thg_firmware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/mobile/mobile/">thg_mobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/social/social/">thg_social</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/backdoor/backdoor/">thg_backdoor</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/decompiler/decompiler/">thg_decompiler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/forensic/forensic/">thg_forensic</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-2</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/networking/networking/">thg_networking</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoff/spoff/">thg_spoff</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/binary/binary/">thg_binary</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensensive/defensensive/">thg_defensensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/gpu/gpu/">thg_gpu</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/os/os/">thg_os</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/nfc/nfc/">thg_nfc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoof/spoof/">thg_spoof</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/bluetooth/bluetooth/">thg_bluetooth</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensive/defensive/">thg_defensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/hardware/hardware/">thg_hardware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/packer/packer/">thg_packer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/stego/stego/">thg_stego</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/code_audit/code_audit/">thg_code_audit</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/disassembler/disassembler/">thg_disassembler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/honeypot/honeypot/">thg_honeypot</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/proxy/proxy/">thg_proxy</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/tunnel/tunnel/">thg_tunnel</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cracker/cracker/">thg_cracker</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/dos/dos/">thg_dos</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/ids/ids/">thg_ids</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/radio/radio/">thg_radio</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/unpacker/unpacker/">thg_unpacker</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li>
+                                <a href="https://github.com/darkcode357/thg-framework/edit/master/docs/dev/dark/How-to-use-datastore-options.md">Edit on darkcode357/thg-framework</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#option-sources-moduledatastore-active_module-session-and-framework">Option sources: ModuleDataStore, active_module, session, and framework</a></li>
+        <li class="main "><a href="#core-option-types">Core option types</a></li>
+        <li class="main "><a href="#the-register_options-method">The register_options method</a></li>
+        <li class="main "><a href="#the-register_advanced_options-method">The register_advanced_options method</a></li>
+        <li class="main "><a href="#changing-the-default-value-for-a-datastore-option">Changing the default value for a datastore option</a></li>
+        <li class="main "><a href="#the-deregister_options-method">The deregister_options method</a></li>
+        <li class="main "><a href="#modifying-datastore-options-at-run-time">Modifying datastore options at run-time</a></li>
+        <li class="main "><a href="#ideal-datastore-naming">Ideal datastore naming</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p><strong>Note: This documentation may need to be vetted</strong></p>
+<p>A datastore option is a type of variable that can be set by the user, allowing various components of Metasploit to be more configurable during use. For example, in msfconsole, you can set the ConsoleLogging option in order to log all the console input/output - something that&rsquo;s kind of handy for documentation purposes during a pentest. When you load a module, there will be a lot more options registered by the mixin(s) or the module. Some common ones include: RHOST and RPORT for a server-side exploit or auxiliary module, SRVHOST for a client-side module, etc. The best way to find out exactly what datastore options you can set is by using these commands:</p>
+<ul>
+<li><code>show options</code> - Shows you all the basic options.</li>
+<li><code>show advanced</code> - Shows you all the advanced options.</li>
+<li><code>show missing</code> - Shows you all the required options you have not configured.</li>
+<li><code>set</code> - Shows you everything. Obviously you also use this command to set an option.</li>
+</ul>
+<h3 id="option-sources-moduledatastore-active_module-session-and-framework">Option sources: ModuleDataStore, active_module, session, and framework<a class="headerlink" href="#option-sources-moduledatastore-active_module-session-and-framework" title="Permanent link">&para;</a></h3>
+<p><strong>How users look at datastore options:</strong></p>
+<p>On the user&rsquo;s side, datastore options are seen as global or module-level: Global means all the modules can use that option, which can be set by using the <code>setg</code> command. Module-level means only that particular module you&rsquo;re using remembers that datastore option, no other components will know about it. You are setting a module-level option if you load a module first, and then use the <code>set</code> command, like the following:</p>
+<pre><code>msf &gt; use exploit/windows/smb/ms08_067_netapi 
+msf exploit(ms08_067_netapi) &gt; set rhost 10.0.1.3
+rhost =&gt; 10.0.1.3
+</code></pre>
+
+<p><strong>How Metasploit developers look at datastore options:</strong></p>
+<p>On the development side, things are a little crazier. Datastore options actually can be found in at least four different sources: the ModuleDataStore object, active_module, session object, or the framework object.</p>
+<p>If you&rsquo;re just doing module development, the best source you can trust is the ModuleDataStore object. This object has a specific load order before handing you the option you want: if the option can be found in the module&rsquo;s datastore, it will give you that. If not found, it will give you the one from framework. The following is an example of how to read a datastore option in a module:</p>
+<pre><code class="ruby">current_host = datastore['RHOST']
+</code></pre>
+
+<p>If your dev work is outside the module realm, there is a good possibility that you don&rsquo;t even have the ModuleDataStore object. But in some cases, you still might be able to read from the <a href="https://github.com/rapid7/metasploit-framework/blob/master/lib/msf/ui/console/driver.rb#L607">active_module accessor</a> from the driver. Or if you have access to <a href="https://github.com/rapid7/metasploit-framework/blob/master/lib/msf/ui/console/module_command_dispatcher.rb#L28">ModuleCommandDispatcher</a>, there is a <code>mod</code> method too that gives you the same thing, and sometimes mixins pass this around in a <code>run_simple</code> method while dispatching a module. One example you can look at is the <a href="https://github.com/rapid7/metasploit-framework/blob/master/lib/msf/ui/console/command_dispatcher/auxiliary.rb">Msf::Ui::Console::CommandDispatcher::Auxiliary</a> class.</p>
+<p>In some cases such as running a script in post exploitation, you might not have ModuleDataStore or even active_module, but you should still have a session object. There should be an <code>exploit_datastore</code> that gives you all the datastore options:</p>
+<pre><code class="ruby">session.exploit_datastore
+</code></pre>
+
+<p>If you don&rsquo;t have access to the module, or to a session object, the last source is obviously the framework object, and there is ALWAYS a framework object. However, like we said earlier, if the user sets a module-level option, no other components will see it, this includes the framework object:</p>
+<pre><code class="ruby">framework.datastore
+</code></pre>
+
+<p>So now you know there are multiple sources of datastore options. And hopefully at this point you are well aware that not all sources necessarily share the same thing. If you have to try everything, as a general rule, this should be your load order:</p>
+<ol>
+<li>Try from the ModuleDataStore</li>
+<li>Try from active_module</li>
+<li>Try from session</li>
+<li>Try from framework</li>
+</ol>
+<h3 id="core-option-types">Core option types<a class="headerlink" href="#core-option-types" title="Permanent link">&para;</a></h3>
+<p>All all core datastore option types are defined in the <a href="https://github.com/rapid7/metasploit-framework/blob/master/lib/msf/core/option_container.rb">option_container.rb</a> file as classes. You should always pick the most appropriate one because each has its own input validator.</p>
+<p>When you initialize an option during datastore registration, it should be in the following format:</p>
+<pre><code class="ruby">OptSomething.new(option_name, [boolean, description, value])
+</code></pre>
+
+<ul>
+<li><strong>option_name</strong> - Clearly means the name of the datastore option.</li>
+<li><strong>boolean</strong> - The first attribute, true means this is a required option, false means optional.</li>
+<li><strong>description</strong> - A short description about this option</li>
+<li><strong>value</strong> - A default value. Note if the first attribute is false, you don&rsquo;t need to provide a value, it&rsquo;ll be set to nil automatically.</li>
+</ul>
+<p>Now let&rsquo;s talk about what classes are available:</p>
+<ul>
+<li><strong>OptString</strong> - Typically for a string option. If the input begins with &ldquo;file://&rdquo;, OptString will also automatically assume this is a file, and read from it. However, there is no file path validation when this happens, so if you want to load a file, you should use the OptPath instead, and then read the file yourself. Code example:</li>
+</ul>
+<pre><code class="ruby">OptString.new('MYTEST', [ true, 'Set a MYTEST option', 'This is a default value' ])
+</code></pre>
+
+<ul>
+<li>
+<p><strong>OptRaw</strong> - It actually functions exactly the same as OptString.</p>
+</li>
+<li>
+<p><strong>OptBool</strong> - Boolean option. It will validate if the input is a variant of either true or false. For example: y, yes, n, no, 0, 1, etc. Code example:</p>
+</li>
+</ul>
+<pre><code class="ruby">OptBool.new('BLAH', [ true, 'Set a BLAH option', false ])
+</code></pre>
+
+<ul>
+<li><strong>OptEnum</strong> - Basically this will limit the input to specific choices. For example, if you want the input to be either &ldquo;apple&rdquo;, or &ldquo;orange&rdquo;, and nothing else, then OptEnum is the one for you. Code example:</li>
+</ul>
+<pre><code class="ruby"># Choices are: apple or range, defaults to apple
+OptEnum.new('FRUIT', [ true, 'Set a fruit', 'apple', ['apple', 'orange']])
+</code></pre>
+
+<ul>
+<li><strong>OptPort</strong> - For an input that&rsquo;s meant to be used as a port number. This number should be between 0 - 65535. Code example:</li>
+</ul>
+<pre><code class="ruby">OptPort.new('RPORT', [ true, 'Set a port', 21 ])
+</code></pre>
+
+<ul>
+<li><strong>OptAddress</strong> - An input that is an IPv4 address. Code example:</li>
+</ul>
+<pre><code class="ruby">OptAddress.new('IP', [ true, 'Set an IP', '10.0.1.3' ])
+</code></pre>
+
+<ul>
+<li>OptAddressRange - An input that is a range of IPv4 addresses, for example: 10.0.1.1-10.0.1.20, or 10.0.1.1/24. You can also supply a file path instead of a range, and it will automatically treat that file as a list of IPs. Or, if you do the rand:3 syntax, with 3 meaning 3 times, it will generate 3 random IPs for you. Basic code example:</li>
+</ul>
+<pre><code class="ruby">OptAddressRange.new('Range', [ true, 'Set an IP range', '10.0.1.3-10.0.1.23' ])
+</code></pre>
+
+<ul>
+<li><strong>OptPath</strong> - If your datastore option is asking for a local file path, then use this.</li>
+</ul>
+<pre><code class="ruby">OptPath.new('FILE', [ true, 'Load a local file' ])
+</code></pre>
+
+<ul>
+<li><strong>OptInt</strong> - This can be either a hex value, or decimal.</li>
+</ul>
+<pre><code class="ruby">OptInt.new('FILE', [ true, 'A hex or decimal', 1024 ])
+</code></pre>
+
+<ul>
+<li><strong>OptRegexp</strong> - Datastore option is a regular expression.</li>
+</ul>
+<pre><code class="ruby">OptRegexp.new('PATTERN', [true, 'Match a name', '^alien']),
+</code></pre>
+
+<p><strong>Other types:</strong></p>
+<p>In some cases, there might not be a well-suited datastore option type for you. The best example is an URL: even though there&rsquo;s no such thing as a OptUrl, what you can do is use the OptString type, and then in your module, do some validation for it, like this:</p>
+<pre><code class="ruby">def valid?(input)
+    if input =~ /^http:\/\/.+/i
+        return true
+    else
+        # Here you can consider raising OptionValidateError
+        return false
+    end
+end
+
+if valid?(datastore['URL'])
+    # We can do something with the URL
+else
+    # Not the format we're looking for. Refuse to do anything.
+end
+</code></pre>
+
+<h3 id="the-register_options-method">The register_options method<a class="headerlink" href="#the-register_options-method" title="Permanent link">&para;</a></h3>
+<p>The <code>register_options</code> method can register multiple basic datastore options. Basic datastore options are the ones that either must be configured, such as the RHOST option in a server-side exploit. Or it&rsquo;s very commonly used, such as various username/password options found in a login module.</p>
+<p>The following is an example of registering multiple datastore options in a module:</p>
+<pre><code class="ruby">register_options(
+  [
+    OptString.new('SUBJECT', [ true, 'Set a subject' ]),
+    OptString.new('MESSAGE', [ true, 'Set a message' ])
+  ], self.class)
+</code></pre>
+
+<h3 id="the-register_advanced_options-method">The register_advanced_options method<a class="headerlink" href="#the-register_advanced_options-method" title="Permanent link">&para;</a></h3>
+<p>The <code>register_advanced_options</code> method can register multiple advanced datastore options. Advanced datastore options are the ones that never require the user to configure before using the module. For example, the Proxies option is almost always considered as &ldquo;advanced&rdquo;. But of course, it can also mean that&rsquo;s something that most user will find difficult to configure.</p>
+<p>An example of register an advanced option:</p>
+<pre><code class="ruby">register_advanced_options(
+  [
+    OptInt.new('TIMEOUT', [ true, 'Set a timeout, in seconds', 60 ])
+  ], self.class)
+</code></pre>
+
+<h3 id="changing-the-default-value-for-a-datastore-option">Changing the default value for a datastore option<a class="headerlink" href="#changing-the-default-value-for-a-datastore-option" title="Permanent link">&para;</a></h3>
+<p>When a datastore option is already registered by a mixin, there are still ways to change the default value from the module. You can either use the <code>register_options</code> method, or adding a DefaultOptions key in the module&rsquo;s metadata.</p>
+<p><strong>Using register_options to change the default value:</strong></p>
+<p>One of the advantages of using <code>register_options</code> is that if the datastore option is advanced, this allows it to be on the basic option menu, meaning when people do &ldquo;show options&rdquo; on msfconsole, that option will be there instead. You also get to change the option description, and whether it should be required or not with this method.</p>
+<p><strong>Using DefaultOptions to change the default value:</strong></p>
+<p>When Metasploit initializes a module, an <code>import_defaults</code> method is <a href="https://github.com/rapid7/metasploit-framework/blob/master/lib/msf/core/module.rb#L581">called</a>. This method will update all existing datastore options (which is why <code>register_options</code> can be used to update default values), and then it will specifically check the DefaultOptions key from the module&rsquo;s metadata, and update again.</p>
+<p>Here&rsquo;s an example of an exploit module&rsquo;s initialize portion with the DefaultOptions key:</p>
+<pre><code class="ruby">def initialize(info={})
+  super(update_info(info,
+    'Name'           =&gt; &quot;Module name&quot;,
+    'Description'    =&gt; %q{
+      This is an example of setting the default value of RPORT using the DefaultOptions key
+    },
+    'License'        =&gt; MSF_LICENSE,
+    'Author'         =&gt; [ 'Name' ],
+    'References'     =&gt;
+      [
+        [ 'URL', '' ]
+      ],
+    'Platform'       =&gt; 'win',
+    'Targets'        =&gt;
+      [
+        [ 'Windows', { 'Ret' =&gt; 0x41414141 } ]
+      ],
+    'Payload'        =&gt;
+      {
+        'BadChars' =&gt; &quot;\x00&quot;
+      },
+    'DefaultOptions' =&gt;
+      {
+        'RPORT' =&gt; 8080
+      },
+    'Privileged'     =&gt; false,
+    'DisclosureDate' =&gt; &quot;&quot;,
+    'DefaultTarget'  =&gt; 0))
+end
+</code></pre>
+
+<h3 id="the-deregister_options-method">The deregister_options method<a class="headerlink" href="#the-deregister_options-method" title="Permanent link">&para;</a></h3>
+<p>The <code>deregister_options</code> method can deregister either basic or advanced options. Usage is really straight-forward:</p>
+<pre><code class="ruby">deregister_options('OPTION1', 'OPTION2', 'OPTION3')
+</code></pre>
+
+<h3 id="modifying-datastore-options-at-run-time">Modifying datastore options at run-time<a class="headerlink" href="#modifying-datastore-options-at-run-time" title="Permanent link">&para;</a></h3>
+<p>Currently, the safest way to modify a datastore option at run-time is to override a method. For example, some mixins retrieve the RPORT option like this:</p>
+<pre><code class="ruby">def rport
+    datastore['RPORT']
+end
+</code></pre>
+
+<p>In that scenario, you can override this rport method from your module, and return a different value:</p>
+<pre><code class="ruby">def rport
+    80
+end
+</code></pre>
+
+<p>This way, when a mixin wants that information, it will end up with the value 80, and not whatever is actually in <code>datastore['RPORT']</code>.</p>
+<h3 id="ideal-datastore-naming">Ideal datastore naming<a class="headerlink" href="#ideal-datastore-naming" title="Permanent link">&para;</a></h3>
+<p>Normal options are always UPPERCASE, advanced options are CamelCase, evasion options are Prefixed::CamelCase</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2019 - 2020 darkcode0x00</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

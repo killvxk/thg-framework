@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="darkcode0x00 luizcorrea">
+        <link rel="canonical" href="https://darkcode357.github.io/thg-framework/capturetheflag/basic/tips_end_tricks/tools/">
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>tools - thg-framework</title>
+        <link href="../../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../../..">thg-framework</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../../cli/install/">Installation</a>
+</li>
+                                    
+<li >
+    <a href="../../../..">Introduction</a>
+</li>
+                                    
+<li >
+    <a href="../../../../community/">Community</a>
+</li>
+                                    
+<li >
+    <a href="../../../../conceptual/">Conceptual</a>
+</li>
+                                    
+<li >
+    <a href="../../../../cli/build/">build</a>
+</li>
+                                    
+<li >
+    <a href="../../../../cli/tags/">tags</a>
+</li>
+                                    
+<li >
+    <a href="../../../../LICENSE/">LICENSE</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">thg_dev <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../../dev/thg_dev/_Sidebar/">thg_dev</a>
+</li>
+                                    
+<li >
+    <a href="../../../../dev/contributing/Contributing-to-thg/">Get Started</a>
+</li>
+                                    
+<li >
+    <a href="../../../../cli/templates/">templates</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Roadmaps</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">2019</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../dev/roadmaps/2019/2019-Roadmap/">Roadmap</a>
+</li>
+            
+<li >
+    <a href="../../../../dev/roadmaps/2019/2019-Roadmap-Review/">Roadmap_Review</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">git</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../dev/git/Using-Git/">Using-Git</a>
+</li>
+            
+<li >
+    <a href="../../../../dev/git/Git-cheatsheet/">Git_cheatsheet</a>
+</li>
+            
+<li >
+    <a href="../../../../dev/git/Git-Reference-Sites/">Git-Reference-Sites</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">documentation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">capture the flag</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">basic</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">analysis</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../analysis/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../analysis/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../analysis/malware/">malware</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">recovery</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../recover/backuo/">backup</a>
+</li>
+            
+<li >
+    <a href="../../recover/patching/">patching</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">tips_end_tricks</a>
+    <ul class="dropdown-menu">
+            
+<li class="active">
+    <a href="./">tools</a>
+</li>
+            
+<li >
+    <a href="../decoding/">decoding</a>
+</li>
+            
+<li >
+    <a href="../dos/">dos</a>
+</li>
+            
+<li >
+    <a href="../os_cheats/">os_cheats</a>
+</li>
+            
+<li >
+    <a href="../snort/">snort</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../identify/basic/">basic</a>
+</li>
+            
+<li >
+    <a href="../../identify/nmap/">nmap</a>
+</li>
+            
+<li >
+    <a href="../../identify/nessus/">nessus</a>
+</li>
+            
+<li >
+    <a href="../../identify/openvas/">openvas</a>
+</li>
+            
+<li >
+    <a href="../../identify/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../identify/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">defend</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../prootect_defend/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../prootect_defend/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../detect/tcpdump/">tcpdump</a>
+</li>
+            
+<li >
+    <a href="../../detect/editcap/">edicap</a>
+</li>
+            
+<li >
+    <a href="../../detect/mergecap/">mergecap</a>
+</li>
+            
+<li >
+    <a href="../../detect/snort/">snort</a>
+</li>
+            
+<li >
+    <a href="../../detect/tshark/">tshark</a>
+</li>
+            
+<li >
+    <a href="../../detect/analysis/">analysis</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">os</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../detect/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../detect/windows/">windows</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../../../../deployment/">Deployment</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">hash_crack</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../hash_crack/">index</a>
+</li>
+            
+<li >
+    <a href="../../../hash_crack/CORE_HASH_CRACKING_KNOWLEDGE/">CORE_HASH_CRACKING_KNOWLEDGE</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">pentest_standard</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../pentest_standard/preengagemente/">Pre engagement Interactions</a>
+</li>
+            
+<li >
+    <a href="../../../../pentest_standard/ig/">Intelligence Gathering</a>
+</li>
+            
+<li >
+    <a href="../../../../pentest_standard/threatmodeling/">Threat Modeling</a>
+</li>
+            
+<li >
+    <a href="../../../../pentest_standard/vulnterability/">Vulnerability Analysis</a>
+</li>
+            
+<li >
+    <a href="../../../../pentest_standard/exploration/">Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../../pentest_standard/postexploration/">Post Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../../pentest_standard/report/">Reporting</a>
+</li>
+            
+<li >
+    <a href="../../../../pentest_standard/tecguidelines/">Technical Guidelines</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">CLI <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-1</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../tutorials/thg/">THG</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/server/server/">thg_server</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/shells/shells/">thg_shells</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/thg_docs/thg_docs/">thg_docs</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/auxiliares/auxiliares/">thg_auxiliares</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/anti_forensic/anti_forensic/">thg_anti_forensic</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/crypto/crypto/">thg_crypto</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/drone/drone/">thg_drone</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/keylogger/keylogger/">thg_keylogger</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/recon/recon/">thg_recon</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/voip/voip/">thg_voip</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/automation/automation/">thg_automation</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/cryptography/cryptography/">thg_cryptography</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/exploitation/exploitation/">thg_exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/malware/malware/">thg_malware</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/reversing/reversing/">thg_reversing</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/thg_windows/thg_windows/">thg_windows</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/automobile/automobile/">thg_automobile</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/database/database/">thg_database</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/fingerprint/fingerprint/">thg_fingerprint</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/misc/misc/">thg_misc</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/sniffer/sniffer/">thg_sniffer</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/wireless/wireless/">thg_wireless</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/debugger/debugger/">thg_debugger</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/firmware/firmware/">thg_firmware</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/mobile/mobile/">thg_mobile</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/social/social/">thg_social</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/backdoor/backdoor/">thg_backdoor</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/decompiler/decompiler/">thg_decompiler</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/forensic/forensic/">thg_forensic</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-2</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../tutorials/networking/networking/">thg_networking</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/spoff/spoff/">thg_spoff</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/binary/binary/">thg_binary</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/defensensive/defensensive/">thg_defensensive</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/gpu/gpu/">thg_gpu</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/os/os/">thg_os</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/nfc/nfc/">thg_nfc</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/spoof/spoof/">thg_spoof</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/bluetooth/bluetooth/">thg_bluetooth</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/defensive/defensive/">thg_defensive</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/hardware/hardware/">thg_hardware</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/packer/packer/">thg_packer</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/stego/stego/">thg_stego</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/code_audit/code_audit/">thg_code_audit</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/disassembler/disassembler/">thg_disassembler</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/honeypot/honeypot/">thg_honeypot</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/proxy/proxy/">thg_proxy</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/tunnel/tunnel/">thg_tunnel</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/cracker/cracker/">thg_cracker</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/dos/dos/">thg_dos</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/ids/ids/">thg_ids</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/radio/radio/">thg_radio</a>
+</li>
+            
+<li >
+    <a href="../../../../tutorials/unpacker/unpacker/">thg_unpacker</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../recover/patching/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../decoding/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/darkcode357/thg-framework/edit/master/docs/capturetheflag/basic/tips_end_tricks/tools.md">Edit on darkcode357/thg-framework</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#prebuilt-iso-virtual-machine-and-distributions">PREBUILT ISO, VIRTUAL MACHINE AND DISTRIBUTIONS</a></li>
+            <li><a href="#kali-open-source-pentesting-distribution">KALI - Open Source Pentesting Distribution</a></li>
+            <li><a href="#sift-sans-investigative-forensics-toolkit">SIFT - SANS Investigative Forensics Toolkit</a></li>
+            <li><a href="#remnux-a-linux-toolkit-for-reverse-engineering-and-analyzing-malware">REMNUX - A Linux Toolkit for Reverse-Engineering and Analyzing Malware</a></li>
+            <li><a href="#open-vas-open-source-vulnerability-scanner-and-manager">OPEN VAS - Open Source vulnerability scanner and manager</a></li>
+            <li><a href="#moloch-large-scale-ipv4-packet-capturing-pcap-indexing-and-database-system">MOLOCH - Large scale IPv4 packet capturing (PCAP), indexing and database system</a></li>
+            <li><a href="#security-onion-linux-distro-for-intrusion-detection-network-security-monitoring-and-log-management">SECURITY ONION - Linux distro for intrusion detection, network security monitoring, and log management</a></li>
+            <li><a href="#nagios-network-monitoring-alerting-response-and-reporting-tool">NAGIOS - Network Monitoring, Alerting, Response, and Reporting Tool</a></li>
+            <li><a href="#ossec-scalable-multi-platform-open-source-hostbased-intrusion-detection-system">OSSEC - Scalable, multi-platform, open source Hostbased Intrusion Detection System</a></li>
+            <li><a href="#samurai-wtf-pre-configured-web-pen-testing-environment">SAMURAI WTF - Pre-configured web pen-testing environment</a></li>
+            <li><a href="#rtir-request-tracker-for-incident-response">RTIR - Request Tracker for Incident Response</a></li>
+            <li><a href="#honeydrive-pre-configured-honeypot-software-packages">HONEYDRIVE - Pre-configured honeypot software packages</a></li>
+            <li><a href="#the-enhanced-mitigation-experience-toolkit-helps-prevent-vulnerabilities-in-software-from-being-successfully-exploited">The Enhanced Mitigation Experience Toolkit - helps prevent vulnerabilities in software from being successfully exploited</a></li>
+            <li><a href="#attack-surface-analyzer-by-microsoft-baseline-tool">ATTACK SURFACE ANALYZER BY MICROSOFT - Baseline Tool</a></li>
+            <li><a href="#windows-to-go-usb-portable-windows-8">WINDOWS TO GO - USB Portable Windows 8</a></li>
+            <li><a href="#winfe-windows-forensic-environment-on-cdusb">WINFE - Windows Forensic Environment on CD/USB</a></li>
+            <li><a href="#dcept-deploying-and-detecting-use-of-active-directory-honeytokens">DCEPT - Deploying and detecting use of Active Directory honeytokens</a></li>
+            <li><a href="#tails-the-amnesic-incognito-live-system">TAILS - The Amnesic Incognito Live System</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="prebuilt-iso-virtual-machine-and-distributions">PREBUILT ISO, VIRTUAL MACHINE AND DISTRIBUTIONS<a class="headerlink" href="#prebuilt-iso-virtual-machine-and-distributions" title="Permanent link">&para;</a></h1>
+<h2 id="kali-open-source-pentesting-distribution">KALI - Open Source Pentesting Distribution<a class="headerlink" href="#kali-open-source-pentesting-distribution" title="Permanent link">&para;</a></h2>
+<p><img alt="kali" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Kali_Linux_2.0_wordmark.svg/1200px-Kali_Linux_2.0_wordmark.svg.png" /></p>
+<p><a href="https://www.kali.org">Kali</a></p>
+<h2 id="sift-sans-investigative-forensics-toolkit">SIFT - SANS Investigative Forensics Toolkit<a class="headerlink" href="#sift-sans-investigative-forensics-toolkit" title="Permanent link">&para;</a></h2>
+<p><a href="http://sift.readthedocs.org/">SIFT</a> </p>
+<h2 id="remnux-a-linux-toolkit-for-reverse-engineering-and-analyzing-malware">REMNUX - A Linux Toolkit for Reverse-Engineering and Analyzing Malware<a class="headerlink" href="#remnux-a-linux-toolkit-for-reverse-engineering-and-analyzing-malware" title="Permanent link">&para;</a></h2>
+<p><a href="https://remnux.org">REMNUX</a> </p>
+<h2 id="open-vas-open-source-vulnerability-scanner-and-manager">OPEN VAS - Open Source vulnerability scanner and manager<a class="headerlink" href="#open-vas-open-source-vulnerability-scanner-and-manager" title="Permanent link">&para;</a></h2>
+<p><a href="http://www.openvas.org">OPEN VAS</a> </p>
+<h2 id="moloch-large-scale-ipv4-packet-capturing-pcap-indexing-and-database-system">MOLOCH - Large scale IPv4 packet capturing (PCAP), indexing and database system<a class="headerlink" href="#moloch-large-scale-ipv4-packet-capturing-pcap-indexing-and-database-system" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/aol/moloch/wiki">MOLOCH</a> </p>
+<h2 id="security-onion-linux-distro-for-intrusion-detection-network-security-monitoring-and-log-management">SECURITY ONION - Linux distro for intrusion detection, network security monitoring, and log management<a class="headerlink" href="#security-onion-linux-distro-for-intrusion-detection-network-security-monitoring-and-log-management" title="Permanent link">&para;</a></h2>
+<p><a href="https://security-onionsolutions.github.io/security-onion/">SECURITY ONION</a> </p>
+<h2 id="nagios-network-monitoring-alerting-response-and-reporting-tool">NAGIOS - Network Monitoring, Alerting, Response, and Reporting Tool<a class="headerlink" href="#nagios-network-monitoring-alerting-response-and-reporting-tool" title="Permanent link">&para;</a></h2>
+<p><a href="https://www.nagios.org">NAGIOS</a> </p>
+<h2 id="ossec-scalable-multi-platform-open-source-hostbased-intrusion-detection-system">OSSEC - Scalable, multi-platform, open source Hostbased Intrusion Detection System<a class="headerlink" href="#ossec-scalable-multi-platform-open-source-hostbased-intrusion-detection-system" title="Permanent link">&para;</a></h2>
+<p><a href="http://ossec.github.io">OSSEC</a> </p>
+<h2 id="samurai-wtf-pre-configured-web-pen-testing-environment">SAMURAI WTF - Pre-configured web pen-testing environment<a class="headerlink" href="#samurai-wtf-pre-configured-web-pen-testing-environment" title="Permanent link">&para;</a></h2>
+<p><a href="http://samurai.inguardians.com">SAMURAI WTF</a> </p>
+<h2 id="rtir-request-tracker-for-incident-response">RTIR - Request Tracker for Incident Response<a class="headerlink" href="#rtir-request-tracker-for-incident-response" title="Permanent link">&para;</a></h2>
+<p><a href="https://www.bestpractical.com/rtir/">RTIR</a> </p>
+<h2 id="honeydrive-pre-configured-honeypot-software-packages">HONEYDRIVE - Pre-configured honeypot software packages<a class="headerlink" href="#honeydrive-pre-configured-honeypot-software-packages" title="Permanent link">&para;</a></h2>
+<p><a href="http://sourceforge.net/projects/honeydrive/">HONEYDRIVE</a> </p>
+<h2 id="the-enhanced-mitigation-experience-toolkit-helps-prevent-vulnerabilities-in-software-from-being-successfully-exploited">The Enhanced Mitigation Experience Toolkit - helps prevent vulnerabilities in software from being successfully exploited<a class="headerlink" href="#the-enhanced-mitigation-experience-toolkit-helps-prevent-vulnerabilities-in-software-from-being-successfully-exploited" title="Permanent link">&para;</a></h2>
+<p><a href="https://support.microsoft.com/en-us/kb/2458544">The Enhanced Mitigation Experience Toolkit</a> </p>
+<h2 id="attack-surface-analyzer-by-microsoft-baseline-tool">ATTACK SURFACE ANALYZER BY MICROSOFT - Baseline Tool<a class="headerlink" href="#attack-surface-analyzer-by-microsoft-baseline-tool" title="Permanent link">&para;</a></h2>
+<p><a href="https://www.microsoft.com/enus/download/confirmation.aspx?id=24487">ATTACK SURFACE ANALYZERATTACK SURFACE ANALYZER</a> </p>
+<h2 id="windows-to-go-usb-portable-windows-8">WINDOWS TO GO - USB Portable Windows 8<a class="headerlink" href="#windows-to-go-usb-portable-windows-8" title="Permanent link">&para;</a></h2>
+<p><a href="https://technet.microsoft.com/enus/library/hh831833.aspx">WINDOWS TO GO</a> </p>
+<h2 id="winfe-windows-forensic-environment-on-cdusb">WINFE - Windows Forensic Environment on CD/USB<a class="headerlink" href="#winfe-windows-forensic-environment-on-cdusb" title="Permanent link">&para;</a></h2>
+<p><a href="http://winfe.wordpress.com/">WINFE</a> </p>
+<h2 id="dcept-deploying-and-detecting-use-of-active-directory-honeytokens">DCEPT - Deploying and detecting use of Active Directory honeytokens<a class="headerlink" href="#dcept-deploying-and-detecting-use-of-active-directory-honeytokens" title="Permanent link">&para;</a></h2>
+<p><a href="https://www.secureworks.com/blog/dcept">DCEPT</a> </p>
+<h2 id="tails-the-amnesic-incognito-live-system">TAILS - The Amnesic Incognito Live System<a class="headerlink" href="#tails-the-amnesic-incognito-live-system" title="Permanent link">&para;</a></h2>
+<p><a href="https://tails.boum.org">TAILS</a> </p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2019 - 2020 darkcode0x00</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

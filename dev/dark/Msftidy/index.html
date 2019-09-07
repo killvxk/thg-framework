@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="darkcode0x00 luizcorrea">
+        <link rel="canonical" href="https://darkcode357.github.io/thg-framework/dev/dark/Msftidy/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Description - thg-framework</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">thg-framework</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../cli/install/">Installation</a>
+</li>
+                                    
+<li >
+    <a href="../../..">Introduction</a>
+</li>
+                                    
+<li >
+    <a href="../../../community/">Community</a>
+</li>
+                                    
+<li >
+    <a href="../../../conceptual/">Conceptual</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/build/">build</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/tags/">tags</a>
+</li>
+                                    
+<li >
+    <a href="../../../LICENSE/">LICENSE</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">thg_dev <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../thg_dev/_Sidebar/">thg_dev</a>
+</li>
+                                    
+<li >
+    <a href="../../contributing/Contributing-to-thg/">Get Started</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/templates/">templates</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Roadmaps</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">2019</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap/">Roadmap</a>
+</li>
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap-Review/">Roadmap_Review</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">git</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../git/Using-Git/">Using-Git</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-cheatsheet/">Git_cheatsheet</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-Reference-Sites/">Git-Reference-Sites</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">documentation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">capture the flag</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">basic</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">analysis</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/malware/">malware</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">recovery</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/backuo/">backup</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/patching/">patching</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">tips_end_tricks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/tools/">tools</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/decoding/">decoding</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/dos/">dos</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/os_cheats/">os_cheats</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/snort/">snort</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/basic/">basic</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nmap/">nmap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nessus/">nessus</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/openvas/">openvas</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">defend</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tcpdump/">tcpdump</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/editcap/">edicap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/mergecap/">mergecap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/snort/">snort</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tshark/">tshark</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/analysis/">analysis</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">os</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/windows/">windows</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../../../deployment/">Deployment</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">hash_crack</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/">index</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/CORE_HASH_CRACKING_KNOWLEDGE/">CORE_HASH_CRACKING_KNOWLEDGE</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">pentest_standard</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../pentest_standard/preengagemente/">Pre engagement Interactions</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/ig/">Intelligence Gathering</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/threatmodeling/">Threat Modeling</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/vulnterability/">Vulnerability Analysis</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/exploration/">Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/postexploration/">Post Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/report/">Reporting</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/tecguidelines/">Technical Guidelines</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">CLI <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-1</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/thg/">THG</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/server/server/">thg_server</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/shells/shells/">thg_shells</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_docs/thg_docs/">thg_docs</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/auxiliares/auxiliares/">thg_auxiliares</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/anti_forensic/anti_forensic/">thg_anti_forensic</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/crypto/crypto/">thg_crypto</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/drone/drone/">thg_drone</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/keylogger/keylogger/">thg_keylogger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/recon/recon/">thg_recon</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/voip/voip/">thg_voip</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automation/automation/">thg_automation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cryptography/cryptography/">thg_cryptography</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/exploitation/exploitation/">thg_exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/malware/malware/">thg_malware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/reversing/reversing/">thg_reversing</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_windows/thg_windows/">thg_windows</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automobile/automobile/">thg_automobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/database/database/">thg_database</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/fingerprint/fingerprint/">thg_fingerprint</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/misc/misc/">thg_misc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/sniffer/sniffer/">thg_sniffer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/wireless/wireless/">thg_wireless</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/debugger/debugger/">thg_debugger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/firmware/firmware/">thg_firmware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/mobile/mobile/">thg_mobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/social/social/">thg_social</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/backdoor/backdoor/">thg_backdoor</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/decompiler/decompiler/">thg_decompiler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/forensic/forensic/">thg_forensic</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-2</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/networking/networking/">thg_networking</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoff/spoff/">thg_spoff</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/binary/binary/">thg_binary</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensensive/defensensive/">thg_defensensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/gpu/gpu/">thg_gpu</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/os/os/">thg_os</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/nfc/nfc/">thg_nfc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoof/spoof/">thg_spoof</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/bluetooth/bluetooth/">thg_bluetooth</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensive/defensive/">thg_defensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/hardware/hardware/">thg_hardware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/packer/packer/">thg_packer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/stego/stego/">thg_stego</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/code_audit/code_audit/">thg_code_audit</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/disassembler/disassembler/">thg_disassembler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/honeypot/honeypot/">thg_honeypot</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/proxy/proxy/">thg_proxy</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/tunnel/tunnel/">thg_tunnel</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cracker/cracker/">thg_cracker</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/dos/dos/">thg_dos</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/ids/ids/">thg_ids</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/radio/radio/">thg_radio</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/unpacker/unpacker/">thg_unpacker</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li>
+                                <a href="https://github.com/darkcode357/thg-framework/edit/master/docs/dev/dark/Msftidy.md">Edit on darkcode357/thg-framework</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#description">Description</a></li>
+        <li class="main "><a href="#checks">Checks</a></li>
+            <li><a href="#file-modes">File modes</a></li>
+            <li><a href="#shebang">Shebang</a></li>
+            <li><a href="#nokogiri">Nokogiri</a></li>
+            <li><a href="#invalid-formats">Invalid Formats</a></li>
+            <li><a href="#old-keywords">Old Keywords</a></li>
+            <li><a href="#verbose">Verbose</a></li>
+            <li><a href="#badchars">Badchars</a></li>
+            <li><a href="#file-extension">File Extension</a></li>
+            <li><a href="#old-rubies">Old Rubies</a></li>
+            <li><a href="#ranking">Ranking</a></li>
+            <li><a href="#disclosure-date">Disclosure Date</a></li>
+            <li><a href="#title-casing">Title Casing</a></li>
+            <li><a href="#bad-terms">Bad Terms</a></li>
+            <li><a href="#function-arguments">Function Arguments</a></li>
+            <li><a href="#line-check">Line Check</a></li>
+            <li><a href="#snake-case">Snake Case</a></li>
+            <li><a href="#old-license">Old License</a></li>
+            <li><a href="#vuln-codes">VULN Codes</a></li>
+            <li><a href="#vars_get">vars_get</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h1>
+<h1 id="checks">Checks<a class="headerlink" href="#checks" title="Permanent link">&para;</a></h1>
+<h2 id="file-modes">File modes<a class="headerlink" href="#file-modes" title="Permanent link">&para;</a></h2>
+<p>This check ensures that modules are not marked executable. A module is only called by the framework and not directly. The correct file mode is <code>??</code></p>
+<h2 id="shebang">Shebang<a class="headerlink" href="#shebang" title="Permanent link">&para;</a></h2>
+<p>A module should not have a <a href="http://en.wikipedia.org/wiki/Shebang_%28Unix%29">Shebang</a> line.</p>
+<h2 id="nokogiri">Nokogiri<a class="headerlink" href="#nokogiri" title="Permanent link">&para;</a></h2>
+<p>Modules should not rely on the Nokogiri GEM. Please use REXML instead.</p>
+<h2 id="invalid-formats">Invalid Formats<a class="headerlink" href="#invalid-formats" title="Permanent link">&para;</a></h2>
+<h3 id="cve">CVE<a class="headerlink" href="#cve" title="Permanent link">&para;</a></h3>
+<p>CVE references should be in the format <code>YYYY-NNNN</code></p>
+<h3 id="bid">BID<a class="headerlink" href="#bid" title="Permanent link">&para;</a></h3>
+<p>BID references should only contain numbers</p>
+<h3 id="msb">MSB<a class="headerlink" href="#msb" title="Permanent link">&para;</a></h3>
+<p>OSVDB references should be in the format <code>MSddd-ddd</code> (d = digit)</p>
+<h3 id="mil">MIL<a class="headerlink" href="#mil" title="Permanent link">&para;</a></h3>
+<p>Milw0rm references are no longer supported (site suspended)</p>
+<h3 id="edb">EDB<a class="headerlink" href="#edb" title="Permanent link">&para;</a></h3>
+<p>EDB references should only contain numbers</p>
+<h3 id="us-cert-vu">US-CERT-VU<a class="headerlink" href="#us-cert-vu" title="Permanent link">&para;</a></h3>
+<p>US-CERT references should only contain numbers</p>
+<h3 id="zdi">ZDI<a class="headerlink" href="#zdi" title="Permanent link">&para;</a></h3>
+<p>ZDI references should be in the format <code>dd-ddd</code> (d = digit)</p>
+<h3 id="url">URL<a class="headerlink" href="#url" title="Permanent link">&para;</a></h3>
+<p>If you supply an URL where a short identifiert is available, please use the identifier.</p>
+<h2 id="old-keywords">Old Keywords<a class="headerlink" href="#old-keywords" title="Permanent link">&para;</a></h2>
+<p>Before Metasploit moved to Github the sources were stored in a SVN repository. SVN has support to replace custom variables with current values like the last revision. Since GIT does not support them, the references should be removed from code.</p>
+<h2 id="verbose">Verbose<a class="headerlink" href="#verbose" title="Permanent link">&para;</a></h2>
+<p>You should not define a VERBOSE option in your module. A VERBOSE option is already provided by the framework. To make use of the VERBOSE setting, you can use methods like <code>vprint_status</code> and <code>vprint_error</code></p>
+<h2 id="badchars">Badchars<a class="headerlink" href="#badchars" title="Permanent link">&para;</a></h2>
+<p>This checks looks for bad characters in the module title. If you encounter this error, please replace the characters.</p>
+<h2 id="file-extension">File Extension<a class="headerlink" href="#file-extension" title="Permanent link">&para;</a></h2>
+<p>All modules should have a <code>.rb</code> file extenstion to be loaded by the framework.</p>
+<h2 id="old-rubies">Old Rubies<a class="headerlink" href="#old-rubies" title="Permanent link">&para;</a></h2>
+<p>This check checks the file for syntax errors with old Ruby versions. By default this check will not run. To execute this check you need to set the environment variable <code>MSF_CHECK_OLD_RUBIES</code>.</p>
+<h2 id="ranking">Ranking<a class="headerlink" href="#ranking" title="Permanent link">&para;</a></h2>
+<p>This check ensures you added the correct ranking to your module. <a href="Exploit-Ranking">Click here</a> to read more about Exploit Ranking.</p>
+<h2 id="disclosure-date">Disclosure Date<a class="headerlink" href="#disclosure-date" title="Permanent link">&para;</a></h2>
+<p>Date format needs to be <code>Month Day, YYYY</code>. Example: <code>Jan 01, 2014</code></p>
+<h2 id="title-casing">Title Casing<a class="headerlink" href="#title-casing" title="Permanent link">&para;</a></h2>
+<p>This check ensures you used the correct case in your title.</p>
+<h2 id="bad-terms">Bad Terms<a class="headerlink" href="#bad-terms" title="Permanent link">&para;</a></h2>
+<p>This checks for the correct use of the terms <code>Stack Buffer overflow</code> and <code>Stack Exhaustion</code>. See <a href="http://blogs.technet.com/b/srd/archive/2009/01/28/stack-overflow-stack-exhaustion-not-the-same-as-stack-buffer-overflow.aspx">&ldquo;Stack overflow&rdquo; vs &ldquo;Stack buffer overflow&rdquo;</a> for more information.</p>
+<h2 id="function-arguments">Function Arguments<a class="headerlink" href="#function-arguments" title="Permanent link">&para;</a></h2>
+<p>If you define a function which defines a lot of input arguments, the check ensures you use a hash instead.</p>
+<h2 id="line-check">Line Check<a class="headerlink" href="#line-check" title="Permanent link">&para;</a></h2>
+<h3 id="unicode">Unicode<a class="headerlink" href="#unicode" title="Permanent link">&para;</a></h3>
+<p>Your module must not contain Unicode characters.</p>
+<h3 id="spaces-at-eol">Spaces at EOL<a class="headerlink" href="#spaces-at-eol" title="Permanent link">&para;</a></h3>
+<p>Your module must not conatin spaces at the end of a line.</p>
+<h3 id="mixed-tab-spaces">Mixed Tab Spaces<a class="headerlink" href="#mixed-tab-spaces" title="Permanent link">&para;</a></h3>
+<p>Your module contains Tabs and Spaces in one line. Only spaces should be used</p>
+<h3 id="tabs">Tabs<a class="headerlink" href="#tabs" title="Permanent link">&para;</a></h3>
+<p>Your module should not use tabs for intending code. Please use spaces instead.</p>
+<h3 id="carriage-return">Carriage return<a class="headerlink" href="#carriage-return" title="Permanent link">&para;</a></h3>
+<p>The specified line only contains a carriage return (<code>\r</code>) at the end of line. Please change to a normal linebreak (<code>\n</code> or <code>\r\n</code>).</p>
+<h3 id="fileopen">File.open<a class="headerlink" href="#fileopen" title="Permanent link">&para;</a></h3>
+<p>You used a File.open call without specifying a binary mode???</p>
+<h3 id="load">Load<a class="headerlink" href="#load" title="Permanent link">&para;</a></h3>
+<p>You used the <code>load</code> command in your module. This is not required since the framework loads all necessary files for you.</p>
+<h3 id="stdout">STDOUT<a class="headerlink" href="#stdout" title="Permanent link">&para;</a></h3>
+<p>Modules should not write directly to stdout. Please use the <code>print_*</code> functions instead.</p>
+<h3 id="modified-datastore">Modified datastore<a class="headerlink" href="#modified-datastore" title="Permanent link">&para;</a></h3>
+<p>Datastore options (options set by the user) should not be modified in code. If you need to change some values use local variables instead.</p>
+<h3 id="set-cookie">Set-Cookie<a class="headerlink" href="#set-cookie" title="Permanent link">&para;</a></h3>
+<p>The Set-Cookie header should not be parsed by your code. You can use the API call <code>res.get_cookies</code> insteady which already handles some special cases and ensures a clean header.</p>
+<h3 id="auxiliary-rand">Auxiliary Rand<a class="headerlink" href="#auxiliary-rand" title="Permanent link">&para;</a></h3>
+<p>Auxiliary modules should have no Rank. Only Exploits and Payloads should have a Rank attribute.</p>
+<h2 id="snake-case">Snake Case<a class="headerlink" href="#snake-case" title="Permanent link">&para;</a></h2>
+<p>This check ensures your module filename is in <a href="http://en.wikipedia.org/wiki/Snake_case">Snake Case</a></p>
+<h2 id="old-license">Old License<a class="headerlink" href="#old-license" title="Permanent link">&para;</a></h2>
+<p>This check checks for the old Metasploit license in the module header. You can use the tool <code>ruby tools/dev/resplat.rb &lt;filename&gt;</code> to convert the file.</p>
+<h2 id="vuln-codes">VULN Codes<a class="headerlink" href="#vuln-codes" title="Permanent link">&para;</a></h2>
+<p>This check ensures only known CheckCodes are returned by the <code>check</code> function.</p>
+<h2 id="vars_get">vars_get<a class="headerlink" href="#vars_get" title="Permanent link">&para;</a></h2>
+<p>When using <code>send_request_cgi</code> or <code>send_request_raw</code> the URL supplied should not contain GET Paramters. Please provide the Parameter via the <code>vars_get</code> hash.
+Example:
+bad:</p>
+<pre><code class="ruby">res = send_request_raw({
+    'uri'     =&gt; uri_base + '/upload.php?type=file&amp;folder=' + folder
+})
+</code></pre>
+
+<p>good:</p>
+<pre><code class="ruby">res = send_request_raw({
+    'uri'      =&gt; uri_base + '/upload.php',
+    'vars_get' =&gt; {
+        'type'   =&gt; 'file',
+        'folder' =&gt; folder
+    }
+})
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2019 - 2020 darkcode0x00</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

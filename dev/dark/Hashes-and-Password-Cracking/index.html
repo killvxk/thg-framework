@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="darkcode0x00 luizcorrea">
+        <link rel="canonical" href="https://darkcode357.github.io/thg-framework/dev/dark/Hashes-and-Password-Cracking/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Intro - thg-framework</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">thg-framework</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../cli/install/">Installation</a>
+</li>
+                                    
+<li >
+    <a href="../../..">Introduction</a>
+</li>
+                                    
+<li >
+    <a href="../../../community/">Community</a>
+</li>
+                                    
+<li >
+    <a href="../../../conceptual/">Conceptual</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/build/">build</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/tags/">tags</a>
+</li>
+                                    
+<li >
+    <a href="../../../LICENSE/">LICENSE</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">thg_dev <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../thg_dev/_Sidebar/">thg_dev</a>
+</li>
+                                    
+<li >
+    <a href="../../contributing/Contributing-to-thg/">Get Started</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/templates/">templates</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Roadmaps</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">2019</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap/">Roadmap</a>
+</li>
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap-Review/">Roadmap_Review</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">git</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../git/Using-Git/">Using-Git</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-cheatsheet/">Git_cheatsheet</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-Reference-Sites/">Git-Reference-Sites</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">documentation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">capture the flag</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">basic</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">analysis</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/malware/">malware</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">recovery</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/backuo/">backup</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/patching/">patching</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">tips_end_tricks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/tools/">tools</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/decoding/">decoding</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/dos/">dos</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/os_cheats/">os_cheats</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/snort/">snort</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/basic/">basic</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nmap/">nmap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nessus/">nessus</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/openvas/">openvas</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">defend</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tcpdump/">tcpdump</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/editcap/">edicap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/mergecap/">mergecap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/snort/">snort</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tshark/">tshark</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/analysis/">analysis</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">os</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/windows/">windows</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../../../deployment/">Deployment</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">hash_crack</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/">index</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/CORE_HASH_CRACKING_KNOWLEDGE/">CORE_HASH_CRACKING_KNOWLEDGE</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">pentest_standard</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../pentest_standard/preengagemente/">Pre engagement Interactions</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/ig/">Intelligence Gathering</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/threatmodeling/">Threat Modeling</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/vulnterability/">Vulnerability Analysis</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/exploration/">Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/postexploration/">Post Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/report/">Reporting</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/tecguidelines/">Technical Guidelines</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">CLI <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-1</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/thg/">THG</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/server/server/">thg_server</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/shells/shells/">thg_shells</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_docs/thg_docs/">thg_docs</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/auxiliares/auxiliares/">thg_auxiliares</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/anti_forensic/anti_forensic/">thg_anti_forensic</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/crypto/crypto/">thg_crypto</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/drone/drone/">thg_drone</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/keylogger/keylogger/">thg_keylogger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/recon/recon/">thg_recon</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/voip/voip/">thg_voip</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automation/automation/">thg_automation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cryptography/cryptography/">thg_cryptography</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/exploitation/exploitation/">thg_exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/malware/malware/">thg_malware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/reversing/reversing/">thg_reversing</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_windows/thg_windows/">thg_windows</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automobile/automobile/">thg_automobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/database/database/">thg_database</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/fingerprint/fingerprint/">thg_fingerprint</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/misc/misc/">thg_misc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/sniffer/sniffer/">thg_sniffer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/wireless/wireless/">thg_wireless</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/debugger/debugger/">thg_debugger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/firmware/firmware/">thg_firmware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/mobile/mobile/">thg_mobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/social/social/">thg_social</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/backdoor/backdoor/">thg_backdoor</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/decompiler/decompiler/">thg_decompiler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/forensic/forensic/">thg_forensic</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-2</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/networking/networking/">thg_networking</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoff/spoff/">thg_spoff</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/binary/binary/">thg_binary</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensensive/defensensive/">thg_defensensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/gpu/gpu/">thg_gpu</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/os/os/">thg_os</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/nfc/nfc/">thg_nfc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoof/spoof/">thg_spoof</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/bluetooth/bluetooth/">thg_bluetooth</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensive/defensive/">thg_defensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/hardware/hardware/">thg_hardware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/packer/packer/">thg_packer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/stego/stego/">thg_stego</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/code_audit/code_audit/">thg_code_audit</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/disassembler/disassembler/">thg_disassembler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/honeypot/honeypot/">thg_honeypot</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/proxy/proxy/">thg_proxy</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/tunnel/tunnel/">thg_tunnel</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cracker/cracker/">thg_cracker</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/dos/dos/">thg_dos</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/ids/ids/">thg_ids</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/radio/radio/">thg_radio</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/unpacker/unpacker/">thg_unpacker</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li>
+                                <a href="https://github.com/darkcode357/thg-framework/edit/master/docs/dev/dark/Hashes-and-Password-Cracking.md">Edit on darkcode357/thg-framework</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#intro">Intro</a></li>
+        <li class="main "><a href="#hashes">Hashes</a></li>
+            <li><a href="#hash-identify-example">Hash Identify Example</a></li>
+            <li><a href="#crackers">Crackers</a></li>
+            <li><a href="#differences-between-hashcat-vs-jtr">Differences Between Hashcat vs JtR</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="intro">Intro<a class="headerlink" href="#intro" title="Permanent link">&para;</a></h1>
+<p><strong>WORK IN PROGRESS</strong> - This page is a work in progress as the hashcat functionality is included in the metasploit framework, and as documentation is put together.  The information on this page may quickly become outdated, but can be used as a general guide.</p>
+<p>This article will discuss the various libraries, dependencies, and functionality built in to metasploit for dealing with password hashes, and cracking them.  In general, this will not cover storing credentials in the database, which can be read about <a href="https://github.com/rapid7/metasploit-framework/wiki/Creating-Metasploit-Framework-LoginScanners#the-scan-block">here</a>.  Metasploit currently support cracking passwords with <a href="https://github.com/rapid7/metasploit-framework/tree/master/modules/auxiliary/analyze">John the Ripper</a> and (soon as of Apr 2, 2019) <a href="https://github.com/rapid7/metasploit-framework/pull/11671">hashcat</a>.</p>
+<h1 id="hashes">Hashes<a class="headerlink" href="#hashes" title="Permanent link">&para;</a></h1>
+<p>Many modules gather dump hashes from various software.  Anything from the OS: <a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/post/windows/gather/hashdump.rb">Windows</a>, <a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/post/osx/gather/hashdump.rb">OSX</a>, and <a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/post/linux/gather/hashdump.rb">Linux</a>, to applications such as <a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/scanner/postgres/postgres_hashdump.rb">postgres</a>, and <a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/scanner/oracle/oracle_hashdump.rb">oracle</a>.  Similar, to the <a href="https://code.google.com/archive/p/hash-identifier/">hash-identifier</a> project, metasploit includes a library to identify the type of a hash in a standard way. <a href="https://github.com/rapid7/metasploit-framework/blob/master/lib/metasploit/framework/hashes/identify.rb">identify.rb</a> can be given a hash, and will return the <code>jtr</code> type.  Metasploit standardizes to <a href="https://www.openwall.com/john/">John the Ripper</a>&lsquo;s types.  While you may know the hash type being dumped already, using this library will help standardize future changes.</p>
+<h2 id="hash-identify-example">Hash Identify Example<a class="headerlink" href="#hash-identify-example" title="Permanent link">&para;</a></h2>
+<p>In this first, simple, example we will simply show loading the library and calling its function.</p>
+<pre><code>require 'metasploit/framework/hashes/identify'
+puts identify_hash &quot;$1$28772684$iEwNOgGugqO9.bIz5sk8k/&quot;
+# note, bad hashes return an empty string since nil is not accepted when creating credentials in msf.
+puts identify_hash &quot;This_is a Fake Hash&quot;
+puts identify_hash &quot;_9G..8147mpcfKT8g0U.&quot;
+</code></pre>
+
+<p>In practice, we receive the following output from this:</p>
+<pre><code>msf5 &gt; irb
+[*] Starting IRB shell...
+[*] You are in the &quot;framework&quot; object
+
+irb: warn: can't alias jobs from irb_jobs.
+&gt;&gt; require 'metasploit/framework/hashes/identify'
+=&gt; false
+&gt;&gt; puts identify_hash &quot;$1$28772684$iEwNOgGugqO9.bIz5sk8k/&quot;
+md5
+=&gt; nil
+&gt;&gt; puts identify_hash &quot;This_is a Fake Hash&quot;
+
+=&gt; nil
+&gt;&gt; puts identify_hash &quot;_9G..8147mpcfKT8g0U.&quot;
+des,bsdi,crypt
+</code></pre>
+
+<h2 id="crackers">Crackers<a class="headerlink" href="#crackers" title="Permanent link">&para;</a></h2>
+<h2 id="differences-between-hashcat-vs-jtr">Differences Between Hashcat vs JtR<a class="headerlink" href="#differences-between-hashcat-vs-jtr" title="Permanent link">&para;</a></h2>
+<p>This section will cover the differences between the two crackers.  This is not a comparison of speed, or why one may work better in a specific case than another.</p>
+<h3 id="general-settings">General Settings<a class="headerlink" href="#general-settings" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>JtR</th>
+<th>hashcat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>session</td>
+<td><code>--session</code></td>
+<td><code>--session</code></td>
+</tr>
+<tr>
+<td>no logging</td>
+<td><code>--nolog</code></td>
+<td><code>--logfile-disable</code></td>
+</tr>
+<tr>
+<td>config file</td>
+<td><code>--config</code></td>
+<td>(n/a)</td>
+</tr>
+<tr>
+<td>previous cracks</td>
+<td><code>--pot</code></td>
+<td><code>--potfile-path</code></td>
+</tr>
+<tr>
+<td>type of hashes</td>
+<td><code>--format</code></td>
+<td><code>--hash-type</code></td>
+</tr>
+<tr>
+<td>wordlist</td>
+<td><code>--wordlist</code></td>
+<td>(last parameter)</td>
+</tr>
+<tr>
+<td>incremental</td>
+<td><code>--incremental</code></td>
+<td><code>--increment</code></td>
+</tr>
+<tr>
+<td>rules</td>
+<td><code>--rules</code></td>
+<td><code>--rules-file</code></td>
+</tr>
+<tr>
+<td>max run time</td>
+<td><code>--max-run-time</code></td>
+<td><code>--runtime</code></td>
+</tr>
+<tr>
+<td>show results</td>
+<td><code>--show</code></td>
+<td><code>--show</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="hash-setting">Hash Setting<a class="headerlink" href="#hash-setting" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Hash</th>
+<th>JtR</th>
+<th><a href="https://hashcat.net/wiki/doku.php?id=example_hashes">hashcat</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>List formats</td>
+<td><code>john --list=formats</code> <code>john --list=format-all-details</code></td>
+<td><code>hashcat -h</code></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>des</td>
+<td>descrypt</td>
+<td>1500</td>
+</tr>
+<tr>
+<td>md5 (crypt is $1$)</td>
+<td>md5crypt</td>
+<td>500</td>
+</tr>
+<tr>
+<td>sha1</td>
+<td></td>
+<td>100</td>
+</tr>
+<tr>
+<td>bsdi</td>
+<td>bsdicrypt</td>
+<td>12400</td>
+</tr>
+<tr>
+<td>sha256</td>
+<td>sha256crypt</td>
+<td>7400</td>
+</tr>
+<tr>
+<td>sha512</td>
+<td>sha512crypt</td>
+<td>1800</td>
+</tr>
+<tr>
+<td>blowfish</td>
+<td>bcrypt</td>
+<td>3200</td>
+</tr>
+<tr>
+<td>lanman</td>
+<td>lm</td>
+<td>3000</td>
+</tr>
+<tr>
+<td>NTLM</td>
+<td>nt</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>mssql (05)</td>
+<td>mssql</td>
+<td>131</td>
+</tr>
+<tr>
+<td>mssql12</td>
+<td>mssql12</td>
+<td>1731</td>
+</tr>
+<tr>
+<td>mssql (2012/2014)</td>
+<td>mssql05</td>
+<td>132</td>
+</tr>
+<tr>
+<td>oracle (10)</td>
+<td>oracle</td>
+<td>3100</td>
+</tr>
+<tr>
+<td>oracle 11</td>
+<td>oracle11</td>
+<td>112</td>
+</tr>
+<tr>
+<td>oracle 12</td>
+<td>oracle12c</td>
+<td>12300</td>
+</tr>
+<tr>
+<td>postgres</td>
+<td>dynamic_1034</td>
+<td>12</td>
+</tr>
+<tr>
+<td>mysql</td>
+<td>mysql</td>
+<td>200</td>
+</tr>
+<tr>
+<td>mysql-sha1</td>
+<td>mysql-sha1</td>
+<td>300</td>
+</tr>
+</tbody>
+</table>
+<p>While Metasploit standardizes with the JtR format, the hashcat <a href="https://github.com/rapid7/metasploit-framework/blob/ed0b79721a388b33f11966491700f244e579ff53/lib/msf/core/auxiliary/hashcat.rb">library</a> includes the <code>jtr_format_to_hashcat_format</code> function to translate from jtr to hashcat.</p>
+<h3 id="example-hashes">Example Hashes<a class="headerlink" href="#example-hashes" title="Permanent link">&para;</a></h3>
+<p>Hashcat
+* <a href="https://hashcat.net/wiki/doku.php?id=example_hashes">hashcat.net</a></p>
+<p>JtR
+* <a href="http://pentestmonkey.net/cheat-sheet/john-the-ripper-hash-formats">pentestmonkey.net</a>
+* <a href="https://openwall.info/wiki/john/sample-hashes">openwall.info</a></p>
+<p>For testing Hashcat/JtR integration, this is a common list of commands to import example hashes of many different types.  When possible the username is separated by an underscore, and anything after it is the password.  For example <code>des_password</code>, the password for the hash is <code>password</code>:</p>
+<pre><code>creds add user:des_password hash:rEK1ecacw.7.c jtr:des
+creds add user:md5_password hash:$1$O3JMY.Tw$AdLnLjQ/5jXF9.MTp3gHv/ jtr:md5
+creds add user:bsdi_password hash:_J9..K0AyUubDrfOgO4s jtr:bsdi
+creds add user:sha256_password hash:$5$MnfsQ4iN$ZMTppKN16y/tIsUYs/obHlhdP.Os80yXhTurpBMUbA5 jtr:sha256,crypt
+creds add user:sha512_password hash:$6$zWwwXKNj$gLAOoZCjcr8p/.VgV/FkGC3NX7BsXys3KHYePfuIGMNjY83dVxugPYlxVg/evpcVEJLT/rSwZcDMlVVf/bhf.1 jtr:sha512,crypt
+creds add user:blowfish_password hash:$2a$05$bvIG6Nmid91Mu9RcmmWZfO5HJIMCT8riNW0hEp8f6/FuA2/mHZFpe jtr:bf
+creds add user:lm_password ntlm:E52CAC67419A9A224A3B108F3FA6CB6D:8846F7EAEE8FB117AD06BDD830B7586C jtr:lm
+creds add user:nt_password ntlm:AAD3B435B51404EEAAD3B435B51404EE:8846F7EAEE8FB117AD06BDD830B7586C jtr:nt
+creds add user:mssql05_toto hash:0x01004086CEB6BF932BC4151A1AF1F13CD17301D70816A8886908 jtr:mssql05
+creds add user:mssql_foo hash:0x0100A607BA7C54A24D17B565C59F1743776A10250F581D482DA8B6D6261460D3F53B279CC6913CE747006A2E3254 jtr:mssql
+creds add user:mssql12_Password1! hash:0x0200F733058A07892C5CACE899768F89965F6BD1DED7955FE89E1C9A10E27849B0B213B5CE92CC9347ECCB34C3EFADAF2FD99BFFECD8D9150DD6AACB5D409A9D2652A4E0AF16 jtr:mssql12
+creds add user:mysql_probe hash:445ff82636a7ba59 jtr:mysql
+creds add user:mysql-sha1_tere hash:*5AD8F88516BD021DD43F171E2C785C69F8E54ADB jtr:mysql-sha1
+## oracle (10) uses usernames in the hashing, so we can't overide that here
+creds add user:simon hash:4F8BC1809CB2AF77 jtr:des,oracle
+creds add user:SYSTEM hash:9EEDFA0AD26C6D52 jtr:des,oracle
+## oracle 11/12 H value, username is used
+creds add user:DEMO hash:'S:8F2D65FB5547B71C8DA3760F10960428CD307B1C6271691FC55C1F56554A;H:DC9894A01797D91D92ECA1DA66242209;T:23D1F8CAC9001F69630ED2DD8DF67DD3BE5C470B5EA97B622F757FE102D8BF14BEDC94A3CC046D10858D885DB656DC0CBF899A79CD8C76B788744844CADE54EEEB4FDEC478FB7C7CBFBBAC57BA3EF22C' jtr:raw-sha1,oracle
+## oracle 11/12 uses a LONG format, see lib/msf/core/auxiliary/jtr.rb
+creds add user:oracle11_epsilon hash:'S:8F2D65FB5547B71C8DA3760F10960428CD307B1C6271691FC55C1F56554A;H:DC9894A01797D91D92ECA1DA66242209;T:23D1F8CAC9001F69630ED2DD8DF67DD3BE5C470B5EA97B622F757FE102D8BF14BEDC94A3CC046D10858D885DB656DC0CBF899A79CD8C76B788744844CADE54EEEB4FDEC478FB7C7CBFBBAC57BA3EF22C' jtr:raw-sha1,oracle
+creds add user:oracle12c_epsilon hash:'H:DC9894A01797D91D92ECA1DA66242209;T:E3243B98974159CC24FD2C9A8B30BA62E0E83B6CA2FC7C55177C3A7F82602E3BDD17CEB9B9091CF9DAD672B8BE961A9EAC4D344BDBA878EDC5DCB5899F689EBD8DD1BE3F67BFF9813A464382381AB36B' jtr:pbkdf2,oracle12c
+##postgres uses username, so we can't overide that here
+creds add user:example postgres:md5be86a79bf2043622d58d5453c47d4860
+</code></pre>
+
+<p>This data breaks down to the following table:</p>
+<table>
+<thead>
+<tr>
+<th>Hash Type</th>
+<th>Username</th>
+<th>Hash</th>
+<th>Password</th>
+<th>jtr format</th>
+<th>Modules which dump this info</th>
+<th>Modules which crack this</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DES</td>
+<td>des_password</td>
+<td><code>rEK1ecacw.7.c</code></td>
+<td>password</td>
+<td>des</td>
+<td></td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/analyze/jtr_aix.rb">auxiliary/analyze/jtr_aix</a> <a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/analyze/jtr_linux.rb">auxiliary/analyze/jtr_linux</a></td>
+</tr>
+<tr>
+<td>MD5</td>
+<td>md5_password</td>
+<td><code>$1$O3JMY.Tw$AdLnLjQ/5jXF9.MTp3gHv/</code></td>
+<td>password</td>
+<td>md5</td>
+<td></td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/analyze/jtr_linux.rb">auxiliary/analyze/jtr_linux</a></td>
+</tr>
+<tr>
+<td>BSDi</td>
+<td>bsdi_password</td>
+<td><code>_J9..K0AyUubDrfOgO4s</code></td>
+<td>password</td>
+<td>bsdi</td>
+<td></td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/analyze/jtr_linux.rb">auxiliary/analyze/jtr_linux</a></td>
+</tr>
+<tr>
+<td>SHA256</td>
+<td>sha256_password</td>
+<td><code>$5$MnfsQ4iN$ZMTppKN16y/tIsUYs/obHlhdP.Os80yXhTurpBMUbA5</code></td>
+<td>password</td>
+<td>sha256,crypt</td>
+<td></td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/analyze/jtr_linux.rb">auxiliary/analyze/jtr_linux</a></td>
+</tr>
+<tr>
+<td>SHA512</td>
+<td>sha512_password</td>
+<td><code>$6$zWwwXKNj$gLAOoZCjcr8p/.VgV/FkGC3NX7BsXys3KHYePfuIGMNjY83dVxugPYlxVg/evpcVEJLT/rSwZcDMlVVf/bhf.1</code></td>
+<td>password</td>
+<td>sha512,crypt</td>
+<td></td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/analyze/jtr_linux.rb">auxiliary/analyze/jtr_linux</a></td>
+</tr>
+<tr>
+<td>Blowfish</td>
+<td>blowfish_password</td>
+<td><code>$2a$05$bvIG6Nmid91Mu9RcmmWZfO5HJIMCT8riNW0hEp8f6/FuA2/mHZFpe</code></td>
+<td>password</td>
+<td>bf</td>
+<td></td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/analyze/jtr_linux.rb">auxiliary/analyze/jtr_linux</a></td>
+</tr>
+<tr>
+<td>Lanman</td>
+<td>lm_password</td>
+<td><code>E52CAC67419A9A224A3B108F3FA6CB6D:8846F7EAEE8FB117AD06BDD830B7586C</code></td>
+<td>password</td>
+<td>lm</td>
+<td></td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/analyze/jtr_windows_fast.rb">auxiliary/analyze/jtr_windows_fast</a></td>
+</tr>
+<tr>
+<td>NTLM</td>
+<td>nt_password</td>
+<td><code>AAD3B435B51404EEAAD3B435B51404EE:8846F7EAEE8FB117AD06BDD830B7586C</code></td>
+<td>password</td>
+<td>nt</td>
+<td></td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/analyze/jtr_windows_fast.rb">auxiliary/analyze/jtr_windows_fast</a></td>
+</tr>
+<tr>
+<td>MSSQL (2005)</td>
+<td>mssql05_toto</td>
+<td><code>0x01004086CEB6BF932BC4151A1AF1F13CD17301D70816A8886908</code></td>
+<td>toto</td>
+<td>mssql05</td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/scanner/mssql/mssql_hashdump.rb">auxiliary/scanner/mssql/mssql_hashdump</a></td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/analyze/jtr_mssql_fast.rb">auxiliary/analyze/jtr_mssql_fast</a></td>
+</tr>
+<tr>
+<td>MSSQL</td>
+<td>mssql_foo</td>
+<td><code>0x0100A607BA7C54A24D17B565C59F1743776A10250F581D482DA8B6D6261460D3F53B279CC6913CE747006A2E3254</code></td>
+<td>foo</td>
+<td>mssql</td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/scanner/mssql/mssql_hashdump.rb">auxiliary/scanner/mssql/mssql_hashdump</a></td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/analyze/jtr_mssql_fast.rb">auxiliary/analyze/jtr_mssql_fast</a></td>
+</tr>
+<tr>
+<td>MSSQL (2012)</td>
+<td>mssql12_Password1!</td>
+<td><code>0x0200F733058A07892C5CACE899768F89965F6BD1DED7955FE89E1C9A10E27849B0B213B5CE92CC9347ECCB34C3EFADAF2FD99BFFECD8D9150DD6AACB5D409A9D2652A4E0AF16</code></td>
+<td>Password!</td>
+<td>mssql12</td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/scanner/mssql/mssql_hashdump.rb">auxiliary/scanner/mssql/mssql_hashdump</a></td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/analyze/jtr_mssql_fast.rb">auxiliary/analyze/jtr_mssql_fast</a></td>
+</tr>
+<tr>
+<td>MySQL</td>
+<td>mysql_probe</td>
+<td><code>445ff82636a7ba59</code></td>
+<td>probe</td>
+<td>mysql</td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/scanner/mysql/mysql_hashdump.rb">auxiliary/scanner/mysql/mysql_hashdump</a></td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/analyze/jtr_mysql_fast.rb">auxiliary/analyze/jtr_mysql_fast</a></td>
+</tr>
+<tr>
+<td>MySQL SHA1</td>
+<td>mysql-sha1_tere</td>
+<td><code>*5AD8F88516BD021DD43F171E2C785C69F8E54ADB</code></td>
+<td>tere</td>
+<td>mysql-sha1</td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/scanner/mysql/mysql_hashdump.rb">auxiliary/scanner/mysql/mysql_hashdump</a></td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/analyze/jtr_mysql_fast.rb">auxiliary/analyze/jtr_mysql_fast</a></td>
+</tr>
+<tr>
+<td>Oracle</td>
+<td>simon</td>
+<td><code>4F8BC1809CB2AF77</code></td>
+<td>A</td>
+<td>des,oracle</td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/scanner/oracle/oracle_hashdump.rb">auxiliary/scanner/oracle/oracle_hashdump</a></td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/analyze/jtr_oracle_fast.rb">auxiliary/analyze/jtr_oracle_fast</a></td>
+</tr>
+<tr>
+<td>Oracle</td>
+<td>SYSTEM</td>
+<td><code>9EEDFA0AD26C6D52</code></td>
+<td>THALES</td>
+<td>des,oracle</td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/scanner/oracle/oracle_hashdump.rb">auxiliary/scanner/oracle/oracle_hashdump</a></td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/analyze/jtr_oracle_fast.rb">auxiliary/analyze/jtr_oracle_fast</a></td>
+</tr>
+<tr>
+<td>Oracle 11</td>
+<td>DEMO</td>
+<td><code>S:8F2D65FB5547B71C8DA3760F10960428CD307B1C6271691FC55C1F56554A;H:DC9894A01797D91D92ECA1DA66242209;T:23D1F8CAC9001F69630ED2DD8DF67DD3BE5C470B5EA97B622F757FE102D8BF14BEDC94A3CC046D10858D885DB656DC0CBF899A79CD8C76B788744844CADE54EEEB4FDEC478FB7C7CBFBBAC57BA3EF22C</code></td>
+<td>epsilon</td>
+<td>raw-sha1,oracle</td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/scanner/oracle/oracle_hashdump.rb">auxiliary/scanner/oracle/oracle_hashdump</a></td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/analyze/jtr_oracle_fast.rb">auxiliary/analyze/jtr_oracle_fast</a></td>
+</tr>
+<tr>
+<td>Oracle 11</td>
+<td>oracle11_epsilon</td>
+<td><code>S:8F2D65FB5547B71C8DA3760F10960428CD307B1C6271691FC55C1F56554A;H:DC9894A01797D91D92ECA1DA66242209;T:23D1F8CAC9001F69630ED2DD8DF67DD3BE5C470B5EA97B622F757FE102D8BF14BEDC94A3CC046D10858D885DB656DC0CBF899A79CD8C76B788744844CADE54EEEB4FDEC478FB7C7CBFBBAC57BA3EF22C</code></td>
+<td>epsilon</td>
+<td>raw-sha1,oracle</td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/scanner/oracle/oracle_hashdump.rb">modules/auxiliary/scanner/oracle/oracle_hashdump</a></td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/analyze/jtr_oracle_fast.rb">auxiliary/analyze/jtr_oracle_fast</a></td>
+</tr>
+<tr>
+<td>Oracle 12</td>
+<td>oracle12_epsilon</td>
+<td><code>H:DC9894A01797D91D92ECA1DA66242209;T:E3243B98974159CC24FD2C9A8B30BA62E0E83B6CA2FC7C55177C3A7F82602E3BDD17CEB9B9091CF9DAD672B8BE961A9EAC4D344BDBA878EDC5DCB5899F689EBD8DD1BE3F67BFF9813A464382381AB36B</code></td>
+<td>epsilon</td>
+<td>pbkdf2,oracle12c</td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/scanner/oracle/oracle_hashdump.rb">auxiliary/scanner/oracle/oracle_hashdump</a></td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/analyze/jtr_oracle_fast.rb">auxiliary/analyze/jtr_oracle_fast</a></td>
+</tr>
+<tr>
+<td>Postgres</td>
+<td>example</td>
+<td><code>md5be86a79bf2043622d58d5453c47d4860</code></td>
+<td>password</td>
+<td>raw-md5,postgres</td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/scanner/postgres/postgres_hashdump.rb">auxiliary/scanner/postgres/postgres_hashdump</a></td>
+<td><a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/analyze/jtr_postgres_fast.rb">auxiliary/analyze/jtr_postgres_fast</a></td>
+</tr>
+</tbody>
+</table></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2019 - 2020 darkcode0x00</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

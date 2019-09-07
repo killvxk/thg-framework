@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="darkcode0x00 luizcorrea">
+        <link rel="canonical" href="https://darkcode357.github.io/thg-framework/dev/dark/Work-needed-to-allow-msfdb-to-use-postgresql-common/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Work needed to allow msfdb to use postgresql-common - thg-framework</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">thg-framework</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../cli/install/">Installation</a>
+</li>
+                                    
+<li >
+    <a href="../../..">Introduction</a>
+</li>
+                                    
+<li >
+    <a href="../../../community/">Community</a>
+</li>
+                                    
+<li >
+    <a href="../../../conceptual/">Conceptual</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/build/">build</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/tags/">tags</a>
+</li>
+                                    
+<li >
+    <a href="../../../LICENSE/">LICENSE</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">thg_dev <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../thg_dev/_Sidebar/">thg_dev</a>
+</li>
+                                    
+<li >
+    <a href="../../contributing/Contributing-to-thg/">Get Started</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/templates/">templates</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Roadmaps</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">2019</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap/">Roadmap</a>
+</li>
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap-Review/">Roadmap_Review</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">git</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../git/Using-Git/">Using-Git</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-cheatsheet/">Git_cheatsheet</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-Reference-Sites/">Git-Reference-Sites</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">documentation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">capture the flag</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">basic</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">analysis</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/malware/">malware</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">recovery</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/backuo/">backup</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/patching/">patching</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">tips_end_tricks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/tools/">tools</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/decoding/">decoding</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/dos/">dos</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/os_cheats/">os_cheats</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/snort/">snort</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/basic/">basic</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nmap/">nmap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nessus/">nessus</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/openvas/">openvas</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">defend</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tcpdump/">tcpdump</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/editcap/">edicap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/mergecap/">mergecap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/snort/">snort</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tshark/">tshark</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/analysis/">analysis</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">os</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/windows/">windows</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../../../deployment/">Deployment</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">hash_crack</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/">index</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/CORE_HASH_CRACKING_KNOWLEDGE/">CORE_HASH_CRACKING_KNOWLEDGE</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">pentest_standard</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../pentest_standard/preengagemente/">Pre engagement Interactions</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/ig/">Intelligence Gathering</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/threatmodeling/">Threat Modeling</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/vulnterability/">Vulnerability Analysis</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/exploration/">Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/postexploration/">Post Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/report/">Reporting</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/tecguidelines/">Technical Guidelines</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">CLI <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-1</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/thg/">THG</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/server/server/">thg_server</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/shells/shells/">thg_shells</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_docs/thg_docs/">thg_docs</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/auxiliares/auxiliares/">thg_auxiliares</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/anti_forensic/anti_forensic/">thg_anti_forensic</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/crypto/crypto/">thg_crypto</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/drone/drone/">thg_drone</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/keylogger/keylogger/">thg_keylogger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/recon/recon/">thg_recon</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/voip/voip/">thg_voip</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automation/automation/">thg_automation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cryptography/cryptography/">thg_cryptography</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/exploitation/exploitation/">thg_exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/malware/malware/">thg_malware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/reversing/reversing/">thg_reversing</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_windows/thg_windows/">thg_windows</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automobile/automobile/">thg_automobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/database/database/">thg_database</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/fingerprint/fingerprint/">thg_fingerprint</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/misc/misc/">thg_misc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/sniffer/sniffer/">thg_sniffer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/wireless/wireless/">thg_wireless</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/debugger/debugger/">thg_debugger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/firmware/firmware/">thg_firmware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/mobile/mobile/">thg_mobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/social/social/">thg_social</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/backdoor/backdoor/">thg_backdoor</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/decompiler/decompiler/">thg_decompiler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/forensic/forensic/">thg_forensic</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-2</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/networking/networking/">thg_networking</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoff/spoff/">thg_spoff</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/binary/binary/">thg_binary</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensensive/defensensive/">thg_defensensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/gpu/gpu/">thg_gpu</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/os/os/">thg_os</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/nfc/nfc/">thg_nfc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoof/spoof/">thg_spoof</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/bluetooth/bluetooth/">thg_bluetooth</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensive/defensive/">thg_defensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/hardware/hardware/">thg_hardware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/packer/packer/">thg_packer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/stego/stego/">thg_stego</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/code_audit/code_audit/">thg_code_audit</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/disassembler/disassembler/">thg_disassembler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/honeypot/honeypot/">thg_honeypot</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/proxy/proxy/">thg_proxy</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/tunnel/tunnel/">thg_tunnel</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cracker/cracker/">thg_cracker</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/dos/dos/">thg_dos</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/ids/ids/">thg_ids</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/radio/radio/">thg_radio</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/unpacker/unpacker/">thg_unpacker</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li>
+                                <a href="https://github.com/darkcode357/thg-framework/edit/master/docs/dev/dark/Work-needed-to-allow-msfdb-to-use-postgresql-common.md">Edit on darkcode357/thg-framework</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#work-needed-to-allow-msfdb-to-use-postgresql-common">Work needed to allow msfdb to use postgresql-common</a></li>
+            <li><a href="#msfdb-support-for-postgresql-common">msfdb support for postgresql-common</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="work-needed-to-allow-msfdb-to-use-postgresql-common">Work needed to allow msfdb to use postgresql-common<a class="headerlink" href="#work-needed-to-allow-msfdb-to-use-postgresql-common" title="Permanent link">&para;</a></h1>
+<p>Linux distributions, such as Debian and Kali Linux, use <a href="https://salsa.debian.org/postgresql/postgresql-common">postgresql-common (Multi-Version/Multi-Cluster PostgreSQL architecture)</a> wrappers to interact with one or more PostgreSQL installations. Therefore, commands such as <code>initdb</code> and <code>pg_ctl</code> are not in the user&rsquo;s <code>PATH</code>. <code>msfdb</code> currently assumes these programs are available in the <code>PATH</code>. In order to support platforms that use the <code>postgresql-common</code> wrappers, <code>msfdb</code> would need to determine if it is running on such a platform and modify the commands used to perform the various setup and configuration operations. See the section &ldquo;msfdb support for postgresql-common&rdquo; for additional details.</p>
+<h2 id="msfdb-support-for-postgresql-common"><code>msfdb</code> support for postgresql-common<a class="headerlink" href="#msfdb-support-for-postgresql-common" title="Permanent link">&para;</a></h2>
+<h3 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Determine if the system is using <code>postgresql-common</code>.</li>
+<li>Ideally, allow a user without elevated privileges to setup a database for use with Metasploit.</li>
+<li>Determine the current version of PostgreSQL on the system when multiple versions might be installed in parallel.</li>
+<li>
+<p>The port number used for the server when <code>pg_createcluster</code> is run without a port number option defaults to the &ldquo;next free port starting from 5432&rdquo;. If we don&rsquo;t specify the port number when calling <code>pg_createcluster</code> we can scrape the port number from the <code>pg_lsclusters</code> output.</p>
+<p><code>PG_CLUSTER_CONF_ROOT=$HOME/.local/etc/postgresql pg_lsclusters --no-header | awk '/^9.6/ { if ($2 == "msf") { print $3; } }'
+5433</code></p>
+</li>
+</ul>
+<h3 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h3>
+<p>Debian&rsquo;s <a href="https://salsa.debian.org/postgresql/postgresql-common">postgresql-common (Multi-Version/Multi-Cluster PostgreSQL architecture)</a> contains PostgreSQL wrapper tools:</p>
+<ul>
+<li><code>pg_lsclusters</code>: list all available clusters with their status and configuration</li>
+<li><code>pg_createcluster</code>: wrapper for <code>initdb</code>, sets up the necessary configuration structure<ul>
+<li><code>pg_createcluster [options] version name [-- initdb options]</code></li>
+</ul>
+</li>
+<li><code>pg_ctlcluster</code>: wrapper for <code>pg_ctl</code>, control the cluster postgres server<ul>
+<li>pg_ctlcluster [options] cluster-version cluster-name action &ndash; [pg_ctl options]</li>
+<li>where action = start|stop|restart|reload|promote</li>
+</ul>
+</li>
+<li><code>pg_dropcluster</code>: remove a cluster and its configuration<ul>
+<li>pg_dropcluster [&ndash;stop] cluster-version cluster-name</li>
+</ul>
+</li>
+<li><code>pg_wrapper</code>: wrapper for PostgreSQL client commands<ul>
+<li>client-program [&ndash;cluster version/cluster] [&hellip;]</li>
+<li>( client-program: psql, createdb, dropuser, and all other client programs installed in /usr/lib/postgresql/ version/bin).</li>
+</ul>
+</li>
+</ul>
+<p>The &ldquo;database cluster&rdquo; simply refers to a set of databases on a single server rather than a group of multiple database servers.</p>
+<h3 id="manually-create-and-initialize-msf-database-using-postgresql-common">Manually create and initialize MSF database using postgresql-common<a class="headerlink" href="#manually-create-and-initialize-msf-database-using-postgresql-common" title="Permanent link">&para;</a></h3>
+<h4 id="issues">Issues<a class="headerlink" href="#issues" title="Permanent link">&para;</a></h4>
+<p>Encountered permissions issues when attempting to create a cluster.</p>
+<pre><code>pg_createcluster --user=$(whoami) --encoding=UTF8 9.6 msf -- --username=$(whoami) --auth-host=trust --auth-local=trust
+install: cannot change permissions of ‘/etc/postgresql/9.6/msf’: No such file or directory
+Error: could not create configuration directory; you might need to run this program with root privileges
+</code></pre>
+
+<p>Requiring root privileges may be prohibitive to user installs of MSF. How can we create a cluster without root privileges? Adding the user to the postgres group and attempting to <code>sudo -u postgres</code> the command, however, resulted in the same error message. Looking closer at the various commands and discovered the following in the man page for <code>pg_wrapper</code>.</p>
+<pre><code>PG_CLUSTER_CONF_ROOT
+    This specifies an alternative base directory for cluster configurations. This is usually
+    /etc/postgresql/, but for testing/development purposes you can change this to point to e. g. your
+    home directory, so that you can use the postgresql-common tools without root privileges.
+</code></pre>
+
+<h4 id="working-solution">Working Solution<a class="headerlink" href="#working-solution" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Create cluster (&ldquo;initdb&rdquo;) to set up the necessary configuration structure:</li>
+</ul>
+<p>Note, running <code>mkdir -p $HOME/.local/etc/postgresql;</code> before the <code>pg_createcluster</code> command didn&rsquo;t stop the &ldquo;install: cannot change owner and permissions of ‘/home/msfdev/.local/etc/postgresql/9.6’: Operation not permitted&rdquo; message from appearing. This appears to be a warning only and doesn&rsquo;t seem to affect cluster creation.</p>
+<pre><code>mkdir -p $HOME/.local/var/log/postgresql; PG_CLUSTER_CONF_ROOT=$HOME/.local/etc/postgresql pg_createcluster --user=$(whoami) --datadir=$HOME/msf-db-datadir --socketdir=$HOME/.local/var/run/postgresql --logfile=$HOME/.local/var/log/postgresql/postgresql-version-msf.log --encoding=UTF8 9.6 msf -- --username=$(whoami) --auth-host=trust --auth-local=trust
+install: cannot change owner and permissions of ‘/home/msfdev/.local/etc/postgresql/9.6’: Operation not permitted
+Creating new cluster 9.6/msf ...
+config /home/msfdev/.local/etc/postgresql/9.6/msf
+data /home/msfdev/msf-db-datadir
+locale en_US.UTF-8
+socket /home/msfdev/.local/var/run/postgresql
+port 5433
+</code></pre>
+
+<ul>
+<li>Check cluster was successfully created and appears in the list of all available clusters:</li>
+</ul>
+<pre><code>PG_CLUSTER_CONF_ROOT=$HOME/.local/etc/postgresql pg_lsclusters
+Ver Cluster Port Status Owner Data directory Log file
+9.6 msf 5433 down msfdev /home/msfdev/msf-db-datadir /home/msfdev/.local/var/log/postgresql/postgresql-version-msf.log
+</code></pre>
+
+<ul>
+<li>Start postmaster server for the cluster (&ldquo;pg_ctl&rdquo;):</li>
+</ul>
+<pre><code>PG_CLUSTER_CONF_ROOT=$HOME/.local/etc/postgresql pg_ctlcluster 9.6 msf start
+</code></pre>
+
+<ul>
+<li>Check that the cluster was successfully started:</li>
+</ul>
+<pre><code>PG_CLUSTER_CONF_ROOT=$HOME/.local/etc/postgresql pg_lsclusters
+Ver Cluster Port Status Owner Data directory Log file
+9.6 msf 5433 online msfdev /home/msfdev/msf-db-datadir /home/msfdev/.local/var/log/postgresql/postgresql-version-msf.log
+</code></pre>
+
+<ul>
+<li>Perform <code>msfdb</code>&lsquo;s <code>write_db_config</code> method work by manually creating the <code>~/.msf4/database.yml</code> file.</li>
+</ul>
+<pre><code>development: &amp;pgsql
+  adapter: postgresql
+  database: msf
+  username: msf
+  password: Password123
+  host: 127.0.0.1
+  port: 5433
+  pool: 200
+
+production: &amp;production
+  &lt;&lt;: *pgsql
+
+test:
+  &lt;&lt;: *pgsql
+  database: msftest
+  username: msftest
+  password: Password123
+</code></pre>
+
+<ul>
+<li>Create database users:</li>
+</ul>
+<p>Note, these steps are from <code>msfdb</code>&lsquo;s <code>init_db</code> method. The following example only creates the main MSF user account and not the test account.</p>
+<pre><code>PG_CLUSTER_CONF_ROOT=$HOME/.local/etc/postgresql psql --cluster 9.6/msf -c &quot;create user msf with password 'Password123';&quot; postgres
+CREATE ROLE
+PG_CLUSTER_CONF_ROOT=$HOME/.local/etc/postgresql psql --cluster 9.6/msf -c &quot;alter role msf createdb;&quot; postgres
+ALTER ROLE
+PG_CLUSTER_CONF_ROOT=$HOME/.local/etc/postgresql psql --cluster 9.6/msf -c &quot;alter role msf with password 'Password123';&quot; postgres
+ALTER ROLE
+PG_CLUSTER_CONF_ROOT=$HOME/.local/etc/postgresql createdb --cluster 9.6/msf -O msf -h 127.0.0.1 -U msf -E UTF-8 -T template0 msf
+</code></pre>
+
+<ul>
+<li>
+<p>Perform <code>msfdb</code>&lsquo;s <code>write_db_client_auth_config</code> method work, except it needs to write the <code>pg_hba.conf</code> file now stored in under <code>PG_CLUSTER_CONF_ROOT</code> and inside the <code>version/cluster-name</code> directory. In this example that location is: <code>$HOME/.local/etc/postgresql/9.6/msf/pg_hba.conf</code>.</p>
+</li>
+<li>
+<p>Perform <code>msfdb</code>&lsquo;s <code>restart_db</code> method work, by stopping and then starting the server. Stop and then start postmaster server for the cluster (&ldquo;pg_ctl&rdquo;):</p>
+</li>
+</ul>
+<pre><code>PG_CLUSTER_CONF_ROOT=$HOME/.local/etc/postgresql pg_ctlcluster 9.6 msf stop
+PG_CLUSTER_CONF_ROOT=$HOME/.local/etc/postgresql pg_ctlcluster 9.6 msf start
+</code></pre>
+
+<ul>
+<li>Check that the cluster was successfully started:</li>
+</ul>
+<pre><code>PG_CLUSTER_CONF_ROOT=$HOME/.local/etc/postgresql pg_lsclusters
+Ver Cluster Port Status Owner Data directory Log file
+9.6 msf 5433 online msfdev /home/msfdev/msf-db-datadir /home/msfdev/.local/var/log/postgresql/postgresql-version-msf.log
+</code></pre>
+
+<ul>
+<li>Create initial database schema:</li>
+</ul>
+<p>Note, these steps are from <code>msfdb</code>&lsquo;s <code>init_db</code> method.</p>
+<pre><code>cd ~/metasploit-framework
+bundle exec rake db:migrate
+</code></pre>
+
+<ul>
+<li>Start <code>msfconsole</code> and verify postgresql connection using the <code>db_status</code> command:</li>
+</ul>
+<pre><code># disable or remove ~/.msf4/config if it is configured to auto connect to a data service
+mv ~/.msf4/config ~/.msf4/config.disable
+./msfconsole
+...
+msf5 &gt; db_status 
+[*] Connected to msf. Connection type: postgresql.
+</code></pre>
+
+<ul>
+<li>Drop (delete) the cluster:</li>
+</ul>
+<pre><code>PG_CLUSTER_CONF_ROOT=$HOME/.local/etc/postgresql pg_dropcluster 9.6 msf
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2019 - 2020 darkcode0x00</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
