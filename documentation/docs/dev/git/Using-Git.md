@@ -1,29 +1,30 @@
-Use this collection of resources to work with the Metasploit Framework's git repository.
+Use esta coleção de recursos para trabalhar com o repositório git do thg Framework.
 
--------------
+* [Cheatsheet | Git cheatsheet](dafko)
+* [Sites de referência | Sites de referência do Git]
+* [Configurando um ambiente de desenvolvimento] - isso orientará você na criação de uma solicitação pull
+* [Landing Pull Requests] - este é o procedimento pelo qual os principais desenvolvedores do Metasploit passam para mesclar sua solicitação
+* [Remoção de ramificação remota]
 
-* [[Cheatsheet|Git cheatsheet]]
-* [[Reference Sites|Git Reference Sites]]
-* [[Setting Up a Metasploit Development Environment]] - this will walk you through creating a pull request
-* [[Landing Pull Requests]] - this is the procedure that Metasploit core devs go through to merge your request
-* [[Remote Branch Pruning]]
+Uma bifurcação é quando você captura instantaneamente a base de código de outra pessoa no seu próprio repositório, 
+presumivelmente no gitlab.com, e essa base de código pode ter suas próprias ramificações, 
+mas você geralmente captura instantaneamente a ramificação principal. Você geralmente clona seu fork na sua máquina local. 
+Você cria seus próprios ramos, que são ramificações de seu próprio fork. Esses snapshots, mesmo que enviados ao seu github, 
+não fazem parte da base de código original, neste caso, o darkcode357/thg-framework. Se você enviar uma solicitação de recebimento, 
+sua ramificação (geralmente) poderá ser transferida para a ramificação principal da base de código original (geralmente ... você poderá ser transferido para uma ramificação experimental ou algo assim, se o seu código for uma alteração maciça ou algo assim, mas isso não é típica).
 
-A fork is when you snapshot someone else's codebase into your own repo, presumably on github.com, and that codebase may have it's own branches, but you are usually snapshotting the master branch.  You usually then clone your fork to your local machine.  You then create your own branches, which are offshoots of your own fork.  Those snapshots, even if pushed to your github are not a part of the original codebase, in this case rapid7/metasploit-framework.  If you then submit a pull request, your branch (generally) can be pulled into the original codebase's master branch (usually... you could be pulled into an experimental branch or something if your code was a massive change or something, but that's not typical).
-
-You only fork once, you clone as many times as you have machines on which you want to code, and you branch, commit, and push as often as you like (you don't always have to push, you can push later or not at all, but you'll have to push before doing a pull request, a.k.a. PR), and you submit a PR when you are ready.  See below
-
+Você apenas bifurca uma vez, clona quantas vezes voce quiser e nas codificar e ramifica, confirma e empurra quantas vezes quiser (nem sempre precisa empurrar, pode empurrar mais tarde ou não , mas você precisará enviar antes de fazer uma solicitação de recebimento, também conhecida como PR), e enviará um PR quando estiver pronto. Ver abaixo
 ```
-github.com/rapid7/metasploit-framework --> fork --> github.com/<...>/metasploit-framework
+gitlab.com/darkcode357/thg-framework/ --> fork --> github.com/<...>/thg-framework
     ^                                                          |
-    |                               git clone git://github.com/<...>/metasploit-framework.git
+    |                               git clone git://gitlab.com/<...>/thg-framework.git
     |                                                          |
     `-- accepted <-- pull request                              V
-                      ^                        /home/<...>/repo/metasploit-framework
+                      ^                        /home/<...>/repo/thg-framework
                       |                                |              |          |
-   github.com/<...>/metasploit-framework/branch_xyz    |              |          |
+   github.com/<...>/thg-framework/branch_xyz    |              |          |
                       |                                |              V          V
                       |                                V           branch_abc   ...
                       `--       push       <--      branch_xyz
 ```
 
-(Thanks to kernelsmith for this excellent description)

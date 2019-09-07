@@ -46,15 +46,19 @@ nav:
 
 
 - thg_dev:
+    - Get Started: ./contributing/Contributing-to-thg.md
+    - templates: cli/templates.md
     - Roadmaps:
       - 2019:
         - Roadmap: ./dev/roadmaps/2019/2019-Roadmap.md
         - Roadmap_Review: ./dev/roadmaps/2019/2019-Roadmap-Review.md
+    - git:
+      - Using-Git: ./dev/git/Using-Git.md
+      - Git_cheatsheet:  ./dev/git/Git-cheatsheet.md
+      - Git-Reference-Sites: ./dev/git/Git-Reference-Sites.md
 
 
-- Contributing:
-  - Get Started: ./contributing/Contributing-to-thg.md
-  - templates: cli/templates.md
+
 - documentation:
   - capture the flag:
     - basic:

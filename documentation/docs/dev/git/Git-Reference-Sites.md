@@ -1,6 +1,6 @@
 ## Learning Git
 
-The following sites are great references for Git padawans and jedi alike:
+Os sites a seguir são ótimas referências para Git Padawans e Jedi:
 
 * [Git-SVN crash course](http://git.or.cz/course/svn.html): Lots of good stuff on helping newbies grok the concepts of Git w/ reference to similar concepts in Subversion.
 * [learn.github.com](http://learn.github.com): GitHub's own reference site. Includes helpful GitHub-specific information.

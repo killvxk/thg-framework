@@ -1,105 +1,104 @@
-##Git Cheatsheet (survival level)
+## Git Cheatsheet (nível de sobrevivência)
 
-Here is a set of some of the most common things you'll need to do in
-your day-to-day workflow with Git.
+Aqui está um conjunto de algumas das coisas mais comuns que você precisa fazer no
+seu fluxo de trabalho diário com o Git.
 
-**Pro Tip 1:** you can get man pages for any git command by inserting a hyphen.  As in: "man git-fetch" or "man git-merge"
+**Dica 1:** você pode obter páginas de manual para qualquer comando git, inserindo um hífen. Como em: "man git-fetch" ou "man git-merge"
 
-**Pro Tip 2:** install the [cheat gem](http://cheat.errtheblog.com/) for a really long cheat sheet available in your terminal.
+**Dica profissional 2:** instale o [pysheeet](https://github.com/crazyguitar/pysheeet)  para ter uma lista de boas paraticas de codigo python
 
-## What's going on?
+## O que está acontecendo ?
 
-* What branch am I on? Which files are modified, which are staged, which are untracked, etc?
+* Em que branch estou? 
+* Quais foram os arquivos modificados ?
+* Quais são testados, quais não são rastreados etc.?
+* Quais foram os arquivos adicionados e modificados
+## oque esta acontecendo ? 
 
-    `git status`
+* Em que branch estou? Quais arquivos são modificados, quais são testados, quais não são rastreados etc.?
+commando ->  `git status`
 
 ## Fetch, Pull, and Push
 
-* Get all new changes, and remote branch refs
+* Receba todas as novas alterações e refs de refs remota
+comando->`git fetch`
 
-    `git fetch`
+* Faça uma busca no repositorio git e (se possível) uma mesclagem na ramificação atual(`baixar atualizacoes`)
+comando->`git pull`
 
-* Do a git fetch and (if possible) a merge on the current branch
+* Enviar alteracoes para o repositorio usando o push e submetendo a origin/master/(branch especifica) (como o SVN):
+comando->`git push origin master`
 
-    `git pull`
-
-* Push commits to the origin/master (like an SVN commit):
-
-    `git push origin master`
-
-* Push commits on a non-master branch:
-
+* alteracoes para uma branch especifica:
     `git push origin your_branch_name`
 
 ## Branching
 
-* See a list of local branches
+* mostra corrente branches
 
     `git branch`
 
-* Switch to an existing branch
+* mudar para uma branch especifica
 
     `git checkout existing_branch_name`
 
-* Create a new branch and switch to it:
+* Crie uma nova branch e mude para ela:
 
     `git checkout -b new_branch_name`
 
 
 ## Merging and Stashing
 
-* Merge my working branch into current branch:
+* juntar minha branch de trabalho para a branch atual:
     
     `git merge working_branch_name`
 
-* Temporarily clear my stage so I can switch to another branch
-  ("stashing"):
+* Limpe temporariamente meu desk para que eu possa mudar para outro ramo
 
     `git stash`
 
-* Get my stashed stuff back, leaving it in the list of stashes:
+* Recupere minhas coisas gardadas, deixando-as na lista de esconderijos:
 
     `git stash apply`
 
-* Get my stashed stuff back, removing it from the list:
+* Recupere minhas coisas escondidas, removendo-as da lista:
 
     `git stash pop`
 
 ## History, Conflicts, and Fixing Mistakes
 
-* See the log of commits:
+* ver log dos commits:
 
     `git log`
 
-* See what changes were made in a given commit:
+* Veja quais alterações foram feitas em um determinado commit:
 
     `git show COMMIT_HASH`
 
-* See more detailed log information:
+* Veja informações de log mais detalhadas:
 
     `git whatchanged`
 
-* Get rid of all the changes I've made since last commit:
+* Livre-se de todas as alterações que fiz desde a última confirmação:
     
     `git reset --hard`
 
-* Get rid of the changes for just one file:
+* Livre-se das alterações de apenas um arquivo:
 
     `git checkout FILENAME`
 
-* Make HEAD point to the state of the codebase as of 2 commits ago:
-
+*Faça HEAD apontar para o estado da base de código a partir de 2 commits atrás:
     `git checkout HEAD^^`
 
-* Fix a conflict (w/ system's default graphical diff tool):
+* Corrija um conflito (com a ferramenta gráfica padrão do sistema):
 
     `git mergetool`
 
-* Revert a commit (be careful with merges!):
+* Reverte um commit (tenha cuidado com mesclagens!):
 
     `git revert <commit hash>`
 
-* Revert a commit from a merge:
+* Reverter um commit de um merge:
 
     `git revert -m<number of commits back in the merge to revert> <hash of merge commit>`
      
@@ -108,7 +107,6 @@ your day-to-day workflow with Git.
 
 
 ## Git in Bash
-When using Git, it's very handy (read: pretty much mandatory) to have an ambient cue in your shell telling you what branch you're currently on.  Use this function in your .profile/.bashrc/.bash_profile to enable you to place your Git branch in your prompt:
 
 ````
 function parse_git_branch {
