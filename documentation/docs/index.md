@@ -1,12 +1,15 @@
-Bem vindo a  THG-land. 
+!!! success
+        
+    Bem vindo a  THG-land. 
+    
+    Você é um usuário do TGH que deseja começar ou melhorar as coisas de hackers (você tem permissão para invadir)? A maneira mais rápida de começar é [baixar o instalador binário do THG] (versao futura) (http://www.darkcode0x00.com/products/thg/download). Isso fornecerá acesso ao TGH Framework, de código aberto e gratuito, e a uma avaliação gratuita do THG-XCODE Pro.
+    
+    Você está ansioso para configurar seu [THG Development Environment] (https://github.com/rapid7/metasploit-framework/wiki/Setting-Up-a-Metasploit-Development-Environment) para poder iniciar [[Landing Pull Solicitações]] e contribuindo com um excelente código de exploração? Se assim for, você está no lugar certo. Se você é um desenvolvedor de exploração, deve revisar nossas [[Diretrizes para aceitação de módulos e aprimoramentos]] para descobrir o que esperamos quando vemos solicitações pull para novos módulos thg. Não faz ideia no que você deve começar a trabalhar? Confira as diretrizes para [[contribuir para o thg]] e mergulhe em [[Configurando um ambiente de desenvolvimento para o thg]].
 
-Você é um usuário do TGH que deseja começar ou melhorar as coisas de hackers (você tem permissão para invadir)? A maneira mais rápida de começar é [baixar o instalador binário do THG] (versao futura) (http://www.darkcode0x00.com/products/thg/download). Isso fornecerá acesso ao TGH Framework, de código aberto e gratuito, e a uma avaliação gratuita do THG-XCODE Pro.
-
-Você está ansioso para configurar seu [THG Development Environment] (https://github.com/rapid7/metasploit-framework/wiki/Setting-Up-a-Metasploit-Development-Environment) para poder iniciar [[Landing Pull Solicitações]] e contribuindo com um excelente código de exploração? Se assim for, você está no lugar certo. Se você é um desenvolvedor de exploração, deve revisar nossas [[Diretrizes para aceitação de módulos e aprimoramentos]] para descobrir o que esperamos quando vemos solicitações pull para novos módulos thg. Não faz ideia no que você deve começar a trabalhar? Confira as diretrizes para [[contribuir para o thg]] e mergulhe em [[Configurando um ambiente de desenvolvimento para o thg]].
 
 # Começando #
 
-- [[Configurando um ambiente de desenvolvimento do THG]]
+- [Configurando um ambiente de desenvolvimento do THG](dev/thg_dev/Setting_Up_a_THG_Development_Environment.md)
 - [[Usando o THG]]
 - [[Usando o Git]]
 - [[Relatar um bug]]

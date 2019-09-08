@@ -1,7 +1,7 @@
 #### THG-DEV Contents
 ----
 
-* [Assumptions](#assumptions)
+* [Assumptions](Setting_Up_a_THG_Development_Environment.md)
 * [Base Packages](#install-the-base-dev-packages)
 * [Fork and Clone](#fork-and-clone)
 * [python3](#install-python3)

@@ -1,8 +1,8 @@
 Use esta coleção de recursos para trabalhar com o repositório git do thg Framework.
 
-* [Cheatsheet | Git cheatsheet](dafko)
-* [Sites de referência | Sites de referência do Git]
-* [Configurando um ambiente de desenvolvimento] - isso orientará você na criação de uma solicitação pull
+* [Cheatsheet | Git cheatsheet](http://127.0.0.1:8000/dev/git/Git-cheatsheet/)
+* [Sites de referência | Sites de referência do Git](http://127.0.0.1:8000/dev/git/Git-Reference-Sites/)
+* [Configurando um ambiente de desenvolvimento]() - isso orientará você na criação de uma solicitação pull
 * [Landing Pull Requests] - este é o procedimento pelo qual os principais desenvolvedores do Metasploit passam para mesclar sua solicitação
 * [Remoção de ramificação remota]
 

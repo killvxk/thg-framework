@@ -17,7 +17,6 @@ Os sites a seguir são ótimas referências para Git Padawans e Jedi:
 * [GitHub Flow](http://scottchacon.com/2011/08/31/github-flow.html): Another great post from Scott Chacon describing a GitHub-based workflow for projects.
 * [Getting Started with GitHub](http://pragprog.com/screencasts/v-scgithub/insider-guide-to-github): Also from GitHub's own Scott Chacon, this two-part screencast (one free and one paid) will walk you through the basics of using GitHub.
 
-
 ## Using Git in Editors
 
 * [Fugitive plugin for Vim](https://github.com/tpope/vim-fugitive): Provides lots of tasty functionality from inside Vim.  There's also a five-part series on [VimCasts](http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/) on using Fugitive for almost any git task you can think of.
