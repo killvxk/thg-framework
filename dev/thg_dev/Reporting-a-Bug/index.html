@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="darkcode0x00 luizcorrea">
+        <link rel="canonical" href="https://darkcode357.github.io/thg-framework/dev/thg_dev/Reporting-a-Bug/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>reporting_a_bug - thg-framework</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">thg-framework</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../cli/install/">Installation</a>
+</li>
+                                    
+<li >
+    <a href="../../..">Introduction</a>
+</li>
+                                    
+<li >
+    <a href="../../../community/">Community</a>
+</li>
+                                    
+<li >
+    <a href="../../../conceptual/">Conceptual</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/build/">build</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/tags/">tags</a>
+</li>
+                                    
+<li >
+    <a href="../../../LICENSE/">LICENSE</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">thg_dev <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">gettin_started</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../_Sidebar/">thg_Development_Environment</a>
+</li>
+            
+<li >
+    <a href="../Using-thg/">using_thg</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">git</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../git/Using-Git/">Using-Git</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-cheatsheet/">Git_cheatsheet</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-Reference-Sites/">Git-Reference-Sites</a>
+</li>
+    </ul>
+  </li>
+            
+<li class="active">
+    <a href="./">reporting_a_bug</a>
+</li>
+            
+<li >
+    <a href="../../contributing/Contributing-to-thg/">Get Started</a>
+</li>
+            
+<li >
+    <a href="../../../cli/templates/">templates</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Roadmaps</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">2019</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap/">Roadmap</a>
+</li>
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap-Review/">Roadmap_Review</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">contributing</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../Contributing-to-thg/">contributing_to_thg</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">thg_development</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">thg_how_to</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../How-to-get-started-with-writing-an-exploit/">How to get started with writing an exploit</a>
+</li>
+            
+<li >
+    <a href="../How-to-get-started-with-writing-an-auxiliary-module/">How to get started with writing an auxiliary module</a>
+</li>
+            
+<li >
+    <a href="../How-to-get-started-with-writing-a-post-module/">How to get started with writing a postmodule</a>
+</li>
+            
+<li >
+    <a href="../How-to-get-started-with-writing-a-Meterpreter-script/">How to get started with writing a script</a>
+</li>
+            
+<li >
+    <a href="../How-to-check-Microsoft-patch-levels-for-your-exploit/">How to check Microsoft patch levels for your exploit</a>
+</li>
+            
+<li >
+    <a href="../How-to-clean-up-files-using-XCybrerFileDropper/">How to clean up files using FileDropper</a>
+</li>
+            
+<li >
+    <a href="../How-to-deprecate-a-Metasploit-module/">How to deprecate a Metasploit module</a>
+</li>
+            
+<li >
+    <a href="../How-to-do-reporting-or-store-data-in-module-development/">How to do reporting or store data in module development</a>
+</li>
+            
+<li >
+    <a href="../How-to-log-in-Metasploit/">How to log in THG</a>
+</li>
+            
+<li >
+    <a href="../How-to-obfuscate-JavaScript-in-Metasploit/">How to obfuscate JavaScript in Metasploit</a>
+</li>
+            
+<li >
+    <a href="../How-to-parse-an-HTTP-response/">How to parse an HTTP response</a>
+</li>
+            
+<li >
+    <a href="../How-to-Send-an-HTTP-Request-Using-HTTPClient/">How to Send an HTTP Request Using HTTPClient</a>
+</li>
+            
+<li >
+    <a href="../How-to-send-an-HTTP-request-using-Rex-Proto-Http-Client/">How to send an HTTP request using Rex Proto Http Client</a>
+</li>
+            
+<li >
+    <a href="../How-to-use-command-stagers/">How to use command stagers</a>
+</li>
+            
+<li >
+    <a href="../How-to-use-datastore-options/">How to use datastore options</a>
+</li>
+            
+<li >
+    <a href="../How-to-use-Msf-Auxiliary-AuthBrute-to-write-a-bruteforcer/">How to use Msf Auxiliary AuthBrute to write a bruteforcer</a>
+</li>
+            
+<li >
+    <a href="../How-to-use-PhpEXE-to-exploit-an-arbitrary-file-upload-bug/">How to use PhpEXE to exploit an arbitrary file upload bug</a>
+</li>
+            
+<li >
+    <a href="../How-to-use-Powershell-in-an-exploit/">How to use Powershell in an exploit</a>
+</li>
+            
+<li >
+    <a href="../How-to-use-Railgun-for-Windows-post-exploitation/">How to use Railgun for Windows post exploitation</a>
+</li>
+            
+<li >
+    <a href="../How-to-Use-the-FILEFORMAT-mixin-to-create-a-file-format-exploit/">How to Use the FILEFORMAT mixin to create a file format exploit</a>
+</li>
+            
+<li >
+    <a href="../How-to-use-the-Msf-Exploit-Remote-Tcp-mixin/">How to use the Msf Exploit Remote Tcp mixin</a>
+</li>
+            
+<li >
+    <a href="../How-to-use-the-Seh-mixin-to-exploit-an-exception-handler/">How to use the Seh mixin to exploit an exception handler</a>
+</li>
+            
+<li >
+    <a href="../How-to-use-WbemExec-for-a-write-privilege-attack-on-Windows/">How to use WbemExec for a write privilege attack on Windows</a>
+</li>
+            
+<li >
+    <a href="../How-to-write-a-browser-exploit-using-BrowserExploitServer/">How to write a browser exploit using BrowserExploitServer</a>
+</li>
+            
+<li >
+    <a href="../How-to-write-a-browser-exploit-using-HttpServer/">How to write a browser exploit using HttpServer</a>
+</li>
+            
+<li >
+    <a href="../How-to-write-a-check()-method/">How to write a check() method</a>
+</li>
+            
+<li >
+    <a href="../How-to-write-a-HTTP-LoginScanner-Module/">How to write a HTTP LoginScanner Module</a>
+</li>
+            
+<li >
+    <a href="../How-to-write-a-module-using-HttpServer-and-HttpClient/">How to write a module using HttpServer and HttpClient</a>
+</li>
+            
+<li >
+    <a href="../How-to-zip-files-with-Rex-Zip-Archive.md">How to zip files with Rex Zip Archive</a>
+</li>
+            
+<li >
+    <a href="../How-to-use-Metasploit-Framework-Obfuscation-CRandomizer/">How to use Metasploit Framework Compiler Windows to compile C code</a>
+</li>
+            
+<li >
+    <a href="../How to use Metasploit Framework Obfuscation CRandomizer">How to use Metasploit Framework Obfuscation CRandomizer</a>
+</li>
+            
+<li >
+    <a href="../How-to-decrypt-RC4-with-Metasploit-Framework-Compiler/">How to decrypt RC4 with Metasploit Framework Compiler</a>
+</li>
+            
+<li >
+    <a href="../How-to-decode-Base64-with-thg-Framework-Compiler.md">How to decode Base64 with tgh Framework Compiler</a>
+</li>
+            
+<li >
+    <a href="../How-to-XOR-with-thg-Framework-Compiler.md">How to XOR with thg Framework Compiler</a>
+</li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../Style_Tips/">Style_Tips</a>
+</li>
+            
+<li >
+    <a href="../Running-Private-Modules/">Running Private Modules</a>
+</li>
+            
+<li >
+    <a href="../Exploit-Ranking/">Exploit Ranking</a>
+</li>
+            
+<li >
+    <a href="../THG-module-reference-identifiers/">THG module reference identifiers</a>
+</li>
+            
+<li >
+    <a href="../Using-ReflectiveDll-Injection.md">Using ReflectiveDll Injection</a>
+</li>
+            
+<li >
+    <a href="../Oracle-Usage.md">Oracle Usage</a>
+</li>
+            
+<li >
+    <a href="../Rex-Layout.md">Rex Layout</a>
+</li>
+            
+<li >
+    <a href="../">Definition of Module Reliability, Side Effects, and Stability</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">documentation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">capture the flag</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">basic</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">analysis</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/malware/">malware</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">recovery</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/backuo/">backup</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/patching/">patching</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">tips_end_tricks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/tools/">tools</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/decoding/">decoding</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/dos/">dos</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/os_cheats/">os_cheats</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/snort/">snort</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/basic/">basic</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nmap/">nmap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nessus/">nessus</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/openvas/">openvas</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">defend</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tcpdump/">tcpdump</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/editcap/">edicap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/mergecap/">mergecap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/snort/">snort</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tshark/">tshark</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/analysis/">analysis</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">os</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/windows/">windows</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../../../deployment/">Deployment</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">hash_crack</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/">index</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/CORE_HASH_CRACKING_KNOWLEDGE/">CORE_HASH_CRACKING_KNOWLEDGE</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">pentest_standard</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../pentest_standard/preengagemente/">Pre engagement Interactions</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/ig/">Intelligence Gathering</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/threatmodeling/">Threat Modeling</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/vulnterability/">Vulnerability Analysis</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/exploration/">Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/postexploration/">Post Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/report/">Reporting</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/tecguidelines/">Technical Guidelines</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">CLI <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-1</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/thg/">THG</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/server/server/">thg_server</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/shells/shells/">thg_shells</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_docs/thg_docs/">thg_docs</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/auxiliares/auxiliares/">thg_auxiliares</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/anti_forensic/anti_forensic/">thg_anti_forensic</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/crypto/crypto/">thg_crypto</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/drone/drone/">thg_drone</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/keylogger/keylogger/">thg_keylogger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/recon/recon/">thg_recon</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/voip/voip/">thg_voip</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automation/automation/">thg_automation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cryptography/cryptography/">thg_cryptography</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/exploitation/exploitation/">thg_exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/malware/malware/">thg_malware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/reversing/reversing/">thg_reversing</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_windows/thg_windows/">thg_windows</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automobile/automobile/">thg_automobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/database/database/">thg_database</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/fingerprint/fingerprint/">thg_fingerprint</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/misc/misc/">thg_misc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/sniffer/sniffer/">thg_sniffer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/wireless/wireless/">thg_wireless</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/debugger/debugger/">thg_debugger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/firmware/firmware/">thg_firmware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/mobile/mobile/">thg_mobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/social/social/">thg_social</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/backdoor/backdoor/">thg_backdoor</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/decompiler/decompiler/">thg_decompiler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/forensic/forensic/">thg_forensic</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-2</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/networking/networking/">thg_networking</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoff/spoff/">thg_spoff</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/binary/binary/">thg_binary</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensensive/defensensive/">thg_defensensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/gpu/gpu/">thg_gpu</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/os/os/">thg_os</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/nfc/nfc/">thg_nfc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoof/spoof/">thg_spoof</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/bluetooth/bluetooth/">thg_bluetooth</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensive/defensive/">thg_defensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/hardware/hardware/">thg_hardware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/packer/packer/">thg_packer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/stego/stego/">thg_stego</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/code_audit/code_audit/">thg_code_audit</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/disassembler/disassembler/">thg_disassembler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/honeypot/honeypot/">thg_honeypot</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/proxy/proxy/">thg_proxy</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/tunnel/tunnel/">thg_tunnel</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cracker/cracker/">thg_cracker</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/dos/dos/">thg_dos</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/ids/ids/">thg_ids</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/radio/radio/">thg_radio</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/unpacker/unpacker/">thg_unpacker</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../git/Git-Reference-Sites/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../contributing/Contributing-to-thg/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/darkcode357/thg-framework/edit/master/docs/dev/thg_dev/Reporting-a-Bug.md">Edit on darkcode357/thg-framework</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#metasploit-bug-reporting">Metasploit Bug Reporting</a></li>
+            <li><a href="#support-contracts">Support Contracts</a></li>
+            <li><a href="#security-issues">Security Issues</a></li>
+        <li class="main "><a href="#introducing-redmine">Introducing Redmine</a></li>
+            <li><a href="#theyre-all-bugs">They're all Bugs</a></li>
+            <li><a href="#github-issues">GitHub Issues</a></li>
+            <li><a href="#e-mail">E-mail</a></li>
+            <li><a href="#rapid7-community">Rapid7 Community</a></li>
+        <li class="main "><a href="#getting-started">Getting Started</a></li>
+            <li><a href="#avoiding-duplicates">Avoiding Duplicates</a></li>
+        <li class="main "><a href="#describing-your-bug">Describing your bug</a></li>
+            <li><a href="#make-your-bug-searchable">Make your bug searchable</a></li>
+            <li><a href="#logs-and-screen-captures">Logs and screen captures</a></li>
+            <li><a href="#mention-your-environment">Mention Your Environment</a></li>
+            <li><a href="#include-steps-to-reproduce">Include steps to reproduce</a></li>
+        <li class="main "><a href="#patches">Patches</a></li>
+            <li><a href="#providing-patches">Providing Patches</a></li>
+            <li><a href="#providing-test-cases">Providing Test Cases</a></li>
+        <li class="main "><a href="#following-bugs">Following bugs</a></li>
+            <li><a href="#notification-settings">Notification settings</a></li>
+            <li><a href="#bug-discussion">Bug discussion</a></li>
+            <li><a href="#resolving-bugs">Resolving Bugs</a></li>
+        <li class="main "><a href="#eof">EOF</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="metasploit-bug-reporting">Metasploit Bug Reporting</h1>
+<p>As any open source software product grows in popularity, there is a tendency to see an <strong>increase</strong> in bug report volume coupled with a corresponding <strong>decrease</strong> in bug report quality. We are not against getting bug reports for Metasploit -- we need bug reports in order to know what's broken. So, rather than trying to stem the tide of bugs, this page will attempt to make sure that each bug report we get is written in a way that maximizes its chances of actually getting resolved.</p>
+<p>By this point, the Metasploit development community has read thousands of bug reports, and it turns out, well-written bug reports tend to make fixing those bugs much faster and easier. It's really pretty remarkable that a speedy time-to-close seems to corellate so strongly with bug report quality and not the  complexity of the bug itself.</p>
+<p>That said, there are two situations where you generally oughtn't open a bug at all, and that's when you have a support contract, or when you've found a security issue with Metasploit itself.</p>
+<h2 id="support-contracts">Support Contracts</h2>
+<p>If you have a support contract for a Metasploit product, you ought to get in touch with your Rapid7 support representative, or write to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#114;&#97;&#112;&#105;&#100;&#55;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#114;&#97;&#112;&#105;&#100;&#55;&#46;&#99;&#111;&#109;</a>. The people who work Metasploit support full time are really pretty with-it are likely to have a fix or a workaround for you on the spot.</p>
+<h2 id="security-issues">Security Issues</h2>
+<p>If you have a security issue with Metasploit itself, then we'd really appreciate it if you let us know at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#101;&#99;&#117;&#114;&#105;&#116;&#121;&#64;&#109;&#101;&#116;&#97;&#115;&#112;&#108;&#111;&#105;&#116;&#46;&#99;&#111;&#109;">&#115;&#101;&#99;&#117;&#114;&#105;&#116;&#121;&#64;&#109;&#101;&#116;&#97;&#115;&#112;&#108;&#111;&#105;&#116;&#46;&#99;&#111;&#109;</a>. After all,  we'd like to <a href="http://www.rapid7.com/disclosure.jsp">be treated as we treat other software projects</a>. It's not because we'd like to bury your bug -- we'd just like to have a shot at fixing your bug before someone starts messing with our innocent users. We're happy to give you credit, keep you anonymous, inform you about progress, and explore related issues with you -- but if we see someone reporting security bugs out in public, then it gets a lot harder to keep all that attribution and communication straight as we try not to break our necks implementing a fix as fast as we can.</p>
+<p>Also, if you could report your security bug in the form of a Metasploit module sent to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#101;&#99;&#117;&#114;&#105;&#116;&#121;&#64;&#109;&#101;&#116;&#97;&#115;&#112;&#108;&#111;&#105;&#116;&#46;&#99;&#111;&#109;">&#115;&#101;&#99;&#117;&#114;&#105;&#116;&#121;&#64;&#109;&#101;&#116;&#97;&#115;&#112;&#108;&#111;&#105;&#116;&#46;&#99;&#111;&#109;</a>, that would be both ideal and hilarious.</p>
+<p>That should cover the cases where you shouldn't open a bug at all, so let's move on to our main issue tracking system, Redmine.</p>
+<h1 id="introducing-redmine">Introducing Redmine</h1>
+<p>The final destination for bug reports in Metasploit is our Redmine <a href="https://dev.metasploit.com/redmine/projects/framework/issues?set_filter=1">issue tracker</a>. This is where all issues that we want to track are born, grow old, and eventually die.</p>
+<p>In order to file bug reports, you must first <a href="https://dev.metasploit.com/redmine/account/register">create an account</a>. It's easy and fun. Sadly, we can't take truly anonymous bug reports at this time due to spambots, but we are actively exploring ways to make this registration as painless and easy for humans as we can.</p>
+<p>In conversation about Metasploit and someone asks, "is there a bug?" or refers to "the bug tracker" or "Redmine," we're nearly always talking about this system.</p>
+<h2 id="theyre-all-bugs">They're all Bugs</h2>
+<p>Speaking of conversation, it's important to note that we will tend to refer to all issues as "bugs," regardless if it's actually a defect, a feature request, a or a support request. It's just fewer syllables and characters, and is not meant to disparage the content of the issue.</p>
+<h2 id="github-issues">GitHub Issues</h2>
+<p>We have an <a href="https://github.com/rapid7/metasploit-framework/issues">Issue Tracker</a> enabled on the GitHub repo, but, as mentioned above, bugs should hit Redmine if they're going to be tracked. We had a fantasy of closing down Redmine for a while there and switching over to GitHub Issues completely, but Redmine is still just too useful to abandon.</p>
+<p>So, in the interim, nobody is going to stop you from filing GitHub issues. Many GitHub projects have an "Issues" button, and we'd rather not surprise people and make them dig through the wiki to figure out how to report bugs. If you're reading this, you're now enlightened, so should avoid that Issues tab.</p>
+<h2 id="e-mail">E-mail</h2>
+<p>We maintain a couple mailing lists -- the <a href="http://mail.metasploit.com/mailman/listinfo/framework">Metasploit Framework</a> and the <a href="https://lists.sourceforge.net/lists/listinfo/metasploit-hackers">Metasploit-Hackers</a> lists. Sometimes people will run into problems and they'll mention them there. Sometimes, someone will put together bug reports based on traffic on these lists, but sometimes nobody will. The point is, if you're not sure if you have a bug or just a question on usage, start off with an e-mail to the Framework list. If you're pretty sure you have a bug, it's probably best to start off with a regular ol' bug report, and maybe mention it afterwards on one of these lists.</p>
+<h2 id="rapid7-community">Rapid7 Community</h2>
+<p>Rapid7 runs a Metasploit user community over at (wait for it) <a href="https://community.rapid7.com/community/metasploit">community.rapid7.com</a>. Like e-mail, this is mostly a venue for discussion and help with using Metasploit, and not so much for bug reporting.</p>
+<h1 id="getting-started">Getting Started</h1>
+<p>Enough talk, on to the mechanics of bug reporting!</p>
+<h2 id="avoiding-duplicates">Avoiding Duplicates</h2>
+<p>You may not be the first person to notice the problem you're running into, so here are some strategies for ensuring that a previously reported bug gets attention.</p>
+<p>If you're having a problem with a particular module, you might try <a href="https://dev.metasploit.com/redmine/projects/framework/search?issues=1&amp;q=ie_execcommand_uaf">searching that module's name</a> to see if there's anything already reported. If your bug has a particular error message, <a href="https://dev.metasploit.com/redmine/projects/framework/search?utf8=%E2%9C%93&amp;q=%22nomethoderror+undefined+method%22+empty&amp;scope=&amp;all_words=&amp;all_words=1&amp;titles_only=&amp;issues=1&amp;submit=Submit">look for that</a>.</p>
+<p>Another tactic is to simply glance at <a href="https://dev.metasploit.com/redmine/projects/framework/issues?set_filter=1&amp;f%5B%5D=status_id&amp;op%5Bstatus_id%5D=o&amp;f%5B%5D=created_on&amp;op%5Bcreated_on%5D=&gt;t-&amp;v%5Bcreated_on%5D%5B%5D=5&amp;f%5B%5D=&amp;c%5B%5D=tracker&amp;c%5B%5D=parent&amp;c%5B%5D=status&amp;c%5B%5D=priority&amp;c%5B%5D=subject&amp;c%5B%5D=assigned_to&amp;c%5B%5D=updated_on&amp;c%5B%5D=category&amp;group_by=">the most recent</a> bugs, especially if you suspect this a new bug in a process you're sure used to work before.</p>
+<p>If you happen to find the bug you're experiencing, updating that report with any new information is hugely helpful in coming to a resolution. You might also find resolved bugs that describe your problem, which indicates a regression (old bugs reintroduced) -- the fixes for those are usually fast, so noting likely regressions is quite useful.</p>
+<p>Finally, you might find a bug that's been rejected or closed. In these cases, the problem is usually something external to Metasploit -- user error, configuration weirdness, known incompatibilities, etc. If you think that the original resolution was in error, though, open a new bug and point out what you think the problem is. After all, if people keep running into the same non-bug, then it's probably at least a documentation bug, and maybe something real.</p>
+<h1 id="describing-your-bug">Describing your bug</h1>
+<h2 id="make-your-bug-searchable">Make your bug searchable</h2>
+<p>Since we talk a lot about the importance of finding dupes before submitting, make sure that your bug is findable. Use specific module names and error messages in the title, and include as much of the error as you can in the report. "The Windows login aux mod is broken" is a terrible title, while "NoMethodError raised on smb_login module" is much better.</p>
+<p>Most of the time, bugs you run into don't have nice, clean error messages. In these cases, try to pin down what you can in the title. For example, see <a href="https://dev.metasploit.com/redmine/issues/7215">Bug #7215</a> -- this is a pretty typical complaint that some module is failing to open a shell, but notice that while the module name isn't in the title, it is in the opening description. Also, this bug has tons of logs and screen captures.</p>
+<h2 id="logs-and-screen-captures">Logs and screen captures</h2>
+<p>Check out <a href="https://dev.metasploit.com/redmine/issues/6905">Bug #6905</a>. If all our bug reports looked like this, I'd be delighted. It's pretty short, and has the all basics -- a short but descriptive title, a full backtrace of the error, a complete history of how he got there, and version information. This bug is very search-friendly, as well as easy to reproduce.</p>
+<p>If you're testing a module in a lab or virtual environment, we'd love to get as much data about the target as you can provide. This means exact versions of the target including patch levels, pcaps if you can capture them, and any kind of logging inside or outside of Framework.</p>
+<p>Often, we'll ask for the <code>framework.log</code> -- that's usually kept in <code>$HOME/.msf4/framework.log</code>.</p>
+<p>On the other hand, if you run into an issue on an engagement, we understand that you can't include a bunch of client data in your bug report. In those cases, we will still bug you for logs, but you'll need to santize them first, and we won't have our feelings hurt if you need to refuse. Such is the business of penetration testing.</p>
+<h2 id="mention-your-environment">Mention Your Environment</h2>
+<p>It may be that the bug you're describing only comes up in your environment. If you're not on the normal <a href="https://github.com/rapid7/metasploit-framework/wiki/Metasploit-Development-Environment">Metasploit Development Environment</a> or the <a href="http://www.rapid7.com/downloads/metasploit.jsp">Metasploit Installation</a> you will want to mention this specifically in your bug report. The output of the commands <code>ruby -v</code> , and  <code>uname -a</code> (or <code>winver</code>) is usually very helpful.</p>
+<h2 id="include-steps-to-reproduce">Include steps to reproduce</h2>
+<p>At a minimum, the steps you took to get to your predictament are probably found in <code>$HOME/.msf4/history</code>, so you can cut and paste from there. If there's more background than what's contained in the command history, like funny network configurations that might be in play, then mention that, too.</p>
+<p>We love resource scripts (rc scripts) that can be used to reliably trigger your bug. Those scripts can eventually find their way into repeatable test cases, so if you can put one together, great! For more on resource script writing, see <a href="https://community.rapid7.com/community/metasploit/blog/2010/03/22/automating-the-metasploit-console">this blog post</a>.</p>
+<h1 id="patches">Patches</h1>
+<h2 id="providing-patches">Providing Patches</h2>
+<p>Maybe you've run into a bug, and you already know how to fix it. Or, you're just a kind stranger on the Internet who wants to help out. The most reliable way to get your patches into Metasploit is to patch your own fork, and sling a <a href="https://github.com/rapid7/metasploit-framework/wiki/Metasploit-Development-Environment#wiki-pull">pull request</a> our way. Since you're attacking a bug that already exists, you can use a special commit message string of either <code>[SeeRM #1234]</code> or <code>[FixRM #1234]</code> and that will update Redmine with a pointer to your commit automatically, once the fix is landed. Since it's human-readable, we can tell immediately that you're talking about a Redmine issue, as well, so you or someone can update Redmine with a link to your pull requestr.</p>
+<p>Of course, this all presumes you're hooked into GitHub. If this doesn't work for you, you can attach patches to a Redmine issue by simply creating a patch diff against a recent checkout of Metasploit -- this is going to be the case for most SVN users (and in that case, you'll want to use <code>svn diff</code>).</p>
+<p>Now, be forewarned: patches submitted directly to Redmine are more cumbersome to work with, especially if there are more questions. If you plan on patching more than once or twice, it would behoove you to take a little time to set up your <a href="https://github.com/rapid7/metasploit-framework/wiki/Metasploit-Development-Environment">Metasploit Development Environment</a> and start playing along at home.</p>
+<h2 id="providing-test-cases">Providing Test Cases</h2>
+<p>We like -- no, love -- to have tests that show that a patch actually works. Again, <a href="https://community.rapid7.com/community/metasploit/blog/2010/03/22/automating-the-metasploit-console">Resource Scripts</a> are a great way to get something quick put together, and you can combine this with the standard utility <code>screen</code> for some excellent resolutions:</p>
+<ul>
+<li>Fire up <code>screen</code> and hit <code>Ctrl-a H</code> (mind the caps)</li>
+<li><code>msfconsole -L -q -r /path/to/your/test.rc</code></li>
+<li>Exit msfconsole and <code>git checkout branch-containing-fix</code></li>
+<li><code>msfconsole -L -q -r /path/to/your/test.rc</code></li>
+<li><code>exit</code> to leave screen</li>
+</ul>
+<p>This will generate a screen log of your fix that includes all your output and all your keystrokes. Yes, it'll look horrible in a regular text editor due to the various escape codes, but <code>cat</code> and <code>less</code> are both more than adequate to resolve those.</p>
+<p>If you're on Windows, the msfconsole <code>spool</code> command should provide enough output to at least demo the problem and its solution.</p>
+<h1 id="following-bugs">Following bugs</h1>
+<p>So, you go to all the effort of filing a bug, and you want to make sure it gets resolved. What next?</p>
+<h2 id="notification-settings">Notification settings</h2>
+<p>If you opened a bug on Redmine, you should automatically be getting updates to it via e-mail, and the same goes for GitHub pull requests. If you're not for some reason, you should check your own spam filters as well as your <a href="https://dev.metasploit.com/redmine/my/account">Notification Settings</a>. If you want to follow some bug you're not already involved in, you can always tick the "Watch" star ath the top right of any issue, and you'll start getting updates every time it changes.</p>
+<p><em>TODO: Hook up Redmine updates to <a href="https://lists.sourceforge.net/lists/listinfo/metasploit-notifications">Metasploit-Notifications</a> which is already watching GitHub. It'll take ten minutes.</em></p>
+<h2 id="bug-discussion">Bug discussion</h2>
+<p>Some projects are persnickety about talking about bugs in the bug itself. We're not. If you have a comment or question, ask about it in the bug. We far prefer this public communication over private communication because it makes things easily searchable, captures all the information regarding an issue, and can help future bug-squashers who are searching for similar issues.</p>
+<p>GitHub pull requests also are known to get chatty. If a bug already has a pull request associated with it, there's a very good chance there's discussion happening over there.</p>
+<p>Finally, there are often quick conversations about current events going on on Metasploit's Freenode IRC channel, #metasploit.</p>
+<p>Somewhat surprisingly, the <a href="http://mail.metasploit.com/mailman/listinfo/framework">Metasploit Framework</a>  and the <a href="https://lists.sourceforge.net/lists/listinfo/metasploit-hackers">Metasploit-Hackers</a> mailing lists don't get a lot of action in terms of issue discussion. Maybe that will change, especially if there's a move to get fascist about what kind of comments are appropriate for Redmine issues and pull requests.</p>
+<h2 id="resolving-bugs">Resolving Bugs</h2>
+<p>Your bug should be considered "Resolved" once there's a fix landed in the <a href="https://github.com/rapid7/metasploit-framework">Metasploit-Framework master branch</a>. People who track that branch, of course, will have the fix instantly available. A few minutes after that, everyone who relies on <code>msfupdate</code> over SVN will have access to the fix. These are the bleeding-edge branches.</p>
+<p>Once a week, usually Wednesdays, we release an update to the <a href="http://www.rapid7.com/downloads/metasploit.jsp">Metasploit Installation</a>. Generally speaking, Metasploit framework fixes will hit that installation on a weekly basis after appropriate QA. So, while we may refer to a bug as "resolved," it may not be available quite yet.</p>
+<h1 id="eof">EOF</h1>
+<p>That's it, for now. This document will surely change and evolve as the Metasploit community does.</p>
+<hr /></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2019 - 2020 darkcode0x00</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

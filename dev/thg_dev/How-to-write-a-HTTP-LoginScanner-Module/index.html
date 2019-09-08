@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="darkcode0x00 luizcorrea">
+        <link rel="canonical" href="https://darkcode357.github.io/thg-framework/dev/thg_dev/How-to-write-a-HTTP-LoginScanner-Module/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>How to write a HTTP LoginScanner Module - thg-framework</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">thg-framework</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../cli/install/">Installation</a>
+</li>
+                                    
+<li >
+    <a href="../../..">Introduction</a>
+</li>
+                                    
+<li >
+    <a href="../../../community/">Community</a>
+</li>
+                                    
+<li >
+    <a href="../../../conceptual/">Conceptual</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/build/">build</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/tags/">tags</a>
+</li>
+                                    
+<li >
+    <a href="../../../LICENSE/">LICENSE</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">thg_dev <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">gettin_started</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../_Sidebar/">thg_Development_Environment</a>
+</li>
+            
+<li >
+    <a href="../Using-thg/">using_thg</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">git</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../git/Using-Git/">Using-Git</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-cheatsheet/">Git_cheatsheet</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-Reference-Sites/">Git-Reference-Sites</a>
+</li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../Reporting-a-Bug/">reporting_a_bug</a>
+</li>
+            
+<li >
+    <a href="../../contributing/Contributing-to-thg/">Get Started</a>
+</li>
+            
+<li >
+    <a href="../../../cli/templates/">templates</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Roadmaps</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">2019</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap/">Roadmap</a>
+</li>
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap-Review/">Roadmap_Review</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">contributing</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../Contributing-to-thg/">contributing_to_thg</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">thg_development</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">thg_how_to</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../How-to-get-started-with-writing-an-exploit/">How to get started with writing an exploit</a>
+</li>
+            
+<li >
+    <a href="../How-to-get-started-with-writing-an-auxiliary-module/">How to get started with writing an auxiliary module</a>
+</li>
+            
+<li >
+    <a href="../How-to-get-started-with-writing-a-post-module/">How to get started with writing a postmodule</a>
+</li>
+            
+<li >
+    <a href="../How-to-get-started-with-writing-a-Meterpreter-script/">How to get started with writing a script</a>
+</li>
+            
+<li >
+    <a href="../How-to-check-Microsoft-patch-levels-for-your-exploit/">How to check Microsoft patch levels for your exploit</a>
+</li>
+            
+<li >
+    <a href="../How-to-clean-up-files-using-XCybrerFileDropper/">How to clean up files using FileDropper</a>
+</li>
+            
+<li >
+    <a href="../How-to-deprecate-a-Metasploit-module/">How to deprecate a Metasploit module</a>
+</li>
+            
+<li >
+    <a href="../How-to-do-reporting-or-store-data-in-module-development/">How to do reporting or store data in module development</a>
+</li>
+            
+<li >
+    <a href="../How-to-log-in-Metasploit/">How to log in THG</a>
+</li>
+            
+<li >
+    <a href="../How-to-obfuscate-JavaScript-in-Metasploit/">How to obfuscate JavaScript in Metasploit</a>
+</li>
+            
+<li >
+    <a href="../How-to-parse-an-HTTP-response/">How to parse an HTTP response</a>
+</li>
+            
+<li >
+    <a href="../How-to-Send-an-HTTP-Request-Using-HTTPClient/">How to Send an HTTP Request Using HTTPClient</a>
+</li>
+            
+<li >
+    <a href="../How-to-send-an-HTTP-request-using-Rex-Proto-Http-Client/">How to send an HTTP request using Rex Proto Http Client</a>
+</li>
+            
+<li >
+    <a href="../How-to-use-command-stagers/">How to use command stagers</a>
+</li>
+            
+<li >
+    <a href="../How-to-use-datastore-options/">How to use datastore options</a>
+</li>
+            
+<li >
+    <a href="../How-to-use-Msf-Auxiliary-AuthBrute-to-write-a-bruteforcer/">How to use Msf Auxiliary AuthBrute to write a bruteforcer</a>
+</li>
+            
+<li >
+    <a href="../How-to-use-PhpEXE-to-exploit-an-arbitrary-file-upload-bug/">How to use PhpEXE to exploit an arbitrary file upload bug</a>
+</li>
+            
+<li >
+    <a href="../How-to-use-Powershell-in-an-exploit/">How to use Powershell in an exploit</a>
+</li>
+            
+<li >
+    <a href="../How-to-use-Railgun-for-Windows-post-exploitation/">How to use Railgun for Windows post exploitation</a>
+</li>
+            
+<li >
+    <a href="../How-to-Use-the-FILEFORMAT-mixin-to-create-a-file-format-exploit/">How to Use the FILEFORMAT mixin to create a file format exploit</a>
+</li>
+            
+<li >
+    <a href="../How-to-use-the-Msf-Exploit-Remote-Tcp-mixin/">How to use the Msf Exploit Remote Tcp mixin</a>
+</li>
+            
+<li >
+    <a href="../How-to-use-the-Seh-mixin-to-exploit-an-exception-handler/">How to use the Seh mixin to exploit an exception handler</a>
+</li>
+            
+<li >
+    <a href="../How-to-use-WbemExec-for-a-write-privilege-attack-on-Windows/">How to use WbemExec for a write privilege attack on Windows</a>
+</li>
+            
+<li >
+    <a href="../How-to-write-a-browser-exploit-using-BrowserExploitServer/">How to write a browser exploit using BrowserExploitServer</a>
+</li>
+            
+<li >
+    <a href="../How-to-write-a-browser-exploit-using-HttpServer/">How to write a browser exploit using HttpServer</a>
+</li>
+            
+<li >
+    <a href="../How-to-write-a-check()-method/">How to write a check() method</a>
+</li>
+            
+<li class="active">
+    <a href="./">How to write a HTTP LoginScanner Module</a>
+</li>
+            
+<li >
+    <a href="../How-to-write-a-module-using-HttpServer-and-HttpClient/">How to write a module using HttpServer and HttpClient</a>
+</li>
+            
+<li >
+    <a href="../How-to-zip-files-with-Rex-Zip-Archive.md">How to zip files with Rex Zip Archive</a>
+</li>
+            
+<li >
+    <a href="../How-to-use-Metasploit-Framework-Obfuscation-CRandomizer/">How to use Metasploit Framework Compiler Windows to compile C code</a>
+</li>
+            
+<li >
+    <a href="../How to use Metasploit Framework Obfuscation CRandomizer">How to use Metasploit Framework Obfuscation CRandomizer</a>
+</li>
+            
+<li >
+    <a href="../How-to-decrypt-RC4-with-Metasploit-Framework-Compiler/">How to decrypt RC4 with Metasploit Framework Compiler</a>
+</li>
+            
+<li >
+    <a href="../How-to-decode-Base64-with-thg-Framework-Compiler.md">How to decode Base64 with tgh Framework Compiler</a>
+</li>
+            
+<li >
+    <a href="../How-to-XOR-with-thg-Framework-Compiler.md">How to XOR with thg Framework Compiler</a>
+</li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../Style_Tips/">Style_Tips</a>
+</li>
+            
+<li >
+    <a href="../Running-Private-Modules/">Running Private Modules</a>
+</li>
+            
+<li >
+    <a href="../Exploit-Ranking/">Exploit Ranking</a>
+</li>
+            
+<li >
+    <a href="../THG-module-reference-identifiers/">THG module reference identifiers</a>
+</li>
+            
+<li >
+    <a href="../Using-ReflectiveDll-Injection.md">Using ReflectiveDll Injection</a>
+</li>
+            
+<li >
+    <a href="../Oracle-Usage.md">Oracle Usage</a>
+</li>
+            
+<li >
+    <a href="../Rex-Layout.md">Rex Layout</a>
+</li>
+            
+<li >
+    <a href="../">Definition of Module Reliability, Side Effects, and Stability</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">documentation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">capture the flag</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">basic</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">analysis</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/malware/">malware</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">recovery</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/backuo/">backup</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/patching/">patching</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">tips_end_tricks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/tools/">tools</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/decoding/">decoding</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/dos/">dos</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/os_cheats/">os_cheats</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/snort/">snort</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/basic/">basic</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nmap/">nmap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nessus/">nessus</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/openvas/">openvas</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">defend</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tcpdump/">tcpdump</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/editcap/">edicap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/mergecap/">mergecap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/snort/">snort</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tshark/">tshark</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/analysis/">analysis</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">os</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/windows/">windows</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../../../deployment/">Deployment</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">hash_crack</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/">index</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/CORE_HASH_CRACKING_KNOWLEDGE/">CORE_HASH_CRACKING_KNOWLEDGE</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">pentest_standard</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../pentest_standard/preengagemente/">Pre engagement Interactions</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/ig/">Intelligence Gathering</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/threatmodeling/">Threat Modeling</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/vulnterability/">Vulnerability Analysis</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/exploration/">Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/postexploration/">Post Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/report/">Reporting</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/tecguidelines/">Technical Guidelines</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">CLI <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-1</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/thg/">THG</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/server/server/">thg_server</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/shells/shells/">thg_shells</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_docs/thg_docs/">thg_docs</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/auxiliares/auxiliares/">thg_auxiliares</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/anti_forensic/anti_forensic/">thg_anti_forensic</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/crypto/crypto/">thg_crypto</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/drone/drone/">thg_drone</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/keylogger/keylogger/">thg_keylogger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/recon/recon/">thg_recon</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/voip/voip/">thg_voip</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automation/automation/">thg_automation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cryptography/cryptography/">thg_cryptography</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/exploitation/exploitation/">thg_exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/malware/malware/">thg_malware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/reversing/reversing/">thg_reversing</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_windows/thg_windows/">thg_windows</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automobile/automobile/">thg_automobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/database/database/">thg_database</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/fingerprint/fingerprint/">thg_fingerprint</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/misc/misc/">thg_misc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/sniffer/sniffer/">thg_sniffer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/wireless/wireless/">thg_wireless</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/debugger/debugger/">thg_debugger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/firmware/firmware/">thg_firmware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/mobile/mobile/">thg_mobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/social/social/">thg_social</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/backdoor/backdoor/">thg_backdoor</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/decompiler/decompiler/">thg_decompiler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/forensic/forensic/">thg_forensic</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-2</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/networking/networking/">thg_networking</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoff/spoff/">thg_spoff</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/binary/binary/">thg_binary</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensensive/defensensive/">thg_defensensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/gpu/gpu/">thg_gpu</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/os/os/">thg_os</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/nfc/nfc/">thg_nfc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoof/spoof/">thg_spoof</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/bluetooth/bluetooth/">thg_bluetooth</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensive/defensive/">thg_defensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/hardware/hardware/">thg_hardware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/packer/packer/">thg_packer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/stego/stego/">thg_stego</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/code_audit/code_audit/">thg_code_audit</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/disassembler/disassembler/">thg_disassembler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/honeypot/honeypot/">thg_honeypot</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/proxy/proxy/">thg_proxy</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/tunnel/tunnel/">thg_tunnel</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cracker/cracker/">thg_cracker</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/dos/dos/">thg_dos</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/ids/ids/">thg_ids</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/radio/radio/">thg_radio</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/unpacker/unpacker/">thg_unpacker</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../How-to-write-a-check()-method/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../How-to-write-a-module-using-HttpServer-and-HttpClient/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/darkcode357/thg-framework/edit/master/docs/dev/thg_dev/How-to-write-a-HTTP-LoginScanner-Module.md">Edit on darkcode357/thg-framework</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#step-1-set-up-your-target-environment">Step 1: Set up your target environment</a></li>
+        <li class="main "><a href="#step-2-set-up-a-client">Step 2: Set up a client</a></li>
+        <li class="main "><a href="#step-3-start-with-a-loginscanner-template">Step 3: Start with a LoginScanner template</a></li>
+        <li class="main "><a href="#step-4-write-the-auxiliary-module">Step 4: Write the auxiliary module</a></li>
+        <li class="main "><a href="#test">Test</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p>This is a step-by-step guide on how to write a HTTP login module using the latest LoginScanner and Credential APIs.</p>
+<p>Before we begin, it's probably a good idea to read <a href="https://github.com/rapid7/metasploit-framework/wiki/Creating-Metasploit-Framework-LoginScanners">Creating Metasploit Framework LoginScanners</a>, which explains about the APIs in-depth. The LoginScanner API can be found in the <a href="https://github.com/rapid7/metasploit-framework/tree/master/lib/metasploit/framework/login_scanner">lib/metasploit/framework/loginscanner</a> directory, and the Credential API can found as a <a href="https://github.com/rapid7/metasploit-credential">metasploit-credential gem here</a>. You will most likely want to read them while writing the login module.</p>
+<h2 id="step-1-set-up-your-target-environment">Step 1: Set up your target environment</h2>
+<p>For our demonstration, we will be using <a href="http://www.symantec.com/web-gateway/">Symantec Web Gateway</a>. A trial is available at the vendor's website. Obviously downloading/installing it would be your first step.</p>
+<h2 id="step-2-set-up-a-client">Step 2: Set up a client</h2>
+<p>The purpose of setting up a client is to sample the login request and response. Normally you can do this with:</p>
+<ul>
+<li>
+<p><strong>A web browser plus a sniffer</strong></p>
+</li>
+<li>
+<p>For the sniffer, you can download <a href="https://www.wireshark.org/download.html">Wireshark</a>, and have it running.</p>
+</li>
+<li>Use a web browser to login.</li>
+<li>
+<p>Go back to Wireshark and save the HTTP request, this is exactly what you will send in the login module. You will also need to save the HTTP response so that you can check for a successful and a failed login.</p>
+</li>
+<li>
+<p><strong>A browser with Burp</strong></p>
+</li>
+</ul>
+<p><a href="http://portswigger.net/burp/download.html">Burp</a> is a tool for performing security testing of web applications. You can download the free version from the vendor's website. In some cases, Burp is way better than a sniffer because you can modify HTTP requests, it's also a very convenient way to capture HTTPS traffic.</p>
+<p>Here's what you do.</p>
+<ol>
+<li>Start Burp.</li>
+<li>Configure your web browser's proxy so Burp can forward traffic.</li>
+<li>Use the web browser to login.</li>
+<li>Go back to Burp, you can find the history of all the requests and responses.</li>
+</ol>
+<p>For our example, this is the request the browser sends to Symantec Web Gateway:</p>
+<div class="highlight"><pre><span></span>POST /spywall/login.php HTTP/1.1
+Host: 192.168.1.176
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:27.0) Gecko/20100101 Firefox/27.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://192.168.1.176/spywall/login.php
+Cookie: PHPSESSID=otgam4mgjrl00h2esk3o2npt05
+Connection: keep-alive
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 54
+
+USERNAME=gooduser&amp;PASSWORD=GoodPassword&amp;loginBtn=Login
+</pre></div>
+
+<p>And this is the response Symantec Web Gateway returns for a successful login:</p>
+<div class="highlight"><pre><span></span>HTTP/1.1 302 Found
+Date: Tue, 12 May 2015 19:32:31 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Set-Cookie: PHPSESSID=vmb56vhd7740oqcmth8cqtagq5; path=/; secure; HttpOnly
+Location: https://192.168.1.176/spywall/executive_summary.php
+Content-Length: 0
+Keep-Alive: timeout=15, max=5000
+Connection: Keep-Alive
+Content-Type: text/html; charset=UTF-8
+</pre></div>
+
+<p>A failed login response is an HTTP 200 with the following message in the body:</p>
+<div class="highlight"><pre><span></span>We&#39;re sorry, but the username or password you have entered is incorrect.  Please retype your username and password. The username and password are case sensitive.
+</pre></div>
+
+<h2 id="step-3-start-with-a-loginscanner-template">Step 3: Start with a LoginScanner template</h2>
+<p>Your login module mainly consists of three components: the LoginScanner portion, the auxiliary portion, and rpsec. The actual HTTP requests and responses are handled in the LoginScanner portion, so we'll start from there.</p>
+<p>Your most basic HTTP LoginScanner template will look like this:</p>
+<div class="highlight"><pre><span></span><span class="nb">require</span> <span class="s1">&#39;metasploit/framework/login_scanner/http&#39;</span>
+
+<span class="k">module</span> <span class="nn">Metasploit</span>
+  <span class="k">module</span> <span class="nn">Framework</span>
+    <span class="k">module</span> <span class="nn">LoginScanner</span>
+      <span class="k">class</span> <span class="nc">SymantecWebGateway</span> <span class="o">&lt;</span> <span class="no">HTTP</span>
+
+
+        <span class="c1"># Attemps to login to the server.</span>
+        <span class="c1">#</span>
+        <span class="c1"># @param [Metasploit::Framework::Credential] credential The credential information.</span>
+        <span class="c1"># @return [Result] A Result object indicating success or failure</span>
+        <span class="k">def</span> <span class="nf">attempt_login</span><span class="p">(</span><span class="n">credential</span><span class="p">)</span>
+
+        <span class="k">end</span>
+
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+<p>Save it under lib/metasploit/framework/login_scanner/.</p>
+<p><strong>The #attempt_login method</strong></p>
+<p>The #attempt_login is called automatically. You can write your entire login code there, but it's better to break in down into multiple methods so that the code is cleaner, and easier to document and rspec. Typically, all you want #attempt_login to do is focusing on crafting the Result object, pass it to a custom #login routine, and then return the Result object. It almost always looks something like this:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">attempt_login</span><span class="p">(</span><span class="n">credential</span><span class="p">)</span>
+  <span class="c1"># Default Result</span>
+  <span class="n">result_opts</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="ss">credential</span><span class="p">:</span> <span class="n">credential</span><span class="p">,</span>
+    <span class="ss">status</span><span class="p">:</span> <span class="no">Metasploit</span><span class="o">::</span><span class="no">Model</span><span class="o">::</span><span class="no">Login</span><span class="o">::</span><span class="no">Status</span><span class="o">::</span><span class="no">INCORRECT</span><span class="p">,</span>
+    <span class="ss">proof</span><span class="p">:</span> <span class="kp">nil</span><span class="p">,</span>
+    <span class="ss">host</span><span class="p">:</span> <span class="n">host</span><span class="p">,</span>
+    <span class="ss">port</span><span class="p">:</span> <span class="n">port</span><span class="p">,</span>
+    <span class="ss">protocol</span><span class="p">:</span> <span class="s1">&#39;tcp&#39;</span>
+  <span class="p">}</span>
+
+  <span class="c1"># Merge login result</span>
+  <span class="c1"># credential.public is the username</span>
+  <span class="c1"># credential.private is the password</span>
+  <span class="n">result_opts</span><span class="o">.</span><span class="n">merge!</span><span class="p">(</span><span class="n">do_login</span><span class="p">(</span><span class="n">credential</span><span class="o">.</span><span class="n">public</span><span class="p">,</span> <span class="n">credential</span><span class="o">.</span><span class="n">private</span><span class="p">))</span>
+
+  <span class="c1"># Return the Result object</span>
+  <span class="no">Result</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">result_opts</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+<p>Notice that:</p>
+<ul>
+<li>By default, our proof is nil.</li>
+<li>The status is Metasploit::Model::Login::Status::INCORRECT.</li>
+<li>We're calling #do_login, which is our custom login method.</li>
+<li>The #do_login method will have to update status and proof before we return the Result object.</li>
+</ul>
+<p><strong>The custom login method</strong></p>
+<p>Ok, now let's talk about building this #do_login method. This is where we send the same HTTP request we sampled earlier.</p>
+<p>If you're already familiar with writing a Metasploit module that sends an HTTP request, the first thing that comes to mind is probably using the <a href="https://github.com/rapid7/metasploit-framework/wiki/How-to-Send-an-HTTP-Request-Using-HTTPClient">HttpClient</a>. Well, you can't do that at all over here, so we have to fall back to <a href="https://github.com/rapid7/metasploit-framework/wiki/How-to-send-an-HTTP-request-using-Rex%3A%3AProto%3A%3AHttp%3A%3AClient">Rex::Proto::Http::Client</a>. Fortunately for you, we made all this a little bit easier by creating another request called #send_request, here's an example of how to use that:</p>
+<div class="highlight"><pre><span></span><span class="n">send_request</span><span class="p">({</span><span class="s1">&#39;uri&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;/&#39;</span><span class="p">})</span>
+</pre></div>
+
+<p>You will rely on this method a lot to accomplish most of what you need to do here.</p>
+<p>Ok, now, let's move on and talk about how to use #send_request to send a login request. Remember in the login request, there is actually a PHPSESSID cookie, you should obtain this first. Usually the web application will give you the session cookie when you request the login page for the very first time, and this happens a lot.</p>
+<p>Here's an example of how to grab PHPSESSID:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_session_id</span>
+  <span class="n">login_uri</span> <span class="o">=</span> <span class="n">normalize_uri</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">#{</span><span class="n">uri</span><span class="si">}</span><span class="s2">/spywall/login.php&quot;</span><span class="p">)</span>
+  <span class="n">res</span> <span class="o">=</span> <span class="n">send_request</span><span class="p">({</span><span class="s1">&#39;uri&#39;</span> <span class="o">=&gt;</span> <span class="n">login_uri</span><span class="p">})</span>
+  <span class="n">sid</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">get_cookies</span><span class="o">.</span><span class="n">scan</span><span class="p">(</span><span class="sr">/(PHPSESSID=\w+);*/</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">||</span> <span class="s1">&#39;&#39;</span>
+  <span class="k">return</span> <span class="n">sid</span>
+<span class="k">end</span>
+</pre></div>
+
+<p>Now that you have a session ID, you can finally make the login request. Remember in the sample, we have to submit the username, password, loginBtn as a POST request. So let's do that with #send_request:</p>
+<div class="highlight"><pre><span></span><span class="n">protocol</span>  <span class="o">=</span> <span class="n">ssl</span> <span class="p">?</span> <span class="s1">&#39;https&#39;</span> <span class="p">:</span> <span class="s1">&#39;http&#39;</span>
+<span class="n">peer</span>      <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">host</span><span class="si">}</span><span class="s2">:</span><span class="si">#{</span><span class="n">port</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="n">login_uri</span> <span class="o">=</span> <span class="n">normalize_uri</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">#{</span><span class="n">uri</span><span class="si">}</span><span class="s2">/spywall/login.php&quot;</span><span class="p">)</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">send_request</span><span class="p">({</span>
+  <span class="s1">&#39;uri&#39;</span> <span class="o">=&gt;</span> <span class="n">login_uri</span><span class="p">,</span>
+  <span class="s1">&#39;method&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;POST&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;cookie&#39;</span> <span class="o">=&gt;</span> <span class="n">get_session_id</span><span class="p">,</span>
+  <span class="s1">&#39;headers&#39;</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="s1">&#39;Referer&#39;</span> <span class="o">=&gt;</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">protocol</span><span class="si">}</span><span class="s2">://</span><span class="si">#{</span><span class="n">peer</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="n">login_uri</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">},</span>
+  <span class="s1">&#39;vars_post&#39;</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="s1">&#39;USERNAME&#39;</span> <span class="o">=&gt;</span> <span class="n">username</span><span class="p">,</span>
+    <span class="s1">&#39;PASSWORD&#39;</span> <span class="o">=&gt;</span> <span class="n">password</span><span class="p">,</span>
+    <span class="s1">&#39;loginBtn&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Login&#39;</span> <span class="c1"># Found in the HTML form</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+
+<p>Now that the request is sent, we need to check the response (the res variable). Typically, you have a few choices to determine a successful login:</p>
+<ul>
+<li><strong>Check the HTTP response code</strong>. In this case, we have a 302 (redirect), but know that sometimes the response code can lie so this should not be your first choice.</li>
+<li><strong>Check the HTML</strong>. With some web applications, you might get a "successful login" message, and you can regex that. This is most likely the most accurate way.</li>
+<li><strong>Check the location header</strong>. In our case, Symantec returns a 302 and contains no body. But it redirects us to a spywall/executive_summary.php page in the location header, so we can use that. We can also try to access executive_summary.php with a renewed session ID, and make sure we can actually see the admin interface, but requesting an extra page adds more penalty to performance, so this is up to you.</li>
+</ul>
+<p>In the end, your custom login method will probably look something like this:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">do_login</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
+  <span class="n">protocol</span>  <span class="o">=</span> <span class="n">ssl</span> <span class="p">?</span> <span class="s1">&#39;https&#39;</span> <span class="p">:</span> <span class="s1">&#39;http&#39;</span>
+  <span class="n">peer</span>      <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">host</span><span class="si">}</span><span class="s2">:</span><span class="si">#{</span><span class="n">port</span><span class="si">}</span><span class="s2">&quot;</span>
+  <span class="n">login_uri</span> <span class="o">=</span> <span class="n">normalize_uri</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">#{</span><span class="n">uri</span><span class="si">}</span><span class="s2">/spywall/login.php&quot;</span><span class="p">)</span>
+
+  <span class="n">res</span> <span class="o">=</span> <span class="n">send_request</span><span class="p">({</span>
+    <span class="s1">&#39;uri&#39;</span> <span class="o">=&gt;</span> <span class="n">login_uri</span><span class="p">,</span>
+    <span class="s1">&#39;method&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;POST&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;cookie&#39;</span> <span class="o">=&gt;</span> <span class="n">get_session_id</span><span class="p">,</span>
+    <span class="s1">&#39;headers&#39;</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="s1">&#39;Referer&#39;</span> <span class="o">=&gt;</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">protocol</span><span class="si">}</span><span class="s2">://</span><span class="si">#{</span><span class="n">peer</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="n">login_uri</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;vars_post&#39;</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="s1">&#39;USERNAME&#39;</span> <span class="o">=&gt;</span> <span class="n">username</span><span class="p">,</span>
+      <span class="s1">&#39;PASSWORD&#39;</span> <span class="o">=&gt;</span> <span class="n">password</span><span class="p">,</span>
+      <span class="s1">&#39;loginBtn&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Login&#39;</span> <span class="c1"># Found in the HTML form</span>
+    <span class="p">}</span>
+  <span class="p">})</span>
+
+  <span class="k">if</span> <span class="n">res</span> <span class="o">&amp;&amp;</span> <span class="n">res</span><span class="o">.</span><span class="n">headers</span><span class="o">[</span><span class="s1">&#39;Location&#39;</span><span class="o">].</span><span class="n">include?</span><span class="p">(</span><span class="s1">&#39;executive_summary.php&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span><span class="ss">:status</span> <span class="o">=&gt;</span> <span class="no">LOGIN_STATUS</span><span class="o">::</span><span class="no">SUCCESSFUL</span><span class="p">,</span> <span class="ss">:proof</span> <span class="o">=&gt;</span> <span class="n">res</span><span class="o">.</span><span class="n">to_s</span><span class="p">}</span>
+  <span class="k">end</span>
+
+  <span class="p">{</span><span class="ss">:proof</span> <span class="o">=&gt;</span> <span class="n">res</span><span class="o">.</span><span class="n">to_s</span><span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+
+<p>The <a href="https://github.com/rapid7/metasploit-model/blob/d4c4f444c79937698dc703f89c0a4c576cde628c/lib/metasploit/model/login/status.rb">exact statuses</a> you can return are:</p>
+<table>
+<thead>
+<tr>
+<th>Constant</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Metasploit::Model::Login::Status::DENIED_ACCESS</td>
+<td>Access is denied</td>
+</tr>
+<tr>
+<td>Metasploit::Model::Login::Status::DISABLED</td>
+<td>Account is disabled</td>
+</tr>
+<tr>
+<td>Metasploit::Model::Login::Status::INCORRECT</td>
+<td>Credential is incorrect</td>
+</tr>
+<tr>
+<td>Metasploit::Model::Login::Status::LOCKED_OUT</td>
+<td>Account has been locked out</td>
+</tr>
+<tr>
+<td>Metasploit::Model::Login::Status::NO_AUTH_REQUIRED</td>
+<td>No authentication</td>
+</tr>
+<tr>
+<td>Metasploit::Model::Login::Status::SUCCESSFUL</td>
+<td>Successful login</td>
+</tr>
+<tr>
+<td>Metasploit::Model::Login::Status::UNABLE_TO_CONNECT</td>
+<td>Unable to connect to the service</td>
+</tr>
+<tr>
+<td>Metasploit::Model::Login::Status::UNTRIED</td>
+<td>Credential has not been tried</td>
+</tr>
+<tr>
+<td>Metasploit::Model::Login::Status::ALL</td>
+<td>All the above (An array)</td>
+</tr>
+</tbody>
+</table>
+<p>When you're done, your code will look something like this:</p>
+<p><a href="https://github.com/rapid7/metasploit-framework/blob/master/lib/metasploit/framework/login_scanner/symantec_web_gateway.rb">https://github.com/rapid7/metasploit-framework/blob/master/lib/metasploit/framework/login_scanner/symantec_web_gateway.rb</a></p>
+<h2 id="step-4-write-the-auxiliary-module">Step 4: Write the auxiliary module</h2>
+<p>The auxiliary module acts more like an user-interface. You describe what the module does, handles options, initializes objects, and do reporting.</p>
+<p>A basic auxiliary module template in our case would be something like this:</p>
+<div class="highlight"><pre><span></span><span class="c1">##</span>
+<span class="c1"># This module requires Metasploit: http://metasploit.com/download</span>
+<span class="c1"># Current source: https://github.com/rapid7/metasploit-framework</span>
+<span class="c1">##</span>
+
+<span class="nb">require</span> <span class="s1">&#39;msf/core&#39;</span>
+<span class="nb">require</span> <span class="s1">&#39;metasploit/framework/login_scanner/symantec_web_gateway&#39;</span>
+<span class="nb">require</span> <span class="s1">&#39;metasploit/framework/credential_collection&#39;</span>
+
+<span class="k">class</span> <span class="nc">MetasploitModule</span> <span class="o">&lt;</span> <span class="no">Msf</span><span class="o">::</span><span class="no">Auxiliary</span>
+
+  <span class="kp">include</span> <span class="no">Msf</span><span class="o">::</span><span class="no">Exploit</span><span class="o">::</span><span class="no">Remote</span><span class="o">::</span><span class="no">HttpClient</span>
+  <span class="kp">include</span> <span class="no">Msf</span><span class="o">::</span><span class="no">Auxiliary</span><span class="o">::</span><span class="no">AuthBrute</span>
+  <span class="kp">include</span> <span class="no">Msf</span><span class="o">::</span><span class="no">Auxiliary</span><span class="o">::</span><span class="no">Report</span>
+  <span class="kp">include</span> <span class="no">Msf</span><span class="o">::</span><span class="no">Auxiliary</span><span class="o">::</span><span class="no">Scanner</span>
+
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">info</span><span class="o">=</span><span class="p">{})</span>
+    <span class="k">super</span><span class="p">(</span><span class="n">update_info</span><span class="p">(</span><span class="n">info</span><span class="p">,</span>
+      <span class="s1">&#39;Name&#39;</span>        <span class="o">=&gt;</span> <span class="s1">&#39;Symantec Web Gateway Login Utility&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;Description&#39;</span> <span class="o">=&gt;</span> <span class="sx">%q{</span>
+<span class="sx">        This module will attempt to authenticate to a Symantec Web Gateway.</span>
+<span class="sx">      }</span><span class="p">,</span>
+      <span class="s1">&#39;Author&#39;</span>      <span class="o">=&gt;</span> <span class="o">[</span> <span class="s1">&#39;sinn3r&#39;</span> <span class="o">]</span><span class="p">,</span>
+      <span class="s1">&#39;License&#39;</span>     <span class="o">=&gt;</span> <span class="no">MSF_LICENSE</span><span class="p">,</span>
+      <span class="s1">&#39;DefaultOptions&#39;</span> <span class="o">=&gt;</span>
+        <span class="p">{</span>
+          <span class="s1">&#39;RPORT&#39;</span>      <span class="o">=&gt;</span> <span class="mi">443</span><span class="p">,</span>
+          <span class="s1">&#39;SSL&#39;</span>        <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span>
+          <span class="s1">&#39;SSLVersion&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;TLS1&#39;</span>
+        <span class="p">}</span>
+    <span class="p">))</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">run_host</span><span class="p">(</span><span class="n">ip</span><span class="p">)</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+</pre></div>
+
+<p>Save it under modules/auxiliary/scanner/http/.</p>
+<p>Our main method is #run_host, so we'll begin there. But before we do, we must initialize your LoginScanner object. The following is an example of how you will probably write it.</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">scanner</span><span class="p">(</span><span class="n">ip</span><span class="p">)</span>
+  <span class="vi">@scanner</span> <span class="o">||=</span> <span class="nb">lambda</span> <span class="p">{</span>
+    <span class="n">cred_collection</span> <span class="o">=</span> <span class="no">Metasploit</span><span class="o">::</span><span class="no">Framework</span><span class="o">::</span><span class="no">CredentialCollection</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+      <span class="ss">blank_passwords</span><span class="p">:</span> <span class="n">datastore</span><span class="o">[</span><span class="s1">&#39;BLANK_PASSWORDS&#39;</span><span class="o">]</span><span class="p">,</span>
+      <span class="ss">pass_file</span><span class="p">:</span>       <span class="n">datastore</span><span class="o">[</span><span class="s1">&#39;PASS_FILE&#39;</span><span class="o">]</span><span class="p">,</span>
+      <span class="ss">password</span><span class="p">:</span>        <span class="n">datastore</span><span class="o">[</span><span class="s1">&#39;PASSWORD&#39;</span><span class="o">]</span><span class="p">,</span>
+      <span class="ss">user_file</span><span class="p">:</span>       <span class="n">datastore</span><span class="o">[</span><span class="s1">&#39;USER_FILE&#39;</span><span class="o">]</span><span class="p">,</span>
+      <span class="ss">userpass_file</span><span class="p">:</span>   <span class="n">datastore</span><span class="o">[</span><span class="s1">&#39;USERPASS_FILE&#39;</span><span class="o">]</span><span class="p">,</span>
+      <span class="ss">username</span><span class="p">:</span>        <span class="n">datastore</span><span class="o">[</span><span class="s1">&#39;USERNAME&#39;</span><span class="o">]</span><span class="p">,</span>
+      <span class="ss">user_as_pass</span><span class="p">:</span>    <span class="n">datastore</span><span class="o">[</span><span class="s1">&#39;USER_AS_PASS&#39;</span><span class="o">]</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="no">Metasploit</span><span class="o">::</span><span class="no">Framework</span><span class="o">::</span><span class="no">LoginScanner</span><span class="o">::</span><span class="no">SymantecWebGateway</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+      <span class="n">configure_http_login_scanner</span><span class="p">(</span>
+        <span class="ss">host</span><span class="p">:</span> <span class="n">ip</span><span class="p">,</span>
+        <span class="ss">port</span><span class="p">:</span> <span class="n">datastore</span><span class="o">[</span><span class="s1">&#39;RPORT&#39;</span><span class="o">]</span><span class="p">,</span>
+        <span class="ss">cred_details</span><span class="p">:</span>       <span class="n">cred_collection</span><span class="p">,</span>
+        <span class="ss">stop_on_success</span><span class="p">:</span>    <span class="n">datastore</span><span class="o">[</span><span class="s1">&#39;STOP_ON_SUCCESS&#39;</span><span class="o">]</span><span class="p">,</span>
+        <span class="ss">bruteforce_speed</span><span class="p">:</span>   <span class="n">datastore</span><span class="o">[</span><span class="s1">&#39;BRUTEFORCE_SPEED&#39;</span><span class="o">]</span><span class="p">,</span>
+        <span class="ss">connection_timeout</span><span class="p">:</span> <span class="mi">5</span>
+      <span class="p">))</span>
+    <span class="p">}</span><span class="o">.</span><span class="n">call</span>
+<span class="k">end</span>
+</pre></div>
+
+<p>Notice that this scanner method can be called multiple times, but the use of <a href="http://rubymonk.com/learning/books/1-ruby-primer/chapters/34-lambdas-and-blocks-in-ruby/lessons/77-lambdas-in-ruby">lambda</a> will allow the LoginScanner object to initialize only once. After that first time, every time the method is called, it will just return @scanner instead of going through the whole initialization process again.</p>
+<p>In some cases you might need to pass more datastore options, maybe not. For example, if you want to allow the URI to be configurable (which is also already an accessor in <a href="https://github.com/rapid7/metasploit-framework/blob/master/lib/metasploit/framework/login_scanner/http.rb#L26">Metasploit::Framework::LoginScanner::HTTP</a>), then you have to create and pass datastore['URI'] to configure_http_login_scanner too, like so:</p>
+<div class="highlight"><pre><span></span><span class="ss">uri</span><span class="p">:</span> <span class="n">datastore</span><span class="o">[</span><span class="s1">&#39;URI&#39;</span><span class="o">]</span>
+</pre></div>
+
+<p>And then in your LoginScanner, pass <code>uri</code> to #send_request:</p>
+<div class="highlight"><pre><span></span><span class="n">send_request</span><span class="p">({</span><span class="s1">&#39;uri&#39;</span><span class="o">=&gt;</span><span class="n">uri</span><span class="p">})</span>
+</pre></div>
+
+<p>At this point, the scanner method holds our Metasploit::Framework::LoginScanner::SymantecWebGateway object. If we call the #scan! method, it will trigger the #attempt_login method we wrote earlier, and then yield the Result object. Basically like this:</p>
+<div class="highlight"><pre><span></span><span class="n">scanner</span><span class="p">(</span><span class="n">ip</span><span class="p">)</span><span class="o">.</span><span class="n">scan!</span> <span class="k">do</span> <span class="o">|</span><span class="n">result</span><span class="o">|</span>
+  <span class="c1"># result = Our Result object</span>
+<span class="k">end</span>
+</pre></div>
+
+<p>With the Result object, we can start reporting. In most cases, you will probably be using #create_credential_login to report a successful login. And use #invalidate_login to report a bad one.</p>
+<p><strong>Reporting a valid credential</strong></p>
+<p>The credential API knows a lot about a credential, such as when it was used, how it was used, serviced tried, target IP, port, etc, etc. So when we report, that's how much information we are storing for every credential. To make credential reporting easy to use, all you need to do is call the #store_valid_credential method like this:</p>
+<div class="highlight"><pre><span></span><span class="n">store_valid_credential</span><span class="p">(</span>
+  <span class="ss">user</span><span class="p">:</span> <span class="n">result</span><span class="o">.</span><span class="n">credential</span><span class="o">.</span><span class="n">public</span><span class="p">,</span>
+  <span class="kp">private</span><span class="p">:</span> <span class="n">result</span><span class="o">.</span><span class="n">credential</span><span class="o">.</span><span class="n">private</span><span class="p">,</span>
+  <span class="ss">private_type</span><span class="p">:</span> <span class="ss">:password</span><span class="p">,</span> <span class="c1"># This is optional</span>
+  <span class="ss">proof</span><span class="p">:</span> <span class="kp">nil</span><span class="p">,</span> <span class="c1"># This is optional</span>
+<span class="p">)</span>
+</pre></div>
+
+<p><strong>Report an invalid credential</strong></p>
+<p>Here's another example you can use:</p>
+<div class="highlight"><pre><span></span><span class="c1"># Reports a bad credential.</span>
+<span class="c1">#</span>
+<span class="c1"># @param [String] ip Target host</span>
+<span class="c1"># @param [Fixnum] port Target port</span>
+<span class="c1"># @param [Result] The Result object</span>
+<span class="c1"># @return [void]</span>
+<span class="k">def</span> <span class="nf">report_bad_cred</span><span class="p">(</span><span class="n">ip</span><span class="p">,</span> <span class="n">rport</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+  <span class="n">invalidate_login</span><span class="p">(</span>
+    <span class="ss">address</span><span class="p">:</span> <span class="n">ip</span><span class="p">,</span>
+    <span class="ss">port</span><span class="p">:</span> <span class="n">rport</span><span class="p">,</span>
+    <span class="ss">protocol</span><span class="p">:</span> <span class="s1">&#39;tcp&#39;</span><span class="p">,</span>
+    <span class="kp">public</span><span class="p">:</span> <span class="n">result</span><span class="o">.</span><span class="n">credential</span><span class="o">.</span><span class="n">public</span><span class="p">,</span>
+    <span class="kp">private</span><span class="p">:</span> <span class="n">result</span><span class="o">.</span><span class="n">credential</span><span class="o">.</span><span class="n">private</span><span class="p">,</span>
+    <span class="ss">realm_key</span><span class="p">:</span> <span class="n">result</span><span class="o">.</span><span class="n">credential</span><span class="o">.</span><span class="n">realm_key</span><span class="p">,</span>
+    <span class="ss">realm_value</span><span class="p">:</span> <span class="n">result</span><span class="o">.</span><span class="n">credential</span><span class="o">.</span><span class="n">realm</span><span class="p">,</span>
+    <span class="ss">status</span><span class="p">:</span> <span class="n">result</span><span class="o">.</span><span class="n">status</span><span class="p">,</span>
+    <span class="ss">proof</span><span class="p">:</span> <span class="n">result</span><span class="o">.</span><span class="n">proof</span>
+  <span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+
+<p>At this point, you're pretty much done with the auxiliary module. It will probably look something like this:
+<a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/scanner/http/symantec_web_gateway_login.rb">https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/scanner/http/symantec_web_gateway_login.rb</a></p>
+<h2 id="test">Test</h2>
+<p>And finally, make sure your module actually works.</p>
+<p>Test for a successful login:</p>
+<div class="highlight"><pre><span></span>msf auxiliary(symantec_web_gateway_login) &gt; run
+
+[+] 192.168.1.176:443 SYMANTEC_WEB_GATEWAY - Success: &#39;sinn3r:GoodPassword&#39;
+[*] Scanned 1 of 1 hosts (100% complete)
+[*] Auxiliary module execution completed
+msf auxiliary(symantec_web_gateway_login) &gt; 
+</pre></div>
+
+<p>Test for a failed login:</p>
+<div class="highlight"><pre><span></span>msf auxiliary(symantec_web_gateway_login) &gt; run
+
+[-] 192.168.1.176:443 SYMANTEC_WEB_GATEWAY - Failed: &#39;sinn3r:BadPass&#39;
+[*] Scanned 1 of 1 hosts (100% complete)
+[*] Auxiliary module execution completed
+msf auxiliary(symantec_web_gateway_login) &gt;
+</pre></div></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2019 - 2020 darkcode0x00</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
