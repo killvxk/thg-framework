@@ -40,6 +40,9 @@ except ImportError:
    elif distro == 'arch':
        system("pacman -S docker")
        import docker
+   elif distro.name() == 'Fedora':
+       system("dnf install python3-docker")
+       import docker
    else:
        print("instalar manual o pip... thg finalizado")
        exit(1)
@@ -51,6 +54,8 @@ except ImportError:
     if distro == 'debian' or distro == 'ubuntu':
        system("apt install python3-apt")
        import apt
+
+### instala o pacman
 try:
     import pacman
 except ImportError:
@@ -60,6 +65,30 @@ except ImportError:
           import pacman
        except ImportError:
           print("instalacao manual do python-pacman\nlink:https://pypi.org/project/python-pacman/")
+
+### instala o dnf
+try:
+    import dnf
+except ImportError:
+    if distro.name() == 'Fedora':
+        system("pip install python3-dnf")
+        import dnf
+
+### install dev packages
+try:
+    from pystemd.systemd1 import Unit
+except ImportError:
+    if distro.name() == 'Fedora':
+        system("dnf install python3-devel")
+        system("dnf install systemd-libs")
+        system("dnf install python3-pystemd")
+        from pystemd.systemd1 import Unit
+
+docker_service = Unit(b'docker.service')
+docker_service.load()
+if docker_service.ActiveState == b'inactive':
+    docker_service.Start(b'docker.service')
+
 
 ### variavel global para usar o docker
 client = docker.from_env()
@@ -142,17 +171,79 @@ def deb_ubu():
     print(Fore.BLUE + banner)
     # faz o check dos programas
     for i in listt:
-        pass
         pkg = cache[i]
         if pkg.is_installed:
             print("{colorp}{i} =>{color} already installed".format(colorp=Fore.RED, color=Fore.CYAN, i=i))
         else:
             # instala
-            print(pkg.mark_install())
+            pkg.mark_install()
         try:
             cache.commit()
         except Exception as  arg:
             print("Sorry, package installation failed [{err}]".format(err=str(arg)))
+
+'''
+Instala os pacotes para o fedora
+'''
+
+def fedora():
+    # List the packages
+    listt = ['docker', "nmap"]
+    banner = '''
+    ████████╗██╗  ██╗ ██████╗       ███████╗███████╗██████╗  ██████╗ ██████╗  █████╗       ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗
+    ╚══██╔══╝██║  ██║██╔════╝       ██╔════╝██╔════╝██╔══██╗██╔═══██╗██╔══██╗██╔══██╗      ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║
+       ██║   ███████║██║  ███╗█████╗█████╗  █████╗  ██║  ██║██║   ██║██████╔╝███████║█████╗██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║
+       ██║   ██╔══██║██║   ██║╚════╝██╔══╝  ██╔══╝  ██║  ██║██║   ██║██╔══██╗██╔══██║╚════╝██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║
+       ██║   ██║  ██║╚██████╔╝      ██║     ███████╗██████╔╝╚██████╔╝██║  ██║██║  ██║      ██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗
+       ╚═╝   ╚═╝  ╚═╝ ╚═════╝       ╚═╝     ╚══════╝╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝      ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝
+
+    '''
+    print(Fore.BLUE + banner)
+    with dnf.Base() as base:
+        RELEASEVER = dnf.rpm.detect_releasever(base.conf.installroot)
+        base.conf.substitutions['releasever'] = RELEASEVER
+        base.conf.best = True
+        base.conf.assumeyes = True
+        base.read_all_repos()
+        base.fill_sack()
+        query = base.sack.query()
+        # faz o check dos programas
+        installed = query.installed()
+        available = query.available()
+        for i in listt:
+            #pkg = cache[i]
+            pkg = available.filter(name=i).run()
+            #print(installed.filter(name=i).run()[0].name)
+            if installed.filter(name=i).run() != []:
+                print("{colorp}{i} =>{color} already installed".format(colorp=Fore.RED, color=Fore.CYAN, i=i))
+            else:
+                # instala
+                try:
+                    print("{color}Installing =>{colorp} {i}".format(colorp=Fore.RED, color=Fore.CYAN, i=i))
+                    base.install(pkg[0].name)
+                except dnf.exceptions.MarkingError:
+                    print('Feature(s) cannot be found: ' + pkg[0].name)
+                except Exception as  arg:
+                    print("Sorry, package installation failed [{err}]".format(err=str(arg)))
+        # Check dependencies
+        try:
+            base.resolve()
+        except:
+            print('Dependencies cannot be resolved.')
+        # except dnf.exceptions.DepsolveError:
+        #     print('Dependencies cannot be resolved.')
+
+        # Download the packages
+        try:
+            base.download_packages(base.transaction.install_set)
+        except dnf.exceptions.DownloadError:
+            print('Required package cannot be downloaded.')
+        # Finally do the installation
+        try:
+            base.do_transaction()
+        except Exception as  arg:
+            print("Sorry, package installation failed [{err}]".format(err=str(arg)))
+
 
 
 '''
@@ -164,12 +255,10 @@ def conf_db():
     client = docker.from_env()
     try:
         print("Getting mongodb image for docker.")
-        #img = client.images.get("postgres")
         img = client.images.get("bitnami/mongodb")
     except docker.errors.ImageNotFound:
         print("Downloading image from dockerhub...")
-        #img = client.images.pull("postgres")
-        img = client.images.pull("bitnami/mongodb")
+        img = client.images.pull("bitnami/mongodb:latest")
 
     try:
         print("Trying to get thgdb container.")
@@ -224,6 +313,9 @@ def check():
         conf_db()
     elif linux == "arch":
         arch_linux()
+        conf_db()
+    elif linux == "fedora":
+        fedora()
         conf_db()
     else:
         print("Sorry, distro not found")

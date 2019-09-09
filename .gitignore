@@ -1,6 +1,8 @@
-.idea/*
+.idea/
 *.pyc
 __pycache__
 .env
 tmp/
 history
+thg.log
+__pycache__/
