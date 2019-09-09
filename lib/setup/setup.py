@@ -20,10 +20,10 @@ except e:
 try:
     import pip
 except ImportError:
-   if distro == 'debian' or distro == 'ubuntu':
+   if distro.name() == 'Debian' or distro.name() == 'Ubuntu':
        system("apt install python3-pip")
        import pip
-   elif distro == 'arch':
+   elif distro.name() == 'Arch':
        system("pacman -S python-pip")
        import pip
    else:
@@ -34,10 +34,10 @@ except ImportError:
 try:
     import docker
 except ImportError:
-   if distro == 'debian' or distro == 'ubuntu':
+   if distro.name() == 'Debian' or distro.name() == 'Ubuntu':
        system("apt install docker.io")
        import docker
-   elif distro == 'arch':
+   elif distro.name() == 'Arch':
        system("pacman -S docker")
        import docker
    elif distro.name() == 'Fedora':
@@ -51,7 +51,7 @@ except ImportError:
 try:
     import apt
 except ImportError:
-    if distro == 'debian' or distro == 'ubuntu':
+    if distro == 'Debian' or distro == 'Ubuntu':
        system("apt install python3-apt")
        import apt
 
@@ -59,7 +59,7 @@ except ImportError:
 try:
     import pacman
 except ImportError:
-   if distro == 'arch':
+   if distro.name() == 'Arch':
        system("pip install python-pacman ")
        try:
           import pacman
@@ -211,9 +211,7 @@ def fedora():
         installed = query.installed()
         available = query.available()
         for i in listt:
-            #pkg = cache[i]
             pkg = available.filter(name=i).run()
-            #print(installed.filter(name=i).run()[0].name)
             if installed.filter(name=i).run() != []:
                 print("{colorp}{i} =>{color} already installed".format(colorp=Fore.RED, color=Fore.CYAN, i=i))
             else:
