@@ -1,0 +1,10 @@
+{
+    "Apache License 2.0": "template_apache2.txt",
+    "BSD License": "template_bsd.txt",
+    "GNU Affero General Public License v3": "template_GNU_AGPLv3.txt",
+    "GNU Lesser General Public License v3": "template_GNU_LGPLv3.txt",
+    "GNU General Public License v3": "template_gnu3.txt",
+    "MIT License": "template_mit.txt",
+    "Mozilla Public License Version 2.0": "template_mozilla_PL2.txt",
+    "Unlicensed": "template_unlicense.txt"
+}

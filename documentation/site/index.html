@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="darkcode0x00 luizcorrea">
-        <link rel="canonical" href="https://darkcode357.github.io/thg-framework/">
+        <link rel="canonical" href="https://darkcode357.gitlab.io/thg-framework/">
         <link rel="shortcut icon" href="img/favicon.ico">
         <title>Introduction - thg-framework</title>
         <link href="css/bootstrap-custom.min.css" rel="stylesheet">
@@ -80,16 +80,58 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contributing <b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">thg_dev <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="contributing/Contributing-to-thg/">Get Started</a>
+    <a href="dev/thg_dev/_Sidebar/">thg_dev</a>
+</li>
+                                    
+<li >
+    <a href="dev/contributing/Contributing-to-thg/">Get Started</a>
 </li>
                                     
 <li >
     <a href="cli/templates/">templates</a>
 </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Roadmaps</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">2019</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="dev/roadmaps/2019/2019-Roadmap/">Roadmap</a>
+</li>
+            
+<li >
+    <a href="dev/roadmaps/2019/2019-Roadmap-Review/">Roadmap_Review</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">git</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="dev/git/Using-Git/">Using-Git</a>
+</li>
+            
+<li >
+    <a href="dev/git/Git-cheatsheet/">Git_cheatsheet</a>
+</li>
+            
+<li >
+    <a href="dev/git/Git-Reference-Sites/">Git-Reference-Sites</a>
+</li>
+    </ul>
+  </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -567,7 +609,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/darkcode357/thg-framework/edit/master/docs/index.md">Edit on darkcode357/thg-framework</a>
+                                <a href="https://gitlab.com/darkcode357/thg-framework/edit/master/docs/index.md">Edit on darkcode357/thg-framework</a>
                             </li>
                     </ul>
                 </div>
@@ -577,375 +619,117 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#welcome-to-thg-framework">Welcome to THG-FRAMEWORK</a></li>
-            <li><a href="#introduction-to-thg_framework">introduction to thg_FRAMEWORK</a></li>
-        <li class="main "><a href="#thg-commandos">thg commandos</a></li>
-        <li class="main "><a href="#core-command">Core Command</a></li>
-        <li class="main "><a href="#database-backend-commands">Database Backend Commands</a></li>
-        <li class="main "><a href="#module-command">Module Command</a></li>
-            <li><a href="#show">show</a></li>
-            <li><a href="#search">search</a></li>
-        <li class="main "><a href="#aux">aux</a></li>
-            <li><a href="#alias">alias</a></li>
-            <li><a href="#edit">edit</a></li>
-            <li><a href="#help">help</a></li>
-            <li><a href="#history">history</a></li>
-            <li><a href="#ipy">ipy</a></li>
-            <li><a href="#load">load</a></li>
-            <li><a href="#macro">macro</a></li>
-            <li><a href="#py">py</a></li>
-            <li><a href="#pyscript">pyscript</a></li>
-            <li><a href="#quit">quit</a></li>
-            <li><a href="#shell">shell</a></li>
-            <li><a href="#shortcuts">shortcuts</a></li>
+        <li class="main active"><a href="#comecando">Começando</a></li>
+        <li class="main "><a href="#contribuindo">Contribuindo</a></li>
+        <li class="main "><a href="#desenvolvimento-thg">Desenvolvimento THG</a></li>
+        <li class="main "><a href="#payloads-thg">payloads THG</a></li>
+        <li class="main "><a href="#outros-recursos-tgh">Outros recursos TGH</a></li>
+        <li class="main "><a href="#recursos-do-github">Recursos do GitHub</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="welcome-to-thg-framework">Welcome to THG-FRAMEWORK<a class="headerlink" href="#welcome-to-thg-framework" title="Permanent link">&para;</a></h1>
-<h2 id="introduction-to-thg_framework">introduction to thg_FRAMEWORK<a class="headerlink" href="#introduction-to-thg_framework" title="Permanent link">&para;</a></h2>
-<p>novo sistema de exploracao e associacao de dados, voltados para comprovar a tese de desenvolvimento de uma versao alternativa do metasploit feito em python</p>
-<pre><code>
-        ===================[ thgconsole 2.0.1-dev ]===================
-
-        + -- --=[THGEF   : The Hacker Group Exploitation Framework]=-- -- +    
-        + -- --=[Code by : Darkcode                               ]=-- -- + 
-        + -- --=[Codename: 0box                                ]=-- -- + 
-        + -- --=[Homepage: https://www.facebook.com/darckode0x00/ ]=-- -- + 
-        + -- --=[youtube : darkcode programming                   ]=-- -- + 
-
-        ===================[ thgconsole-pc ]========================
-
-        + -- --=[system  =&gt; Linux              ]=-- -- + 
-        + -- --=[machine =&gt; x86_64             ]=-- -- +      
-        + -- --=[gcc     =&gt; 8.3.0              ]=-- -- +
-        + -- --=[python  =&gt; 3.7                ]=-- -- +
-        + -- --=[net     =&gt; THG_Online         ]=-- -- +
-        + -- --=[ip      =&gt; 192.168.23.102     ]=-- -- +
-        + -- --=[mac     =&gt; 90:cd:b6:a4:64:e1  ]=-- -- +
-
-        ===================[ thgconsole-info   ]========================
-        ===================[ thgconsole-config ]========================
-        + -- --=[DB_STATUS =&gt;on                ]=-- -- +
-
-
-thg-console &gt; 
-</code></pre>
-
-<h1 id="thg-commandos">thg commandos<a class="headerlink" href="#thg-commandos" title="Permanent link">&para;</a></h1>
-<pre><code>thg-console &gt; help -v
-
-Documented commands (type help &lt;topic&gt;):
-
-Core Command
-================================================================================
-banner              Print thg-console banner
-exec                &lt;shell thg_command&gt; &lt;args&gt; Execute a thg_command in a shell
-exit                Exit the console
-ip                  show ip
-version             show version
-
-Database Backend Commands
-================================================================================
-db_rebuild          Rebuild database for search
-reload              reload the chose module
-
-Module Command
-================================================================================
-back                Clear module that chose
-check               Execute module check
-exploit             Execute module exploit
-listmod             List all modules
-run                 alias to exploit
-search              Search modules
-set                 Set module option value/ set program config
-show                Display module information
-use                 Chose a module
-
-Other
-================================================================================
-alias               Manage aliases
-edit                Edit a file in a text editor
-help                List available commands or provide detailed help for a specific command
-history             View, run, edit, save, or clear previously entered commands
-ipy                 Enter an interactive IPython shell
-load                Run commands in script file that is encoded as either ASCII or UTF-8 text
-macro               Manage macros
-py                  Invoke Python command or shell
-pyscript            Run a Python script file inside the console
-quit                Exit this application
-shell               Execute a command as if at the OS prompt
-shortcuts           List available shortcuts
-
-thg-console &gt; 
-</code></pre>
-
-<h1 id="core-command">Core Command<a class="headerlink" href="#core-command" title="Permanent link">&para;</a></h1>
-<pre><code>banner              Print thg-console banner
-exec                &lt;shell thg_command&gt; &lt;args&gt; Execute a thg_command in a shell
-exit                Exit the console
-ip                  show ip
-version             show version
-</code></pre>
-
-<h1 id="database-backend-commands">Database Backend Commands<a class="headerlink" href="#database-backend-commands" title="Permanent link">&para;</a></h1>
-<pre><code>db_rebuild          Rebuild database for search
-reload              reload the chose module
-</code></pre>
-
-<h1 id="module-command">Module Command<a class="headerlink" href="#module-command" title="Permanent link">&para;</a></h1>
-<pre><code>back                Clear module that chose
-check               Execute module check
-exploit             Execute module exploit
-listmod             List all modules
-run                 alias to exploit
-search              Search modules
-set                 Set module option value/ set program config
-show                Display module information
-use                 Chose a module
-</code></pre>
-
-<h2 id="show">show<a class="headerlink" href="#show" title="Permanent link">&para;</a></h2>
-<pre><code>show Display module information
-
-show info    =&gt;  info display info mode       
-show missing =&gt;  missing display missing options    
-show options =&gt;  options display options for mods
-</code></pre>
-
-<h2 id="search">search<a class="headerlink" href="#search" title="Permanent link">&para;</a></h2>
-<pre><code>search Search modules
-
-search name             =&gt;  search for name
-search module_name      =&gt;  search for module name   
-search description      =&gt;  search for description   
-search author           =&gt;  search for author  
-search disclosure_date  =&gt;  search for disclosure_date 
-search service_name     =&gt;  search for service_name  
-search service_version  =&gt;  search for service_version  
-search check            =&gt;  search for check  
-</code></pre>
-
-<h1 id="aux">aux<a class="headerlink" href="#aux" title="Permanent link">&para;</a></h1>
-<pre><code>Other
-================================================================================
-alias               Manage aliases
-edit                Edit a file in a text editor
-help                List available commands or provide detailed help for a specific command
-history             View, run, edit, save, or clear previously entered commands
-ipy                 Enter an interactive IPython shell
-load                Run commands in script file that is encoded as either ASCII or UTF-8 text
-macro               Manage macros
-py                  Invoke Python command or shell
-pyscript            Run a Python script file inside the console
-quit                Exit this application
-shell               Execute a command as if at the OS prompt
-shortcuts           List available shortcuts
-
-</code></pre>
-
-<h2 id="alias">alias<a class="headerlink" href="#alias" title="Permanent link">&para;</a></h2>
-<pre><code>alias Manage aliases
-Usage: alias [-h] {create, delete, list} ...
-
-Manage aliases
-
-An alias is a command that enables replacement of a word by another string.
-
-optional arguments:
-  -h, --help            show this help message and exit
-
-sub-commands:
-  {create, delete, list}
-    create              create or overwrite an alias
-    delete              delete aliases
-    list                list aliases
-
-</code></pre>
-
-<h2 id="edit">edit<a class="headerlink" href="#edit" title="Permanent link">&para;</a></h2>
-<pre><code>
-
-edit Edit a file in a text editor
-Usage: edit [-h] [file_path]
-
-Edit a file in a text editor
-
-The editor used is determined by a settable parameter. To set it:
-
-  set editor (program-name)
-
-positional arguments:
-  file_path   path to a file to open in editor
-
-optional arguments:
-  -h, --help  show this help message and exit
-
-</code></pre>
-
-<h2 id="help">help<a class="headerlink" href="#help" title="Permanent link">&para;</a></h2>
-<pre><code>help List available commands or provide detailed help for a specific command
-Usage: help [-h] [-v] [command] ...
-
-List available commands or provide detailed help for a specific command
-
-positional arguments:
-  command        command to retrieve help for
-  subcommand     sub-command to retrieve help for
-
-optional arguments:
-  -h, --help     show this help message and exit
-  -v, --verbose  print a list of all commands with descriptions of each
-
-
-</code></pre>
-
-<h2 id="history">history<a class="headerlink" href="#history" title="Permanent link">&para;</a></h2>
-<pre><code>history View, run, edit, save, or clear previously entered commands
-Usage: history [-h] [-r | -e | -o FILE | -t TRANSCRIPT | -c] [-s] [-x] [-v]
-               [arg]
-
-View, run, edit, save, or clear previously entered commands
-
-positional arguments:
-  arg                   empty               all history items
-                        a                   one history item by number
-                        a..b, a:b, a:, ..b  items by indices (inclusive)
-                        string              items containing string
-                        /regex/             items matching regular expression
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -r, --run             run selected history items
-  -e, --edit            edit and then run selected history items
-  -o, --output-file FILE
-                        output commands to a script file, implies -s
-  -t, --transcript TRANSCRIPT
-                        output commands and results to a transcript file,
-                        implies -s
-  -c, --clear           clear all history
-
-formatting:
-  -s, --script          output commands in script format, i.e. without command
-                        numbers
-  -x, --expanded        output fully parsed commands with any aliases and
-                        macros expanded, instead of typed commands
-  -v, --verbose         display history and include expanded commands if they
-                        differ from the typed command
-
-</code></pre>
-
-<h2 id="ipy">ipy<a class="headerlink" href="#ipy" title="Permanent link">&para;</a></h2>
-<pre><code>ipy Enter an interactive IPython shell
-
-</code></pre>
-
-<h2 id="load">load<a class="headerlink" href="#load" title="Permanent link">&para;</a></h2>
-<pre><code>load Run commands in script file that is encoded as either ASCII or UTF-8 text
-Usage: load [-h] [-t TRANSCRIPT] script_path
-
-Run commands in script file that is encoded as either ASCII or UTF-8 text
-
-Script should contain one command per line, just like the command would be
-typed in the console.
-
-It loads commands from a script file into a queue and then the normal cmd2
-REPL resumes control and executes the commands in the queue in FIFO order.
-If you attempt to redirect/pipe a load command, it will capture the output
-of the load command itself, not what it adds to the queue.
-
-If the -r/--record_transcript flag is used, this command instead records
-the output of the script commands to a transcript for testing purposes.
-
-positional arguments:
-  script_path           path to the script file
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -t, --transcript TRANSCRIPT
-                        record the output of the script as a transcript file
-
-
-</code></pre>
-
-<h2 id="macro">macro<a class="headerlink" href="#macro" title="Permanent link">&para;</a></h2>
-<pre><code>macro  Manage macros
-Usage: macro [-h] {create, delete, list} ...
-
-Manage macros
-
-A macro is similar to an alias, but it can contain argument placeholders.
-
-optional arguments:
-  -h, --help            show this help message and exit
-
-sub-commands:
-  {create, delete, list}
-    create              create or overwrite a macro
-    delete              delete macros
-    list                list macros
-
-See also:
-  alias
-
-</code></pre>
-
-<h2 id="py">py<a class="headerlink" href="#py" title="Permanent link">&para;</a></h2>
-<pre><code>py Invoke Python command or shell
-Usage: py [-h] [command] ...
-
-Invoke Python command or shell
-
-Note that, when invoking a command directly from the command line, this shell
-has limited ability to parse Python statements into tokens. In particular,
-there may be problems with whitespace and quotes depending on their placement.
-
-If you see strange parsing behavior, it's best to just open the Python shell by
-providing no arguments to py and run more complex statements there.
-
-positional arguments:
-  command     command to run
-  remainder   remainder of command
-
-optional arguments:
-  -h, --help  show this help message and exit
-
-</code></pre>
-
-<h2 id="pyscript">pyscript<a class="headerlink" href="#pyscript" title="Permanent link">&para;</a></h2>
-<pre><code>pyscript Run a Python script file inside the console
-
-</code></pre>
-
-<h2 id="quit">quit<a class="headerlink" href="#quit" title="Permanent link">&para;</a></h2>
-<pre><code>Exit this application
-</code></pre>
-
-<h2 id="shell">shell<a class="headerlink" href="#shell" title="Permanent link">&para;</a></h2>
-<pre><code>shell               Execute a command as if at the OS prompt
-Usage: shell [-h] command ...
-
-Execute a command as if at the OS prompt
-
-positional arguments:
-  command       the command to run
-  command_args  arguments to pass to command
-
-optional arguments:
-  -h, --help    show this help message and exit
-
-</code></pre>
-
-<h2 id="shortcuts">shortcuts<a class="headerlink" href="#shortcuts" title="Permanent link">&para;</a></h2>
-<pre><code>shortcuts           List available shortcuts
-shortcuts -h
-Usage: shortcuts [-h]
-
-List available shortcuts
-
-optional arguments:
-  -h, --help  show this help message and ex
-</code></pre></div>
+<p>Bem vindo a  THG-land. </p>
+<p>Você é um usuário do TGH que deseja começar ou melhorar as coisas de hackers (você tem permissão para invadir)? A maneira mais rápida de começar é [baixar o instalador binário do THG] (versao futura) (http://www.darkcode0x00.com/products/thg/download). Isso fornecerá acesso ao TGH Framework, de código aberto e gratuito, e a uma avaliação gratuita do THG-XCODE Pro.</p>
+<p>Você está ansioso para configurar seu [THG Development Environment] (https://github.com/rapid7/metasploit-framework/wiki/Setting-Up-a-Metasploit-Development-Environment) para poder iniciar [[Landing Pull Solicitações]] e contribuindo com um excelente código de exploração? Se assim for, você está no lugar certo. Se você é um desenvolvedor de exploração, deve revisar nossas [[Diretrizes para aceitação de módulos e aprimoramentos]] para descobrir o que esperamos quando vemos solicitações pull para novos módulos thg. Não faz ideia no que você deve começar a trabalhar? Confira as diretrizes para [[contribuir para o thg]] e mergulhe em [[Configurando um ambiente de desenvolvimento para o thg]].</p>
+<h1 id="comecando">Começando<a class="headerlink" href="#comecando" title="Permanent link">&para;</a></h1>
+<ul>
+<li>[[Configurando um ambiente de desenvolvimento do THG]]</li>
+<li>[[Usando o THG]]</li>
+<li>[[Usando o Git]]</li>
+<li>[[Relatar um bug]]</li>
+</ul>
+<h1 id="contribuindo">Contribuindo<a class="headerlink" href="#contribuindo" title="Permanent link">&para;</a></h1>
+<ul>
+<li>[[Contribuindo para o THG]]</li>
+<li>[[Diretrizes para aceitar módulos e aprimoramentos]]</li>
+<li>[[Erros comuns de codificação dos módulo THG]]</li>
+<li>[[Dicas de estilo]]</li>
+<li>[[Direitos do Comprador]]</li>
+<li>[[Solicitações de recepção de destino]]</li>
+</ul>
+<h1 id="desenvolvimento-thg">Desenvolvimento THG<a class="headerlink" href="#desenvolvimento-thg" title="Permanent link">&para;</a></h1>
+<ul>
+<li>[[Dicas de estilo]]</li>
+<li>[[Como começar a escrever um modelo de exploração]]</li>
+<li>[[Como começar a escrever um módulo auxiliar]]</li>
+<li>[[Como começar a escrever um módulo de post-ex]]</li>
+<li>[[Como começar a escrever um script CybersX]]</li>
+<li>[[Executando módulos privados]]</li>
+<li>[[Ranking de exploração]]</li>
+<li>[[Identificadores de referência do módulo THG]]</li>
+<li>[[Como verificar os níveis de patch da Microsoft para sua exploração]]</li>
+<li>[[Como limpar arquivos usando o XFileDropper]]</li>
+<li>[[Como descontinuar um módulo para o THG]]</li>
+<li>[[Como gerar relatórios ou armazenar dados no desenvolvimento de módulos]]</li>
+<li>[[Como efetuar login no THG]]</li>
+<li>[[Como ofuscar o JavaScript no THG]]</li>
+<li>[[Como analisar uma resposta HTTP]]</li>
+<li>[[Como enviar uma solicitação HTTP usando HTTPClient]]</li>
+<li>[[Como enviar uma solicitação HTTP usando o Rex Proto Http Client]]</li>
+<li>[[Como usar os gerenciadores de comandos]]</li>
+<li>[[Como usar as opções do armazenamento de dados]]</li>
+<li>[[Como usar o AuthBrute para escrever um bruteforcer]]</li>
+<li>[[Como usar o PhpEXE para explorar um bug arbitrário no upload de arquivos]]</li>
+<li>[[Como usar o Powershell em uma exploração]]</li>
+<li>[[Como usar o Railgun for Windows pós-exploração]]</li>
+<li>[[Como usar o mixin do FILEFORMAT para criar uma exploração de formato de arquivo]]</li>
+<li>[[Como usar o mix de THG Exploit Remote Tcp]]</li>
+<li>[[Como usar o Seh mixin para explorar um manipulador de exceções]]</li>
+<li>[[Como usar o WbemExec para um ataque de privilégio de gravação no Windows]]</li>
+<li>[[Como escrever uma exploração do navegador usando o BrowserExploitServer]]</li>
+<li>[[Como escrever uma exploração do navegador usando o HttpServer]]</li>
+<li>[[Como escrever um método check()]]</li>
+<li>[[Como escrever um módulo HTTP LoginScanner]]</li>
+<li>[[Como escrever um módulo usando HttpServer e HttpClient]]</li>
+<li>[[Como compactar arquivos com o Xcode Zip Archive]]</li>
+<li>[[Como usar o Windows do THG Framework Compiler para compilar o código C]]</li>
+<li>[[Como usar o TGH Framework Obfuscation CRandomizer]]</li>
+<li>[[Como descriptografar o RC4 com o THG Framework Compiler]]</li>
+<li>[[Como decodificar Base64 com o THG Framework Compiler]]</li>
+<li>[[Como executar o XOR com o THG Framework Compiler]]</li>
+<li>[[Usando a injeção ReflectiveDll]]</li>
+<li>[[Uso do Oracle]]</li>
+<li>[[Xcode Layout]]</li>
+<li>[[Definição de confiabilidade, efeitos colaterais e estabilidade do módulo]]</li>
+</ul>
+<h1 id="payloads-thg">payloads THG<a class="headerlink" href="#payloads-thg" title="Permanent link">&para;</a></h1>
+<ul>
+<li>[[Como funcionam as cargas úteis]]</li>
+<li>[[Mesclando atualizações dos pacotes juntos com as  cargas útil do THG]]</li>
+<li>[[Configuração cybersX]]</li>
+<li>[[Comunicação HTTP cybersX]]</li>
+<li>[[Modo paranóico do multímetro]]</li>
+<li>[[Comunicação confiável em rede com cybersX]]</li>
+<li>[[Controle de sono do multímetro]]</li>
+<li>[[cybersX Stageless Mode]]</li>
+<li>[[Controle de tempo limite do medidor]]</li>
+<li>[[Controle de transporte por metro]]</li>
+<li>[[Suporte Unicode cybersX]]</li>
+<li>[[Payload UUID]]</li>
+<li>[[Extensão Python]]</li>
+<li>[[Entradas e saídas das comunicações HTTP e HTTPS nos medidores CybersX e THG]]</li>
+</ul>
+<h1 id="outros-recursos-tgh">Outros recursos TGH<a class="headerlink" href="#outros-recursos-tgh" title="Permanent link">&para;</a></h1>
+<ul>
+<li>[[Notas da versão do THG 1.0]]</li>
+<li>[[Downloads por versão]]</li>
+<li>[[Evadir antivírus]]</li>
+<li>[[Como usar um módulo THG adequadamente]]</li>
+<li>[[Como usar um shell reverso no THG]]</li>
+<li>[[Informações sobre requisitos não explorados de exploração do navegador]]</li>
+<li>[[Como usar o thgpayload]]</li>
+<li>[[Como usar exim_gethostbyname_bof.rb (estouro de buffer do Exim GHOST)]]</li>
+<li>[[O que meu erro SMB Xcode Proto significa]]</li>
+<li>[[Por que o CVE não está disponível]]</li>
+</ul>
+<h1 id="recursos-do-github">Recursos do GitHub<a class="headerlink" href="#recursos-do-github" title="Permanent link">&para;</a></h1>
+<ul>
+<li>[[Git Cheatsheet]]</li>
+<li>[[Git Gotchas]]</li>
+<li>[[Sites de referência do Git]]</li>
+<li>[[Poda de ramificação remota]]</li>
+</ul></div>
         </div>
 
         <footer class="col-md-12">

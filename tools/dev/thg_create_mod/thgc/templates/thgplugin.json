@@ -1,0 +1,46 @@
+{
+    "base": [
+        "setup.py",
+        "CHANGELOG.md",
+        "LICENSE.md",
+        "Pipfile",
+        "Pipfile.lock",
+        "README.md",
+        "setup.cfg",
+        "setup.py",
+        ".gitignore",
+        "build-pyenvs.sh",
+        "tasks.py",
+        "tox.init"
+    ],
+    "docs": [
+        "<--"
+    ],
+    "imagens": [
+        "<--"
+    ],
+    "thg_plugin": [],
+        "source":[
+            "__init__.py",
+            "thg_plugin.py",
+            "pylintrc",
+            "<--", "<--"
+    ],
+    "thg_plugin_example": [
+        "thg_plugin.py",
+        "<--"
+    ],
+    "test_thg_plugin":[
+        "__init__.py",
+        "pylintrc",
+        "test_myplugin.py",
+        "<--"
+    ],
+    "requirements": [
+        "base.txt",
+        "dev.txt",
+        "test.txt",
+        "prod.txt",
+        "<--"
+    ]
+}

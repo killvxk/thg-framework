@@ -22,6 +22,7 @@ class Database:
 
     def get_module_count(self):
         count = Models.mod_refs.objects.all().count()
+        count = Models.mod_refs.objects.all().count()
         return count
 
     def insert_module(self, info):
@@ -31,7 +32,7 @@ class Database:
     def db_rebuild(self):
         print("Rebuilding Database..")
         setup.check()
-        mongoengine.disconnect(alias="default")
+        #mongoengine.disconnect(alias="default")
         self.connection = Connection.connect_db()
         """for directory_name, directories, filenames in os.walk('modules/'):
             for filename in filenames:

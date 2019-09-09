@@ -1,353 +1,107 @@
-# Welcome to THG-FRAMEWORK
+!!! success
+        
+    Bem vindo a  THG-land. 
+    
+    Você é um usuário do TGH que deseja começar ou melhorar as coisas de hackers (você tem permissão para invadir)? A maneira mais rápida de começar é [baixar o instalador binário do THG] (versao futura) (http://www.darkcode0x00.com/products/thg/download). Isso fornecerá acesso ao TGH Framework, de código aberto e gratuito, e a uma avaliação gratuita do THG-XCODE Pro.
+    
+    Você está ansioso para configurar seu [THG Development Environment] (https://github.com/rapid7/metasploit-framework/wiki/Setting-Up-a-Metasploit-Development-Environment) para poder iniciar [[Landing Pull Solicitações]] e contribuindo com um excelente código de exploração? Se assim for, você está no lugar certo. Se você é um desenvolvedor de exploração, deve revisar nossas [[Diretrizes para aceitação de módulos e aprimoramentos]] para descobrir o que esperamos quando vemos solicitações pull para novos módulos thg. Não faz ideia no que você deve começar a trabalhar? Confira as diretrizes para [[contribuir para o thg]] e mergulhe em [[Configurando um ambiente de desenvolvimento para o thg]].
+
+
+# Começando #
+
+- [Configurando um ambiente de desenvolvimento do THG](dev/thg_dev/Setting_Up_a_THG_Development_Environment.md)
+- [[Usando o THG]]
+- [[Usando o Git]]
+- [[Relatar um bug]]
+
+# Contribuindo #
+
+- [[Contribuindo para o THG]]
+- [[Diretrizes para aceitar módulos e aprimoramentos]]
+- [[Erros comuns de codificação dos módulo THG]]
+- [[Dicas de estilo]]
+- [[Direitos do Comprador]]
+- [[Solicitações de recepção de destino]]
+
+# Desenvolvimento THG #
+
+- [[Dicas de estilo]]
+- [[Como começar a escrever um modelo de exploração]]
+- [[Como começar a escrever um módulo auxiliar]]
+- [[Como começar a escrever um módulo de post-ex]]
+- [[Como começar a escrever um script CybersX]]
+- [[Executando módulos privados]]
+- [[Ranking de exploração]]
+- [[Identificadores de referência do módulo THG]]
+- [[Como verificar os níveis de patch da Microsoft para sua exploração]]
+- [[Como limpar arquivos usando o XFileDropper]]
+- [[Como descontinuar um módulo para o THG]]
+- [[Como gerar relatórios ou armazenar dados no desenvolvimento de módulos]]
+- [[Como efetuar login no THG]]
+- [[Como ofuscar o JavaScript no THG]]
+- [[Como analisar uma resposta HTTP]]
+- [[Como enviar uma solicitação HTTP usando HTTPClient]]
+- [[Como enviar uma solicitação HTTP usando o Rex Proto Http Client]]
+- [[Como usar os gerenciadores de comandos]]
+- [[Como usar as opções do armazenamento de dados]]
+- [[Como usar o AuthBrute para escrever um bruteforcer]]
+- [[Como usar o PhpEXE para explorar um bug arbitrário no upload de arquivos]]
+- [[Como usar o Powershell em uma exploração]]
+- [[Como usar o Railgun for Windows pós-exploração]]
+- [[Como usar o mixin do FILEFORMAT para criar uma exploração de formato de arquivo]]
+- [[Como usar o mix de THG Exploit Remote Tcp]]
+- [[Como usar o Seh mixin para explorar um manipulador de exceções]]
+- [[Como usar o WbemExec para um ataque de privilégio de gravação no Windows]]
+- [[Como escrever uma exploração do navegador usando o BrowserExploitServer]]
+- [[Como escrever uma exploração do navegador usando o HttpServer]]
+- [[Como escrever um método check()]]
+- [[Como escrever um módulo HTTP LoginScanner]]
+- [[Como escrever um módulo usando HttpServer e HttpClient]]
+- [[Como compactar arquivos com o Xcode Zip Archive]]
+- [[Como usar o Windows do THG Framework Compiler para compilar o código C]]
+- [[Como usar o TGH Framework Obfuscation CRandomizer]]
+- [[Como descriptografar o RC4 com o THG Framework Compiler]]
+- [[Como decodificar Base64 com o THG Framework Compiler]]
+- [[Como executar o XOR com o THG Framework Compiler]]
+- [[Usando a injeção ReflectiveDll]]
+- [[Uso do Oracle]]
+- [[Xcode Layout]]
+- [[Definição de confiabilidade, efeitos colaterais e estabilidade do módulo]]
+
+# payloads THG #
+
+- [[Como funcionam as cargas úteis]]
+- [[Mesclando atualizações dos pacotes juntos com as  cargas útil do THG]]
+- [[Configuração cybersX]]
+- [[Comunicação HTTP cybersX]]
+- [[Modo paranóico do multímetro]]
+- [[Comunicação confiável em rede com cybersX]]
+- [[Controle de sono do multímetro]]
+- [[cybersX Stageless Mode]]
+- [[Controle de tempo limite do medidor]]
+- [[Controle de transporte por metro]]
+- [[Suporte Unicode cybersX]]
+- [[Payload UUID]]
+- [[Extensão Python]]
+- [[Entradas e saídas das comunicações HTTP e HTTPS nos medidores CybersX e THG]]
+
+
+# Outros recursos TGH #
+
+- [[Notas da versão do THG 1.0]]
+- [[Downloads por versão]]
+- [[Evadir antivírus]]
+- [[Como usar um módulo THG adequadamente]]
+- [[Como usar um shell reverso no THG]]
+- [[Informações sobre requisitos não explorados de exploração do navegador]]
+- [[Como usar o thgpayload]]
+- [[Como usar exim_gethostbyname_bof.rb (estouro de buffer do Exim GHOST)]]
+- [[O que meu erro SMB Xcode Proto significa]]
+- [[Por que o CVE não está disponível]]
+
+# Recursos do GitHub #
 
-## Introduction to THG_FRAMEWORK
-
-novo sistema de exploracao e associacao de dados, voltados para comprovar a tese de desenvolvimento de uma versao alternativa do metasploit feito em python
-
-```
-
-        ===================[ thgconsole 2.0.1-dev ]===================
-
-        + -- --=[THGEF   : The Hacker Group Exploitation Framework]=-- -- +    
-        + -- --=[Code by : Darkcode                               ]=-- -- +
-        + -- --=[Codename: 0box                                ]=-- -- +
-        + -- --=[Homepage: https://www.facebook.com/darckode0x00/ ]=-- -- +
-        + -- --=[youtube : darkcode programming                   ]=-- -- +
-
-        ===================[ thgconsole-pc ]========================
-
-        + -- --=[system  => Linux              ]=-- -- +
-        + -- --=[machine => x86_64             ]=-- -- +      
-        + -- --=[gcc     => 8.3.0              ]=-- -- +
-        + -- --=[python  => 3.7                ]=-- -- +
-        + -- --=[net     => THG_Online         ]=-- -- +
-        + -- --=[ip      => 192.168.23.102     ]=-- -- +
-        + -- --=[mac     => 90:cd:b6:a4:64:e1  ]=-- -- +
-
-        ===================[ thgconsole-info   ]========================
-        ===================[ thgconsole-config ]========================
-        + -- --=[DB_STATUS =>on                ]=-- -- +
-
-
-thg-console >
-```
-#THG Commands
-```
-thg-console > help -v
-
-Documented commands (type help <topic>):
-
-Core Command
-================================================================================
-banner              Print thg-console banner
-exec                <shell thg_command> <args> Execute a thg_command in a shell
-exit                Exit the console
-ip                  show ip
-version             show version
-
-Database Backend Commands
-================================================================================
-db_rebuild          Rebuild database for search
-reload              reload the chose module
-
-Module Command
-================================================================================
-back                Clear module that chose
-check               Execute module check
-exploit             Execute module exploit
-listmod             List all modules
-run                 alias to exploit
-search              Search modules
-set                 Set module option value/ set program config
-show                Display module information
-use                 Chose a module
-
-Other
-================================================================================
-alias               Manage aliases
-edit                Edit a file in a text editor
-help                List available commands or provide detailed help for a specific command
-history             View, run, edit, save, or clear previously entered commands
-ipy                 Enter an interactive IPython shell
-load                Run commands in script file that is encoded as either ASCII or UTF-8 text
-macro               Manage macros
-py                  Invoke Python command or shell
-pyscript            Run a Python script file inside the console
-quit                Exit this application
-shell               Execute a command as if at the OS prompt
-shortcuts           List available shortcuts
-
-thg-console >
-```
-
-#Core Command
-```
-banner              Print thg-console banner
-exec                <shell thg_command> <args> Execute a thg_command in a shell
-exit                Exit the console
-ip                  show ip
-version             show version
-```
-
-# Database Backend Commands
-```
-db_rebuild          Rebuild database for search
-reload              reload the chose module
-```
-# Module Command
-```
-back                Clear module that chose
-check               Execute module check
-exploit             Execute module exploit
-listmod             List all modules
-run                 alias to exploit
-search              Search modules
-set                 Set module option value/ set program config
-show                Display module information
-use                 Chose a module
-```
-## show
-```
-show Display module information
-
-show info    =>  info display info mode       
-show missing =>  missing display missing options    
-show options =>  options display options for mods
-```
-
-## search
-```
-search Search modules
-
-search name             =>  search for name
-search module_name      =>  search for module name   
-search description      =>  search for description   
-search author           =>  search for author  
-search disclosure_date  =>  search for disclosure_date
-search service_name     =>  search for service_name  
-search service_version  =>  search for service_version  
-search check            =>  search for check  
-```
-# aux
-```
-Other
-================================================================================
-alias               Manage aliases
-edit                Edit a file in a text editor
-help                List available commands or provide detailed help for a specific command
-history             View, run, edit, save, or clear previously entered commands
-ipy                 Enter an interactive IPython shell
-load                Run commands in script file that is encoded as either ASCII or UTF-8 text
-macro               Manage macros
-py                  Invoke Python command or shell
-pyscript            Run a Python script file inside the console
-quit                Exit this application
-shell               Execute a command as if at the OS prompt
-shortcuts           List available shortcuts
-
-```
-## alias
-```
-alias Manage aliases
-Usage: alias [-h] {create, delete, list} ...
-
-Manage aliases
-
-An alias is a command that enables replacement of a word by another string.
-
-optional arguments:
-  -h, --help            show this help message and exit
-
-sub-commands:
-  {create, delete, list}
-    create              create or overwrite an alias
-    delete              delete aliases
-    list                list aliases
-
-```
-## edit
-```
-
-
-edit Edit a file in a text editor
-Usage: edit [-h] [file_path]
-
-Edit a file in a text editor
-
-The editor used is determined by a settable parameter. To set it:
-
-  set editor (program-name)
-
-positional arguments:
-  file_path   path to a file to open in editor
-
-optional arguments:
-  -h, --help  show this help message and exit
-
-```
-## help
-```
-help List available commands or provide detailed help for a specific command
-Usage: help [-h] [-v] [command] ...
-
-List available commands or provide detailed help for a specific command
-
-positional arguments:
-  command        command to retrieve help for
-  subcommand     sub-command to retrieve help for
-
-optional arguments:
-  -h, --help     show this help message and exit
-  -v, --verbose  print a list of all commands with descriptions of each
-
-
-```
-## history
-```
-history View, run, edit, save, or clear previously entered commands
-Usage: history [-h] [-r | -e | -o FILE | -t TRANSCRIPT | -c] [-s] [-x] [-v]
-               [arg]
-
-View, run, edit, save, or clear previously entered commands
-
-positional arguments:
-  arg                   empty               all history items
-                        a                   one history item by number
-                        a..b, a:b, a:, ..b  items by indices (inclusive)
-                        string              items containing string
-                        /regex/             items matching regular expression
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -r, --run             run selected history items
-  -e, --edit            edit and then run selected history items
-  -o, --output-file FILE
-                        output commands to a script file, implies -s
-  -t, --transcript TRANSCRIPT
-                        output commands and results to a transcript file,
-                        implies -s
-  -c, --clear           clear all history
-
-formatting:
-  -s, --script          output commands in script format, i.e. without command
-                        numbers
-  -x, --expanded        output fully parsed commands with any aliases and
-                        macros expanded, instead of typed commands
-  -v, --verbose         display history and include expanded commands if they
-                        differ from the typed command
-
-```
-##ipy
-```
-ipy Enter an interactive IPython shell
-
-```
-## load
-```
-load Run commands in script file that is encoded as either ASCII or UTF-8 text
-Usage: load [-h] [-t TRANSCRIPT] script_path
-
-Run commands in script file that is encoded as either ASCII or UTF-8 text
-
-Script should contain one command per line, just like the command would be
-typed in the console.
-
-It loads commands from a script file into a queue and then the normal cmd2
-REPL resumes control and executes the commands in the queue in FIFO order.
-If you attempt to redirect/pipe a load command, it will capture the output
-of the load command itself, not what it adds to the queue.
-
-If the -r/--record_transcript flag is used, this command instead records
-the output of the script commands to a transcript for testing purposes.
-
-positional arguments:
-  script_path           path to the script file
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -t, --transcript TRANSCRIPT
-                        record the output of the script as a transcript file
-
-
-```
-## macro
-```
-macro  Manage macros
-Usage: macro [-h] {create, delete, list} ...
-
-Manage macros
-
-A macro is similar to an alias, but it can contain argument placeholders.
-
-optional arguments:
-  -h, --help            show this help message and exit
-
-sub-commands:
-  {create, delete, list}
-    create              create or overwrite a macro
-    delete              delete macros
-    list                list macros
-
-See also:
-  alias
-
-```
-## py
-```
-py Invoke Python command or shell
-Usage: py [-h] [command] ...
-
-Invoke Python command or shell
-
-Note that, when invoking a command directly from the command line, this shell
-has limited ability to parse Python statements into tokens. In particular,
-there may be problems with whitespace and quotes depending on their placement.
-
-If you see strange parsing behavior, it's best to just open the Python shell by
-providing no arguments to py and run more complex statements there.
-
-positional arguments:
-  command     command to run
-  remainder   remainder of command
-
-optional arguments:
-  -h, --help  show this help message and exit
-
-```
-## pyscript
-```
-pyscript Run a Python script file inside the console
-
-```
-
-## quit                
-```
-Exit this application
-```
-
-##shell  
-```
-shell               Execute a command as if at the OS prompt
-Usage: shell [-h] command ...
-
-Execute a command as if at the OS prompt
-
-positional arguments:
-  command       the command to run
-  command_args  arguments to pass to command
-
-optional arguments:
-  -h, --help    show this help message and exit
-
-```
-##shortcuts
-```
-shortcuts           List available shortcuts
-shortcuts -h
-Usage: shortcuts [-h]
-
-List available shortcuts
-
-optional arguments:
-  -h, --help  show this help message and ex
-```
+- [[Git Cheatsheet]]
+- [[Git Gotchas]]
+- [[Sites de referência do Git]]
+- [[Poda de ramificação remota]]

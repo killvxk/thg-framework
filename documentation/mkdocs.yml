@@ -4,10 +4,10 @@
 site_name: 'thg-framework'
 site_description: 'thg full docs'
 site_author: 'darkcode0x00 luizcorrea'
-site_url: 'https://darkcode357.github.io/thg-framework/'
+site_url: 'https://darkcode357.gitlab.io/thg-framework/'
 # Repository
 repo_name: 'darkcode357/thg-framework'
-repo_url: 'https://github.com/darkcode357/thg-framework'
+repo_url: 'https://gitlab.com/darkcode357/thg-framework'
 # Copyright
 copyright: 'Copyright &copy; 2019 - 2020 darkcode0x00'
 # Configuration
@@ -23,13 +23,25 @@ extra:
       link: 'https://twitter.com/squidfunk'
     - type: 'linkedin'
       link: 'https://linkedin.com/in/squidfunk'
-#exx
+
 markdown_extensions:
-    - smarty
-    - admonition
-    - toc:
-        permalink: True
-    - sane_lists
+  - pymdownx.arithmatex
+  - admonition
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
 
 plugins:
   - search
@@ -44,10 +56,29 @@ nav:
   - tags: cli/tags.md
   - LICENSE: ./LICENSE.md
 
-- Contributing:
-  - Get Started: ./contributing/Contributing-to-thg.md
-  - Templates: cli/templates.md
-  - Plugins: ./plugins/plugin-creation.md
+- thg_dev:
+  - gettin_started:
+    - thg_Development_Environment: ./dev/thg_dev/_Sidebar.md
+    - using_thg: ./dev/thg_dev/Using-thg.md
+    - git:
+        - Using-Git: ./dev/git/Using-Git.md
+        - Git_cheatsheet:  ./dev/git/Git-cheatsheet.md
+        - Git-Reference-Sites: ./dev/git/Git-Reference-Sites.md
+    - reporting_a_bug: ./dev/thg_dev/Reporting-a-Bug.md
+    - Get Started: ./dev/contributing/Contributing-to-thg.md
+    - templates: cli/templates.md
+    - Roadmaps:
+        - 2019:
+          - Roadmap: ./dev/roadmaps/2019/2019-Roadmap.md
+          - Roadmap_Review: ./dev/roadmaps/2019/2019-Roadmap-Review.md
+  - contributing:
+    - contributing_to_thg: ./dev/thg_dev/Contributing-to-thg.md
+  - thg_development:
+    - Style_Tips: ./dev/thg_dev/Style_Tips.md
+    - How_to_get_started_with_writing_an_exploit: ./dev/thg_dev/How-to-get-started-with-writing-an-exploit.md
+    - How_to_get_started_with_writing_an_auxiliary module: #concertacao
+
+
 
 - documentation:
   - capture the flag:
@@ -156,3 +187,5 @@ nav:
     - thg_ids: ./tutorials/ids/ids.md
     - thg_radio: ./tutorials/radio/radio.md
     - thg_unpacker: ./tutorials/unpacker/unpacker.md
+
+
