@@ -83,18 +83,48 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">thg_dev <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
+  <li class="dropdown-submenu">
+    <a href="#">gettin_started</a>
+    <ul class="dropdown-menu">
+            
 <li >
-    <a href="../../../../dev/thg_dev/_Sidebar/">thg_dev</a>
+    <a href="../../../../dev/thg_dev/_Sidebar/">thg_Development_Environment</a>
 </li>
-                                    
+            
+<li >
+    <a href="../../../../dev/thg_dev/Using-thg/">using_thg</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">git</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../dev/git/Using-Git/">Using-Git</a>
+</li>
+            
+<li >
+    <a href="../../../../dev/git/Git-cheatsheet/">Git_cheatsheet</a>
+</li>
+            
+<li >
+    <a href="../../../../dev/git/Git-Reference-Sites/">Git-Reference-Sites</a>
+</li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../../../../dev/thg_dev/Reporting-a-Bug/">reporting_a_bug</a>
+</li>
+            
 <li >
     <a href="../../../../dev/contributing/Contributing-to-thg/">Get Started</a>
 </li>
-                                    
+            
 <li >
     <a href="../../../../cli/templates/">templates</a>
 </li>
-                                    
+            
   <li class="dropdown-submenu">
     <a href="#">Roadmaps</a>
     <ul class="dropdown-menu">
@@ -114,21 +144,29 @@
   </li>
     </ul>
   </li>
+    </ul>
+  </li>
                                     
   <li class="dropdown-submenu">
-    <a href="#">git</a>
+    <a href="#">contributing</a>
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../../../../dev/git/Using-Git/">Using-Git</a>
+    <a href="../../../../dev/thg_dev/Contributing-to-thg/">contributing_to_thg</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">thg_development</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../dev/thg_dev/Style_Tips/">Style_Tips</a>
 </li>
             
 <li >
-    <a href="../../../../dev/git/Git-cheatsheet/">Git_cheatsheet</a>
-</li>
-            
-<li >
-    <a href="../../../../dev/git/Git-Reference-Sites/">Git-Reference-Sites</a>
+    <a href="../../../../dev/thg_dev/How-to-get-started-with-writing-an-exploit/">How_to_get_started_with_writing_an_exploit</a>
 </li>
     </ul>
   </li>
@@ -664,149 +702,148 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="windows">WINDOWS<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h1>
-<h2 id="backup-gpo-audit-policy-to-backup-file">Backup GPO Audit Policy to backup file:<a class="headerlink" href="#backup-gpo-audit-policy-to-backup-file" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; auditpol /backup /file:C\auditpolicy.csv
-</code></pre>
+<h1 id="windows">WINDOWS</h1>
+<h2 id="backup-gpo-audit-policy-to-backup-file">Backup GPO Audit Policy to backup file:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; auditpol /backup /file:C\auditpolicy.csv
+</pre></div>
 
-<h2 id="restore-gpo-audit-policy-from-backup-file">Restore GPO Audit Policy from backup file:<a class="headerlink" href="#restore-gpo-audit-policy-from-backup-file" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; auditpol /restore /file:C:\auditpolicy.csv
-</code></pre>
+<h2 id="restore-gpo-audit-policy-from-backup-file">Restore GPO Audit Policy from backup file:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; auditpol /restore /file:C:\auditpolicy.csv
+</pre></div>
 
-<h2 id="backup-all-gpos-in-domain-and-save-to-path">Backup All GPOs in domain and save to Path:<a class="headerlink" href="#backup-all-gpos-in-domain-and-save-to-path" title="Permanent link">&para;</a></h2>
-<pre><code>PS C:\&gt; Backup-Gpo -All -Path \\&lt;SERVER&gt;\&lt;PATH TOBACKUPS&gt;
-</code></pre>
+<h2 id="backup-all-gpos-in-domain-and-save-to-path">Backup All GPOs in domain and save to Path:</h2>
+<div class="highlight"><pre><span></span>PS C:\&gt; Backup-Gpo -All -Path \\&lt;SERVER&gt;\&lt;PATH TOBACKUPS&gt;
+</pre></div>
 
-<h2 id="restore-all-gpos-in-domain-and-save-to-path">Restore All GPOs in domain and save to Path:<a class="headerlink" href="#restore-all-gpos-in-domain-and-save-to-path" title="Permanent link">&para;</a></h2>
-<pre><code>PS C:\&gt; Restore-GPO -All -Domain &lt;INSERT DOMAINNAME&gt; -Path \\Serverl\GpoBackups
-</code></pre>
+<h2 id="restore-all-gpos-in-domain-and-save-to-path">Restore All GPOs in domain and save to Path:</h2>
+<div class="highlight"><pre><span></span>PS C:\&gt; Restore-GPO -All -Domain &lt;INSERT DOMAINNAME&gt; -Path \\Serverl\GpoBackups
+</pre></div>
 
-<h2 id="start-volume-shadow-service">Start Volume Shadow Service:<a class="headerlink" href="#start-volume-shadow-service" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; net start VSS
-</code></pre>
+<h2 id="start-volume-shadow-service">Start Volume Shadow Service:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; net start VSS
+</pre></div>
 
-<h2 id="list-all-shadow-files-and-storage">List all shadow files and storage:<a class="headerlink" href="#list-all-shadow-files-and-storage" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; vssadmin List ShadowStorage
-</code></pre>
+<h2 id="list-all-shadow-files-and-storage">List all shadow files and storage:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; vssadmin List ShadowStorage
+</pre></div>
 
-<h2 id="list-all-shadow-files">List all shadow files:<a class="headerlink" href="#list-all-shadow-files" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; vssadmin List Shadows
-</code></pre>
+<h2 id="list-all-shadow-files">List all shadow files:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; vssadmin List Shadows
+</pre></div>
 
-<h2 id="browse-shadow-copy-for-filesfolders">Browse Shadow Copy for files/folders:<a class="headerlink" href="#browse-shadow-copy-for-filesfolders" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; mklink /d c:\&lt;CREATE FOLDER&gt;\&lt;PROVIDE FOLDERNAME BUT DO NOT CREATE&gt;\\?\GLOBALROOT\Device\HarddiskVolumeShadowCopyl\
-</code></pre>
+<h2 id="browse-shadow-copy-for-filesfolders">Browse Shadow Copy for files/folders:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; mklink /d c:\&lt;CREATE FOLDER&gt;\&lt;PROVIDE FOLDERNAME BUT DO NOT CREATE&gt;\\?\GLOBALROOT\Device\HarddiskVolumeShadowCopyl\
+</pre></div>
 
-<h2 id="revert-back-to-a-selected-shadow-file-on-windows-server-and-windows-8">Revert back to a selected shadow file on Windows Server and Windows 8:<a class="headerlink" href="#revert-back-to-a-selected-shadow-file-on-windows-server-and-windows-8" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; vssadmin revert shadow /shadow={&lt;SHADOW COPYID&gt;} /ForceDismount
-</code></pre>
+<h2 id="revert-back-to-a-selected-shadow-file-on-windows-server-and-windows-8">Revert back to a selected shadow file on Windows Server and Windows 8:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; vssadmin revert shadow /shadow={&lt;SHADOW COPYID&gt;} /ForceDismount
+</pre></div>
 
-<h2 id="list-a-files-previous-versions-history-using-volrestexe">List a files previous versions history using volrest.exe:<a class="headerlink" href="#list-a-files-previous-versions-history-using-volrestexe" title="Permanent link">&para;</a></h2>
-<pre><code>Ref. https://www.microsoft.com/enus/download/details.aspx?id=17657
+<h2 id="list-a-files-previous-versions-history-using-volrestexe">List a files previous versions history using volrest.exe:</h2>
+<div class="highlight"><pre><span></span>Ref. https://www.microsoft.com/enus/download/details.aspx?id=17657
 C:\&gt; &quot;\Program Files (x86)\Windows ResourceKits\Tools\volrest.exe&quot; &quot;\\localhost\c$\&lt;PATH TOFILE&gt;\&lt;FILE NAME&gt;&quot;
-</code></pre>
+</pre></div>
 
-<h2 id="revert-back-to-a-selected-previous-file-version-or-gmt-file-name-for-specific-previous-version-using-volrestexe">Revert back to a selected previous file version or @GMT file name for specific previous version using volrest.exe:<a class="headerlink" href="#revert-back-to-a-selected-previous-file-version-or-gmt-file-name-for-specific-previous-version-using-volrestexe" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; subst Z: \\localhost\c$\$\&lt;PATH TO FILE&gt;
+<h2 id="revert-back-to-a-selected-previous-file-version-or-gmt-file-name-for-specific-previous-version-using-volrestexe">Revert back to a selected previous file version or @GMT file name for specific previous version using volrest.exe:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; subst Z: \\localhost\c$\$\&lt;PATH TO FILE&gt;
 C:\&gt; &quot;\Program Files (x86)\Windows ResourceKits\Tools\volrest.exe&quot; &quot;\\localhost\c$\&lt;PATH TOFILE&gt;\&lt;CURRENT FILE NAME OR @GMT FILE NAME FROM LISTCOMMAND ABOVE&gt;&quot; /R:Z:\
 C:\&gt; subst Z: /0
-</code></pre>
+</pre></div>
 
-<h2 id="revert-back-a-directory-and-subdirectory-filesprevious-version-using-volrestexe">Revert back a directory and subdirectory filesprevious version using volrest.exe:<a class="headerlink" href="#revert-back-a-directory-and-subdirectory-filesprevious-version-using-volrestexe" title="Permanent link">&para;</a></h2>
-<pre><code>C: \&gt; &quot;\Program Files (x86) \Windows ResourceKits\Tools\volrest.exe&quot; \\localhost\c$\&lt;PATH TOFOLDER\*·* /5 /r:\\localhost\c$\&lt;PATH TO FOLDER&gt;\
-</code></pre>
+<h2 id="revert-back-a-directory-and-subdirectory-filesprevious-version-using-volrestexe">Revert back a directory and subdirectory filesprevious version using volrest.exe:</h2>
+<div class="highlight"><pre><span></span>C: \&gt; &quot;\Program Files (x86) \Windows ResourceKits\Tools\volrest.exe&quot; \\localhost\c$\&lt;PATH TOFOLDER\*·* /5 /r:\\localhost\c$\&lt;PATH TO FOLDER&gt;\
+</pre></div>
 
-<h2 id="revert-back-to-a-selected-shadow-file-on-windows-server-and-windows-7-and-10-using-wmic">Revert back to a selected shadow file on Windows Server and Windows 7 and 10 using wmic:<a class="headerlink" href="#revert-back-to-a-selected-shadow-file-on-windows-server-and-windows-7-and-10-using-wmic" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; wmic shadowcopy call create Volume='C:\'
-</code></pre>
+<h2 id="revert-back-to-a-selected-shadow-file-on-windows-server-and-windows-7-and-10-using-wmic">Revert back to a selected shadow file on Windows Server and Windows 7 and 10 using wmic:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; wmic shadowcopy call create Volume=&#39;C:\&#39;
+</pre></div>
 
-<h2 id="create-a-shadow-copy-of-volume-c-on-windows-7-and-10-using-powershell">Create a shadow copy of volume C on Windows 7 and 10 using PowerShell:<a class="headerlink" href="#create-a-shadow-copy-of-volume-c-on-windows-7-and-10-using-powershell" title="Permanent link">&para;</a></h2>
-<pre><code>PS C:\&gt; (gwmi -listwin32_shadowcopy).Create('C:\', 'ClientAccessible')
-</code></pre>
+<h2 id="create-a-shadow-copy-of-volume-c-on-windows-7-and-10-using-powershell">Create a shadow copy of volume C on Windows 7 and 10 using PowerShell:</h2>
+<div class="highlight"><pre><span></span>PS C:\&gt; (gwmi -listwin32_shadowcopy).Create(&#39;C:\&#39;, &#39;ClientAccessible&#39;)
+</pre></div>
 
-<h2 id="create-a-shadow-copy-of-volume-c-on-windows-server-2003-and-2008">Create a shadow copy of volume C on Windows Server 2003 and 2008:<a class="headerlink" href="#create-a-shadow-copy-of-volume-c-on-windows-server-2003-and-2008" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; vssadmin create shadow /for=c:
-</code></pre>
+<h2 id="create-a-shadow-copy-of-volume-c-on-windows-server-2003-and-2008">Create a shadow copy of volume C on Windows Server 2003 and 2008:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; vssadmin create shadow /for=c:
+</pre></div>
 
-<h2 id="create-restore-point-on-windows">Create restore point on Windows:<a class="headerlink" href="#create-restore-point-on-windows" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; wmic.exe /Namespace:\\root\default Path
-</code></pre>
+<h2 id="create-restore-point-on-windows">Create restore point on Windows:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; wmic.exe /Namespace:\\root\default Path
+</pre></div>
 
-<h2 id="systemrestore-call-createrestorepoint-date-100-start-system-restore-points-on-windows-xp">SystemRestore Call CreateRestorePoint &ldquo;%DATE%&rdquo;, 100, Start system restore points on Windows XP:<a class="headerlink" href="#systemrestore-call-createrestorepoint-date-100-start-system-restore-points-on-windows-xp" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; sc config srservice start= disabled
+<h2 id="systemrestore-call-createrestorepoint-date-100-start-system-restore-points-on-windows-xp">SystemRestore Call CreateRestorePoint "%DATE%", 100, Start system restore points on Windows XP:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; sc config srservice start= disabled
 C:\&gt; reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\SystemRestore&quot; /v DisableSR /t REG_DWORD /d 1 /f
 C:\&gt; net stop srservice
+</pre></div>
 
-</code></pre>
-
-<h2 id="stop-system-restore-points-on-windows-xp">Stop system restore points on Windows XP:<a class="headerlink" href="#stop-system-restore-points-on-windows-xp" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; sc config srservice start= Auto
+<h2 id="stop-system-restore-points-on-windows-xp">Stop system restore points on Windows XP:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; sc config srservice start= Auto
 C:\&gt; net start srservice
 C:\&gt; reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\SystemRestore&quot; /v DisableSR /t REG_DWORD /d 0 /f
-</code></pre>
+</pre></div>
 
-<h2 id="list-of-restore-points">List of restore points:<a class="headerlink" href="#list-of-restore-points" title="Permanent link">&para;</a></h2>
-<pre><code>PS C:\&gt; Get-ComputerRestorePoint
-</code></pre>
+<h2 id="list-of-restore-points">List of restore points:</h2>
+<div class="highlight"><pre><span></span>PS C:\&gt; Get-ComputerRestorePoint
+</pre></div>
 
-<h2 id="restore-from-a-specific-restore-point">Restore from a specific restore point:<a class="headerlink" href="#restore-from-a-specific-restore-point" title="Permanent link">&para;</a></h2>
-<pre><code>PS C:\&gt; Restore-Computer -RestorePoint &lt;RESTOREPOINT#&gt; -Confirm
-</code></pre>
+<h2 id="restore-from-a-specific-restore-point">Restore from a specific restore point:</h2>
+<div class="highlight"><pre><span></span>PS C:\&gt; Restore-Computer -RestorePoint &lt;RESTOREPOINT#&gt; -Confirm
+</pre></div>
 
-<h1 id="linux">LINUX<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h1>
-<h2 id="reset-root-password-in-single-user-mode">Reset root password in single user mode:<a class="headerlink" href="#reset-root-password-in-single-user-mode" title="Permanent link">&para;</a></h2>
-<h2 id="step-1-reboot-system">Step 1: Reboot system.<a class="headerlink" href="#step-1-reboot-system" title="Permanent link">&para;</a></h2>
-<pre><code>reboot -f
-</code></pre>
+<h1 id="linux">LINUX</h1>
+<h2 id="reset-root-password-in-single-user-mode">Reset root password in single user mode:</h2>
+<h2 id="step-1-reboot-system">Step 1: Reboot system.</h2>
+<div class="highlight"><pre><span></span>reboot -f
+</pre></div>
 
-<h2 id="step-2-press-esc-at-grub-screen">Step 2: Press ESC at GRUB screen.<a class="headerlink" href="#step-2-press-esc-at-grub-screen" title="Permanent link">&para;</a></h2>
-<h2 id="step-3-select-default-entry-and-then-e-for-edit">Step 3: Select default entry and then &lsquo;e&rsquo; for edit.<a class="headerlink" href="#step-3-select-default-entry-and-then-e-for-edit" title="Permanent link">&para;</a></h2>
-<h2 id="step-4-scroll-down-until-you-see-a-line-that-starts-with-linux-linux16-or-linuxefi">Step 4: Scroll down until, you see a line that starts with linux, linux16 or linuxefi.<a class="headerlink" href="#step-4-scroll-down-until-you-see-a-line-that-starts-with-linux-linux16-or-linuxefi" title="Permanent link">&para;</a></h2>
-<h2 id="step-5-at-end-of-that-line-leave-a-space-and-add-without-quote-rw-initbinbash">Step 5: At end of that line leave a space and add without quote &lsquo;rw init=/bin/bash&rsquo;<a class="headerlink" href="#step-5-at-end-of-that-line-leave-a-space-and-add-without-quote-rw-initbinbash" title="Permanent link">&para;</a></h2>
-<h2 id="step-6-press-ctrl-x-to-reboot">Step 6: Press Ctrl-X to reboot.<a class="headerlink" href="#step-6-press-ctrl-x-to-reboot" title="Permanent link">&para;</a></h2>
-<h2 id="step-7-after-reboot-should-be-in-single-user-modeand-root-change-password">Step 7: After reboot, should be in single user modeand root, change password.<a class="headerlink" href="#step-7-after-reboot-should-be-in-single-user-modeand-root-change-password" title="Permanent link">&para;</a></h2>
-<pre><code>passwd
-</code></pre>
+<h2 id="step-2-press-esc-at-grub-screen">Step 2: Press ESC at GRUB screen.</h2>
+<h2 id="step-3-select-default-entry-and-then-e-for-edit">Step 3: Select default entry and then 'e' for edit.</h2>
+<h2 id="step-4-scroll-down-until-you-see-a-line-that-starts-with-linux-linux16-or-linuxefi">Step 4: Scroll down until, you see a line that starts with linux, linux16 or linuxefi.</h2>
+<h2 id="step-5-at-end-of-that-line-leave-a-space-and-add-without-quote-rw-initbinbash">Step 5: At end of that line leave a space and add without quote 'rw init=/bin/bash'</h2>
+<h2 id="step-6-press-ctrl-x-to-reboot">Step 6: Press Ctrl-X to reboot.</h2>
+<h2 id="step-7-after-reboot-should-be-in-single-user-modeand-root-change-password">Step 7: After reboot, should be in single user modeand root, change password.</h2>
+<div class="highlight"><pre><span></span>passwd
+</pre></div>
 
-<h2 id="step-8-reboot-system">Step 8: Reboot system.<a class="headerlink" href="#step-8-reboot-system" title="Permanent link">&para;</a></h2>
-<pre><code># reboot -f
-</code></pre>
+<h2 id="step-8-reboot-system">Step 8: Reboot system.</h2>
+<div class="highlight"><pre><span></span># reboot -f
+</pre></div>
 
-<h2 id="reinstall-a-package">Reinstall a package:<a class="headerlink" href="#reinstall-a-package" title="Permanent link">&para;</a></h2>
-<pre><code># apt-get install --reinstall &lt;COMPROMISED PACKAGENAME&gt;
-</code></pre>
+<h2 id="reinstall-a-package">Reinstall a package:</h2>
+<div class="highlight"><pre><span></span># apt-get install --reinstall &lt;COMPROMISED PACKAGENAME&gt;
+</pre></div>
 
-<h2 id="reinstall-all-packages">Reinstall all packages:<a class="headerlink" href="#reinstall-all-packages" title="Permanent link">&para;</a></h2>
-<pre><code># apt-get install --reinstall $(dpkg --getselections lgrep -v deinstall)
-</code></pre>
+<h2 id="reinstall-all-packages">Reinstall all packages:</h2>
+<div class="highlight"><pre><span></span># apt-get install --reinstall $(dpkg --getselections lgrep -v deinstall)
+</pre></div>
 
-<h1 id="kill-malware-process">KILL MALWARE PROCESS<a class="headerlink" href="#kill-malware-process" title="Permanent link">&para;</a></h1>
-<h1 id="windows_1">WINDOWS<a class="headerlink" href="#windows_1" title="Permanent link">&para;</a></h1>
-<h2 id="malware-removal">Malware Removal:<a class="headerlink" href="#malware-removal" title="Permanent link">&para;</a></h2>
-<pre><code>Ref. http://www.gmer.net/
+<h1 id="kill-malware-process">KILL MALWARE PROCESS</h1>
+<h1 id="windows_1">WINDOWS</h1>
+<h2 id="malware-removal">Malware Removal:</h2>
+<div class="highlight"><pre><span></span>Ref. http://www.gmer.net/
 C:\&gt; gmer.exe (GUI)
-</code></pre>
+</pre></div>
 
-<h2 id="kill-running-malicious-file">Kill running malicious file:<a class="headerlink" href="#kill-running-malicious-file" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; gmer.exe -killfile
+<h2 id="kill-running-malicious-file">Kill running malicious file:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; gmer.exe -killfile
 C:\WINDOWS\system32\drivers\&lt;MALICIOUS FILENAME&gt;.exe
-</code></pre>
+</pre></div>
 
-<h2 id="kill-running-malicious-file-in-powershell">Kill running malicious file in PowerShell:<a class="headerlink" href="#kill-running-malicious-file-in-powershell" title="Permanent link">&para;</a></h2>
-<pre><code>PS C:\&gt; Stop-Process -Name &lt;PROCESS NAME&gt;
+<h2 id="kill-running-malicious-file-in-powershell">Kill running malicious file in PowerShell:</h2>
+<div class="highlight"><pre><span></span>PS C:\&gt; Stop-Process -Name &lt;PROCESS NAME&gt;
 PS C:\&gt; Stop-Process -ID &lt;PID&gt;
-</code></pre>
+</pre></div>
 
-<h1 id="linux_1">LINUX<a class="headerlink" href="#linux_1" title="Permanent link">&para;</a></h1>
-<h2 id="stop-a-malware-process">Stop a malware process:<a class="headerlink" href="#stop-a-malware-process" title="Permanent link">&para;</a></h2>
-<pre><code>kill &lt;MALICIOUS PID&gt;
-</code></pre>
+<h1 id="linux_1">LINUX</h1>
+<h2 id="stop-a-malware-process">Stop a malware process:</h2>
+<div class="highlight"><pre><span></span>kill &lt;MALICIOUS PID&gt;
+</pre></div>
 
-<h2 id="change-the-malware-process-from-execution-and-move">Change the malware process from execution and move:<a class="headerlink" href="#change-the-malware-process-from-execution-and-move" title="Permanent link">&para;</a></h2>
-<pre><code>chmod -x /usr/sbin/&lt;SUSPICIOUS FILE NAME&gt;
+<h2 id="change-the-malware-process-from-execution-and-move">Change the malware process from execution and move:</h2>
+<div class="highlight"><pre><span></span>chmod -x /usr/sbin/&lt;SUSPICIOUS FILE NAME&gt;
 mkdir /home/quarantine/
 mv /usr/sbin/&lt;SUSPICIOUS FILE NAME&gt;/home/quarantine/
-</code></pre></div>
+</pre></div></div>
         </div>
 
         <footer class="col-md-12">

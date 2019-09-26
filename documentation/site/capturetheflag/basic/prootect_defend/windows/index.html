@@ -83,18 +83,48 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">thg_dev <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
+  <li class="dropdown-submenu">
+    <a href="#">gettin_started</a>
+    <ul class="dropdown-menu">
+            
 <li >
-    <a href="../../../../dev/thg_dev/_Sidebar/">thg_dev</a>
+    <a href="../../../../dev/thg_dev/_Sidebar/">thg_Development_Environment</a>
 </li>
-                                    
+            
+<li >
+    <a href="../../../../dev/thg_dev/Using-thg/">using_thg</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">git</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../dev/git/Using-Git/">Using-Git</a>
+</li>
+            
+<li >
+    <a href="../../../../dev/git/Git-cheatsheet/">Git_cheatsheet</a>
+</li>
+            
+<li >
+    <a href="../../../../dev/git/Git-Reference-Sites/">Git-Reference-Sites</a>
+</li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../../../../dev/thg_dev/Reporting-a-Bug/">reporting_a_bug</a>
+</li>
+            
 <li >
     <a href="../../../../dev/contributing/Contributing-to-thg/">Get Started</a>
 </li>
-                                    
+            
 <li >
     <a href="../../../../cli/templates/">templates</a>
 </li>
-                                    
+            
   <li class="dropdown-submenu">
     <a href="#">Roadmaps</a>
     <ul class="dropdown-menu">
@@ -114,21 +144,29 @@
   </li>
     </ul>
   </li>
+    </ul>
+  </li>
                                     
   <li class="dropdown-submenu">
-    <a href="#">git</a>
+    <a href="#">contributing</a>
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../../../../dev/git/Using-Git/">Using-Git</a>
+    <a href="../../../../dev/thg_dev/Contributing-to-thg/">contributing_to_thg</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">thg_development</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../dev/thg_dev/Style_Tips/">Style_Tips</a>
 </li>
             
 <li >
-    <a href="../../../../dev/git/Git-cheatsheet/">Git_cheatsheet</a>
-</li>
-            
-<li >
-    <a href="../../../../dev/git/Git-Reference-Sites/">Git-Reference-Sites</a>
+    <a href="../../../../dev/thg_dev/How-to-get-started-with-writing-an-exploit/">How_to_get_started_with_writing_an_exploit</a>
 </li>
     </ul>
   </li>
@@ -707,31 +745,31 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="disablestop-services">DISABLE/STOP SERVICES<a class="headerlink" href="#disablestop-services" title="Permanent link">&para;</a></h1>
-<h2 id="get-a-list-of-services-and-disable-or-stop">Get a list of services and disable or stop:<a class="headerlink" href="#get-a-list-of-services-and-disable-or-stop" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; sc query
+<h1 id="disablestop-services">DISABLE/STOP SERVICES</h1>
+<h2 id="get-a-list-of-services-and-disable-or-stop">Get a list of services and disable or stop:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; sc query
 C:\&gt; sc config &quot;&lt;SERVICE NAME&gt;&quot; start= disabled
 C:\&gt; sc stop &quot;&lt;SERVICE NAME&gt;&quot;
-C:\&gt; wmic service where name='&lt;SERVICE NAME&gt;' callChangeStartmode Disabled
-</code></pre>
+C:\&gt; wmic service where name=&#39;&lt;SERVICE NAME&gt;&#39; callChangeStartmode Disabled
+</pre></div>
 
-<h1 id="host-system-firewalls">HOST SYSTEM FIREWALLS<a class="headerlink" href="#host-system-firewalls" title="Permanent link">&para;</a></h1>
-<h2 id="show-all-rules">Show all rules:<a class="headerlink" href="#show-all-rules" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; netsh advfirewall firewall show rule name=all
-</code></pre>
+<h1 id="host-system-firewalls">HOST SYSTEM FIREWALLS</h1>
+<h2 id="show-all-rules">Show all rules:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; netsh advfirewall firewall show rule name=all
+</pre></div>
 
-<h2 id="set-firewall-onoff">Set firewall on/off:<a class="headerlink" href="#set-firewall-onoff" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; netsh advfirewall set currentprofile state on
+<h2 id="set-firewall-onoff">Set firewall on/off:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; netsh advfirewall set currentprofile state on
 C:\&gt; netsh advfirewall set currentprofilefirewallpolicy blockinboundalways,allowoutbound
 C:\&gt; netsh advfirewall set publicprofile state on
 C:\&gt; netsh advfirewall set privateprofile state on
 C:\&gt; netsh advfirewall set domainprofile state on
 C:\&gt; netsh advfirewall set allprofile state on
 C:\&gt; netsh advfirewall set allprof ile state
-</code></pre>
+</pre></div>
 
-<h2 id="offset-firewall-rules-examples">offSet firewall rules examples:<a class="headerlink" href="#offset-firewall-rules-examples" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; netsh advfirewall firewall add rule name=&quot;OpenPort 80&quot; dir=in action=allow protocol=TCPlocalport=80
+<h2 id="offset-firewall-rules-examples">offSet firewall rules examples:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; netsh advfirewall firewall add rule name=&quot;OpenPort 80&quot; dir=in action=allow protocol=TCPlocalport=80
 C:\&gt; netsh advfirewall firewall add rule name=&quot;MyApplication&quot; dir=in action=al lowprogram=&quot;C:\MyApp\MyApp.exe&quot; enable=yes
 C:\&gt; netsh advfirewall firewall add rule name=&quot;MyApplication&quot; dir=in action=al lowprogram=&quot;C:\MyApp\MyApp.exe&quot; enable=yesremoteip=157.60.0.1,172.16.0.0/16,Local5ubnetprof i le=domain
 C:\&gt; netsh advfirewall firewall add rule name=&quot;MyApplication&quot; dir=in action=allowprogram=&quot;C:\MyApp\MyApp.exe&quot; enable=yesremoteip=157.60.0.1,172.16.0.0/16,LocalSubnetprofile=domain
@@ -740,55 +778,54 @@ C:\&gt; netsh advfirewall firewall delete rulename=rule name program=&quot;C:\My
 C:\&gt; netsh advfirewall firewall delete rulename=rule name protocol=udp localport=500
 C:\&gt; netsh advfirewall firewall set rulegroup=&quot; remote desktop&quot; new enable=Yes prof ile=domain
 C:\&gt; netsh advfirewall firewall set rulegroup=&quot;remote desktop&quot; new enable=No profile=publicSetup
-</code></pre>
+</pre></div>
 
-<h2 id="togging-location">togging location:<a class="headerlink" href="#togging-location" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; netsh advfirewall set currentprofile logging
+<h2 id="togging-location">togging location:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; netsh advfirewall set currentprofile logging
 C:\&lt;LOCATION&gt;\&lt;FILE NAME&gt;Windows firewall tog location and settings:
 C:\&gt; more %systemroot%\system32\LogFiles\Firewall\pfirewall.log
 C:\&gt; netsh advfirewall set allprofile loggingmaxfilesize 4096
 C:\&gt; netsh advfirewall set allprofile loggingdroppedconnections enable
 C:\&gt; netsh advfirewall set allprofile loggingallowedconnections enable
-</code></pre>
+</pre></div>
 
-<h2 id="display-firewall-logs">Display firewall logs:<a class="headerlink" href="#display-firewall-logs" title="Permanent link">&para;</a></h2>
-<pre><code>PS C:\&gt; Get-Content$env:systemroot\system32\LogFiles\Firewall\pfirewall. log
-</code></pre>
+<h2 id="display-firewall-logs">Display firewall logs:</h2>
+<div class="highlight"><pre><span></span>PS C:\&gt; Get-Content$env:systemroot\system32\LogFiles\Firewall\pfirewall. log
+</pre></div>
 
-<h1 id="passwords">PASSWORDS<a class="headerlink" href="#passwords" title="Permanent link">&para;</a></h1>
-<h2 id="change-password">Change password:<a class="headerlink" href="#change-password" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; net user &lt;USER NAME&gt; * /domain
+<h1 id="passwords">PASSWORDS</h1>
+<h2 id="change-password">Change password:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; net user &lt;USER NAME&gt; * /domain
 C:\&gt; net user &lt;USER NAME&gt; &lt;NEW PASSWORD&gt;
-</code></pre>
+</pre></div>
 
-<h2 id="change-password-remotely">Change password remotely:<a class="headerlink" href="#change-password-remotely" title="Permanent link">&para;</a></h2>
-<p><img alt="Ref" src="https://technet.microsoft.com/enus/sysinternals/bb897543" /></p>
-<pre><code>C:\&gt; pspasswd.exe \\&lt;IP ADDRESS or NAME OF REMOTECOMPUTER&gt; -u &lt;REMOTE USER NAME&gt; -p &lt;NEW PASSWORD&gt;
-</code></pre>
+<h2 id="change-password-remotely">Change password remotely:</h2>
+<p><img alt="Ref" src="https://technet.microsoft.com/enus/sysinternals/bb897543" />
+<div class="highlight"><pre><span></span>C:\&gt; pspasswd.exe \\&lt;IP ADDRESS or NAME OF REMOTECOMPUTER&gt; -u &lt;REMOTE USER NAME&gt; -p &lt;NEW PASSWORD&gt;
+</pre></div></p>
+<h2 id="change-password-remotely_1">Change password remotely:</h2>
+<div class="highlight"><pre><span></span>PS C:\&gt; pspasswd.exe \\&lt;IP ADDRESS or NAME OF REMOTECOMPUTER&gt;HOST FILE
+</pre></div>
 
-<h2 id="change-password-remotely_1">Change password remotely:<a class="headerlink" href="#change-password-remotely_1" title="Permanent link">&para;</a></h2>
-<pre><code>PS C:\&gt; pspasswd.exe \\&lt;IP ADDRESS or NAME OF REMOTECOMPUTER&gt;HOST FILE
-</code></pre>
+<h2 id="flush-dns-of-malicious-domainip">Flush DNS of malicious domain/IP:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; ipconfig /flushdns
+</pre></div>
 
-<h2 id="flush-dns-of-malicious-domainip">Flush DNS of malicious domain/IP:<a class="headerlink" href="#flush-dns-of-malicious-domainip" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; ipconfig /flushdns
-</code></pre>
+<h2 id="flush-netbios-cache-of-hostip">Flush NetBios cache of host/IP:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; nbtstat -R
+</pre></div>
 
-<h2 id="flush-netbios-cache-of-hostip">Flush NetBios cache of host/IP:<a class="headerlink" href="#flush-netbios-cache-of-hostip" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; nbtstat -R
-</code></pre>
-
-<h2 id="add-new-malicious-domain-to-hosts-file-and-route-tolocalhost">Add new malicious domain to hosts file, and route tolocalhost:<a class="headerlink" href="#add-new-malicious-domain-to-hosts-file-and-route-tolocalhost" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; echo 127.0.0.1 &lt;MALICIOUS DOMAIN&gt; &gt;&gt;
+<h2 id="add-new-malicious-domain-to-hosts-file-and-route-tolocalhost">Add new malicious domain to hosts file, and route tolocalhost:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; echo 127.0.0.1 &lt;MALICIOUS DOMAIN&gt; &gt;&gt;
 C:\Windows\System32\drivers\etc\hosts
-</code></pre>
+</pre></div>
 
-<h2 id="check-if-hosts-file-is-working-by-sending-ping-to-127001">Check if hosts file is working, by sending ping to 127.0.0.1:<a class="headerlink" href="#check-if-hosts-file-is-working-by-sending-ping-to-127001" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; ping &lt;MALICIOUS DOMAIN&gt; -n 1
-</code></pre>
+<h2 id="check-if-hosts-file-is-working-by-sending-ping-to-127001">Check if hosts file is working, by sending ping to 127.0.0.1:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; ping &lt;MALICIOUS DOMAIN&gt; -n 1
+</pre></div>
 
-<h2 id="whitelist-use-a-proxy-auto-configpac-file-to-create-bad-url-or-ip-list-ie-firefox-chrome">WHITELIST Use a Proxy Auto Config(PAC) file to create Bad URL or IP List (IE, Firefox, Chrome):<a class="headerlink" href="#whitelist-use-a-proxy-auto-configpac-file-to-create-bad-url-or-ip-list-ie-firefox-chrome" title="Permanent link">&para;</a></h2>
-<pre><code>function FindProxyForURL(url, host) {
+<h2 id="whitelist-use-a-proxy-auto-configpac-file-to-create-bad-url-or-ip-list-ie-firefox-chrome">WHITELIST Use a Proxy Auto Config(PAC) file to create Bad URL or IP List (IE, Firefox, Chrome):</h2>
+<div class="highlight"><pre><span></span>function FindProxyForURL(url, host) {
 // II Send bad DNS name to the proxy
     if (dnsDomainis(host, &quot;.badsite.com&quot;))
         return &quot;PROXY http:11127.0.0.1:8080&quot;;
@@ -798,293 +835,293 @@ C:\Windows\System32\drivers\etc\hosts
 //II All other traffic bypass proxy
         return &quot;DIRECT&quot;;
 }
-</code></pre>
+</pre></div>
 
-<h1 id="application-restrictions">APPLICATION RESTRICTIONS<a class="headerlink" href="#application-restrictions" title="Permanent link">&para;</a></h1>
-<h2 id="applocker-server-2008-r2-or-windows-7-or-higher">Applocker - Server 2008 R2 or Windows 7 or higher:<a class="headerlink" href="#applocker-server-2008-r2-or-windows-7-or-higher" title="Permanent link">&para;</a></h2>
-<h2 id="using-gui-wizard-configure">Using GUI Wizard configure:<a class="headerlink" href="#using-gui-wizard-configure" title="Permanent link">&para;</a></h2>
+<h1 id="application-restrictions">APPLICATION RESTRICTIONS</h1>
+<h2 id="applocker-server-2008-r2-or-windows-7-or-higher">Applocker - Server 2008 R2 or Windows 7 or higher:</h2>
+<h2 id="using-gui-wizard-configure">Using GUI Wizard configure:</h2>
 <ul>
 <li>Executable Rules (. exe, . com)</li>
 <li>DLL Rules ( .dll, .ocx)</li>
 <li>Script Rules (.psl, .bat, .cmd, .vbs, .js)</li>
 <li>Windows Install Rules ( .msi, .msp, .mst)</li>
 </ul>
-<h1 id="steps-to-employ-applocker-gui-is-needed-for-digitalsigned-app-restrictions">Steps to employ Applocker (GUI is needed for digitalsigned app restrictions):<a class="headerlink" href="#steps-to-employ-applocker-gui-is-needed-for-digitalsigned-app-restrictions" title="Permanent link">&para;</a></h1>
-<h2 id="step-1">Step 1:<a class="headerlink" href="#step-1" title="Permanent link">&para;</a></h2>
-<pre><code>Create a new GPO.
-</code></pre>
+<h1 id="steps-to-employ-applocker-gui-is-needed-for-digitalsigned-app-restrictions">Steps to employ Applocker (GUI is needed for digitalsigned app restrictions):</h1>
+<h2 id="step-1">Step 1:</h2>
+<div class="highlight"><pre><span></span>Create a new GPO.
+</pre></div>
 
-<h2 id="step-2">Step 2:<a class="headerlink" href="#step-2" title="Permanent link">&para;</a></h2>
-<pre><code>Right-click on it to edit, and then navigate
+<h2 id="step-2">Step 2:</h2>
+<div class="highlight"><pre><span></span>Right-click on it to edit, and then navigate
 through Computer Configuration, Policies, Windows
 Settings, Security Settings, Application Control
 Policies and Applocker.
 Click Configure Rule Enforcement.
-</code></pre>
+</pre></div>
 
-<h2 id="step-3">Step 3:<a class="headerlink" href="#step-3" title="Permanent link">&para;</a></h2>
-<pre><code>Under Executable Rules, check the Configured
+<h2 id="step-3">Step 3:</h2>
+<div class="highlight"><pre><span></span>Under Executable Rules, check the Configured
 box and then make sure Enforce Rules is selected
 from the drop-down box. Click OK.
-</code></pre>
+</pre></div>
 
-<h2 id="step-4">Step 4:<a class="headerlink" href="#step-4" title="Permanent link">&para;</a></h2>
-<pre><code>In the left pane, click Executable Rules.
+<h2 id="step-4">Step 4:</h2>
+<div class="highlight"><pre><span></span>In the left pane, click Executable Rules.
 Step 5: Right-click in the right pane and select
 Create New Rule.
-</code></pre>
+</pre></div>
 
-<h2 id="step-6">Step 6:<a class="headerlink" href="#step-6" title="Permanent link">&para;</a></h2>
-<pre><code>On the Before You Begin screen, click Next.
-</code></pre>
+<h2 id="step-6">Step 6:</h2>
+<div class="highlight"><pre><span></span>On the Before You Begin screen, click Next.
+</pre></div>
 
-<h2 id="step-7">Step 7:<a class="headerlink" href="#step-7" title="Permanent link">&para;</a></h2>
-<pre><code>On the Permissions screen, click Next.
-</code></pre>
+<h2 id="step-7">Step 7:</h2>
+<div class="highlight"><pre><span></span>On the Permissions screen, click Next.
+</pre></div>
 
-<h2 id="step-8">Step 8:<a class="headerlink" href="#step-8" title="Permanent link">&para;</a></h2>
-<pre><code>On the Conditions screen, select the
+<h2 id="step-8">Step 8:</h2>
+<div class="highlight"><pre><span></span>On the Conditions screen, select the
 Publisher condition and click Next.
-</code></pre>
+</pre></div>
 
-<h2 id="step-9">Step 9:<a class="headerlink" href="#step-9" title="Permanent link">&para;</a></h2>
-<pre><code>Click the Browse button and browse to any
-executable file on your system. It doesn't matter
+<h2 id="step-9">Step 9:</h2>
+<div class="highlight"><pre><span></span>Click the Browse button and browse to any
+executable file on your system. It doesn&#39;t matter
 which.
-</code></pre>
+</pre></div>
 
-<h2 id="step-10">Step 10:<a class="headerlink" href="#step-10" title="Permanent link">&para;</a></h2>
-<pre><code>Drag the slider up to Any Publisher and
+<h2 id="step-10">Step 10:</h2>
+<div class="highlight"><pre><span></span>Drag the slider up to Any Publisher and
 then click Next.
-</code></pre>
+</pre></div>
 
-<h2 id="step-11">Step 11:<a class="headerlink" href="#step-11" title="Permanent link">&para;</a></h2>
-<pre><code>Click Next on the Exceptions screen.
-</code></pre>
+<h2 id="step-11">Step 11:</h2>
+<div class="highlight"><pre><span></span>Click Next on the Exceptions screen.
+</pre></div>
 
-<h2 id="step-12">Step 12:<a class="headerlink" href="#step-12" title="Permanent link">&para;</a></h2>
-<pre><code>Name policy, Example uonly run executables
+<h2 id="step-12">Step 12:</h2>
+<div class="highlight"><pre><span></span>Name policy, Example uonly run executables
 that are signed&quot; and click Create.
-</code></pre>
+</pre></div>
 
-<h2 id="step-13">Step 13:<a class="headerlink" href="#step-13" title="Permanent link">&para;</a></h2>
-<pre><code>If this is your first time creating an
+<h2 id="step-13">Step 13:</h2>
+<div class="highlight"><pre><span></span>If this is your first time creating an
 Applocker policy, Windows will prompt you to create
 default rule, click Yes.
-</code></pre>
+</pre></div>
 
-<h2 id="step-14">Step 14:<a class="headerlink" href="#step-14" title="Permanent link">&para;</a></h2>
-<pre><code>Ensure Application Identity Service isRunning.
+<h2 id="step-14">Step 14:</h2>
+<div class="highlight"><pre><span></span>Ensure Application Identity Service isRunning.
 
 C:\&gt; net start AppIDSvc
 C:\&gt; REG add&quot;HKLM\SYSTEM\CurrentControlSet\services\AppIDSvc&quot; /v Start /t REG_DWORD /d 2 /f
-</code></pre>
+</pre></div>
 
-<h2 id="step-15">Step 15:<a class="headerlink" href="#step-15" title="Permanent link">&para;</a></h2>
-<pre><code>Changes require reboot.
+<h2 id="step-15">Step 15:</h2>
+<div class="highlight"><pre><span></span>Changes require reboot.
 C:\ shutdown.exe /r
 C:\ shutdown.exe /r /m \\&lt;IP ADDRESS OR COMPUTERNAME&gt; /f
-</code></pre>
+</pre></div>
 
-<h2 id="add-the-applocker-cmdlets-into-powershell">Add the Applocker cmdlets into PowerShell:<a class="headerlink" href="#add-the-applocker-cmdlets-into-powershell" title="Permanent link">&para;</a></h2>
-<pre><code>PS C:\&gt; import-module Applocker
-</code></pre>
+<h2 id="add-the-applocker-cmdlets-into-powershell">Add the Applocker cmdlets into PowerShell:</h2>
+<div class="highlight"><pre><span></span>PS C:\&gt; import-module Applocker
+</pre></div>
 
-<h2 id="gets-the-file-information-for-all-of-the-executable-files-and-scripts-in-the-directory">Gets the file information for all of the executable files and scripts in the directory<a class="headerlink" href="#gets-the-file-information-for-all-of-the-executable-files-and-scripts-in-the-directory" title="Permanent link">&para;</a></h2>
-<pre><code>C:\Windows\System32:
+<h2 id="gets-the-file-information-for-all-of-the-executable-files-and-scripts-in-the-directory">Gets the file information for all of the executable files and scripts in the directory</h2>
+<div class="highlight"><pre><span></span>C:\Windows\System32:
 PS C:\&gt; Get-ApplockerFileinformation -Directory
 C:\Windows\System32\ -Recurse -FileType Exe, Script
-</code></pre>
+</pre></div>
 
-<h2 id="create-a-applocker-policy-that-allow-rules-for-all-of-the-executable-files-in-cwindowssystem32">Create a Applocker Policy that allow rules for all of the executable files in C:\Windows\System32:<a class="headerlink" href="#create-a-applocker-policy-that-allow-rules-for-all-of-the-executable-files-in-cwindowssystem32" title="Permanent link">&para;</a></h2>
-<pre><code>PS C:\&gt; Get-Childitem C:\Windows\System32\*,exe IGet-ApplockerFileinformation I New-ApplockerPolicy -RuleType Publisher, Hash -User Everyone -RuleNamePrefix System32
-</code></pre>
+<h2 id="create-a-applocker-policy-that-allow-rules-for-all-of-the-executable-files-in-cwindowssystem32">Create a Applocker Policy that allow rules for all of the executable files in C:\Windows\System32:</h2>
+<div class="highlight"><pre><span></span>PS C:\&gt; Get-Childitem C:\Windows\System32\*,exe IGet-ApplockerFileinformation I New-ApplockerPolicy -RuleType Publisher, Hash -User Everyone -RuleNamePrefix System32
+</pre></div>
 
-<h2 id="sets-the-local-applocker-policy-to-the-policy-specified-in-cpolicyxml">Sets the local Applocker policy to the policy specified in C:\Policy.xml:<a class="headerlink" href="#sets-the-local-applocker-policy-to-the-policy-specified-in-cpolicyxml" title="Permanent link">&para;</a></h2>
-<pre><code>PS C:\&gt; Set-AppLockerPolicy -XMLPolicy C:\Policy.xml
-</code></pre>
+<h2 id="sets-the-local-applocker-policy-to-the-policy-specified-in-cpolicyxml">Sets the local Applocker policy to the policy specified in C:\Policy.xml:</h2>
+<div class="highlight"><pre><span></span>PS C:\&gt; Set-AppLockerPolicy -XMLPolicy C:\Policy.xml
+</pre></div>
 
-<h2 id="uses-the-applocker-policy-in-cpolicyxml-to-test-whether-calcexe-and-notepadexe-are-allowed-to-run-for-users-who-are-members-of-the-everyone-group-if-you-do-not-specify-a-group-the-everyone-group-is-used-by-default">Uses the Applocker policy in C:\Policy.xml to test whether calc.exe and notepad.exe are allowed to run for users who are members of the Everyone group. If you do not specify a group, the Everyone group is used by default:<a class="headerlink" href="#uses-the-applocker-policy-in-cpolicyxml-to-test-whether-calcexe-and-notepadexe-are-allowed-to-run-for-users-who-are-members-of-the-everyone-group-if-you-do-not-specify-a-group-the-everyone-group-is-used-by-default" title="Permanent link">&para;</a></h2>
-<pre><code>PS C:\&gt; Test-AppLockerPolicy -XMLPolicy
+<h2 id="uses-the-applocker-policy-in-cpolicyxml-to-test-whether-calcexe-and-notepadexe-are-allowed-to-run-for-users-who-are-members-of-the-everyone-group-if-you-do-not-specify-a-group-the-everyone-group-is-used-by-default">Uses the Applocker policy in C:\Policy.xml to test whether calc.exe and notepad.exe are allowed to run for users who are members of the Everyone group. If you do not specify a group, the Everyone group is used by default:</h2>
+<div class="highlight"><pre><span></span>PS C:\&gt; Test-AppLockerPolicy -XMLPolicy
 C:\Policy.xml -Path C:\Windows\System32\calc.exe,
 C:\Windows\System32\notepad.exe -User Everyone
-</code></pre>
+</pre></div>
 
-<h2 id="review-how-many-times-a-file-would-have-been-blocked-from-running-if-rules-were-enforced">Review how many times a file would have been blocked from running if rules were enforced:<a class="headerlink" href="#review-how-many-times-a-file-would-have-been-blocked-from-running-if-rules-were-enforced" title="Permanent link">&para;</a></h2>
-<pre><code>PS C:\&gt; Get-ApplockerFileinformation -Eventlog -Logname &quot;Microsoft-Windows-Applocker\EXE and DLL&quot; -EventType Audited -Statistics
-</code></pre>
+<h2 id="review-how-many-times-a-file-would-have-been-blocked-from-running-if-rules-were-enforced">Review how many times a file would have been blocked from running if rules were enforced:</h2>
+<div class="highlight"><pre><span></span>PS C:\&gt; Get-ApplockerFileinformation -Eventlog -Logname &quot;Microsoft-Windows-Applocker\EXE and DLL&quot; -EventType Audited -Statistics
+</pre></div>
 
-<h2 id="creates-a-new-applocker-policy-from-the-auditedevents-in-the-local-microsoft-windows-applockerexe-and-dll-event-log-applied-to-and-current-applocker-policy-will-be-overwritten">Creates a new Applocker policy from the auditedevents in the local Microsoft-Windows-Applocker/EXE and DLL event log, applied to <GROUP> and current Applocker policy will be overwritten:<a class="headerlink" href="#creates-a-new-applocker-policy-from-the-auditedevents-in-the-local-microsoft-windows-applockerexe-and-dll-event-log-applied-to-and-current-applocker-policy-will-be-overwritten" title="Permanent link">&para;</a></h2>
-<pre><code>PS C:\&gt; Get-ApplockerFileinformation -Eventlog -LogPath &quot;Microsoft-Windows-AppLocker/EXE and DLL&quot; -EventType Audited I New-ApplockerPolicy -RuleType Publisher,Hash -User domain\&lt;GROUP&gt; -IgnoreMissingFileinformation I Set-ApplockerPolicy -LDAP &quot;LDAP://&lt;DC&gt;,&lt;DOMAIN&gt;.com/CN={31B2F340-016D11D2-945F00C04FB984F9},CN=Policies,CN=System,DC=&lt;DOMAIN&gt;,DC=com&quot;
-</code></pre>
+<h2 id="creates-a-new-applocker-policy-from-the-auditedevents-in-the-local-microsoft-windows-applockerexe-and-dll-event-log-applied-to-and-current-applocker-policy-will-be-overwritten">Creates a new Applocker policy from the auditedevents in the local Microsoft-Windows-Applocker/EXE and DLL event log, applied to <GROUP> and current Applocker policy will be overwritten:</h2>
+<div class="highlight"><pre><span></span>PS C:\&gt; Get-ApplockerFileinformation -Eventlog -LogPath &quot;Microsoft-Windows-AppLocker/EXE and DLL&quot; -EventType Audited I New-ApplockerPolicy -RuleType Publisher,Hash -User domain\&lt;GROUP&gt; -IgnoreMissingFileinformation I Set-ApplockerPolicy -LDAP &quot;LDAP://&lt;DC&gt;,&lt;DOMAIN&gt;.com/CN={31B2F340-016D11D2-945F00C04FB984F9},CN=Policies,CN=System,DC=&lt;DOMAIN&gt;,DC=com&quot;
+</pre></div>
 
-<h2 id="export-the-local-applocker-policy-comparing-usersexplicitly-denied-access-to-run-and-output-textfile">Export the local Applocker policy, comparing User&rsquo;sexplicitly denied access to run, and output textfile:<a class="headerlink" href="#export-the-local-applocker-policy-comparing-usersexplicitly-denied-access-to-run-and-output-textfile" title="Permanent link">&para;</a></h2>
-<pre><code>PS C:\&gt; Get-AppLockerPolicy -Local I TestAppLockerPolicy -Path C:\Windows\System32\*,exe -User domain\&lt;USER NAME&gt; -Filter Denied I Format-List -Property Path &gt; C:\DeniedFiles.txt
-</code></pre>
+<h2 id="export-the-local-applocker-policy-comparing-usersexplicitly-denied-access-to-run-and-output-textfile">Export the local Applocker policy, comparing User'sexplicitly denied access to run, and output textfile:</h2>
+<div class="highlight"><pre><span></span>PS C:\&gt; Get-AppLockerPolicy -Local I TestAppLockerPolicy -Path C:\Windows\System32\*,exe -User domain\&lt;USER NAME&gt; -Filter Denied I Format-List -Property Path &gt; C:\DeniedFiles.txt
+</pre></div>
 
-<h2 id="export-the-results-of-the-test-to-a-file-foranalysis">Export the results of the test to a file foranalysis:<a class="headerlink" href="#export-the-results-of-the-test-to-a-file-foranalysis" title="Permanent link">&para;</a></h2>
-<pre><code>PS C:\&gt; Get-Childitem &lt;DirectoryPathtoReview&gt; -Filter &lt;FileExtensionFilter&gt; -Recurse I Convert-Path I Test-ApplockerPolicy -XMLPolicy &lt;PathToExportedPolicyFile&gt; -User &lt;domain\username&gt; -Filter &lt;TypeofRuletoFilterFor&gt; I Export-CSV &lt;PathToExportResultsTo.CSV&gt;
-</code></pre>
+<h2 id="export-the-results-of-the-test-to-a-file-foranalysis">Export the results of the test to a file foranalysis:</h2>
+<div class="highlight"><pre><span></span>PS C:\&gt; Get-Childitem &lt;DirectoryPathtoReview&gt; -Filter &lt;FileExtensionFilter&gt; -Recurse I Convert-Path I Test-ApplockerPolicy -XMLPolicy &lt;PathToExportedPolicyFile&gt; -User &lt;domain\username&gt; -Filter &lt;TypeofRuletoFilterFor&gt; I Export-CSV &lt;PathToExportResultsTo.CSV&gt;
+</pre></div>
 
-<h2 id="gridview-list-of-any-local-rules-applicable">GridView list of any local rules applicable:<a class="headerlink" href="#gridview-list-of-any-local-rules-applicable" title="Permanent link">&para;</a></h2>
-<pre><code>PS C:\&gt; Get-AppLockerPolicy -Local -Xml I OutGridView
-</code></pre>
+<h2 id="gridview-list-of-any-local-rules-applicable">GridView list of any local rules applicable:</h2>
+<div class="highlight"><pre><span></span>PS C:\&gt; Get-AppLockerPolicy -Local -Xml I OutGridView
+</pre></div>
 
-<h1 id="ipsec">IPSEC<a class="headerlink" href="#ipsec" title="Permanent link">&para;</a></h1>
-<h2 id="create-a-ipsec-local-security-policy-applied-to-any-connection-any-protocol-and-using-a-preshared-key">Create a IPSEC Local Security Policy, applied to any connection, any protocol, and using a preshared key:<a class="headerlink" href="#create-a-ipsec-local-security-policy-applied-to-any-connection-any-protocol-and-using-a-preshared-key" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; netsh ipsec static add filter filterlist=MyIPsecFilter srcaddr=Any dstaddr=Any protocol=ANY
+<h1 id="ipsec">IPSEC</h1>
+<h2 id="create-a-ipsec-local-security-policy-applied-to-any-connection-any-protocol-and-using-a-preshared-key">Create a IPSEC Local Security Policy, applied to any connection, any protocol, and using a preshared key:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; netsh ipsec static add filter filterlist=MyIPsecFilter srcaddr=Any dstaddr=Any protocol=ANY
 C:\&gt; netsh ipsec static add filteraction name=MyIPsecAction action=negotiate
 C:\&gt; netsh ipsec static add policy name=MyIPsecPolicy assign=yes
 C:\&gt; netsh ipsec static add rule name=MyIPsecRule policy=MyIPsecPolicy filterlist=MyIPsecFilter filteraction=MyIPsecAction conntype=all activate=yes psk=&lt;PASSWORD&gt;
-</code></pre>
+</pre></div>
 
-<h2 id="add-rule-to-allow-web-browsing-port-80http-and-443https-over-ipsec">Add rule to allow web browsing port 80(HTTP) and 443(HTTPS) over IPSEC:<a class="headerlink" href="#add-rule-to-allow-web-browsing-port-80http-and-443https-over-ipsec" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; netsh ipsec static add filteraction name=Allow action=permit
+<h2 id="add-rule-to-allow-web-browsing-port-80http-and-443https-over-ipsec">Add rule to allow web browsing port 80(HTTP) and 443(HTTPS) over IPSEC:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; netsh ipsec static add filteraction name=Allow action=permit
 C:\&gt; netsh ipsec static add filter filterlist=WebFilter srcaddr=Any dstaddr=Any protocol=TCP dstport=80
 C:\&gt; netsh ipsec static add filter filterlist=WebFilter srcaddr=Any dstaddr=Any protocol=TCP dstport=443
 C:\&gt; netsh ipsec static add rule name=WebAllow policy=MyIPsecPolicy filterlist=WebFilter filteraction=Allow conntype=all activate=yes psk=&lt;PASSWORD&gt;
-</code></pre>
+</pre></div>
 
-<h2 id="shows-the-ipsec-local-security-policy-with-name-myipsecpolicy">Shows the IPSEC Local Security Policy with name &ldquo;MyIPsecPolicy&rdquo;:<a class="headerlink" href="#shows-the-ipsec-local-security-policy-with-name-myipsecpolicy" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; netsh ipsec static show policy name=MyIPsecPolicy
-</code></pre>
+<h2 id="shows-the-ipsec-local-security-policy-with-name-myipsecpolicy">Shows the IPSEC Local Security Policy with name "MyIPsecPolicy":</h2>
+<div class="highlight"><pre><span></span>C:\&gt; netsh ipsec static show policy name=MyIPsecPolicy
+</pre></div>
 
-<h2 id="stop-or-unassign-a-ipsec-policy">Stop or Unassign a IPSEC Policy:<a class="headerlink" href="#stop-or-unassign-a-ipsec-policy" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; netsh ipsec static set policy name=MyIPsecPolicy
-</code></pre>
+<h2 id="stop-or-unassign-a-ipsec-policy">Stop or Unassign a IPSEC Policy:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; netsh ipsec static set policy name=MyIPsecPolicy
+</pre></div>
 
-<h2 id="create-a-ipsec-advance-firewall-rule-and-policy-and-preshared-key-from-and-to-any-connections">Create a IPSEC Advance Firewall Rule and Policy and preshared key from and to any connections:<a class="headerlink" href="#create-a-ipsec-advance-firewall-rule-and-policy-and-preshared-key-from-and-to-any-connections" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; netsh advfirewall consec add rule name=&quot;IPSEC&quot; endpointl=any endpoint2=any action=requireinrequireout qmsecmethods=default
-</code></pre>
+<h2 id="create-a-ipsec-advance-firewall-rule-and-policy-and-preshared-key-from-and-to-any-connections">Create a IPSEC Advance Firewall Rule and Policy and preshared key from and to any connections:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; netsh advfirewall consec add rule name=&quot;IPSEC&quot; endpointl=any endpoint2=any action=requireinrequireout qmsecmethods=default
+</pre></div>
 
-<h2 id="require-ipsec-preshared-key-on-all-outgoing-requests">Require IPSEC preshared key on all outgoing requests:<a class="headerlink" href="#require-ipsec-preshared-key-on-all-outgoing-requests" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; netsh advfirewall firewall add rule name=uIPSEC_Out&quot; dir=out action=allow enable=yes profile=any localip=any remoteip=any protocol=any interfacetype=any security=authenticate
-</code></pre>
+<h2 id="require-ipsec-preshared-key-on-all-outgoing-requests">Require IPSEC preshared key on all outgoing requests:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; netsh advfirewall firewall add rule name=uIPSEC_Out&quot; dir=out action=allow enable=yes profile=any localip=any remoteip=any protocol=any interfacetype=any security=authenticate
+</pre></div>
 
-<h2 id="create-a-rule-for-web-browsing">Create a rule for web browsing:<a class="headerlink" href="#create-a-rule-for-web-browsing" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; netsh advfirewall firewall add rule name=&quot;Allow Outbound Port 8011 dir=out localport=80 protocol=TCP action=allow
-</code></pre>
+<h2 id="create-a-rule-for-web-browsing">Create a rule for web browsing:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; netsh advfirewall firewall add rule name=&quot;Allow Outbound Port 8011 dir=out localport=80 protocol=TCP action=allow
+</pre></div>
 
-<h2 id="create-a-rule-for-dns">Create a rule for DNS:<a class="headerlink" href="#create-a-rule-for-dns" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; netsh advfirewall firewall add rule name=&quot;Allow Outbound Port 5311 dir=out localport=53 protocol=UDP action=allow
-</code></pre>
+<h2 id="create-a-rule-for-dns">Create a rule for DNS:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; netsh advfirewall firewall add rule name=&quot;Allow Outbound Port 5311 dir=out localport=53 protocol=UDP action=allow
+</pre></div>
 
-<h2 id="delete-ispec-rule">Delete ISPEC Rule:<a class="headerlink" href="#delete-ispec-rule" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; netsh advfirewall firewall delete rule name=&quot;IPSEC_RULE&quot;
-</code></pre>
+<h2 id="delete-ispec-rule">Delete ISPEC Rule:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; netsh advfirewall firewall delete rule name=&quot;IPSEC_RULE&quot;
+</pre></div>
 
-<h1 id="active-directory-ad-group-policy-object-gpo">ACTIVE DIRECTORY (AD) - GROUP POLICY OBJECT (GPO)<a class="headerlink" href="#active-directory-ad-group-policy-object-gpo" title="Permanent link">&para;</a></h1>
-<h2 id="get-and-force-new-policies">Get and force new policies:<a class="headerlink" href="#get-and-force-new-policies" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; gpupdate /force
+<h1 id="active-directory-ad-group-policy-object-gpo">ACTIVE DIRECTORY (AD) - GROUP POLICY OBJECT (GPO)</h1>
+<h2 id="get-and-force-new-policies">Get and force new policies:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; gpupdate /force
 C:\&gt; gpupdate /sync
-</code></pre>
+</pre></div>
 
-<h2 id="audit-success-and-failure-for-user-bob">Audit Success and Failure for user Bob:<a class="headerlink" href="#audit-success-and-failure-for-user-bob" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; auditpol /set /user:bob /category:&quot;DetailedTracking&quot; /include /success:enable /failure:enable
-</code></pre>
+<h2 id="audit-success-and-failure-for-user-bob">Audit Success and Failure for user Bob:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; auditpol /set /user:bob /category:&quot;DetailedTracking&quot; /include /success:enable /failure:enable
+</pre></div>
 
-<h2 id="create-an-organization-unit-to-move-suspected-or-infected-users-and-machines">Create an Organization Unit to move suspected or infected users and machines:<a class="headerlink" href="#create-an-organization-unit-to-move-suspected-or-infected-users-and-machines" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; dsadd OU &lt;QUARANTINE BAD OU&gt;
-</code></pre>
+<h2 id="create-an-organization-unit-to-move-suspected-or-infected-users-and-machines">Create an Organization Unit to move suspected or infected users and machines:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; dsadd OU &lt;QUARANTINE BAD OU&gt;
+</pre></div>
 
-<h2 id="move-an-active-directory-user-object-into-new-group">Move an active directory user object into NEW GROUP:<a class="headerlink" href="#move-an-active-directory-user-object-into-new-group" title="Permanent link">&para;</a></h2>
-<pre><code>PS C:\&gt; Move-ADObject 'CN=&lt;USER NAME&gt;,CN=&lt;OLD USERGROUP&gt;,DC=&lt;OLD DOMAIN&gt;,DC=&lt;OLD EXTENSION&gt;' -TargetPath 'OU=&lt;NEW USER GROUP&gt;,DC=&lt;OLDDOMAIN&gt;,DC=&lt;OLD EXTENSION&gt;'
-</code></pre>
+<h2 id="move-an-active-directory-user-object-into-new-group">Move an active directory user object into NEW GROUP:</h2>
+<div class="highlight"><pre><span></span>PS C:\&gt; Move-ADObject &#39;CN=&lt;USER NAME&gt;,CN=&lt;OLD USERGROUP&gt;,DC=&lt;OLD DOMAIN&gt;,DC=&lt;OLD EXTENSION&gt;&#39; -TargetPath &#39;OU=&lt;NEW USER GROUP&gt;,DC=&lt;OLDDOMAIN&gt;,DC=&lt;OLD EXTENSION&gt;&#39;
+</pre></div>
 
-<h2 id="alt-option">Alt Option:<a class="headerlink" href="#alt-option" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; dsmove &quot;CN=&lt;USER NAME&gt;,OU=&lt;OLD USER OU&gt;,DC=&lt;OLDDOMAIN&gt;,DC=&lt;OLD EXTENSION&gt;&quot; -newparent OU=&lt;NEW USERGROUP&gt;,DC=&lt;OLD DOMAIN&gt;,DC=&lt;OLD EXTENSION&gt;
-</code></pre>
+<h2 id="alt-option">Alt Option:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; dsmove &quot;CN=&lt;USER NAME&gt;,OU=&lt;OLD USER OU&gt;,DC=&lt;OLDDOMAIN&gt;,DC=&lt;OLD EXTENSION&gt;&quot; -newparent OU=&lt;NEW USERGROUP&gt;,DC=&lt;OLD DOMAIN&gt;,DC=&lt;OLD EXTENSION&gt;
+</pre></div>
 
-<h1 id="stand-alone-system-without-active-directory-ad">STAND ALONE SYSTEM - WITHOUT ACTIVE DIRECTORY (AD)<a class="headerlink" href="#stand-alone-system-without-active-directory-ad" title="Permanent link">&para;</a></h1>
-<h2 id="disallow-running-a-exe-file">Disallow running a .exe file:<a class="headerlink" href="#disallow-running-a-exe-file" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; reg add &quot;HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer&quot; /v DisallowRun /t REG_DWORD /d&quot;00000001&quot; /f
+<h1 id="stand-alone-system-without-active-directory-ad">STAND ALONE SYSTEM - WITHOUT ACTIVE DIRECTORY (AD)</h1>
+<h2 id="disallow-running-a-exe-file">Disallow running a .exe file:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; reg add &quot;HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer&quot; /v DisallowRun /t REG_DWORD /d&quot;00000001&quot; /f
 C:\&gt; reg add &quot;HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun&quot; /v badfile.exe /t REG_SZ/d &lt;BAD FILE NAME&gt;.exe /f
-</code></pre>
+</pre></div>
 
-<h2 id="disable-remote-desktop">Disable Remote Desktop:<a class="headerlink" href="#disable-remote-desktop" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; reg add &quot;HKLM\SYSTEM\Cu rrentCont ro lSet\Cont ro l \ TerminalServer&quot; /f /v fDenyTSConnections /t REG_DWORD /d 1
-</code></pre>
+<h2 id="disable-remote-desktop">Disable Remote Desktop:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; reg add &quot;HKLM\SYSTEM\Cu rrentCont ro lSet\Cont ro l \ TerminalServer&quot; /f /v fDenyTSConnections /t REG_DWORD /d 1
+</pre></div>
 
-<h2 id="send-ntlmv2-response-onlyrefuse-lm-and-ntlmwindows-7-default">Send NTLMv2 response only/refuse LM and NTLM:(Windows 7 default)<a class="headerlink" href="#send-ntlmv2-response-onlyrefuse-lm-and-ntlmwindows-7-default" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; reg add HKLM\SYSTEM\CurrentControlSet\Control\Lsa\ /vlmcompatibilitylevel /t REG_DWORD /d 5 /f
-</code></pre>
+<h2 id="send-ntlmv2-response-onlyrefuse-lm-and-ntlmwindows-7-default">Send NTLMv2 response only/refuse LM and NTLM:(Windows 7 default)</h2>
+<div class="highlight"><pre><span></span>C:\&gt; reg add HKLM\SYSTEM\CurrentControlSet\Control\Lsa\ /vlmcompatibilitylevel /t REG_DWORD /d 5 /f
+</pre></div>
 
-<h2 id="restrict-anonymous-access">Restrict Anonymous Access:<a class="headerlink" href="#restrict-anonymous-access" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; reg add HKLM\SYSTEM\CurrentControlSet\Control\Lsa /v restrictanonymous /t REG_DWORD /d 1 /f
-</code></pre>
+<h2 id="restrict-anonymous-access">Restrict Anonymous Access:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; reg add HKLM\SYSTEM\CurrentControlSet\Control\Lsa /v restrictanonymous /t REG_DWORD /d 1 /f
+</pre></div>
 
-<h2 id="do-not-allow-anonymous-enumeration-of-sam-accounts-and-shares">Do not allow anonymous enumeration of SAM accounts and shares:<a class="headerlink" href="#do-not-allow-anonymous-enumeration-of-sam-accounts-and-shares" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; reg add HKLM\SYSTEM\CurrentControlSet\Control\Lsa /v restrictanonymoussam /t REG_DWORD /d 1 /f
-</code></pre>
+<h2 id="do-not-allow-anonymous-enumeration-of-sam-accounts-and-shares">Do not allow anonymous enumeration of SAM accounts and shares:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; reg add HKLM\SYSTEM\CurrentControlSet\Control\Lsa /v restrictanonymoussam /t REG_DWORD /d 1 /f
+</pre></div>
 
-<h2 id="disable-ipv6">Disable IPV6:<a class="headerlink" href="#disable-ipv6" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; reg add HKLM\SYSTEM\CurrentControlSet\services\TCPIP6\Parameters /v DisabledComponents /t REG_DWORD /d 255 /f
-</code></pre>
+<h2 id="disable-ipv6">Disable IPV6:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; reg add HKLM\SYSTEM\CurrentControlSet\services\TCPIP6\Parameters /v DisabledComponents /t REG_DWORD /d 255 /f
+</pre></div>
 
-<h2 id="disable-sticky-keys">Disable sticky keys:<a class="headerlink" href="#disable-sticky-keys" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; reg add &quot;HKCU\ControlPanel\Accessibility\StickyKeys&quot; /v Flags /t REG_SZ/d 506 /f
-</code></pre>
+<h2 id="disable-sticky-keys">Disable sticky keys:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; reg add &quot;HKCU\ControlPanel\Accessibility\StickyKeys&quot; /v Flags /t REG_SZ/d 506 /f
+</pre></div>
 
-<h2 id="disable-toggle-keys">Disable Toggle Keys:<a class="headerlink" href="#disable-toggle-keys" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; reg add &quot;HKCU\ControlPanel \Accessibility\ ToggleKeys&quot; /v Flags /t REG_SZId 58 /f
-</code></pre>
+<h2 id="disable-toggle-keys">Disable Toggle Keys:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; reg add &quot;HKCU\ControlPanel \Accessibility\ ToggleKeys&quot; /v Flags /t REG_SZId 58 /f
+</pre></div>
 
-<h2 id="disable-filter-keys">Disable Filter Keys:<a class="headerlink" href="#disable-filter-keys" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; reg add &quot;HKCU\ControlPanel\Accessibility\Keyboard Response&quot; /v Flags /t REG_SZ /d 122 /f
-</code></pre>
+<h2 id="disable-filter-keys">Disable Filter Keys:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; reg add &quot;HKCU\ControlPanel\Accessibility\Keyboard Response&quot; /v Flags /t REG_SZ /d 122 /f
+</pre></div>
 
-<h2 id="disable-on-screen-keyboard">Disable On-screen Keyboard:<a class="headerlink" href="#disable-on-screen-keyboard" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI /f /v ShowTabletKeyboard /tREG_DWORD /d 0
-</code></pre>
+<h2 id="disable-on-screen-keyboard">Disable On-screen Keyboard:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI /f /v ShowTabletKeyboard /tREG_DWORD /d 0
+</pre></div>
 
-<h2 id="disable-administrative-shares-workstations">Disable Administrative Shares - Workstations:<a class="headerlink" href="#disable-administrative-shares-workstations" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; reg add HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters /f /v AutoShareWks /t REG_DWORD /d 0
-</code></pre>
+<h2 id="disable-administrative-shares-workstations">Disable Administrative Shares - Workstations:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; reg add HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters /f /v AutoShareWks /t REG_DWORD /d 0
+</pre></div>
 
-<h2 id="disable-administrative-shares-severs">Disable Administrative Shares - Severs<a class="headerlink" href="#disable-administrative-shares-severs" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; reg add HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\ Parameters /f /v AutoShareServer /t REG_DWORD /d 0
-</code></pre>
+<h2 id="disable-administrative-shares-severs">Disable Administrative Shares - Severs</h2>
+<div class="highlight"><pre><span></span>C:\&gt; reg add HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\ Parameters /f /v AutoShareServer /t REG_DWORD /d 0
+</pre></div>
 
-<h2 id="remove-creation-of-hashes-used-to-pass-the-hash-attack-requires-password-reset-and-reboot-to-purgeold-hashes">Remove Creation of Hashes Used to Pass the Hash Attack (Requires password reset and reboot to purgeold hashes):<a class="headerlink" href="#remove-creation-of-hashes-used-to-pass-the-hash-attack-requires-password-reset-and-reboot-to-purgeold-hashes" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; reg add HKLM\SYSTEM\CurrentControlSet\Control\Lsa /f /v NoLMHash /t REG_DWORD /d 1
-</code></pre>
+<h2 id="remove-creation-of-hashes-used-to-pass-the-hash-attack-requires-password-reset-and-reboot-to-purgeold-hashes">Remove Creation of Hashes Used to Pass the Hash Attack (Requires password reset and reboot to purgeold hashes):</h2>
+<div class="highlight"><pre><span></span>C:\&gt; reg add HKLM\SYSTEM\CurrentControlSet\Control\Lsa /f /v NoLMHash /t REG_DWORD /d 1
+</pre></div>
 
-<h2 id="to-disable-registry-editor-high-risk">To Disable Registry Editor: (High Risk)<a class="headerlink" href="#to-disable-registry-editor-high-risk" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableRegistryTools /t REG_DWORD /d 1 /f
-</code></pre>
+<h2 id="to-disable-registry-editor-high-risk">To Disable Registry Editor: (High Risk)</h2>
+<div class="highlight"><pre><span></span>C:\&gt; reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableRegistryTools /t REG_DWORD /d 1 /f
+</pre></div>
 
-<h2 id="disable-ie-password-cache">Disable IE Password Cache:<a class="headerlink" href="#disable-ie-password-cache" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings /v DisablePasswordCaching /t REG_DWORD /d 1 /f
-</code></pre>
+<h2 id="disable-ie-password-cache">Disable IE Password Cache:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings /v DisablePasswordCaching /t REG_DWORD /d 1 /f
+</pre></div>
 
-<h2 id="disable-cmd-prompt">Disable CMD prompt:<a class="headerlink" href="#disable-cmd-prompt" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; reg add HKCU\Software\Policies\Microsoft\Windows\System /v DisableCMD /t REG_DWORD /d 1 /f
-</code></pre>
+<h2 id="disable-cmd-prompt">Disable CMD prompt:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; reg add HKCU\Software\Policies\Microsoft\Windows\System /v DisableCMD /t REG_DWORD /d 1 /f
+</pre></div>
 
-<h2 id="disable-admin-credentials-cache-on-host-when-usingrdp">Disable Admin credentials cache on host when usingRDP:<a class="headerlink" href="#disable-admin-credentials-cache-on-host-when-usingrdp" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; reg add HKLM\System\CurrentControlSet\Control\Lsa /v DisableRestrictedAdmin /t REG_DWORD /d 0 /f
-</code></pre>
+<h2 id="disable-admin-credentials-cache-on-host-when-usingrdp">Disable Admin credentials cache on host when usingRDP:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; reg add HKLM\System\CurrentControlSet\Control\Lsa /v DisableRestrictedAdmin /t REG_DWORD /d 0 /f
+</pre></div>
 
-<h2 id="do-not-process-the-run-once-list">Do not process the run once list:<a class="headerlink" href="#do-not-process-the-run-once-list" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; reg add HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer /v DisableLocalMachineRunOnce /t REG_DWORD /d 1
+<h2 id="do-not-process-the-run-once-list">Do not process the run once list:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; reg add HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer /v DisableLocalMachineRunOnce /t REG_DWORD /d 1
 C:\&gt; reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer /v DisableLocalMachineRunOnce /t REG_DWORD /d 1
-</code></pre>
+</pre></div>
 
-<h2 id="require-user-access-control-uac-permission">Require User Access Control (UAC) Permission:<a class="headerlink" href="#require-user-access-control-uac-permission" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 1 /f
-</code></pre>
+<h2 id="require-user-access-control-uac-permission">Require User Access Control (UAC) Permission:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 1 /f
+</pre></div>
 
-<h2 id="change-password-at-next-logon">Change password at next logon:<a class="headerlink" href="#change-password-at-next-logon" title="Permanent link">&para;</a></h2>
-<pre><code>PS C:\&gt; Set-ADAccountPassword &lt;USER&gt; -NewPassword $newpwd -Reset -PassThru I Set-ADuser -ChangePasswordAtLogon $True
-</code></pre>
+<h2 id="change-password-at-next-logon">Change password at next logon:</h2>
+<div class="highlight"><pre><span></span>PS C:\&gt; Set-ADAccountPassword &lt;USER&gt; -NewPassword $newpwd -Reset -PassThru I Set-ADuser -ChangePasswordAtLogon $True
+</pre></div>
 
-<h2 id="change-password-at-next-logon-for-ou-group">Change password at next logon for OU Group:<a class="headerlink" href="#change-password-at-next-logon-for-ou-group" title="Permanent link">&para;</a></h2>
-<pre><code>PS C:\&gt; Get-ADuser -filter &quot;department -eq '&lt;OUGROUP&gt;' -AND enabled -eq 'True 111 I Set-AD user -ChangePasswordAtLogon $True
-</code></pre>
+<h2 id="change-password-at-next-logon-for-ou-group">Change password at next logon for OU Group:</h2>
+<div class="highlight"><pre><span></span>PS C:\&gt; Get-ADuser -filter &quot;department -eq &#39;&lt;OUGROUP&gt;&#39; -AND enabled -eq &#39;True 111 I Set-AD user -ChangePasswordAtLogon $True
+</pre></div>
 
-<h2 id="enabled-firewall-logging">Enabled Firewall logging:<a class="headerlink" href="#enabled-firewall-logging" title="Permanent link">&para;</a></h2>
-<pre><code>C:\&gt; netsh firewall set logging droppedpacketsconnections = enable
-</code></pre></div>
+<h2 id="enabled-firewall-logging">Enabled Firewall logging:</h2>
+<div class="highlight"><pre><span></span>C:\&gt; netsh firewall set logging droppedpacketsconnections = enable
+</pre></div></div>
         </div>
 
         <footer class="col-md-12">

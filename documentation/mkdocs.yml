@@ -76,8 +76,7 @@ nav:
   - thg_development:
     - Style_Tips: ./dev/thg_dev/Style_Tips.md
     - How_to_get_started_with_writing_an_exploit: ./dev/thg_dev/How-to-get-started-with-writing-an-exploit.md
-    - How_to_get_started_with_writing_an_auxiliary module: #concertacao
-
+    
 
 
 - documentation:

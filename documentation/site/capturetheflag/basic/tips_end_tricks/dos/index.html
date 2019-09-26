@@ -83,18 +83,48 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">thg_dev <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
+  <li class="dropdown-submenu">
+    <a href="#">gettin_started</a>
+    <ul class="dropdown-menu">
+            
 <li >
-    <a href="../../../../dev/thg_dev/_Sidebar/">thg_dev</a>
+    <a href="../../../../dev/thg_dev/_Sidebar/">thg_Development_Environment</a>
 </li>
-                                    
+            
+<li >
+    <a href="../../../../dev/thg_dev/Using-thg/">using_thg</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">git</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../dev/git/Using-Git/">Using-Git</a>
+</li>
+            
+<li >
+    <a href="../../../../dev/git/Git-cheatsheet/">Git_cheatsheet</a>
+</li>
+            
+<li >
+    <a href="../../../../dev/git/Git-Reference-Sites/">Git-Reference-Sites</a>
+</li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../../../../dev/thg_dev/Reporting-a-Bug/">reporting_a_bug</a>
+</li>
+            
 <li >
     <a href="../../../../dev/contributing/Contributing-to-thg/">Get Started</a>
 </li>
-                                    
+            
 <li >
     <a href="../../../../cli/templates/">templates</a>
 </li>
-                                    
+            
   <li class="dropdown-submenu">
     <a href="#">Roadmaps</a>
     <ul class="dropdown-menu">
@@ -114,21 +144,29 @@
   </li>
     </ul>
   </li>
+    </ul>
+  </li>
                                     
   <li class="dropdown-submenu">
-    <a href="#">git</a>
+    <a href="#">contributing</a>
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../../../../dev/git/Using-Git/">Using-Git</a>
+    <a href="../../../../dev/thg_dev/Contributing-to-thg/">contributing_to_thg</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">thg_development</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../dev/thg_dev/Style_Tips/">Style_Tips</a>
 </li>
             
 <li >
-    <a href="../../../../dev/git/Git-cheatsheet/">Git_cheatsheet</a>
-</li>
-            
-<li >
-    <a href="../../../../dev/git/Git-Reference-Sites/">Git-Reference-Sites</a>
+    <a href="../../../../dev/thg_dev/How-to-get-started-with-writing-an-exploit/">How_to_get_started_with_writing_an_exploit</a>
 </li>
     </ul>
   </li>
@@ -636,61 +674,61 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="fingerprint-dosddos">FINGERPRINT DOS/DDOS<a class="headerlink" href="#fingerprint-dosddos" title="Permanent link">&para;</a></h1>
-<h2 id="fingerprinting-the-type-of-dosddos">Fingerprinting the type of DoS/DDoS:<a class="headerlink" href="#fingerprinting-the-type-of-dosddos" title="Permanent link">&para;</a></h2>
-<pre><code>Ref. https://www.trustwave.com/Resources/SpiderLabsBlog/PCAP-Files-Are-Great-Arn-t-They--/
-</code></pre>
+<h1 id="fingerprint-dosddos">FINGERPRINT DOS/DDOS</h1>
+<h2 id="fingerprinting-the-type-of-dosddos">Fingerprinting the type of DoS/DDoS:</h2>
+<div class="highlight"><pre><span></span>Ref. https://www.trustwave.com/Resources/SpiderLabsBlog/PCAP-Files-Are-Great-Arn-t-They--/
+</pre></div>
 
-<h2 id="volumetric-bandwidth-consumption-example-sustaining-sending-1gb-of-traffic-to-10mb-connection">Volumetric: Bandwidth consumption Example, sustaining sending 1Gb of traffic to 10Mb connection<a class="headerlink" href="#volumetric-bandwidth-consumption-example-sustaining-sending-1gb-of-traffic-to-10mb-connection" title="Permanent link">&para;</a></h2>
-<pre><code>Ref. http://freecode.com/projects/iftop
+<h2 id="volumetric-bandwidth-consumption-example-sustaining-sending-1gb-of-traffic-to-10mb-connection">Volumetric: Bandwidth consumption Example, sustaining sending 1Gb of traffic to 10Mb connection</h2>
+<div class="highlight"><pre><span></span>Ref. http://freecode.com/projects/iftop
 # iftop -n
-</code></pre>
+</pre></div>
 
-<h2 id="and-protocol-use-of-specific-protocol-example-syn-flood-icmp-flood-udp-flood">and Protocol: Use of specific protocol Example, SYN Flood, ICMP Flood, UDP flood<a class="headerlink" href="#and-protocol-use-of-specific-protocol-example-syn-flood-icmp-flood-udp-flood" title="Permanent link">&para;</a></h2>
-<pre><code># tshark -r &lt;FILE NAME&gt;,pcap -q -z io,phs
+<h2 id="and-protocol-use-of-specific-protocol-example-syn-flood-icmp-flood-udp-flood">and Protocol: Use of specific protocol Example, SYN Flood, ICMP Flood, UDP flood</h2>
+<div class="highlight"><pre><span></span># tshark -r &lt;FILE NAME&gt;,pcap -q -z io,phs
 # tshark -c 1000 -q -z io,phs
-# tcpdump -tn r $FILE I awk -F '. ' '{print $1&quot;,&quot;$2&quot;.&quot;$3&quot;,&quot;$4}' I sort I uniq -c I sort -n I tail
+# tcpdump -tn r $FILE I awk -F &#39;. &#39; &#39;{print $1&quot;,&quot;$2&quot;.&quot;$3&quot;,&quot;$4}&#39; I sort I uniq -c I sort -n I tail
 # tcpdump -qnn &quot;tcp[tcpflags] &amp; (tcp-syn) != 0&quot;
 # netstat -s
-</code></pre>
+</pre></div>
 
-<h2 id="example-isolate-one-protocol-and-or-remove-other-protocols">Example, isolate one protocol and or remove other protocols<a class="headerlink" href="#example-isolate-one-protocol-and-or-remove-other-protocols" title="Permanent link">&para;</a></h2>
-<pre><code># tcpdump -nn not arp and not icmp and not udp
+<h2 id="example-isolate-one-protocol-and-or-remove-other-protocols">Example, isolate one protocol and or remove other protocols</h2>
+<div class="highlight"><pre><span></span># tcpdump -nn not arp and not icmp and not udp
 # tcpdump -nn tcp
-</code></pre>
+</pre></div>
 
-<h2 id="resource-state-and-connection-exhaustion-example-firewall-can-handle-10000-simultaneous-connections-and-attacker-sends-20000">Resource: State and connection exhaustion Example, Firewall can handle 10,000 simultaneous connections, and attacker sends 20,000<a class="headerlink" href="#resource-state-and-connection-exhaustion-example-firewall-can-handle-10000-simultaneous-connections-and-attacker-sends-20000" title="Permanent link">&para;</a></h2>
-<pre><code># netstat -n I awk '{print $6}' I sort I uniq -c sort -nr I head
-</code></pre>
+<h2 id="resource-state-and-connection-exhaustion-example-firewall-can-handle-10000-simultaneous-connections-and-attacker-sends-20000">Resource: State and connection exhaustion Example, Firewall can handle 10,000 simultaneous connections, and attacker sends 20,000</h2>
+<div class="highlight"><pre><span></span># netstat -n I awk &#39;{print $6}&#39; I sort I uniq -c sort -nr I head
+</pre></div>
 
-<h2 id="application-layer-7-attacks-example-http-get-flood-for-a-large-image-file">Application: Layer 7 attacks Example, HTTP GET flood, for a large image file.<a class="headerlink" href="#application-layer-7-attacks-example-http-get-flood-for-a-large-image-file" title="Permanent link">&para;</a></h2>
-<pre><code># tshark -c 10000 -T fields -e http.host| uniq -c | sort -r | head -n 10 so rt |
+<h2 id="application-layer-7-attacks-example-http-get-flood-for-a-large-image-file">Application: Layer 7 attacks Example, HTTP GET flood, for a large image file.</h2>
+<div class="highlight"><pre><span></span># tshark -c 10000 -T fields -e http.host| uniq -c | sort -r | head -n 10 so rt |
 # tshark -r capture6 -T fields -e http.request.full\_uri I sort I uniq -c I sort -r I head -n 10c
-# tcpdump -n 'tcp[32:4] = 0x47455420' I cut -f 7- -d II• II
-</code></pre>
+# tcpdump -n &#39;tcp[32:4] = 0x47455420&#39; I cut -f 7- -d II• II
+</pre></div>
 
-<h2 id="example-look-for-excessive-file-requests-gif-zipjpeg-pdf-png">Example, look for excessive file requests, GIF, ZIP,JPEG, PDF, PNG.<a class="headerlink" href="#example-look-for-excessive-file-requests-gif-zipjpeg-pdf-png" title="Permanent link">&para;</a></h2>
-<pre><code># tshark -Y &quot;http contains 11ff :d811 11 11 &quot;http contains 11GIF89a11 &quot; I I &quot;http contains 11\x50\x4B\x03\x0411 11 11 &quot;http contains\xff\xd8 11 11 11 &quot;http contains 11%PDF11 11 I I &quot;http contains &quot;\x89\x50\x4E\x47&quot;&quot;
-</code></pre>
+<h2 id="example-look-for-excessive-file-requests-gif-zipjpeg-pdf-png">Example, look for excessive file requests, GIF, ZIP,JPEG, PDF, PNG.</h2>
+<div class="highlight"><pre><span></span># tshark -Y &quot;http contains 11ff :d811 11 11 &quot;http contains 11GIF89a11 &quot; I I &quot;http contains 11\x50\x4B\x03\x0411 11 11 &quot;http contains\xff\xd8 11 11 11 &quot;http contains 11%PDF11 11 I I &quot;http contains &quot;\x89\x50\x4E\x47&quot;&quot;
+</pre></div>
 
-<h2 id="example-look-for-web-application-user-agent-pattern-of-abuse">Example, Look for web application &lsquo;user-agent&rsquo; pattern of abuse.<a class="headerlink" href="#example-look-for-web-application-user-agent-pattern-of-abuse" title="Permanent link">&para;</a></h2>
-<pre><code># tcpdump -c 1000 -Ann I grep -Ei 'user-agent' sort I uniq -c I sort -nr I head -10
-</code></pre>
+<h2 id="example-look-for-web-application-user-agent-pattern-of-abuse">Example, Look for web application 'user-agent' pattern of abuse.</h2>
+<div class="highlight"><pre><span></span># tcpdump -c 1000 -Ann I grep -Ei &#39;user-agent&#39; sort I uniq -c I sort -nr I head -10
+</pre></div>
 
-<h2 id="example-show-http-header-of-requested-resources">Example, show HTTP Header of requested resources.<a class="headerlink" href="#example-show-http-header-of-requested-resources" title="Permanent link">&para;</a></h2>
-<pre><code># tcpdump -i en0 -A -s 500 I grep -i refer
-</code></pre>
+<h2 id="example-show-http-header-of-requested-resources">Example, show HTTP Header of requested resources.</h2>
+<div class="highlight"><pre><span></span># tcpdump -i en0 -A -s 500 I grep -i refer
+</pre></div>
 
-<h2 id="sniff-http-headers-for-signs-of-repeat-abuse">Sniff HTTP Headers for signs of repeat abuse:<a class="headerlink" href="#sniff-http-headers-for-signs-of-repeat-abuse" title="Permanent link">&para;</a></h2>
-<pre><code># tcpdump -s 1024 -l -A dst &lt;EXAMPLE.COM&gt;
-</code></pre>
+<h2 id="sniff-http-headers-for-signs-of-repeat-abuse">Sniff HTTP Headers for signs of repeat abuse:</h2>
+<div class="highlight"><pre><span></span># tcpdump -s 1024 -l -A dst &lt;EXAMPLE.COM&gt;
+</pre></div>
 
-<h1 id="poison-layer-2-attacks">Poison: Layer 2 attacks<a class="headerlink" href="#poison-layer-2-attacks" title="Permanent link">&para;</a></h1>
-<h2 id="example-arp-poison-race-condition-dns-dhcp">Example, ARP poison, race condition DNS, DHCP<a class="headerlink" href="#example-arp-poison-race-condition-dns-dhcp" title="Permanent link">&para;</a></h2>
-<pre><code># tcpdump 'arp or icmp'
-# tcpdump -tnr &lt;SAMPLE TRAFFIC FILE&gt;.pcap ARP lawk -F ',' '{print $1&quot;.&quot;$2&quot;,&quot;$3&quot;,&quot;$4}' I sort I uniq -c sort -n I tail
+<h1 id="poison-layer-2-attacks">Poison: Layer 2 attacks</h1>
+<h2 id="example-arp-poison-race-condition-dns-dhcp">Example, ARP poison, race condition DNS, DHCP</h2>
+<div class="highlight"><pre><span></span># tcpdump &#39;arp or icmp&#39;
+# tcpdump -tnr &lt;SAMPLE TRAFFIC FILE&gt;.pcap ARP lawk -F &#39;,&#39; &#39;{print $1&quot;.&quot;$2&quot;,&quot;$3&quot;,&quot;$4}&#39; I sort I uniq -c sort -n I tail
 # tshark -r &lt;SAMPLE TRAFFIC FILE&gt;.pcap -q -z io,phsl grep arp.duplicate-address-detected
-</code></pre></div>
+</pre></div></div>
         </div>
 
         <footer class="col-md-12">

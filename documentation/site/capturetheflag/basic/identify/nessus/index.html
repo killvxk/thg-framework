@@ -83,18 +83,48 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">thg_dev <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
+  <li class="dropdown-submenu">
+    <a href="#">gettin_started</a>
+    <ul class="dropdown-menu">
+            
 <li >
-    <a href="../../../../dev/thg_dev/_Sidebar/">thg_dev</a>
+    <a href="../../../../dev/thg_dev/_Sidebar/">thg_Development_Environment</a>
 </li>
-                                    
+            
+<li >
+    <a href="../../../../dev/thg_dev/Using-thg/">using_thg</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">git</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../dev/git/Using-Git/">Using-Git</a>
+</li>
+            
+<li >
+    <a href="../../../../dev/git/Git-cheatsheet/">Git_cheatsheet</a>
+</li>
+            
+<li >
+    <a href="../../../../dev/git/Git-Reference-Sites/">Git-Reference-Sites</a>
+</li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../../../../dev/thg_dev/Reporting-a-Bug/">reporting_a_bug</a>
+</li>
+            
 <li >
     <a href="../../../../dev/contributing/Contributing-to-thg/">Get Started</a>
 </li>
-                                    
+            
 <li >
     <a href="../../../../cli/templates/">templates</a>
 </li>
-                                    
+            
   <li class="dropdown-submenu">
     <a href="#">Roadmaps</a>
     <ul class="dropdown-menu">
@@ -114,21 +144,29 @@
   </li>
     </ul>
   </li>
+    </ul>
+  </li>
                                     
   <li class="dropdown-submenu">
-    <a href="#">git</a>
+    <a href="#">contributing</a>
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../../../../dev/git/Using-Git/">Using-Git</a>
+    <a href="../../../../dev/thg_dev/Contributing-to-thg/">contributing_to_thg</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">thg_development</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../dev/thg_dev/Style_Tips/">Style_Tips</a>
 </li>
             
 <li >
-    <a href="../../../../dev/git/Git-cheatsheet/">Git_cheatsheet</a>
-</li>
-            
-<li >
-    <a href="../../../../dev/git/Git-Reference-Sites/">Git-Reference-Sites</a>
+    <a href="../../../../dev/thg_dev/How-to-get-started-with-writing-an-exploit/">How_to_get_started_with_writing_an_exploit</a>
 </li>
     </ul>
   </li>
@@ -627,19 +665,19 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="nessus">NESSUS<a class="headerlink" href="#nessus" title="Permanent link">&para;</a></h1>
-<h1 id="basic-nessus-scan">Basic Nessus scan:<a class="headerlink" href="#basic-nessus-scan" title="Permanent link">&para;</a></h1>
-<pre><code>nessus -q -x -T html &lt;NESSUS SERVER IP ADDRESS&gt; &lt;NESSUS SERVER PORT 1241&gt; &lt;ADMIN ACCOUNT&gt; &lt;ADMIN&gt;PASSWORD&gt; &lt;FILE WITH TARGETS&gt;,txt &lt;RESULTS FILENAME&gt;.html
+<h1 id="nessus">NESSUS</h1>
+<h1 id="basic-nessus-scan">Basic Nessus scan:</h1>
+<div class="highlight"><pre><span></span>nessus -q -x -T html &lt;NESSUS SERVER IP ADDRESS&gt; &lt;NESSUS SERVER PORT 1241&gt; &lt;ADMIN ACCOUNT&gt; &lt;ADMIN&gt;PASSWORD&gt; &lt;FILE WITH TARGETS&gt;,txt &lt;RESULTS FILENAME&gt;.html
 nessus [-vnh] [-c .refile] [-VJ [-T &lt;format&gt;]
-</code></pre>
+</pre></div>
 
-<h1 id="batch-mode-scan">Batch-mode scan<a class="headerlink" href="#batch-mode-scan" title="Permanent link">&para;</a></h1>
-<pre><code>nessus -q [-pPS] &lt;HOST&gt; &lt;PORT&gt; &lt;USER NAME&gt;&lt;PASSWORD&gt; &lt;targets-file&gt; &lt;result-file&gt;
-</code></pre>
+<h1 id="batch-mode-scan">Batch-mode scan</h1>
+<div class="highlight"><pre><span></span>nessus -q [-pPS] &lt;HOST&gt; &lt;PORT&gt; &lt;USER NAME&gt;&lt;PASSWORD&gt; &lt;targets-file&gt; &lt;result-file&gt;
+</pre></div>
 
-<h1 id="report-conversion">Report conversion:<a class="headerlink" href="#report-conversion" title="Permanent link">&para;</a></h1>
-<pre><code># nessus -i in. [nsrlnbe] -oout. [xmllnsrlnbelhtmlltxt]
-</code></pre></div>
+<h1 id="report-conversion">Report conversion:</h1>
+<div class="highlight"><pre><span></span># nessus -i in. [nsrlnbe] -oout. [xmllnsrlnbelhtmlltxt]
+</pre></div></div>
         </div>
 
         <footer class="col-md-12">

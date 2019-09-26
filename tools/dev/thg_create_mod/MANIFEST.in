@@ -1,4 +1,0 @@
-include LICENSE
-
-recursive-include thgc *
-recursive-include thgc/templates *

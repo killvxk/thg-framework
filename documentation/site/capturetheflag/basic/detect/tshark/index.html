@@ -83,18 +83,48 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">thg_dev <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
+  <li class="dropdown-submenu">
+    <a href="#">gettin_started</a>
+    <ul class="dropdown-menu">
+            
 <li >
-    <a href="../../../../dev/thg_dev/_Sidebar/">thg_dev</a>
+    <a href="../../../../dev/thg_dev/_Sidebar/">thg_Development_Environment</a>
 </li>
-                                    
+            
+<li >
+    <a href="../../../../dev/thg_dev/Using-thg/">using_thg</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">git</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../dev/git/Using-Git/">Using-Git</a>
+</li>
+            
+<li >
+    <a href="../../../../dev/git/Git-cheatsheet/">Git_cheatsheet</a>
+</li>
+            
+<li >
+    <a href="../../../../dev/git/Git-Reference-Sites/">Git-Reference-Sites</a>
+</li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../../../../dev/thg_dev/Reporting-a-Bug/">reporting_a_bug</a>
+</li>
+            
 <li >
     <a href="../../../../dev/contributing/Contributing-to-thg/">Get Started</a>
 </li>
-                                    
+            
 <li >
     <a href="../../../../cli/templates/">templates</a>
 </li>
-                                    
+            
   <li class="dropdown-submenu">
     <a href="#">Roadmaps</a>
     <ul class="dropdown-menu">
@@ -114,21 +144,29 @@
   </li>
     </ul>
   </li>
+    </ul>
+  </li>
                                     
   <li class="dropdown-submenu">
-    <a href="#">git</a>
+    <a href="#">contributing</a>
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../../../../dev/git/Using-Git/">Using-Git</a>
+    <a href="../../../../dev/thg_dev/Contributing-to-thg/">contributing_to_thg</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">thg_development</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../dev/thg_dev/Style_Tips/">Style_Tips</a>
 </li>
             
 <li >
-    <a href="../../../../dev/git/Git-cheatsheet/">Git_cheatsheet</a>
-</li>
-            
-<li >
-    <a href="../../../../dev/git/Git-Reference-Sites/">Git-Reference-Sites</a>
+    <a href="../../../../dev/thg_dev/How-to-get-started-with-writing-an-exploit/">How_to_get_started_with_writing_an_exploit</a>
 </li>
     </ul>
   </li>
@@ -640,79 +678,79 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h2 id="get-list-of-network-interfaces">Get list of network interfaces:<a class="headerlink" href="#get-list-of-network-interfaces" title="Permanent link">&para;</a></h2>
-<pre><code>tshark -D
-</code></pre>
+<h2 id="get-list-of-network-interfaces">Get list of network interfaces:</h2>
+<div class="highlight"><pre><span></span>tshark -D
+</pre></div>
 
-<h2 id="listen-on-multiple-network-interfaces">Listen on multiple network interfaces:<a class="headerlink" href="#listen-on-multiple-network-interfaces" title="Permanent link">&para;</a></h2>
-<pre><code>tshark -i ethl -i eth2 -i eth3
-</code></pre>
+<h2 id="listen-on-multiple-network-interfaces">Listen on multiple network interfaces:</h2>
+<div class="highlight"><pre><span></span>tshark -i ethl -i eth2 -i eth3
+</pre></div>
 
-<h2 id="save-to-pcap-and-disable-name-resolution">Save to pcap and disable name resolution:<a class="headerlink" href="#save-to-pcap-and-disable-name-resolution" title="Permanent link">&para;</a></h2>
-<pre><code>tshark -nn -w &lt;FILE NAME&gt;,pcap
-</code></pre>
+<h2 id="save-to-pcap-and-disable-name-resolution">Save to pcap and disable name resolution:</h2>
+<div class="highlight"><pre><span></span>tshark -nn -w &lt;FILE NAME&gt;,pcap
+</pre></div>
 
-<h2 id="get-absolute-date-and-time-stamp">Get absolute date and time stamp:<a class="headerlink" href="#get-absolute-date-and-time-stamp" title="Permanent link">&para;</a></h2>
-<pre><code>tshark -t a
-</code></pre>
+<h2 id="get-absolute-date-and-time-stamp">Get absolute date and time stamp:</h2>
+<div class="highlight"><pre><span></span>tshark -t a
+</pre></div>
 
-<h2 id="get-arp-or-icmp-traffic">Get arp or icmp traffic:<a class="headerlink" href="#get-arp-or-icmp-traffic" title="Permanent link">&para;</a></h2>
-<pre><code>tshark arp or icmp
-</code></pre>
+<h2 id="get-arp-or-icmp-traffic">Get arp or icmp traffic:</h2>
+<div class="highlight"><pre><span></span>tshark arp or icmp
+</pre></div>
 
-<h2 id="capture-traffic-between-to-hosts-andor-nets">Capture traffic between to [hosts] and/or [nets]:<a class="headerlink" href="#capture-traffic-between-to-hosts-andor-nets" title="Permanent link">&para;</a></h2>
-<pre><code>tshark &quot;host &lt;HOST l&gt; &amp;&amp; host &lt;HOST 2&gt;&quot;
+<h2 id="capture-traffic-between-to-hosts-andor-nets">Capture traffic between to [hosts] and/or [nets]:</h2>
+<div class="highlight"><pre><span></span>tshark &quot;host &lt;HOST l&gt; &amp;&amp; host &lt;HOST 2&gt;&quot;
 tshark -n &quot;net &lt;NET 1&gt; &amp;&amp; net &lt;NET 2&gt;&quot;
-</code></pre>
+</pre></div>
 
-<h2 id="filter-just-host-and-ips-or-not-your-ip">Filter just host and IPs (or not your IP):<a class="headerlink" href="#filter-just-host-and-ips-or-not-your-ip" title="Permanent link">&para;</a></h2>
-<pre><code>tshark -r &lt;FILE NAME&gt;,pcap -q -z hosts,ipv4
+<h2 id="filter-just-host-and-ips-or-not-your-ip">Filter just host and IPs (or not your IP):</h2>
+<div class="highlight"><pre><span></span>tshark -r &lt;FILE NAME&gt;,pcap -q -z hosts,ipv4
 tshark not host &lt;YOUR IP ADDRESS&gt;
-</code></pre>
+</pre></div>
 
-<h2 id="not-arp-and-not-udp">Not ARP and not UDP:<a class="headerlink" href="#not-arp-and-not-udp" title="Permanent link">&para;</a></h2>
-<pre><code>tshark not arp and not (udp.port -- 53)
-</code></pre>
+<h2 id="not-arp-and-not-udp">Not ARP and not UDP:</h2>
+<div class="highlight"><pre><span></span>tshark not arp and not (udp.port -- 53)
+</pre></div>
 
-<h2 id="replay-a-pcap-file">Replay a pcap file:<a class="headerlink" href="#replay-a-pcap-file" title="Permanent link">&para;</a></h2>
-<pre><code>tshark -r &lt;FILE NAME&gt;.pcap
-</code></pre>
+<h2 id="replay-a-pcap-file">Replay a pcap file:</h2>
+<div class="highlight"><pre><span></span>tshark -r &lt;FILE NAME&gt;.pcap
+</pre></div>
 
-<h2 id="replay-a-pcap-and-just-grab-hosts-and-ips">Replay a pcap and just grab hosts and IPs:<a class="headerlink" href="#replay-a-pcap-and-just-grab-hosts-and-ips" title="Permanent link">&para;</a></h2>
-<pre><code>tshark -r &lt;FILE NAME&gt;.pcap -q -z hosts
-</code></pre>
+<h2 id="replay-a-pcap-and-just-grab-hosts-and-ips">Replay a pcap and just grab hosts and IPs:</h2>
+<div class="highlight"><pre><span></span>tshark -r &lt;FILE NAME&gt;.pcap -q -z hosts
+</pre></div>
 
-<h2 id="setup-a-capture-sessionduration60sec">Setup a capture session(duration=60sec):<a class="headerlink" href="#setup-a-capture-sessionduration60sec" title="Permanent link">&para;</a></h2>
-<pre><code>tshark -n -a files:10 -a filesize:100 -a duration:60 -w &lt;FILE NAME&gt;,pcap
-</code></pre>
+<h2 id="setup-a-capture-sessionduration60sec">Setup a capture session(duration=60sec):</h2>
+<div class="highlight"><pre><span></span>tshark -n -a files:10 -a filesize:100 -a duration:60 -w &lt;FILE NAME&gt;,pcap
+</pre></div>
 
-<h2 id="grab-srcdst-ips-only">Grab src/dst IPs only:<a class="headerlink" href="#grab-srcdst-ips-only" title="Permanent link">&para;</a></h2>
-<pre><code>tshark -n -e ip.src -e ip.dst -T fields -E separator=, -Rip
-</code></pre>
+<h2 id="grab-srcdst-ips-only">Grab src/dst IPs only:</h2>
+<div class="highlight"><pre><span></span>tshark -n -e ip.src -e ip.dst -T fields -E separator=, -Rip
+</pre></div>
 
-<h2 id="grab-ip-of-src-dns-and-dns-query">Grab IP of src DNS and DNS query:<a class="headerlink" href="#grab-ip-of-src-dns-and-dns-query" title="Permanent link">&para;</a></h2>
-<pre><code>tshark -n -e ip.src -e dns,qry.name -E separator=';' -T fields port 53
-</code></pre>
+<h2 id="grab-ip-of-src-dns-and-dns-query">Grab IP of src DNS and DNS query:</h2>
+<div class="highlight"><pre><span></span>tshark -n -e ip.src -e dns,qry.name -E separator=&#39;;&#39; -T fields port 53
+</pre></div>
 
-<h2 id="grab-http-url-host-and-request">Grab HTTP URL host and request:<a class="headerlink" href="#grab-http-url-host-and-request" title="Permanent link">&para;</a></h2>
-<pre><code>tshark -R http.request -T fields -E separator=';' -e http.host -e http.request.uri
-</code></pre>
+<h2 id="grab-http-url-host-and-request">Grab HTTP URL host and request:</h2>
+<div class="highlight"><pre><span></span>tshark -R http.request -T fields -E separator=&#39;;&#39; -e http.host -e http.request.uri
+</pre></div>
 
-<h2 id="grab-just-http-host-requests">Grab just HTTP host requests:<a class="headerlink" href="#grab-just-http-host-requests" title="Permanent link">&para;</a></h2>
-<pre><code>tshark -n -R http.request -T fields -e http.host
-</code></pre>
+<h2 id="grab-just-http-host-requests">Grab just HTTP host requests:</h2>
+<div class="highlight"><pre><span></span>tshark -n -R http.request -T fields -e http.host
+</pre></div>
 
-<h2 id="grab-top-talkers-by-ip-dst">Grab top talkers by IP dst:<a class="headerlink" href="#grab-top-talkers-by-ip-dst" title="Permanent link">&para;</a></h2>
-<pre><code>tshark -n -c 150 I awk '{print $4}' I sort -n Iuniq -c I sort -nr
-</code></pre>
+<h2 id="grab-top-talkers-by-ip-dst">Grab top talkers by IP dst:</h2>
+<div class="highlight"><pre><span></span>tshark -n -c 150 I awk &#39;{print $4}&#39; I sort -n Iuniq -c I sort -nr
+</pre></div>
 
-<h2 id="grab-top-stats-of-protocols">Grab top stats of protocols:<a class="headerlink" href="#grab-top-stats-of-protocols" title="Permanent link">&para;</a></h2>
-<pre><code>tshark -q -z io,phs -r &lt;FILE NAME&gt;.pcap
-tshark -r &lt;PCAP FILE&gt;,cap -R http.request -T fields -e http.host -e http.request.uri lsed -e 'sf?,*$//' I sed -e 's#&quot;(,*)t(,*)$#http://l2#' I sort I uniq -c I sort -rn I head
+<h2 id="grab-top-stats-of-protocols">Grab top stats of protocols:</h2>
+<div class="highlight"><pre><span></span>tshark -q -z io,phs -r &lt;FILE NAME&gt;.pcap
+tshark -r &lt;PCAP FILE&gt;,cap -R http.request -T fields -e http.host -e http.request.uri lsed -e &#39;sf?,*$//&#39; I sed -e &#39;s#&quot;(,*)t(,*)$#http://l2#&#39; I sort I uniq -c I sort -rn I head
 tshark -n -c 100 -e ip.src -R &quot;dns.flags.responseeq 1&quot; -T fields po rt 53
 tshark -n -e http.request.uri -R http.request -T fields I grep exe
 tshark -n -c 1000 -e http.host -R http.request -T fields port 80 I sort I uniq -c I sort -r
-</code></pre></div>
+</pre></div></div>
         </div>
 
         <footer class="col-md-12">

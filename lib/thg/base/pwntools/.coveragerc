@@ -1,8 +1,0 @@
-[run]
-branch = True
-omit =
-    */constants/*
-source =
-    pwn
-    pwnlib
-    ~/.pwntools-cache/

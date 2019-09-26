@@ -1,3 +1,0 @@
-#alias create help help -v
- alias create exit quit
- alias create exit() quit

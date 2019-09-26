@@ -1,8 +1,0 @@
-$project_name is written and maintained by:
-
-* $setup_author - $setup_author_email
-
-Contributors
-------------
-
-None yet. Why not be the first?

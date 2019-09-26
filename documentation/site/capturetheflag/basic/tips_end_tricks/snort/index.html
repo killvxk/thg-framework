@@ -83,18 +83,48 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">thg_dev <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
+  <li class="dropdown-submenu">
+    <a href="#">gettin_started</a>
+    <ul class="dropdown-menu">
+            
 <li >
-    <a href="../../../../dev/thg_dev/_Sidebar/">thg_dev</a>
+    <a href="../../../../dev/thg_dev/_Sidebar/">thg_Development_Environment</a>
 </li>
-                                    
+            
+<li >
+    <a href="../../../../dev/thg_dev/Using-thg/">using_thg</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">git</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../dev/git/Using-Git/">Using-Git</a>
+</li>
+            
+<li >
+    <a href="../../../../dev/git/Git-cheatsheet/">Git_cheatsheet</a>
+</li>
+            
+<li >
+    <a href="../../../../dev/git/Git-Reference-Sites/">Git-Reference-Sites</a>
+</li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../../../../dev/thg_dev/Reporting-a-Bug/">reporting_a_bug</a>
+</li>
+            
 <li >
     <a href="../../../../dev/contributing/Contributing-to-thg/">Get Started</a>
 </li>
-                                    
+            
 <li >
     <a href="../../../../cli/templates/">templates</a>
 </li>
-                                    
+            
   <li class="dropdown-submenu">
     <a href="#">Roadmaps</a>
     <ul class="dropdown-menu">
@@ -114,21 +144,29 @@
   </li>
     </ul>
   </li>
+    </ul>
+  </li>
                                     
   <li class="dropdown-submenu">
-    <a href="#">git</a>
+    <a href="#">contributing</a>
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../../../../dev/git/Using-Git/">Using-Git</a>
+    <a href="../../../../dev/thg_dev/Contributing-to-thg/">contributing_to_thg</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">thg_development</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../../dev/thg_dev/Style_Tips/">Style_Tips</a>
 </li>
             
 <li >
-    <a href="../../../../dev/git/Git-cheatsheet/">Git_cheatsheet</a>
-</li>
-            
-<li >
-    <a href="../../../../dev/git/Git-Reference-Sites/">Git-Reference-Sites</a>
+    <a href="../../../../dev/thg_dev/How-to-get-started-with-writing-an-exploit/">How_to_get_started_with_writing_an_exploit</a>
 </li>
     </ul>
   </li>
@@ -626,9 +664,9 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="snort-rules">SNORT RULES<a class="headerlink" href="#snort-rules" title="Permanent link">&para;</a></h1>
-<h2 id="snort-rules-to-detect-meterpreter-traffic">Snort Rules to detect Meterpreter traffic:<a class="headerlink" href="#snort-rules-to-detect-meterpreter-traffic" title="Permanent link">&para;</a></h2>
-<pre><code>Ref.https://blog.didierstevens.com/2015/06/16/metasploit-meterpreter-reverse-https-snort-rule/
+<h1 id="snort-rules">SNORT RULES</h1>
+<h2 id="snort-rules-to-detect-meterpreter-traffic">Snort Rules to detect Meterpreter traffic:</h2>
+<div class="highlight"><pre><span></span>Ref.https://blog.didierstevens.com/2015/06/16/metasploit-meterpreter-reverse-https-snort-rule/
 
 alert tcp $HOME_NET any-&gt; $EXTERNAL_NET $HTTP_PORTS
 (msg:&quot;Metasploit User Agent String&quot;;
@@ -707,10 +745,10 @@ classtype:trojan-activity;
 reference:url,blog.didierstevens.com/2015/03/16/quic
 kpost-metasploit-user-agent-strings/; sid:1618007;
 rev: 1;)
-</code></pre>
+</pre></div>
 
-<h2 id="snort-rules-to-detect-psexec-traffic">Snort Rules to detect PSEXEC traffic:<a class="headerlink" href="#snort-rules-to-detect-psexec-traffic" title="Permanent link">&para;</a></h2>
-<pre><code>Ref. https://github.com/John-Lin/dockersnort/blob/master/snortrules-snapshot2972/rules/policy-other.rules
+<h2 id="snort-rules-to-detect-psexec-traffic">Snort Rules to detect PSEXEC traffic:</h2>
+<div class="highlight"><pre><span></span>Ref. https://github.com/John-Lin/dockersnort/blob/master/snortrules-snapshot2972/rules/policy-other.rules
 
 alert tcp $HOME_NET any -&gt; $HOME_NET [139,445]
 (msg:&quot;POLICY-OTHER use of psexec remote
@@ -734,8 +772,7 @@ fast_pattern:only; metadata:service netbios-ssn;
 reference:url,technet.microsoft,com/enus/sysinternals/bb897553.aspx[l];
 classtype:policyviolation;
 sid:30281; rev:1;)
-
-</code></pre></div>
+</pre></div></div>
         </div>
 
         <footer class="col-md-12">

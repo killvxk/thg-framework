@@ -1,8 +1,0 @@
-from pwn import *
-
-py print('Lets pretend were uber 1337 and landed a shell')
-py io = process('sh')
-
-# <exploit goes here>
-
-py io.interactive()

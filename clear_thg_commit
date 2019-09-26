@@ -1,9 +1,0 @@
-#!/bin/bash
-echo "clear pyc"
-find . -name "*.pyc" -exec rm -rfv {} \;
-echo ".idea/*"
-find . -name ".idea" -exec rm -rvf {} \;
-echo "pycache"
-find . -name "__pycache__" -exec rm -rvf {} \;
-
-python3 commit.py
