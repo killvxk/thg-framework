@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="darkcode0x00 luizcorrea">
+        <link rel="canonical" href="https://darkcode357.gitlab.io/thg-framework/dev/dark/How-to-get-started-with-writing-a-post-module/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>How to get started with writing a post module - thg-framework</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">thg-framework</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../cli/install/">Installation</a>
+</li>
+                                    
+<li >
+    <a href="../../..">Introduction</a>
+</li>
+                                    
+<li >
+    <a href="../../../community/">Community</a>
+</li>
+                                    
+<li >
+    <a href="../../../conceptual/">Conceptual</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/build/">build</a>
+</li>
+                                    
+<li >
+    <a href="../../../cli/tags/">tags</a>
+</li>
+                                    
+<li >
+    <a href="../../../LICENSE/">LICENSE</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">thg_dev <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">gettin_started</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../thg_dev/_Sidebar/">thg_Development_Environment</a>
+</li>
+            
+<li >
+    <a href="../../thg_dev/Using-thg/">using_thg</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">git</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../git/Using-Git/">Using-Git</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-cheatsheet/">Git_cheatsheet</a>
+</li>
+            
+<li >
+    <a href="../../git/Git-Reference-Sites/">Git-Reference-Sites</a>
+</li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../../thg_dev/Reporting-a-Bug/">reporting_a_bug</a>
+</li>
+            
+<li >
+    <a href="../../contributing/Contributing-to-thg/">Get Started</a>
+</li>
+            
+<li >
+    <a href="../../../cli/templates/">templates</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Roadmaps</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">2019</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap/">Roadmap</a>
+</li>
+            
+<li >
+    <a href="../../roadmaps/2019/2019-Roadmap-Review/">Roadmap_Review</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">contributing</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../thg_dev/Contributing-to-thg/">contributing_to_thg</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">thg_development</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../thg_dev/Style_Tips/">Style_Tips</a>
+</li>
+            
+<li >
+    <a href="../../thg_dev/How-to-get-started-with-writing-an-exploit/">How_to_get_started_with_writing_an_exploit</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">documentation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">capture the flag</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">basic</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#">analysis</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/analysis/malware/">malware</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">recovery</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/backuo/">backup</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/recover/patching/">patching</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">tips_end_tricks</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/tools/">tools</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/decoding/">decoding</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/dos/">dos</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/os_cheats/">os_cheats</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/tips_end_tricks/snort/">snort</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/basic/">basic</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nmap/">nmap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/nessus/">nessus</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/openvas/">openvas</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/identify/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">defend</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/windows/">windows</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/prootect_defend/linux/">linux</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">identify</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tcpdump/">tcpdump</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/editcap/">edicap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/mergecap/">mergecap</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/snort/">snort</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/tshark/">tshark</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/analysis/">analysis</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">os</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/linux/">linux</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/basic/detect/windows/">windows</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+<li >
+    <a href="../../../deployment/">Deployment</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">hash_crack</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/">index</a>
+</li>
+            
+<li >
+    <a href="../../../capturetheflag/hash_crack/CORE_HASH_CRACKING_KNOWLEDGE/">CORE_HASH_CRACKING_KNOWLEDGE</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">pentest_standard</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../pentest_standard/preengagemente/">Pre engagement Interactions</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/ig/">Intelligence Gathering</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/threatmodeling/">Threat Modeling</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/vulnterability/">Vulnerability Analysis</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/exploration/">Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/postexploration/">Post Exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/report/">Reporting</a>
+</li>
+            
+<li >
+    <a href="../../../pentest_standard/tecguidelines/">Technical Guidelines</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">CLI <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-1</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/thg/">THG</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/server/server/">thg_server</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/shells/shells/">thg_shells</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_docs/thg_docs/">thg_docs</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/auxiliares/auxiliares/">thg_auxiliares</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/anti_forensic/anti_forensic/">thg_anti_forensic</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/crypto/crypto/">thg_crypto</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/drone/drone/">thg_drone</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/keylogger/keylogger/">thg_keylogger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/recon/recon/">thg_recon</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/voip/voip/">thg_voip</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automation/automation/">thg_automation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cryptography/cryptography/">thg_cryptography</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/exploitation/exploitation/">thg_exploitation</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/malware/malware/">thg_malware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/reversing/reversing/">thg_reversing</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/thg_windows/thg_windows/">thg_windows</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/automobile/automobile/">thg_automobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/database/database/">thg_database</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/fingerprint/fingerprint/">thg_fingerprint</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/misc/misc/">thg_misc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/sniffer/sniffer/">thg_sniffer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/wireless/wireless/">thg_wireless</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/debugger/debugger/">thg_debugger</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/firmware/firmware/">thg_firmware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/mobile/mobile/">thg_mobile</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/social/social/">thg_social</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/backdoor/backdoor/">thg_backdoor</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/decompiler/decompiler/">thg_decompiler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/forensic/forensic/">thg_forensic</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">THG-PART-2</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tutorials/networking/networking/">thg_networking</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoff/spoff/">thg_spoff</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/binary/binary/">thg_binary</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensensive/defensensive/">thg_defensensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/gpu/gpu/">thg_gpu</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/os/os/">thg_os</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/nfc/nfc/">thg_nfc</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/spoof/spoof/">thg_spoof</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/version/version/">thg_version</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/bluetooth/bluetooth/">thg_bluetooth</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/defensive/defensive/">thg_defensive</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/hardware/hardware/">thg_hardware</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/packer/packer/">thg_packer</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/stego/stego/">thg_stego</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/code_audit/code_audit/">thg_code_audit</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/disassembler/disassembler/">thg_disassembler</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/honeypot/honeypot/">thg_honeypot</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/proxy/proxy/">thg_proxy</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/tunnel/tunnel/">thg_tunnel</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/cracker/cracker/">thg_cracker</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/dos/dos/">thg_dos</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/ids/ids/">thg_ids</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/radio/radio/">thg_radio</a>
+</li>
+            
+<li >
+    <a href="../../../tutorials/unpacker/unpacker/">thg_unpacker</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li>
+                                <a href="https://gitlab.com/darkcode357/thg-framework/edit/master/docs/dev/dark/How-to-get-started-with-writing-a-post-module.md">Edit on darkcode357/thg-framework</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#plan-your-module">Plan your module</a></li>
+            <li><a href="#categories-of-post-modules">Categories of post modules</a></li>
+            <li><a href="#session-object">Session object</a></li>
+            <li><a href="#the-msfpost-mixin">The Msf::Post Mixin</a></li>
+            <li><a href="#template">Template</a></li>
+            <li><a href="#basic-git-commands">Basic git commands</a></li>
+            <li><a href="#references">References</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p>Post module development is a challenge to your programming skills. It's not like writing a memory corruption based exploit, where technically speaking is usually about crafting a malicious input - a string. A post module is more about proper module design, practical knowledge in Ruby and the Metasploit library. It's also a very valuable skill to have, because if you don't know what to do after popping a shell, what's the point of the penetration test, right? Also, what if a module doesn't work? Are you willing to wait days, weeks, or maybe even months for someone else to fix it for you? Probably not. If you know how to do it yourself, you can probably fix it a lot sooner, and continue with your pentest and do more things. So learn post module development! It's good for you, and your career.</p>
+<h2 id="plan-your-module">Plan your module</h2>
+<p>Just like writing a software, before you start coding you should have a clear and specific goal for what your post module does. It's never a good idea to have multiple functionalities in a single module. For example: having it steal the network configuration files, steal passwd, hashes, shell history, etc. Instead, you should break it down into multiple modules.</p>
+<p>You should also think about what session types to support: meterpreter, or shell. Ideally, support both. But if you have to choose between the two, on Windows you should favor Windows Meterpreter. On Linux, the shell session type has been a stronger candidate than the Linux Meterpreter, but hopefully this will change in the near future. For platforms that don't have a Meterpreter, obviously your only choice is a shell.</p>
+<p>Another important thing is to think about how your module will perform on different distributions/systems. For example, say you want to run a <code>ifconfig</code> command on Linux. On Ubuntu it's a no-brainer, simply run the <code>ifconfig</code> command. Well, a different Linux distro might not actually know what you're asking, so you have to be more specific and do <code>/sbin/ifconfig</code> instead. Same thing with Windows. Is it <code>C:\WINDOWS\</code> or <code>C:\WinNT</code>? It's both. Is it <code>C:\Documents and Settings\[User name]</code>, or <code>C:\Users\[User name]</code>? Both, depends on that Windows version. A better solution to that would be use an environment variable :-)</p>
+<p>Always do your homework, and contain as many scenarios you can think of. And most importantly, get your VMs and TEST!</p>
+<h3 id="categories-of-post-modules">Categories of post modules</h3>
+<p>Post modules are categorized based on their behavior. For example, if it collects data, naturally it goes to the "gather" category. If it adds/updates/or removes an user, it belongs to "manage". Here's a list as a reference:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>gather</strong></td>
+<td>Modules that involve data gathering/collecting/enumeration.</td>
+</tr>
+<tr>
+<td><strong>gather/credentials</strong></td>
+<td>Modules that steal credentials.</td>
+</tr>
+<tr>
+<td><strong>gather/forensics</strong></td>
+<td>Modules that involve forensics data gathering.</td>
+</tr>
+<tr>
+<td><strong>manage</strong></td>
+<td>Modules that modifies/operates/manipulates something on the system. Session management related tasks such as migration, injection also go here.</td>
+</tr>
+<tr>
+<td><strong>recon</strong></td>
+<td>Modules that will help you learn more about the system in terms of reconnaissance, but not about data stealing. Understand this is not the same as "gather" type modules.</td>
+</tr>
+<tr>
+<td><strong>wlan</strong></td>
+<td>Modules that are for WLAN related tasks.</td>
+</tr>
+<tr>
+<td><strong>escalate</strong></td>
+<td>This is deprecated, but the modules remain there due to popularity. This used to be the place for privilege escalation modules. All privilege escalation modules are no longer considered as post modules, they're now exploits.</td>
+</tr>
+<tr>
+<td><strong>capture</strong></td>
+<td>Modules that involve monitoring something for data collection. For example: key logging.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="session-object">Session object</h3>
+<p>So you know how in Lord of the Rings, people are totally obsessed with the One Ring? Well, that's how it is with the session object. The one object you cannot live without, it's your precious. All post modules and other related mixins basically are built on top of the session object, because it knows everything about the compromised host, and allows you to command it.</p>
+<p>You can use the <code>session</code> method to access the session object, or its alias <code>client</code>. The best way to interact with one is via irb, here's an example of how:</p>
+<div class="highlight"><pre><span></span>msf exploit(handler) &gt; run
+
+[*] Started reverse handler on 192.168.1.64:4444 
+[*] Starting the payload handler...
+[*] Sending stage (769536 bytes) to 192.168.1.106
+[*] Meterpreter session 1 opened (192.168.1.64:4444 -&gt; 192.168.1.106:55157) at 2014-07-31 17:59:36 -0500
+
+meterpreter &gt; irb
+[*] Starting IRB shell
+[*] The &#39;client&#39; variable holds the meterpreter client
+
+&gt;&gt; session.class
+=&gt; Msf::Sessions::Meterpreter_x86_Win
+</pre></div>
+
+<p>At this point you have the power to rule them all. But notice that the above example is a <code>Msf::Sessions::Meterpreter_x86_Win</code> object. There are actually several more different ones: command_shell.rb, meterpreter_php.rb, meterpreter_java.rb, meterpreter_x86_linux.rb, etc. Each behaves differently so it's actually kind of difficult to explain them all, but they are defined in the <a href="https://github.com/rapid7/metasploit-framework/tree/master/lib/msf/base/sessions">lib/msf/base/sessions/</a> directory so you can see how they work. Or you can play with one since you're already in the irb prompt.</p>
+<p>In Ruby, there are two object methods that are handy for debugging purposes.  The first is <code>methods</code>, which will list all the public and protected methods from that object:</p>
+<div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">methods</span>
+</pre></div>
+
+<p>The other one is <code>inspect</code>, which returns a string of a human-readable representation of the object:</p>
+<div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">inspect</span>
+</pre></div>
+
+<p>You can also look at <a href="https://github.com/rapid7/metasploit-framework/tree/master/modules/post">other current post modules</a> and see how they use their session object.</p>
+<h3 id="the-msfpost-mixin">The Msf::Post Mixin</h3>
+<p>As we explained, most post module mixins are built on top of the session object, and there are many out there. However, there is a main one you obviously cannot live without: the <code>Msf::Post</code> mixin. When you create a post module with this mixin, a lot of other mixins are also already included for all kinds of scenarios, to be more specific:</p>
+<ul>
+<li><strong><a href="https://github.com/rapid7/metasploit-framework/blob/master/lib/msf/core/post/common.rb">msf/core/post/common</a></strong> - Common methods post modules use, for example: <code>cmd_exec</code>.</li>
+<li><strong><a href="https://github.com/rapid7/metasploit-framework/blob/master/lib/msf/core/post_mixin.rb">msf/core/post_mixin</a></strong> - Keeps track of the session state.</li>
+<li><strong><a href="https://github.com/rapid7/metasploit-framework/blob/master/lib/msf/core/post/file.rb">msf/core/post/file</a></strong> - File system related methods.</li>
+<li><strong><a href="https://github.com/rapid7/metasploit-framework/blob/master/lib/msf/core/post/webrtc.rb">msf/core/post/webrtc</a></strong> - Uses WebRTC to interact with the target machine's webcam.</li>
+<li><strong><a href="https://github.com/rapid7/metasploit-framework/tree/master/lib/msf/core/post/linux">msf/core/post/linux</a></strong> - There actually isn't a lot going on, just <code>get_sysinfo</code> and <code>is_root?</code> specifically for Linux.</li>
+<li><strong><a href="https://github.com/rapid7/metasploit-framework/tree/master/lib/msf/core/post/osx">msf/core/post/osx</a></strong> - <code>get_sysinfo</code>, <code>get_users</code>, <code>get_system_accounts</code>, <code>get_groups</code>, and methods for operating the target machine's webcam.</li>
+<li><strong><a href="https://github.com/rapid7/metasploit-framework/tree/master/lib/msf/core/post/solaris">msf/core/post/solaris</a></strong> - Pretty much like the linux mixin. Same methods, but for Solaris.</li>
+<li><strong><a href="https://github.com/rapid7/metasploit-framework/blob/master/lib/msf/core/post/unix.rb">msf/core/post/unix</a></strong> - <code>get_users</code>, <code>get_groups</code>, <code>enum_user_directories</code></li>
+<li><strong><a href="https://github.com/rapid7/metasploit-framework/tree/master/lib/msf/core/post/windows">msf/core/post/windows</a></strong> - Most of the development time are spent here. From Windows account management, event log, file info, Railgun, LDAP, netapi, powershell, registry, wmic, services, etc.</li>
+</ul>
+<h3 id="template">Template</h3>
+<p>Here we have a post module template. As you can see, there are some required fields that need to be filled. We'll explain each:</p>
+<div class="highlight"><pre><span></span><span class="c1">##</span>
+<span class="c1"># This module requires Metasploit: https://metasploit.com/download</span>
+<span class="c1"># Current source: https://github.com/rapid7/metasploit-framework</span>
+<span class="c1">##</span>
+
+<span class="k">class</span> <span class="nc">MetasploitModule</span> <span class="o">&lt;</span> <span class="no">Msf</span><span class="o">::</span><span class="no">Post</span>
+
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">info</span> <span class="o">=</span> <span class="p">{})</span>
+    <span class="k">super</span><span class="p">(</span><span class="n">update_info</span><span class="p">(</span><span class="n">info</span><span class="p">,</span>
+        <span class="s1">&#39;Name&#39;</span>          <span class="o">=&gt;</span> <span class="s1">&#39;[Platform] [Module Category] [Software] [Function]&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Description&#39;</span>   <span class="o">=&gt;</span> <span class="sx">%q{</span>
+<span class="sx">          Say something that the user might want to know.</span>
+<span class="sx">        }</span><span class="p">,</span>
+        <span class="s1">&#39;License&#39;</span>       <span class="o">=&gt;</span> <span class="no">MSF_LICENSE</span><span class="p">,</span>
+        <span class="s1">&#39;Author&#39;</span>        <span class="o">=&gt;</span> <span class="o">[</span> <span class="s1">&#39;Name&#39;</span> <span class="o">]</span><span class="p">,</span>
+        <span class="s1">&#39;Platform&#39;</span>      <span class="o">=&gt;</span> <span class="o">[</span> <span class="s1">&#39;win&#39;</span><span class="p">,</span> <span class="s1">&#39;linux&#39;</span><span class="p">,</span> <span class="s1">&#39;osx&#39;</span><span class="p">,</span> <span class="s1">&#39;unix&#39;</span><span class="p">,</span> <span class="s1">&#39;bsd&#39;</span><span class="p">,</span> <span class="s1">&#39;solaris&#39;</span> <span class="o">]</span><span class="p">,</span>
+        <span class="s1">&#39;SessionTypes&#39;</span>  <span class="o">=&gt;</span> <span class="o">[</span> <span class="s1">&#39;meterpreter&#39;</span><span class="p">,</span> <span class="s1">&#39;shell&#39;</span> <span class="o">]</span>
+    <span class="p">))</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">run</span>
+    <span class="c1"># Main method</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+</pre></div>
+
+<p>The <strong>Name</strong> field should begin with a platform, such as: Multi, Windows, Linux, OS X, etc. Followed by the module's category, such as: Gather, Manage, Recon, Capture, Wlan. Followed by the name of the software, and then finally a few wrods that describe the functionality of the module. A naming example: "Multi Gather RndFTP Credential Enumeration".</p>
+<p>The <strong>Description</strong> field should explain what the module does, things to watch out for, specific requirements, the more the better. The goal is to let the user understand what he's using without the need to actually read the module's source and figure things out. And trust me, most of them don't.</p>
+<p>The <strong>Author</strong> field is where you put your name. The format should be "Name <email>". If you want to have your Twitter handle there, leave it as a comment, for example: "Name <email> # handle"</p>
+<p>The <strong>Platform</strong> field indicates what platforms are supported, for example: win, linux, osx, unix, bsd.</p>
+<p>The <strong>SessionTypes</strong> field should be either meterpreter, or shell. You should try to support both.</p>
+<p>And finally, the <code>run</code> method is like your main method. Start writing your code there.</p>
+<h3 id="basic-git-commands">Basic git commands</h3>
+<p>Metasploit no longer uses svn for source code management, instead we use git, so knowing some tricks with git go a long way. We're not here to lecture you about how awesome git is, we know it has a learning curve and it's not surprising to find new users making mistakes. Every once a while, your git "rage" will kick in, and we understand. However, it's important for you to take advantage of branching.</p>
+<p>Every time you make a module, or make some changes to existing code, you should not do so on the default master branch. Why? Because when you do a <code>msfupdate</code>, which is Metasploit's utility for updating your repository, it will do a git reset before merging the changes, and all your code go bye-bye.</p>
+<p>Another mistake people tend to do is have all the changes on <code>master</code> before submitting a pull request. This is a bad idea, because most likely you're submitting other crap you don't intend to change, and/or you're probably asking us to merge other unnecessary commit history when there only needs to be one commit. Thanks for contributing your module to the community, but no thanks to your crazy commit history.</p>
+<p>So as a habit, when you want to make something new, or change something, begin with a new branch that's up to date to master. First off, make sure you're on master. If you do a <code>git status</code> it will tell you what branch you're currently on:</p>
+<div class="highlight"><pre><span></span>$ git status
+# On branch upstream-master
+nothing to commit, working directory clean
+</pre></div>
+
+<p>Ok, now do a <code>git pull</code> to download the latest changes from Metasploit:</p>
+<div class="highlight"><pre><span></span>$ git pull
+Already up-to-date.
+</pre></div>
+
+<p>At this point, you're ready to start a new branch. In this case, we'll name our new branch "my_awesome_branch":</p>
+<div class="highlight"><pre><span></span>$ git checkout -b my_awesome_module
+Switched to a new branch &#39;my_awesome_module&#39;
+</pre></div>
+
+<p>And then you can go ahead and add that module. Make sure it's in the appropriate path:</p>
+<div class="highlight"><pre><span></span>$ git add [module path]
+</pre></div>
+
+<p>When you decide to save the changes, commit (if there's only one module, you can do <code>git commit -a</code> too so you don't have to type the module path. Note <code>-a</code> really means EVERYTHING):</p>
+<div class="highlight"><pre><span></span>$ git commit [module path]
+</pre></div>
+
+<p>When you're done, push your changes, which will upload your code to your remote branch "my_awesome_branch". You must push your changes in order to submit the pull request, or share it with others on the Internet.</p>
+<div class="highlight"><pre><span></span>$ git push origin my_awesome_branch
+</pre></div>
+
+<h3 id="references">References</h3>
+<p><a href="https://github.com/rapid7/metasploit-framework/tree/master/modules/post">https://github.com/rapid7/metasploit-framework/tree/master/modules/post</a></p>
+<p><a href="https://github.com/rapid7/metasploit-framework/tree/master/lib/msf/core/post">https://github.com/rapid7/metasploit-framework/tree/master/lib/msf/core/post</a></p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2019 - 2020 darkcode0x00</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
